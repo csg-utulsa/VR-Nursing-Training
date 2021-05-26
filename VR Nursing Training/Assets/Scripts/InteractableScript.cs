@@ -10,11 +10,12 @@ public class InteractableScript : MonoBehaviour
     private void Start()
     {
         initialPosition = gameObject.transform.position;
+        isInteractable = true;
     }
 
-    public void setInteractable ()
+    public void setInteractable(bool input)
     {
-        isInteractable = true;
+        isInteractable = input;
     }
 
     public bool getisInteractable()
