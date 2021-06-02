@@ -12,7 +12,6 @@ public class InteractableScript : MonoBehaviour
     {
         initialPosition = gameObject.transform.position;
         isInteractable = true;
-        
     }
 
     public void setTarget(GameObject inputTarget)
