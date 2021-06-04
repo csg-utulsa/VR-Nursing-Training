@@ -1,18 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.XR.InteractionSubsystems;
+//using UnityEngine.XR.InteractionSubsystems;
 
 public class PickUpScript : MonoBehaviour
 {
     // Referenced Youtube Video: "How to GRAB RIGIDBODIES in VR! (Tutorial - UnityC# SteamVR)" by Master Indie
+
+
+
+
+
     
+    
+    
+    // NOT USED XR HAS IMPLEMENTATION FOR PICKING UP OBJECTS
+
+
+
+
+
 
     /* 
      * 1. Create GameObject you want to be picked up
      * 2. Set layer to "Interactables" (Create if it doesn't exist)
      * 3. Hover hand next to GameObject and press and hold grab key
-     */ 
+     */
 
     public LayerMask pickupLayer; 
     public GameObject hand;

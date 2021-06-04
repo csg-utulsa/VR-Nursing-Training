@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InteractableScript : MonoBehaviour
 {
-    public bool isInteractable;
+    private bool isInteractable;
     public Vector3 initialPosition;
     public GameObject target;
 
