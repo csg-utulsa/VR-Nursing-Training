@@ -1,17 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class ActionKey : ActionBase
 {
-    public string myKey; // Inputs can be created through Edit > Project Settings > Input
-                         // Make sure to set the type to "Key or Mouse Button"
+    private float keyInput;
 
-    // Update is called once per frame
-    void Update()
+    public void onKeyPress(InputAction.CallbackContext context)
     {
-        // Set action to performed if the key is pressed
-        if (Input.GetButton(myKey))
+        keyInput = context.ReadValue<float>();
+        if (keyInput == 1)
         {
             performAction();
         }
