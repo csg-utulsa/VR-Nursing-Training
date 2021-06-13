@@ -43,6 +43,7 @@ public class InteractableScript : MonoBehaviour
     public void Reset()
     {
         gameObject.transform.position = initialPosition;
+        gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
     }
 
 }

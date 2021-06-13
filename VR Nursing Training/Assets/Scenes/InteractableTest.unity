@@ -136,8 +136,8 @@ GameObject:
   - component: {fileID: 93505895}
   - component: {fileID: 93505894}
   - component: {fileID: 93505898}
-  m_Layer: 0
-  m_Name: Cube
+  m_Layer: 6
+  m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -710,7 +710,7 @@ GameObject:
   - component: {fileID: 553430762}
   - component: {fileID: 553430761}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -906,7 +906,7 @@ GameObject:
   - component: {fileID: 681592415}
   - component: {fileID: 681592414}
   m_Layer: 0
-  m_Name: Cube (3)
+  m_Name: Side3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1154,7 +1154,7 @@ GameObject:
   - component: {fileID: 958794506}
   - component: {fileID: 958794505}
   m_Layer: 0
-  m_Name: Cube (4)
+  m_Name: Side4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2025,7 +2025,7 @@ GameObject:
   - component: {fileID: 1319625470}
   - component: {fileID: 1319625469}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: Side2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2852,7 +2852,7 @@ GameObject:
   - component: {fileID: 2069551426}
   - component: {fileID: 2069551425}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Side1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
