@@ -7,11 +7,12 @@ public class InteractableScript : MonoBehaviour
     private bool isInteractable;
     public Vector3 initialPosition;
     public GameObject target;
-
+    public Material material;
     private void Start()
     {
         initialPosition = gameObject.transform.position;
         isInteractable = true;
+        setMaterial(material);
     }
 
     public void setTarget(GameObject inputTarget)
@@ -32,6 +33,11 @@ public class InteractableScript : MonoBehaviour
     public bool getisInteractable()
     {
         return isInteractable;
+    }
+
+    public void setMaterial(Material iMaterial)
+    {
+        GetComponent<Renderer>().material = iMaterial;
     }
 
     public void Reset()
