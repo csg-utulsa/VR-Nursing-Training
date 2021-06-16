@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class InteractableScript : MonoBehaviour
 {
-    public bool isInteractable;
+    private bool isInteractable;
     public Vector3 initialPosition;
     public GameObject target;
-
+    public Material material;
     private void Start()
     {
         initialPosition = gameObject.transform.position;
         isInteractable = true;
+        setMaterial(material);
     }
 
     public void setTarget(GameObject inputTarget)
@@ -34,9 +35,15 @@ public class InteractableScript : MonoBehaviour
         return isInteractable;
     }
 
+    public void setMaterial(Material iMaterial)
+    {
+        GetComponent<Renderer>().material = iMaterial;
+    }
+
     public void Reset()
     {
         gameObject.transform.position = initialPosition;
+        gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
     }
 
 }
