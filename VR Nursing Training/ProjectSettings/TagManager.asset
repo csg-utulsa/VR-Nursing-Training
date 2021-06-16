@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Interactable
+  - Pill
   layers:
   - Default
   - TransparentFX

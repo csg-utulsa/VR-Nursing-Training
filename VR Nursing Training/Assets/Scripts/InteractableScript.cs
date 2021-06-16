@@ -6,23 +6,33 @@ public class InteractableScript : MonoBehaviour
 {
     private bool isInteractable;
     public Vector3 initialPosition;
-    public GameObject target;
+    public GameObject[] targets;
     public Material material;
+    public LayerMask layer;
+    public Material combineMaterial;
+    public float combineDist;
+    private GameObject touchedObject;
+    private static int step = 0;
+
     private void Start()
     {
-        initialPosition = gameObject.transform.position;
+        initialPosition = gameObject.transform.position; // Saves starting location
         isInteractable = true;
-        setMaterial(material);
+        if(material != null)
+        {
+            setMaterial(material);
+        }
+        
     }
 
     public void setTarget(GameObject inputTarget)
     {
-        target = inputTarget;
+        targets[step] = inputTarget;
     }
 
     public GameObject getTarget()
     {
-        return target;
+        return targets[step];
     }
 
     public void setInteractable(bool input)
@@ -38,6 +48,42 @@ public class InteractableScript : MonoBehaviour
     public void setMaterial(Material iMaterial)
     {
         GetComponent<Renderer>().material = iMaterial;
+    }
+
+    public Material getMaterial()
+    {
+        return(GetComponent<Renderer>().material);
+    }
+
+    private void FixedUpdate()
+    {
+        if (targets.Length > 1 && step < targets.Length && targets[step] != null)
+        {
+            Collider[] colliders = Physics.OverlapSphere(transform.position, combineDist, layer);
+            if (colliders.Length > 1)
+            {
+                touchedObject = colliders[0].gameObject;
+            }
+            else
+            {
+                touchedObject = null;
+            }
+            if (touchedObject == targets[step])
+            {
+                CombineObject(touchedObject);
+            }
+        }
+    }
+
+    public void CombineObject(GameObject touchedObj)
+    {
+        touchedObj.SetActive(false);
+        setMaterial(combineMaterial);
+        step++;
+        if (targets != null && step < targets.Length)
+        {
+            combineMaterial = targets[step].GetComponent<InteractableScript>().combineMaterial;
+        }
     }
 
     public void Reset()
