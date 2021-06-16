@@ -6,12 +6,13 @@ public class InteractableScript : MonoBehaviour
 {
     private bool isInteractable;
     public Vector3 initialPosition;
-    public GameObject target;
+    public GameObject[] targets;
     public Material material;
     public LayerMask layer;
     public Material combineMaterial;
     public float combineDist;
     private GameObject touchedObject;
+    private static int step = 0;
 
     private void Start()
     {
@@ -26,12 +27,12 @@ public class InteractableScript : MonoBehaviour
 
     public void setTarget(GameObject inputTarget)
     {
-        target = inputTarget;
+        targets[step] = inputTarget;
     }
 
     public GameObject getTarget()
     {
-        return target;
+        return targets[step];
     }
 
     public void setInteractable(bool input)
@@ -56,7 +57,7 @@ public class InteractableScript : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (target != null)
+        if (targets.Length > 1 && step < targets.Length && targets[step] != null)
         {
             Collider[] colliders = Physics.OverlapSphere(transform.position, combineDist, layer);
             if (colliders.Length > 1)
@@ -67,7 +68,7 @@ public class InteractableScript : MonoBehaviour
             {
                 touchedObject = null;
             }
-            if (touchedObject == target)
+            if (touchedObject == targets[step])
             {
                 CombineObject(touchedObject);
             }
@@ -78,6 +79,11 @@ public class InteractableScript : MonoBehaviour
     {
         touchedObj.SetActive(false);
         setMaterial(combineMaterial);
+        step++;
+        if (targets != null && step < targets.Length)
+        {
+            combineMaterial = targets[step].GetComponent<InteractableScript>().combineMaterial;
+        }
     }
 
     public void Reset()
