@@ -4,75 +4,63 @@ using UnityEngine;
 
 public class Objective : MonoBehaviour
 {
-    
+
     public string description = "";
     public string reportSuccess = "";
     public string reportFail = "";
     public int weight = 0;
-    public Objective[] previousList;
 
     public bool active = false;
     public bool skipped = false;
     public bool complete = false;
-    private bool setActive;
 
-    // Update is called once per frame
-    void Update()
+    public bool canSkip = false;
+    public bool canContinue;
+
+    private Node parentNode = null;
+
+    // Start is called before the first frame update
+    void Start()
     {
-        // Activate once previous tasks are all completed
-        if (!active && !skipped && !complete)
-        {
-            setActive = true;
-            for (int i = 0; i < previousList.Length; i++)
-            {
-                if (previousList[i] != null && !previousList[i].complete) // Won't activate if any previous tasks are incomplete
-                {
-                    setActive = false;
-                    break;
-                }
-            }
-            if (setActive)
-            {
-                active = true;
-                Debug.Log(description); // DEBUG PURPOSES ONLY
-            }
-        }
+        canContinue = canSkip;
     }
 
-    public void completeObjective()
+        public void completeObjective()
     {
-        // Complete the objective and set to inactive
-        if (!skipped)
+        // Only complete the objective if it is active
+        if (active)
         {
-            complete = true;
-            Debug.Log(reportSuccess); // DEBUG PURPOSES ONLY
-        }
-        active = false;
-
-        // Skip previous incomplete objectives
-        for (int i = 0; i < previousList.Length; i++)
-        {
-            if (previousList[i] != null && !previousList[i].complete)
+            // Complete the objective and set to inactive
+            if (!skipped)
             {
-                previousList[i].skipObjective();
+                complete = true;
+                canContinue = true;
             }
+            active = false;
+
+            // Tell the node to update it's objectives and skip previous nodes
+            parentNode.updateObjectives();
+            parentNode.skipPrevious();
+
+            Debug.Log(reportSuccess); // DEBUG ONLY
         }
     }
 
     public void skipObjective()
     {
-        // Set to inactive and skipped
+        // Set to inactive
         active = false;
-        skipped = true;
-        Debug.Log(reportFail); // DEBUG PURPOSES ONLY
 
-        // Skip previous incomplete objectives
-        for (int i = 0; i < previousList.Length; i++)
+        // Set to skipped if the node wasn't already complete
+        if (!complete)
         {
-            if (previousList[i] != null && !previousList[i].complete && !previousList[i].skipped)
-            {
-                previousList[i].skipObjective();
-            }
+            skipped = true;
+            Debug.Log(reportFail); // DEBUG ONLY
         }
+    }
+
+    public void setParent(Node node)
+    {
+        parentNode = node;
     }
 }
