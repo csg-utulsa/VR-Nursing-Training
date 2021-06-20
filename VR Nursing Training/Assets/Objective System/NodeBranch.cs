@@ -2,21 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NodeSingle : Node
+public class NodeBranch : Node
 {
-    public Objective objective = null;
+    public Node[] nodes;
 
     // Sets the parent node of each objective in the node, activates objectives if the node starts active, and sets canSkip based on the node's objectives
     public override void initializeNode()
     {
-        objective.setParent(this);
-        if (active)
+        canSkip = true;
+        for (int i = 0; i < nodes.Length; i++)
         {
-            objective.active = true;
-        }
-        if (objective.canSkip)
-        {
-            canSkip = true;
+            if (nodes[i] != null)
+            {
+                if (active)
+                {
+                    nodes[i].activateNode();
+                }
+                if (!nodes[i].canSkip)
+                {
+                    canSkip = false;
+                }
+            }
         }
     }
 
@@ -29,25 +35,40 @@ public class NodeSingle : Node
         }
         else
         {
-            canContinue = objective.canContinue;
+            canContinue = true;
+            for (int i = 0; i < nodes.Length; i++)
+            {
+                if (!nodes[i].canContinue)
+                {
+                    canContinue = false;
+                }
+            }
         }
     }
 
     // Checks if the node is complete based on the node's conditions
     public override void checkComplete()
     {
-        if (objective.complete)
+        for (int i = 0; i < nodes.Length; i++)
         {
-            completeNode();
+            if (nodes[i].complete)
+            {
+                complete = true;
+                completeNode();
+            }
         }
     }
 
     // Checks if the node is saturated based on the node's conditions
     public override void checkSaturated()
     {
-        if (objective.skipped || objective.complete)
+        saturated = true;
+        for (int i = 0; i < nodes.Length; i++)
         {
-            saturated = true;
+            if (!nodes[i].complete && !nodes[i].saturated)
+            {
+                saturated = false;
+            }
         }
     }
 
@@ -58,6 +79,10 @@ public class NodeSingle : Node
         saturated = true;
         canContinue = true;
         active = false;
+        for (int i = 0; i < nodes.Length; i++)
+        {
+            nodes[i].deactivateNode();
+        }
         skipPrevious();
         Debug.Log("Node Complete"); // DEBUG ONLY
     }
@@ -65,10 +90,14 @@ public class NodeSingle : Node
     // Updates the node to be skipped
     public override void skipNode()
     {
-        objective.skipObjective();
         saturated = true;
         canContinue = true;
         active = false;
+        for (int i = 0; i < nodes.Length; i++)
+        {
+            nodes[i].skipNode();
+            nodes[i].deactivateNode();
+        }
         skipPrevious();
         Debug.Log("Node Skipped"); // DEBUG ONLY
     }
@@ -76,20 +105,25 @@ public class NodeSingle : Node
     // Updates the node to be activated
     public override void activateNode()
     {
-        objective.active = true;
         Debug.Log("Node Activated"); // DEBUG ONLY
-        Debug.Log(objective.description); // DEBUG ONLY
+        for (int i = 0; i < nodes.Length; i++)
+        {
+            nodes[i].activateNode();
+        }
     }
 
-    // Updates the whole node to be deactivated
     public override void deactivateNode()
     {
-        objective.active = false;
+        for (int i = 0; i < nodes.Length; i++)
+        {
+            nodes[i].deactivateNode();
+        }
     }
 
     // Updates the node's objectives
     public override void updateObjectives()
     {
-        // Nothing is needed because this only calls when the objective updates itself
+        skipPrevious();
+        // No objectives need to be updated because one objective's completion has no bearing over the others in an unordered node
     }
 }
