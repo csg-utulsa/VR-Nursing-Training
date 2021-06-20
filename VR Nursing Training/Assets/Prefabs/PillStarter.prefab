@@ -240,4 +240,4 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   combineMaterial: {fileID: 0}
-  combineDist: 0
+  combineDist: 0.2

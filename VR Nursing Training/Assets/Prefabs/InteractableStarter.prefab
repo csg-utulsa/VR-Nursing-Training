@@ -120,9 +120,9 @@ MonoBehaviour:
   material: {fileID: 0}
   layer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   combineMaterial: {fileID: 0}
-  combineDist: 0
+  combineDist: 0.2
 --- !u!114 &4300527510234720419
 MonoBehaviour:
   m_ObjectHideFlags: 0
