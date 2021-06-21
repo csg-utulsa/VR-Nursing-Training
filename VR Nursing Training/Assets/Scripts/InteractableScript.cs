@@ -57,7 +57,7 @@ public class InteractableScript : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (targets.Length > 1 && step < targets.Length && targets[step] != null)
+        if (targets.Length > 0 && step < targets.Length && targets[step] != null)
         {
             Collider[] colliders = Physics.OverlapSphere(transform.position, combineDist, layer);
             if (colliders.Length > 1)
