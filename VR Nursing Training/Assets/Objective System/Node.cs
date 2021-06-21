@@ -119,6 +119,12 @@ public class Node : MonoBehaviour
     {
 
     }
+
+    // Updates the whole node to be deactivated
+    public virtual void deactivateNode()
+    {
+
+    }
     
     // Updates the node's objectives
     public virtual void updateObjectives()
