@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8331415067707387223}
   m_Layer: 6
   m_Name: HalfPill(Temp)
-  m_TagString: Pill
+  m_TagString: HalfPill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

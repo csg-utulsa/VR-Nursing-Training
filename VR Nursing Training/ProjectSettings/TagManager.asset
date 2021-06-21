@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Interactable
   - Pill
+  - HalfPill
   layers:
   - Default
   - TransparentFX
