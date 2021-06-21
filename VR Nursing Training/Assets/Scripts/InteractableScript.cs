@@ -18,39 +18,39 @@ public class InteractableScript : MonoBehaviour
     {
         initialPosition = gameObject.transform.position; // Saves starting location
         isInteractable = true;
-        if(material != null)
+        if(material != null) 
         {
-            setMaterial(material);
+            setMaterial(material); // Sets starting material
         }
         
     }
 
-    public void setTarget(GameObject inputTarget)
+    public void setTarget(GameObject inputTarget) // Probably doesn't work havn't used yet
     {
         targets[step] = inputTarget;
     }
 
-    public GameObject getTarget()
+    public GameObject getTarget() // Returns current target
     {
         return targets[step];
     }
 
-    public void setInteractable(bool input)
+    public void setInteractable(bool input) 
     {
         isInteractable = input;
     }
 
-    public bool getisInteractable()
+    public bool getisInteractable() // Returns true if "isInteractable = true"
     {
         return isInteractable;
     }
 
-    public void setMaterial(Material iMaterial)
+    public void setMaterial(Material iMaterial) // Sets material of gameObj
     {
         GetComponent<Renderer>().material = iMaterial;
     }
 
-    public Material getMaterial()
+    public Material getMaterial() // Returns Material of gameObj (probably not needed)
     {
         return(GetComponent<Renderer>().material);
     }
@@ -75,8 +75,9 @@ public class InteractableScript : MonoBehaviour
         }
     }
 
-    public void CombineObject(GameObject touchedObj)
+    public void CombineObject(GameObject touchedObj) // Logic for combining gameObjs
     {
+        // Anything that needs to be transferred or continued with the combined obj needs to go in here
         touchedObj.SetActive(false);
         setMaterial(combineMaterial);
         step++;
@@ -86,7 +87,7 @@ public class InteractableScript : MonoBehaviour
         }
     }
 
-    public void Reset()
+    public void Reset() // Resets position of gameObj (used by ground trigger script)
     {
         gameObject.transform.position = initialPosition;
         gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);

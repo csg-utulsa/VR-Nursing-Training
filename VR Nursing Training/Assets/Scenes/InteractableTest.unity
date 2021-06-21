@@ -2502,6 +2502,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PillYellow
       objectReference: {fileID: 0}
+    - target: {fileID: 5157135668038891582, guid: 53c0f5dc5fc81fe4aa18dab64a87b612,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pill
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53c0f5dc5fc81fe4aa18dab64a87b612, type: 3}
 --- !u!1 &1717345290

@@ -1907,6 +1907,11 @@ PrefabInstance:
       propertyPath: material
       value: 
       objectReference: {fileID: 2100000, guid: 696f9049d66b18041965ea13e9cdf6ba, type: 2}
+    - target: {fileID: 5157135668038891580, guid: 53c0f5dc5fc81fe4aa18dab64a87b612,
+        type: 3}
+      propertyPath: layer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5157135668038891582, guid: 53c0f5dc5fc81fe4aa18dab64a87b612,
         type: 3}
       propertyPath: m_Name
@@ -5212,8 +5217,8 @@ Transform:
   - {fileID: 809857408}
   - {fileID: 434236624}
   - {fileID: 1105476328}
-  - {fileID: 939132586}
   - {fileID: 736089467}
+  - {fileID: 939132586}
   - {fileID: 1951925021}
   m_Father: {fileID: 0}
   m_RootOrder: 4
