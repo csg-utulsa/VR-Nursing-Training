@@ -5778,6 +5778,7 @@ GameObject:
   - component: {fileID: 1603440984}
   - component: {fileID: 1603440986}
   - component: {fileID: 1603440985}
+  - component: {fileID: 1603440987}
   m_Layer: 0
   m_Name: Complete
   m_TagString: Untagged
@@ -5833,7 +5834,28 @@ MonoBehaviour:
   saturated: 0
   canContinue: 0
   canSkip: 0
-  objective: {fileID: 0}
+  objective: {fileID: 1603440987}
+--- !u!114 &1603440987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603440983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bed5c6707fc6ef4aa88ef64f847e75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Demo Complete
+  reportSuccess: 
+  reportFail: 
+  weight: 0
+  active: 0
+  skipped: 0
+  complete: 0
+  canSkip: 0
+  canContinue: 0
 --- !u!1 &1717345290
 GameObject:
   m_ObjectHideFlags: 0
