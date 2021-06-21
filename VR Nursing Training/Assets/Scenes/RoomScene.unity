@@ -1705,6 +1705,7 @@ GameObject:
   - component: {fileID: 760503731}
   - component: {fileID: 760503730}
   - component: {fileID: 760503729}
+  - component: {fileID: 760503733}
   m_Layer: 6
   m_Name: Water (1)
   m_TagString: Untagged
@@ -1801,6 +1802,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 760503727}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &760503733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760503727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be5d07744e9fb5a409bfb7bc31ecda6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myObjective: {fileID: 167257095}
+  targetTag:
+  - Pill
 --- !u!1 &761608829
 GameObject:
   m_ObjectHideFlags: 0
@@ -6061,6 +6077,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1951925020}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1951925022 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8792015067316074576, guid: 52eced64495db0e4e8e5a99812cecafa,
+    type: 3}
+  m_PrefabInstance: {fileID: 1951925020}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1951925023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951925022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be5d07744e9fb5a409bfb7bc31ecda6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myObjective: {fileID: 796855425}
+  targetTag:
+  - Pill
 --- !u!1 &1969369837
 GameObject:
   m_ObjectHideFlags: 0
