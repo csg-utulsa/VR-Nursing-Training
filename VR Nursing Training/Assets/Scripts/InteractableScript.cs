@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class InteractableScript : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class InteractableScript : MonoBehaviour
     public float combineDist;
     private GameObject touchedObject;
     private static int step = 0;
+    public UnityEvent onCombine;
 
     private void Start()
     {
@@ -80,6 +82,9 @@ public class InteractableScript : MonoBehaviour
         // Anything that needs to be transferred or continued with the combined obj needs to go in here
         touchedObj.SetActive(false);
         setMaterial(combineMaterial);
+
+        onCombine.Invoke();
+
         step++;
         if (targets != null && step < targets.Length)
         {
