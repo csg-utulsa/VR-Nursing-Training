@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Events;
 public class PillCutterScript : MonoBehaviour
 {
     public GameObject halfPill;
     private GameObject OrigPill;
     private GameObject tophalf;
     private GameObject bottomhalf;
+    public UnityEvent onCut;
 
 
     private void OnTriggerEnter(Collider other)
@@ -21,6 +22,7 @@ public class PillCutterScript : MonoBehaviour
             tophalf.GetComponent<InteractableScript>().setMaterial(OrigPill.GetComponent<InteractableScript>().getMaterial());
             bottomhalf.GetComponent<InteractableScript>().setMaterial(OrigPill.GetComponent<InteractableScript>().getMaterial());
             OrigPill.SetActive(false);
+            onCut.Invoke();
         }
         
     }
