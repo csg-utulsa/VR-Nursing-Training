@@ -150,10 +150,10 @@ Transform:
   m_GameObject: {fileID: 2115684}
   m_LocalRotation: {x: 0.23310031, y: -0.6675805, z: -0.23309995, w: 0.66758144}
   m_LocalPosition: {x: -1.07965, y: 6.1449995, z: 1.0823147}
-  m_LocalScale: {x: 0.13084333, y: 0.0255976, z: 0.033517994}
+  m_LocalScale: {x: 0.13084334, y: 0.025597602, z: 0.033517994}
   m_Children: []
-  m_Father: {fileID: 1436730773}
-  m_RootOrder: 26
+  m_Father: {fileID: 441158833}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: -38.495}
 --- !u!23 &2115686
 MeshRenderer:
@@ -328,8 +328,8 @@ Transform:
   m_LocalPosition: {x: -1.07965, y: 6.253, z: 1.248}
   m_LocalScale: {x: 0.40733263, y: 0.025701597, z: 0.033517994}
   m_Children: []
-  m_Father: {fileID: 1436730773}
-  m_RootOrder: 25
+  m_Father: {fileID: 441158833}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 51.228}
 --- !u!23 &119037974
 MeshRenderer:
@@ -1096,6 +1096,38 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 434236623}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &441158832
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 441158833}
+  m_Layer: 0
+  m_Name: Checkmark
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &441158833
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441158832}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 119037973}
+  - {fileID: 2115685}
+  m_Father: {fileID: 1436730773}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &472147543
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4659,8 +4691,7 @@ Transform:
   - {fileID: 1951925021}
   - {fileID: 939132586}
   - {fileID: 736089467}
-  - {fileID: 119037973}
-  - {fileID: 2115685}
+  - {fileID: 441158833}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
