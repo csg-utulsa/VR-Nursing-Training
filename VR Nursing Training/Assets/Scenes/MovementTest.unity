@@ -210,7 +210,7 @@ MonoBehaviour:
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 256
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
     m_PersistentCalls:
@@ -965,7 +965,7 @@ MonoBehaviour:
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 256
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
     m_PersistentCalls:
@@ -1452,7 +1452,7 @@ MonoBehaviour:
   m_InteractionManager: {fileID: 1326111931}
   m_InteractionLayerMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 256
   m_AttachTransform: {fileID: 0}
   m_StartingSelectedInteractable: {fileID: 0}
   m_HoverEntered:
