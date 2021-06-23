@@ -8,7 +8,7 @@ public class DipTriggerScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Interactable"))
+        if (other.gameObject.GetComponent<InteractableScript>().isInteractable)
         {            other.gameObject.GetComponent<InteractableScript>().setMaterial(material);
         }
     }
