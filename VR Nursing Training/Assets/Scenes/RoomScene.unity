@@ -433,6 +433,8 @@ MonoBehaviour:
   reportSuccess: Pill Dunked Successfully
   reportFail: Pill Not Dunked
   weight: 0
+  failCount: 1
+  failed: 0
   active: 0
   skipped: 0
   complete: 0
@@ -2102,6 +2104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myObjective: {fileID: 167257095}
+  failAction: 0
   targetTag:
   - Pill
 --- !u!1 &761608829
@@ -2392,6 +2395,8 @@ MonoBehaviour:
   reportSuccess: Pill Cut Successfully
   reportFail: Pill Not Cut
   weight: 0
+  failCount: 1
+  failed: 0
   active: 0
   skipped: 0
   complete: 0
@@ -3956,6 +3961,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myObjective: {fileID: 1484903581}
+  failAction: 0
   targetTag:
   - Pill
   - HalfPill
@@ -4035,6 +4041,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myObjective: {fileID: 1959152171}
+  failAction: 0
   targetTag:
   - Interactable
 --- !u!1 &1073328064
@@ -6044,6 +6051,8 @@ MonoBehaviour:
   reportSuccess: Pill Carted Successfully
   reportFail: Pill Not Carted
   weight: 0
+  failCount: 1
+  failed: 0
   active: 0
   skipped: 0
   complete: 0
@@ -6462,6 +6471,8 @@ MonoBehaviour:
   reportSuccess: 
   reportFail: 
   weight: 0
+  failCount: 1
+  failed: 0
   active: 0
   skipped: 0
   complete: 0
@@ -7228,6 +7239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myObjective: {fileID: 796855425}
+  failAction: 0
   targetTag:
   - Pill
 --- !u!1 &1959152169
@@ -7278,6 +7290,8 @@ MonoBehaviour:
   reportSuccess: Box Carted Successfully
   reportFail: Box Not Carted
   weight: 0
+  failCount: 1
+  failed: 0
   active: 0
   skipped: 0
   complete: 0
@@ -7927,6 +7941,8 @@ MonoBehaviour:
   reportSuccess: Boxes Combined Successfully
   reportFail: Boxes Not Combined
   weight: 0
+  failCount: 1
+  failed: 0
   active: 0
   skipped: 0
   complete: 0
@@ -7945,6 +7961,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myObjective: {fileID: 2122102865}
+  failAction: 0
 --- !u!4 &2122102867
 Transform:
   m_ObjectHideFlags: 0

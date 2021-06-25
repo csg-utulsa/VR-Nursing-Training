@@ -10,6 +10,10 @@ public class Objective : MonoBehaviour
     public string reportFail = "";
     public int weight = 0;
 
+    public int strikeCount = 1;
+    private int strikes = 0;
+    public bool failed = false;
+
     public bool active = false;
     public bool skipped = false;
     public bool complete = false;
@@ -25,7 +29,7 @@ public class Objective : MonoBehaviour
         canContinue = canSkip;
     }
 
-        public void completeObjective()
+    public void completeObjective()
     {
         // Only complete the objective if it is active
         if (active)
@@ -56,6 +60,15 @@ public class Objective : MonoBehaviour
         {
             skipped = true;
             Debug.Log(reportFail); // DEBUG ONLY
+        }
+    }
+
+    public void failObjective()
+    {
+        strikes += 1;
+        if (strikes >= strikeCount && strikeCount != 0)
+        {
+            failed = true;
         }
     }
 
