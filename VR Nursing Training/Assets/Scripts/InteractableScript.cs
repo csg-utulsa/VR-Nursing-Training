@@ -13,11 +13,12 @@ public class InteractableScript : MonoBehaviour
     public Material combineMaterial;
     public float combineDist;
     private GameObject touchedObject;
-    private static int step = 0;
+    private static int step;
     public UnityEvent onCombine;
 
     private void Start()
     {
+        step = 0;
         initialPosition = gameObject.transform.position; // Saves starting location
         isInteractable = true;
         if(material != null) 
