@@ -7072,9 +7072,10 @@ GameObject:
   - component: {fileID: 1662897080}
   - component: {fileID: 1662897082}
   - component: {fileID: 1662897081}
+  - component: {fileID: 1662897083}
   m_Layer: 6
   m_Name: Hammer
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7087,7 +7088,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1662897079}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.754, y: 6.085, z: -1.962}
+  m_LocalPosition: {x: 1.822, y: 6.08, z: -1.996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 42358918}
@@ -7217,6 +7218,30 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 3
+--- !u!114 &1662897083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662897079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bd43063534b3924eb5caef959443d75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 0
+  initialPosition: {x: 0, y: 0, z: 0}
+  targets: []
+  material: {fileID: 0}
+  layer:
+    serializedVersion: 2
+    m_Bits: 64
+  combineMaterial: {fileID: 0}
+  combineDist: 0
+  onCombine:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1665067663
 PrefabInstance:
   m_ObjectHideFlags: 0
