@@ -3309,6 +3309,66 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1383005072}
+    - target: {fileID: 4942845292012948405, guid: bc70a28b8ac8f9847b0c58e3c7de2654,
+        type: 3}
+      propertyPath: m_text
+      value: Oral
+      objectReference: {fileID: 0}
+    - target: {fileID: 4942845292012948405, guid: bc70a28b8ac8f9847b0c58e3c7de2654,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 59.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4942845292012948405, guid: bc70a28b8ac8f9847b0c58e3c7de2654,
+        type: 3}
+      propertyPath: m_margin.w
+      value: -1.3942007
+      objectReference: {fileID: 0}
+    - target: {fileID: 4942845292012948405, guid: bc70a28b8ac8f9847b0c58e3c7de2654,
+        type: 3}
+      propertyPath: m_margin.x
+      value: -4.615099
+      objectReference: {fileID: 0}
+    - target: {fileID: 4942845292012948405, guid: bc70a28b8ac8f9847b0c58e3c7de2654,
+        type: 3}
+      propertyPath: m_margin.y
+      value: -1.8617518
+      objectReference: {fileID: 0}
+    - target: {fileID: 4942845292012948405, guid: bc70a28b8ac8f9847b0c58e3c7de2654,
+        type: 3}
+      propertyPath: m_margin.z
+      value: -4.5777035
+      objectReference: {fileID: 0}
+    - target: {fileID: 4942845292012948405, guid: bc70a28b8ac8f9847b0c58e3c7de2654,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4942845292012948405, guid: bc70a28b8ac8f9847b0c58e3c7de2654,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4942845292012948405, guid: bc70a28b8ac8f9847b0c58e3c7de2654,
+        type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: 97690656
+      objectReference: {fileID: 0}
+    - target: {fileID: 4942845292012948405, guid: bc70a28b8ac8f9847b0c58e3c7de2654,
+        type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 4942845292012948405, guid: bc70a28b8ac8f9847b0c58e3c7de2654,
+        type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4942845292012948405, guid: bc70a28b8ac8f9847b0c58e3c7de2654,
+        type: 3}
+      propertyPath: m_enableVertexGradient
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7760936908992609310, guid: bc70a28b8ac8f9847b0c58e3c7de2654,
         type: 3}
       propertyPath: m_InteractionManager
