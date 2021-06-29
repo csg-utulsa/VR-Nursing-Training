@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7092933350418771963}
   - component: {fileID: 2208979420957222782}
   - component: {fileID: 3450233723113210364}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pill bottle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5352502067661464762}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pillbottle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9081113769716122276}
   - component: {fileID: 4407730559915873952}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 9013840109876731325}
   - component: {fileID: 5889022093937167308}
   - component: {fileID: 8650413702228800363}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pill bottle cap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
