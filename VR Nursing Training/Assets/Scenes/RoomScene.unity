@@ -2437,7 +2437,7 @@ PrefabInstance:
     - target: {fileID: 5157135668038891559, guid: 53c0f5dc5fc81fe4aa18dab64a87b612,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.428
+      value: 2.6042
       objectReference: {fileID: 0}
     - target: {fileID: 5157135668038891559, guid: 53c0f5dc5fc81fe4aa18dab64a87b612,
         type: 3}
@@ -9107,6 +9107,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pill bottle
       objectReference: {fileID: 0}
+    - target: {fileID: 319161068228987517, guid: 91bb9d4a3de0c034692acb2673ad5f32,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pill
+      objectReference: {fileID: 0}
+    - target: {fileID: 3537497901608551040, guid: 91bb9d4a3de0c034692acb2673ad5f32,
+        type: 3}
+      propertyPath: material
+      value: 
+      objectReference: {fileID: 2100000, guid: 1850ddcce0d28644992dff4695b4d44c, type: 2}
     - target: {fileID: 5297229827259016364, guid: 91bb9d4a3de0c034692acb2673ad5f32,
         type: 3}
       propertyPath: m_InteractionManager
@@ -9120,17 +9130,17 @@ PrefabInstance:
     - target: {fileID: 8289887963508928033, guid: 91bb9d4a3de0c034692acb2673ad5f32,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.8069999
+      value: -0.6196
       objectReference: {fileID: 0}
     - target: {fileID: 8289887963508928033, guid: 91bb9d4a3de0c034692acb2673ad5f32,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.098
+      value: 5.9832
       objectReference: {fileID: 0}
     - target: {fileID: 8289887963508928033, guid: 91bb9d4a3de0c034692acb2673ad5f32,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.49799997
+      value: 2.307
       objectReference: {fileID: 0}
     - target: {fileID: 8289887963508928033, guid: 91bb9d4a3de0c034692acb2673ad5f32,
         type: 3}
