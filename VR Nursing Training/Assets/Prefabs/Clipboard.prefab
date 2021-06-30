@@ -168,7 +168,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 24
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 300
@@ -183,9 +183,9 @@ MonoBehaviour:
     30 y/o female, Caucasian, college professor.  History of hypertension for past
     5 years.  Smokes 2 packs cigarettes per day X 10 years\u2014chronic cough that
     keeps her up at night.   She has chronic hip pain due to a fall about 1 year
-    ago.  Glaucoma in right eye. She complains of frequent constipation. \r\n\r\n
-    \rMedical diagnosis:  HTN, Respiratory distress, chronic pain \r\n\r\n \rCurrent
-    vital signs:  BP- 146/92, HR- 79, RR- 24, T- 98.6\u2070F. \r\n\r\n \rDr. M. Welby,
+    ago.  Glaucoma in right eye. She complains of frequent constipation. \r\n\r\n\rMedical
+    diagnosis:  HTN, Respiratory distress, chronic pain \r\n\r\n \rCurrent vital
+    signs:  BP- 146/92, HR- 79, RR- 24, T- 98.6\u2070F. \r\n\r\n \rDr. M. Welby,
     MD \r\n\r\nORDER SHEET\nDate/Time:\n3/11/20 0700 \nOrders:\nRegular diet, as
     tolerated; encourage variety of foods including fruits & vegetables \r\nLasix
     20 mg po daily \r\nKCL (potassium) 40 mEq PO daily \r\nAldomet (Aldo) 125 mg
