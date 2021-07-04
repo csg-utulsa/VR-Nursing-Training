@@ -1561,7 +1561,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 4344cd4b57ee08c4c9968597b3433636,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4344cd4b57ee08c4c9968597b3433636,
         type: 3}
@@ -2344,7 +2344,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &558008932
 GameObject:
@@ -2894,7 +2894,7 @@ Transform:
   - {fileID: 1025775696}
   - {fileID: 1762170597}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &765964425
 MonoBehaviour:
@@ -4712,7 +4712,7 @@ Transform:
   - {fileID: 1928589320}
   - {fileID: 449067478}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1072718024
 GameObject:
@@ -5953,7 +5953,7 @@ Transform:
   - {fileID: 723362877}
   - {fileID: 1603440984}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1296159349
 PrefabInstance:
@@ -6358,7 +6358,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1427864257
 GameObject:
@@ -6550,7 +6550,7 @@ Transform:
   - {fileID: 151272623}
   - {fileID: 817496105}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1441018272 stripped
 Transform:
@@ -6941,7 +6941,7 @@ Transform:
   - {fileID: 1073328065}
   - {fileID: 297629603}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1524760334
 GameObject:
@@ -8975,7 +8975,7 @@ PrefabInstance:
     - target: {fileID: 1181033458290455976, guid: cab9d462c08238144a02f59b02ddb1c5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1181033458290455976, guid: cab9d462c08238144a02f59b02ddb1c5,
         type: 3}
@@ -9026,6 +9026,108 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 78.742
+      objectReference: {fileID: 0}
+    - target: {fileID: 6152370495266729958, guid: cab9d462c08238144a02f59b02ddb1c5,
+        type: 3}
+      propertyPath: age
+      value: 30 years
+      objectReference: {fileID: 0}
+    - target: {fileID: 6152370495266729958, guid: cab9d462c08238144a02f59b02ddb1c5,
+        type: 3}
+      propertyPath: dateTime
+      value: '3/11/20 0700 '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6152370495266729958, guid: cab9d462c08238144a02f59b02ddb1c5,
+        type: 3}
+      propertyPath: allergies
+      value: peanuts, shellfish
+      objectReference: {fileID: 0}
+    - target: {fileID: 6152370495266729958, guid: cab9d462c08238144a02f59b02ddb1c5,
+        type: 3}
+      propertyPath: clientName
+      value: Martindale, Angela
+      objectReference: {fileID: 0}
+    - target: {fileID: 6152370495266729958, guid: cab9d462c08238144a02f59b02ddb1c5,
+        type: 3}
+      propertyPath: doctorName
+      value: 'Dr. M. Welby, MD '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6152370495266729958, guid: cab9d462c08238144a02f59b02ddb1c5,
+        type: 3}
+      propertyPath: roomNumber
+      value: 101
+      objectReference: {fileID: 0}
+    - target: {fileID: 6152370495266729958, guid: cab9d462c08238144a02f59b02ddb1c5,
+        type: 3}
+      propertyPath: dateOfBirth
+      value: 1-1-1990
+      objectReference: {fileID: 0}
+    - target: {fileID: 6152370495266729958, guid: cab9d462c08238144a02f59b02ddb1c5,
+        type: 3}
+      propertyPath: patientHistory
+      value: "30 y/o female, Caucasian, college professor.  History of asthma since
+        age 13, DVT right leg 1 year ago.  Presented yesterday to the ER with complaints
+        of increased difficulty breathing, coughing and temperature of 101.5\u2070F.   
+        Chest x-ray reveals small consolidation in right upper lung.  Wheezing noted
+        in all lung fields upon arrival, but improved significantly after bronchodilator
+        nebulizer treatments X2.  Client states she had lost her rescue inhaler about
+        2 months ago.  Complains of dry eyes."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6152370495266729958, guid: cab9d462c08238144a02f59b02ddb1c5,
+        type: 3}
+      propertyPath: medicalDiagnosis
+      value: Asthma exacerbation; R-lung pneumonia, chronic hypertension
+      objectReference: {fileID: 0}
+    - target: {fileID: 6152370495266729958, guid: cab9d462c08238144a02f59b02ddb1c5,
+        type: 3}
+      propertyPath: currentVitalSigns
+      value: "BP- 130/80, HR- 108, RR- 20, T- 101.8\u2070 F."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6152370495266729958, guid: cab9d462c08238144a02f59b02ddb1c5,
+        type: 3}
+      propertyPath: orders.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6152370495266729958, guid: cab9d462c08238144a02f59b02ddb1c5,
+        type: 3}
+      propertyPath: orders.Array.data[0]
+      value: 'Regular diet, as tolerated '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6152370495266729958, guid: cab9d462c08238144a02f59b02ddb1c5,
+        type: 3}
+      propertyPath: orders.Array.data[1]
+      value: 'Doxycycline (Doxy) 100 mg po every 12 hours '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6152370495266729958, guid: cab9d462c08238144a02f59b02ddb1c5,
+        type: 3}
+      propertyPath: orders.Array.data[2]
+      value: 'Aldomet (Aldo) 250 mg PO daily '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6152370495266729958, guid: cab9d462c08238144a02f59b02ddb1c5,
+        type: 3}
+      propertyPath: orders.Array.data[3]
+      value: 'Aspirin (enteric coated) 81 mg po daily '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6152370495266729958, guid: cab9d462c08238144a02f59b02ddb1c5,
+        type: 3}
+      propertyPath: orders.Array.data[4]
+      value: 'Robitussin DM 1 Tablespoon by mouth q 6 hours prn cough '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6152370495266729958, guid: cab9d462c08238144a02f59b02ddb1c5,
+        type: 3}
+      propertyPath: orders.Array.data[5]
+      value: 'Albuterol MDI inhaler, 2 puffs q 4-6 hours prn wheezing, cough or SOB '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6152370495266729958, guid: cab9d462c08238144a02f59b02ddb1c5,
+        type: 3}
+      propertyPath: orders.Array.data[6]
+      value: 'Lubricating eye drops, 1 drop both eyes twice daily for dryness '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6152370495266729958, guid: cab9d462c08238144a02f59b02ddb1c5,
+        type: 3}
+      propertyPath: orders.Array.data[7]
+      value: "Tylenol 1000 mg po every 4-6 hours as needed for pain or fever greater
+        than 101.5\u2070 F (patient preference, liquid med) "
       objectReference: {fileID: 0}
     - target: {fileID: 8522974415120292106, guid: cab9d462c08238144a02f59b02ddb1c5,
         type: 3}

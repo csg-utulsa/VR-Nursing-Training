@@ -175,24 +175,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Client name:  Gilbert, Leah \r\nAge:  30 years \r\n\rDate of birth:  1-5-1990
-    \r\n\r\n \rAllergies:  cephalexin \r\n\r\n \rRoom # 105 \r\n\r\n \rPatient history: 
-    30 y/o female, Caucasian, college professor.  History of hypertension for past
-    5 years.  Smokes 2 packs cigarettes per day X 10 years\u2014chronic cough that
-    keeps her up at night.   She has chronic hip pain due to a fall about 1 year
-    ago.  Glaucoma in right eye. She complains of frequent constipation. \r\n\r\n\rMedical
-    diagnosis:  HTN, Respiratory distress, chronic pain \r\n\r\n \rCurrent vital
-    signs:  BP- 146/92, HR- 79, RR- 24, T- 98.6\u2070F. \r\n\r\n \rDr. M. Welby,
-    MD \r\n\r\nORDER SHEET\nDate/Time:\n3/11/20 0700 \nOrders:\nRegular diet, as
-    tolerated; encourage variety of foods including fruits & vegetables \r\nLasix
-    20 mg po daily \r\nKCL (potassium) 40 mEq PO daily \r\nAldomet (Aldo) 125 mg
-    PO daily. \r\nDocusate sodium gel cap, 100mg PO prn constipation \r\nAlbuterol
-    inhaler, 2 puffs every 6 hours prn SOB or wheezing \r\nXalatan  (latanoprost)
-    0.005% eye drops, 1 gtt, R eye twice daily \r\nDuragesic (fentanyl) patch, 50
-    mcg/hr every 72 hours for chronic hip pain \r\nRobitussin DM 1.5 teaspoons by
-    mouth q 6 hours prn cough \r\nTylenol 480 mg every 4 hours PRN pain not controlled
-    with fentanyl patch (patient preference, liquid medication) \r\nDr. M. Welby,
-    MD \r\n\r\n "
+  m_Text: 
 --- !u!1 &2045871732776452138
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,6 +531,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1181033458290455976}
+  - component: {fileID: 6152370495266729958}
   m_Layer: 6
   m_Name: Clipboard
   m_TagString: Untagged
@@ -570,3 +554,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6152370495266729958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8522974415120292106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e7c553dbcf4f0346b11f80fe2ad5472, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clientName: 
+  age: 
+  dateOfBirth: 
+  allergies: 
+  roomNumber: 
+  patientHistory: 
+  medicalDiagnosis: 
+  currentVitalSigns: 
+  doctorName: 
+  dateTime: 
+  orders: []
