@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class ClipboardText : MonoBehaviour
 {
+    public GameObject textObject;
+    Text text;
+
     public string clientName;
     public string age;
     public string dateOfBirth;
@@ -17,11 +20,9 @@ public class ClipboardText : MonoBehaviour
     public string dateTime;
     public string[] orders;
 
-    Text text;
-
     void Awake()
     {
-        text = GetComponent<Text>();
+        text = textObject.GetComponent<Text>();
         text.text = "Client name: " + clientName + "\n" +
                     "Age: " + age + "\n" +
                     "Date of birth: " + dateOfBirth + "\n\n" +
@@ -32,11 +33,11 @@ public class ClipboardText : MonoBehaviour
                     "Current vital signs: " + currentVitalSigns + "\n\n" +
                     doctorName + "\n\n" +
                     "ORDER SHEET" + "\n" +
-                    "Date/Time: " + dateTime +
+                    "Date/Time: " + dateTime + "\n" +
                     "Orders:" + "\n";
         for (int i = 0; i < orders.Length; i++)
         {
-            text.text += orders[i] + "\n";
+            text.text += "-" + orders[i] + "\n";
         }
         text.text += doctorName;
     }

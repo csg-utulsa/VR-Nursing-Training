@@ -566,6 +566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e7c553dbcf4f0346b11f80fe2ad5472, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textObject: {fileID: 1778270231980522984}
   clientName: 
   age: 
   dateOfBirth: 
