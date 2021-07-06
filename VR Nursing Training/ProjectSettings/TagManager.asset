@@ -7,6 +7,7 @@ TagManager:
   - Interactable
   - Pill
   - HalfPill
+  - Teleport
   layers:
   - Default
   - TransparentFX
