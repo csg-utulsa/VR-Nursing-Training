@@ -4,11 +4,15 @@ using UnityEngine;
 using UnityEngine.Events;
 public class PillCutterScript : MonoBehaviour
 {
-    public GameObject halfPill;
+    public GameObject topHalfPill;
+    public GameObject bottomHalfPill;
+    public GameObject spawnLocation;
     private GameObject OrigPill;
     private GameObject tophalf;
     private GameObject bottomhalf;
     public UnityEvent onCut;
+    public string type;
+
 
 
     private void OnTriggerEnter(Collider other)
@@ -17,10 +21,10 @@ public class PillCutterScript : MonoBehaviour
         
         if (other.CompareTag("Pill"))
         {
-            tophalf = Instantiate(halfPill, transform.position + new Vector3(0,1,0), OrigPill.transform.rotation);
-            bottomhalf = Instantiate(halfPill, transform.position + new Vector3(0, 1, 0), Quaternion.Inverse(OrigPill.transform.rotation));
-            tophalf.GetComponent<InteractableScript>().setMaterial(OrigPill.GetComponent<InteractableScript>().getMaterial());
-            bottomhalf.GetComponent<InteractableScript>().setMaterial(OrigPill.GetComponent<InteractableScript>().getMaterial());
+            tophalf = Instantiate(topHalfPill, spawnLocation.transform.position, OrigPill.transform.rotation);
+            bottomhalf = Instantiate(bottomHalfPill, spawnLocation.transform.position , Quaternion.Inverse(OrigPill.transform.rotation));
+            tophalf.GetComponent<InteractableScript>().setType(OrigPill.GetComponent<InteractableScript>().getType());
+            bottomhalf.GetComponent<InteractableScript>().setType(OrigPill.GetComponent<InteractableScript>().getType());
             OrigPill.SetActive(false);
             onCut.Invoke();
         }

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &319161068228987517
+--- !u!1 &7965732120258267213
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,50 +8,49 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8289887963508928033}
-  - component: {fileID: 4008363619997485650}
-  - component: {fileID: 856164435991142207}
-  - component: {fileID: 543664026749873972}
-  - component: {fileID: 4745240772819615412}
-  - component: {fileID: 3537497901608551040}
-  - component: {fileID: 5297229827259016364}
+  - component: {fileID: 7331903641807852279}
+  - component: {fileID: 5940243585203346770}
+  - component: {fileID: 8469875999155579288}
+  - component: {fileID: 8212344043940430973}
+  - component: {fileID: 1225550890467508688}
+  - component: {fileID: 1830929344895386997}
+  - component: {fileID: 6491662119390227102}
   m_Layer: 6
-  m_Name: Pill bottle
-  m_TagString: PillContainer
+  m_Name: pillcut1
+  m_TagString: HalfPill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8289887963508928033
+--- !u!4 &7331903641807852279
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319161068228987517}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.8069999, y: 6.098, z: 0.49799997}
-  m_LocalScale: {x: 100, y: 100, z: 100}
-  m_Children:
-  - {fileID: 5410740228523902872}
+  m_GameObject: {fileID: 7965732120258267213}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.7021, y: 6.1637, z: 2.3073335}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &4008363619997485650
+--- !u!33 &5940243585203346770
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319161068228987517}
-  m_Mesh: {fileID: 865751406950233496, guid: 5dc4d039b97eb434d82a225d24b99e9d, type: 3}
---- !u!23 &856164435991142207
+  m_GameObject: {fileID: 7965732120258267213}
+  m_Mesh: {fileID: -4652067499168588141, guid: 19b4fd4c2f7592948a85cb0f2f906a66, type: 3}
+--- !u!23 &8469875999155579288
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319161068228987517}
+  m_GameObject: {fileID: 7965732120258267213}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -64,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1850ddcce0d28644992dff4695b4d44c, type: 2}
+  - {fileID: -2813467912831258332, guid: 19b4fd4c2f7592948a85cb0f2f906a66, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -86,26 +85,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &543664026749873972
-BoxCollider:
+--- !u!64 &8212344043940430973
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319161068228987517}
+  m_GameObject: {fileID: 7965732120258267213}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.0006760867, y: 0.00068210426, z: 0.0015792152}
-  m_Center: {x: -0.0000052949786, y: -0.000018680505, z: -0.00002328597}
---- !u!54 &4745240772819615412
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4652067499168588141, guid: 19b4fd4c2f7592948a85cb0f2f906a66, type: 3}
+--- !u!54 &1225550890467508688
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319161068228987517}
+  m_GameObject: {fileID: 7965732120258267213}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -115,37 +115,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 3
---- !u!114 &3537497901608551040
+--- !u!114 &1830929344895386997
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319161068228987517}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bd43063534b3924eb5caef959443d75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isInteractable: 0
-  initialPosition: {x: 0, y: 0, z: 0}
-  targets: []
-  material: {fileID: 0}
-  layer:
-    serializedVersion: 2
-    m_Bits: 0
-  combineMaterial: {fileID: 0}
-  combineDist: 0
-  onCombine:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &5297229827259016364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319161068228987517}
+  m_GameObject: {fileID: 7965732120258267213}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
@@ -155,7 +131,7 @@ MonoBehaviour:
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 64
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
     m_PersistentCalls:
@@ -245,84 +221,27 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
---- !u!1 &5748695556617877020
-GameObject:
+--- !u!114 &6491662119390227102
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5410740228523902872}
-  - component: {fileID: 8747969960187490994}
-  - component: {fileID: 239896562872547026}
-  m_Layer: 6
-  m_Name: Pill bottle cap
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5410740228523902872
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5748695556617877020}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8289887963508928033}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8747969960187490994
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5748695556617877020}
-  m_Mesh: {fileID: 8151437853067337105, guid: 5dc4d039b97eb434d82a225d24b99e9d, type: 3}
---- !u!23 &239896562872547026
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5748695556617877020}
+  m_GameObject: {fileID: 7965732120258267213}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: -305007555438703465, guid: 5dc4d039b97eb434d82a225d24b99e9d, type: 3}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bd43063534b3924eb5caef959443d75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 0
+  initialPosition: {x: 0, y: 0, z: 0}
+  targets: []
+  material: {fileID: 0}
+  layer:
+    serializedVersion: 2
+    m_Bits: 0
+  combineMaterial: {fileID: 0}
+  combineDist: 0
+  onCombine:
+    m_PersistentCalls:
+      m_Calls: []

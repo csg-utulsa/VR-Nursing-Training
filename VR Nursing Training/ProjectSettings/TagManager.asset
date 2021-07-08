@@ -9,6 +9,7 @@ TagManager:
   - HalfPill
   - Teleport
   - Hands
+  - PillContainer
   layers:
   - Default
   - TransparentFX
