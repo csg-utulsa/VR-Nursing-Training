@@ -10,6 +10,7 @@ TagManager:
   - Teleport
   - Hands
   - PillContainer
+  - Patch
   layers:
   - Default
   - TransparentFX
