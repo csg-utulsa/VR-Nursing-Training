@@ -430,12 +430,12 @@ PrefabInstance:
     - target: {fileID: 3233485360692931321, guid: bc70a28b8ac8f9847b0c58e3c7de2654,
         type: 3}
       propertyPath: m_text
-      value: Stock Meds
+      value: Other
       objectReference: {fileID: 0}
     - target: {fileID: 3233485360692931321, guid: bc70a28b8ac8f9847b0c58e3c7de2654,
         type: 3}
       propertyPath: m_fontSize
-      value: 55.85
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 4613482722019903687, guid: bc70a28b8ac8f9847b0c58e3c7de2654,
         type: 3}
