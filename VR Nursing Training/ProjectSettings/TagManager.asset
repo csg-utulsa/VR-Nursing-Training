@@ -8,6 +8,7 @@ TagManager:
   - Pill
   - HalfPill
   - Teleport
+  - Hands
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - Drawer
   - Teleport
   - DrawerWall
-  - 
+  - Hands
   - 
   - 
   - 
