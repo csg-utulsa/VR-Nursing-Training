@@ -139,6 +139,7 @@ MonoBehaviour:
   onCombine:
     m_PersistentCalls:
       m_Calls: []
+  type: IBUPROFEN
 --- !u!114 &5297229827259016364
 MonoBehaviour:
   m_ObjectHideFlags: 0
