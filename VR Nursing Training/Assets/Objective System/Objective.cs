@@ -10,7 +10,7 @@ public class Objective : MonoBehaviour
     public string reportFail = "";
     public int weight = 0;
 
-    public int strikeCount = 1;
+    public int strikeCount = 0;
     private int strikes = 0;
     public bool failed = false;
 
