@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &319161068228987517
+--- !u!1 &327579620394125822
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,50 +8,49 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8289887963508928033}
-  - component: {fileID: 4008363619997485650}
-  - component: {fileID: 856164435991142207}
-  - component: {fileID: 543664026749873972}
-  - component: {fileID: 4745240772819615412}
-  - component: {fileID: 3537497901608551040}
-  - component: {fileID: 5297229827259016364}
-  m_Layer: 6
-  m_Name: Pill bottle
-  m_TagString: PillContainer
+  - component: {fileID: 1134937073284780868}
+  - component: {fileID: 4066681005329652961}
+  - component: {fileID: 2272971588340049963}
+  - component: {fileID: 597468280121390243}
+  - component: {fileID: 597468280121390240}
+  - component: {fileID: 6574998445387482109}
+  - component: {fileID: 7717911432201916839}
+  m_Layer: 0
+  m_Name: Digoxin
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8289887963508928033
+--- !u!4 &1134937073284780868
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319161068228987517}
+  m_GameObject: {fileID: 327579620394125822}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.8069999, y: 6.098, z: 0.49799997}
-  m_LocalScale: {x: 100, y: 100, z: 100}
-  m_Children:
-  - {fileID: 5410740228523902872}
+  m_LocalPosition: {x: -0.49464953, y: 5.4252143, z: 2.433291}
+  m_LocalScale: {x: 1.7924, y: 1.7924, z: 1.7924}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &4008363619997485650
+--- !u!33 &4066681005329652961
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319161068228987517}
-  m_Mesh: {fileID: 865751406950233496, guid: 5dc4d039b97eb434d82a225d24b99e9d, type: 3}
---- !u!23 &856164435991142207
+  m_GameObject: {fileID: 327579620394125822}
+  m_Mesh: {fileID: 2534964839176971238, guid: 5b1f373da51092f44ab65f0a6dc10d6f, type: 3}
+--- !u!23 &2272971588340049963
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319161068228987517}
+  m_GameObject: {fileID: 327579620394125822}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -64,7 +63,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1850ddcce0d28644992dff4695b4d44c, type: 2}
+  - {fileID: 2708161675513283163, guid: 5b1f373da51092f44ab65f0a6dc10d6f, type: 3}
+  - {fileID: 2100000, guid: 888bfe79d63047046a26663ebcc40821, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -86,26 +86,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &543664026749873972
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319161068228987517}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.0006760867, y: 0.00068210426, z: 0.0015792152}
-  m_Center: {x: -0.0000052949786, y: -0.000018680505, z: -0.00002328597}
---- !u!54 &4745240772819615412
+--- !u!54 &597468280121390243
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319161068228987517}
+  m_GameObject: {fileID: 327579620394125822}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -115,13 +102,26 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 3
---- !u!114 &3537497901608551040
+--- !u!65 &597468280121390240
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327579620394125822}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.026502337, y: 0.06549929, z: 0.026502328}
+  m_Center: {x: -0.0000000614673, y: 0.03393078, z: -0.00000009685755}
+--- !u!114 &6574998445387482109
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319161068228987517}
+  m_GameObject: {fileID: 327579620394125822}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9bd43063534b3924eb5caef959443d75, type: 3}
@@ -139,14 +139,14 @@ MonoBehaviour:
   onCombine:
     m_PersistentCalls:
       m_Calls: []
-  type: IBUPROFEN
---- !u!114 &5297229827259016364
+  type: DIGOXIN
+--- !u!114 &7717911432201916839
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319161068228987517}
+  m_GameObject: {fileID: 327579620394125822}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 64
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
     m_PersistentCalls:
@@ -246,84 +246,3 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
---- !u!1 &5748695556617877020
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5410740228523902872}
-  - component: {fileID: 8747969960187490994}
-  - component: {fileID: 239896562872547026}
-  m_Layer: 6
-  m_Name: Pill bottle cap
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5410740228523902872
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5748695556617877020}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8289887963508928033}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8747969960187490994
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5748695556617877020}
-  m_Mesh: {fileID: 8151437853067337105, guid: 5dc4d039b97eb434d82a225d24b99e9d, type: 3}
---- !u!23 &239896562872547026
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5748695556617877020}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: -305007555438703465, guid: 5dc4d039b97eb434d82a225d24b99e9d, type: 3}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}

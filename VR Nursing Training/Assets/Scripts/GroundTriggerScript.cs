@@ -6,7 +6,11 @@ public class GroundTriggerScript : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<InteractableScript>().isInteractable )
+        if (other.gameObject.GetComponent<InteractableScript>() == null)
+        {
+
+        }
+        else if (other.gameObject.GetComponent<InteractableScript>().isInteractable )
         {
             other.gameObject.GetComponent<InteractableScript>().Reset();
         }

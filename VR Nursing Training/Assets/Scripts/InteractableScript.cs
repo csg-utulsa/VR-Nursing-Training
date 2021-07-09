@@ -15,6 +15,7 @@ public class InteractableScript : MonoBehaviour
     private GameObject touchedObject;
     private static int step;
     public UnityEvent onCombine;
+    public string type;
 
     private void Start()
     {
@@ -36,6 +37,16 @@ public class InteractableScript : MonoBehaviour
     public GameObject getTarget() // Returns current target
     {
         return targets[step];
+    }
+
+    public void setType(string newType)
+    {
+        type = newType;
+    }
+    
+    public string getType()
+    {
+        return type;
     }
 
     public void setInteractable(bool input) 

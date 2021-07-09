@@ -8,6 +8,9 @@ TagManager:
   - Pill
   - HalfPill
   - Teleport
+  - Hands
+  - PillContainer
+  - Patch
   layers:
   - Default
   - TransparentFX
@@ -19,7 +22,7 @@ TagManager:
   - Drawer
   - Teleport
   - DrawerWall
-  - 
+  - Hands
   - 
   - 
   - 

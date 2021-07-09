@@ -5,12 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class ResetScript : MonoBehaviour
 {
-    public GameObject hammer;
 
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == hammer)
+        if (other.gameObject.CompareTag("Hands"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
