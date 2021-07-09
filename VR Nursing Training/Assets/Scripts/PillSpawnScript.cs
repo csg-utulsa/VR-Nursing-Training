@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PillSpawnScript : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class PillSpawnScript : MonoBehaviour
     private GameObject pill1;
     private GameObject pill2;
     private GameObject pill3;
+    public UnityEvent onSpawn;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -22,6 +24,7 @@ public class PillSpawnScript : MonoBehaviour
             pill1.GetComponent<InteractableScript>().setType(other.gameObject.GetComponent<InteractableScript>().getType());
             pill2.GetComponent<InteractableScript>().setType(other.gameObject.GetComponent<InteractableScript>().getType());
             pill3.GetComponent<InteractableScript>().setType(other.gameObject.GetComponent<InteractableScript>().getType());
+            onSpawn.Invoke();
         }
     }
 }
