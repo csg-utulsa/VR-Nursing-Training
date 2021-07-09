@@ -76,4 +76,9 @@ public class Objective : MonoBehaviour
     {
         parentNode = node;
     }
+
+    public int getStrikes()
+    {
+        return strikes;
+    }
 }
