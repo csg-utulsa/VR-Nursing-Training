@@ -10,6 +10,10 @@ public class Objective : MonoBehaviour
     public string reportFail = "";
     public int weight = 0;
 
+    public int strikeCount = 0;
+    private int strikes = 0;
+    public bool failed = false;
+
     public bool active = false;
     public bool skipped = false;
     public bool complete = false;
@@ -25,7 +29,7 @@ public class Objective : MonoBehaviour
         canContinue = canSkip;
     }
 
-        public void completeObjective()
+    public void completeObjective()
     {
         // Only complete the objective if it is active
         if (active)
@@ -59,8 +63,22 @@ public class Objective : MonoBehaviour
         }
     }
 
+    public void failObjective()
+    {
+        strikes += 1;
+        if (strikes >= strikeCount && strikeCount != 0)
+        {
+            failed = true;
+        }
+    }
+
     public void setParent(Node node)
     {
         parentNode = node;
+    }
+
+    public int getStrikes()
+    {
+        return strikes;
     }
 }

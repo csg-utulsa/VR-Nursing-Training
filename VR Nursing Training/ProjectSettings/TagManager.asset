@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Interactable
   - Pill
+  - HalfPill
+  - Teleport
+  - Hands
+  - PillContainer
+  - Patch
   layers:
   - Default
   - TransparentFX
@@ -14,10 +19,10 @@ TagManager:
   - Water
   - UI
   - Pickupable
-  - 
-  - 
-  - 
-  - 
+  - Drawer
+  - Teleport
+  - DrawerWall
+  - Hands
   - 
   - 
   - 

@@ -81,6 +81,12 @@ public class NodeSingle : Node
         Debug.Log(objective.description); // DEBUG ONLY
     }
 
+    // Updates the whole node to be deactivated
+    public override void deactivateNode()
+    {
+        objective.active = false;
+    }
+
     // Updates the node's objectives
     public override void updateObjectives()
     {
