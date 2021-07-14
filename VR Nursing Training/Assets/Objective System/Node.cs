@@ -13,6 +13,7 @@ public class Node : MonoBehaviour
     public bool canSkip = false; // Indicates whether the node can be skipped (only set in start, never updated)
 
     private bool setActive;
+    private ScenarioStart scenarioParent;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,12 @@ public class Node : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Set the scenario parent object
+        if (previousList.Length > 0)
+        {
+            scenarioParent = previousList[0].scenarioParent;
+        }
+
         // Check whether the node should be activated
         if (!active && !complete && !saturated)
         {
@@ -73,6 +80,18 @@ public class Node : MonoBehaviour
                 previousList[i].skipPrevious();
             }
         }
+    }
+
+    // Sets the scenarioParent variable
+    public void setScenarioParent(ScenarioStart parent)
+    {
+        scenarioParent = parent;
+    }
+
+    // Gets the scenarioParent variable
+    public ScenarioStart getScenarioParent()
+    {
+        return scenarioParent;
     }
 
 
