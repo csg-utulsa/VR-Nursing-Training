@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CheckComplete : MonoBehaviour
 {
@@ -9,7 +10,17 @@ public class CheckComplete : MonoBehaviour
     public GameObject checkmark;
     public GameObject failmark;
 
+    public GameObject reportObject;
+    public GameObject reportText;
+    public ScenarioStart reportSource;
+    Text text;
+
     private bool noSkips = true;
+
+    void Awake()
+    {
+        text = reportText.GetComponent<Text>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -31,6 +42,9 @@ public class CheckComplete : MonoBehaviour
             {
                 failmark.SetActive(true);
             }
+
+            reportObject.SetActive(true);
+            text.text = reportSource.getReport();
         }
     }
 }

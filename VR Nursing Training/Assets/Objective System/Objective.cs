@@ -22,11 +22,22 @@ public class Objective : MonoBehaviour
     public bool canContinue;
 
     private Node parentNode = null;
+    private ScenarioStart scenarioParent = null;
 
     // Start is called before the first frame update
     void Start()
     {
         canContinue = canSkip;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        // Set the scenario parent for reporting purposes
+        if (parentNode != null)
+        {
+            scenarioParent = parentNode.getScenarioParent();
+        }
     }
 
     public void completeObjective()
@@ -47,6 +58,7 @@ public class Objective : MonoBehaviour
             parentNode.skipPrevious();
 
             Debug.Log(reportSuccess); // DEBUG ONLY
+            scenarioParent.addReport(reportSuccess);
         }
     }
 
@@ -60,6 +72,7 @@ public class Objective : MonoBehaviour
         {
             skipped = true;
             Debug.Log(reportFail); // DEBUG ONLY
+            scenarioParent.addReport(reportFail);
         }
     }
 
