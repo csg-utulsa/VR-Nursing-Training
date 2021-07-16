@@ -5,6 +5,7 @@ using UnityEngine;
 public class ScenarioStart : MonoBehaviour
 {
     public Node[] possibleStarts;
+    public GameObject[] clipboards;
 
     private int startIndex;
     private string report;
@@ -15,6 +16,7 @@ public class ScenarioStart : MonoBehaviour
         startIndex = Random.Range(0, possibleStarts.Length);
         possibleStarts[startIndex].setScenarioParent(this);
         possibleStarts[startIndex].activateNode();
+        clipboards[startIndex].SetActive(true);
     }
 
     // Adds to the report
