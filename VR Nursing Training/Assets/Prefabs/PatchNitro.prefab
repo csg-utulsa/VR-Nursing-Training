@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 5301540454244573039}
   - component: {fileID: 9096428338877255882}
   - component: {fileID: 6474476595234186240}
-  - component: {fileID: -8399927992073972395}
+  - component: {fileID: 3642674115339129751}
   - component: {fileID: -121602278167773358}
   - component: {fileID: 2277313234067073815}
   - component: {fileID: -5014029394938515869}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PatchNitro
   m_TagString: Patch
   m_Icon: {fileID: 0}
@@ -85,8 +85,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &-8399927992073972395
-MeshCollider:
+--- !u!65 &3642674115339129751
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -95,10 +95,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2124705421725058983, guid: 847538255345d2946868797f4bc0b52b, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.0011070489, y: 0.0011070487, z: 0.00005319255}
+  m_Center: {x: 0, y: 0, z: 0.000016596274}
 --- !u!54 &-121602278167773358
 Rigidbody:
   m_ObjectHideFlags: 0
