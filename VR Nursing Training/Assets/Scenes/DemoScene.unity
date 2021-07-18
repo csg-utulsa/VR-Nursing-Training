@@ -6713,6 +6713,7 @@ MonoBehaviour:
   rightTeleportRay: {fileID: 1025775700}
   teleportActivationButton: 2
   activationThreshhold: 0.1
+  questionCanvas: {fileID: 1693950849}
 --- !u!1 &796855423
 GameObject:
   m_ObjectHideFlags: 0

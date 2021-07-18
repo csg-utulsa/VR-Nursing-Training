@@ -11,13 +11,30 @@ public class LocomotionController : MonoBehaviour
     public XRController rightTeleportRay;
     public InputHelpers.Button teleportActivationButton;
     public float activationThreshhold = .1f;
+    public Canvas questionCanvas;
 
     // Update is called once per frame
     void Update()
     {
-        if(rightTeleportRay)
+        int count = 0;
+        foreach (Transform child in questionCanvas.transform)
         {
-            rightTeleportRay.gameObject.SetActive(CheckIfActivated(rightTeleportRay));
+            if (child.gameObject.activeSelf)
+            {
+                count++;
+            }
+        }
+        
+        if (rightTeleportRay)
+        {
+            if (count > 0)
+            {
+                rightTeleportRay.gameObject.SetActive(true);
+            }
+            else
+            {
+                rightTeleportRay.gameObject.SetActive(CheckIfActivated(rightTeleportRay));
+            }
         }
     }
 
