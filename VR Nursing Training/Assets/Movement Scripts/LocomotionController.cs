@@ -12,6 +12,7 @@ public class LocomotionController : MonoBehaviour
     public InputHelpers.Button teleportActivationButton;
     public float activationThreshhold = .1f;
     public Canvas questionCanvas;
+    public Camera canvasCam;
 
     // Update is called once per frame
     void Update()
@@ -29,10 +30,12 @@ public class LocomotionController : MonoBehaviour
         {
             if (count > 0)
             {
+                canvasCam.gameObject.SetActive(true);
                 rightTeleportRay.gameObject.SetActive(true);
             }
             else
             {
+                canvasCam.gameObject.SetActive(false);
                 rightTeleportRay.gameObject.SetActive(CheckIfActivated(rightTeleportRay));
             }
         }
