@@ -78,10 +78,13 @@ public class Objective : MonoBehaviour
 
     public void failObjective()
     {
-        strikes += 1;
-        if (strikes >= strikeCount && strikeCount != 0)
+        if (active)
         {
-            failed = true;
+            strikes += 1;
+            if (strikes >= strikeCount && strikeCount != 0)
+            {
+                failed = true;
+            }
         }
     }
 

@@ -139,6 +139,7 @@ MonoBehaviour:
   onCombine:
     m_PersistentCalls:
       m_Calls: []
+  type: 
 --- !u!114 &175106695356426629
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -85,6 +85,7 @@ GameObject:
   - component: {fileID: 2128698125}
   - component: {fileID: 2128698127}
   - component: {fileID: 2128698126}
+  - component: {fileID: 281374608488387075}
   m_Layer: 6
   m_Name: Pill Cutter Tray
   m_TagString: Untagged
@@ -132,6 +133,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pill: {fileID: 2276514548419805056, guid: 1bc346026eafb9040bf9e30a007a9580, type: 3}
+  onSpawn:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &281374608488387075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128698124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fcc92597787b4f44ba3134a116ca09f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patchNitro: {fileID: 4816892652931515861, guid: 034b5bc6e25549d4a8f1e761c7819922,
+    type: 3}
+  onSpawn:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &275248530143692066
 GameObject:
   m_ObjectHideFlags: 0

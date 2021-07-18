@@ -11,6 +11,7 @@ TagManager:
   - Hands
   - PillContainer
   - Patch
+  - PatchContainer
   layers:
   - Default
   - TransparentFX

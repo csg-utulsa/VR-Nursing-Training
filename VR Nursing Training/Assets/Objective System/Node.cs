@@ -33,7 +33,10 @@ public class Node : MonoBehaviour
         // Check whether the node should be activated
         if (!active && !complete && !saturated)
         {
-            setActive = true;
+            if (previousList.Length > 0)
+            {
+                setActive = true;
+            }
             for (int i = 0; i < previousList.Length; i++)
             {
                 if (previousList[i] != null && !previousList[i].canContinue) // Won't activate if any previous tasks are incomplete

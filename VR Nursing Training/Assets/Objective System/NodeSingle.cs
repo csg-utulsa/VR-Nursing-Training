@@ -76,6 +76,7 @@ public class NodeSingle : Node
     // Updates the node to be activated
     public override void activateNode()
     {
+        active = true;
         objective.active = true;
         Debug.Log("Node Activated"); // DEBUG ONLY
         Debug.Log(objective.description); // DEBUG ONLY
