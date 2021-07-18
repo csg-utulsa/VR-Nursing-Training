@@ -25,6 +25,13 @@ public class ActionCountMedicine : ActionBase
                 currentDosage += 0.5;
             }
         }
+        if (other.CompareTag("Patch"))
+        {
+            if (other.gameObject.GetComponent<InteractableScript>().getType() == targetType)
+            {
+                currentDosage += 1;
+            }
+        }
     }
     private void OnTriggerExit(Collider other)
     {
@@ -40,6 +47,13 @@ public class ActionCountMedicine : ActionBase
             if (other.gameObject.GetComponent<InteractableScript>().getType() == targetType)
             {
                 currentDosage -= 0.5;
+            }
+        }
+        if (other.CompareTag("Patch"))
+        {
+            if (other.gameObject.GetComponent<InteractableScript>().getType() == targetType)
+            {
+                currentDosage -= 1;
             }
         }
     }
