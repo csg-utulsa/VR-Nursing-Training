@@ -7,11 +7,13 @@ public class InteractableScript : MonoBehaviour
 {
     public bool isInteractable;
     public Vector3 initialPosition;
+    public Vector3 initialAngles;
     public GameObject[] targets;
     public Material material;
     public LayerMask layer;
     public Material combineMaterial;
     public float combineDist;
+    private GameObject respawnPoint;
     private GameObject touchedObject;
     private static int step;
     public UnityEvent onCombine;
@@ -20,7 +22,18 @@ public class InteractableScript : MonoBehaviour
     private void Start()
     {
         step = 0;
-        initialPosition = gameObject.transform.position; // Saves starting location
+
+        respawnPoint = new GameObject(gameObject.name + "'s respawn object"); //Logan added these
+        respawnPoint.transform.position = gameObject.transform.position;
+        respawnPoint.transform.parent = gameObject.transform.parent.transform;
+        
+        initialPosition = gameObject.transform.position;
+
+        initialAngles = gameObject.transform.eulerAngles;
+        
+        //Debug.Log("Object "+gameObject.name+", My position " + initialPosition+", Parent Position: "+ParentObjectTransform.position);
+        //Debug.Log("Parent Position: " + ParentObjectTransform.position);
+
         isInteractable = true;
         if(material != null) 
         {
@@ -106,7 +119,13 @@ public class InteractableScript : MonoBehaviour
 
     public void Reset() // Resets position of gameObj (used by ground trigger script)
     {
-        gameObject.transform.position = initialPosition;
+
+        
+        gameObject.transform.position = respawnPoint.transform.position; //Logan added this
+
+        //gameObject.transform.position = initialPosition;
+        gameObject.transform.eulerAngles = initialAngles;
+
         gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
     }
 
