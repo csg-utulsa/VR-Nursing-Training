@@ -9,9 +9,12 @@ public class HandPresence : MonoBehaviour
     public InputDeviceCharacteristics controllerCharacteristics;
     public List<GameObject> controllerPrefabs;
     public GameObject handModelPrefab; 
+    public GameObject controllerPrefabFallback;
+
     
     private InputDevice targetDevice;
-    private GameObject spawnedController;
+    
+public GameObject spawnedController;
     private GameObject spawnedHandModel;
 
 
@@ -26,14 +29,23 @@ public class HandPresence : MonoBehaviour
         {
             Debug.Log(item.name + item.characteristics);
         }
+	if(devices.Count == 0){
+		devices = new List<InputDevice>();
+		InputDeviceCharacteristics genericControllerCharacteristics = InputDeviceCharacteristics.Controller;
 
+		//InputDevices.GetDevices(devices);
+		InputDevices.GetDevicesWithCharacteristics(genericControllerCharacteristics,devices);
+		Debug.Log("Input device list empty, refreshed: Now has "+devices.Count+" devices.");
+	}
 
         if(devices.Count > 0)
         {
             targetDevice = devices[0];
+	    Debug.Log("targetDevice name is "+targetDevice.name);
             GameObject prefab = controllerPrefabs.Find(controller => controller.name == targetDevice.name);
             if (prefab)
             {
+		Debug.Log("targetDevice.name = "+targetDevice.name);
                 spawnedController = Instantiate(prefab, transform);
             }
             else
@@ -42,9 +54,16 @@ public class HandPresence : MonoBehaviour
                 spawnedController = Instantiate(controllerPrefabs[0], transform);
             }
 
-            spawnedHandModel = Instantiate(handModelPrefab, transform);
-
-        }
+        } else {
+		//No devices found, all hope is lost; Assume we're using an HTC Vive.
+		Debug.Log("No devices found for VR Interacting devices, assuming HTC Vive as fallback.");
+		GameObject prefab = controllerPrefabFallback;
+		spawnedController = Instantiate(prefab,transform);
+		//gameObject.transform.eulerAngles = new Vector3(45,0,0); //Angle tweak because our controllers don't line up perfectly without it
+		//Above was fixed by modifying the prefab.
+	}
+        spawnedHandModel = Instantiate(handModelPrefab, transform);
+	
     }
     // Update is called once per frame
     void Update()

@@ -56,3 +56,6 @@ MonoBehaviour:
   - {fileID: 5928091942230486030, guid: c4b9c875ed967534eb12cd57aeeb1183, type: 3}
   - {fileID: 6654152787936889342, guid: 61e60013ce1d7d942b8975c98fdf8154, type: 3}
   handModelPrefab: {fileID: 0}
+  controllerPrefabFallback: {fileID: 6654152787936889342, guid: 61e60013ce1d7d942b8975c98fdf8154,
+    type: 3}
+  spawnedController: {fileID: 0}

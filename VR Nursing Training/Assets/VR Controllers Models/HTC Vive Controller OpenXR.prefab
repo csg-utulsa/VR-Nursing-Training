@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7638972948592835565}
   m_Layer: 0
-  m_Name: OpenVR Controller(Vive Controller MV) - Right
+  m_Name: HTC Vive Controller OpenXR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23,14 +23,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6654152787936889342}
-  m_LocalRotation: {x: -0.0050655385, y: 0.9525829, z: -0.30423328, w: -0.0015111568}
-  m_LocalPosition: {x: -0.0075, y: 0.0343, z: 0.0359}
+  m_LocalRotation: {x: -0.005358046, y: 0.99998564, z: -0.00000065466173, w: 0.00012218117}
+  m_LocalPosition: {x: -0.008, y: 0.03, z: 0.062}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6744940971008695921}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 35.425003, y: 179.98601, z: -0.614}
+  m_LocalEulerAnglesHint: {x: 0, y: 179.98601, z: -0.614}
 --- !u!1 &7979483208797075370
 GameObject:
   m_ObjectHideFlags: 0
@@ -86,6 +86,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -110,3 +111,4 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
