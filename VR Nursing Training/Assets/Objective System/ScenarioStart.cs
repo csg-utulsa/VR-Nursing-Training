@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ScenarioStart : MonoBehaviour
 {
-    public Node[] possibleStarts;
+    public ScenarioGroup[] possibleStarts;
     public GameObject[] clipboards;
 
     private int startIndex;
@@ -15,8 +15,11 @@ public class ScenarioStart : MonoBehaviour
     void Start()
     {
         startIndex = Random.Range(0, possibleStarts.Length);
-        possibleStarts[startIndex].setScenarioParent(this);
-        possibleStarts[startIndex].activateNode();
+        for (int i = 0; i < possibleStarts[startIndex].nodes.Length; i++)
+        {
+            possibleStarts[startIndex].nodes[i].setScenarioParent(this);
+            possibleStarts[startIndex].nodes[i].activateNode();
+        }
         clipboards[startIndex].SetActive(true);
     }
 

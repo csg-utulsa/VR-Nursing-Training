@@ -2648,6 +2648,7 @@ MonoBehaviour:
   targetTypes:
   - IBUPROFEN
   notTarget: 1
+  onCollision: 0
 --- !u!4 &228024661 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f134ecd79ce0eeb44a38041e50af3f0f,
@@ -4277,6 +4278,7 @@ MonoBehaviour:
   targetTypes:
   - NITROGLYCERIN
   notTarget: 1
+  onCollision: 0
 --- !u!1 &327995477
 GameObject:
   m_ObjectHideFlags: 0
@@ -7656,6 +7658,8 @@ MonoBehaviour:
   failObjectives:
   - {fileID: 299760126}
   - {fileID: 1676930993}
+  - {fileID: 1337505348}
+  - {fileID: 1853720480}
   checkmark: {fileID: 1604599809}
   failmark: {fileID: 354352988}
   reportObject: {fileID: 65378653}
@@ -10691,7 +10695,7 @@ PrefabInstance:
     - target: {fileID: 2927741851265122147, guid: 18eba83f63c54a94b9e85b24993dd445,
         type: 3}
       propertyPath: onMark.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2927741851265122147, guid: 18eba83f63c54a94b9e85b24993dd445,
         type: 3}
@@ -10700,12 +10704,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2927741851265122147, guid: 18eba83f63c54a94b9e85b24993dd445,
         type: 3}
+      propertyPath: onMark.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2927741851265122147, guid: 18eba83f63c54a94b9e85b24993dd445,
+        type: 3}
       propertyPath: onMark.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1060009495}
     - target: {fileID: 2927741851265122147, guid: 18eba83f63c54a94b9e85b24993dd445,
         type: 3}
+      propertyPath: onMark.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2927741851265122147, guid: 18eba83f63c54a94b9e85b24993dd445,
+        type: 3}
       propertyPath: onMark.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2927741851265122147, guid: 18eba83f63c54a94b9e85b24993dd445,
+        type: 3}
+      propertyPath: onMark.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2927741851265122147, guid: 18eba83f63c54a94b9e85b24993dd445,
@@ -10715,13 +10734,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2927741851265122147, guid: 18eba83f63c54a94b9e85b24993dd445,
         type: 3}
+      propertyPath: onMark.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2927741851265122147, guid: 18eba83f63c54a94b9e85b24993dd445,
+        type: 3}
       propertyPath: onMark.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ActionCheckMedicine, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2927741851265122147, guid: 18eba83f63c54a94b9e85b24993dd445,
+        type: 3}
+      propertyPath: onMark.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: ActionCheckMedicine, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2927741851265122147, guid: 18eba83f63c54a94b9e85b24993dd445,
         type: 3}
       propertyPath: onMark.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2927741851265122147, guid: 18eba83f63c54a94b9e85b24993dd445,
+        type: 3}
+      propertyPath: onMark.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18eba83f63c54a94b9e85b24993dd445, type: 3}
@@ -12593,6 +12627,7 @@ MonoBehaviour:
   targetTypes:
   - NITROGLYCERIN
   notTarget: 0
+  onCollision: 0
 --- !u!1001 &1060450509
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12697,6 +12732,8 @@ GameObject:
   - component: {fileID: 1072718030}
   - component: {fileID: 1072718026}
   - component: {fileID: 1072718031}
+  - component: {fileID: 1072718033}
+  - component: {fileID: 1072718032}
   m_Layer: 6
   m_Name: Cart Trigger
   m_TagString: Untagged
@@ -12826,6 +12863,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sharpie: {fileID: 355127568}
+--- !u!114 &1072718032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072718024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42024e2ff4151704eae4ab5b9935dc4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myObjective: {fileID: 1853720480}
+  failAction: 1
+  targetTypes:
+  - NITROGLYCERIN
+  notTarget: 1
+  onCollision: 1
+--- !u!114 &1072718033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072718024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42024e2ff4151704eae4ab5b9935dc4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myObjective: {fileID: 1337505348}
+  failAction: 1
+  targetTypes:
+  - IBUPROFEN
+  notTarget: 1
+  onCollision: 1
 --- !u!1 &1073328064
 GameObject:
   m_ObjectHideFlags: 0
@@ -14975,6 +15048,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1237110800}
+  - component: {fileID: 1237110801}
   m_Layer: 0
   m_Name: Patch Medication
   m_TagString: Untagged
@@ -14996,9 +15070,25 @@ Transform:
   - {fileID: 30480717}
   - {fileID: 1700906719}
   - {fileID: 804065050}
+  - {fileID: 1853720479}
   m_Father: {fileID: 1843458144}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1237110801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237110799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421177f7330a9e5498f74936c7b2d200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 30480715}
+  - {fileID: 1853720481}
 --- !u!1001 &1270498966
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15494,6 +15584,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1292715789}
+  - component: {fileID: 1292715790}
   m_Layer: 0
   m_Name: Oral Medication
   m_TagString: Untagged
@@ -15515,9 +15606,25 @@ Transform:
   - {fileID: 1593261452}
   - {fileID: 278191225}
   - {fileID: 1603440984}
+  - {fileID: 1337505347}
   m_Father: {fileID: 1843458144}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1292715790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292715788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421177f7330a9e5498f74936c7b2d200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 1593261450}
+  - {fileID: 1337505349}
 --- !u!1001 &1296159349
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16237,6 +16344,81 @@ Transform:
   m_Father: {fileID: 507503611}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 86.296}
+--- !u!1 &1337505346
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1337505347}
+  - component: {fileID: 1337505349}
+  - component: {fileID: 1337505348}
+  m_Layer: 0
+  m_Name: Wrong Medicine Fail (Oral)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1337505347
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337505346}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1292715789}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1337505348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337505346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bed5c6707fc6ef4aa88ef64f847e75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: 
+  reportSuccess: 
+  reportSkip: 
+  reportFail: Wrong Medicine Carted
+  weight: 0
+  strikeCount: 1
+  failed: 0
+  active: 0
+  skipped: 0
+  complete: 0
+  canSkip: 0
+  canContinue: 0
+--- !u!114 &1337505349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337505346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e956f245f0f1dc241bd7a0aa9aeb8522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousList: []
+  active: 0
+  complete: 0
+  saturated: 0
+  canContinue: 0
+  canSkip: 0
+  objective: {fileID: 1337505348}
 --- !u!1 &1338806171
 GameObject:
   m_ObjectHideFlags: 0
@@ -20575,6 +20757,7 @@ MonoBehaviour:
   targetTypes:
   - IBUPROFEN
   notTarget: 0
+  onCollision: 0
 --- !u!1001 &1661514015
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22526,8 +22709,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   possibleStarts:
-  - {fileID: 1593261450}
-  - {fileID: 30480715}
+  - {fileID: 1292715790}
+  - {fileID: 1237110801}
   clipboards:
   - {fileID: 507503610}
   - {fileID: 1205832086}
@@ -22621,6 +22804,81 @@ MonoBehaviour:
   onIncorrect:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &1853720478
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1853720479}
+  - component: {fileID: 1853720481}
+  - component: {fileID: 1853720480}
+  m_Layer: 0
+  m_Name: Wrong Medicine Fail (Patch)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1853720479
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853720478}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.699413, y: -7.335491, z: 3.418754}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1237110800}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1853720480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853720478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bed5c6707fc6ef4aa88ef64f847e75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: 
+  reportSuccess: 
+  reportSkip: 
+  reportFail: Wrong Medicine Carted
+  weight: 0
+  strikeCount: 1
+  failed: 0
+  active: 0
+  skipped: 0
+  complete: 0
+  canSkip: 0
+  canContinue: 0
+--- !u!114 &1853720481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853720478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e956f245f0f1dc241bd7a0aa9aeb8522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousList: []
+  active: 0
+  complete: 0
+  saturated: 0
+  canContinue: 0
+  canSkip: 0
+  objective: {fileID: 1853720480}
 --- !u!1 &1858497435
 GameObject:
   m_ObjectHideFlags: 0
@@ -24591,6 +24849,7 @@ MonoBehaviour:
   targetTypes:
   - NITROGLYCERIN
   notTarget: 0
+  onCollision: 0
 --- !u!1 &1969369837
 GameObject:
   m_ObjectHideFlags: 0
