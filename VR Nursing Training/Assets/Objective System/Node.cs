@@ -13,7 +13,8 @@ public class Node : MonoBehaviour
     public bool canSkip = false; // Indicates whether the node can be skipped (only set in start, never updated)
 
     private bool setActive;
-    private ScenarioStart scenarioParent;
+    private ScenarioStart scenarioParent = null;
+    private bool inParentList = false;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,13 @@ public class Node : MonoBehaviour
         if (previousList.Length > 0)
         {
             scenarioParent = previousList[0].scenarioParent;
+        }
+        
+        // Add self to scenario parent's node list
+        if (scenarioParent != null && !inParentList)
+        {
+            inParentList = true;
+            scenarioParent.addNode(this);
         }
 
         // Check whether the node should be activated

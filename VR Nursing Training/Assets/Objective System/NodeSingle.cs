@@ -85,6 +85,7 @@ public class NodeSingle : Node
     // Updates the whole node to be deactivated
     public override void deactivateNode()
     {
+        active = false;
         objective.active = false;
     }
 

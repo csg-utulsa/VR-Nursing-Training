@@ -114,6 +114,7 @@ public class NodeBranch : Node
 
     public override void deactivateNode()
     {
+        active = false;
         for (int i = 0; i < nodes.Length; i++)
         {
             nodes[i].deactivateNode();

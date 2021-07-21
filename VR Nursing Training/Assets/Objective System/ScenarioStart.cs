@@ -9,6 +9,7 @@ public class ScenarioStart : MonoBehaviour
 
     private int startIndex;
     private string report;
+    private List<Node> nodesList = new List<Node>();
 
     // Start is called before the first frame update
     void Start()
@@ -29,5 +30,18 @@ public class ScenarioStart : MonoBehaviour
     public string getReport()
     {
         return report;
+    }
+
+    public void addNode(Node newNode)
+    {
+        nodesList.Add(newNode);
+    }
+
+    public void stopNodes()
+    {
+        foreach(Node current in nodesList)
+        {
+            current.deactivateNode();
+        }
     }
 }

@@ -5,17 +5,19 @@ using UnityEngine.UI;
 
 public class CheckComplete : MonoBehaviour
 {
-    public Node completeNode;
+    public Node[] completeNodes;
     public Objective[] skippableObjectives;
+    public Objective[] failObjectives;
     public GameObject checkmark;
     public GameObject failmark;
 
     public GameObject reportObject;
     public GameObject reportText;
-    public ScenarioStart reportSource;
+    public ScenarioStart scenarioParent;
     Text text;
 
     private bool noSkips = true;
+    private bool finished = false;
 
     void Awake()
     {
@@ -25,26 +27,53 @@ public class CheckComplete : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (completeNode.active)
+        // Check for complete scenario
+        if (!finished)
         {
-            for (int i = 0; i < skippableObjectives.Length; i++)
+            for (int i = 0; i < completeNodes.Length; i++)
             {
-                if (skippableObjectives[i].skipped)
+                if (completeNodes[i].active)
                 {
-                    noSkips = false;
+                    finished = true;
+
+                    for (int j = 0; j < skippableObjectives.Length; j++)
+                    {
+                        if (skippableObjectives[j].skipped)
+                        {
+                            noSkips = false;
+                        }
+                    }
+                    if (noSkips)
+                    {
+                        checkmark.SetActive(true);
+                    }
+                    else
+                    {
+                        failmark.SetActive(true);
+                    }
+
+                    reportObject.SetActive(true);
+                    text.text = scenarioParent.getReport();
+                    scenarioParent.stopNodes();
                 }
             }
-            if (noSkips)
-            {
-                checkmark.SetActive(true);
-            }
-            else
-            {
-                failmark.SetActive(true);
-            }
 
-            reportObject.SetActive(true);
-            text.text = reportSource.getReport();
+            // Check for failed objectives
+            for (int i = 0; i < failObjectives.Length; i++)
+            {
+                if (failObjectives[i].failed)
+                {
+                    finished = true;
+
+                    failmark.SetActive(true);
+
+                    reportObject.SetActive(true);
+                    text.text = scenarioParent.getReport();
+                    scenarioParent.stopNodes();
+                }
+            }
         }
     }
+
+    
 }

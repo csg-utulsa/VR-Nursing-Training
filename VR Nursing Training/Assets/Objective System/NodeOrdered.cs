@@ -130,6 +130,7 @@ public class NodeOrdered : Node
     // Updates the whole node to be deactivated
     public override void deactivateNode()
     {
+        active = false;
         for (int i = 0; i < objectives.Length; i++)
         {
             objectives[i].active = false;

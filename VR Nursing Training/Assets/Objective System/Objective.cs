@@ -7,6 +7,7 @@ public class Objective : MonoBehaviour
 
     public string description = "";
     public string reportSuccess = "";
+    public string reportSkip = "";
     public string reportFail = "";
     public int weight = 0;
 
@@ -72,7 +73,7 @@ public class Objective : MonoBehaviour
         {
             skipped = true;
             Debug.Log(reportFail); // DEBUG ONLY
-            scenarioParent.addReport(reportFail);
+            scenarioParent.addReport(reportSkip);
         }
     }
 
@@ -83,6 +84,11 @@ public class Objective : MonoBehaviour
             strikes += 1;
             if (strikes >= strikeCount && strikeCount != 0)
             {
+                scenarioParent.addReport(reportFail);
+                /*if (failed = false)
+                {
+                    scenarioParent.addReport(reportFail);
+                }*/
                 failed = true;
             }
         }
