@@ -5,7 +5,7 @@ using UnityEngine.XR;
 
 public class HandPresence : MonoBehaviour
 {
-    public bool showController = false;
+    public bool showController = true;
     public InputDeviceCharacteristics controllerCharacteristics;
     public List<GameObject> controllerPrefabs;
     public GameObject handModelPrefab; 
