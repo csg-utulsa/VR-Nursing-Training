@@ -53,6 +53,7 @@ public class Objective : MonoBehaviour
                 canContinue = true;
             }
             active = false;
+            strikes = 0;
 
             // Tell the node to update it's objectives and skip previous nodes
             parentNode.updateObjectives();
@@ -67,6 +68,7 @@ public class Objective : MonoBehaviour
     {
         // Set to inactive
         active = false;
+        strikes = 0;
 
         // Set to skipped if the node wasn't already complete
         if (!complete)

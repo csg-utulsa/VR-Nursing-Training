@@ -32,11 +32,14 @@ public class ActionCountMedicine : ActionBase
                 currentDosage += 1;
             }
         }
+    }
+    private void OnTriggerStay(Collider other)
+    {
         if (other.CompareTag("Liquid"))
         {
             if (other.gameObject.GetComponent<InteractableScript>().getType() == targetType)
             {
-                currentDosage += other.gameObject.GetComponent<LiquidObjectScript>().getDosage();
+                currentDosage = other.gameObject.GetComponent<LiquidObjectScript>().getDosage();
             }
         }
     }

@@ -22,7 +22,22 @@ public class StrikeManager : MonoBehaviour
                 {
                     strikemark3.SetActive(true);
                 }
+                else
+                {
+                    strikemark3.SetActive(false);
+                }
             }
+            else
+            {
+                strikemark3.SetActive(false);
+                strikemark2.SetActive(false);
+            }
+        }
+        else
+        {
+            strikemark3.SetActive(false);
+            strikemark2.SetActive(false);
+            strikemark1.SetActive(false);
         }
     }
 }

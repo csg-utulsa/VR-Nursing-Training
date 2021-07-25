@@ -30,7 +30,7 @@ public class LiquidQuestionScript : MonoBehaviour
         
         for (int i = 0; i < Answers.Length; i++)
         {
-            if (selected = Answers[i])
+            if (selected == Answers[i])
             {
                 liquidObject.setDosage(dosageOptions[i]);
             }

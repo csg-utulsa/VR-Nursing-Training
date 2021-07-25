@@ -6,6 +6,7 @@ public class ScenarioStart : MonoBehaviour
 {
     public ScenarioGroup[] possibleStarts;
     public GameObject[] clipboards;
+    public GameObject[] dosageIndicators;
 
     private int startIndex;
     private string report;
@@ -21,6 +22,10 @@ public class ScenarioStart : MonoBehaviour
             possibleStarts[startIndex].nodes[i].activateNode();
         }
         clipboards[startIndex].SetActive(true);
+        if (startIndex < dosageIndicators.Length)
+        {
+            dosageIndicators[startIndex].SetActive(true);
+        }
     }
 
     // Adds to the report
