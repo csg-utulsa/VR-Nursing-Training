@@ -12,6 +12,8 @@ TagManager:
   - PillContainer
   - Patch
   - PatchContainer
+  - Liquid
+  - LiquidContainer
   layers:
   - Default
   - TransparentFX

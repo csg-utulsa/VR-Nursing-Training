@@ -12,7 +12,7 @@ public class ActionCheckMedicine : ActionBase
 
     private void OnTriggerEnter(Collider other)
     {
-        if ((onCollision) && (other.CompareTag("Pill") || other.CompareTag("HalfPill") || other.CompareTag("Patch")))
+        if ((onCollision) && (other.CompareTag("Pill") || other.CompareTag("HalfPill") || other.CompareTag("Patch") || other.CompareTag("Liquid")))
         {
             CheckMedicine(other.gameObject.GetComponent<InteractableScript>().getType());
         }

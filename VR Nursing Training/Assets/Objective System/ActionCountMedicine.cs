@@ -32,6 +32,13 @@ public class ActionCountMedicine : ActionBase
                 currentDosage += 1;
             }
         }
+        if (other.CompareTag("Liquid"))
+        {
+            if (other.gameObject.GetComponent<InteractableScript>().getType() == targetType)
+            {
+                currentDosage += other.gameObject.GetComponent<LiquidObjectScript>().getDosage();
+            }
+        }
     }
     private void OnTriggerExit(Collider other)
     {
@@ -54,6 +61,13 @@ public class ActionCountMedicine : ActionBase
             if (other.gameObject.GetComponent<InteractableScript>().getType() == targetType)
             {
                 currentDosage -= 1;
+            }
+        }
+        if (other.CompareTag("Liquid"))
+        {
+            if (other.gameObject.GetComponent<InteractableScript>().getType() == targetType)
+            {
+                currentDosage -= other.gameObject.GetComponent<LiquidObjectScript>().getDosage();
             }
         }
     }

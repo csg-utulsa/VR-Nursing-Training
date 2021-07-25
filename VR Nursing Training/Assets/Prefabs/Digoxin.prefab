@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7717911432201916839}
   m_Layer: 0
   m_Name: Digoxin
-  m_TagString: Untagged
+  m_TagString: LiquidContainer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129,6 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInteractable: 0
   initialPosition: {x: 0, y: 0, z: 0}
+  initialAngles: {x: 0, y: 0, z: 0}
   targets: []
   material: {fileID: 0}
   layer:
