@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
 public class InteractableScript : MonoBehaviour
 {
     public bool isInteractable;
@@ -21,12 +20,15 @@ public class InteractableScript : MonoBehaviour
 
     private void Start()
     {
+        
         step = 0;
 
         respawnPoint = new GameObject(gameObject.name + "'s respawn object"); //Logan added these
         respawnPoint.transform.position = gameObject.transform.position;
-        respawnPoint.transform.parent = gameObject.transform.parent.transform;
-        
+        if (gameObject.transform.parent != null)
+        {
+            respawnPoint.transform.parent = gameObject.transform.parent.transform;
+        } 
         initialPosition = gameObject.transform.position;
 
         initialAngles = gameObject.transform.eulerAngles;

@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 8778421632491090100}
   - component: {fileID: 2191465853462229181}
   - component: {fileID: 6129220337446960809}
+  - component: {fileID: 2864768691778813856}
   m_Layer: 6
   m_Name: injection_lidocaine
   m_TagString: Untagged
@@ -58,9 +59,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3098716390097792735}
-  m_LocalRotation: {x: -0.70710576, y: -0, z: -0, w: 0.70710784}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0.614228, y: 6.1811, z: 2.4601}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.009999998, y: 0.009999998, z: 0.01}
   m_Children:
   - {fileID: 1714578326420211393}
   m_Father: {fileID: 0}
@@ -163,10 +164,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6129220337446960809}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_isTrigger
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6129220337446960809}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_isTrigger
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Activated:
     m_PersistentCalls:
       m_Calls: []
@@ -250,3 +275,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.25097975, y: 0.07790706, z: 0.043537423}
   m_Center: {x: -0.0023863763, y: 0.039835464, z: -0.00043520425}
+--- !u!114 &2864768691778813856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3098716390097792735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bd43063534b3924eb5caef959443d75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 0
+  initialPosition: {x: 0, y: 0, z: 0}
+  initialAngles: {x: 0, y: 0, z: 0}
+  targets: []
+  material: {fileID: 0}
+  layer:
+    serializedVersion: 2
+    m_Bits: 0
+  combineMaterial: {fileID: 0}
+  combineDist: 0
+  onCombine:
+    m_PersistentCalls:
+      m_Calls: []
+  type: NITROGLYCERIN
