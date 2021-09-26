@@ -12,6 +12,8 @@ public class characterMovement3D : MonoBehaviour
     bool isClicking;
     bool isInteract;
 
+    bool interacted = false;
+
     private void Awake()
     {
         input = new PlayerInput();
@@ -46,6 +48,14 @@ public class characterMovement3D : MonoBehaviour
     void handleMovement()
     {
         RaycastHit hit;
+
+        if(isClicking == true && interacted == true){
+            return;
+        }
+        if(isClicking == false && interacted == true){ //reset state
+            interacted = false;
+        }
+        interacted = isClicking;
 
         if (isClicking && Physics.Raycast(camera.transform.position, camera.transform.forward, out hit, 10) && hit.collider.gameObject.CompareTag("Teleport"))
         {
