@@ -32,9 +32,18 @@ public class characterMovement3D : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        checkHeldObjectValid();
         handleMovement();
         handleInteraction();
+    }
+
+    void checkHeldObjectValid(){
+        if(handLocation.transform.childCount != 0){
+            if(handLocation.transform.GetChild(0).gameObject.activeSelf == false){
+                Destroy(handLocation.transform.GetChild(0).gameObject);
+                Debug.Log("Hand object let go");
+            }
+        }
     }
 
     void handleInteraction()

@@ -121,10 +121,11 @@ public class InteractableScript : InteractableBase
         }
     }
 
-    public void Interact(Collider other)
+    public override void Interact(Collider other)
     {
         Debug.Log("Interact!");
-        interactEvent.Invoke();
+        CombineObject(other.gameObject);
+        //interactEvent.Invoke();
     }
 
   
