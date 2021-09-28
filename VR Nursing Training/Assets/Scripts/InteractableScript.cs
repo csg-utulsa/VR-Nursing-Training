@@ -125,7 +125,7 @@ public class InteractableScript : InteractableBase
     {
         Debug.Log("Interact!");
         CombineObject(other.gameObject);
-        //interactEvent.Invoke();
+        ////interactEvent.Invoke();
     }
 
   
