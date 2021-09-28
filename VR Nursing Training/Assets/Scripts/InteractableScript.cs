@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-public class InteractableScript : MonoBehaviour
+public class InteractableScript : InteractableBase
 {
     public bool isInteractable;
     public Vector3 initialPosition;

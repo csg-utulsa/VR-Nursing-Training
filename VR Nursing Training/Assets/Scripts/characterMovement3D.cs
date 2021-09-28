@@ -51,7 +51,7 @@ public class characterMovement3D : MonoBehaviour
         RaycastHit hit;
 
         
-        if (isInteract && Physics.Raycast(camera.transform.position, camera.transform.forward, out hit, 2) && hit.collider.gameObject.GetComponent<InteractableScript>() != null)
+        if (isInteract && Physics.Raycast(camera.transform.position, camera.transform.forward, out hit, 2) && hit.collider.gameObject.GetComponent<InteractableBase>() != null)
         {
             GameObject otherGameObject = hit.collider.gameObject;
             if (handLocation.transform.childCount == 0)
@@ -62,7 +62,7 @@ public class characterMovement3D : MonoBehaviour
                 otherGameObject.GetComponent<Rigidbody>().useGravity = false;
             } else
             {
-                otherGameObject.GetComponent<InteractableScript>().Interact(handLocation.transform.GetChild(0).GetComponent<Collider>());
+                otherGameObject.GetComponent<InteractableBase>().Interact(handLocation.transform.GetChild(0).GetComponent<Collider>());
             }
         }
     }
