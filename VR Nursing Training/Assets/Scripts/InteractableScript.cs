@@ -17,6 +17,8 @@ public class InteractableScript : MonoBehaviour
     private static int step;
     public UnityEvent onCombine;
     public string type;
+    public UnityEvent interactEvent;
+
 
     private void Start()
     {
@@ -118,6 +120,14 @@ public class InteractableScript : MonoBehaviour
             combineMaterial = targets[step].GetComponent<InteractableScript>().combineMaterial;
         }
     }
+
+    public void Interact(Collider other)
+    {
+        Debug.Log("Interact!");
+        interactEvent.Invoke();
+    }
+
+  
 
     public void Reset() // Resets position of gameObj (used by ground trigger script)
     {

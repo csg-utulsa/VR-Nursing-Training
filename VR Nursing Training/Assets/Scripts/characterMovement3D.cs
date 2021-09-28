@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class characterMovement3D : MonoBehaviour
 {
     public GameObject camera;
-
+    public GameObject handLocation;
     PlayerInput input;
 
     bool isClicking;
@@ -49,9 +49,21 @@ public class characterMovement3D : MonoBehaviour
         interacted = isInteract;
 
         RaycastHit hit;
+
+        
         if (isInteract && Physics.Raycast(camera.transform.position, camera.transform.forward, out hit, 2) && hit.collider.gameObject.GetComponent<InteractableScript>() != null)
         {
-            Debug.Log("Interact!");
+            GameObject otherGameObject = hit.collider.gameObject;
+            if (handLocation.transform.childCount == 0)
+            {
+               
+                otherGameObject.transform.SetParent(handLocation.transform);
+                otherGameObject.transform.position = handLocation.transform.position;
+                otherGameObject.GetComponent<Rigidbody>().useGravity = false;
+            } else
+            {
+                otherGameObject.GetComponent<InteractableScript>().Interact(handLocation.transform.GetChild(0).GetComponent<Collider>());
+            }
         }
     }
 
