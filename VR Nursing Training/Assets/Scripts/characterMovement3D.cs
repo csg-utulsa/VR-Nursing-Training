@@ -9,6 +9,8 @@ public class characterMovement3D : MonoBehaviour
     public GameObject handLocation;
     PlayerInput input;
 
+    public LayerMask raycastMask;
+
     bool isClicking;
     bool isInteract;
 
@@ -88,7 +90,9 @@ public class characterMovement3D : MonoBehaviour
         }
         clicked = isClicking;
 
-        if (isClicking && Physics.Raycast(camera3D.transform.position, camera3D.transform.forward, out hit, 10) && hit.collider.gameObject.CompareTag("Teleport"))
+
+
+        if (isClicking && Physics.Raycast(camera3D.transform.position, camera3D.transform.forward, out hit, 10,raycastMask) && hit.collider.gameObject.CompareTag("Teleport"))
         {
             Debug.Log("Hit!");
             transform.position = hit.collider.gameObject.transform.parent.position;
