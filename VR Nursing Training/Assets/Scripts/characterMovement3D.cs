@@ -13,9 +13,12 @@ public class characterMovement3D : MonoBehaviour
 
     bool isClicking;
     bool isInteract;
+    bool isLettingGo;
 
     bool interacted = false;
     bool clicked = false;
+    bool letgo = false;
+
 
     private void Awake()
     {
@@ -23,6 +26,7 @@ public class characterMovement3D : MonoBehaviour
 
         input.CharacterControls3D.Click.performed += ctx => isClicking = ctx.ReadValueAsButton();
         input.CharacterControls3D.Interact.performed += ctx => isInteract = ctx.ReadValueAsButton();
+        input.CharacterControls3D.Letgo.performed += ctx => isLettingGo = ctx.ReadValueAsButton();
     }
 
     // Start is called before the first frame update
@@ -37,13 +41,14 @@ public class characterMovement3D : MonoBehaviour
         checkHeldObjectValid();
         handleMovement();
         handleInteraction();
+        handleLetgo();
     }
 
     void checkHeldObjectValid(){
         if(handLocation.transform.childCount != 0){
             if(handLocation.transform.GetChild(0).gameObject.activeSelf == false){
                 Destroy(handLocation.transform.GetChild(0).gameObject);
-                Debug.Log("Hand object let go");
+                Debug.Log("Hand object invalid and destroyed");
             }
         }
     }
@@ -74,6 +79,28 @@ public class characterMovement3D : MonoBehaviour
             } else
             {
                 otherGameObject.GetComponent<InteractableBase>().Interact(handLocation.transform.GetChild(0).GetComponent<Collider>());
+            }
+        }
+    }
+
+    void handleLetgo()
+    {
+
+        if(isLettingGo == true && letgo == true){
+            return;
+        }
+        if(isLettingGo == false && letgo == true){ //reset state
+            letgo = false;
+        }
+        letgo = isLettingGo;
+
+        if(isLettingGo){
+            if(handLocation.transform.childCount != 0){
+                Debug.Log("Releasing object");
+                GameObject gobj = handLocation.transform.GetChild(0).gameObject;
+                handLocation.transform.DetachChildren();
+                gobj.GetComponent<Rigidbody>().useGravity = true;
+                gobj.GetComponent<InteractableScript>().PlaceDown();
             }
         }
     }

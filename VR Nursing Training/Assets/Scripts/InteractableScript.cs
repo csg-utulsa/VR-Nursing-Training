@@ -142,4 +142,9 @@ public class InteractableScript : InteractableBase
         gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
     }
 
+    public void PlaceDown(){ // Places the object on a nearby surface
+    //TODO: Currently just goes back home.
+        Reset();
+    }
+
 }
