@@ -8120,6 +8120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera3D: {fileID: 3041394142595202748}
   handLocation: {fileID: 3041394142401281520}
+  transitionSpeed: 2
   raycastMask:
     serializedVersion: 2
     m_Bits: 256

@@ -9,6 +9,11 @@ public class characterMovement3D : MonoBehaviour
     public GameObject handLocation;
     PlayerInput input;
 
+    public double transitionSpeed =0.25;
+
+    private Vector3 grabFrom;
+    private double grabTime;
+
     public LayerMask raycastMask;
 
     bool isClicking;
@@ -42,6 +47,7 @@ public class characterMovement3D : MonoBehaviour
         handleMovement();
         handleInteraction();
         handleLetgo();
+        handleGrabAnim();
     }
 
     void checkHeldObjectValid(){
@@ -50,6 +56,16 @@ public class characterMovement3D : MonoBehaviour
                 Destroy(handLocation.transform.GetChild(0).gameObject);
                 Debug.Log("Hand object invalid and destroyed");
             }
+        }
+    }
+
+    void handleGrabAnim(){
+        // Smoothly moves grabbed objects into one's hand
+        if(handLocation.transform.childCount != 0){
+            GameObject gobj = handLocation.transform.GetChild(0).gameObject;
+            double percent = Mathf.Clamp(Time.time-(float)grabTime,0,(float)transitionSpeed)/transitionSpeed;
+            gobj.transform.position = Vector3.Lerp(grabFrom,handLocation.transform.position,(float)percent);
+            Debug.Log("Moving position... "+percent);
         }
     }
 
@@ -72,9 +88,10 @@ public class characterMovement3D : MonoBehaviour
             GameObject otherGameObject = hit.collider.gameObject;
             if (handLocation.transform.childCount == 0)
             {
-               
+                grabFrom = otherGameObject.transform.position;
+                grabTime = Time.time;
                 otherGameObject.transform.SetParent(handLocation.transform);
-                otherGameObject.transform.position = handLocation.transform.position;
+                //otherGameObject.transform.position = handLocation.transform.position;
                 otherGameObject.GetComponent<Rigidbody>().useGravity = false;
             } else
             {
