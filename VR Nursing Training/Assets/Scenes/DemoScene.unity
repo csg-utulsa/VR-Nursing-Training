@@ -2907,7 +2907,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 193040267}
-  - component: {fileID: 193040269}
   - component: {fileID: 193040268}
   m_Layer: 0
   m_Name: Cart Liquid
@@ -2956,26 +2955,6 @@ MonoBehaviour:
   successActions:
   - {fileID: 1072718030}
   failActions: []
---- !u!114 &193040269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 193040266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e956f245f0f1dc241bd7a0aa9aeb8522, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  previousList:
-  - {fileID: 1772120103}
-  active: 0
-  complete: 0
-  saturated: 0
-  canContinue: 0
-  canSkip: 0
-  objective: {fileID: 193040268}
 --- !u!1001 &203286465
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4142,6 +4121,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 278191225}
+  - component: {fileID: 278191226}
   m_Layer: 0
   m_Name: Pill
   m_TagString: Untagged
@@ -4166,6 +4146,29 @@ Transform:
   m_Father: {fileID: 1292715789}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &278191226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278191224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1baf47257b0a02f4d9691ccc64363410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousList:
+  - {fileID: 1593261450}
+  active: 0
+  complete: 0
+  saturated: 0
+  canContinue: 0
+  canSkip: 0
+  objectives:
+  - {fileID: 299760126}
+  - {fileID: 796855425}
+  - {fileID: 1484903581}
 --- !u!1 &279201453
 GameObject:
   m_ObjectHideFlags: 0
@@ -4403,7 +4406,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 299760127}
-  - component: {fileID: 299760125}
   - component: {fileID: 299760126}
   m_Layer: 0
   m_Name: Get Pills
@@ -4412,26 +4414,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &299760125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 299760124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e956f245f0f1dc241bd7a0aa9aeb8522, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  previousList:
-  - {fileID: 1593261450}
-  active: 0
-  complete: 0
-  saturated: 0
-  canContinue: 0
-  canSkip: 0
-  objective: {fileID: 299760126}
 --- !u!114 &299760126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5395,6 +5377,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 351718955}
+  - component: {fileID: 351718956}
   m_Layer: 0
   m_Name: Liquid
   m_TagString: Untagged
@@ -5419,6 +5402,29 @@ Transform:
   m_Father: {fileID: 1525633962}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &351718956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351718954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1baf47257b0a02f4d9691ccc64363410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousList:
+  - {fileID: 1194208857}
+  active: 0
+  complete: 0
+  saturated: 0
+  canContinue: 0
+  canSkip: 0
+  objectives:
+  - {fileID: 419921400}
+  - {fileID: 1772120102}
+  - {fileID: 193040268}
 --- !u!1 &354352988
 GameObject:
   m_ObjectHideFlags: 0
@@ -6566,7 +6572,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 419921399}
-  - component: {fileID: 419921401}
   - component: {fileID: 419921400}
   m_Layer: 0
   m_Name: Get Liquid
@@ -6619,26 +6624,6 @@ MonoBehaviour:
   - {fileID: 1068763921}
   failActions:
   - {fileID: 653639080}
---- !u!114 &419921401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 419921398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e956f245f0f1dc241bd7a0aa9aeb8522, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  previousList:
-  - {fileID: 1194208857}
-  active: 0
-  complete: 0
-  saturated: 0
-  canContinue: 0
-  canSkip: 0
-  objective: {fileID: 419921400}
 --- !u!1 &434236623
 GameObject:
   m_ObjectHideFlags: 0
@@ -8293,7 +8278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   previousList:
-  - {fileID: 193040269}
+  - {fileID: 351718956}
   active: 0
   complete: 0
   saturated: 0
@@ -9051,7 +9036,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 654992018}
-  - component: {fileID: 654992019}
   - component: {fileID: 654992020}
   m_Layer: 0
   m_Name: Mark Patch
@@ -9074,26 +9058,6 @@ Transform:
   m_Father: {fileID: 1700906719}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &654992019
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 654992017}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e956f245f0f1dc241bd7a0aa9aeb8522, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  previousList:
-  - {fileID: 815689886}
-  active: 0
-  complete: 0
-  saturated: 0
-  canContinue: 0
-  canSkip: 0
-  objective: {fileID: 654992020}
 --- !u!114 &654992020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10471,7 +10435,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 796855426}
-  - component: {fileID: 796855424}
   - component: {fileID: 796855425}
   m_Layer: 0
   m_Name: Cut Pill
@@ -10480,26 +10443,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &796855424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 796855423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e956f245f0f1dc241bd7a0aa9aeb8522, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  previousList:
-  - {fileID: 299760125}
-  active: 0
-  complete: 0
-  saturated: 0
-  canContinue: 0
-  canSkip: 0
-  objective: {fileID: 796855425}
 --- !u!114 &796855425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10648,7 +10591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   previousList:
-  - {fileID: 654992019}
+  - {fileID: 1700906720}
   active: 0
   complete: 0
   saturated: 0
@@ -10818,7 +10761,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 815689885}
-  - component: {fileID: 815689886}
   - component: {fileID: 815689887}
   m_Layer: 0
   m_Name: Cart Patch
@@ -10841,26 +10783,6 @@ Transform:
   m_Father: {fileID: 1700906719}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &815689886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 815689884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e956f245f0f1dc241bd7a0aa9aeb8522, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  previousList:
-  - {fileID: 1676930992}
-  active: 0
-  complete: 0
-  saturated: 0
-  canContinue: 0
-  canSkip: 0
-  objective: {fileID: 815689887}
 --- !u!114 &815689887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22305,7 +22227,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1484903580}
-  - component: {fileID: 1484903582}
   - component: {fileID: 1484903581}
   m_Layer: 0
   m_Name: Cart Pills
@@ -22354,26 +22275,6 @@ MonoBehaviour:
   successActions:
   - {fileID: 1072718030}
   failActions: []
---- !u!114 &1484903582
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1484903579}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e956f245f0f1dc241bd7a0aa9aeb8522, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  previousList:
-  - {fileID: 796855424}
-  active: 0
-  complete: 0
-  saturated: 0
-  canContinue: 0
-  canSkip: 0
-  objective: {fileID: 1484903581}
 --- !u!1 &1486062917
 GameObject:
   m_ObjectHideFlags: 0
@@ -23475,7 +23376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   previousList:
-  - {fileID: 1484903582}
+  - {fileID: 278191226}
   active: 0
   complete: 0
   saturated: 0
@@ -24601,7 +24502,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1676930991}
-  - component: {fileID: 1676930992}
   - component: {fileID: 1676930993}
   m_Layer: 0
   m_Name: Get Patch
@@ -24627,26 +24527,6 @@ Transform:
   m_Father: {fileID: 1700906719}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1676930992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1676930990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e956f245f0f1dc241bd7a0aa9aeb8522, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  previousList:
-  - {fileID: 30480715}
-  active: 0
-  complete: 0
-  saturated: 0
-  canContinue: 0
-  canSkip: 0
-  objective: {fileID: 1676930993}
 --- !u!114 &1676930993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24941,6 +24821,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1700906719}
+  - component: {fileID: 1700906720}
   m_Layer: 0
   m_Name: Patch
   m_TagString: Untagged
@@ -24965,6 +24846,29 @@ Transform:
   m_Father: {fileID: 1237110800}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1700906720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700906718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1baf47257b0a02f4d9691ccc64363410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousList:
+  - {fileID: 30480715}
+  active: 0
+  complete: 0
+  saturated: 0
+  canContinue: 0
+  canSkip: 0
+  objectives:
+  - {fileID: 1676930993}
+  - {fileID: 815689887}
+  - {fileID: 654992020}
 --- !u!4 &1703782464 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f134ecd79ce0eeb44a38041e50af3f0f,
@@ -25677,7 +25581,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1772120101}
-  - component: {fileID: 1772120103}
   - component: {fileID: 1772120102}
   m_Layer: 0
   m_Name: Measure Liquid
@@ -25730,26 +25633,6 @@ MonoBehaviour:
   - {fileID: 1890883384}
   failActions:
   - {fileID: 105428426}
---- !u!114 &1772120103
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1772120100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e956f245f0f1dc241bd7a0aa9aeb8522, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  previousList:
-  - {fileID: 419921401}
-  active: 0
-  complete: 0
-  saturated: 0
-  canContinue: 0
-  canSkip: 0
-  objective: {fileID: 1772120102}
 --- !u!1 &1773530849
 GameObject:
   m_ObjectHideFlags: 0
