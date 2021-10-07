@@ -8036,7 +8036,7 @@ GameObject:
   m_Component:
   - component: {fileID: 501096223}
   - component: {fileID: 501096224}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sanitize (Liquid)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21721,6 +21721,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BubbleAnimation
       objectReference: {fileID: 0}
+    - target: {fileID: 2991886335835148476, guid: e9ede366b2687ea4a8dadc914c6e5ad1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9ede366b2687ea4a8dadc914c6e5ad1, type: 3}
 --- !u!1 &1450980674
@@ -29971,7 +29976,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1994098851}
   - component: {fileID: 1994098852}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Sanitize (Oral)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31380,7 +31385,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2115303999}
   - component: {fileID: 2115304000}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Sanitize (Patch)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33026,6 +33031,11 @@ PrefabInstance:
         type: 3}
       propertyPath: sanitizeHands.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998188874490041988, guid: 6d431101da8bd144ea8524230aa943e1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7203526046684347749, guid: 6d431101da8bd144ea8524230aa943e1,
         type: 3}

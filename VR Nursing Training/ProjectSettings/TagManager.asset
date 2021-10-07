@@ -18,7 +18,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - ResetButton
+  - HandInteraction
   - Water
   - UI
   - Pickupable
