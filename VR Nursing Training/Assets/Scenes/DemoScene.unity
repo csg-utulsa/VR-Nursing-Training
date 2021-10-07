@@ -6826,6 +6826,12 @@ Transform:
   m_Father: {fileID: 209353475}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &745169335 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3041394142401281520, guid: 0af8f3646a662394eb8f95def6a25298,
+    type: 3}
+  m_PrefabInstance: {fileID: 7548493107148386151}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &750718810 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1670753191565138576, guid: cab9d462c08238144a02f59b02ddb1c5,
@@ -7064,7 +7070,6 @@ GameObject:
   - component: {fileID: 760503732}
   - component: {fileID: 760503731}
   - component: {fileID: 760503730}
-  - component: {fileID: 760503729}
   - component: {fileID: 760503733}
   m_Layer: 4
   m_Name: Water (1)
@@ -7087,58 +7092,6 @@ Transform:
   m_Father: {fileID: 1328550189}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &760503729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 760503727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 450f8e71bda91af4c8c711fb6656c68f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  material: {fileID: 2100000, guid: 490085d8aaca5bb4981221d073a0b6e4, type: 2}
-  handWash:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1994098852}
-        m_TargetAssemblyTypeName: ActionBase, Assembly-CSharp
-        m_MethodName: performAction
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2115304000}
-        m_TargetAssemblyTypeName: ActionBase, Assembly-CSharp
-        m_MethodName: performAction
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 501096224}
-        m_TargetAssemblyTypeName: ActionBase, Assembly-CSharp
-        m_MethodName: performAction
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!65 &760503730
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20085,6 +20038,12 @@ MonoBehaviour:
   strikemark1: {fileID: 2113858558}
   strikemark2: {fileID: 1080652880}
   strikemark3: {fileID: 327995477}
+--- !u!1 &2014550586 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3041394142595202748, guid: 0af8f3646a662394eb8f95def6a25298,
+    type: 3}
+  m_PrefabInstance: {fileID: 7548493107148386151}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2028160305
 GameObject:
   m_ObjectHideFlags: 0
@@ -22475,6 +22434,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3041394142595202748, guid: 0af8f3646a662394eb8f95def6a25298,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3041394142595202749, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -22505,6 +22469,11 @@ PrefabInstance:
       propertyPath: onIncorrect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 105428426}
+    - target: {fileID: 7548493107059725712, guid: 0af8f3646a662394eb8f95def6a25298,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7548493107880779748, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
       propertyPath: m_Name
@@ -22512,8 +22481,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7548493107880779756, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
+      propertyPath: camera3D
+      value: 
+      objectReference: {fileID: 2014550586}
+    - target: {fileID: 7548493107880779756, guid: 0af8f3646a662394eb8f95def6a25298,
+        type: 3}
+      propertyPath: handLocation
+      value: 
+      objectReference: {fileID: 745169335}
+    - target: {fileID: 7548493107880779756, guid: 0af8f3646a662394eb8f95def6a25298,
+        type: 3}
       propertyPath: transitionSpeed
       value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548493107880779756, guid: 0af8f3646a662394eb8f95def6a25298,
+        type: 3}
+      propertyPath: raycastMask.m_Bits
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 7548493107880779759, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
