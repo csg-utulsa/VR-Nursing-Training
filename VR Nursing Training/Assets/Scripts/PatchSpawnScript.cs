@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class PatchSpawnScript : MonoBehaviour
 {
-    public GameObject patchNitro;
+    [SerializeField] private GameObject patchNitro;
 
     private GameObject patch;
     private string patchType;

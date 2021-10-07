@@ -4,30 +4,27 @@ using UnityEngine;
 
 public class ActionCountMedicine : ActionBase
 {
-    public string targetType;
-    public double targetDosage;
-
     private double currentDosage = 0;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Pill"))
         {
-            if (other.gameObject.GetComponent<InteractableScript>().getType() == targetType)
+            if (other.gameObject.GetComponent<InteractableScript>().getType() == medicineType)
             {
                 currentDosage += 1;
             }
         }
         if (other.CompareTag("HalfPill"))
         {
-            if (other.gameObject.GetComponent<InteractableScript>().getType() == targetType)
+            if (other.gameObject.GetComponent<InteractableScript>().getType() == medicineType)
             {
                 currentDosage += 0.5;
             }
         }
         if (other.CompareTag("Patch"))
         {
-            if (other.gameObject.GetComponent<InteractableScript>().getType() == targetType)
+            if (other.gameObject.GetComponent<InteractableScript>().getType() == medicineType)
             {
                 currentDosage += 1;
             }
@@ -37,7 +34,7 @@ public class ActionCountMedicine : ActionBase
     {
         if (other.CompareTag("Liquid"))
         {
-            if (other.gameObject.GetComponent<InteractableScript>().getType() == targetType)
+            if (other.gameObject.GetComponent<InteractableScript>().getType() == medicineType)
             {
                 currentDosage = other.gameObject.GetComponent<LiquidObjectScript>().getDosage();
             }
@@ -47,28 +44,28 @@ public class ActionCountMedicine : ActionBase
     {
         if (other.CompareTag("Pill"))
         {
-            if (other.gameObject.GetComponent<InteractableScript>().getType() == targetType)
+            if (other.gameObject.GetComponent<InteractableScript>().getType() == medicineType)
             {
                 currentDosage -= 1;
             }
         }
         if (other.CompareTag("HalfPill"))
         {
-            if (other.gameObject.GetComponent<InteractableScript>().getType() == targetType)
+            if (other.gameObject.GetComponent<InteractableScript>().getType() == medicineType)
             {
                 currentDosage -= 0.5;
             }
         }
         if (other.CompareTag("Patch"))
         {
-            if (other.gameObject.GetComponent<InteractableScript>().getType() == targetType)
+            if (other.gameObject.GetComponent<InteractableScript>().getType() == medicineType)
             {
                 currentDosage -= 1;
             }
         }
         if (other.CompareTag("Liquid"))
         {
-            if (other.gameObject.GetComponent<InteractableScript>().getType() == targetType)
+            if (other.gameObject.GetComponent<InteractableScript>().getType() == medicineType)
             {
                 currentDosage -= other.gameObject.GetComponent<LiquidObjectScript>().getDosage();
             }

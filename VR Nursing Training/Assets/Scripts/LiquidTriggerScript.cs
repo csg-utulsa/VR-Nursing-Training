@@ -5,11 +5,11 @@ using UnityEngine.Events;
 
 public class LiquidTriggerScript : MonoBehaviour
 {
-    public string[] requiredType;
-    public GameObject measureCanvas;
+    [SerializeField] private string[] requiredType;
+    [SerializeField] private GameObject measureCanvas;
     public UnityEvent<string> onPour;
 
-    public GameObject parentLiquid;
+    [SerializeField] private GameObject parentLiquid;
 
     private bool correctType;
     private string liquidType;

@@ -5,15 +5,15 @@ using UnityEngine.UI;
 
 public class CheckComplete : MonoBehaviour
 {
-    public Node[] completeNodes;
-    public Objective[] skippableObjectives;
-    public Objective[] failObjectives;
-    public GameObject checkmark;
-    public GameObject failmark;
+    [SerializeField] private Node[] completeNodes;
+    [SerializeField] private Objective[] skippableObjectives;
+    [SerializeField] private Objective[] failObjectives;
+    [SerializeField] private GameObject checkmark;
+    [SerializeField] private GameObject failmark;
 
-    public GameObject reportObject;
-    public GameObject reportText;
-    public ScenarioStart scenarioParent;
+    [SerializeField] private GameObject reportObject;
+    [SerializeField] private GameObject reportText;
+    [SerializeField] private ScenarioStart scenarioParent;
     Text text;
 
     private bool noSkips = true;

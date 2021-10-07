@@ -79,7 +79,7 @@ public class NodeSingle : Node
         active = true;
         objective.active = true;
         Debug.Log("Node Activated"); // DEBUG ONLY
-        Debug.Log(objective.description); // DEBUG ONLY
+        Debug.Log(objective.getDescription()); // DEBUG ONLY
     }
 
     // Updates the whole node to be deactivated

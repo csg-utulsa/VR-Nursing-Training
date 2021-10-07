@@ -152,7 +152,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b9c55f73ac8bf45bc24c6bcd63c844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myObjective: {fileID: 720684408}
 --- !u!4 &54747560
 Transform:
   m_ObjectHideFlags: 0
@@ -289,7 +288,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b9c55f73ac8bf45bc24c6bcd63c844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myObjective: {fileID: 720684409}
 --- !u!4 &163279613
 Transform:
   m_ObjectHideFlags: 0
@@ -391,13 +389,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Press R
   reportSuccess: R Pressed
+  reportSkip: 
   reportFail: R Skipped
-  weight: 0
+  strikeCount: 0
+  failed: 0
   active: 0
   skipped: 0
   complete: 0
   canSkip: 1
   canContinue: 0
+  successActions:
+  - {fileID: 1607782466}
+  failActions: []
 --- !u!114 &500622612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -412,13 +415,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Press D
   reportSuccess: D Pressed
+  reportSkip: 
   reportFail: D Skipped
-  weight: 0
+  strikeCount: 0
+  failed: 0
   active: 0
   skipped: 0
   complete: 0
   canSkip: 0
   canContinue: 0
+  successActions:
+  - {fileID: 1299242012}
+  failActions: []
 --- !u!4 &500622613
 Transform:
   m_ObjectHideFlags: 0
@@ -480,13 +488,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Press H
   reportSuccess: H Pressed
+  reportSkip: 
   reportFail: H Skipped
-  weight: 0
+  strikeCount: 0
+  failed: 0
   active: 0
   skipped: 0
   complete: 0
   canSkip: 0
   canContinue: 0
+  successActions:
+  - {fileID: 1743616638}
+  failActions: []
 --- !u!114 &592270628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -501,13 +514,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Press G
   reportSuccess: G Pressed
+  reportSkip: 
   reportFail: G Skipped
-  weight: 0
+  strikeCount: 0
+  failed: 0
   active: 0
   skipped: 0
   complete: 0
   canSkip: 0
   canContinue: 0
+  successActions:
+  - {fileID: 1336245243}
+  failActions: []
 --- !u!114 &592270629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -575,13 +593,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Press N
   reportSuccess: N Pressed
+  reportSkip: 
   reportFail: N Skipped
-  weight: 0
+  strikeCount: 0
+  failed: 0
   active: 0
   skipped: 0
   complete: 0
   canSkip: 0
   canContinue: 0
+  successActions: []
+  failActions:
+  - {fileID: 1360005085}
 --- !u!114 &595670614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -648,13 +671,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Press K
   reportSuccess: K Pressed
+  reportSkip: 
   reportFail: K Skipped
-  weight: 0
+  strikeCount: 0
+  failed: 0
   active: 0
   skipped: 0
   complete: 0
   canSkip: 0
   canContinue: 0
+  successActions:
+  - {fileID: 54747559}
+  failActions: []
 --- !u!114 &720684409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -669,13 +697,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Press J
   reportSuccess: J Pressed
+  reportSkip: 
   reportFail: J Skipped
-  weight: 0
+  strikeCount: 0
+  failed: 0
   active: 0
   skipped: 0
   complete: 0
   canSkip: 0
   canContinue: 0
+  successActions:
+  - {fileID: 163279612}
+  failActions: []
 --- !u!114 &720684410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -726,7 +759,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b9c55f73ac8bf45bc24c6bcd63c844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myObjective: {fileID: 2128907969}
 --- !u!4 &909590350
 Transform:
   m_ObjectHideFlags: 0
@@ -792,13 +824,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Press S
   reportSuccess: S Pressed
+  reportSkip: 
   reportFail: S Skipped
-  weight: 0
+  strikeCount: 0
+  failed: 0
   active: 0
   skipped: 0
   complete: 0
   canSkip: 1
   canContinue: 0
+  successActions:
+  - {fileID: 1000368138}
+  failActions: []
 --- !u!4 &958843711
 Transform:
   m_ObjectHideFlags: 0
@@ -842,7 +879,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b9c55f73ac8bf45bc24c6bcd63c844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myObjective: {fileID: 958843710}
 --- !u!4 &1000368139
 Transform:
   m_ObjectHideFlags: 0
@@ -886,7 +922,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b9c55f73ac8bf45bc24c6bcd63c844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myObjective: {fileID: 2064024741}
 --- !u!4 &1182659607
 Transform:
   m_ObjectHideFlags: 0
@@ -1179,7 +1214,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b9c55f73ac8bf45bc24c6bcd63c844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myObjective: {fileID: 500622612}
 --- !u!4 &1299242013
 Transform:
   m_ObjectHideFlags: 0
@@ -1223,7 +1257,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b9c55f73ac8bf45bc24c6bcd63c844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myObjective: {fileID: 592270628}
 --- !u!4 &1336245244
 Transform:
   m_ObjectHideFlags: 0
@@ -1267,7 +1300,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b9c55f73ac8bf45bc24c6bcd63c844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myObjective: {fileID: 595670613}
 --- !u!4 &1360005086
 Transform:
   m_ObjectHideFlags: 0
@@ -1420,7 +1452,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b9c55f73ac8bf45bc24c6bcd63c844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myObjective: {fileID: 500622611}
 --- !u!4 &1607782467
 Transform:
   m_ObjectHideFlags: 0
@@ -1464,7 +1495,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b9c55f73ac8bf45bc24c6bcd63c844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myObjective: {fileID: 592270627}
 --- !u!4 &1743616639
 Transform:
   m_ObjectHideFlags: 0
@@ -1508,7 +1538,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b9c55f73ac8bf45bc24c6bcd63c844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myObjective: {fileID: 2064024740}
 --- !u!4 &1777995598
 Transform:
   m_ObjectHideFlags: 0
@@ -1717,13 +1746,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Press V
   reportSuccess: V Pressed
+  reportSkip: 
   reportFail: V Skipped
-  weight: 0
+  strikeCount: 0
+  failed: 0
   active: 0
   skipped: 0
   complete: 0
   canSkip: 1
   canContinue: 0
+  successActions:
+  - {fileID: 1777995597}
+  failActions: []
 --- !u!114 &2064024741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1738,13 +1772,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Press F
   reportSuccess: F Pressed
+  reportSkip: 
   reportFail: F Skipped
-  weight: 0
+  strikeCount: 0
+  failed: 0
   active: 0
   skipped: 0
   complete: 0
   canSkip: 0
   canContinue: 0
+  successActions:
+  - {fileID: 1182659606}
+  failActions: []
 --- !u!4 &2064024742
 Transform:
   m_ObjectHideFlags: 0
@@ -1810,13 +1849,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Press A
   reportSuccess: A Pressed
+  reportSkip: 
   reportFail: A Skipped
-  weight: 0
+  strikeCount: 0
+  failed: 0
   active: 0
   skipped: 0
   complete: 0
   canSkip: 1
   canContinue: 0
+  successActions:
+  - {fileID: 909590349}
+  failActions: []
 --- !u!4 &2128907970
 Transform:
   m_ObjectHideFlags: 0

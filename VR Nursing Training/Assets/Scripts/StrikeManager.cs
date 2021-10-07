@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class StrikeManager : MonoBehaviour
 {
-    public Objective myObjective;
-    public GameObject strikemark1;
-    public GameObject strikemark2;
-    public GameObject strikemark3;
+    [SerializeField] private Objective myObjective;
+    [SerializeField] private GameObject strikemark1;
+    [SerializeField] private GameObject strikemark2;
+    [SerializeField] private GameObject strikemark3;
 
     // Update is called once per frame
     void Update()

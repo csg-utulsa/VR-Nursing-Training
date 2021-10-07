@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PatchObjectScript : MonoBehaviour
 {
-    public GameObject textObject;
+    [SerializeField] private GameObject textObject;
     Text text;
 
     private bool marked = false;

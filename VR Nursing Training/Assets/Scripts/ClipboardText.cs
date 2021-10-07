@@ -5,20 +5,20 @@ using UnityEngine.UI;
 
 public class ClipboardText : MonoBehaviour
 {
-    public GameObject textObject;
+    [SerializeField] private GameObject textObject;
     Text text;
 
-    public string clientName;
-    public string age;
-    public string dateOfBirth;
-    public string allergies;
-    public string roomNumber;
-    public string patientHistory;
-    public string medicalDiagnosis;
-    public string currentVitalSigns;
-    public string doctorName;
-    public string dateTime;
-    public string[] orders;
+    [SerializeField] private string clientName;
+    [SerializeField] private string age;
+    [SerializeField] private string dateOfBirth;
+    [SerializeField] private string allergies;
+    [SerializeField] private string roomNumber;
+    [SerializeField] private string patientHistory;
+    [SerializeField] private string medicalDiagnosis;
+    [SerializeField] private string currentVitalSigns;
+    [SerializeField] private string doctorName;
+    [SerializeField] private string dateTime;
+    [SerializeField] private string[] orders;
 
     void Awake()
     {

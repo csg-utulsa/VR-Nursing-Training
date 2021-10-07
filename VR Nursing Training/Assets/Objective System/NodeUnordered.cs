@@ -109,7 +109,7 @@ public class NodeUnordered : Node
         for (int i = 0; i < objectives.Length; i++)
         {
             objectives[i].active = true;
-            Debug.Log(objectives[i].description); // DEBUG ONLY
+            Debug.Log(objectives[i].getDescription()); // DEBUG ONLY
         }
     }
 

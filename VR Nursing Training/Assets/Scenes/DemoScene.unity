@@ -331,7 +331,6 @@ MonoBehaviour:
   reportSuccess: Hands Sanitized Successfully
   reportSkip: Hands Not Sanitized
   reportFail: Hands Not Sanitized
-  weight: 0
   strikeCount: 0
   failed: 0
   active: 0
@@ -339,6 +338,9 @@ MonoBehaviour:
   complete: 0
   canSkip: 0
   canContinue: 0
+  successActions:
+  - {fileID: 2115304000}
+  failActions: []
 --- !u!4 &30480717
 Transform:
   m_ObjectHideFlags: 0
@@ -2168,8 +2170,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09da1f333edc5124fa4f9a73a7c43407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myObjective: {fileID: 1772120102}
-  failAction: 1
 --- !u!1 &109310815
 GameObject:
   m_ObjectHideFlags: 0
@@ -2946,7 +2946,6 @@ MonoBehaviour:
   reportSuccess: Liquid Carted Successfully
   reportSkip: Liquid Not Carted
   reportFail: Liquid Not Carted
-  weight: 0
   strikeCount: 0
   failed: 0
   active: 0
@@ -2954,6 +2953,9 @@ MonoBehaviour:
   complete: 0
   canSkip: 0
   canContinue: 0
+  successActions:
+  - {fileID: 1072718030}
+  failActions: []
 --- !u!114 &193040269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3146,10 +3148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42024e2ff4151704eae4ab5b9935dc4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myObjective: {fileID: 299760126}
-  failAction: 1
-  targetTypes:
-  - IBUPROFEN
   notTarget: 1
   onCollision: 0
 --- !u!4 &228024661 stripped
@@ -4450,7 +4448,6 @@ MonoBehaviour:
   reportSuccess: Got Pills Successfully
   reportSkip: Didn't Get Pills
   reportFail: Got Wrong Medication
-  weight: 0
   strikeCount: 3
   failed: 0
   active: 0
@@ -4458,6 +4455,10 @@ MonoBehaviour:
   complete: 0
   canSkip: 0
   canContinue: 0
+  successActions:
+  - {fileID: 1638391962}
+  failActions:
+  - {fileID: 222962652}
 --- !u!4 &299760127
 Transform:
   m_ObjectHideFlags: 0
@@ -4951,10 +4952,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42024e2ff4151704eae4ab5b9935dc4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myObjective: {fileID: 1676930993}
-  failAction: 1
-  targetTypes:
-  - NITROGLYCERIN
   notTarget: 1
   onCollision: 0
 --- !u!1 &327995477
@@ -6611,7 +6608,6 @@ MonoBehaviour:
   reportSuccess: Got Liquid Successfully
   reportSkip: Didn't Get Liquid
   reportFail: Got Wrong Medication
-  weight: 0
   strikeCount: 3
   failed: 0
   active: 0
@@ -6619,6 +6615,10 @@ MonoBehaviour:
   complete: 0
   canSkip: 0
   canContinue: 0
+  successActions:
+  - {fileID: 1068763921}
+  failActions:
+  - {fileID: 653639080}
 --- !u!114 &419921401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7401,85 +7401,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f134ecd79ce0eeb44a38041e50af3f0f, type: 3}
---- !u!1 &468552839
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 468552842}
-  - component: {fileID: 468552841}
-  - component: {fileID: 468552840}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &468552840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 468552839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 10
-    m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 1
-    m_MaxSize: 300
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 1.0
---- !u!222 &468552841
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 468552839}
-  m_CullTransparentMesh: 1
---- !u!224 &468552842
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 468552839}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
-  m_Children: []
-  m_Father: {fileID: 1069739788}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1000, y: 1000}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &472147543
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8069,8 +7990,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09da1f333edc5124fa4f9a73a7c43407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myObjective: {fileID: 1194208856}
-  failAction: 0
 --- !u!1001 &507503609
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8352,7 +8271,6 @@ MonoBehaviour:
   reportSuccess: 
   reportSkip: 
   reportFail: 
-  weight: 0
   strikeCount: 0
   failed: 0
   active: 0
@@ -8360,6 +8278,8 @@ MonoBehaviour:
   complete: 0
   canSkip: 0
   canContinue: 0
+  successActions: []
+  failActions: []
 --- !u!114 &516806303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8842,12 +8762,10 @@ MonoBehaviour:
   - {fileID: 1194208856}
   failObjectives:
   - {fileID: 299760126}
-  - {fileID: 1337505348}
   - {fileID: 1676930993}
-  - {fileID: 1853720480}
   - {fileID: 419921400}
   - {fileID: 1772120102}
-  - {fileID: 1661027054}
+  - {fileID: 1337505348}
   checkmark: {fileID: 1604599809}
   failmark: {fileID: 354352988}
   reportObject: {fileID: 65378653}
@@ -9122,10 +9040,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42024e2ff4151704eae4ab5b9935dc4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myObjective: {fileID: 419921400}
-  failAction: 1
-  targetTypes:
-  - DIGOXIN
   notTarget: 1
   onCollision: 0
 --- !u!1 &654992017
@@ -9196,7 +9110,6 @@ MonoBehaviour:
   reportSuccess: Patch Marked Successfully
   reportSkip: Patch Not Marked
   reportFail: Patch Not Marked
-  weight: 0
   strikeCount: 0
   failed: 0
   active: 0
@@ -9204,6 +9117,9 @@ MonoBehaviour:
   complete: 0
   canSkip: 0
   canContinue: 0
+  successActions:
+  - {fileID: 1060009495}
+  failActions: []
 --- !u!1 &674040356
 GameObject:
   m_ObjectHideFlags: 0
@@ -10600,7 +10516,6 @@ MonoBehaviour:
   reportSuccess: Pill Cut Successfully
   reportSkip: Pill Not Cut
   reportFail: Pill Not Cut
-  weight: 0
   strikeCount: 0
   failed: 0
   active: 0
@@ -10608,6 +10523,9 @@ MonoBehaviour:
   complete: 0
   canSkip: 0
   canContinue: 0
+  successActions:
+  - {fileID: 4842687221378738547}
+  failActions: []
 --- !u!4 &796855426
 Transform:
   m_ObjectHideFlags: 0
@@ -10708,7 +10626,6 @@ MonoBehaviour:
   reportSuccess: 
   reportSkip: 
   reportFail: 
-  weight: 0
   strikeCount: 0
   failed: 0
   active: 0
@@ -10716,6 +10633,8 @@ MonoBehaviour:
   complete: 0
   canSkip: 0
   canContinue: 0
+  successActions: []
+  failActions: []
 --- !u!114 &804065053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10958,7 +10877,6 @@ MonoBehaviour:
   reportSuccess: Patch Carted Successfully
   reportSkip: Patch Not Carted
   reportFail: Patch Not Carted
-  weight: 0
   strikeCount: 0
   failed: 0
   active: 0
@@ -10966,6 +10884,9 @@ MonoBehaviour:
   complete: 0
   canSkip: 0
   canContinue: 0
+  successActions:
+  - {fileID: 1072718030}
+  failActions: []
 --- !u!1 &818778540
 GameObject:
   m_ObjectHideFlags: 0
@@ -15180,10 +15101,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42024e2ff4151704eae4ab5b9935dc4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myObjective: {fileID: 654992020}
-  failAction: 0
-  targetTypes:
-  - NITROGLYCERIN
   notTarget: 0
   onCollision: 0
 --- !u!1001 &1060450509
@@ -15318,112 +15235,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42024e2ff4151704eae4ab5b9935dc4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myObjective: {fileID: 419921400}
-  failAction: 0
-  targetTypes:
-  - DIGOXIN
   notTarget: 0
   onCollision: 0
---- !u!1 &1069739787
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1069739788}
-  - component: {fileID: 1069739791}
-  - component: {fileID: 1069739790}
-  - component: {fileID: 1069739789}
-  m_Layer: 5
-  m_Name: Canvas
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1069739788
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1069739787}
-  m_LocalRotation: {x: 0, y: 0.70710677, z: 0.70710677, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 468552842}
-  m_Father: {fileID: 1558704022}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 270, y: -90, z: -90}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0, y: -0.53}
-  m_SizeDelta: {x: 1, y: 1}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1069739789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1069739787}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &1069739790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1069739787}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
---- !u!223 &1069739791
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1069739787}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 2
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
 --- !u!1 &1072718024
 GameObject:
   m_ObjectHideFlags: 0
@@ -15437,14 +15250,9 @@ GameObject:
   - component: {fileID: 1072718028}
   - component: {fileID: 1072718027}
   - component: {fileID: 1072718030}
-  - component: {fileID: 1072718026}
-  - component: {fileID: 1072718035}
   - component: {fileID: 1072718031}
-  - component: {fileID: 1072718033}
-  - component: {fileID: 1072718032}
-  - component: {fileID: 1072718034}
   m_Layer: 6
-  m_Name: Cart Trigger
+  m_Name: Cart Trigger (Count Medicine)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15464,22 +15272,6 @@ Transform:
   m_Father: {fileID: 301163103}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1072718026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072718024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a3ae133c9c695a49a046b15596b3c0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myObjective: {fileID: 815689887}
-  failAction: 0
-  targetType: NITROGLYCERIN
-  targetDosage: 1
 --- !u!64 &1072718027
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -15555,10 +15347,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a3ae133c9c695a49a046b15596b3c0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myObjective: {fileID: 1484903581}
-  failAction: 0
-  targetType: IBUPROFEN
-  targetDosage: 1.5
 --- !u!114 &1072718031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15572,76 +15360,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sharpie: {fileID: 355127568}
---- !u!114 &1072718032
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072718024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42024e2ff4151704eae4ab5b9935dc4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myObjective: {fileID: 1853720480}
-  failAction: 1
-  targetTypes:
-  - NITROGLYCERIN
-  notTarget: 1
-  onCollision: 1
---- !u!114 &1072718033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072718024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42024e2ff4151704eae4ab5b9935dc4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myObjective: {fileID: 1337505348}
-  failAction: 1
-  targetTypes:
-  - IBUPROFEN
-  notTarget: 1
-  onCollision: 1
---- !u!114 &1072718034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072718024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42024e2ff4151704eae4ab5b9935dc4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myObjective: {fileID: 1661027054}
-  failAction: 1
-  targetTypes:
-  - DIGOXIN
-  notTarget: 1
-  onCollision: 1
---- !u!114 &1072718035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072718024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a3ae133c9c695a49a046b15596b3c0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myObjective: {fileID: 193040268}
-  failAction: 0
-  targetType: DIGOXIN
-  targetDosage: 5
 --- !u!1 &1073328064
 GameObject:
   m_ObjectHideFlags: 0
@@ -17153,7 +16871,6 @@ MonoBehaviour:
   reportSuccess: Hands Sanitized Successfully
   reportSkip: Hands Not Sanitized
   reportFail: Hands Not Sanitized
-  weight: 0
   strikeCount: 0
   failed: 0
   active: 0
@@ -17161,6 +16878,9 @@ MonoBehaviour:
   complete: 0
   canSkip: 0
   canContinue: 0
+  successActions:
+  - {fileID: 501096224}
+  failActions: []
 --- !u!114 &1194208857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17969,7 +17689,6 @@ Transform:
   - {fileID: 30480717}
   - {fileID: 1700906719}
   - {fileID: 804065050}
-  - {fileID: 1853720479}
   m_Father: {fileID: 1843458144}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17987,7 +17706,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: 30480715}
-  - {fileID: 1853720481}
+  - {fileID: 1337505349}
+  medicineType: NITROGLYCERIN
+  targetDosage: 1
 --- !u!1001 &1270498966
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18620,7 +18341,6 @@ Transform:
   - {fileID: 1593261452}
   - {fileID: 278191225}
   - {fileID: 1603440984}
-  - {fileID: 1337505347}
   m_Father: {fileID: 1843458144}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18639,6 +18359,8 @@ MonoBehaviour:
   nodes:
   - {fileID: 1593261450}
   - {fileID: 1337505349}
+  medicineType: IBUPROFEN
+  targetDosage: 1.5
 --- !u!1001 &1296159349
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19451,7 +19173,7 @@ GameObject:
   - component: {fileID: 1337505349}
   - component: {fileID: 1337505348}
   m_Layer: 0
-  m_Name: Wrong Medicine Fail (Oral)
+  m_Name: Wrong Medicine Fail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19464,11 +19186,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1337505346}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.699413, y: -7.335491, z: 3.418754}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1292715789}
+  m_Father: {fileID: 1843458144}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1337505348
@@ -19487,7 +19209,6 @@ MonoBehaviour:
   reportSuccess: 
   reportSkip: 
   reportFail: Wrong Medicine Carted
-  weight: 0
   strikeCount: 1
   failed: 0
   active: 0
@@ -19495,6 +19216,9 @@ MonoBehaviour:
   complete: 0
   canSkip: 0
   canContinue: 0
+  successActions: []
+  failActions:
+  - {fileID: 1917199799}
 --- !u!114 &1337505349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20435,85 +20159,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1384269055
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1384269056}
-  - component: {fileID: 1384269058}
-  - component: {fileID: 1384269057}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1384269056
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1384269055}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
-  m_Children: []
-  m_Father: {fileID: 2001534025}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1000, y: 1000}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1384269057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1384269055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 10
-    m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 1
-    m_MaxSize: 300
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 1.0
---- !u!222 &1384269058
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1384269055}
-  m_CullTransparentMesh: 1
 --- !u!1 &1388457290
 GameObject:
   m_ObjectHideFlags: 0
@@ -22428,117 +22073,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1 &1474206295
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1474206296}
-  - component: {fileID: 1474206300}
-  - component: {fileID: 1474206299}
-  - component: {fileID: 1474206298}
-  - component: {fileID: 1474206297}
-  m_Layer: 0
-  m_Name: Dosage Indicator (Patch)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1474206296
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1474206295}
-  m_LocalRotation: {x: -0.7071069, y: -0.0000010430812, z: -0.0000011026858, w: 0.70710677}
-  m_LocalPosition: {x: 0.21700108, y: 0.41200018, z: -0.29599944}
-  m_LocalScale: {x: 0.17718, y: 0.03783551, z: 0.10000001}
-  m_Children:
-  - {fileID: 2001534025}
-  m_Father: {fileID: 301163103}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1474206297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1474206295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04c89839800db574e97b7377f6f4aac4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textObject: {fileID: 1384269055}
-  dosageSource: {fileID: 1072718026}
---- !u!65 &1474206298
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1474206295}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1474206299
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1474206295}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1474206300
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1474206295}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1476125872
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22810,7 +22344,6 @@ MonoBehaviour:
   reportSuccess: Pills Carted Successfully
   reportSkip: Pills Not Carted
   reportFail: Pills Not Carted
-  weight: 0
   strikeCount: 0
   failed: 0
   active: 0
@@ -22818,6 +22351,9 @@ MonoBehaviour:
   complete: 0
   canSkip: 0
   canContinue: 0
+  successActions:
+  - {fileID: 1072718030}
+  failActions: []
 --- !u!114 &1484903582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23102,7 +22638,6 @@ Transform:
   - {fileID: 1194208855}
   - {fileID: 351718955}
   - {fileID: 516806301}
-  - {fileID: 1661027053}
   m_Father: {fileID: 1843458144}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -23120,7 +22655,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: 1194208857}
-  - {fileID: 1661027055}
+  - {fileID: 1337505349}
+  medicineType: DIGOXIN
+  targetDosage: 5
 --- !u!1 &1534622522
 GameObject:
   m_ObjectHideFlags: 0
@@ -23216,117 +22753,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1534622522}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1558704017
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1558704022}
-  - component: {fileID: 1558704021}
-  - component: {fileID: 1558704020}
-  - component: {fileID: 1558704019}
-  - component: {fileID: 1558704018}
-  m_Layer: 0
-  m_Name: Dosage Indicator (Liquid)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1558704018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1558704017}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04c89839800db574e97b7377f6f4aac4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textObject: {fileID: 468552839}
-  dosageSource: {fileID: 1072718035}
---- !u!65 &1558704019
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1558704017}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1558704020
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1558704017}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1558704021
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1558704017}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1558704022
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1558704017}
-  m_LocalRotation: {x: -0.7071069, y: -0.0000010430812, z: -0.0000011026858, w: 0.70710677}
-  m_LocalPosition: {x: 0.21700108, y: 0.41200018, z: -0.29599944}
-  m_LocalScale: {x: 0.17718, y: 0.03783551, z: 0.10000001}
-  m_Children:
-  - {fileID: 1069739788}
-  m_Father: {fileID: 301163103}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1559491480
 GameObject:
   m_ObjectHideFlags: 0
@@ -23341,12 +22767,12 @@ GameObject:
   - component: {fileID: 1559491482}
   - component: {fileID: 1559491485}
   m_Layer: 0
-  m_Name: Dosage Indicator (Oral)
+  m_Name: Dosage Indicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1559491481
 Transform:
   m_ObjectHideFlags: 0
@@ -23360,7 +22786,7 @@ Transform:
   m_Children:
   - {fileID: 405184995}
   m_Father: {fileID: 301163103}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1559491482
 BoxCollider:
@@ -23795,7 +23221,6 @@ MonoBehaviour:
   reportSuccess: Hands Sanitized Successfully
   reportSkip: Hands Not Sanitized
   reportFail: Hands Not Sanitized
-  weight: 0
   strikeCount: 0
   failed: 0
   active: 0
@@ -23803,6 +23228,9 @@ MonoBehaviour:
   complete: 0
   canSkip: 0
   canContinue: 0
+  successActions:
+  - {fileID: 1994098852}
+  failActions: []
 --- !u!4 &1593261452
 Transform:
   m_ObjectHideFlags: 0
@@ -24070,7 +23498,6 @@ MonoBehaviour:
   reportSuccess: 
   reportSkip: 
   reportFail: 
-  weight: 0
   strikeCount: 0
   failed: 0
   active: 0
@@ -24078,6 +23505,8 @@ MonoBehaviour:
   complete: 0
   canSkip: 0
   canContinue: 0
+  successActions: []
+  failActions: []
 --- !u!1 &1604599809
 GameObject:
   m_ObjectHideFlags: 0
@@ -24735,10 +24164,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42024e2ff4151704eae4ab5b9935dc4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myObjective: {fileID: 299760126}
-  failAction: 0
-  targetTypes:
-  - IBUPROFEN
   notTarget: 0
   onCollision: 0
 --- !u!1 &1638419812
@@ -24854,81 +24279,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1653287000}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1661027052
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1661027053}
-  - component: {fileID: 1661027055}
-  - component: {fileID: 1661027054}
-  m_Layer: 0
-  m_Name: Wrong Medicine Fail (Liquid)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1661027053
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1661027052}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.699413, y: -7.335491, z: 3.418754}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1525633962}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1661027054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1661027052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bed5c6707fc6ef4aa88ef64f847e75d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  description: 
-  reportSuccess: 
-  reportSkip: 
-  reportFail: Wrong Medicine Carted
-  weight: 0
-  strikeCount: 1
-  failed: 0
-  active: 0
-  skipped: 0
-  complete: 0
-  canSkip: 0
-  canContinue: 0
---- !u!114 &1661027055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1661027052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e956f245f0f1dc241bd7a0aa9aeb8522, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  previousList: []
-  active: 0
-  complete: 0
-  saturated: 0
-  canContinue: 0
-  canSkip: 0
-  objective: {fileID: 1661027054}
 --- !u!1001 &1661514015
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25313,7 +24663,6 @@ MonoBehaviour:
   reportSuccess: Got Patch Successfully
   reportSkip: Didn't Get Patch
   reportFail: Got Wrong Medication
-  weight: 0
   strikeCount: 3
   failed: 0
   active: 0
@@ -25321,6 +24670,10 @@ MonoBehaviour:
   complete: 0
   canSkip: 0
   canContinue: 0
+  successActions:
+  - {fileID: 1967904845}
+  failActions:
+  - {fileID: 327642234}
 --- !u!1 &1683095908
 GameObject:
   m_ObjectHideFlags: 0
@@ -26366,7 +25719,6 @@ MonoBehaviour:
   reportSuccess: Measured Correct Dosage
   reportSkip: Didn't Measured Liquid
   reportFail: Got Wrong Dosage
-  weight: 0
   strikeCount: 3
   failed: 0
   active: 0
@@ -26374,6 +25726,10 @@ MonoBehaviour:
   complete: 0
   canSkip: 0
   canContinue: 0
+  successActions:
+  - {fileID: 1890883384}
+  failActions:
+  - {fileID: 105428426}
 --- !u!114 &1772120103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27232,7 +26588,7 @@ Transform:
   - {fileID: 1875395126}
   - {fileID: 81244711}
   m_Father: {fileID: 1843458144}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1843458142
 GameObject:
@@ -27271,10 +26627,8 @@ MonoBehaviour:
   - {fileID: 507503610}
   - {fileID: 1205832086}
   - {fileID: 441976697}
-  dosageIndicators:
-  - {fileID: 1559491480}
-  - {fileID: 1474206295}
-  - {fileID: 1558704017}
+  randomStart: 1
+  startIndex: 0
 --- !u!4 &1843458144
 Transform:
   m_ObjectHideFlags: 0
@@ -27289,6 +26643,7 @@ Transform:
   - {fileID: 1292715789}
   - {fileID: 1237110800}
   - {fileID: 1525633962}
+  - {fileID: 1337505347}
   - {fileID: 1840985047}
   m_Father: {fileID: 0}
   m_RootOrder: 11
@@ -27365,81 +26720,6 @@ MonoBehaviour:
   onIncorrect:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &1853720478
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1853720479}
-  - component: {fileID: 1853720481}
-  - component: {fileID: 1853720480}
-  m_Layer: 0
-  m_Name: Wrong Medicine Fail (Patch)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1853720479
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1853720478}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.699413, y: -7.335491, z: 3.418754}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1237110800}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1853720480
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1853720478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bed5c6707fc6ef4aa88ef64f847e75d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  description: 
-  reportSuccess: 
-  reportSkip: 
-  reportFail: Wrong Medicine Carted
-  weight: 0
-  strikeCount: 1
-  failed: 0
-  active: 0
-  skipped: 0
-  complete: 0
-  canSkip: 0
-  canContinue: 0
---- !u!114 &1853720481
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1853720478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e956f245f0f1dc241bd7a0aa9aeb8522, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  previousList: []
-  active: 0
-  complete: 0
-  saturated: 0
-  canContinue: 0
-  canSkip: 0
-  objective: {fileID: 1853720480}
 --- !u!1 &1858497435
 GameObject:
   m_ObjectHideFlags: 0
@@ -28355,8 +27635,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09da1f333edc5124fa4f9a73a7c43407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myObjective: {fileID: 1772120102}
-  failAction: 0
 --- !u!1 &1892176592
 GameObject:
   m_ObjectHideFlags: 0
@@ -28890,6 +28168,117 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1916743163}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1917199798
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1917199803}
+  - component: {fileID: 1917199802}
+  - component: {fileID: 1917199801}
+  - component: {fileID: 1917199800}
+  - component: {fileID: 1917199799}
+  m_Layer: 6
+  m_Name: Cart Trigger (Check Medicine)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1917199799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917199798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42024e2ff4151704eae4ab5b9935dc4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  notTarget: 1
+  onCollision: 1
+--- !u!64 &1917199800
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917199798}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1917199801
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917199798}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1917199802
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917199798}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1917199803
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917199798}
+  m_LocalRotation: {x: -0.000000021073424, y: -0.7071068, z: 0.000000021073424, w: 0.7071068}
+  m_LocalPosition: {x: 0.006000162, y: 0.3540001, z: -0.0010000458}
+  m_LocalScale: {x: 0.059078567, y: 0.068382666, z: 0.064764634}
+  m_Children: []
+  m_Father: {fileID: 301163103}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1921170217
 GameObject:
   m_ObjectHideFlags: 0
@@ -29698,10 +29087,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42024e2ff4151704eae4ab5b9935dc4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myObjective: {fileID: 1676930993}
-  failAction: 0
-  targetTypes:
-  - NITROGLYCERIN
   notTarget: 0
   onCollision: 0
 --- !u!1 &1969369837
@@ -30004,108 +29389,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09da1f333edc5124fa4f9a73a7c43407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myObjective: {fileID: 1593261451}
-  failAction: 0
---- !u!1 &2001534024
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2001534025}
-  - component: {fileID: 2001534028}
-  - component: {fileID: 2001534027}
-  - component: {fileID: 2001534026}
-  m_Layer: 5
-  m_Name: Canvas
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2001534025
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2001534024}
-  m_LocalRotation: {x: 0, y: 0.70710677, z: 0.70710677, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1384269056}
-  m_Father: {fileID: 1474206296}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 270, y: -90, z: -90}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0, y: -0.53}
-  m_SizeDelta: {x: 1, y: 1}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2001534026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2001534024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &2001534027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2001534024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
---- !u!223 &2001534028
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2001534024}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 2
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
 --- !u!1 &2001570398
 GameObject:
   m_ObjectHideFlags: 0
@@ -31413,8 +30696,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09da1f333edc5124fa4f9a73a7c43407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myObjective: {fileID: 30480716}
-  failAction: 0
 --- !u!4 &2124164615 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f134ecd79ce0eeb44a38041e50af3f0f,
@@ -32547,6 +31828,18 @@ PrefabInstance:
       objectReference: {fileID: 796855425}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5966f623927a18148a699630a177a1a9, type: 3}
+--- !u!114 &4842687221378738547 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4842687221378738548, guid: 5966f623927a18148a699630a177a1a9,
+    type: 3}
+  m_PrefabInstance: {fileID: 4842687221378738546}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09da1f333edc5124fa4f9a73a7c43407, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4948647769604319798
 PrefabInstance:
   m_ObjectHideFlags: 0

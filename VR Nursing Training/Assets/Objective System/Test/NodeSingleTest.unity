@@ -155,13 +155,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Press G
   reportSuccess: G Complete
+  reportSkip: 
   reportFail: G Skipped
-  weight: 0
+  strikeCount: 0
+  failed: 0
   active: 0
   skipped: 0
   complete: 0
   canSkip: 0
   canContinue: 0
+  successActions:
+  - {fileID: 633899269}
+  failActions: []
 --- !u!4 &33944285
 Transform:
   m_ObjectHideFlags: 0
@@ -229,13 +234,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Press F
   reportSuccess: F Complete
+  reportSkip: 
   reportFail: F Skipped
-  weight: 0
+  strikeCount: 0
+  failed: 0
   active: 0
   skipped: 0
   complete: 0
   canSkip: 1
   canContinue: 0
+  successActions:
+  - {fileID: 473522646}
+  failActions: []
 --- !u!4 &66605930
 Transform:
   m_ObjectHideFlags: 0
@@ -313,7 +323,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b9c55f73ac8bf45bc24c6bcd63c844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myObjective: {fileID: 668208839}
 --- !u!1 &264714919
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,7 +366,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b9c55f73ac8bf45bc24c6bcd63c844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myObjective: {fileID: 927559844}
 --- !u!1 &330770006
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,7 +409,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b9c55f73ac8bf45bc24c6bcd63c844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myObjective: {fileID: 1349582207}
 --- !u!1 &470524017
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,13 +441,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Press J
   reportSuccess: J Complete
+  reportSkip: 
   reportFail: J Skipped
-  weight: 0
+  strikeCount: 0
+  failed: 0
   active: 0
   skipped: 0
   complete: 0
   canSkip: 1
   canContinue: 0
+  successActions:
+  - {fileID: 983351549}
+  failActions: []
 --- !u!4 &470524019
 Transform:
   m_ObjectHideFlags: 0
@@ -518,7 +530,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b9c55f73ac8bf45bc24c6bcd63c844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myObjective: {fileID: 66605929}
 --- !u!1 &633899267
 GameObject:
   m_ObjectHideFlags: 0
@@ -562,7 +573,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b9c55f73ac8bf45bc24c6bcd63c844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myObjective: {fileID: 33944284}
 --- !u!1 &667745728
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,7 +616,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b9c55f73ac8bf45bc24c6bcd63c844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myObjective: {fileID: 677453223}
 --- !u!1 &668208837
 GameObject:
   m_ObjectHideFlags: 0
@@ -653,13 +662,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Press K
   reportSuccess: K Complete
+  reportSkip: 
   reportFail: K Skipped
-  weight: 0
+  strikeCount: 0
+  failed: 0
   active: 0
   skipped: 0
   complete: 0
   canSkip: 0
   canContinue: 0
+  successActions:
+  - {fileID: 156677477}
+  failActions: []
 --- !u!114 &668208840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -712,13 +726,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Press D
   reportSuccess: D Complete
+  reportSkip: 
   reportFail: D Skipped
-  weight: 0
+  strikeCount: 0
+  failed: 0
   active: 0
   skipped: 0
   complete: 0
   canSkip: 0
   canContinue: 0
+  successActions:
+  - {fileID: 667745730}
+  failActions: []
 --- !u!4 &677453224
 Transform:
   m_ObjectHideFlags: 0
@@ -845,6 +864,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 769130866}
+  - component: {fileID: 769130868}
+  - component: {fileID: 769130867}
   m_Layer: 0
   m_Name: Nodes
   m_TagString: Untagged
@@ -877,6 +898,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &769130867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769130865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421177f7330a9e5498f74936c7b2d200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 927559846}
+--- !u!114 &769130868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769130865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd2b1ab0d17c6b243b72a109154127b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possibleStarts:
+  - {fileID: 769130867}
+  clipboards: []
+  dosageIndicators: []
+  randomStart: 0
+  startIndex: 0
 --- !u!1 &840412225
 GameObject:
   m_ObjectHideFlags: 0
@@ -920,7 +973,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b9c55f73ac8bf45bc24c6bcd63c844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myObjective: {fileID: 1364123915}
 --- !u!1 &924736767
 GameObject:
   m_ObjectHideFlags: 0
@@ -1202,13 +1254,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Press A
   reportSuccess: A Complete
+  reportSkip: 
   reportFail: A Skipped
-  weight: 0
+  strikeCount: 0
+  failed: 0
   active: 0
   skipped: 0
   complete: 0
   canSkip: 1
   canContinue: 0
+  successActions:
+  - {fileID: 264714921}
+  failActions: []
 --- !u!4 &927559845
 Transform:
   m_ObjectHideFlags: 0
@@ -1274,13 +1331,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Press S
   reportSuccess: S Complete
+  reportSkip: 
   reportFail: S Skipped
-  weight: 0
+  strikeCount: 0
+  failed: 0
   active: 0
   skipped: 0
   complete: 0
   canSkip: 0
   canContinue: 0
+  successActions:
+  - {fileID: 1605886047}
+  failActions: []
 --- !u!4 &936203140
 Transform:
   m_ObjectHideFlags: 0
@@ -1358,7 +1420,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b9c55f73ac8bf45bc24c6bcd63c844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myObjective: {fileID: 470524018}
 --- !u!1 &1170171175
 GameObject:
   m_ObjectHideFlags: 0
@@ -1402,7 +1463,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b9c55f73ac8bf45bc24c6bcd63c844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myObjective: {fileID: 2051222718}
 --- !u!1 &1203377864
 GameObject:
   m_ObjectHideFlags: 0
@@ -1435,13 +1495,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Press R
   reportSuccess: R Complete
+  reportSkip: 
   reportFail: R Skipped
-  weight: 0
+  strikeCount: 0
+  failed: 0
   active: 0
   skipped: 0
   complete: 0
   canSkip: 1
   canContinue: 0
+  successActions:
+  - {fileID: 1320529134}
+  failActions: []
 --- !u!4 &1203377866
 Transform:
   m_ObjectHideFlags: 0
@@ -1612,7 +1677,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b9c55f73ac8bf45bc24c6bcd63c844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myObjective: {fileID: 1203377865}
 --- !u!1 &1349582206
 GameObject:
   m_ObjectHideFlags: 0
@@ -1645,13 +1709,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Press H
   reportSuccess: H Complete
+  reportSkip: 
   reportFail: H Skipped
-  weight: 0
+  strikeCount: 0
+  failed: 0
   active: 0
   skipped: 0
   complete: 0
   canSkip: 1
   canContinue: 0
+  successActions:
+  - {fileID: 330770008}
+  failActions: []
 --- !u!4 &1349582208
 Transform:
   m_ObjectHideFlags: 0
@@ -1732,13 +1801,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Press N
   reportSuccess: N Complete
+  reportSkip: 
   reportFail: N Skipped
-  weight: 0
+  strikeCount: 0
+  failed: 0
   active: 0
   skipped: 0
   complete: 0
   canSkip: 0
   canContinue: 0
+  successActions:
+  - {fileID: 840412227}
+  failActions: []
 --- !u!114 &1364123916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1802,7 +1876,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b9c55f73ac8bf45bc24c6bcd63c844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myObjective: {fileID: 936203139}
 --- !u!1 &2051222717
 GameObject:
   m_ObjectHideFlags: 0
@@ -1835,13 +1908,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Press V
   reportSuccess: V Complete
+  reportSkip: 
   reportFail: V Skipped
-  weight: 0
+  strikeCount: 0
+  failed: 0
   active: 0
   skipped: 0
   complete: 0
   canSkip: 0
   canContinue: 0
+  successActions:
+  - {fileID: 1170171177}
+  failActions: []
 --- !u!4 &2051222719
 Transform:
   m_ObjectHideFlags: 0

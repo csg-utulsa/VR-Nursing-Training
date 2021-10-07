@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class DosageIndicator : MonoBehaviour
 {
-    public GameObject textObject;
+    [SerializeField] private GameObject textObject;
     Text text;
-    public ActionCountMedicine dosageSource;
+    [SerializeField] private ActionCountMedicine dosageSource;
 
     void Awake()
     {
