@@ -103,6 +103,7 @@ public class characterMovement3D : MonoBehaviour
                     otherGameObject.transform.SetParent(handLocation.transform);
                     //otherGameObject.transform.position = handLocation.transform.position;
                     otherGameObject.GetComponent<Rigidbody>().useGravity = false;
+                    otherGameObject.GetComponent<Rigidbody>().isKinematic = true;
                 }
             } else
             {
@@ -128,6 +129,7 @@ public class characterMovement3D : MonoBehaviour
                 GameObject gobj = handLocation.transform.GetChild(0).gameObject;
                 handLocation.transform.DetachChildren();
                 gobj.GetComponent<Rigidbody>().useGravity = true;
+                gobj.GetComponent<Rigidbody>().isKinematic = false;
                 gobj.GetComponent<InteractableScript>().PlaceDown();
                 grabComplete = false;
             }

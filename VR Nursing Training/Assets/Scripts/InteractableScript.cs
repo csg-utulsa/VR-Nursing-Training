@@ -4,20 +4,25 @@ using UnityEngine;
 using UnityEngine.Events;
 public class InteractableScript : InteractableBase
 {
-    public bool isInteractable;
+    public UnityEvent onCombine;
+    public UnityEvent interactEvent;
+
     public Vector3 initialPosition;
     public Vector3 initialAngles;
-    public GameObject[] targets;
+
     public Material material;
-    public LayerMask layer;
     public Material combineMaterial;
-    public float combineDist;
+
+    public LayerMask layer;
+
+    public GameObject[] targets;
     private GameObject respawnPoint;
     private GameObject touchedObject;
+
     private static int step;
-    public UnityEvent onCombine;
+    public float combineDist;
+    public bool isInteractable;
     public string type;
-    public UnityEvent interactEvent;
 
 
     private void Start()
