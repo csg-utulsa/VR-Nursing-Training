@@ -16,6 +16,7 @@ public class characterMovement3D : MonoBehaviour
     private double grabTime;
 
     public LayerMask raycastMask;
+    public LayerMask interactMask;
 
     bool isClicking;
     bool isInteract;
@@ -105,7 +106,7 @@ public class characterMovement3D : MonoBehaviour
         interacted = isInteract;
 
         RaycastHit hit;
-
+        //Physics.RaycastAll(camera3D.transform.position, camera3D.transform.forward, 2);
         
         if (isInteract && Physics.Raycast(camera3D.transform.position, camera3D.transform.forward, out hit, 2) && hit.collider.gameObject.GetComponent<InteractableBase>() != null)
         {
@@ -120,6 +121,14 @@ public class characterMovement3D : MonoBehaviour
                     //otherGameObject.transform.position = handLocation.transform.position;
                     otherGameObject.GetComponent<Rigidbody>().useGravity = false;
                     otherGameObject.GetComponent<Rigidbody>().isKinematic = true;
+                } 
+                else if (hit.collider.gameObject.GetComponent<PillCutterScript>() != null)
+                    {
+                        
+                    }
+                else
+                {
+                    otherGameObject.GetComponent<InteractableBase>().Interact(handLocation.GetComponent<Collider>());
                 }
             } else
             {

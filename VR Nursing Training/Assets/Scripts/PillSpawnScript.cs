@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PillSpawnScript : MonoBehaviour
+public class PillSpawnScript : InteractableBase
 {
     public GameObject pill;
     private GameObject pill1;
@@ -12,6 +12,11 @@ public class PillSpawnScript : MonoBehaviour
     public UnityEvent<string> onSpawn;
 
     private void OnTriggerEnter(Collider other)
+    {
+        Interact(other);
+    }
+
+    public override void Interact(Collider other)
     {
         if (other.CompareTag("PillContainer"))
         {
