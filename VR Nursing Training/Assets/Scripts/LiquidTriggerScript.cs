@@ -12,11 +12,12 @@ public class LiquidTriggerScript : MonoBehaviour
     [SerializeField] private GameObject parentLiquid;
 
     private bool correctType;
+    private bool complete = false;
     private string liquidType;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("LiquidContainer"))
+        if (other.CompareTag("LiquidContainer") && !complete)
         {
             liquidType = other.gameObject.GetComponent<InteractableScript>().getType();
             correctType = false;
@@ -31,8 +32,14 @@ public class LiquidTriggerScript : MonoBehaviour
             {
                 onPour.Invoke(liquidType);
                 measureCanvas.SetActive(true);
+                measureCanvas.GetComponent<LiquidQuestionScript>().setCup(this);
                 parentLiquid.gameObject.GetComponent<InteractableScript>().setType(liquidType);
             }
         }
+    }
+
+    public void setComplete(bool comp)
+    {
+        complete = comp;
     }
 }
