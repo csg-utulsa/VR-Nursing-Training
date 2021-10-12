@@ -24,6 +24,9 @@ public class characterMovement3D : MonoBehaviour
     bool clicked = false;
     bool letgo = false;
 
+    bool grabComplete = false;
+
+
 
     private void Awake()
     {
@@ -62,10 +65,16 @@ public class characterMovement3D : MonoBehaviour
     void handleGrabAnim(){
         // Smoothly moves grabbed objects into one's hand
         if(handLocation.transform.childCount != 0){
-            GameObject gobj = handLocation.transform.GetChild(0).gameObject;
-            double percent = Mathf.Clamp(Time.time-(float)grabTime,0,(float)transitionSpeed)/transitionSpeed;
-            gobj.transform.position = Vector3.Lerp(grabFrom,handLocation.transform.position,(float)percent);
-            Debug.Log("Moving position... "+percent);
+            if(grabComplete == false){
+                GameObject gobj = handLocation.transform.GetChild(0).gameObject;
+                double percent = Mathf.Clamp(Time.time-(float)grabTime,0,(float)transitionSpeed)/transitionSpeed;
+                gobj.transform.position = Vector3.Lerp(grabFrom,handLocation.transform.position,(float)percent);
+                 Debug.Log("Moving position... "+percent);
+                if(percent == 1){
+                    grabComplete = true;
+                }
+            }
+
         }
     }
 
@@ -120,6 +129,7 @@ public class characterMovement3D : MonoBehaviour
                 handLocation.transform.DetachChildren();
                 gobj.GetComponent<Rigidbody>().useGravity = true;
                 gobj.GetComponent<InteractableScript>().PlaceDown();
+                grabComplete = false;
             }
         }
     }
