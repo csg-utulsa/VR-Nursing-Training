@@ -25,6 +25,10 @@ public class InteractableScript : InteractableBase
     public string type;
 
 
+    public bool focusOnPickup = false;
+    public double distanceFromCamera = 0.5;
+    public Vector3 focusAngles = new Vector3(0,0,0);
+
     private void Start()
     {
         
@@ -35,7 +39,7 @@ public class InteractableScript : InteractableBase
         if (gameObject.transform.parent != null)
         {
             respawnPoint.transform.parent = gameObject.transform.parent.transform;
-        } 
+        }
         initialPosition = gameObject.transform.position;
 
         initialAngles = gameObject.transform.eulerAngles;
@@ -89,6 +93,18 @@ public class InteractableScript : InteractableBase
     public Material getMaterial() // Returns Material of gameObj (probably not needed)
     {
         return(GetComponent<Renderer>().material);
+    }
+
+    public bool getFocusOnPickup(){
+        return focusOnPickup;
+    }
+
+    public Vector3 getFocusAngles(){
+        return focusAngles;
+    }
+
+    public double getFocusDistance(){
+        return distanceFromCamera;
     }
 
     private void FixedUpdate()

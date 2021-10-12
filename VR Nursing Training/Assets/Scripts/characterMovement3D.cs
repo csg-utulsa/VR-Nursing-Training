@@ -12,6 +12,7 @@ public class characterMovement3D : MonoBehaviour
     public double transitionSpeed =0.25;
 
     private Vector3 grabFrom;
+    private Vector3 grabFromAngle;
     private double grabTime;
 
     public LayerMask raycastMask;
@@ -68,10 +69,20 @@ public class characterMovement3D : MonoBehaviour
             if(grabComplete == false){
                 GameObject gobj = handLocation.transform.GetChild(0).gameObject;
                 double percent = Mathf.Clamp(Time.time-(float)grabTime,0,(float)transitionSpeed)/transitionSpeed;
-                gobj.transform.position = Vector3.Lerp(grabFrom,handLocation.transform.position,(float)percent);
-                 Debug.Log("Moving position... "+percent);
+                InteractableScript interactableScript = gobj.GetComponent<InteractableScript>();
+                if(interactableScript.getFocusOnPickup()){ //Move in front of camera
+                    Vector3 focusPos = camera3D.transform.forward*(float)interactableScript.getFocusDistance() + camera3D.transform.position;
+                    Vector3 focusAng = camera3D.transform.eulerAngles + interactableScript.getFocusAngles();
+                    gobj.transform.position = Vector3.Lerp(grabFrom,focusPos,(float)percent);
+                    gobj.transform.eulerAngles = Vector3.Lerp(grabFromAngle,focusAng,(float)percent);
+
+                }
+                else{ //Move to hand
+                    gobj.transform.position = Vector3.Lerp(grabFrom,handLocation.transform.position,(float)percent);
+                    //Debug.Log("Moving position... "+percent);
+                }
                 if(percent == 1){
-                    grabComplete = true;
+                    //grabComplete = true;
                 }
             }
 
@@ -99,6 +110,7 @@ public class characterMovement3D : MonoBehaviour
             {
                 if(hit.collider.gameObject.GetComponent<InteractableScript>() != null){ //Check if the target object is an InteractableScript and NOT a base class
                     grabFrom = otherGameObject.transform.position;
+                    grabFromAngle = otherGameObject.transform.eulerAngles;
                     grabTime = Time.time;
                     otherGameObject.transform.SetParent(handLocation.transform);
                     //otherGameObject.transform.position = handLocation.transform.position;
