@@ -88,11 +88,13 @@ public class characterMovement3D : MonoBehaviour
             GameObject otherGameObject = hit.collider.gameObject;
             if (handLocation.transform.childCount == 0)
             {
-                grabFrom = otherGameObject.transform.position;
-                grabTime = Time.time;
-                otherGameObject.transform.SetParent(handLocation.transform);
-                //otherGameObject.transform.position = handLocation.transform.position;
-                otherGameObject.GetComponent<Rigidbody>().useGravity = false;
+                if(hit.collider.gameObject.GetComponent<InteractableScript>() != null){ //Check if the target object is an InteractableScript and NOT a base class
+                    grabFrom = otherGameObject.transform.position;
+                    grabTime = Time.time;
+                    otherGameObject.transform.SetParent(handLocation.transform);
+                    //otherGameObject.transform.position = handLocation.transform.position;
+                    otherGameObject.GetComponent<Rigidbody>().useGravity = false;
+                }
             } else
             {
                 otherGameObject.GetComponent<InteractableBase>().Interact(handLocation.transform.GetChild(0).GetComponent<Collider>());
