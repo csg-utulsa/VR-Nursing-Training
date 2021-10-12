@@ -11,6 +11,11 @@ public class PillSpawnScript : InteractableBase
     private GameObject pill3;
     public UnityEvent<string> onSpawn;
 
+
+    public override bool canInteractWithHand(){
+        return false;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         Interact(other);

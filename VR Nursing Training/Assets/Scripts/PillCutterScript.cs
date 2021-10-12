@@ -13,6 +13,12 @@ public class PillCutterScript : InteractableBase
     public UnityEvent onCut;
     public string type;
 
+
+
+    public override bool canInteractWithHand(){
+        return false;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         Interact(other);

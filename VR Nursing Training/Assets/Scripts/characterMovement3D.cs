@@ -106,33 +106,46 @@ public class characterMovement3D : MonoBehaviour
         interacted = isInteract;
 
         RaycastHit hit;
-        //Physics.RaycastAll(camera3D.transform.position, camera3D.transform.forward, 2);
-        
-        if (isInteract && Physics.Raycast(camera3D.transform.position, camera3D.transform.forward, out hit, 2) && hit.collider.gameObject.GetComponent<InteractableBase>() != null)
-        {
-            GameObject otherGameObject = hit.collider.gameObject;
-            if (handLocation.transform.childCount == 0)
-            {
-                if(hit.collider.gameObject.GetComponent<InteractableScript>() != null){ //Check if the target object is an InteractableScript and NOT a base class
-                    grabFrom = otherGameObject.transform.position;
-                    grabFromAngle = otherGameObject.transform.eulerAngles;
-                    grabTime = Time.time;
-                    otherGameObject.transform.SetParent(handLocation.transform);
-                    //otherGameObject.transform.position = handLocation.transform.position;
-                    otherGameObject.GetComponent<Rigidbody>().useGravity = false;
-                    otherGameObject.GetComponent<Rigidbody>().isKinematic = true;
-                } 
-                else if (hit.collider.gameObject.GetComponent<PillCutterScript>() != null)
-                    {
-                        
-                    }
-                else
+        RaycastHit[] hits = Physics.RaycastAll(camera3D.transform.position, camera3D.transform.forward, 2);
+        //old used in if statement: Physics.Raycast(camera3D.transform.position, camera3D.transform.forward, out hit, 2)
+        if(isInteract){
+            Debug.Log("hit "+hits.Length+" objects");
+            for(int i = 0; i < hits.Length; i++){
+                hit = hits[i];
+                if ( hit.collider.gameObject.GetComponent<InteractableBase>() != null)
                 {
-                    otherGameObject.GetComponent<InteractableBase>().Interact(handLocation.GetComponent<Collider>());
+                    GameObject otherGameObject = hit.collider.gameObject;
+                    if (handLocation.transform.childCount == 0)
+                    {
+                        if(hit.collider.gameObject.GetComponent<InteractableScript>() != null){ //Check if the target object is an InteractableScript and NOT a base class
+                            grabFrom = otherGameObject.transform.position;
+                            grabFromAngle = otherGameObject.transform.eulerAngles;
+                            grabTime = Time.time;
+                            otherGameObject.transform.SetParent(handLocation.transform);
+                            //otherGameObject.transform.position = handLocation.transform.position;
+                            otherGameObject.GetComponent<Rigidbody>().useGravity = false;
+                            otherGameObject.GetComponent<Rigidbody>().isKinematic = true;
+                            Debug.Log("break on obj "+i+", is an interactablescript");
+                            break;
+                        }
+                        //else if (hit.collider.gameObject.GetComponent<PillCutterScript>() != null)
+                        //    {
+                        //        //...!?
+                        //    }
+                        else if(otherGameObject.GetComponent<InteractableBase>() != null && otherGameObject.GetComponent<InteractableBase>().canInteractWithHand())
+                        {
+
+                            otherGameObject.GetComponent<InteractableBase>().Interact(handLocation.GetComponent<Collider>());
+                            Debug.Log("break on obj "+i+", is an interactable base and interacted with bare hands on object "+otherGameObject.name);
+                            break;
+                        }
+                    } else
+                    {
+                        otherGameObject.GetComponent<InteractableBase>().Interact(handLocation.transform.GetChild(0).GetComponent<Collider>());
+                        Debug.Log("break on obj "+i+", is an interactable base and interacted with held object");
+                        break;
+                    }
                 }
-            } else
-            {
-                otherGameObject.GetComponent<InteractableBase>().Interact(handLocation.transform.GetChild(0).GetComponent<Collider>());
             }
         }
     }
