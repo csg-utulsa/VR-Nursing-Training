@@ -57,8 +57,12 @@ public class characterMovement3D : MonoBehaviour
     void checkHeldObjectValid(){
         if(handLocation.transform.childCount != 0){
             if(handLocation.transform.GetChild(0).gameObject.activeSelf == false){
-                Destroy(handLocation.transform.GetChild(0).gameObject);
-                Debug.Log("Hand object invalid and destroyed");
+
+                //maybe better to call returnHome and unparent.
+                isLettingGo=true;
+
+                //Destroy(handLocation.transform.GetChild(0).gameObject);
+                //Debug.Log("Hand object invalid and destroyed");
             }
         }
     }
