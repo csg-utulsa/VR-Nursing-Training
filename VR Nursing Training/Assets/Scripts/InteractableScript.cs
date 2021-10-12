@@ -145,7 +145,7 @@ public class InteractableScript : InteractableBase
     public override void Interact(Collider other)
     {
         Debug.Log("Interact!");
-        CombineObject(other.gameObject);
+        //CombineObject(other.gameObject);
         ////interactEvent.Invoke();
     }
 
