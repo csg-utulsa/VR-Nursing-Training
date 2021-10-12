@@ -8123,6 +8123,9 @@ MonoBehaviour:
   raycastMask:
     serializedVersion: 2
     m_Bits: 0
+  interactMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &7548493107888505734
 GameObject:
   m_ObjectHideFlags: 0
