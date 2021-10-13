@@ -10,6 +10,7 @@ public class characterMovement3D : MonoBehaviour
     PlayerInput input;
 
     public double transitionSpeed =0.25;
+    public bool smoothPickup = true;
 
     private Vector3 grabFrom;
     private Vector3 grabFromAngle;
@@ -72,9 +73,23 @@ public class characterMovement3D : MonoBehaviour
         // Smoothly moves grabbed objects into one's hand
         if(handLocation.transform.childCount != 0){
             if(grabComplete == false){
+
                 GameObject gobj = handLocation.transform.GetChild(0).gameObject;
-                double percent = Mathf.Clamp(Time.time-(float)grabTime,0,(float)transitionSpeed)/transitionSpeed;
+                double percent = 0.0f;
+                if(smoothPickup){ //Use a sin function instead of a linear function
+                    double perc1 = Mathf.Clamp(Time.time-(float)grabTime,0,(float)transitionSpeed)/transitionSpeed; //sin function 1
+                    percent = Mathf.Clamp((Mathf.Sin((float)(Mathf.PI/6.0f + (perc1)*Mathf.PI/3.0f))-0.5f)*2.0f,0,1); //sin function 2
+
+                    if((Time.time-(float)grabTime) > transitionSpeed){
+                        percent = 1;
+                    }
+                }
+                else{
+                    percent = Mathf.Clamp(Time.time-(float)grabTime,0,(float)transitionSpeed)/transitionSpeed; //linear
+                }
+
                 InteractableScript interactableScript = gobj.GetComponent<InteractableScript>();
+
                 if(interactableScript.getFocusOnPickup()){ //Move in front of camera
                     Vector3 focusPos = camera3D.transform.forward*(float)interactableScript.getFocusDistance() + camera3D.transform.position;
                     Vector3 focusAng = camera3D.transform.eulerAngles + interactableScript.getFocusAngles();
@@ -87,7 +102,7 @@ public class characterMovement3D : MonoBehaviour
                     //Debug.Log("Moving position... "+percent);
                 }
                 if(percent == 1){
-                    //grabComplete = true;
+                    grabComplete = true;
                 }
             }
 
