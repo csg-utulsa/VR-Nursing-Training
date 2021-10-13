@@ -8120,6 +8120,7 @@ MonoBehaviour:
   camera3D: {fileID: 0}
   handLocation: {fileID: 0}
   transitionSpeed: 0.25
+  smoothPickup: 1
   raycastMask:
     serializedVersion: 2
     m_Bits: 0
