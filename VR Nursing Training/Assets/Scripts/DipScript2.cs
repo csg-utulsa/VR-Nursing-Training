@@ -7,6 +7,8 @@ public class DipScript2 : InteractableBase
 {
     public Material material;
     public UnityEvent handWash;
+    public ParticleSystem BubbleAnimation;
+
     private void OnTriggerEnter(Collider other)
     {
         Interact(other);
@@ -21,6 +23,7 @@ public class DipScript2 : InteractableBase
         {
             Debug.Log("Washing Hands...");
             handWash.Invoke();
+            BubbleAnimation.Play();
         }
         else if (other.gameObject.GetComponent<InteractableScript>().isInteractable)
         {

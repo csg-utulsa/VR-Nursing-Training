@@ -4,21 +4,30 @@ using UnityEngine;
 using UnityEngine.Events;
 public class InteractableScript : InteractableBase
 {
-    public bool isInteractable;
-    public Vector3 initialPosition;
-    public Vector3 initialAngles;
-    public GameObject[] targets;
-    public Material material;
-    public LayerMask layer;
-    public Material combineMaterial;
-    public float combineDist;
-    private GameObject respawnPoint;
-    private GameObject touchedObject;
-    private static int step;
     public UnityEvent onCombine;
-    public string type;
     public UnityEvent interactEvent;
 
+    public Vector3 initialPosition;
+    public Vector3 initialAngles;
+
+    public Material material;
+    public Material combineMaterial;
+
+    public LayerMask layer;
+
+    public GameObject[] targets;
+    private GameObject respawnPoint;
+    private GameObject touchedObject;
+
+    private static int step;
+    public float combineDist;
+    public bool isInteractable;
+    public string type;
+
+
+    public bool focusOnPickup = false;
+    public double distanceFromCamera = 0.5;
+    public Vector3 focusAngles = new Vector3(0,0,0);
 
     private void Start()
     {
@@ -30,7 +39,7 @@ public class InteractableScript : InteractableBase
         if (gameObject.transform.parent != null)
         {
             respawnPoint.transform.parent = gameObject.transform.parent.transform;
-        } 
+        }
         initialPosition = gameObject.transform.position;
 
         initialAngles = gameObject.transform.eulerAngles;
@@ -86,6 +95,18 @@ public class InteractableScript : InteractableBase
         return(GetComponent<Renderer>().material);
     }
 
+    public bool getFocusOnPickup(){
+        return focusOnPickup;
+    }
+
+    public Vector3 getFocusAngles(){
+        return focusAngles;
+    }
+
+    public double getFocusDistance(){
+        return distanceFromCamera;
+    }
+
     private void FixedUpdate()
     {
         if (targets.Length > 0 && step < targets.Length && targets[step] != null)
@@ -124,7 +145,7 @@ public class InteractableScript : InteractableBase
     public override void Interact(Collider other)
     {
         Debug.Log("Interact!");
-        CombineObject(other.gameObject);
+        //CombineObject(other.gameObject);
         ////interactEvent.Invoke();
     }
 
@@ -140,6 +161,11 @@ public class InteractableScript : InteractableBase
         gameObject.transform.eulerAngles = initialAngles;
 
         gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+    }
+
+    public void PlaceDown(){ // Places the object on a nearby surface
+    //TODO: Currently just goes back home.
+        Reset();
     }
 
 }
