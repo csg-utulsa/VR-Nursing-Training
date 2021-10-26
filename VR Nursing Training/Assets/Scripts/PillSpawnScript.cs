@@ -11,6 +11,10 @@ public class PillSpawnScript : InteractableBase
     private GameObject pill3;
     public UnityEvent<string> onSpawn;
 
+    public GameObject patchNitro;
+    private GameObject patch;
+    private string patchType;
+
 
     public override bool canInteractWithHand(){
         return false;
@@ -33,6 +37,15 @@ public class PillSpawnScript : InteractableBase
             pill2.GetComponent<InteractableScript>().setType(other.gameObject.GetComponent<InteractableScript>().getType());
             pill3.GetComponent<InteractableScript>().setType(other.gameObject.GetComponent<InteractableScript>().getType());
             onSpawn.Invoke(other.gameObject.GetComponent<InteractableScript>().getType());
+        }
+        if (other.CompareTag("PatchContainer"))
+        {
+            patchType = other.gameObject.GetComponent<InteractableScript>().getType();
+            if (patchType == "NITROGLYCERIN")
+            {
+                patch = Instantiate(patchNitro, transform.position + new Vector3(0, 1, 0), transform.rotation);
+                onSpawn.Invoke(patchType);
+            }
         }
     }
 }

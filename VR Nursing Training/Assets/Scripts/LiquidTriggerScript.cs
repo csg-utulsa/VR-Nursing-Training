@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class LiquidTriggerScript : MonoBehaviour
+public class LiquidTriggerScript : InteractableBase
 {
     public string[] requiredType;
     public GameObject measureCanvas;
     public UnityEvent<string> onPour;
-
+    public GameObject liquidFull;
+    public GameObject liquidEmpty;
     public GameObject parentLiquid;
 
     private bool correctType;
@@ -16,6 +17,12 @@ public class LiquidTriggerScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Interact(other);
+    }
+
+    public override void Interact(Collider other)
+    {
+        Debug.Log("Interacting...");
         if (other.CompareTag("LiquidContainer"))
         {
             liquidType = other.gameObject.GetComponent<InteractableScript>().getType();
@@ -29,9 +36,13 @@ public class LiquidTriggerScript : MonoBehaviour
             }
             if (requiredType.Length == 0 || correctType)
             {
+                
+                Debug.Log("Liquid Doing Thing");
+                liquidEmpty.SetActive(false);
+                liquidFull.SetActive(true);
                 onPour.Invoke(liquidType);
                 measureCanvas.SetActive(true);
-                parentLiquid.gameObject.GetComponent<InteractableScript>().setType(liquidType);
+                parentLiquid.GetComponent<InteractableScript>().setType(liquidType);
             }
         }
     }

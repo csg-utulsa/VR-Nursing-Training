@@ -141,8 +141,6 @@ public class characterMovement3D : MonoBehaviour
                 }
                 
 
-               
-
 
                 if ( hit.collider.gameObject.GetComponent<InteractableBase>() != null)
                 {
@@ -164,7 +162,7 @@ public class characterMovement3D : MonoBehaviour
                         //    {
                         //        //...!?
                         //    }
-                        else if(otherGameObject.GetComponent<InteractableBase>() != null && otherGameObject.GetComponent<InteractableBase>().canInteractWithHand())
+                        else if(otherGameObject.GetComponent<InteractableBase>().canInteractWithHand())
                         {
 
                             otherGameObject.GetComponent<InteractableBase>().Interact(handLocation.GetComponent<Collider>());

@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ResetScript : MonoBehaviour
+public class ResetScript : InteractableBase
 {
 
 
     private void OnTriggerEnter(Collider other)
+    {
+        Interact(other);
+    }
+
+    public override void Interact(Collider other)
     {
         if (other.gameObject.CompareTag("Hands"))
         {

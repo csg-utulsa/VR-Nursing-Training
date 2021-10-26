@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PatchSpawnScript : MonoBehaviour
+public class PatchSpawnScript : InteractableBase
 {
     public GameObject patchNitro;
 
@@ -13,6 +13,10 @@ public class PatchSpawnScript : MonoBehaviour
     public UnityEvent<string> onSpawn;
 
     private void OnTriggerEnter(Collider other)
+    {
+        Interact(other);
+    }
+    public override void Interact(Collider other)
     {
         if (other.CompareTag("PatchContainer"))
         {
