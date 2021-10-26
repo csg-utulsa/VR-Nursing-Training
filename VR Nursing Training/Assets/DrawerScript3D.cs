@@ -15,6 +15,9 @@ public class DrawerScript3D : InteractableBase
     public override void Interact(Collider other)
     {
         Debug.Log("Interacting...");
+        gameObject.transform.parent.GetComponent<Rigidbody>().AddForce(new Vector3(0, -2, 0));
+        
+        /**
         if(!drawerOpen)
         {
             drawerOpenAnim.SetBool("drawerOpen", true);
@@ -25,6 +28,7 @@ public class DrawerScript3D : InteractableBase
             drawerOpenAnim.SetBool("drawerOpen", false);
             drawerOpen = false;
         }
+        **/
     }
 
 
