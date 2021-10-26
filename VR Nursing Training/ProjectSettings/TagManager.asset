@@ -15,6 +15,7 @@ TagManager:
   - Liquid
   - LiquidContainer
   - Handle
+  - PillCutter
   layers:
   - Default
   - TransparentFX
