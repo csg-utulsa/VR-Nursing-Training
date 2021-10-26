@@ -14,6 +14,7 @@ TagManager:
   - PatchContainer
   - Liquid
   - LiquidContainer
+  - Handle
   layers:
   - Default
   - TransparentFX

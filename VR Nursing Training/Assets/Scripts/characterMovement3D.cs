@@ -72,6 +72,7 @@ public class characterMovement3D : MonoBehaviour
     void handleGrabAnim(){
         // Smoothly moves grabbed objects into one's hand
         if(handLocation.transform.childCount != 0){
+            handLocation.transform.GetChild(0).gameObject.GetComponent<Collider>().isTrigger = true; ///
             if(grabComplete == false){
 
                 GameObject gobj = handLocation.transform.GetChild(0).gameObject;
@@ -126,7 +127,23 @@ public class characterMovement3D : MonoBehaviour
         if(isInteract){
             Debug.Log("hit "+hits.Length+" objects");
             for(int i = 0; i < hits.Length; i++){
-                hit = hits[i];
+                
+                if (Physics.Raycast(camera3D.transform.position, camera3D.transform.forward, out hit, 2) == true && hit.collider.gameObject.layer == 7 && hit.collider.gameObject.CompareTag("Handle") == false)
+                {
+                    Debug.Log("break on obj " + hit.collider.gameObject.name);
+                    break;
+                }
+
+                if(hit.collider.gameObject.GetComponent<InteractableBase>() == null || hit.collider.gameObject.CompareTag("PillCutter"))
+                {
+                    hit = hits[i];
+
+                }
+                
+
+               
+
+
                 if ( hit.collider.gameObject.GetComponent<InteractableBase>() != null)
                 {
                     GameObject otherGameObject = hit.collider.gameObject;
@@ -177,7 +194,9 @@ public class characterMovement3D : MonoBehaviour
         letgo = isLettingGo;
 
         if(isLettingGo){
+
             if(handLocation.transform.childCount != 0){
+                handLocation.transform.GetChild(0).gameObject.GetComponent<Collider>().isTrigger = false;
                 Debug.Log("Releasing object");
                 GameObject gobj = handLocation.transform.GetChild(0).gameObject;
                 handLocation.transform.DetachChildren();
