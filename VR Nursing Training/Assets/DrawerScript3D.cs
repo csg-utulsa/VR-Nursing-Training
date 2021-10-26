@@ -15,20 +15,18 @@ public class DrawerScript3D : InteractableBase
     public override void Interact(Collider other)
     {
         Debug.Log("Interacting...");
-        gameObject.transform.parent.GetComponent<Rigidbody>().AddForce(new Vector3(0, -2, 0));
         
-        /**
-        if(!drawerOpen)
+
+        if (!drawerOpen)
         {
-            drawerOpenAnim.SetBool("drawerOpen", true);
+            gameObject.transform.parent.GetComponent<Rigidbody>().AddForce(new Vector3(2, 0, 0), ForceMode.Impulse);
             drawerOpen = true;
         }
         else
         {
-            drawerOpenAnim.SetBool("drawerOpen", false);
+            gameObject.transform.parent.GetComponent<Rigidbody>().AddForce(new Vector3(-2, 0, 0), ForceMode.Impulse);
             drawerOpen = false;
         }
-        **/
     }
 
 
