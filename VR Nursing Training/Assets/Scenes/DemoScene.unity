@@ -1456,6 +1456,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6152370495266729958, guid: cab9d462c08238144a02f59b02ddb1c5,
         type: 3}
+      propertyPath: parentScenario
+      value: 
+      objectReference: {fileID: 1237110801}
+    - target: {fileID: 6152370495266729958, guid: cab9d462c08238144a02f59b02ddb1c5,
+        type: 3}
       propertyPath: patientHistory
       value: "30 y/o female, Caucasian, college professor.  History of asthma since
         age 13, DVT right leg 1 year ago.  Presented yesterday to the ER with complaints
@@ -8112,6 +8117,11 @@ PrefabInstance:
       propertyPath: dateOfBirth
       value: 1-1-1990
       objectReference: {fileID: 0}
+    - target: {fileID: 6152370495266729958, guid: cab9d462c08238144a02f59b02ddb1c5,
+        type: 3}
+      propertyPath: parentScenario
+      value: 
+      objectReference: {fileID: 1292715790}
     - target: {fileID: 6152370495266729958, guid: cab9d462c08238144a02f59b02ddb1c5,
         type: 3}
       propertyPath: patientHistory
@@ -17629,6 +17639,7 @@ MonoBehaviour:
   nodes:
   - {fileID: 30480715}
   - {fileID: 1337505349}
+  medicineCategory: PATCH
   medicineType: NITROGLYCERIN
   targetDosage: 1
 --- !u!1001 &1270498966
@@ -18281,6 +18292,7 @@ MonoBehaviour:
   nodes:
   - {fileID: 1593261450}
   - {fileID: 1337505349}
+  medicineCategory: ORAL
   medicineType: IBUPROFEN
   targetDosage: 1.5
 --- !u!1001 &1296159349
@@ -22557,6 +22569,7 @@ MonoBehaviour:
   nodes:
   - {fileID: 1194208857}
   - {fileID: 1337505349}
+  medicineCategory: LIQUID
   medicineType: DIGOXIN
   targetDosage: 5
 --- !u!1 &1534622522
@@ -27110,6 +27123,11 @@ PrefabInstance:
       propertyPath: dateOfBirth
       value: 1-1-1990
       objectReference: {fileID: 0}
+    - target: {fileID: 6152370495266729958, guid: cab9d462c08238144a02f59b02ddb1c5,
+        type: 3}
+      propertyPath: parentScenario
+      value: 
+      objectReference: {fileID: 1525633963}
     - target: {fileID: 6152370495266729958, guid: cab9d462c08238144a02f59b02ddb1c5,
         type: 3}
       propertyPath: patientHistory
