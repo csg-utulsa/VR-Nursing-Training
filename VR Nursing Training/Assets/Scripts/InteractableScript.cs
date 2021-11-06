@@ -168,4 +168,10 @@ public class InteractableScript : InteractableBase
         Reset();
     }
 
+    public void PlaceHere(Vector3 pos){
+        //Places the object at this position.
+        gameObject.transform.position = pos+new Vector3(0,0.1f,0);
+        gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+    }
+
 }

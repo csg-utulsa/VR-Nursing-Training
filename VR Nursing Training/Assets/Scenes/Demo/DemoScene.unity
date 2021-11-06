@@ -15216,6 +15216,8 @@ MonoBehaviour:
   interactMask:
     serializedVersion: 2
     m_Bits: 0
+  placementTokenPrefab: {fileID: 8483261188390356206, guid: 1963debd288d5bb48b512dc141d25c55,
+    type: 3}
 --- !u!1 &1484903579
 GameObject:
   m_ObjectHideFlags: 0

@@ -30,6 +30,14 @@ public class characterMovement3D : MonoBehaviour
     bool grabComplete = false;
 
 
+    //object placement things
+    private bool placeStarted = false;
+    private bool placeOK = false;
+    private Vector3 placePos;
+
+    public GameObject placementTokenPrefab;
+    private GameObject placementToken;
+
 
     private void Awake()
     {
@@ -180,17 +188,106 @@ public class characterMovement3D : MonoBehaviour
         }
     }
 
+
+    void initPlace(){
+        if(placeStarted==false){
+            placeStarted=true;
+            placeOK=false;
+            placePos = new Vector3(0,-100,0);
+            placementToken = (GameObject) Instantiate(placementTokenPrefab, new Vector3(0,-100,0),Quaternion.identity);
+        }
+    }
+    void finishPlace(){
+        if(placeStarted==true){
+            placeStarted=false;
+            grabComplete = false;
+            placeOK=false;
+            Destroy(placementToken);
+            placementToken = null;
+        }
+    }
+
+    void checkPlace(){
+        //One-stop function that you call while searching for a place to place the held object.
+        initPlace(); //initialize place if we haven't yet
+        //Do a raycast then search to see if the normal of the hit surface is UP.
+        //if it is, update the placement vector and make it OK.
+
+        //Initiate raycast from eye
+        RaycastHit hit;
+        int layerMask = ~0; //this means hit ALL layers
+        if(Physics.Raycast(camera3D.transform.position, camera3D.transform.forward, out hit, 2, layerMask, QueryTriggerInteraction.Ignore) == true //Raycast good
+            && hit.collider.gameObject.layer == 0 //Hit layer 0 (Default layer)
+            && hit.normal == new Vector3(0,1,0) //Normal points upward
+        ){ //raycast success
+            //Move our target puck there for a moment
+            /*
+            placementToken.transform.position = hit.point;
+            if(placementToken.GetComponent<TriggerTally>().collidersCount() == 0){
+                placePos = hit.point;
+                placeOK = true;
+            }
+            else{
+                placementToken.transform.position=placePos;
+            }
+            */
+
+            placementToken.transform.position = hit.point;
+            if(placementToken.GetComponent<Place_ScanSurface>().placeOK()){
+                placePos = hit.point;
+                placeOK = true;
+            }
+            else{
+                placementToken.transform.position=placePos;
+            }
+
+            //check the bounding box of the token, if empty, then set the OK position there.
+            //else, return the token to the last OK position.
+        }
+
+
+    }
+
+    void attemptPlace(){
+        if(handLocation.transform.childCount != 0){
+            GameObject gobj = handLocation.transform.GetChild(0).gameObject;
+            gobj.GetComponent<Collider>().isTrigger = false;
+            Debug.Log("Releasing object");
+
+            handLocation.transform.DetachChildren();
+            gobj.GetComponent<Rigidbody>().useGravity = true;
+            gobj.GetComponent<Rigidbody>().isKinematic = false;
+            //gobj.GetComponent<InteractableScript>().PlaceDown();
+            gobj.GetComponent<InteractableScript>().PlaceHere(placementToken.transform.position);
+        }
+
+        finishPlace();
+    }
+
+
+
+
+
+
+
+
     void handleLetgo()
     {
+        if(isLettingGo){
+            if(handLocation.transform.childCount != 0){
+                checkPlace();
+            }
+        }
 
         if(isLettingGo == true && letgo == true){
             return;
         }
         if(isLettingGo == false && letgo == true){ //reset state
+            attemptPlace();
             letgo = false;
         }
         letgo = isLettingGo;
-
+        /*
         if(isLettingGo){
 
             if(handLocation.transform.childCount != 0){
@@ -204,6 +301,7 @@ public class characterMovement3D : MonoBehaviour
                 grabComplete = false;
             }
         }
+        */
     }
 
     void handleMovement()
