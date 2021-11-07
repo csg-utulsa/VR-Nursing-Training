@@ -13,6 +13,7 @@ public class LiquidTriggerScript : InteractableBase
     public GameObject parentLiquid;
 
     private bool correctType;
+    private bool complete = false;
     private string liquidType;
 
     private void OnTriggerEnter(Collider other)
@@ -23,7 +24,7 @@ public class LiquidTriggerScript : InteractableBase
     public override void Interact(Collider other)
     {
         Debug.Log("Interacting...");
-        if (other.CompareTag("LiquidContainer"))
+        if (other.CompareTag("LiquidContainer") && !complete)
         {
             liquidType = other.gameObject.GetComponent<InteractableScript>().getType();
             correctType = false;
@@ -42,8 +43,13 @@ public class LiquidTriggerScript : InteractableBase
                 liquidFull.SetActive(true);
                 onPour.Invoke(liquidType);
                 measureCanvas.SetActive(true);
+                measureCanvas.GetComponent<LiquidQuestionScript>().setCup(this);
                 parentLiquid.GetComponent<InteractableScript>().setType(liquidType);
             }
         }
+    }
+    public void setComplete(bool comp)
+    {
+        complete = comp;
     }
 }
