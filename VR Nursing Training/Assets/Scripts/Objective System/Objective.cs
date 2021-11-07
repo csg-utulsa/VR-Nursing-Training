@@ -5,39 +5,61 @@ using UnityEngine;
 public class Objective : MonoBehaviour
 {
 
-    public string description = "";
-    public string reportSuccess = "";
-    public string reportSkip = "";
-    public string reportFail = "";
-    public int weight = 0;
+    [SerializeField] private string description = "";
+    [SerializeField] private string reportSuccess = "";
+    [SerializeField] private string reportSkip = "";
+    [SerializeField] private string reportFail = "";
 
-    public int strikeCount = 0;
+    [SerializeField] private int strikeCount = 0;
     private int strikes = 0;
-    public bool failed = false;
+    [HideInInspector] public bool failed = false;
 
-    public bool active = false;
-    public bool skipped = false;
-    public bool complete = false;
+    [HideInInspector] public bool active = false;
+    [HideInInspector] public bool skipped = false;
+    [HideInInspector] public bool complete = false;
 
     public bool canSkip = false;
-    public bool canContinue;
+    [HideInInspector] public bool canContinue;
 
     private Node parentNode = null;
     private ScenarioStart scenarioParent = null;
+
+    public ActionBase[] successActions;
+    public ActionBase[] failActions;
 
     // Start is called before the first frame update
     void Start()
     {
         canContinue = canSkip;
+
+        // Set the parent objective of success/fail actions
+        foreach (ActionBase current in successActions)
+        {
+            current.setObjective(this, false);
+        }
+        foreach (ActionBase current in failActions)
+        {
+            current.setObjective(this, true);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Set the scenario parent for reporting purposes
+        // Set the scenario parent for reporting purposes and set the medicine type and dosage for each success/fail action
         if (parentNode != null)
         {
             scenarioParent = parentNode.getScenarioParent();
+            foreach (ActionBase current in successActions)
+            {
+                current.setMedicine(scenarioParent.getMedicine());
+                current.setDosage(scenarioParent.getDosage());
+            }
+            foreach (ActionBase current in failActions)
+            {
+                current.setMedicine(scenarioParent.getMedicine());
+                current.setDosage(scenarioParent.getDosage());
+            }
         }
     }
 
@@ -87,10 +109,6 @@ public class Objective : MonoBehaviour
             if (strikes >= strikeCount && strikeCount != 0)
             {
                 scenarioParent.addReport(reportFail);
-                /*if (failed = false)
-                {
-                    scenarioParent.addReport(reportFail);
-                }*/
                 failed = true;
             }
         }
@@ -104,5 +122,10 @@ public class Objective : MonoBehaviour
     public int getStrikes()
     {
         return strikes;
+    }
+
+    public string getDescription()
+    {
+        return description;
     }
 }

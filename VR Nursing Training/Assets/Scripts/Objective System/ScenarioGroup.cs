@@ -4,5 +4,31 @@ using UnityEngine;
 
 public class ScenarioGroup : MonoBehaviour
 {
-    public Node[] nodes;
+    [SerializeField] private Node[] nodes;
+    [SerializeField] private string medicineCategory;
+    [SerializeField] private string medicineType;
+    [SerializeField] private double targetDosage;
+
+    // Returns all the nodes in the group
+    public Node[] getNodes()
+    {
+        return nodes;
+    }
+
+    public string getCategory()
+    {
+        return medicineCategory;
+    }
+
+    // Returns the medicine type
+    public string getMedicine()
+    {
+        return medicineType;
+    }
+
+    // Returns the dosage
+    public double getDosage()
+    {
+        return targetDosage;
+    }
 }

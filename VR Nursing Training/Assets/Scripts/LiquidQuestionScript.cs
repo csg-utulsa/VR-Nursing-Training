@@ -5,15 +5,17 @@ using UnityEngine.Events;
 
 public class LiquidQuestionScript : MonoBehaviour
 {
-    public GameObject[] Answers;
-    public int[] dosageOptions;
+    [SerializeField] private GameObject[] Answers;
+    [SerializeField] private int[] dosageOptions;
 
-    public GameObject correctAnswer;
+    [SerializeField] private GameObject correctAnswer;
 
-    public LiquidObjectScript liquidObject;
+    [SerializeField] private LiquidObjectScript liquidObject;
 
     public UnityEvent onCorrect;
     public UnityEvent onIncorrect;
+
+    private LiquidTriggerScript currentCup;
 
     public void answerSelected(GameObject selected)
     {
@@ -21,6 +23,7 @@ public class LiquidQuestionScript : MonoBehaviour
         {
             Debug.Log("Correct Answer!");
             onCorrect.Invoke();
+            currentCup.setComplete(true);
         }
         else
         {
@@ -39,5 +42,8 @@ public class LiquidQuestionScript : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-
+    public void setCup(LiquidTriggerScript cup)
+    {
+        currentCup = cup;
+    }
 }

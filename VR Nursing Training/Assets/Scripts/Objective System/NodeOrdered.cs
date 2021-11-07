@@ -24,7 +24,7 @@ public class NodeOrdered : Node
                     {
                         currentObjective += 1;
                     }
-                    Debug.Log(objectives[i].description); // DEBUG ONLY
+                    Debug.Log(objectives[i].getDescription()); // DEBUG ONLY
                 }
                 if (!objectives[i].canSkip)
                 {
@@ -122,7 +122,7 @@ public class NodeOrdered : Node
                 {
                     currentObjective += 1;
                 }
-                Debug.Log(objectives[i].description); // DEBUG ONLY
+                Debug.Log(objectives[i].getDescription()); // DEBUG ONLY
             }
         }
     }
@@ -162,7 +162,7 @@ public class NodeOrdered : Node
                 {
                     currentObjective += 1;
                 }
-                Debug.Log(objectives[i].description); // DEBUG ONLY
+                Debug.Log(objectives[i].getDescription()); // DEBUG ONLY
             }
         }
     }

@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class ActionCheckMedicine : ActionBase
 {
-    public string[] targetTypes;
     public bool notTarget = false; // If set to true, will activate if the pill's type is NOT in the targetType list
     public bool onCollision = false; // If set to true, will check any medicine it collides with
-
-    private bool inList = false;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -20,14 +17,7 @@ public class ActionCheckMedicine : ActionBase
 
     public void CheckMedicine(string checkType)
     {
-        for (int i = 0; i < targetTypes.Length; i++)
-        {
-            if (targetTypes[i] == checkType)
-            {
-                inList = true;
-            }
-        }
-        if ((inList && !notTarget) || (!inList && notTarget))
+        if ((!notTarget && checkType == medicineType) || (notTarget && checkType != medicineType))
         {
             performAction();
         }

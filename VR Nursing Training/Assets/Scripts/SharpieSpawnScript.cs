@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SharpieSpawnScript : MonoBehaviour
 {
-    public GameObject sharpie;
+    [SerializeField] private GameObject sharpie;
 
     private void OnTriggerEnter(Collider other)
     {

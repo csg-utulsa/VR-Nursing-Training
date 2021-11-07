@@ -4,30 +4,35 @@ using UnityEngine;
 
 public class ScenarioStart : MonoBehaviour
 {
-    public ScenarioGroup[] possibleStarts;
-    public GameObject[] clipboards;
-    public GameObject[] dosageIndicators;
+    [SerializeField] private ScenarioGroup[] possibleStarts;
+    [SerializeField] private GameObject[] clipboards;
 
-    private int startIndex;
+    [SerializeField] private bool randomStart = true;
+    [SerializeField] private int startIndex = 0;
+
+    private string medicineType;
+    private double targetDosage;
+
     private string report;
     private List<Node> nodesList = new List<Node>();
 
     // Start is called before the first frame update
     void Start()
     {
-        startIndex = Random.Range(0, possibleStarts.Length);
-        for (int i = 0; i < possibleStarts[startIndex].nodes.Length; i++)
+        if (randomStart)
         {
-            possibleStarts[startIndex].nodes[i].setScenarioParent(this);
-            possibleStarts[startIndex].nodes[i].activateNode();
+            startIndex = Random.Range(0, possibleStarts.Length);
         }
+        for (int i = 0; i < possibleStarts[startIndex].getNodes().Length; i++)
+        {
+            possibleStarts[startIndex].getNodes()[i].setScenarioParent(this);
+            possibleStarts[startIndex].getNodes()[i].activateNode();
+        }
+        medicineType = possibleStarts[startIndex].getMedicine();
+        targetDosage = possibleStarts[startIndex].getDosage();
         clipboards[startIndex].SetActive(true);
-        if (startIndex < dosageIndicators.Length)
-        {
-            dosageIndicators[startIndex].SetActive(true);
-        }
     }
-
+    
     // Adds to the report
     public void addReport(string newReport)
     {
@@ -40,16 +45,29 @@ public class ScenarioStart : MonoBehaviour
         return report;
     }
 
+    // Adds a node to the parent list
     public void addNode(Node newNode)
     {
         nodesList.Add(newNode);
     }
 
+    // Deactivates all nodes in the parent list
     public void stopNodes()
     {
         foreach(Node current in nodesList)
         {
             current.deactivateNode();
         }
+    }
+    // Returns the correct medicine type
+    public string getMedicine()
+    {
+        return medicineType;
+    }
+
+    // Returns the correct dosage
+    public double getDosage()
+    {
+        return targetDosage;
     }
 }
