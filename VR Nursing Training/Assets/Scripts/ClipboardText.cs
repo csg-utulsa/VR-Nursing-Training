@@ -18,7 +18,7 @@ public class ClipboardText : MonoBehaviour
     [SerializeField] private string currentVitalSigns;
     [SerializeField] private string doctorName;
     [SerializeField] private string dateTime;
-    [SerializeField] private ScenarioGroup parentScenario;
+    [SerializeField] private string[] orders;
 
     void Awake()
     {
@@ -34,22 +34,11 @@ public class ClipboardText : MonoBehaviour
                     doctorName + "\n\n" +
                     "ORDER SHEET" + "\n" +
                     "Date/Time: " + dateTime + "\n" +
-                    "Orders:" + "\n" +
-                    "Use " + parentScenario.getCategory() + " Medication\n" +
-                    parentScenario.getMedicine();
-        if (parentScenario.getCategory() == "ORAL")
+                    "Orders:" + "\n";
+        for (int i = 0; i < orders.Length; i++)
         {
-            text.text += ", " + parentScenario.getDosage() + " Pills\n";
+            text.text += "-" + orders[i] + "\n";
         }
-        if (parentScenario.getCategory() == "PATCH")
-        {
-            text.text += "\n";
-        }
-        if (parentScenario.getCategory() == "LIQUID")
-        {
-            text.text += ", " + parentScenario.getDosage() + "mL\n";
-        }
-
         text.text += doctorName;
     }
 }
