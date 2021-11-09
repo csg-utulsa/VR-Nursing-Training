@@ -3624,6 +3624,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 278191225}
+  - component: {fileID: 278191226}
   m_Layer: 0
   m_Name: Pill
   m_TagString: Untagged
@@ -3648,6 +3649,25 @@ Transform:
   m_Father: {fileID: 1292715789}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &278191226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278191224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1baf47257b0a02f4d9691ccc64363410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousList: []
+  active: 0
+  complete: 0
+  saturated: 0
+  canContinue: 0
+  canSkip: 0
+  objectives: []
 --- !u!1 &283954931
 GameObject:
   m_ObjectHideFlags: 0
@@ -4213,6 +4233,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 351718955}
+  - component: {fileID: 351718956}
   m_Layer: 0
   m_Name: Liquid
   m_TagString: Untagged
@@ -4237,6 +4258,29 @@ Transform:
   m_Father: {fileID: 1525633962}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &351718956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351718954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1baf47257b0a02f4d9691ccc64363410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousList:
+  - {fileID: 1194208857}
+  active: 0
+  complete: 0
+  saturated: 0
+  canContinue: 0
+  canSkip: 0
+  objectives:
+  - {fileID: 419921400}
+  - {fileID: 1772120102}
+  - {fileID: 193040268}
 --- !u!1 &354352988
 GameObject:
   m_ObjectHideFlags: 0
@@ -18822,6 +18866,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1700906719}
+  - component: {fileID: 1700906720}
   m_Layer: 0
   m_Name: Patch
   m_TagString: Untagged
@@ -18846,6 +18891,25 @@ Transform:
   m_Father: {fileID: 1237110800}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1700906720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700906718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1baf47257b0a02f4d9691ccc64363410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousList: []
+  active: 0
+  complete: 0
+  saturated: 0
+  canContinue: 0
+  canSkip: 0
+  objectives: []
 --- !u!4 &1703782464 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f134ecd79ce0eeb44a38041e50af3f0f,
