@@ -260,7 +260,7 @@ public class characterMovement3D : MonoBehaviour
             gobj.GetComponent<Rigidbody>().isKinematic = false;
             //gobj.GetComponent<InteractableScript>().PlaceDown();
 
-            if (placeOK)
+            if (placementToken != null && placementToken.GetComponent<Place_ScanSurface>().placeOK())
             {
                 gobj.GetComponent<InteractableScript>().PlaceHere(placementToken.transform.position);
             } else
@@ -272,13 +272,6 @@ public class characterMovement3D : MonoBehaviour
 
         finishPlace();
     }
-
-
-
-
-
-
-
 
     void handleLetgo()
     {
