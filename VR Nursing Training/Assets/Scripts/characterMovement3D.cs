@@ -219,7 +219,10 @@ public class characterMovement3D : MonoBehaviour
         if(Physics.Raycast(camera3D.transform.position, camera3D.transform.forward, out hit, 2, layerMask, QueryTriggerInteraction.Ignore) == true //Raycast good
             && hit.collider.gameObject.layer == 0 //Hit layer 0 (Default layer)
             && hit.normal == new Vector3(0,1,0) //Normal points upward
-        ){ //raycast success
+            && hit.transform.CompareTag("PlaceLocation")
+            
+        )
+        { //raycast success
             //Move our target puck there for a moment
             /*
             placementToken.transform.position = hit.point;
@@ -258,7 +261,16 @@ public class characterMovement3D : MonoBehaviour
             gobj.GetComponent<Rigidbody>().useGravity = true;
             gobj.GetComponent<Rigidbody>().isKinematic = false;
             //gobj.GetComponent<InteractableScript>().PlaceDown();
-            gobj.GetComponent<InteractableScript>().PlaceHere(placementToken.transform.position);
+            if(placementToken.GetComponent<Place_ScanSurface>().placeOK())
+            {
+                Debug.Log("Place Area is OK (Placing Obj...)");
+                gobj.GetComponent<InteractableScript>().PlaceHere(placementToken.transform.position);
+            } else
+            {
+                Debug.Log("Place Area is NOT OK (Doing Nothing...)");
+                gobj.GetComponent<InteractableScript>().PlaceDown(); // Add this back if we want it to be reset to home location when it is dropped
+            }
+           
         }
 
         finishPlace();

@@ -19,6 +19,7 @@ public class Place_ScanSurface : MonoBehaviour
         if(Physics.Raycast(pos, new Vector3(0,-1,0), out hit, heightTarget,layerMask, QueryTriggerInteraction.Ignore) == true //Raycast good
             && hit.collider.gameObject.layer == 0 //Hit layer 0 (Default layer)
             && hit.normal == new Vector3(0,1,0) //Normal points upward
+            
         ){
 
             return true;
