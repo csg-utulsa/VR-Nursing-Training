@@ -24,10 +24,16 @@ public class InteractableScript : InteractableBase
     public bool isInteractable;
     public string type;
 
-
+    public bool interactWithHand = true;
     public bool focusOnPickup = false;
     public double distanceFromCamera = 0.5;
     public Vector3 focusAngles = new Vector3(0,0,0);
+
+
+    public override bool canInteractWithHand()
+    {
+        return interactWithHand;
+    }
 
     private void Start()
     {

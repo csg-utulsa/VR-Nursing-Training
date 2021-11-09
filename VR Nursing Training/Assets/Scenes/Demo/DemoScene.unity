@@ -2269,12 +2269,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6, type: 3}
---- !u!1 &170591468 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7548493107225576127, guid: 0af8f3646a662394eb8f95def6a25298,
-    type: 3}
-  m_PrefabInstance: {fileID: 7548493107148386151}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &180178516
 GameObject:
   m_ObjectHideFlags: 0
@@ -2356,12 +2350,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 180178516}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &181327435 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7548493107998678546, guid: 0af8f3646a662394eb8f95def6a25298,
-    type: 3}
-  m_PrefabInstance: {fileID: 7548493107148386151}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &189718505
 GameObject:
   m_ObjectHideFlags: 0
@@ -3206,7 +3194,7 @@ MonoBehaviour:
         m_MethodName: answerSelected
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 504652178}
+          m_ObjectArgument: {fileID: 241836997}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -4920,12 +4908,6 @@ Transform:
   m_Father: {fileID: 1044165589}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &452115134 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7548493106681900547, guid: 0af8f3646a662394eb8f95def6a25298,
-    type: 3}
-  m_PrefabInstance: {fileID: 7548493107148386151}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &458126750
 GameObject:
   m_ObjectHideFlags: 0
@@ -5613,12 +5595,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09da1f333edc5124fa4f9a73a7c43407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &504652178 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7548493106893125169, guid: 0af8f3646a662394eb8f95def6a25298,
-    type: 3}
-  m_PrefabInstance: {fileID: 7548493107148386151}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &507051574
 GameObject:
   m_ObjectHideFlags: 0
@@ -6156,7 +6132,7 @@ MonoBehaviour:
         m_MethodName: answerSelected
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1176658685}
+          m_ObjectArgument: {fileID: 517177945}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -12433,12 +12409,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1167173987}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1176658685 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7548493106390113414, guid: 0af8f3646a662394eb8f95def6a25298,
-    type: 3}
-  m_PrefabInstance: {fileID: 7548493107148386151}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1180291982
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12956,7 +12926,7 @@ MonoBehaviour:
         m_MethodName: answerSelected
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 452115134}
+          m_ObjectArgument: {fileID: 1216856916}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -13445,7 +13415,7 @@ MonoBehaviour:
         m_MethodName: answerSelected
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2034511981}
+          m_ObjectArgument: {fileID: 1270878813}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -15723,7 +15693,7 @@ MonoBehaviour:
         m_MethodName: answerSelected
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 181327435}
+          m_ObjectArgument: {fileID: 1441729574}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -19089,7 +19059,7 @@ MonoBehaviour:
         m_MethodName: answerSelected
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 170591468}
+          m_ObjectArgument: {fileID: 1750023287}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -22230,12 +22200,6 @@ Transform:
   m_Father: {fileID: 1044165589}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2034511981 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7548493106775190963, guid: 0af8f3646a662394eb8f95def6a25298,
-    type: 3}
-  m_PrefabInstance: {fileID: 7548493107148386151}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2061101437
 PrefabInstance:
   m_ObjectHideFlags: 0
