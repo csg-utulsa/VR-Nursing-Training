@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class LiquidTriggerScript : InteractableBase
 {
     public string[] requiredType;
-    public GameObject measureCanvas;
+    public static GameObject measureCanvas;
     public UnityEvent<string> onPour;
     public GameObject liquidFull;
     public GameObject liquidEmpty;
@@ -45,8 +45,13 @@ public class LiquidTriggerScript : InteractableBase
                 measureCanvas.SetActive(true);
                 measureCanvas.GetComponent<LiquidQuestionScript>().setCup(this);
                 parentLiquid.GetComponent<InteractableScript>().setType(liquidType);
+                Cursor.lockState = CursorLockMode.None;
+                MouseLook3D.flag = false;
+                Destroy(this);
             }
+            
         }
+       
     }
     public void setComplete(bool comp)
     {

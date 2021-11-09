@@ -17,6 +17,7 @@ TagManager:
   - Handle
   - PillCutter
   - PlaceLocation
+  - Ignore
   layers:
   - Default
   - TransparentFX

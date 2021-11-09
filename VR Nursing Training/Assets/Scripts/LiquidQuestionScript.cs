@@ -38,8 +38,9 @@ public class LiquidQuestionScript : MonoBehaviour
                 liquidObject.setDosage(dosageOptions[i]);
             }
         }
-
+        MouseLook3D.flag = true;
         gameObject.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void setCup(LiquidTriggerScript cup)

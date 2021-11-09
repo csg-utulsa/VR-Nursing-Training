@@ -142,7 +142,7 @@ public class characterMovement3D : MonoBehaviour
                     break;
                 }
 
-                if(hit.collider.gameObject.GetComponent<InteractableBase>() == null || hit.collider.gameObject.CompareTag("PillCutter"))
+                if(hit.collider.gameObject.GetComponent<InteractableBase>() == null || hit.collider.gameObject.CompareTag("PillCutter") || hit.collider.gameObject.CompareTag("Ignore"))
                 {
                     hit = hits[i];
 
