@@ -62,15 +62,16 @@ public class characterMovement3D : MonoBehaviour
         handleInteraction();
         handleLetgo();
         handleGrabAnim();
+
     }
 
     void checkHeldObjectValid(){
         if(handLocation.transform.childCount != 0){
             if(handLocation.transform.GetChild(0).gameObject.activeSelf == false){
-
+                Debug.Log("Held Obj is inactive...");
                 //maybe better to call returnHome and unparent.
-                isLettingGo=true;
-
+                letgo = true; // changed from isLettingGo
+                grabComplete = false; //Added so that the grab anim can work
                 //Destroy(handLocation.transform.GetChild(0).gameObject);
                 //Debug.Log("Hand object invalid and destroyed");
             }
@@ -82,7 +83,7 @@ public class characterMovement3D : MonoBehaviour
         if(handLocation.transform.childCount != 0){
             handLocation.transform.GetChild(0).gameObject.GetComponent<Collider>().isTrigger = true; ///
             if(grabComplete == false){
-
+                //Debug.Log("Doing Grab Anim...");
                 GameObject gobj = handLocation.transform.GetChild(0).gameObject;
                 double percent = 0.0f;
                 if(smoothPickup){ //Use a sin function instead of a linear function
@@ -133,7 +134,7 @@ public class characterMovement3D : MonoBehaviour
         RaycastHit[] hits = Physics.RaycastAll(camera3D.transform.position, camera3D.transform.forward, 2);
         //old used in if statement: Physics.Raycast(camera3D.transform.position, camera3D.transform.forward, out hit, 2)
         if(isInteract){
-            Debug.Log("hit "+hits.Length+" objects");
+            // Debug.Log("hit "+hits.Length+" objects");
             for(int i = 0; i < hits.Length; i++){
                 
                 if (Physics.Raycast(camera3D.transform.position, camera3D.transform.forward, out hit, 2) == true && hit.collider.gameObject.layer == 7 && hit.collider.gameObject.CompareTag("Handle") == false)
@@ -163,7 +164,7 @@ public class characterMovement3D : MonoBehaviour
                             //otherGameObject.transform.position = handLocation.transform.position;
                             otherGameObject.GetComponent<Rigidbody>().useGravity = false;
                             otherGameObject.GetComponent<Rigidbody>().isKinematic = true;
-                            Debug.Log("break on obj "+i+", is an interactablescript");
+                            Debug.Log("break on obj index: " + i + " name: " + otherGameObject.name + ", is an interactablescript");
                             break;
                         }
                         //else if (hit.collider.gameObject.GetComponent<PillCutterScript>() != null)
@@ -174,13 +175,13 @@ public class characterMovement3D : MonoBehaviour
                         {
 
                             otherGameObject.GetComponent<InteractableBase>().Interact(handLocation.GetComponent<Collider>());
-                            Debug.Log("break on obj "+i+", is an interactable base and interacted with bare hands on object "+otherGameObject.name);
+                            Debug.Log("break on obj index: " + i + " name: " + otherGameObject.name +", is an interactable base and interacted with bare hands on object "+otherGameObject.name);
                             break;
                         }
                     } else
                     {
                         otherGameObject.GetComponent<InteractableBase>().Interact(handLocation.transform.GetChild(0).GetComponent<Collider>());
-                        Debug.Log("break on obj "+i+", is an interactable base and interacted with held object");
+                        Debug.Log("break on obj index: " + i + " name: "+ otherGameObject.name +", is an interactable base and interacted with held object");
                         break;
                     }
                 }
@@ -251,7 +252,7 @@ public class characterMovement3D : MonoBehaviour
 
     }
 
-    void attemptPlace(){
+    public void attemptPlace(){
         if(handLocation.transform.childCount != 0){
             GameObject gobj = handLocation.transform.GetChild(0).gameObject;
             gobj.GetComponent<Collider>().isTrigger = false;
@@ -261,7 +262,7 @@ public class characterMovement3D : MonoBehaviour
             gobj.GetComponent<Rigidbody>().useGravity = true;
             gobj.GetComponent<Rigidbody>().isKinematic = false;
             //gobj.GetComponent<InteractableScript>().PlaceDown();
-            if(placementToken.GetComponent<Place_ScanSurface>().placeOK())
+            if(placementToken != null && placementToken.GetComponent<Place_ScanSurface>().placeOK())
             {
                 Debug.Log("Place Area is OK (Placing Obj...)");
                 gobj.GetComponent<InteractableScript>().PlaceHere(placementToken.transform.position);

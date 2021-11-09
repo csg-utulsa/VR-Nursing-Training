@@ -208,20 +208,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bd43063534b3924eb5caef959443d75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isInteractable: 0
-  initialPosition: {x: 0, y: 0, z: 0}
-  initialAngles: {x: 0, y: 0, z: 0}
-  targets: []
-  material: {fileID: 0}
-  layer:
-    serializedVersion: 2
-    m_Bits: 0
-  combineMaterial: {fileID: 0}
-  combineDist: 0
   onCombine:
     m_PersistentCalls:
       m_Calls: []
+  interactEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  initialPosition: {x: 0, y: 0, z: 0}
+  initialAngles: {x: 0, y: 0, z: 0}
+  material: {fileID: 0}
+  combineMaterial: {fileID: 0}
+  layer:
+    serializedVersion: 2
+    m_Bits: 0
+  targets: []
+  combineDist: 0
+  isInteractable: 0
   type: NITROGLYCERIN
+  focusOnPickup: 0
+  distanceFromCamera: 0.5
+  focusAngles: {x: 0, y: 0, z: 0}
 --- !u!114 &-5014029394938515869
 MonoBehaviour:
   m_ObjectHideFlags: 0

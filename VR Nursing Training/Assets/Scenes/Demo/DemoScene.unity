@@ -20322,7 +20322,7 @@ PrefabInstance:
     - target: {fileID: 672822875957001631, guid: 5b13dd4a6e1fc5545ac6f8c46e38bbe2,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.10613975
+      value: 0.13328111
       objectReference: {fileID: 0}
     - target: {fileID: 672822875957001631, guid: 5b13dd4a6e1fc5545ac6f8c46e38bbe2,
         type: 3}
@@ -20332,7 +20332,7 @@ PrefabInstance:
     - target: {fileID: 672822875957001631, guid: 5b13dd4a6e1fc5545ac6f8c46e38bbe2,
         type: 3}
       propertyPath: m_Center.y
-      value: 0.08
+      value: 0.06642932
       objectReference: {fileID: 0}
     - target: {fileID: 672822875957001631, guid: 5b13dd4a6e1fc5545ac6f8c46e38bbe2,
         type: 3}
@@ -21726,6 +21726,11 @@ PrefabInstance:
       value: PillCutter
       objectReference: {fileID: 0}
     - target: {fileID: 2128698126, guid: 5966f623927a18148a699630a177a1a9, type: 3}
+      propertyPath: patchNitro
+      value: 
+      objectReference: {fileID: 4816892652931515861, guid: 034b5bc6e25549d4a8f1e761c7819922,
+        type: 3}
+    - target: {fileID: 2128698126, guid: 5966f623927a18148a699630a177a1a9, type: 3}
       propertyPath: onSpawn.m_PersistentCalls.m_Calls.Array.size
       value: 6
       objectReference: {fileID: 0}
@@ -22151,7 +22156,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: PillCutter
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 281374608488387075, guid: 5966f623927a18148a699630a177a1a9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5966f623927a18148a699630a177a1a9, type: 3}
 --- !u!1001 &5794887391559466867
 PrefabInstance:

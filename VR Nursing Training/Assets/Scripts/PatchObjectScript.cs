@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PatchObjectScript : MonoBehaviour
+public class PatchObjectScript : InteractableBase // Removed MonoBehavoir
 {
     public GameObject textObject;
     Text text;
@@ -29,6 +29,20 @@ public class PatchObjectScript : MonoBehaviour
             arrayText = initialText.Split(' ');
             finalText = arrayText[0] + "\n" + arrayText[1];
             text.text = finalText;
+        }
+    }
+
+    public override void Interact(Collider other) //Allows for patch to work with sharpie
+    {
+        Debug.Log("Interacting with Patch");
+        if (other.CompareTag("Sharpie"))
+        {
+            Debug.Log("is Sharpie...");
+            if (other.transform.childCount > 0)
+            {
+                other = other.transform.GetChild(0).GetComponent<Collider>();
+            }
+            other.GetComponent<InteractableBase>().Interact(GetComponent<Collider>());
         }
     }
 }
