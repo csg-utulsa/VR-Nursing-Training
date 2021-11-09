@@ -69,8 +69,8 @@ public class characterMovement3D : MonoBehaviour
             if(handLocation.transform.GetChild(0).gameObject.activeSelf == false){
 
                 //maybe better to call returnHome and unparent.
-                isLettingGo=true;
-
+                letgo = true;
+                grabComplete = false;
                 //Destroy(handLocation.transform.GetChild(0).gameObject);
                 //Debug.Log("Hand object invalid and destroyed");
             }
@@ -216,9 +216,10 @@ public class characterMovement3D : MonoBehaviour
         //Initiate raycast from eye
         RaycastHit hit;
         int layerMask = ~0; //this means hit ALL layers
-        if(Physics.Raycast(camera3D.transform.position, camera3D.transform.forward, out hit, 2, layerMask, QueryTriggerInteraction.Ignore) == true //Raycast good
+        if (Physics.Raycast(camera3D.transform.position, camera3D.transform.forward, out hit, 2, layerMask, QueryTriggerInteraction.Ignore) == true //Raycast good
             && hit.collider.gameObject.layer == 0 //Hit layer 0 (Default layer)
-            && hit.normal == new Vector3(0,1,0) //Normal points upward
+            && hit.normal == new Vector3(0, 1, 0) //Normal points upward
+            && hit.transform.CompareTag("PlaceLocation")
         ){ //raycast success
             //Move our target puck there for a moment
             /*
@@ -258,7 +259,15 @@ public class characterMovement3D : MonoBehaviour
             gobj.GetComponent<Rigidbody>().useGravity = true;
             gobj.GetComponent<Rigidbody>().isKinematic = false;
             //gobj.GetComponent<InteractableScript>().PlaceDown();
-            gobj.GetComponent<InteractableScript>().PlaceHere(placementToken.transform.position);
+
+            if (placeOK)
+            {
+                gobj.GetComponent<InteractableScript>().PlaceHere(placementToken.transform.position);
+            } else
+            {
+                gobj.GetComponent<InteractableScript>().PlaceDown();
+            }
+            
         }
 
         finishPlace();

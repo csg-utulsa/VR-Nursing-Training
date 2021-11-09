@@ -16,6 +16,7 @@ TagManager:
   - LiquidContainer
   - Handle
   - PillCutter
+  - PlaceLocation
   layers:
   - Default
   - TransparentFX
