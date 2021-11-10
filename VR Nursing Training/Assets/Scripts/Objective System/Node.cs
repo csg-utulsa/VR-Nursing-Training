@@ -41,7 +41,7 @@ public class Node : MonoBehaviour
         // Check whether the node should be activated
         if (!active && !complete && !saturated)
         {
-            if (previousList.Length > 0 && scenarioParent != null)
+            if (previousList.Length > 0)
             {
                 setActive = true;
             }
