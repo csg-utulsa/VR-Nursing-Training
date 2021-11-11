@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class ResetScript : InteractableBase
+public class EndTutorial : InteractableBase
 {
+
+    public GameObject playerObject = null;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -15,7 +16,12 @@ public class ResetScript : InteractableBase
     {
         if (other.gameObject.CompareTag("Hands"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Vector3 room1Pos = new Vector3(0.2f, 5f, -1.3f);
+            
+            if (playerObject != null)
+            {
+                playerObject.transform.position = room1Pos;
+            }
         }
     }
 
