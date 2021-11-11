@@ -23,6 +23,7 @@ public class ScenarioStart : MonoBehaviour
         {
             startIndex = Random.Range(0, possibleStarts.Length);
         }
+        possibleStarts[startIndex].gameObject.SetActive(true);
         for (int i = 0; i < possibleStarts[startIndex].getNodes().Length; i++)
         {
             possibleStarts[startIndex].getNodes()[i].setScenarioParent(this);

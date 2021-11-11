@@ -47,7 +47,6 @@ public class LiquidTriggerScript : InteractableBase
                 parentLiquid.GetComponent<InteractableScript>().setType(liquidType);
                 Cursor.lockState = CursorLockMode.None;
                 MouseLook3D.flag = false;
-                Destroy(this);
             }
             
         }
@@ -56,5 +55,6 @@ public class LiquidTriggerScript : InteractableBase
     public void setComplete(bool comp)
     {
         complete = comp;
+        Destroy(this);
     }
 }
