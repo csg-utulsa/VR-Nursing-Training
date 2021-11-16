@@ -47,7 +47,7 @@ public class Objective : MonoBehaviour
     void Update()
     {
         // Set the scenario parent for reporting purposes and set the medicine type and dosage for each success/fail action
-        if (parentNode != null)
+        if (parentNode != null && parentNode.getScenarioParent() != null)
         {
             scenarioParent = parentNode.getScenarioParent();
             foreach (ActionBase current in successActions)
