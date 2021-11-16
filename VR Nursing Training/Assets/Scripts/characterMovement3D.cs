@@ -318,12 +318,14 @@ public class characterMovement3D : MonoBehaviour
         }
         clicked = isClicking;
 
-
-
-        if (isClicking && Physics.Raycast(camera3D.transform.position, camera3D.transform.forward, out hit, 10,raycastMask) && hit.collider.gameObject.CompareTag("Teleport"))
+        if (Physics.Raycast(camera3D.transform.position, camera3D.transform.forward, out hit, 10,raycastMask) && hit.collider.gameObject.CompareTag("Teleport"))
         {
-            Debug.Log("Hit!");
-            transform.position = hit.collider.gameObject.transform.parent.position;
+            hit.collider.gameObject.transform.parent.GetComponent<TeleportIndicatorScript>().indicatorActive(true);
+            if (isClicking)
+            {
+                Debug.Log("Hit!");
+                transform.position = hit.collider.gameObject.transform.parent.position;
+            }
         }
     }
 
