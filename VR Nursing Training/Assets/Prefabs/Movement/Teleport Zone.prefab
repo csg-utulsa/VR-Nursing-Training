@@ -469,7 +469,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6700605892293357319}
         m_TargetAssemblyTypeName: TeleportIndicatorScript, Assembly-CSharp
-        m_MethodName: indicatorActive
+        m_MethodName: indicatorActiveVR
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -484,7 +484,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6700605892293357319}
         m_TargetAssemblyTypeName: TeleportIndicatorScript, Assembly-CSharp
-        m_MethodName: indicatorActive
+        m_MethodName: indicatorActiveVR
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
