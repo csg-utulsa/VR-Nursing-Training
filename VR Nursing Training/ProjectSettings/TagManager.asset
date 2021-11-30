@@ -18,6 +18,7 @@ TagManager:
   - PillCutter
   - PlaceLocation
   - Ignore
+  - MenuPanel
   layers:
   - Default
   - TransparentFX

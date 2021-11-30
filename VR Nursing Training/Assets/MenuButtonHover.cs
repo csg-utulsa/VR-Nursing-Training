@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class MenuButtonHover : MonoBehaviour
 {
+    // DOES NOT WORK
 
-
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Trigger Entered...");
         GetComponent<Material>().color = new Color(192, 192, 192);
