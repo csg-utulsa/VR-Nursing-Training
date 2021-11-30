@@ -10,13 +10,33 @@ public class MenuButtonManager : MonoBehaviour
     public GameObject creditsBoard;
     public GameObject camObjVR;
     public GameObject camObj3D;
+    public Camera cam3D;
     public GameObject rigVR;
+
+
+    
+
+
 
     private void Start()
     {
         rigVR.GetComponent<characterMovement3D>().interactRayCastDistance = 10; // Changes raycast distance to be able to hit menu
     }
 
+    private void Update()
+    {
+        MenuRayCast();
+    }
+
+    public void MenuRayCast()
+    {
+        RaycastHit hit;
+        hit
+        if (Physics.Raycast(camera3D.transform.position, camera3D.transform.forward, out hit, 2))
+        {
+
+        }
+    }
 
     // These control the button events
     #region menuButtons 
