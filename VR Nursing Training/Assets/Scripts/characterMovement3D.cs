@@ -11,6 +11,7 @@ public class characterMovement3D : MonoBehaviour
 
     public double transitionSpeed =0.25;
     public bool smoothPickup = true;
+    public int interactRayCastDistance = 2;
 
     private Vector3 grabFrom;
     private Vector3 grabFromAngle;
@@ -130,7 +131,7 @@ public class characterMovement3D : MonoBehaviour
         interacted = isInteract;
 
         RaycastHit hit;
-        RaycastHit[] hits = Physics.RaycastAll(camera3D.transform.position, camera3D.transform.forward, 2);
+        RaycastHit[] hits = Physics.RaycastAll(camera3D.transform.position, camera3D.transform.forward, interactRayCastDistance);
         //old used in if statement: Physics.Raycast(camera3D.transform.position, camera3D.transform.forward, out hit, 2)
 
 
@@ -160,7 +161,7 @@ public class characterMovement3D : MonoBehaviour
             Debug.Log("hit "+hits.Length+" objects");
             for(int i = 0; i < hits.Length; i++){
                 
-                if (Physics.Raycast(camera3D.transform.position, camera3D.transform.forward, out hit, 2) == true && hit.collider.gameObject.layer == 7 && hit.collider.gameObject.CompareTag("Handle") == false)
+                if (Physics.Raycast(camera3D.transform.position, camera3D.transform.forward, out hit, interactRayCastDistance) == true && hit.collider.gameObject.layer == 7 && hit.collider.gameObject.CompareTag("Handle") == false)
                 {
                     Debug.Log("break on obj " + hit.collider.gameObject.name);
                     break;
