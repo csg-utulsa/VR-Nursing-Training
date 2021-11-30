@@ -132,6 +132,30 @@ public class characterMovement3D : MonoBehaviour
         RaycastHit hit;
         RaycastHit[] hits = Physics.RaycastAll(camera3D.transform.position, camera3D.transform.forward, 2);
         //old used in if statement: Physics.Raycast(camera3D.transform.position, camera3D.transform.forward, out hit, 2)
+
+
+        //Highlighting done here, runs regardless of if interaction key is pressed
+        for(int i = 0; i < hits.Length; i++){
+            hit = hits[i];
+
+            //Dialog Button highlighting
+            InteractableDialogBtn focusbutton = hit.collider.gameObject.transform.parent.GetComponent<InteractableDialogBtn>();
+            if(focusbutton != null){
+                focusbutton.highlight();
+
+                if(isInteract){
+                    focusbutton.select();
+                }
+
+                //return;
+            }
+        }
+
+
+
+
+
+
         if(isInteract){
             Debug.Log("hit "+hits.Length+" objects");
             for(int i = 0; i < hits.Length; i++){
@@ -318,13 +342,18 @@ public class characterMovement3D : MonoBehaviour
         }
         clicked = isClicking;
 
-        if (Physics.Raycast(camera3D.transform.position, camera3D.transform.forward, out hit, 10,raycastMask) && hit.collider.gameObject.CompareTag("Teleport"))
+
+        if (Physics.Raycast(camera3D.transform.position, camera3D.transform.forward, out hit, 10,raycastMask))
         {
-            hit.collider.gameObject.transform.parent.GetComponent<TeleportIndicatorScript>().indicatorActive(true);
-            if (isClicking)
-            {
-                Debug.Log("Hit!");
-                transform.position = hit.collider.gameObject.transform.parent.position;
+
+            //Teleportation zone highlighting
+            if(hit.collider.gameObject.CompareTag("Teleport")){
+                hit.collider.gameObject.transform.parent.GetComponent<TeleportIndicatorScript>().indicatorActive(true);
+                if (isClicking)
+                {
+                    Debug.Log("Hit!");
+                    transform.position = hit.collider.gameObject.transform.parent.position;
+                }
             }
         }
     }

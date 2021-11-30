@@ -25,11 +25,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3545351720565352701}
-  m_LocalRotation: {x: 0.5000002, y: -0.4999999, z: -0.35355338, w: 0.6123724}
-  m_LocalPosition: {x: -0.17601527, y: -0.1394107, z: -0.5527735}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.75, z: -0}
+  m_LocalScale: {x: 4.7339606, y: 4.7339606, z: 4.7339606}
   m_Children: []
-  m_Father: {fileID: 6996497271226645592}
+  m_Father: {fileID: 6996497270349510031}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!198 &1207989588677570308
@@ -48,7 +48,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
   prewarm: 1
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 0
   useRigidbodyForVelocity: 1
@@ -107,7 +107,7 @@ ParticleSystem:
       m_RotationOrder: 4
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
-  scalingMode: 1
+  scalingMode: 0
   randomSeed: 0
   InitialModule:
     serializedVersion: 3
@@ -222,7 +222,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 0.38467467, g: 0.7735849, b: 0.38314345, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -982,21 +982,30 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0
+          value: 0.652784
           inSlope: 0
-          outSlope: 1
+          outSlope: 0
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 1
+          time: 0.55992895
           value: 1
-          inSlope: 1
-          outSlope: 0
+          inSlope: 0.023325257
+          outSlope: 0.023325257
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.33333334
+          inWeight: 0.35447925
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: -0.25626907
+          outSlope: -0.25626907
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.16625927
           outWeight: 0.33333334
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -1304,7 +1313,7 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
-        key1: {r: 1, g: 1, b: 1, a: 1}
+        key1: {r: 0, g: 0, b: 0, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -4834,7 +4843,7 @@ RectTransform:
   m_LocalScale: {x: 0.013916816, y: 0.013916816, z: 0.013916816}
   m_Children: []
   m_Father: {fileID: 6996497271226645592}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4986,9 +4995,8 @@ GameObject:
   - component: {fileID: 6996497270349510028}
   - component: {fileID: 6996497270349510029}
   - component: {fileID: 6996497270349510030}
-  - component: {fileID: 6996497270349510019}
   m_Layer: 0
-  m_Name: Button1Box
+  m_Name: ButtonBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5004,9 +5012,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: 0.000000014901161, w: 1}
   m_LocalPosition: {x: 0.030338718, y: 0.011691574, z: 0.15910581}
   m_LocalScale: {x: 0.12106492, y: 0.011033054, z: 0.23359373}
-  m_Children: []
+  m_Children:
+  - {fileID: 3568122931335213657}
   m_Father: {fileID: 6996497271226645592}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6996497270349510028
 MeshFilter:
@@ -5035,7 +5044,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 53116955d59100c45a2b9b72354bfa62, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5070,24 +5079,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6996497270349510019
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6996497270349510024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89f1840a079f0404a949748f16791a5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  isInteractable: 0
-  type: 
-  interactWithHand: 1
 --- !u!1 &6996497271226645593
 GameObject:
   m_ObjectHideFlags: 0
@@ -5116,7 +5107,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 3568122931335213657}
   - {fileID: 6996497270349510031}
   - {fileID: 6996497269594555982}
   m_Father: {fileID: 0}
@@ -5140,3 +5130,8 @@ MonoBehaviour:
   isInteractable: 0
   type: 
   interactWithHand: 1
+  buttonName: Sample Text
+  buttonText: {fileID: 6996497269594555981}
+  buttonVolume: {fileID: 6996497270349510024}
+  HighlightAnimation: {fileID: 1207989588677570308}
+  highlighted: 0
