@@ -141,37 +141,21 @@ public class characterMovement3D : MonoBehaviour
             hit = hits[i];
 
             //Dialog Button highlighting
+            //if
 
             //InteractableDialogBtn focusbutton;
-            if(hit.collider.gameObject.transform.parent.GetComponent<InteractableDialogBtn>() != null){
-                hit.collider.gameObject.transform.parent.GetComponent<InteractableDialogBtn>().highlight();
+            if(hit.collider.gameObject.transform.parent != null){
+                if(hit.collider.gameObject.transform.parent.GetComponent<InteractableDialogBtn>() != null){
+                    hit.collider.gameObject.transform.parent.GetComponent<InteractableDialogBtn>().highlight();
 
-                if(isInteract){
-                    hit.collider.gameObject.transform.parent.GetComponent<InteractableDialogBtn>().select();
+                    if(isInteract){
+                        hit.collider.gameObject.transform.parent.GetComponent<InteractableDialogBtn>().select();
+                    }
+
+                    //return;
                 }
-
-                //return;
             }
         }
-
-
-        //Highlighting done here, runs regardless of if interaction key is pressed
-        for(int i = 0; i < hits.Length; i++){
-            hit = hits[i];
-
-            //Dialog Button highlighting
-            InteractableDialogBtn focusbutton = hit.collider.gameObject.transform.parent.GetComponent<InteractableDialogBtn>();
-            if(focusbutton != null){
-                focusbutton.highlight();
-
-                if(isInteract){
-                    focusbutton.select();
-                }
-
-                //return;
-            }
-        }
-
 
 
 
