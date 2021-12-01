@@ -135,6 +135,26 @@ public class characterMovement3D : MonoBehaviour
         //old used in if statement: Physics.Raycast(camera3D.transform.position, camera3D.transform.forward, out hit, 2)
 
 
+
+        //Highlighting done here, runs regardless of if interaction key is pressed
+        for(int i = 0; i < hits.Length; i++){
+            hit = hits[i];
+
+            //Dialog Button highlighting
+
+            //InteractableDialogBtn focusbutton;
+            if(hit.collider.gameObject.transform.parent.GetComponent<InteractableDialogBtn>() != null){
+                hit.collider.gameObject.transform.parent.GetComponent<InteractableDialogBtn>().highlight();
+
+                if(isInteract){
+                    hit.collider.gameObject.transform.parent.GetComponent<InteractableDialogBtn>().select();
+                }
+
+                //return;
+            }
+        }
+
+
         //Highlighting done here, runs regardless of if interaction key is pressed
         for(int i = 0; i < hits.Length; i++){
             hit = hits[i];
