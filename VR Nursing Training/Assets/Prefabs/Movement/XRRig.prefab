@@ -10067,6 +10067,7 @@ MonoBehaviour:
   activationThreshhold: 0.1
   questionCanvas: {fileID: 7548493106692738278}
   canvasCam: {fileID: 7548493106695747056}
+  toggleRayVisible: 0
 --- !u!114 &7548493107880779758
 MonoBehaviour:
   m_ObjectHideFlags: 0

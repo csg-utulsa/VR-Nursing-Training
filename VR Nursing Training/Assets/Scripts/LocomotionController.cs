@@ -13,7 +13,7 @@ public class LocomotionController : MonoBehaviour
     public float activationThreshhold = .1f;
     public Canvas questionCanvas;
     public Camera canvasCam;
-
+    public bool toggleRayVisible;
     // Update is called once per frame
     void Update()
     {
@@ -28,7 +28,11 @@ public class LocomotionController : MonoBehaviour
         
         if (rightTeleportRay)
         {
-            if (count > 0)
+            if (toggleRayVisible)
+            {
+                rightTeleportRay.gameObject.SetActive(true);
+            }
+            else if (count > 0)
             {
                 canvasCam.gameObject.SetActive(true);
                 rightTeleportRay.gameObject.SetActive(true);
