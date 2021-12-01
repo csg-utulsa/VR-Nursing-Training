@@ -39,6 +39,7 @@ public class characterMovement3D : MonoBehaviour
     public GameObject placementTokenPrefab;
     private GameObject placementToken;
 
+    public static bool changeModeToVR;
 
     private void Awake()
     {
@@ -47,6 +48,12 @@ public class characterMovement3D : MonoBehaviour
         input.CharacterControls3D.Click.performed += ctx => isClicking = ctx.ReadValueAsButton();
         input.CharacterControls3D.Interact.performed += ctx => isInteract = ctx.ReadValueAsButton();
         input.CharacterControls3D.Letgo.performed += ctx => isLettingGo = ctx.ReadValueAsButton();
+
+        if (changeModeToVR)
+        {
+            transform.GetChild(1).gameObject.SetActive(false);
+            transform.GetChild(0).gameObject.SetActive(true);
+        }
     }
 
     // Start is called before the first frame update

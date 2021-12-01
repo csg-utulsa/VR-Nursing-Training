@@ -732,8 +732,7 @@ GameObject:
   - component: {fileID: 188260283}
   - component: {fileID: 188260282}
   - component: {fileID: 188260281}
-  - component: {fileID: 188260284}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Panel5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -762,10 +761,10 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 188260279}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &188260282
@@ -817,18 +816,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 188260279}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &188260284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 188260279}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99c65a49d169ab14a813acc5f8641a67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &221966051
 GameObject:
   m_ObjectHideFlags: 0
@@ -4418,8 +4405,7 @@ GameObject:
   - component: {fileID: 1140446409}
   - component: {fileID: 1140446408}
   - component: {fileID: 1140446407}
-  - component: {fileID: 1140446410}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Panel4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4448,10 +4434,10 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1140446405}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1140446408
@@ -4503,18 +4489,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1140446405}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1140446410
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1140446405}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99c65a49d169ab14a813acc5f8641a67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1169422159
 GameObject:
   m_ObjectHideFlags: 0
@@ -4622,8 +4596,7 @@ GameObject:
   - component: {fileID: 1185399291}
   - component: {fileID: 1185399290}
   - component: {fileID: 1185399289}
-  - component: {fileID: 1185399292}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Panel3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4652,10 +4625,10 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1185399287}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1185399290
@@ -4707,18 +4680,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1185399287}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1185399292
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1185399287}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99c65a49d169ab14a813acc5f8641a67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1226877083
 GameObject:
   m_ObjectHideFlags: 0
@@ -4827,8 +4788,7 @@ GameObject:
   - component: {fileID: 1317944231}
   - component: {fileID: 1317944230}
   - component: {fileID: 1317944229}
-  - component: {fileID: 1317944232}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Panel2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4857,10 +4817,10 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1317944227}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1317944230
@@ -4912,18 +4872,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1317944227}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1317944232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1317944227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99c65a49d169ab14a813acc5f8641a67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1325390897
 GameObject:
   m_ObjectHideFlags: 0
@@ -5624,8 +5572,7 @@ GameObject:
   - component: {fileID: 1451322314}
   - component: {fileID: 1451322313}
   - component: {fileID: 1451322312}
-  - component: {fileID: 1451322315}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Panel1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5654,10 +5601,10 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1451322310}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1451322313
@@ -5709,18 +5656,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1451322310}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1451322315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1451322310}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99c65a49d169ab14a813acc5f8641a67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1469953616
 GameObject:
   m_ObjectHideFlags: 0
