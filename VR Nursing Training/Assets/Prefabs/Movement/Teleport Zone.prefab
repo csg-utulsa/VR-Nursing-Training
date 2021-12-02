@@ -556,5 +556,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indicatorZone: {fileID: 3600903187364768654}
+  indicatorMaterial: {fileID: 2100000, guid: 55be4bffe6587c9428a06698a7dee8fa, type: 2}
   indicatorText: {fileID: 7374765911677010040}
   zoneName: Teleport Zone

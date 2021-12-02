@@ -7,6 +7,7 @@ using TMPro;
 public class TeleportIndicatorScript : MonoBehaviour
 {
     [SerializeField] private GameObject indicatorZone;
+    [SerializeField] private Material indicatorMaterial;
     [SerializeField] private GameObject indicatorText;
     [SerializeField] private string zoneName;
     private TextMeshProUGUI text;
@@ -15,10 +16,14 @@ public class TeleportIndicatorScript : MonoBehaviour
     private int cooldown = 0;
     private Vector3 direction;
 
+    private Color matColor = Color.green;
+
     public void Awake()
     {
         text = indicatorText.GetComponent<TextMeshProUGUI>();
         text.text = zoneName;
+        matColor.a = 1;
+        indicatorMaterial.color = matColor;
     }
     public void Update()
     {
