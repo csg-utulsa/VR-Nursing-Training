@@ -152,6 +152,7 @@ public class characterMovement3D : MonoBehaviour
             if (hit.collider.gameObject.GetComponent<HoverableBase>() != null) //1 of 2: Check if object is hoverablebase
             {
                 hit.collider.gameObject.GetComponent<HoverableBase>().CursorHighlight(); //Cursor is over the object OR hand is near the object
+                hit.collider.gameObject.GetComponent<HoverableBase>().LookHighlight(); // LookHighlight is the same as CursorHighlight for 3D
                 //Debug.Log("Calling hoverableBase cursorHighlight in check 1");
             }
             else
@@ -159,9 +160,8 @@ public class characterMovement3D : MonoBehaviour
 
                 if (hit.collider.gameObject.transform.parent != null && hit.collider.gameObject.transform.parent.GetComponent<HoverableBase>() != null)
                 {
-
-
                     hit.collider.gameObject.transform.parent.GetComponent<HoverableBase>().CursorHighlight(); //Cursor is over the object OR hand is near the object
+                    hit.collider.gameObject.transform.parent.GetComponent<HoverableBase>().LookHighlight(); // LookHighlight is the same as CursorHighlight for 3D
                     //Debug.Log("Calling hoverableBase cursorHighlight in check 1");
                 }
             }
