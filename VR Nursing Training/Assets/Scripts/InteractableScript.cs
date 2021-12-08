@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-public class InteractableScript : InteractableBase
+public class InteractableScript : InteractableBase, HoverableBase
 {
     public UnityEvent onCombine;
     public UnityEvent interactEvent;
@@ -28,6 +28,25 @@ public class InteractableScript : InteractableBase
     public bool focusOnPickup = false;
     public double distanceFromCamera = 0.5;
     public Vector3 focusAngles = new Vector3(0,0,0);
+
+
+
+
+    public void CursorHighlight()
+    {
+        //nothing
+
+    }
+
+    public void LookHighlight()
+    {
+        //nothing
+    }
+
+    public void CursorInteract()
+    {
+        //Do nothing, interactableBase interaction function takes over this
+    }
 
 
     public override bool canInteractWithHand()
