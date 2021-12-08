@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
 
-public class InteractableDialogBtn : InteractableBase
+public class InteractableDialogBtn : InteractableBase, HoverableBase
 {
 
     public UnityEvent interactEvent;
@@ -20,6 +20,34 @@ public class InteractableDialogBtn : InteractableBase
     public GameObject buttonVolume;
     public ParticleSystem HighlightAnimation;
     public bool highlighted = false;
+
+
+
+    //HoverableBase things
+
+    public void CursorHighlight()
+    {
+        highlighted = true;
+
+    }
+
+    public void LookHighlight()
+    {
+        //nothing
+    }
+
+    public void CursorInteract()
+    {
+        //Interact something
+        Debug.Log("CursorInteract called inside InteractbaleDialogButton and I don't know what to do");
+    }
+
+
+
+
+
+
+
 
     public override bool canInteractWithHand()
     {
@@ -80,7 +108,7 @@ public class InteractableDialogBtn : InteractableBase
 
     public override void Interact(Collider other)
     {
-        Debug.Log("Interacted w/ InteractableBlehelbelbfel on Obj");
+        Debug.Log("Interacted w/ Floating dialog button");
         //CombineObject(other.gameObject);
         if (interactEvent != null)
         {
