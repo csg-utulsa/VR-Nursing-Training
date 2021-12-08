@@ -213,7 +213,7 @@ public class characterMovement3D : MonoBehaviour
                 if ( hit.collider.gameObject.GetComponent<InteractableBase>() != null)
                 {
                     GameObject otherGameObject = hit.collider.gameObject;
-                    if (handLocation.transform.childCount == 0)
+                    if (handLocation.transform.childCount == 0) //hand is empty
                     {
                         if(hit.collider.gameObject.GetComponent<InteractableScript>() != null){ //Check if the target object is an InteractableScript and NOT a base class
                             grabFrom = otherGameObject.transform.position;
@@ -224,6 +224,19 @@ public class characterMovement3D : MonoBehaviour
                             otherGameObject.GetComponent<Rigidbody>().useGravity = false;
                             otherGameObject.GetComponent<Rigidbody>().isKinematic = true;
                             Debug.Log("break on obj "+i+", is an interactablescript");
+                            break;
+                        }
+                        else if(hit.collider.gameObject.transform.parent != null && hit.collider.gameObject.transform.parent.GetComponent<InteractableScript>() != null)
+                        {
+                            otherGameObject = hit.collider.gameObject.transform.parent.gameObject;
+                            grabFrom = otherGameObject.transform.position;
+                            grabFromAngle = otherGameObject.transform.eulerAngles;
+                            grabTime = Time.time;
+                            otherGameObject.transform.SetParent(handLocation.transform);
+                            //otherGameObject.transform.position = handLocation.transform.position;
+                            otherGameObject.GetComponent<Rigidbody>().useGravity = false;
+                            otherGameObject.GetComponent<Rigidbody>().isKinematic = true;
+                            Debug.Log("break on obj " + i + ", PARENT is an interactablescript, using Parent as target");
                             break;
                         }
                         //else if (hit.collider.gameObject.GetComponent<PillCutterScript>() != null)
@@ -312,20 +325,22 @@ public class characterMovement3D : MonoBehaviour
     void attemptPlace(){
         if(handLocation.transform.childCount != 0){
             GameObject gobj = handLocation.transform.GetChild(0).gameObject;
-            gobj.GetComponent<Collider>().isTrigger = false;
-            Debug.Log("Releasing object");
-
-            handLocation.transform.DetachChildren();
-            gobj.GetComponent<Rigidbody>().useGravity = true;
-            gobj.GetComponent<Rigidbody>().isKinematic = false;
-            //gobj.GetComponent<InteractableScript>().PlaceDown();
+            
 
             if (placementToken != null && placementToken.GetComponent<Place_ScanSurface>().placeOK())
             {
+                gobj.GetComponent<Collider>().isTrigger = false;
+                Debug.Log("Releasing object");
+
+                handLocation.transform.DetachChildren();
+                gobj.GetComponent<Rigidbody>().useGravity = true;
+                gobj.GetComponent<Rigidbody>().isKinematic = false;
+                //gobj.GetComponent<InteractableScript>().PlaceDown();
                 gobj.GetComponent<InteractableScript>().PlaceHere(placementToken.transform.position);
             } else
             {
-                gobj.GetComponent<InteractableScript>().PlaceDown();
+                //do nothing
+                //gobj.GetComponent<InteractableScript>().PlaceDown();
             }
             
         }
