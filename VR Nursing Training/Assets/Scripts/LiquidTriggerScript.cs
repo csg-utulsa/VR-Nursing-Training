@@ -46,7 +46,7 @@ public class LiquidTriggerScript : InteractableBase
                 //measureCanvas.GetComponent<LiquidQuestionScript>().setCup(this);
                 parentLiquid.GetComponent<InteractableScript>().setType(liquidType);
                 //Cursor.lockState = CursorLockMode.None;
-                MouseLook3D.flag = false;
+                //MouseLook3D.flag = false;
             }
             
         }
