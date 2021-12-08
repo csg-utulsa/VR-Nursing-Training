@@ -137,6 +137,9 @@ MonoBehaviour:
       m_Calls: []
   cursorHighlight:
     m_PersistentCalls:
+      m_Calls: []
+  lookHighlight:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 9161979535309933706}
         m_TargetAssemblyTypeName: MedLabelScript, Assembly-CSharp
@@ -149,10 +152,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
-        m_CallState: 1
-  lookHighlight:
-    m_PersistentCalls:
-      m_Calls: []
+        m_CallState: 2
   initialPosition: {x: 0, y: 0, z: 0}
   initialAngles: {x: 0, y: 0, z: 0}
   material: {fileID: 2100000, guid: 1850ddcce0d28644992dff4695b4d44c, type: 2}
