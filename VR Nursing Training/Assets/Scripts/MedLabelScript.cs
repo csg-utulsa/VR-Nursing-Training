@@ -7,7 +7,10 @@ using TMPro;
 public class MedLabelScript : MonoBehaviour
 {
     [SerializeField] private GameObject labelText;
+    [SerializeField] private GameObject labelIcon;
+    [SerializeField] private Sprite iconSprite;
     [SerializeField] private GameObject medicineParent;
+    public bool useText = false;
     private TextMeshProUGUI text;
     private bool useCooldown = false;
     private int cooldownMax = 3;
@@ -16,8 +19,17 @@ public class MedLabelScript : MonoBehaviour
 
     public void Awake()
     {
-        text = labelText.GetComponent<TextMeshProUGUI>();
-        text.text = medicineParent.GetComponent<InteractableScript>().type;
+        if (useText)
+        {
+            text = labelText.GetComponent<TextMeshProUGUI>();
+            text.text = medicineParent.GetComponent<InteractableScript>().type;
+        }
+        else
+        {
+            labelIcon.GetComponent<SpriteRenderer>().sprite = iconSprite;
+        }
+        labelText.SetActive(false);
+        labelIcon.SetActive(false);
     }
     public void Update()
     {
@@ -27,8 +39,9 @@ public class MedLabelScript : MonoBehaviour
             else labelActive(false);
         }
         direction = (transform.position - Camera.main.transform.position).normalized;
-        direction.y = 0;
+        //direction.y = 0;
         if (direction != Vector3.zero) labelText.gameObject.transform.rotation = Quaternion.LookRotation(direction);
+        if (direction != Vector3.zero) labelIcon.gameObject.transform.rotation = Quaternion.LookRotation(direction);
     }
 
     public void labelActive(bool active)
@@ -36,12 +49,14 @@ public class MedLabelScript : MonoBehaviour
         useCooldown = true;
         if (active) cooldown = cooldownMax;
         else cooldown = 0;
-        labelText.SetActive(active);
+        if (useText) labelText.SetActive(active);
+        else labelIcon.SetActive(active);
     }
 
     public void labelActiveVR(bool active)
     {
         useCooldown = false;
-        labelText.SetActive(active);
+        if (useText) labelText.SetActive(active);
+        else labelIcon.SetActive(active);
     }
 }

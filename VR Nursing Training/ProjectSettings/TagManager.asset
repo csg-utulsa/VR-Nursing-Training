@@ -19,6 +19,7 @@ TagManager:
   - PlaceLocation
   - Ignore
   - MenuPanel
+  - MedLabel
   layers:
   - Default
   - TransparentFX

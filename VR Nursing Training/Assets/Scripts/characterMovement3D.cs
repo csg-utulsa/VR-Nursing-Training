@@ -143,6 +143,30 @@ public class characterMovement3D : MonoBehaviour
 
 
 
+        //Instead of using the manual per-object function calls, we're using HoverableBase overrides.
+
+        //TODO: Also call similar named functions on InteractableBase
+        for (int i = 0; i < hits.Length; i++)
+        {
+            hit = hits[i];
+            if (hit.collider.gameObject.GetComponent<HoverableBase>() != null) //1 of 2: Check if object is hoverablebase
+            {
+                hit.collider.gameObject.GetComponent<HoverableBase>().CursorHighlight(); //Cursor is over the object OR hand is near the object
+                //Debug.Log("Calling hoverableBase cursorHighlight in check 1");
+            }
+            else
+            { //2 of 2: Check if parent is hoverablebase
+
+                if (hit.collider.gameObject.transform.parent != null && hit.collider.gameObject.transform.parent.GetComponent<HoverableBase>() != null)
+                {
+
+
+                    hit.collider.gameObject.transform.parent.GetComponent<HoverableBase>().CursorHighlight(); //Cursor is over the object OR hand is near the object
+                    //Debug.Log("Calling hoverableBase cursorHighlight in check 1");
+                }
+            }
+        }
+        /*
         //Highlighting done here, runs regardless of if interaction key is pressed
         for(int i = 0; i < hits.Length; i++){
             hit = hits[i];
@@ -163,12 +187,12 @@ public class characterMovement3D : MonoBehaviour
                 }
             }
         }
+        */
 
 
 
 
-
-        if(isInteract){
+        if (isInteract){
             Debug.Log("hit "+hits.Length+" objects");
             for(int i = 0; i < hits.Length; i++){
                 
@@ -357,6 +381,9 @@ public class characterMovement3D : MonoBehaviour
 
         if (Physics.Raycast(camera3D.transform.position, camera3D.transform.forward, out hit, 10,raycastMask))
         {
+
+            //TODO: CursorInteract() should be called here 
+
 
             //Teleportation zone highlighting
             if(hit.collider.gameObject.CompareTag("Teleport")){
