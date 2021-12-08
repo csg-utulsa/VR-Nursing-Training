@@ -20,6 +20,7 @@ TagManager:
   - Ignore
   - MenuPanel
   - MedLabel
+  - Sharpie
   layers:
   - Default
   - TransparentFX
