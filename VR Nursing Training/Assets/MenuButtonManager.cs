@@ -11,11 +11,14 @@ public class MenuButtonManager : MonoBehaviour
     public GameObject camObjVR;
     public GameObject camObj3D;
     public GameObject rigVR;
+    public GameObject disableButton;
+    public GameObject enableButton;
 
     private void Start()
     {
         rigVR.GetComponent<characterMovement3D>().interactRayCastDistance = 10; // Changes raycast distance to be able to hit menu
         rigVR.GetComponent<LocomotionController>().toggleRayVisible = true;
+        disableButton.SetActive(false);
     }
 
    
@@ -26,7 +29,11 @@ public class MenuButtonManager : MonoBehaviour
         // Load Simulation Start Scene
         // Set any needed values before loading
         SceneManager.LoadScene("DemoScene");
-        camObj3D.GetComponent<characterMovement3D>().interactRayCastDistance = 2;
+        if(camObj3D.activeSelf)
+        {
+            camObj3D.GetComponent<characterMovement3D>().interactRayCastDistance = 2;
+        }
+        
     }
 
     public void BeginTutorial()
@@ -74,6 +81,10 @@ public class MenuButtonManager : MonoBehaviour
         characterMovement3D.changeModeToVR = true; // Static Boolean Very Important
         camObj3D.SetActive(false);
         camObjVR.SetActive(true);
+        // Set Enable Button Disabled
+        enableButton.SetActive(false);
+        // Set Disable Button Enabled
+        disableButton.SetActive(true);
 
     }
 
@@ -83,6 +94,10 @@ public class MenuButtonManager : MonoBehaviour
         characterMovement3D.changeModeToVR = false;
         camObjVR.SetActive(false);
         camObj3D.SetActive(true);
+        // Set Disable Button Disabled
+        disableButton.SetActive(false);
+        // Set Enable Button Enabled
+        enableButton.SetActive(true);
     }
 
     #endregion

@@ -922,7 +922,7 @@ GameObject:
   - component: {fileID: 230426065}
   - component: {fileID: 230426064}
   m_Layer: 0
-  m_Name: Panel2
+  m_Name: DisablePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2571,6 +2571,8 @@ MonoBehaviour:
   camObjVR: {fileID: 418251176}
   camObj3D: {fileID: 418251179}
   rigVR: {fileID: 418251171}
+  disableButton: {fileID: 2025975670}
+  enableButton: {fileID: 710617162}
 --- !u!4 &591025299
 Transform:
   m_ObjectHideFlags: 0
@@ -2960,7 +2962,7 @@ GameObject:
   - component: {fileID: 664233871}
   - component: {fileID: 664233870}
   m_Layer: 0
-  m_Name: Panel5
+  m_Name: BackPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5115,7 +5117,7 @@ GameObject:
   - component: {fileID: 1336936484}
   - component: {fileID: 1336936483}
   m_Layer: 0
-  m_Name: Panel1
+  m_Name: EnablePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
