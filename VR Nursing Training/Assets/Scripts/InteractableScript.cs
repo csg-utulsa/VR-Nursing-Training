@@ -6,6 +6,8 @@ public class InteractableScript : InteractableBase, HoverableBase
 {
     public UnityEvent onCombine;
     public UnityEvent interactEvent;
+    public UnityEvent cursorHighlight;
+    public UnityEvent lookHighlight;
 
     public Vector3 initialPosition;
     public Vector3 initialAngles;
@@ -34,13 +36,12 @@ public class InteractableScript : InteractableBase, HoverableBase
 
     public void CursorHighlight()
     {
-        //nothing
-
+        cursorHighlight.Invoke();
     }
 
     public void LookHighlight()
     {
-        //nothing
+        lookHighlight.Invoke();
     }
 
     public void CursorInteract()
