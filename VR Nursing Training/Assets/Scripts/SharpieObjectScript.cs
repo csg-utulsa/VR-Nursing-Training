@@ -7,6 +7,11 @@ public class SharpieObjectScript : InteractableBase
 {
     public UnityEvent<string> onMark;
 
+    public override bool canInteractWithHand()
+    {
+        return false;
+    }
+
     // Mark Patches
     private void OnTriggerEnter(Collider other)
     {
