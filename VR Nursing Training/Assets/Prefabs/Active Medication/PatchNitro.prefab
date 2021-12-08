@@ -79,6 +79,93 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 
+--- !u!1 &4447651467468076786
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2598295768567936355}
+  - component: {fileID: 2675745147721904464}
+  - component: {fileID: 6736421137081381405}
+  - component: {fileID: 8019181411656600492}
+  m_Layer: 0
+  m_Name: Patch Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2598295768567936355
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4447651467468076786}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: 0, w: 0.7071067}
+  m_LocalPosition: {x: 0, y: -2.3283064e-12, z: 0.000016596272}
+  m_LocalScale: {x: 0.01, y: 0.010000002, z: 0.010000002}
+  m_Children: []
+  m_Father: {fileID: 5301540454244573039}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2675745147721904464
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4447651467468076786}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.15, y: 0.1, z: 0.15}
+  m_Center: {x: -0.002219975, y: -0.001393443, z: -0.0091833025}
+--- !u!114 &6736421137081381405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4447651467468076786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a64d3e54b97bfd4ab4b632d2e843363, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onMark:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8019181411656600492}
+        m_TargetAssemblyTypeName: ActionCheckMedicine, Assembly-CSharp
+        m_MethodName: CheckMedicine
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8019181411656600492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4447651467468076786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42024e2ff4151704eae4ab5b9935dc4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  notTarget: 0
+  onCollision: 0
 --- !u!1 &4816892652931515861
 GameObject:
   m_ObjectHideFlags: 0
@@ -115,6 +202,7 @@ Transform:
   m_Children:
   - {fileID: 1875101713658872995}
   - {fileID: 7781568788569750119}
+  - {fileID: 2598295768567936355}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -208,20 +296,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bd43063534b3924eb5caef959443d75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isInteractable: 0
-  initialPosition: {x: 0, y: 0, z: 0}
-  initialAngles: {x: 0, y: 0, z: 0}
-  targets: []
-  material: {fileID: 0}
-  layer:
-    serializedVersion: 2
-    m_Bits: 0
-  combineMaterial: {fileID: 0}
-  combineDist: 0
   onCombine:
     m_PersistentCalls:
       m_Calls: []
+  interactEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  cursorHighlight:
+    m_PersistentCalls:
+      m_Calls: []
+  lookHighlight:
+    m_PersistentCalls:
+      m_Calls: []
+  initialPosition: {x: 0, y: 0, z: 0}
+  initialAngles: {x: 0, y: 0, z: 0}
+  material: {fileID: 0}
+  combineMaterial: {fileID: 0}
+  layer:
+    serializedVersion: 2
+    m_Bits: 0
+  targets: []
+  combineDist: 0
+  isInteractable: 0
   type: NITROGLYCERIN
+  interactWithHand: 1
+  focusOnPickup: 0
+  distanceFromCamera: 0.5
+  focusAngles: {x: 0, y: 0, z: 0}
 --- !u!114 &-5014029394938515869
 MonoBehaviour:
   m_ObjectHideFlags: 0
