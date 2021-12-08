@@ -24,7 +24,7 @@ public class MouseLook3D : MonoBehaviour
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        LiquidTriggerScript.measureCanvas = liquidCanvas;
+        //LiquidTriggerScript.measureCanvas = liquidCanvas;
     }
 
     // Update is called once per frame

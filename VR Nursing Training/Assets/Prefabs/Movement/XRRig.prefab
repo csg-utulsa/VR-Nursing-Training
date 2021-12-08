@@ -1957,7 +1957,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6762fa541bebbf348ab17c0db4f18fbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  liquidCanvas: {fileID: 7548493106411160768}
 --- !u!1 &2632912369471152309
 GameObject:
   m_ObjectHideFlags: 0

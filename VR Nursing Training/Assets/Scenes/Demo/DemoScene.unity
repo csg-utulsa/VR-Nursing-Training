@@ -21443,6 +21443,11 @@ PrefabInstance:
       propertyPath: onIncorrect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 105428426}
+    - target: {fileID: 7548493106692738073, guid: 0af8f3646a662394eb8f95def6a25298,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7548493107880779748, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
       propertyPath: m_Name
