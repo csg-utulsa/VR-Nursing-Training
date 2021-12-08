@@ -325,9 +325,21 @@ public class characterMovement3D : MonoBehaviour
     void attemptPlace(){
         if(handLocation.transform.childCount != 0){
             GameObject gobj = handLocation.transform.GetChild(0).gameObject;
-            
 
-            if (placementToken != null && placementToken.GetComponent<Place_ScanSurface>().placeOK())
+
+            if (gobj.GetComponent<InteractableScript>().getFocusOnPickup()) //Clipboards and etc. MUST be placed down even if the puck can't work.
+            {
+                gobj.GetComponent<Collider>().isTrigger = false;
+                Debug.Log("Releasing Focused object");
+
+                handLocation.transform.DetachChildren();
+                gobj.GetComponent<Rigidbody>().useGravity = true;
+                gobj.GetComponent<Rigidbody>().isKinematic = false;
+                gobj.GetComponent<InteractableScript>().PlaceDown();
+                
+            }
+
+            else if (placementToken != null && placementToken.GetComponent<Place_ScanSurface>().placeOK()) //Non-focus objects must be placed in the world
             {
                 gobj.GetComponent<Collider>().isTrigger = false;
                 Debug.Log("Releasing object");
@@ -340,6 +352,7 @@ public class characterMovement3D : MonoBehaviour
             } else
             {
                 //do nothing
+               
                 //gobj.GetComponent<InteractableScript>().PlaceDown();
             }
             
@@ -398,6 +411,8 @@ public class characterMovement3D : MonoBehaviour
         {
 
             //TODO: CursorInteract() should be called here 
+
+
 
 
             //Teleportation zone highlighting
