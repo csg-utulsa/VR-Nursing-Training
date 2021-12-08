@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ResetScript : MonoBehaviour
+public class ResetScript : InteractableBase
 {
-    public GameObject hammer;
-
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == hammer)
+        Interact(other);
+    }
+
+    public override void Interact(Collider other)
+    {
+        if (other.gameObject.CompareTag("Hands"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
