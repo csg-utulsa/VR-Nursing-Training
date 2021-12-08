@@ -368,12 +368,15 @@ public class characterMovement3D : MonoBehaviour
                 }
             }
         }
-        /*
+        
         if (Physics.Raycast(camera3D.transform.position, camera3D.transform.forward, out hit, 10, raycastMask) && hit.collider.CompareTag("MenuPanel")) // Panel tag is on Menu Buttons
         {
-            Debug.Log("MenuPanel Hit...");
-            hit.collider.GetComponent<MenuButtonScript>().Interact(hit.collider);
-        } */
+            if (isClicking)
+            {
+                Debug.Log("MenuPanel Hit...");
+                hit.collider.GetComponent<MenuButtonScript>().Interact(hit.collider);
+            }
+        } 
     }
 
     private void OnEnable()
