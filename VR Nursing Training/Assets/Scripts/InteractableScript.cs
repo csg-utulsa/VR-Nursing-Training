@@ -41,7 +41,6 @@ public class InteractableScript : InteractableBase, HoverableBase
 
     public void LookHighlight()
     {
-        Debug.Log("yo");
         lookHighlight.Invoke();
     }
 

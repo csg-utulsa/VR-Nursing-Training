@@ -39,9 +39,10 @@ public class MedLabelScript : MonoBehaviour
             else labelActive(false);
         }
         direction = (transform.position - Camera.main.transform.position).normalized;
-        //direction.y = 0;
         if (direction != Vector3.zero) labelText.gameObject.transform.rotation = Quaternion.LookRotation(direction);
         if (direction != Vector3.zero) labelIcon.gameObject.transform.rotation = Quaternion.LookRotation(direction);
+        direction.y = 0;
+        gameObject.transform.rotation = Quaternion.LookRotation(direction);
     }
 
     public void labelActive(bool active)
