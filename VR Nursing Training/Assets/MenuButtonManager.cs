@@ -29,10 +29,6 @@ public class MenuButtonManager : MonoBehaviour
         // Load Simulation Start Scene
         // Set any needed values before loading
         SceneManager.LoadScene("DemoScene");
-        if(camObj3D.activeSelf)
-        {
-            camObj3D.GetComponent<characterMovement3D>().interactRayCastDistance = 2;
-        }
         
     }
 
