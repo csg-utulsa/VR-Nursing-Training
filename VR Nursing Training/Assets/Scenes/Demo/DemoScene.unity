@@ -8893,6 +8893,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1238523523714365902, guid: 18eba83f63c54a94b9e85b24993dd445,
+        type: 3}
+      propertyPath: m_TagString
+      value: Sharpie
+      objectReference: {fileID: 0}
     - target: {fileID: 1908345614253810548, guid: 18eba83f63c54a94b9e85b24993dd445,
         type: 3}
       propertyPath: m_RootOrder
@@ -8947,6 +8952,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2264389627811893011, guid: 18eba83f63c54a94b9e85b24993dd445,
+        type: 3}
+      propertyPath: m_TagString
+      value: Sharpie
       objectReference: {fileID: 0}
     - target: {fileID: 2927741851265122147, guid: 18eba83f63c54a94b9e85b24993dd445,
         type: 3}
@@ -9012,6 +9022,11 @@ PrefabInstance:
         type: 3}
       propertyPath: onMark.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6710898859295332623, guid: 18eba83f63c54a94b9e85b24993dd445,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18eba83f63c54a94b9e85b24993dd445, type: 3}

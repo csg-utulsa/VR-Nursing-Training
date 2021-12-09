@@ -19,10 +19,10 @@ public class SharpieObjectScript : InteractableBase
     }
     public override void Interact(Collider other)
     {
-        if (other.CompareTag("Patch"))
+        if (other.CompareTag("Sharpie"))
         {
-            other.GetComponent<PatchObjectScript>().markPatch();
-            onMark.Invoke(other.gameObject.GetComponent<InteractableScript>().getType());
+            gameObject.transform.parent.GetComponent<PatchObjectScript>().markPatch();
+            other.GetComponentInChildren<SharpieObjectScript>().onMark.Invoke(gameObject.transform.parent.GetComponent<InteractableScript>().getType());
         }
     }
 }
