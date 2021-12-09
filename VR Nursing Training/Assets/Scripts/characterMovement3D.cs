@@ -27,6 +27,7 @@ public class characterMovement3D : MonoBehaviour
     bool interacted = false;
     bool clicked = false;
     bool letgo = false;
+    bool forceletgo = false;
 
     bool grabComplete = false;
 
@@ -78,9 +79,10 @@ public class characterMovement3D : MonoBehaviour
 
                 //maybe better to call returnHome and unparent.
                 letgo = true;
+                forceletgo = true;
                 grabComplete = false;
                 //Destroy(handLocation.transform.GetChild(0).gameObject);
-                //Debug.Log("Hand object invalid and destroyed");
+                Debug.Log("Hand object invalid and destroyed");
             }
         }
     }
@@ -327,8 +329,9 @@ public class characterMovement3D : MonoBehaviour
             GameObject gobj = handLocation.transform.GetChild(0).gameObject;
 
 
-            if (gobj.GetComponent<InteractableScript>().getFocusOnPickup()) //Clipboards and etc. MUST be placed down even if the puck can't work.
+            if (gobj.GetComponent<InteractableScript>().getFocusOnPickup() || forceletgo == true) //Clipboards and etc. MUST be placed down even if the puck can't work.
             {
+                forceletgo = false;
                 gobj.GetComponent<Collider>().isTrigger = false;
                 Debug.Log("Releasing Focused object");
 
@@ -377,6 +380,9 @@ public class characterMovement3D : MonoBehaviour
             letgo = false;
         }
         letgo = isLettingGo;
+
+
+
         /*
         if(isLettingGo){
 
