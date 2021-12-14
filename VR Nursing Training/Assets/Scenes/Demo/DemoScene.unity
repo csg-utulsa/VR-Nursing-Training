@@ -6054,6 +6054,16 @@ PrefabInstance:
       propertyPath: buttonName
       value: 15mL
       objectReference: {fileID: 0}
+    - target: {fileID: 5061626114106546772, guid: df6004b36089eff4897c93b2944c73ee,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5061626114106546772, guid: df6004b36089eff4897c93b2944c73ee,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5061626114446807941, guid: df6004b36089eff4897c93b2944c73ee,
         type: 3}
       propertyPath: buttonName
@@ -14016,7 +14026,7 @@ SphereCollider:
   m_GameObject: {fileID: 1422819166}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -20203,7 +20213,7 @@ SphereCollider:
   m_GameObject: {fileID: 2090084149}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}

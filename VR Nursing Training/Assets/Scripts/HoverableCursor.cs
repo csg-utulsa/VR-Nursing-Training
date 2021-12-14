@@ -28,8 +28,9 @@ public class HoverableCursor : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("HoverableCusor trigger enter:" + other.name);
         //1: check if object is hoverable base
-        if(other.gameObject.GetComponent<HoverableBase>() != null){
+        if (other.gameObject.GetComponent<HoverableBase>() != null){
             Debug.Log("HoverableCusor trigger enter 1");
             foundObject = gameObject.GetComponent<HoverableBase>();
         }
