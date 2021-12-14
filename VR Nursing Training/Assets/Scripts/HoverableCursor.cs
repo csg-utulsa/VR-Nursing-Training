@@ -28,14 +28,29 @@ public class HoverableCursor : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //1: check if object is hoverable base
         if(other.gameObject.GetComponent<HoverableBase>() != null){
             foundObject = gameObject.GetComponent<HoverableBase>();
+        }
+
+        //2: check if parent is hoverablebase
+
+        else if (other.gameObject.transform.parent != null && other.gameObject.transform.parent.GetComponent<HoverableBase>() != null)
+        {
+            foundObject = other.gameObject.transform.parent.GetComponent<HoverableBase>(); //Cursor is over the object OR hand is near the object
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
        if(other.gameObject.GetComponent<HoverableBase>() != null && other.gameObject.GetComponent<HoverableBase>() == foundObject){
+            foundObject = null;
+        }
+
+        //2: check if parent is hoverablebase
+
+        else if (other.gameObject.transform.parent != null && other.gameObject.transform.parent.GetComponent<HoverableBase>() != null && other.gameObject.transform.parent.GetComponent<HoverableBase>() == foundObject)
+        {
             foundObject = null;
         }
     }
