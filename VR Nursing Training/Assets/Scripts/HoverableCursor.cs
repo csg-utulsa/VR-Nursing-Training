@@ -7,12 +7,18 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 //Requires a trigger collider to represent the cursor. A small sphere is perfect.
 
-HoverableBase foundObject = null;
-public XRController ControllerObserver;
-public InputHelpers.Button teleportActivationButton;
+
 
 public class HoverableCursor : MonoBehaviour
 {
+
+
+    HoverableBase foundObject = null;
+    public XRController ControllerObserver;
+    public InputHelpers.Button teleportActivationButton;
+    public float activationThreshhold = .1f;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,16 +51,19 @@ public class HoverableCursor : MonoBehaviour
 
         if (ControllerObserver)
         {
-            rightTeleportRay.gameObject.SetActive(CheckIfActivated(rightTeleportRay));
+            bool triggerPull = CheckIfActivated(ControllerObserver);
+            if(foundObject != null){
+                foundObject.CursorHighlight();
+
+                if(triggerPull){
+                    foundObject.CursorInteract();
+                }
+            }
         }
 
 
 
-        if(foundObject == null){
-            foundObject.CursorHighlight();
 
-            if(trigger_is_pulled
-        }
 
 
     }
