@@ -30,6 +30,7 @@ public class HoverableCursor : MonoBehaviour
     {
         //1: check if object is hoverable base
         if(other.gameObject.GetComponent<HoverableBase>() != null){
+            Debug.Log("HoverableCusor trigger enter 1");
             foundObject = gameObject.GetComponent<HoverableBase>();
         }
 
@@ -37,6 +38,7 @@ public class HoverableCursor : MonoBehaviour
 
         else if (other.gameObject.transform.parent != null && other.gameObject.transform.parent.GetComponent<HoverableBase>() != null)
         {
+            Debug.Log("HoverableCusor trigger enter 2");
             foundObject = other.gameObject.transform.parent.GetComponent<HoverableBase>(); //Cursor is over the object OR hand is near the object
         }
     }
@@ -44,6 +46,7 @@ public class HoverableCursor : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
        if(other.gameObject.GetComponent<HoverableBase>() != null && other.gameObject.GetComponent<HoverableBase>() == foundObject){
+           Debug.Log("HoverableCusor trigger exit null 1");
             foundObject = null;
         }
 
@@ -51,6 +54,7 @@ public class HoverableCursor : MonoBehaviour
 
         else if (other.gameObject.transform.parent != null && other.gameObject.transform.parent.GetComponent<HoverableBase>() != null && other.gameObject.transform.parent.GetComponent<HoverableBase>() == foundObject)
         {
+            Debug.Log("HoverableCusor trigger exit null 2");
             foundObject = null;
         }
     }
@@ -68,9 +72,11 @@ public class HoverableCursor : MonoBehaviour
         {
             bool triggerPull = CheckIfActivated(ControllerObserver);
             if(foundObject != null){
+                Debug.Log("HoverableCursor highlighting a cursor");
                 foundObject.CursorHighlight();
 
                 if(triggerPull){
+                    Debug.Log("HoverableCursor interact called");
                     foundObject.CursorInteract();
                 }
             }
