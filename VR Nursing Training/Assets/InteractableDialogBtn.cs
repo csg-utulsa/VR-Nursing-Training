@@ -40,6 +40,7 @@ public class InteractableDialogBtn : InteractableBase, HoverableBase
     {
         //Interact something
         Debug.Log("CursorInteract called inside InteractbaleDialogButton and I don't know what to do");
+        interactEvent.Invoke();
     }
 
 
