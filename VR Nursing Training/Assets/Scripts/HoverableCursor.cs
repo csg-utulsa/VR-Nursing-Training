@@ -13,7 +13,7 @@ public class HoverableCursor : MonoBehaviour
 {
 
 
-    HoverableBase foundObject = null;
+    InteractableDialogBtn foundObject = null;
     public XRController ControllerObserver;
     public InputHelpers.Button teleportActivationButton;
     public float activationThreshhold = .1f;
@@ -30,30 +30,30 @@ public class HoverableCursor : MonoBehaviour
     {
         Debug.Log("HoverableCusor trigger enter:" + other.name);
         //1: check if object is hoverable base
-        if (other.gameObject.GetComponent<HoverableBase>() != null){
+        if (other.gameObject.GetComponent<InteractableDialogBtn>() != null){
             Debug.Log("HoverableCusor trigger enter 1");
-            foundObject = gameObject.GetComponent<HoverableBase>();
+            foundObject = gameObject.GetComponent<InteractableDialogBtn>();
         }
 
         //2: check if parent is hoverablebase
 
-        else if (other.gameObject.transform.parent != null && other.gameObject.transform.parent.GetComponent<HoverableBase>() != null)
+        else if (other.gameObject.transform.parent != null && other.gameObject.transform.parent.GetComponent<InteractableDialogBtn>() != null)
         {
             Debug.Log("HoverableCusor trigger enter 2");
-            foundObject = other.gameObject.transform.parent.GetComponent<HoverableBase>(); //Cursor is over the object OR hand is near the object
+            foundObject = other.gameObject.transform.parent.GetComponent<InteractableDialogBtn>(); //Cursor is over the object OR hand is near the object
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-       if(other.gameObject.GetComponent<HoverableBase>() != null && other.gameObject.GetComponent<HoverableBase>() == foundObject){
+       if(other.gameObject.GetComponent<InteractableDialogBtn>() != null && other.gameObject.GetComponent<InteractableDialogBtn>() == foundObject){
            Debug.Log("HoverableCusor trigger exit null 1");
             foundObject = null;
         }
 
         //2: check if parent is hoverablebase
 
-        else if (other.gameObject.transform.parent != null && other.gameObject.transform.parent.GetComponent<HoverableBase>() != null && other.gameObject.transform.parent.GetComponent<HoverableBase>() == foundObject)
+        else if (other.gameObject.transform.parent != null && other.gameObject.transform.parent.GetComponent<InteractableDialogBtn>() != null && other.gameObject.transform.parent.GetComponent<InteractableDialogBtn>() == foundObject)
         {
             Debug.Log("HoverableCusor trigger exit null 2");
             foundObject = null;
