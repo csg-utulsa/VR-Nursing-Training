@@ -13,7 +13,7 @@ public class VRLookatScript : MonoBehaviour
         }
         else if (other.gameObject.transform.parent != null && other.gameObject.transform.parent.GetComponent<HoverableBase>() != null)
         {
-            other.gameObject.GetComponent<HoverableBase>().LookHighlight();
+            other.gameObject.transform.parent.GetComponent<HoverableBase>().LookHighlight();
         }
     }
 }

@@ -7,12 +7,18 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 //Requires a trigger collider to represent the cursor. A small sphere is perfect.
 
-HoverableBase foundObject = null;
-public XRController ControllerObserver;
-public InputHelpers.Button teleportActivationButton;
+
 
 public class HoverableCursor : MonoBehaviour
 {
+
+
+    HoverableBase foundObject = null;
+    public XRController ControllerObserver;
+    public InputHelpers.Button teleportActivationButton;
+    public float activationThreshhold = .1f;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,14 +28,34 @@ public class HoverableCursor : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.GetComponent<HoverableBase>() != null){
+        Debug.Log("HoverableCusor trigger enter:" + other.name);
+        //1: check if object is hoverable base
+        if (other.gameObject.GetComponent<HoverableBase>() != null){
+            Debug.Log("HoverableCusor trigger enter 1");
             foundObject = gameObject.GetComponent<HoverableBase>();
+        }
+
+        //2: check if parent is hoverablebase
+
+        else if (other.gameObject.transform.parent != null && other.gameObject.transform.parent.GetComponent<HoverableBase>() != null)
+        {
+            Debug.Log("HoverableCusor trigger enter 2");
+            foundObject = other.gameObject.transform.parent.GetComponent<HoverableBase>(); //Cursor is over the object OR hand is near the object
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
        if(other.gameObject.GetComponent<HoverableBase>() != null && other.gameObject.GetComponent<HoverableBase>() == foundObject){
+           Debug.Log("HoverableCusor trigger exit null 1");
+            foundObject = null;
+        }
+
+        //2: check if parent is hoverablebase
+
+        else if (other.gameObject.transform.parent != null && other.gameObject.transform.parent.GetComponent<HoverableBase>() != null && other.gameObject.transform.parent.GetComponent<HoverableBase>() == foundObject)
+        {
+            Debug.Log("HoverableCusor trigger exit null 2");
             foundObject = null;
         }
     }
@@ -45,16 +71,21 @@ public class HoverableCursor : MonoBehaviour
 
         if (ControllerObserver)
         {
-            rightTeleportRay.gameObject.SetActive(CheckIfActivated(rightTeleportRay));
+            bool triggerPull = CheckIfActivated(ControllerObserver);
+            if(foundObject != null){
+                Debug.Log("HoverableCursor highlighting a cursor");
+                foundObject.CursorHighlight();
+
+                if(triggerPull){
+                    Debug.Log("HoverableCursor interact called");
+                    foundObject.CursorInteract();
+                }
+            }
         }
 
 
 
-        if(foundObject == null){
-            foundObject.CursorHighlight();
 
-            if(trigger_is_pulled
-        }
 
 
     }
