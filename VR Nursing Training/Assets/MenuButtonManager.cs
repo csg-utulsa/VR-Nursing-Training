@@ -18,7 +18,7 @@ public class MenuButtonManager : MonoBehaviour
     {
         rigVR.GetComponent<characterMovement3D>().interactRayCastDistance = 10; // Changes raycast distance to be able to hit menu
         rigVR.GetComponent<LocomotionController>().toggleRayVisible = true;
-        disableButton.SetActive(false);
+        disableButton.transform.parent.gameObject.SetActive(false);
     }
 
    
@@ -78,9 +78,9 @@ public class MenuButtonManager : MonoBehaviour
         camObj3D.SetActive(false);
         camObjVR.SetActive(true);
         // Set Enable Button Disabled
-        enableButton.SetActive(false);
+        enableButton.transform.parent.gameObject.SetActive(false);
         // Set Disable Button Enabled
-        disableButton.SetActive(true);
+        disableButton.transform.parent.gameObject.SetActive(true);
 
     }
 
@@ -91,9 +91,9 @@ public class MenuButtonManager : MonoBehaviour
         camObjVR.SetActive(false);
         camObj3D.SetActive(true);
         // Set Disable Button Disabled
-        disableButton.SetActive(false);
+        disableButton.transform.parent.gameObject.SetActive(false);
         // Set Enable Button Enabled
-        enableButton.SetActive(true);
+        enableButton.transform.parent.gameObject.SetActive(true);
     }
 
     #endregion
