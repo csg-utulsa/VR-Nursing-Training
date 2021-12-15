@@ -6051,8 +6051,18 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3916689176706122344, guid: df6004b36089eff4897c93b2944c73ee,
         type: 3}
+      propertyPath: cup
+      value: 
+      objectReference: {fileID: 738729982}
+    - target: {fileID: 3916689176706122344, guid: df6004b36089eff4897c93b2944c73ee,
+        type: 3}
       propertyPath: buttonName
       value: 15mL
+      objectReference: {fileID: 0}
+    - target: {fileID: 3916689176706122344, guid: df6004b36089eff4897c93b2944c73ee,
+        type: 3}
+      propertyPath: dosageValue
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3916689176706122344, guid: df6004b36089eff4897c93b2944c73ee,
         type: 3}
@@ -6101,8 +6111,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5061626114446807941, guid: df6004b36089eff4897c93b2944c73ee,
         type: 3}
+      propertyPath: cup
+      value: 
+      objectReference: {fileID: 738729982}
+    - target: {fileID: 5061626114446807941, guid: df6004b36089eff4897c93b2944c73ee,
+        type: 3}
       propertyPath: buttonName
       value: 5mL
+      objectReference: {fileID: 0}
+    - target: {fileID: 5061626114446807941, guid: df6004b36089eff4897c93b2944c73ee,
+        type: 3}
+      propertyPath: dosageValue
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5061626114446807941, guid: df6004b36089eff4897c93b2944c73ee,
         type: 3}
@@ -6201,8 +6221,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5380461377052272185, guid: df6004b36089eff4897c93b2944c73ee,
         type: 3}
+      propertyPath: cup
+      value: 
+      objectReference: {fileID: 738729982}
+    - target: {fileID: 5380461377052272185, guid: df6004b36089eff4897c93b2944c73ee,
+        type: 3}
       propertyPath: buttonName
       value: 10mL
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380461377052272185, guid: df6004b36089eff4897c93b2944c73ee,
+        type: 3}
+      propertyPath: dosageValue
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5380461377052272185, guid: df6004b36089eff4897c93b2944c73ee,
         type: 3}
@@ -6241,8 +6271,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6599336815278256825, guid: df6004b36089eff4897c93b2944c73ee,
         type: 3}
+      propertyPath: cup
+      value: 
+      objectReference: {fileID: 738729982}
+    - target: {fileID: 6599336815278256825, guid: df6004b36089eff4897c93b2944c73ee,
+        type: 3}
       propertyPath: buttonName
       value: 20mL
+      objectReference: {fileID: 0}
+    - target: {fileID: 6599336815278256825, guid: df6004b36089eff4897c93b2944c73ee,
+        type: 3}
+      propertyPath: dosageValue
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6599336815278256825, guid: df6004b36089eff4897c93b2944c73ee,
         type: 3}
@@ -7042,6 +7082,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 737364194}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &738729982 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3472772166698774291, guid: 5b13dd4a6e1fc5545ac6f8c46e38bbe2,
+    type: 3}
+  m_PrefabInstance: {fileID: 2061101437}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &740119511
 GameObject:
   m_ObjectHideFlags: 0
@@ -10342,7 +10388,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 2061101437}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 738729982}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b74113aa3bccae4dbca463e0194a6f4, type: 3}

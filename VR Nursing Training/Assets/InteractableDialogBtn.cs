@@ -14,7 +14,8 @@ public class InteractableDialogBtn : InteractableBase, HoverableBase
 
     public bool interactWithHand = true;
 
-
+    public int dosageValue = 0;
+    public GameObject cup;
     public string buttonName = "";
     public TextMeshPro buttonText;
     public GameObject buttonVolume;
@@ -40,6 +41,7 @@ public class InteractableDialogBtn : InteractableBase, HoverableBase
     {
         //Interact something
         Debug.Log("CursorInteract called inside InteractbaleDialogButton and I don't know what to do");
+        cup.GetComponent<LiquidObjectScript>().setDosage(dosageValue);
         interactEvent.Invoke();
     }
 
