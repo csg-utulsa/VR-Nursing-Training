@@ -158,7 +158,7 @@ public class characterMovement3D : MonoBehaviour
                 //Debug.Log("Calling hoverableBase cursorHighlight in check 1");
 
                 if(isInteract){
-                    hit.collider.gameObject.GetComponent<HoverableBase>().CursorInteract()
+                    hit.collider.gameObject.GetComponent<HoverableBase>().CursorInteract();
                 }
             }
             else
@@ -170,7 +170,7 @@ public class characterMovement3D : MonoBehaviour
                     hit.collider.gameObject.transform.parent.GetComponent<HoverableBase>().LookHighlight(); // LookHighlight is the same as CursorHighlight for 3D
                     //Debug.Log("Calling hoverableBase cursorHighlight in check 1");
                     if(isInteract){
-                        hit.collider.gameObject.transform.parent.GetComponent<HoverableBase>().CursorInteract()
+                        hit.collider.gameObject.transform.parent.GetComponent<HoverableBase>().CursorInteract();
                     }
                 }
             }
