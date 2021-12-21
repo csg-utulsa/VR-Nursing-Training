@@ -42,6 +42,8 @@ public class characterMovement3D : MonoBehaviour
 
     public static bool changeModeToVR;
 
+    public GameObject hud;
+
     private void Awake()
     {
         input = new PlayerInput();
@@ -233,6 +235,11 @@ public class characterMovement3D : MonoBehaviour
                             otherGameObject.GetComponent<Rigidbody>().useGravity = false;
                             otherGameObject.GetComponent<Rigidbody>().isKinematic = true;
                             Debug.Log("break on obj "+i+", is an interactablescript");
+
+                            if(otherGameObject.GetComponent<InteractableScript>().getFocusOnPickup()){
+                                hud.SetActive(false);
+                            }
+
                             break;
                         }
                         else if(hit.collider.gameObject.transform.parent != null && hit.collider.gameObject.transform.parent.GetComponent<InteractableScript>() != null)
@@ -246,6 +253,9 @@ public class characterMovement3D : MonoBehaviour
                             otherGameObject.GetComponent<Rigidbody>().useGravity = false;
                             otherGameObject.GetComponent<Rigidbody>().isKinematic = true;
                             Debug.Log("break on obj " + i + ", PARENT is an interactablescript, using Parent as target");
+                            if(otherGameObject.GetComponent<InteractableScript>().getFocusOnPickup()){
+                                hud.SetActive(false);
+                            }
                             break;
                         }
                         //else if (hit.collider.gameObject.GetComponent<PillCutterScript>() != null)
@@ -285,6 +295,7 @@ public class characterMovement3D : MonoBehaviour
             grabComplete = false;
             //placeOK=false;
             Destroy(placementToken);
+            hud.SetActive(true);
             placementToken = null;
         }
     }
