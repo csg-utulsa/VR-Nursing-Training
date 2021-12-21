@@ -64,11 +64,13 @@ public class TeleportIndicatorScript : MonoBehaviour
         if (active) cooldown = cooldownMax;
         else cooldown = 0;
         indicatorZone.SetActive(active);
+        if (!active) matColor.a = alphaStart;
     }
 
     public void indicatorActiveVR(bool active)
     {
         useCooldown = false;
         indicatorZone.SetActive(active);
+        if (!active) matColor.a = alphaStart;
     }
 }
