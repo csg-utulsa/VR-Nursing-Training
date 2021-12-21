@@ -22185,6 +22185,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: XRRig
       objectReference: {fileID: 0}
+    - target: {fileID: 7548493107880779757, guid: 0af8f3646a662394eb8f95def6a25298,
+        type: 3}
+      propertyPath: leftTeleportRay
+      value: 
+      objectReference: {fileID: 1455292154}
     - target: {fileID: 7548493107880779759, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
       propertyPath: m_RootOrder
