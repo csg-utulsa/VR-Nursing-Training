@@ -263,7 +263,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Sanitize Hands
   reportSuccess: Hands Sanitized Successfully
-  reportSkip: Hands Not Sanitized
+  reportSkip: 
   reportFail: Hands Not Sanitized
   strikeCount: 0
   failed: 0
@@ -272,8 +272,7 @@ MonoBehaviour:
   complete: 0
   canSkip: 0
   canContinue: 0
-  successActions:
-  - {fileID: 1994098852}
+  successActions: []
   failActions: []
 --- !u!4 &30480717
 Transform:
@@ -2380,7 +2379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Cart Liquid
   reportSuccess: Liquid Carted Successfully
-  reportSkip: Liquid Not Carted
+  reportSkip: 
   reportFail: Liquid Not Carted
   strikeCount: 0
   failed: 0
@@ -2389,8 +2388,7 @@ MonoBehaviour:
   complete: 0
   canSkip: 0
   canContinue: 0
-  successActions:
-  - {fileID: 1072718030}
+  successActions: []
   failActions: []
 --- !u!1 &193099353
 GameObject:
@@ -3526,7 +3524,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Get Pills
   reportSuccess: Got Pills Successfully
-  reportSkip: Didn't Get Pills
+  reportSkip: 
   reportFail: Got Wrong Medication
   strikeCount: 3
   failed: 0
@@ -3535,10 +3533,8 @@ MonoBehaviour:
   complete: 0
   canSkip: 0
   canContinue: 0
-  successActions:
-  - {fileID: 1638391962}
-  failActions:
-  - {fileID: 222962652}
+  successActions: []
+  failActions: []
 --- !u!4 &299760127
 Transform:
   m_ObjectHideFlags: 0
@@ -3908,8 +3904,7 @@ MonoBehaviour:
   canSkip: 0
   canContinue: 0
   successActions: []
-  failActions:
-  - {fileID: 1119557324}
+  failActions: []
 --- !u!114 &313132193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4577,7 +4572,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Get Liquid
   reportSuccess: Got Liquid Successfully
-  reportSkip: Didn't Get Liquid
+  reportSkip: 
   reportFail: Got Wrong Medication
   strikeCount: 3
   failed: 0
@@ -4586,10 +4581,8 @@ MonoBehaviour:
   complete: 0
   canSkip: 0
   canContinue: 0
-  successActions:
-  - {fileID: 1068763921}
-  failActions:
-  - {fileID: 653639080}
+  successActions: []
+  failActions: []
 --- !u!1 &434236623
 GameObject:
   m_ObjectHideFlags: 0
@@ -6350,25 +6343,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eeffada57d61dd4daabf7cd8c4c186b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  completeNodes:
-  - {fileID: 1603440986}
-  - {fileID: 804065053}
-  - {fileID: 516806303}
-  skippableObjectives:
-  - {fileID: 1593261451}
-  - {fileID: 30480716}
-  - {fileID: 1194208856}
-  failObjectives:
-  - {fileID: 299760126}
-  - {fileID: 1676930993}
-  - {fileID: 419921400}
-  - {fileID: 1772120102}
-  - {fileID: 313132192}
+  completeNodes: []
+  skippableObjectives: []
+  failObjectives: []
   checkmark: {fileID: 1604599809}
-  failmark: {fileID: 354352988}
-  reportObject: {fileID: 65378653}
-  reportText: {fileID: 104443013}
-  scenarioParent: {fileID: 1843458143}
+  failmark: {fileID: 0}
+  reportObject: {fileID: 0}
+  reportText: {fileID: 0}
+  scenarioParent: {fileID: 0}
 --- !u!4 &588594062
 Transform:
   m_ObjectHideFlags: 0
@@ -6698,7 +6680,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Mark Patch
   reportSuccess: Patch Marked Successfully
-  reportSkip: Patch Not Marked
+  reportSkip: 
   reportFail: Patch Not Marked
   strikeCount: 0
   failed: 0
@@ -6707,8 +6689,7 @@ MonoBehaviour:
   complete: 0
   canSkip: 0
   canContinue: 0
-  successActions:
-  - {fileID: 1060009495}
+  successActions: []
   failActions: []
 --- !u!1 &695306278
 GameObject:
@@ -7607,7 +7588,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Cut Pill
   reportSuccess: Pill Cut Successfully
-  reportSkip: Pill Not Cut
+  reportSkip: 
   reportFail: Pill Not Cut
   strikeCount: 0
   failed: 0
@@ -7616,8 +7597,7 @@ MonoBehaviour:
   complete: 0
   canSkip: 0
   canContinue: 0
-  successActions:
-  - {fileID: 4842687221378738547}
+  successActions: []
   failActions: []
 --- !u!4 &796855426
 Transform:
@@ -7871,7 +7851,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Cart Patch
   reportSuccess: Patch Carted Successfully
-  reportSkip: Patch Not Carted
+  reportSkip: 
   reportFail: Patch Not Carted
   strikeCount: 0
   failed: 0
@@ -7880,8 +7860,7 @@ MonoBehaviour:
   complete: 0
   canSkip: 0
   canContinue: 0
-  successActions:
-  - {fileID: 1072718030}
+  successActions: []
   failActions: []
 --- !u!1 &818778540
 GameObject:
@@ -12187,7 +12166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Sanitize Hands
   reportSuccess: Hands Sanitized Successfully
-  reportSkip: Hands Not Sanitized
+  reportSkip: 
   reportFail: Hands Not Sanitized
   strikeCount: 0
   failed: 0
@@ -12196,8 +12175,7 @@ MonoBehaviour:
   complete: 0
   canSkip: 0
   canContinue: 0
-  successActions:
-  - {fileID: 1994098852}
+  successActions: []
   failActions: []
 --- !u!114 &1194208857
 MonoBehaviour:
@@ -14707,7 +14685,7 @@ PrefabInstance:
     - target: {fileID: 2991886335835148475, guid: e9ede366b2687ea4a8dadc914c6e5ad1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2991886335835148475, guid: e9ede366b2687ea4a8dadc914c6e5ad1,
         type: 3}
@@ -15647,7 +15625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Cart Pills
   reportSuccess: Pills Carted Successfully
-  reportSkip: Pills Not Carted
+  reportSkip: 
   reportFail: Pills Not Carted
   strikeCount: 0
   failed: 0
@@ -15656,8 +15634,7 @@ MonoBehaviour:
   complete: 0
   canSkip: 0
   canContinue: 0
-  successActions:
-  - {fileID: 1072718030}
+  successActions: []
   failActions: []
 --- !u!1 &1486062917
 GameObject:
@@ -16504,7 +16481,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Sanitize Hands
   reportSuccess: Hands Sanitized Successfully
-  reportSkip: Hands Not Sanitized
+  reportSkip: 
   reportFail: Hands Not Sanitized
   strikeCount: 0
   failed: 0
@@ -16513,8 +16490,7 @@ MonoBehaviour:
   complete: 0
   canSkip: 0
   canContinue: 0
-  successActions:
-  - {fileID: 1994098852}
+  successActions: []
   failActions: []
 --- !u!4 &1593261452
 Transform:
@@ -17385,7 +17361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Get Patch
   reportSuccess: Got Patch Successfully
-  reportSkip: Didn't Get Patch
+  reportSkip: 
   reportFail: Got Wrong Medication
   strikeCount: 3
   failed: 0
@@ -17394,10 +17370,8 @@ MonoBehaviour:
   complete: 0
   canSkip: 0
   canContinue: 0
-  successActions:
-  - {fileID: 1967904845}
-  failActions:
-  - {fileID: 327642234}
+  successActions: []
+  failActions: []
 --- !u!1 &1700906718
 GameObject:
   m_ObjectHideFlags: 0
@@ -17721,7 +17695,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Measure Liquid
   reportSuccess: Measured Correct Dosage
-  reportSkip: Didn't Measured Liquid
+  reportSkip: 
   reportFail: Got Wrong Dosage
   strikeCount: 3
   failed: 0
@@ -17730,10 +17704,8 @@ MonoBehaviour:
   complete: 0
   canSkip: 0
   canContinue: 0
-  successActions:
-  - {fileID: 1890883384}
-  failActions:
-  - {fileID: 105428426}
+  successActions: []
+  failActions: []
 --- !u!1001 &1784352137
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21701,18 +21673,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 281374608488387075, guid: 5966f623927a18148a699630a177a1a9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5966f623927a18148a699630a177a1a9, type: 3}
---- !u!114 &4842687221378738547 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4842687221378738548, guid: 5966f623927a18148a699630a177a1a9,
-    type: 3}
-  m_PrefabInstance: {fileID: 4842687221378738546}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09da1f333edc5124fa4f9a73a7c43407, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &5794887391559466867
 PrefabInstance:
   m_ObjectHideFlags: 0
