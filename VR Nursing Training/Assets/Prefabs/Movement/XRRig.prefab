@@ -10121,6 +10121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rightTeleportRay: {fileID: 7548493108140603187}
+  leftTeleportRay: {fileID: 0}
   teleportActivationButton: 2
   activationThreshhold: 0.1
   questionCanvas: {fileID: 7548493106692738278}
