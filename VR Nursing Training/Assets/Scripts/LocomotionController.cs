@@ -59,7 +59,7 @@ public class LocomotionController : MonoBehaviour
             else
             {
                 canvasCam.gameObject.SetActive(false);
-                leftTeleportRay.gameObject.SetActive(CheckIfActivated(rightTeleportRay));
+                leftTeleportRay.gameObject.SetActive(CheckIfActivated(leftTeleportRay));
             }
         }
     }
