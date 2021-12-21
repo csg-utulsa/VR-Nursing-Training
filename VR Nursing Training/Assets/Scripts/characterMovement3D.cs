@@ -34,7 +34,7 @@ public class characterMovement3D : MonoBehaviour
 
     //object placement things
     private bool placeStarted = false;
-    private bool placeOK = false;
+    //private bool placeOK = false;
     private Vector3 placePos;
 
     public GameObject placementTokenPrefab;
@@ -274,7 +274,7 @@ public class characterMovement3D : MonoBehaviour
     void initPlace(){
         if(placeStarted==false){
             placeStarted=true;
-            placeOK=false;
+            //placeOK=false;
             placePos = new Vector3(0,-100,0);
             placementToken = (GameObject) Instantiate(placementTokenPrefab, new Vector3(0,-100,0),Quaternion.identity);
         }
@@ -283,7 +283,7 @@ public class characterMovement3D : MonoBehaviour
         if(placeStarted==true){
             placeStarted=false;
             grabComplete = false;
-            placeOK=false;
+            //placeOK=false;
             Destroy(placementToken);
             placementToken = null;
         }
@@ -318,7 +318,7 @@ public class characterMovement3D : MonoBehaviour
             placementToken.transform.position = hit.point;
             if(placementToken.GetComponent<Place_ScanSurface>().placeOK()){
                 placePos = hit.point;
-                placeOK = true;
+                //placeOK = true;
             }
             else{
                 placementToken.transform.position=placePos;
