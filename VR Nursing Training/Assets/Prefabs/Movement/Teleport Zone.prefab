@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 3285349624518148973}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: 0, y: -0, z: 0}
-  m_LocalScale: {x: 400, y: 400, z: 40000}
+  m_LocalScale: {x: 500, y: 500, z: 50000}
   m_Children:
   - {fileID: 3020837054581837955}
   m_Father: {fileID: 7167235546179536697}
@@ -556,6 +556,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indicatorZone: {fileID: 3285349624518148973}
-  indicatorMaterial: {fileID: 2100000, guid: 64ab95d13ac226e44b9103cda8a275a0, type: 2}
   indicatorText: {fileID: 7374765911677010040}
   zoneName: Teleport Zone
