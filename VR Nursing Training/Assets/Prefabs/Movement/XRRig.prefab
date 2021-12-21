@@ -10174,6 +10174,7 @@ MonoBehaviour:
     m_Bits: 0
   placementTokenPrefab: {fileID: 8483261188390356206, guid: 1963debd288d5bb48b512dc141d25c55,
     type: 3}
+  hud: {fileID: 0}
 --- !u!1 &7548493107888505734
 GameObject:
   m_ObjectHideFlags: 0
