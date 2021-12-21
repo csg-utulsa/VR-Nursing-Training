@@ -13,7 +13,7 @@ public class MenuButtonManager : MonoBehaviour
     public GameObject rigVR;
     public GameObject disableButton;
     public GameObject enableButton;
-
+    public static bool VRToggle = false;
     private void Start()
     {
         rigVR.GetComponent<characterMovement3D>().interactRayCastDistance = 10; // Changes raycast distance to be able to hit menu
@@ -28,6 +28,15 @@ public class MenuButtonManager : MonoBehaviour
     {
         // Load Simulation Start Scene
         // Set any needed values before loading
+        Debug.Log("VRToggle: " + VRToggle);
+        if (VRToggle == true)
+        {
+            characterMovement3D.changeModeToVR = true;
+        } 
+        else
+        {
+            characterMovement3D.changeModeToVR = false;
+        }
         SceneManager.LoadScene("DemoScene");
         
     }
