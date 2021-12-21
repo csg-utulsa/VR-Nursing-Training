@@ -9,6 +9,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class LocomotionController : MonoBehaviour
 {
     public XRController rightTeleportRay;
+    public XRController leftTeleportRay;
     public InputHelpers.Button teleportActivationButton;
     public float activationThreshhold = .1f;
     public Canvas questionCanvas;
@@ -41,6 +42,23 @@ public class LocomotionController : MonoBehaviour
             {
                 canvasCam.gameObject.SetActive(false);
                 rightTeleportRay.gameObject.SetActive(CheckIfActivated(rightTeleportRay));
+            }
+        }
+        if (leftTeleportRay)
+        {
+            if (toggleRayVisible)
+            {
+                leftTeleportRay.gameObject.SetActive(true);
+            }
+            else if (count > 0)
+            {
+                canvasCam.gameObject.SetActive(true);
+                leftTeleportRay.gameObject.SetActive(true);
+            }
+            else
+            {
+                canvasCam.gameObject.SetActive(false);
+                leftTeleportRay.gameObject.SetActive(CheckIfActivated(rightTeleportRay));
             }
         }
     }
