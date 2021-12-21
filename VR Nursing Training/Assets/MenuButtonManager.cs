@@ -36,6 +36,7 @@ public class MenuButtonManager : MonoBehaviour
     {
         // Load Tutorial Scene
         Debug.Log("Loading Tutorial");
+        SceneManager.LoadScene("Tutorial Scene");
         // SceneManager.LoadScene("TutorialScene"); (Not Implemented Yet)
     }
 
