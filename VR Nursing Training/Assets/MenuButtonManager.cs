@@ -74,6 +74,7 @@ public class MenuButtonManager : MonoBehaviour
 
     public void EnableVR()
     {
+        Debug.Log("Enable VR");
         // Enable VR Camera Disable 3D
         characterMovement3D.changeModeToVR = true; // Static Boolean Very Important
         camObj3D.SetActive(false);
@@ -87,6 +88,7 @@ public class MenuButtonManager : MonoBehaviour
 
     public void DisableVR()
     {
+        Debug.Log("Disable VR");
         // Disable VR Enable 3D 
         characterMovement3D.changeModeToVR = false;
         camObjVR.SetActive(false);
