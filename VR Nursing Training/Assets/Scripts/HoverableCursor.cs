@@ -19,6 +19,9 @@ public class HoverableCursor : MonoBehaviour
     public float activationThreshhold = .1f;
 
 
+    public bool spamPrevention = true;
+    private bool interactedLastFrame=false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -77,8 +80,20 @@ public class HoverableCursor : MonoBehaviour
                 foundObject.CursorHighlight();
 
                 if(triggerPull){
+
+                    if(spamPrevention){
+                        if(interactedLastFrame == false){
+                            interactedLastFrame=true;
+                        }
+                        else{
+                            return;
+                        }
+                    }
+
                     Debug.Log("HoverableCursor interact called");
                     foundObject.CursorInteract();
+                }else{
+                    interactedLastFrame=false;
                 }
             }
         }
