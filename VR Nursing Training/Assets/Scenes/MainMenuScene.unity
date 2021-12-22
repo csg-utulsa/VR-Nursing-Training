@@ -626,6 +626,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  flag: 0
 --- !u!65 &109033896
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1363,6 +1364,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  flag: 0
 --- !u!65 &279005273
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1791,6 +1793,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  flag: 0
 --- !u!65 &377258705
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2032,7 +2035,7 @@ PrefabInstance:
     - target: {fileID: 1405898044693227596, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2632912369471152309, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
@@ -3503,6 +3506,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  flag: 0
 --- !u!65 &710617165
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6714,6 +6718,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  flag: 0
 --- !u!65 &1519539746
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7059,6 +7064,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  flag: 0
 --- !u!65 &1573746571
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8172,6 +8178,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  flag: 0
 --- !u!65 &1855104537
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8732,6 +8739,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  flag: 0
 --- !u!65 &1979460708
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8893,6 +8901,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  flag: 0
 --- !u!65 &1981615031
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9187,6 +9196,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  flag: 0
 --- !u!65 &1993061507
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9641,6 +9651,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  flag: 0
 --- !u!65 &2025975673
 BoxCollider:
   m_ObjectHideFlags: 0
