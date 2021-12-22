@@ -43,6 +43,14 @@ public class MenuButtonManager : MonoBehaviour
 
     public void BeginTutorial()
     {
+        if (VRToggle == true)
+        {
+            characterMovement3D.changeModeToVR = true;
+        }
+        else
+        {
+            characterMovement3D.changeModeToVR = false;
+        }
         // Load Tutorial Scene
         Debug.Log("Loading Tutorial");
         SceneManager.LoadScene("Tutorial Scene");
