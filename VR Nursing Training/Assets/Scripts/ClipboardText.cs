@@ -34,20 +34,20 @@ public class ClipboardText : MonoBehaviour
                     doctorName + "\n\n" +
                     "ORDER SHEET" + "\n" +
                     "Date/Time: " + dateTime + "\n" +
-                    "Orders:" + "\n" +
+                    "<color=blue>Orders:" + "\n" +
                     "Use " + parentScenario.getCategory() + " Medication\n" +
                     parentScenario.getMedicine();
         if (parentScenario.getCategory() == "ORAL")
         {
-            text.text += ", " + parentScenario.getDosage() + " Pills\n";
+            text.text += ", " + parentScenario.getDosage() + " Pills</color>\n";
         }
         if (parentScenario.getCategory() == "PATCH")
         {
-            text.text += "\n";
+            text.text += "</color>\n";
         }
         if (parentScenario.getCategory() == "LIQUID")
         {
-            text.text += ", " + parentScenario.getDosage() + "mL\n";
+            text.text += ", " + parentScenario.getDosage() + "mL</color>\n";
         }
 
         text.text += doctorName;
