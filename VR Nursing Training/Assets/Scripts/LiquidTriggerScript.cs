@@ -39,8 +39,8 @@ public class LiquidTriggerScript : InteractableBase
             {
                 
                 Debug.Log("Liquid Doing Thing");
-                liquidEmpty.SetActive(false);
-                liquidFull.SetActive(true);
+                //liquidEmpty.SetActive(false);
+                //liquidFull.SetActive(true);
                 onPour.Invoke(liquidType);
                 //measureCanvas.SetActive(true);
                 //measureCanvas.GetComponent<LiquidQuestionScript>().setCup(this);
