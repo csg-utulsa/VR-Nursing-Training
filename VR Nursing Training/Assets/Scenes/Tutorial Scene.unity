@@ -545,8 +545,8 @@ Transform:
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children:
   - {fileID: 929231666}
-  m_Father: {fileID: 2594969061236237961}
-  m_RootOrder: 3
+  m_Father: {fileID: 330312598}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!64 &67223410
 MeshCollider:
@@ -2421,6 +2421,39 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 329255675}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &330312597
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 330312598}
+  m_Layer: 0
+  m_Name: Tutorial Boxes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &330312598
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330312597}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 67223409}
+  - {fileID: 1461833470}
+  - {fileID: 955210681}
+  m_Father: {fileID: 2594969061236237961}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &344747429
 GameObject:
   m_ObjectHideFlags: 0
@@ -6017,6 +6050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25ac96665ec5843459215fdb1b946ed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tutText: 
 --- !u!114 &872840623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6622,6 +6656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25ac96665ec5843459215fdb1b946ed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tutText: 
 --- !u!114 &929231668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6879,8 +6914,8 @@ Transform:
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children:
   - {fileID: 872840621}
-  m_Father: {fileID: 2594969061236237961}
-  m_RootOrder: 10
+  m_Father: {fileID: 330312598}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: -90}
 --- !u!64 &955210682
 MeshCollider:
@@ -8617,7 +8652,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 3.5, z: 4}
   m_Children: []
   m_Father: {fileID: 2594969061236237961}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1327589888
 BoxCollider:
@@ -9201,6 +9236,86 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1382790175}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1385218592
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2594969060513896255}
+    m_Modifications:
+    - target: {fileID: 6700605892293357319, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
+        type: 3}
+      propertyPath: zoneName
+      value: Bathroom Entrance
+      objectReference: {fileID: 0}
+    - target: {fileID: 7167235546179536697, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7167235546179536697, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.9430001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7167235546179536697, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7167235546179536697, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.762
+      objectReference: {fileID: 0}
+    - target: {fileID: 7167235546179536697, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7167235546179536697, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7167235546179536697, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7167235546179536697, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7167235546179536697, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7167235546179536697, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7167235546179536697, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8242107070829370906, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
+        type: 3}
+      propertyPath: m_Name
+      value: Teleport Zone (7)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6, type: 3}
+--- !u!4 &1385218593 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7167235546179536697, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1385218592}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1388834926
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9924,8 +10039,8 @@ Transform:
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children:
   - {fileID: 2106890910}
-  m_Father: {fileID: 2594969061236237961}
-  m_RootOrder: 4
+  m_Father: {fileID: 330312598}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: -90}
 --- !u!64 &1461833471
 MeshCollider:
@@ -13022,6 +13137,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25ac96665ec5843459215fdb1b946ed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tutText: Pick up the pills and put them in the pill cutter. Take 1 and a half pills
+    and put them on the cart.
 --- !u!114 &2106890912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13069,8 +13186,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 11
+  m_fontSizeBase: 11
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -13304,7 +13421,7 @@ PrefabInstance:
     - target: {fileID: 1181033458290455976, guid: cab9d462c08238144a02f59b02ddb1c5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1181033458290455976, guid: cab9d462c08238144a02f59b02ddb1c5,
         type: 3}
@@ -13935,8 +14052,9 @@ Transform:
   - {fileID: 1472194939}
   - {fileID: 1739276311}
   - {fileID: 2103993576}
+  - {fileID: 1385218593}
   m_Father: {fileID: 2594969061236237961}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2594969060529777424
 MeshRenderer:
@@ -14866,14 +14984,12 @@ Transform:
   - {fileID: 2594969060830782771}
   - {fileID: 1887325276}
   - {fileID: 2594969060667522372}
-  - {fileID: 67223409}
-  - {fileID: 1461833470}
+  - {fileID: 330312598}
   - {fileID: 2594969060513896255}
   - {fileID: 2594969061898106666}
   - {fileID: 1327589887}
   - {fileID: 2594969061861372832}
   - {fileID: 923078656}
-  - {fileID: 955210681}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15708,7 +15824,7 @@ Transform:
   m_Children:
   - {fileID: 2594969061981867264}
   m_Father: {fileID: 2594969061236237961}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!65 &2594969061861372833
 BoxCollider:
@@ -15821,7 +15937,7 @@ Transform:
   m_Children:
   - {fileID: 2594969060230702710}
   m_Father: {fileID: 2594969061236237961}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2594969061981867264
 Transform:
