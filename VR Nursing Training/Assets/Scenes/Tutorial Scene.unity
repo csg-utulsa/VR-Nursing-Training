@@ -9558,6 +9558,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1739276310}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1739276312 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8242107070829370906, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1739276310}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1752764135
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10301,6 +10307,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7246323075810801663, guid: 6d431101da8bd144ea8524230aa943e1,
+        type: 3}
+      propertyPath: inactiveTeles.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7246323075810801663, guid: 6d431101da8bd144ea8524230aa943e1,
+        type: 3}
+      propertyPath: inactiveTeles.Array.data[0]
+      value: 
+      objectReference: {fileID: 2594969061206365379}
+    - target: {fileID: 7246323075810801663, guid: 6d431101da8bd144ea8524230aa943e1,
+        type: 3}
+      propertyPath: inactiveTeles.Array.data[1]
+      value: 
+      objectReference: {fileID: 1739276312}
     - target: {fileID: 8453186518924561673, guid: 6d431101da8bd144ea8524230aa943e1,
         type: 3}
       propertyPath: m_Name
@@ -12685,6 +12706,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6, type: 3}
+--- !u!1 &2594969061206365379 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8242107070829370906, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
+    type: 3}
+  m_PrefabInstance: {fileID: 2594969061206365378}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2594969061221688798
 PrefabInstance:
   m_ObjectHideFlags: 0
