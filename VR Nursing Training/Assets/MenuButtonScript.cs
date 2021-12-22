@@ -23,7 +23,7 @@ public class MenuButtonScript : InteractableBase
 
     public override void Interact(Collider other)
     {
-        onInteract.Invoke();
+        
         if (flag == true)
         {
             MenuButtonManager.VRToggle = true;
@@ -34,5 +34,7 @@ public class MenuButtonScript : InteractableBase
             Debug.Log("NOT USING VR");
         }
         flag = false;
+
+        onInteract.Invoke();
     }
 }
