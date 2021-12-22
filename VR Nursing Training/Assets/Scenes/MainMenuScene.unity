@@ -675,7 +675,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 109033895}
         m_TargetAssemblyTypeName: MenuButtonScript, Assembly-CSharp
-        m_MethodName: Interact
+        m_MethodName: callInteract
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 109033896}
@@ -929,7 +929,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &230426063
 Transform:
   m_ObjectHideFlags: 0
@@ -1973,9 +1973,9 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 377258704}
+      - m_Target: {fileID: 109033895}
         m_TargetAssemblyTypeName: MenuButtonScript, Assembly-CSharp
-        m_MethodName: Interact
+        m_MethodName: callInteract
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 377258705}
@@ -4173,7 +4173,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &830393375
 Transform:
   m_ObjectHideFlags: 0
@@ -4304,7 +4304,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &936186763
 Transform:
   m_ObjectHideFlags: 0
@@ -5615,7 +5615,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1336936482
 Transform:
   m_ObjectHideFlags: 0
@@ -8786,9 +8786,9 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1979460707}
+      - m_Target: {fileID: 109033895}
         m_TargetAssemblyTypeName: MenuButtonScript, Assembly-CSharp
-        m_MethodName: Interact
+        m_MethodName: callInteract
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1979460708}
@@ -9376,9 +9376,9 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1993061506}
+      - m_Target: {fileID: 109033895}
         m_TargetAssemblyTypeName: MenuButtonScript, Assembly-CSharp
-        m_MethodName: Interact
+        m_MethodName: callInteract
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1993061507}
