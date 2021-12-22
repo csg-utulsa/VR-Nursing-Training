@@ -1973,7 +1973,6 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 377258704}
         m_TargetAssemblyTypeName: MenuButtonScript, Assembly-CSharp
         m_MethodName: callInteract
         m_Mode: 2
@@ -8786,7 +8785,6 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1979460707}
         m_TargetAssemblyTypeName: MenuButtonScript, Assembly-CSharp
         m_MethodName: callInteract
         m_Mode: 2
@@ -9376,7 +9374,6 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1993061506}
         m_TargetAssemblyTypeName: MenuButtonScript, Assembly-CSharp
         m_MethodName: callInteract
         m_Mode: 2
