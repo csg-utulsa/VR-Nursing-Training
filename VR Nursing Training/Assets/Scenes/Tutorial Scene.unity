@@ -1065,6 +1065,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 746703673}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &754140266 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7548493107911844023, guid: 0af8f3646a662394eb8f95def6a25298,
+    type: 3}
+  m_PrefabInstance: {fileID: 1388834926}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &758992158 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7167235546179536697, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
@@ -1587,6 +1593,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1477141302, guid: 0af8f3646a662394eb8f95def6a25298, type: 3}
+      propertyPath: hud
+      value: 
+      objectReference: {fileID: 754140266}
     - target: {fileID: 1564922136, guid: 0af8f3646a662394eb8f95def6a25298, type: 3}
       propertyPath: liquidObject
       value: 
@@ -2684,6 +2694,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.00177
+      objectReference: {fileID: 0}
+    - target: {fileID: 5581044501349312897, guid: cab9d462c08238144a02f59b02ddb1c5,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8522974415120292106, guid: cab9d462c08238144a02f59b02ddb1c5,
         type: 3}
