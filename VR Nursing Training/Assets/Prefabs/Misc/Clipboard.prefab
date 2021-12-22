@@ -417,6 +417,12 @@ MonoBehaviour:
   interactEvent:
     m_PersistentCalls:
       m_Calls: []
+  cursorHighlight:
+    m_PersistentCalls:
+      m_Calls: []
+  lookHighlight:
+    m_PersistentCalls:
+      m_Calls: []
   initialPosition: {x: 0, y: 0, z: 0}
   initialAngles: {x: 0, y: 0, z: 0}
   material: {fileID: 0}
