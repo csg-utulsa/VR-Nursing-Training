@@ -14,6 +14,12 @@ public class MenuButtonScript : InteractableBase
         Interact(other);
         
     }
+    public void callInteract(Collider other)
+    {
+        flag = true;
+        Interact(other);
+    }
+
 
     public override void Interact(Collider other)
     {
