@@ -21,7 +21,7 @@ public class CheckComplete : MonoBehaviour
 
     void Awake()
     {
-        text = reportText.GetComponent<Text>();
+        if (reportText != null) text = reportText.GetComponent<Text>();
     }
 
     // Update is called once per frame
@@ -45,15 +45,15 @@ public class CheckComplete : MonoBehaviour
                     }
                     if (noSkips)
                     {
-                        checkmark.SetActive(true);
+                        if (checkmark != null) checkmark.SetActive(true);
                     }
                     else
                     {
-                        failmark.SetActive(true);
+                        if (failmark != null) failmark.SetActive(true);
                     }
 
-                    reportObject.SetActive(true);
-                    text.text = scenarioParent.getReport();
+                    if (reportObject != null) reportObject.SetActive(true);
+                    if (reportText != null) text.text = scenarioParent.getReport();
                     scenarioParent.stopNodes();
                 }
             }
@@ -65,10 +65,10 @@ public class CheckComplete : MonoBehaviour
                 {
                     finished = true;
 
-                    failmark.SetActive(true);
+                    if (failmark != null) failmark.SetActive(true);
 
-                    reportObject.SetActive(true);
-                    text.text = scenarioParent.getReport();
+                    if (reportObject != null) reportObject.SetActive(true);
+                    if (reportText != null) text.text = scenarioParent.getReport();
                     scenarioParent.stopNodes();
                 }
             }

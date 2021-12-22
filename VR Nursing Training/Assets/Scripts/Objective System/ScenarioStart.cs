@@ -31,7 +31,7 @@ public class ScenarioStart : MonoBehaviour
         }
         medicineType = possibleStarts[startIndex].getMedicine();
         targetDosage = possibleStarts[startIndex].getDosage();
-        clipboards[startIndex].SetActive(true);
+        if (clipboards.Length > startIndex) clipboards[startIndex].SetActive(true);
     }
     
     // Adds to the report
