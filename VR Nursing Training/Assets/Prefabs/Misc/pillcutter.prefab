@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 651199416}
   m_Layer: 0
   m_Name: Cut Pill Spawn Location
-  m_TagString: Untagged
+  m_TagString: PillCutter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 728116885}
   m_Layer: 0
   m_Name: ExtraCollider
-  m_TagString: Untagged
+  m_TagString: PillCutter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -85,10 +85,9 @@ GameObject:
   - component: {fileID: 2128698125}
   - component: {fileID: 2128698127}
   - component: {fileID: 2128698126}
-  - component: {fileID: 281374608488387075}
   m_Layer: 6
   m_Name: Pill Cutter Tray
-  m_TagString: Untagged
+  m_TagString: PillCutter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -135,24 +134,81 @@ MonoBehaviour:
   pill: {fileID: 2276514548419805056, guid: 1bc346026eafb9040bf9e30a007a9580, type: 3}
   onSpawn:
     m_PersistentCalls:
-      m_Calls: []
---- !u!114 &281374608488387075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2128698124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fcc92597787b4f44ba3134a116ca09f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ActionCheckMedicine, Assembly-CSharp
+        m_MethodName: CheckMedicine
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ActionCheckMedicine, Assembly-CSharp
+        m_MethodName: CheckMedicine
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ActionCheckMedicine, Assembly-CSharp
+        m_MethodName: CheckMedicine
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ActionCheckMedicine, Assembly-CSharp
+        m_MethodName: CheckMedicine
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ActionCheckMedicine, Assembly-CSharp
+        m_MethodName: CheckMedicine
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ActionCheckMedicine, Assembly-CSharp
+        m_MethodName: CheckMedicine
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   patchNitro: {fileID: 4816892652931515861, guid: 034b5bc6e25549d4a8f1e761c7819922,
     type: 3}
-  onSpawn:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &275248530143692066
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,7 +223,7 @@ GameObject:
   - component: {fileID: 927191914}
   m_Layer: 0
   m_Name: Cutter
-  m_TagString: Untagged
+  m_TagString: PillCutter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -266,7 +322,7 @@ GameObject:
   - component: {fileID: 4842687221378738548}
   m_Layer: 6
   m_Name: Pill Cutter Trigger
-  m_TagString: Untagged
+  m_TagString: PillCutter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -393,8 +449,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09da1f333edc5124fa4f9a73a7c43407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myObjective: {fileID: 0}
-  failAction: 0
 --- !u!1 &2834187726843450558
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,7 +460,7 @@ GameObject:
   - component: {fileID: 3179222565389782532}
   m_Layer: 0
   m_Name: pillcutter
-  m_TagString: Untagged
+  m_TagString: PillCutter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -444,7 +498,7 @@ GameObject:
   - component: {fileID: 1998866410}
   m_Layer: 0
   m_Name: Cutter top
-  m_TagString: Untagged
+  m_TagString: PillCutter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
