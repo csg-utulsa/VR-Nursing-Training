@@ -224,7 +224,7 @@ public class characterMovement3D : MonoBehaviour
                 if ( hit.collider.gameObject.GetComponent<InteractableBase>() != null)
                 {
                     GameObject otherGameObject = hit.collider.gameObject;
-                    if (handLocation.transform.childCount == 0) //hand is empty
+                    if (handLocation.transform.childCount == 0) //hand is empty, pickup checks
                     {
                         if(hit.collider.gameObject.GetComponent<InteractableScript>() != null){ //Check if the target object is an InteractableScript and NOT a base class
                             grabFrom = otherGameObject.transform.position;
@@ -239,6 +239,9 @@ public class characterMovement3D : MonoBehaviour
                             if(otherGameObject.GetComponent<InteractableScript>().getFocusOnPickup()){
                                 hud.SetActive(false);
                             }
+
+                            //Perform the OnPickup invokation
+                            otherGameObject.GetComponent<InteractableBase>().PickupInvoke();
 
                             break;
                         }
@@ -256,6 +259,10 @@ public class characterMovement3D : MonoBehaviour
                             if(otherGameObject.GetComponent<InteractableScript>().getFocusOnPickup()){
                                 hud.SetActive(false);
                             }
+
+                            //Perform the OnPickup invokation
+                            otherGameObject.GetComponent<InteractableBase>().PickupInvoke();
+
                             break;
                         }
                         //else if (hit.collider.gameObject.GetComponent<PillCutterScript>() != null)
@@ -297,6 +304,9 @@ public class characterMovement3D : MonoBehaviour
             Destroy(placementToken);
             hud.SetActive(true);
             placementToken = null;
+            //Perform the OnDrop invokation
+
+
         }
     }
 
@@ -357,6 +367,7 @@ public class characterMovement3D : MonoBehaviour
                 gobj.GetComponent<Rigidbody>().useGravity = true;
                 gobj.GetComponent<Rigidbody>().isKinematic = false;
                 gobj.GetComponent<InteractableScript>().PlaceDown();
+                gobj.GetComponent<InteractableBase>().DropInvoke();
                 
             }
 
@@ -370,6 +381,7 @@ public class characterMovement3D : MonoBehaviour
                 gobj.GetComponent<Rigidbody>().isKinematic = false;
                 //gobj.GetComponent<InteractableScript>().PlaceDown();
                 gobj.GetComponent<InteractableScript>().PlaceHere(placementToken.transform.position);
+                gobj.GetComponent<InteractableBase>().DropInvoke();
             } else
             {
                 //do nothing

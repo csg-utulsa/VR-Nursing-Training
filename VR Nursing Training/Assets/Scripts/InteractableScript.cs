@@ -4,6 +4,11 @@ using UnityEngine;
 using UnityEngine.Events;
 public class InteractableScript : InteractableBase, HoverableBase
 {
+
+
+
+
+
     public UnityEvent onCombine;
     public UnityEvent interactEvent;
     public UnityEvent cursorHighlight;
