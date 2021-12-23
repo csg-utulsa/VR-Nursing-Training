@@ -4,31 +4,19 @@ using UnityEngine;
 
 public class TutorialCountMedicine : ActionBase
 {
-    private double pillCount = 0;
-    private double liquidCount = 0;
+    public double pillCount = 0;
+    public double liquidCount = 0;
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Tutorial Cart has enter");
         if (other.CompareTag("Pill"))
         {
-            if (other.gameObject.GetComponent<InteractableScript>().getType() == medicineType)
-            {
-                pillCount += 1;
-            }
+            pillCount += 1;
         }
         if (other.CompareTag("HalfPill"))
         {
-            if (other.gameObject.GetComponent<InteractableScript>().getType() == medicineType)
-            {
-                pillCount += 0.5;
-            }
-        }
-        if (other.CompareTag("Patch"))
-        {
-            if (other.gameObject.GetComponent<InteractableScript>().getType() == medicineType)
-            {
-                pillCount += 1;
-            }
+            pillCount += 0.5;
         }
     }
     private void OnTriggerStay(Collider other)
@@ -49,17 +37,11 @@ public class TutorialCountMedicine : ActionBase
     {
         if (other.CompareTag("Pill"))
         {
-            if (other.gameObject.GetComponent<InteractableScript>().getType() == medicineType)
-            {
-                pillCount -= 1;
-            }
+            pillCount -= 1;
         }
         if (other.CompareTag("HalfPill"))
         {
-            if (other.gameObject.GetComponent<InteractableScript>().getType() == medicineType)
-            {
-                pillCount -= 0.5;
-            }
+            pillCount -= 0.5;
         }
         if (other.CompareTag("Liquid"))
         {

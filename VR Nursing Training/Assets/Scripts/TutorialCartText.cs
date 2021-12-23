@@ -9,7 +9,8 @@ public class TutorialCartText : MonoBehaviour
 {
     private TextMeshPro cartText = null;
     public GameObject tutorialCart = null;
-    private double pillCountText = 0;
+    //private 
+    //private double pillCountText = 0;
     private double liquidCountText = 0;
 
     private void Awake()
