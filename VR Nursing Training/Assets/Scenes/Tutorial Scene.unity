@@ -811,7 +811,7 @@ MonoBehaviour:
   targets: []
   combineDist: 0
   isInteractable: 1
-  type: IBUPROFEN
+  type: SUGARPILLS
   interactWithHand: 1
   focusOnPickup: 0
   distanceFromCamera: 0.5
@@ -3228,7 +3228,8 @@ MonoBehaviour:
   complete: 0
   canSkip: 0
   canContinue: 0
-  successActions: []
+  successActions:
+  - {fileID: 669610850}
   failActions: []
 --- !u!4 &378245495
 Transform:
@@ -5275,7 +5276,8 @@ MonoBehaviour:
   complete: 0
   canSkip: 0
   canContinue: 0
-  successActions: []
+  successActions:
+  - {fileID: 2594969061221688800}
   failActions: []
 --- !u!4 &655178780
 Transform:
@@ -5298,6 +5300,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1134659125}
     m_Modifications:
+    - target: {fileID: 2128698126, guid: 5966f623927a18148a699630a177a1a9, type: 3}
+      propertyPath: onSpawn.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2128698126, guid: 5966f623927a18148a699630a177a1a9, type: 3}
+      propertyPath: onSpawn.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 669610851}
+    - target: {fileID: 2128698126, guid: 5966f623927a18148a699630a177a1a9, type: 3}
+      propertyPath: onSpawn.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CheckMedicine
+      objectReference: {fileID: 0}
     - target: {fileID: 2834187726843450558, guid: 5966f623927a18148a699630a177a1a9,
         type: 3}
       propertyPath: m_Name
@@ -5375,6 +5389,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5966f623927a18148a699630a177a1a9, type: 3}
+--- !u!1 &669610849 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2128698124, guid: 5966f623927a18148a699630a177a1a9,
+    type: 3}
+  m_PrefabInstance: {fileID: 669610848}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &669610850 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4842687221378738548, guid: 5966f623927a18148a699630a177a1a9,
+    type: 3}
+  m_PrefabInstance: {fileID: 669610848}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09da1f333edc5124fa4f9a73a7c43407, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &669610851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669610849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42024e2ff4151704eae4ab5b9935dc4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  notTarget: 0
+  onCollision: 0
 --- !u!1 &671838363
 GameObject:
   m_ObjectHideFlags: 0
@@ -7924,7 +7970,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: 655178778}
-  medicineCategory: 
+  medicineCategory: SUGARPILLS
   medicineType: ORAL
   targetDosage: 1.5
 --- !u!4 &969266290
@@ -14260,7 +14306,8 @@ MonoBehaviour:
   complete: 0
   canSkip: 0
   canContinue: 0
-  successActions: []
+  successActions:
+  - {fileID: 669610851}
   failActions: []
 --- !u!4 &1972440614
 Transform:
@@ -17479,6 +17526,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2594969060513896255}
     m_Modifications:
+    - target: {fileID: 441075861359207125, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
+        type: 3}
+      propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 441075861359207125, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
+        type: 3}
+      propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 441075861359207125, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
+        type: 3}
+      propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2594969061221688800}
+    - target: {fileID: 441075861359207125, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
+        type: 3}
+      propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 441075861359207125, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
+        type: 3}
+      propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: performAction
+      objectReference: {fileID: 0}
+    - target: {fileID: 441075861359207125, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
+        type: 3}
+      propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ActionBase, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 441075861359207125, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
+        type: 3}
+      propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1251000881025170245, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
         type: 3}
       propertyPath: m_text
@@ -17542,10 +17624,28 @@ PrefabInstance:
     - target: {fileID: 8242107070829370906, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
         type: 3}
       propertyPath: m_Name
-      value: Teleport Zone (4)
+      value: Front Desk Teleport
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6, type: 3}
+--- !u!1 &2594969061221688799 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8242107070829370906, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
+    type: 3}
+  m_PrefabInstance: {fileID: 2594969061221688798}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2594969061221688800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2594969061221688799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09da1f333edc5124fa4f9a73a7c43407, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2594969061236237960
 GameObject:
   m_ObjectHideFlags: 0

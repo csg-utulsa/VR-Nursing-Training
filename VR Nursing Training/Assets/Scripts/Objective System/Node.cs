@@ -7,7 +7,7 @@ public class Node : MonoBehaviour
     // Fields used by all node types
     public Node[] previousList; // List containing previous nodes in the graph
     [HideInInspector] public bool active = false; // Indicates whether the node is active
-    [HideInInspector] public bool complete = false; // Indicates whether the node is fully complete
+    /*[HideInInspector]*/ public bool complete = false; // Indicates whether the node is fully complete
     [HideInInspector] public bool saturated = false; // Indicates if the node is finished being active (i.e. all objectives are skipped or complete)
     [HideInInspector] public bool canContinue = false; // Indicates whether the next node(s) can be activated
     public bool canSkip = false; // Indicates whether the node can be skipped (only set in start, never updated)
