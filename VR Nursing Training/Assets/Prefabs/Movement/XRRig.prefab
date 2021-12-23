@@ -12216,6 +12216,11 @@ PrefabInstance:
       propertyPath: m_RenderMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3475115004400167873, guid: 306f2b942861c39418497760f2e04e01,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4824641247378358841, guid: 306f2b942861c39418497760f2e04e01,
         type: 3}
       propertyPath: playerBody
