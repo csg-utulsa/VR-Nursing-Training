@@ -74,6 +74,16 @@ public class TutorialCountMedicine : ActionBase
         performAction();
     }
 
+    public double getCurrentPills()
+    {
+        return pillCount;
+    }
+
+    public double GetCurrentLiquid()
+    {
+        return liquidCount;
+    }
+
     /*
     public double getCurrentDosage()
     {
