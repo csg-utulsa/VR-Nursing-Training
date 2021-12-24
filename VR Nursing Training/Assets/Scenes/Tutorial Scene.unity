@@ -1052,7 +1052,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 98551842}
   m_LocalRotation: {x: -0.2705991, y: 0.6532819, z: 0.6532799, w: 0.27059996}
-  m_LocalPosition: {x: 2.4252, y: 1.0833, z: -11.6983}
+  m_LocalPosition: {x: 1.736, y: 1.083, z: -11.67}
   m_LocalScale: {x: 100.00013, y: 100.00002, z: 100.000084}
   m_Children:
   - {fileID: 251758292}
@@ -2469,8 +2469,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: 313829422}
-  medicineCategory: SYRUP
-  medicineType: LIQUID
+  medicineCategory: LIQUID
+  medicineType: SYRUP
   targetDosage: 10
 --- !u!114 &275899103 stripped
 MonoBehaviour:
@@ -6131,7 +6131,7 @@ PrefabInstance:
     - target: {fileID: 3179222565389782532, guid: 5966f623927a18148a699630a177a1a9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.039
+      value: 2.254
       objectReference: {fileID: 0}
     - target: {fileID: 3179222565389782532, guid: 5966f623927a18148a699630a177a1a9,
         type: 3}
@@ -6141,7 +6141,7 @@ PrefabInstance:
     - target: {fileID: 3179222565389782532, guid: 5966f623927a18148a699630a177a1a9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -11.69
+      value: -11.674
       objectReference: {fileID: 0}
     - target: {fileID: 3179222565389782532, guid: 5966f623927a18148a699630a177a1a9,
         type: 3}
@@ -8938,8 +8938,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: 655178778}
-  medicineCategory: SUGARPILLS
-  medicineType: ORAL
+  medicineCategory: ORAL
+  medicineType: SUGARPILLS
   targetDosage: 1.5
 --- !u!4 &969266290
 Transform:
