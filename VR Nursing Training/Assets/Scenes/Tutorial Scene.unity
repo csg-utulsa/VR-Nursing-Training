@@ -1279,7 +1279,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &127161905
 Transform:
   m_ObjectHideFlags: 0
@@ -3041,7 +3041,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &307184326
 Transform:
   m_ObjectHideFlags: 0
@@ -4006,6 +4006,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1238523523714365902, guid: 18eba83f63c54a94b9e85b24993dd445,
         type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1238523523714365902, guid: 18eba83f63c54a94b9e85b24993dd445,
+        type: 3}
       propertyPath: m_TagString
       value: Sharpie
       objectReference: {fileID: 0}
@@ -4544,7 +4549,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   labelText: {fileID: 1639342389}
   labelIcon: {fileID: 158596510}
-  iconSprite: {fileID: 21300000, guid: fbe6d68063147e64589039b2e7cfcd46, type: 3}
+  iconSprite: {fileID: 21300000, guid: 310b76a60e88b1a47856c2d5913b6889, type: 3}
   medicineParent: {fileID: 98551842}
   useText: 0
 --- !u!4 &439048131
@@ -9060,6 +9065,7 @@ Transform:
   - {fileID: 1972440614}
   - {fileID: 378245495}
   - {fileID: 157178074}
+  - {fileID: 1868301575}
   m_Father: {fileID: 6655441}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9609,8 +9615,8 @@ MonoBehaviour:
   - Great! We need to go to the medroom and pour out some pills. To open containers,
     pick up the container and use it on the pill cutter tray.
   - Cut the pill with the blade, so we can make one and a half.
-  - Now they should be good to carry to the green and white cart at the other end
-    of the room. Right click to place objects down.
+  - 'Now they should be good to carry 1.5 pills to the green and white cart at the
+    other end of the room. Right click to place objects down. '
   - Sweet!  Next up, we'll need to pour out some of the syrup on your left. Pour
     the syrup from the bottle into the glass with left click after picking it up.
   - We need to choose 20mL of medication using the new window.
@@ -9618,11 +9624,19 @@ MonoBehaviour:
   - Sign the date with the sharpie on the paper at the front desk and you'll be ready
     for the sim.
   - The button on the elevator wall behind you will start the sim!
-  keyboardTextObject: {fileID: 0}
+  keyboardTextObject: {fileID: 1759323890}
   vrTextList: []
   vrTextObject: {fileID: 0}
-  activateNodeList: []
-  activateObjects: []
+  activateNodeList:
+  - {fileID: 313829422}
+  - {fileID: 313829422}
+  - {fileID: 1864122512}
+  - {fileID: 1864122512}
+  activateObjects:
+  - {fileID: 307184325}
+  - {fileID: 3472772165644973200}
+  - {fileID: 127161904}
+  - {fileID: 2063132676}
 --- !u!4 &1074350756
 Transform:
   m_ObjectHideFlags: 0
@@ -13821,7 +13835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   completeNodes:
-  - {fileID: 157178076}
+  - {fileID: 1868301574}
   skippableObjectives: []
   failObjectives: []
   checkmark: {fileID: 261223076}
@@ -14470,6 +14484,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1752764135}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1759323890 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4289906699334953086, guid: 0af8f3646a662394eb8f95def6a25298,
+    type: 3}
+  m_PrefabInstance: {fileID: 1388834926}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1768892913
 GameObject:
   m_ObjectHideFlags: 0
@@ -14745,6 +14765,83 @@ Transform:
   m_Father: {fileID: 261223077}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1868301573
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1868301575}
+  - component: {fileID: 1868301574}
+  - component: {fileID: 1868301576}
+  m_Layer: 0
+  m_Name: Part One Complete
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1868301574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868301573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e956f245f0f1dc241bd7a0aa9aeb8522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousList:
+  - {fileID: 157178076}
+  active: 0
+  complete: 0
+  saturated: 0
+  canContinue: 0
+  canSkip: 0
+  objective: {fileID: 1868301576}
+--- !u!4 &1868301575
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868301573}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 969266290}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1868301576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868301573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bed5c6707fc6ef4aa88ef64f847e75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Transition
+  reportSuccess: 
+  reportSkip: 
+  reportFail: 
+  strikeCount: 0
+  failed: 0
+  active: 0
+  skipped: 0
+  complete: 0
+  canSkip: 0
+  canContinue: 0
+  successActions: []
+  failActions: []
 --- !u!1 &1887325275
 GameObject:
   m_ObjectHideFlags: 0
@@ -16179,6 +16276,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2062754381}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2063132676 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1238523523714365902, guid: 18eba83f63c54a94b9e85b24993dd445,
+    type: 3}
+  m_PrefabInstance: {fileID: 392108366}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2068460354
 GameObject:
   m_ObjectHideFlags: 0
@@ -20933,28 +21036,13 @@ GameObject:
   - component: {fileID: 7183425364395998965}
   - component: {fileID: 3686887192890926476}
   - component: {fileID: 8323663530709774030}
-  - component: {fileID: 3472772165644973201}
   m_Layer: 6
   m_Name: LiquidCup
   m_TagString: Liquid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &3472772165644973201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3472772165644973200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9bde754c1721794d9aabffecb8036f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  emptyLiquid: {fileID: 2023423508}
-  fullLiquid: {fileID: 1893960540}
+  m_IsActive: 0
 --- !u!1 &3493132979703838064
 GameObject:
   m_ObjectHideFlags: 0
@@ -20970,7 +21058,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3493132979703838065
 Transform:
   m_ObjectHideFlags: 0
@@ -27408,16 +27496,16 @@ MonoBehaviour:
   interactEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: b9bde754c1721794d9aabffecb8036f8, type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
-        m_MethodName: set_name
-        m_Mode: 5
+      - m_Target: {fileID: 933271794}
+        m_TargetAssemblyTypeName: ActionBase, Assembly-CSharp
+        m_MethodName: performAction
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: CorrectDosage
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   isInteractable: 0
