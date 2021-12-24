@@ -12,6 +12,7 @@ public class ActionBase : MonoBehaviour
     // Set objective to complete if the action is performed
     public void performAction()
     {
+
         if (failAction)
         {
             foreach (Objective current in myObjectives)
