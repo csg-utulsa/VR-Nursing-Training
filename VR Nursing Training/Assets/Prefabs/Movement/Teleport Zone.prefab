@@ -374,6 +374,7 @@ GameObject:
   - component: {fileID: 4392901391532248162}
   - component: {fileID: 441075861359207125}
   - component: {fileID: 6700605892293357319}
+  - component: {fileID: 7643818197759861378}
   m_Layer: 8
   m_Name: Teleport Zone
   m_TagString: Teleport
@@ -558,3 +559,30 @@ MonoBehaviour:
   indicatorZone: {fileID: 3239606601438789440}
   indicatorText: {fileID: 7374765911677010040}
   zoneName: Teleport Zone
+--- !u!114 &7643818197759861378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8242107070829370906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ab793844aa91de428a453842696b3a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onTeleport:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8242107070829370906}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

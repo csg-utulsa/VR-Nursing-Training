@@ -457,6 +457,7 @@ public class characterMovement3D : MonoBehaviour
                 if (isClicking)
                 {
                     Debug.Log("Hit!");
+                    hit.collider.gameObject.transform.parent.GetComponent<InteractableTeleportEvent>().TeleportInvoke(); //trigger teleport event call
                     transform.position = hit.collider.gameObject.transform.parent.position;
                 }
             }
