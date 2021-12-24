@@ -3047,7 +3047,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 307184325}
   m_LocalRotation: {x: -0.6740386, y: -0.6740385, z: 0.21371031, w: 0.21370988}
-  m_LocalPosition: {x: -0.682, y: 1.011, z: -11.696}
+  m_LocalPosition: {x: -0.638, y: 1.011, z: -11.594}
   m_LocalScale: {x: 1.7924004, y: 1.7924002, z: 1.7924006}
   m_Children:
   - {fileID: 954969009}
@@ -12948,6 +12948,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: medcup2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1a63fa535426b734cbcc4ac36f25e7bd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a63fa535426b734cbcc4ac36f25e7bd, type: 3}
 --- !u!4 &1567726975 stripped
@@ -20487,7 +20492,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3493132979703838065
 Transform:
   m_ObjectHideFlags: 0
@@ -20496,7 +20501,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3493132979703838064}
   m_LocalRotation: {x: 0.49717048, y: 0.64792526, z: 0.35130036, w: 0.4578236}
-  m_LocalPosition: {x: -1.004, y: 1.346, z: -11.992}
+  m_LocalPosition: {x: -0.994, y: 1.169, z: -11.716}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5466879666868199202}
@@ -26293,7 +26298,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3472772165644973200}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.847, y: 1.004, z: -11.704}
+  m_LocalPosition: {x: -0.884, y: 1.004, z: -11.57}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3815409737752741583}
