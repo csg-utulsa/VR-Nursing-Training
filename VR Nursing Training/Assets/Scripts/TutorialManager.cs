@@ -25,8 +25,8 @@ public class TutorialManager : MonoBehaviour
 
     private void Start()
     {
-        keyboardText = keyboardTextObject.GetComponent<TextMeshProUGUI>();
-        vrText = vrTextObject.GetComponent<TextMeshProUGUI>();
+        if (keyboardTextObject != null) keyboardText = keyboardTextObject.GetComponent<TextMeshProUGUI>();
+        if (vrTextObject != null) vrText = vrTextObject.GetComponent<TextMeshProUGUI>();
     }
 
     void Update()
@@ -36,10 +36,10 @@ public class TutorialManager : MonoBehaviour
         {
             if (textNodeList[i].active)
             {
-                if (keyboardTextList.Length > i) keyboardText.text = keyboardTextList[i];
-                else keyboardText.text = "Error: Missing Text in Tutorial Manager";
-                if (vrTextList.Length > i) vrText.text = vrTextList[i];
-                else vrText.text = "Error: Missing Text in Tutorial Manager";
+                if (keyboardTextList.Length > i && keyboardTextObject != null) keyboardText.text = keyboardTextList[i];
+                else if (keyboardTextObject != null) keyboardText.text = "Error: Missing Text in Tutorial Manager";
+                if (vrTextList.Length > i && vrTextObject != null) vrText.text = vrTextList[i];
+                else if (vrTextObject != null) vrText.text = "Error: Missing Text in Tutorial Manager";
             }
         }
 
