@@ -9557,6 +9557,86 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1047214076}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1074350754
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1074350756}
+  - component: {fileID: 1074350755}
+  m_Layer: 0
+  m_Name: Tutorial Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1074350755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074350754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b4de3ec9a2d9cb44b0506a2f72fcad5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textNodeList:
+  - {fileID: 655178778}
+  - {fileID: 808802096}
+  - {fileID: 592800617}
+  - {fileID: 304304995}
+  - {fileID: 1972440612}
+  - {fileID: 378245493}
+  - {fileID: 157178076}
+  - {fileID: 313829422}
+  - {fileID: 153468692}
+  - {fileID: 400428395}
+  - {fileID: 1864122512}
+  - {fileID: 695887421}
+  keyboardTextList:
+  - Welcome to the TU Sim control tutorial. Left click will move you to any green
+    circle. Try teleporting to the front desk.
+  - 'Left click to pick things up, right click to drop objects. Pick up the clipboard
+    and take a look at it. '
+  - Once you've finished reading, drop the clipboard using right click.
+  - Left click also interacts with objects. Use the sanitizer to get a feel for it.
+  - Great! We need to go to the medroom and pour out some pills. To open containers,
+    pick up the container and use it on the pill cutter tray.
+  - Cut the pill with the blade, so we can make one and a half.
+  - Now they should be good to carry to the green and white cart at the other end
+    of the room. Right click to place objects down.
+  - Sweet!  Next up, we'll need to pour out some of the syrup on your left. Pour
+    the syrup from the bottle into the glass with left click after picking it up.
+  - We need to choose 20mL of medication using the new window.
+  - Place it on the cart and we're good to return to the desk.
+  - Sign the date with the sharpie on the paper at the front desk and you'll be ready
+    for the sim.
+  - The button on the elevator wall behind you will start the sim!
+  keyboardTextObject: {fileID: 0}
+  vrTextList: []
+  vrTextObject: {fileID: 0}
+  activateNodeList: []
+  activateObjects: []
+--- !u!4 &1074350756
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074350754}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.69255, y: 1.0248145, z: 1.3536049}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1108581718
 GameObject:
   m_ObjectHideFlags: 0
@@ -11739,6 +11819,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 159191682, guid: 0af8f3646a662394eb8f95def6a25298, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 226502562, guid: 0af8f3646a662394eb8f95def6a25298, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455292150, guid: 0af8f3646a662394eb8f95def6a25298, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1477141302, guid: 0af8f3646a662394eb8f95def6a25298, type: 3}
       propertyPath: hud
       value: 

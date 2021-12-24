@@ -36,8 +36,10 @@ public class TutorialManager : MonoBehaviour
         {
             if (textNodeList[i].active)
             {
-                keyboardText.text = keyboardTextList[i];
-                vrText.text = vrTextList[i];
+                if (keyboardTextList.Length > i) keyboardText.text = keyboardTextList[i];
+                else keyboardText.text = "Error: Missing Text in Tutorial Manager";
+                if (vrTextList.Length > i) vrText.text = vrTextList[i];
+                else vrText.text = "Error: Missing Text in Tutorial Manager";
             }
         }
 
@@ -46,7 +48,7 @@ public class TutorialManager : MonoBehaviour
         {
             if (activateNodeList[i].active)
             {
-                activateObjects[i].SetActive(true);
+                if (activateObjects.Length > i) activateObjects[i].SetActive(true);
             }
         }
     }
