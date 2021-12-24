@@ -204,7 +204,7 @@ Transform:
   m_Children:
   - {fileID: 2112077002}
   m_Father: {fileID: 261223077}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &13524670
 MonoBehaviour:
@@ -2435,6 +2435,7 @@ Transform:
   - {fileID: 313829424}
   - {fileID: 153468694}
   - {fileID: 400428397}
+  - {fileID: 1864122514}
   - {fileID: 695887423}
   - {fileID: 13524669}
   m_Father: {fileID: 6655441}
@@ -4078,8 +4079,61 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2927741851265122147, guid: 18eba83f63c54a94b9e85b24993dd445,
+        type: 3}
+      propertyPath: onMark.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2927741851265122147, guid: 18eba83f63c54a94b9e85b24993dd445,
+        type: 3}
+      propertyPath: onMark.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2927741851265122147, guid: 18eba83f63c54a94b9e85b24993dd445,
+        type: 3}
+      propertyPath: onMark.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 392108368}
+    - target: {fileID: 2927741851265122147, guid: 18eba83f63c54a94b9e85b24993dd445,
+        type: 3}
+      propertyPath: onMark.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2927741851265122147, guid: 18eba83f63c54a94b9e85b24993dd445,
+        type: 3}
+      propertyPath: onMark.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: performAction
+      objectReference: {fileID: 0}
+    - target: {fileID: 2927741851265122147, guid: 18eba83f63c54a94b9e85b24993dd445,
+        type: 3}
+      propertyPath: onMark.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ActionBase, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2927741851265122147, guid: 18eba83f63c54a94b9e85b24993dd445,
+        type: 3}
+      propertyPath: onMark.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18eba83f63c54a94b9e85b24993dd445, type: 3}
+--- !u!1 &392108367 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2264389627811893011, guid: 18eba83f63c54a94b9e85b24993dd445,
+    type: 3}
+  m_PrefabInstance: {fileID: 392108366}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &392108368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392108367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09da1f333edc5124fa4f9a73a7c43407, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &400428394
 GameObject:
   m_ObjectHideFlags: 0
@@ -6436,7 +6490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   previousList:
-  - {fileID: 400428395}
+  - {fileID: 1864122512}
   active: 0
   complete: 0
   saturated: 0
@@ -6481,7 +6535,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 261223077}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &725632380
 GameObject:
@@ -14521,6 +14575,84 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1811613287}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1864122511
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1864122514}
+  - component: {fileID: 1864122512}
+  - component: {fileID: 1864122513}
+  m_Layer: 0
+  m_Name: Sign Page
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1864122512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864122511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e956f245f0f1dc241bd7a0aa9aeb8522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousList:
+  - {fileID: 400428395}
+  active: 0
+  complete: 0
+  saturated: 0
+  canContinue: 0
+  canSkip: 0
+  objective: {fileID: 1864122513}
+--- !u!114 &1864122513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864122511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bed5c6707fc6ef4aa88ef64f847e75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Sign the Page
+  reportSuccess: 
+  reportSkip: 
+  reportFail: 
+  strikeCount: 0
+  failed: 0
+  active: 0
+  skipped: 0
+  complete: 0
+  canSkip: 0
+  canContinue: 0
+  successActions:
+  - {fileID: 392108368}
+  failActions: []
+--- !u!4 &1864122514
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864122511}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 261223077}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1887325275
 GameObject:
   m_ObjectHideFlags: 0
