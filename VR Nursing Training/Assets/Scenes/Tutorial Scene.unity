@@ -9286,6 +9286,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09da1f333edc5124fa4f9a73a7c43407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1021314335 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4533426764239783564, guid: 0af8f3646a662394eb8f95def6a25298,
+    type: 3}
+  m_PrefabInstance: {fileID: 1388834926}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1025961552
 GameObject:
   m_ObjectHideFlags: 0
@@ -9623,18 +9629,39 @@ MonoBehaviour:
   - Great! We need to go to the medroom and pour out some pills. To open containers,
     pick up the container and use it on the pill cutter tray.
   - Cut the pill with the blade, so we can make one and a half.
-  - 'Now they should be good to carry 1.5 pills to the green and white cart at the
+  - 'Now we should be good to carry 1.5 pills to the green and white cart at the
     other end of the room. Right click to place objects down. '
   - Sweet!  Next up, we'll need to pour out some of the syrup on your left. Pour
-    the syrup from the bottle into the glass with left click after picking it up.
-  - We need to choose 20mL of medication using the new window.
+    the syrup from the bottle into the cup with left click after picking it up.
+  - We need to choose 20mL of medication using the new window. Point and click on
+    a button to select that dosage.
   - Place the cup on the cart and we're good to return to the desk.
   - Sign the date with the sharpie on the paper at the front desk and you'll be ready
     for the sim.
   - The button on the elevator wall behind you will start the sim!
   keyboardTextObject: {fileID: 1759323890}
-  vrTextList: []
-  vrTextObject: {fileID: 0}
+  vrTextList:
+  - Welcome to the TU Sim control tutorial. You can hold the front trigger and point
+    at the green circles before releasing the trigger to teleport. Try teleporting
+    to the front desk.
+  - 'Hold the grip button to pick up objects and release it to drop them. Pick up
+    the clipboard and take a look at it. '
+  - Once you've finished reading, drop the clipboard by releasing the grip button.
+  - You can touch objects to interact with them. Use the sanitizer to get a feel
+    for it.
+  - Great! We need to go to the medroom and pour out some pills. To open containers,
+    pick up the container and tap it on the pill cutter tray.
+  - Cut the pill by pushing it against the blade, so we can make one and a half.
+  - Now we should be good to carry 1.5 pills to the green and white cart at the other
+    end of the room. You can hold objects and teleport at the same time.
+  - Sweet!  Next up, we'll need to pour out some of the syrup on your left. Pour
+    the syrup from the bottle by grabbing it and tapping it on the cup.
+  - We need to choose 20mL of medication using the new window. You can press a button
+    by placing the green cone above your hand against it and pressing the trigger.
+  - Sign the date with the sharpie on the paper at the front desk and you'll be ready
+    for the sim. You can mark certain objects with the sharpie by tapping it on them.
+  - The button on the elevator wall behind you will start the sim!
+  vrTextObject: {fileID: 1021314335}
   activateNodeList:
   - {fileID: 313829422}
   - {fileID: 313829422}
