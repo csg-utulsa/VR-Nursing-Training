@@ -9648,7 +9648,7 @@ MonoBehaviour:
   deactivateNodeList:
   - {fileID: 400428395}
   deactivateObjects:
-  - {fileID: 3493132980231448632}
+  - {fileID: 3493132979703838064}
 --- !u!4 &1074350756
 Transform:
   m_ObjectHideFlags: 0
@@ -12203,12 +12203,12 @@ PrefabInstance:
     - target: {fileID: 1405898044693227596, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2632912369471152309, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7548493106137593522, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
@@ -20680,7 +20680,7 @@ PrefabInstance:
     - target: {fileID: 441075861359207125, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
         type: 3}
       propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 441075861359207125, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
         type: 3}
