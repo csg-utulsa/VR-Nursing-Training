@@ -21036,6 +21036,7 @@ GameObject:
   - component: {fileID: 7183425364395998965}
   - component: {fileID: 3686887192890926476}
   - component: {fileID: 8323663530709774030}
+  - component: {fileID: 3472772165644973201}
   m_Layer: 6
   m_Name: LiquidCup
   m_TagString: Liquid
@@ -21043,6 +21044,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &3472772165644973201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3472772165644973200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9bde754c1721794d9aabffecb8036f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emptyLiquid: {fileID: 2023423508}
+  fullLiquid: {fileID: 1893960540}
 --- !u!1 &3493132979703838064
 GameObject:
   m_ObjectHideFlags: 0
@@ -27496,6 +27511,18 @@ MonoBehaviour:
   interactEvent:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 3472772165644973201}
+        m_TargetAssemblyTypeName: TutorialLiquid, Assembly-CSharp
+        m_MethodName: SetDosage
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 933271794}
         m_TargetAssemblyTypeName: ActionBase, Assembly-CSharp
         m_MethodName: performAction
@@ -27506,7 +27533,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
   isInteractable: 0
   type: 
