@@ -34,13 +34,9 @@ public class ActionCountMedicine : ActionBase
     {
         if (other.CompareTag("Liquid"))
         {
-            Debug.Log("Liquid Staying " + other.name);
-            Debug.Log("Med Type: " + medicineType);
             if (other.gameObject.GetComponent<InteractableScript>().getType() == medicineType)
             {
                 currentDosage = other.gameObject.GetComponent<LiquidObjectScript>().getDosage();
-                Debug.Log("Cur Dosage: " + currentDosage);
-                Debug.Log("Target Dosage: " + targetDosage);
             }
         }
     }
