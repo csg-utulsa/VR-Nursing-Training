@@ -41988,7 +41988,7 @@ MonoBehaviour:
   targets: []
   combineDist: 0
   isInteractable: 0
-  type: 
+  type: SYRUP
   interactWithHand: 1
   focusOnPickup: 0
   distanceFromCamera: 0.5
