@@ -18,6 +18,9 @@ public class TutorialManager : MonoBehaviour
     private TextMeshProUGUI keyboardText;
     private TextMeshProUGUI vrText;
 
+    private int previousMessage;
+    private string overrideText = "No current override message";
+    private int overrideTime = 0;
 
     // Manage activation of certain objects
     [SerializeField] private Node[] activateNodeList;
@@ -36,11 +39,22 @@ public class TutorialManager : MonoBehaviour
         {
             if (textNodeList[i].active)
             {
-                if (keyboardTextList.Length > i && keyboardTextObject != null) keyboardText.text = keyboardTextList[i];
-                else if (keyboardTextObject != null) keyboardText.text = "Error: Missing Text in Tutorial Manager";
-                if (vrTextList.Length > i && vrTextObject != null) vrText.text = vrTextList[i];
-                else if (vrTextObject != null) vrText.text = "Error: Missing Text in Tutorial Manager";
+                if (previousMessage != i) overrideTime = 0;
+                else if (overrideTime == 0)
+                {
+                    if (keyboardTextList.Length > i && keyboardTextObject != null) keyboardText.text = keyboardTextList[i];
+                    else if (keyboardTextObject != null) keyboardText.text = "Error: Missing text in Tutorial Manager";
+                    if (vrTextList.Length > i && vrTextObject != null) vrText.text = vrTextList[i];
+                    else if (vrTextObject != null) vrText.text = "Error: Missing text in Tutorial Manager";
+                    previousMessage = i;
+                }
             }
+        }
+        if (overrideTime > 0)
+        {
+            overrideTime--;
+            keyboardText.text = overrideText;
+            vrText.text = overrideText;
         }
 
         // Manage Activation
@@ -51,5 +65,11 @@ public class TutorialManager : MonoBehaviour
                 if (activateObjects.Length > i) activateObjects[i].SetActive(true);
             }
         }
+    }
+
+    public void overrideMessage(string message, int time)
+    {
+        overrideText = message;
+        overrideTime = (int)Mathf.Round(time / Time.deltaTime);
     }
 }
