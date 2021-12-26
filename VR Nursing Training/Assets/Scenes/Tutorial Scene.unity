@@ -1273,13 +1273,14 @@ GameObject:
   m_Component:
   - component: {fileID: 127161905}
   - component: {fileID: 127161906}
+  - component: {fileID: 127161907}
   m_Layer: 0
   m_Name: SignPage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &127161905
 Transform:
   m_ObjectHideFlags: 0
@@ -1313,10 +1314,10 @@ MonoBehaviour:
   onDateSet:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 605769262}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 127161907}
+        m_TargetAssemblyTypeName: ActionBase, Assembly-CSharp
+        m_MethodName: performAction
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1325,6 +1326,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &127161907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127161904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09da1f333edc5124fa4f9a73a7c43407, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &128177088
 GameObject:
   m_ObjectHideFlags: 0
@@ -4195,7 +4208,7 @@ PrefabInstance:
     - target: {fileID: 2927741851265122147, guid: 18eba83f63c54a94b9e85b24993dd445,
         type: 3}
       propertyPath: onMark.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2927741851265122147, guid: 18eba83f63c54a94b9e85b24993dd445,
         type: 3}
@@ -4206,7 +4219,7 @@ PrefabInstance:
         type: 3}
       propertyPath: onMark.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 392108368}
+      objectReference: {fileID: 0}
     - target: {fileID: 2927741851265122147, guid: 18eba83f63c54a94b9e85b24993dd445,
         type: 3}
       propertyPath: onMark.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -4229,24 +4242,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18eba83f63c54a94b9e85b24993dd445, type: 3}
---- !u!1 &392108367 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2264389627811893011, guid: 18eba83f63c54a94b9e85b24993dd445,
-    type: 3}
-  m_PrefabInstance: {fileID: 392108366}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &392108368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 392108367}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09da1f333edc5124fa4f9a73a7c43407, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &400428394
 GameObject:
   m_ObjectHideFlags: 0
@@ -5886,12 +5881,6 @@ MonoBehaviour:
   iconSprite: {fileID: 21300000, guid: 59ec16f1b3438a949ab3a630eea5dffd, type: 3}
   medicineParent: {fileID: 307184325}
   useText: 0
---- !u!1 &605769262 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8453186518924561673, guid: 6d431101da8bd144ea8524230aa943e1,
-    type: 3}
-  m_PrefabInstance: {fileID: 1943387221}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &618442079
 GameObject:
   m_ObjectHideFlags: 0
@@ -15292,7 +15281,7 @@ MonoBehaviour:
   canSkip: 0
   canContinue: 0
   successActions:
-  - {fileID: 392108368}
+  - {fileID: 127161907}
   failActions: []
 --- !u!4 &1864122514
 Transform:
