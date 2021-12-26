@@ -12,7 +12,7 @@ public class TutorialLiquid : MonoBehaviour
     {
         SetDosage(false);
     }
-
+    
     public void SetDosage(bool isFilled)
     {
         if (emptyLiquid != null && fullLiquid != null)
