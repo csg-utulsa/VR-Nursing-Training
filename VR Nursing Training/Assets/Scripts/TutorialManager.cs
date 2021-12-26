@@ -22,9 +22,12 @@ public class TutorialManager : MonoBehaviour
     private string overrideText = "No current override message";
     private int overrideTime = 0;
 
-    // Manage activation of certain objects
+    // Manage activation and deactivation of certain objects
     [SerializeField] private Node[] activateNodeList;
     [SerializeField] private GameObject[] activateObjects;
+
+    [SerializeField] private Node[] deactivateNodeList;
+    [SerializeField] private GameObject[] deactivateObjects;
 
     private void Start()
     {
@@ -40,7 +43,7 @@ public class TutorialManager : MonoBehaviour
             if (textNodeList[i].active)
             {
                 if (previousMessage != i) overrideTime = 0;
-                else if (overrideTime == 0)
+                if (overrideTime == 0)
                 {
                     if (keyboardTextList.Length > i && keyboardTextObject != null) keyboardText.text = keyboardTextList[i];
                     else if (keyboardTextObject != null) keyboardText.text = "Error: Missing text in Tutorial Manager";
@@ -50,14 +53,14 @@ public class TutorialManager : MonoBehaviour
                 }
             }
         }
-        if (overrideTime > 0)
+        if (overrideTime != 0)
         {
-            overrideTime--;
-            keyboardText.text = overrideText;
-            vrText.text = overrideText;
+            if (overrideTime > 0) overrideTime--;
+            if (keyboardTextObject != null) keyboardText.text = overrideText;
+            if (vrTextObject != null) vrText.text = overrideText;
         }
 
-        // Manage Activation
+        // Manage Activation and Deactivation
         for (int i = 0; i < activateNodeList.Length; i++)
         {
             if (activateNodeList[i].active)
@@ -65,11 +68,24 @@ public class TutorialManager : MonoBehaviour
                 if (activateObjects.Length > i) activateObjects[i].SetActive(true);
             }
         }
+
+        for (int i = 0; i < deactivateNodeList.Length; i++)
+        {
+            if (deactivateNodeList[i].active)
+            {
+                if (deactivateObjects.Length > i) deactivateObjects[i].SetActive(false);
+            }
+        }
     }
 
-    public void overrideMessage(string message, int time)
+    public void overrideSetMessage(string message)
     {
         overrideText = message;
-        overrideTime = (int)Mathf.Round(time / Time.deltaTime);
+    }
+
+    public void overrideSetTime(int time)
+    {
+        overrideTime = (int)Mathf.Round(time/Time.deltaTime); // Can set to negative to be infinite
+        Debug.Log(overrideTime);
     }
 }

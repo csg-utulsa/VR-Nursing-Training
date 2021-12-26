@@ -5870,7 +5870,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   labelText: {fileID: 886456442}
   labelIcon: {fileID: 1351693000}
-  iconSprite: {fileID: 21300000, guid: 9473f97740326194bbe7059b11a863d0, type: 3}
+  iconSprite: {fileID: 21300000, guid: 59ec16f1b3438a949ab3a630eea5dffd, type: 3}
   medicineParent: {fileID: 307184325}
   useText: 0
 --- !u!1 &618442079
@@ -9620,7 +9620,7 @@ MonoBehaviour:
   - Sweet!  Next up, we'll need to pour out some of the syrup on your left. Pour
     the syrup from the bottle into the glass with left click after picking it up.
   - We need to choose 20mL of medication using the new window.
-  - Place it on the cart and we're good to return to the desk.
+  - Place the cup on the cart and we're good to return to the desk.
   - Sign the date with the sharpie on the paper at the front desk and you'll be ready
     for the sim.
   - The button on the elevator wall behind you will start the sim!
@@ -9637,6 +9637,10 @@ MonoBehaviour:
   - {fileID: 3472772165644973200}
   - {fileID: 127161904}
   - {fileID: 2063132676}
+  deactivateNodeList:
+  - {fileID: 400428395}
+  deactivateObjects:
+  - {fileID: 3493132980231448632}
 --- !u!4 &1074350756
 Transform:
   m_ObjectHideFlags: 0
@@ -11404,7 +11408,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9473f97740326194bbe7059b11a863d0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 59ec16f1b3438a949ab3a630eea5dffd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -20854,7 +20858,31 @@ MonoBehaviour:
       m_Calls: []
   interactEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1074350755}
+        m_TargetAssemblyTypeName: TutorialManager, Assembly-CSharp
+        m_MethodName: overrideSetMessage
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Make sure to select 20mL!
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1074350755}
+        m_TargetAssemblyTypeName: TutorialManager, Assembly-CSharp
+        m_MethodName: overrideSetTime
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: -1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   isInteractable: 0
   type: 
   interactWithHand: 1
@@ -21716,7 +21744,31 @@ MonoBehaviour:
       m_Calls: []
   interactEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1074350755}
+        m_TargetAssemblyTypeName: TutorialManager, Assembly-CSharp
+        m_MethodName: overrideSetMessage
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Make sure to select 20mL!
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1074350755}
+        m_TargetAssemblyTypeName: TutorialManager, Assembly-CSharp
+        m_MethodName: overrideSetTime
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: -1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   isInteractable: 0
   type: 
   interactWithHand: 1
@@ -27126,7 +27178,31 @@ MonoBehaviour:
       m_Calls: []
   interactEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1074350755}
+        m_TargetAssemblyTypeName: TutorialManager, Assembly-CSharp
+        m_MethodName: overrideSetMessage
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Make sure to select 20mL!
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1074350755}
+        m_TargetAssemblyTypeName: TutorialManager, Assembly-CSharp
+        m_MethodName: overrideSetTime
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: -1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   isInteractable: 0
   type: 
   interactWithHand: 1
