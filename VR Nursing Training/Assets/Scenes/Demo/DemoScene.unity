@@ -9067,6 +9067,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: InteractableStarter
       objectReference: {fileID: 0}
+    - target: {fileID: 4300527510234720424, guid: 39afdb5a44801cb4c882136b46c6ce84,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39afdb5a44801cb4c882136b46c6ce84, type: 3}
 --- !u!4 &939132586 stripped
@@ -16628,6 +16633,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: InteractableStarter (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4300527510234720424, guid: 39afdb5a44801cb4c882136b46c6ce84,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39afdb5a44801cb4c882136b46c6ce84, type: 3}
