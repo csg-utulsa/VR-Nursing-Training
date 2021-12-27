@@ -6048,7 +6048,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6355221872398161125
 Transform:
   m_ObjectHideFlags: 0
@@ -22557,6 +22557,61 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106385915051351046, guid: 306f2b942861c39418497760f2e04e01,
+        type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106385915051351046, guid: 306f2b942861c39418497760f2e04e01,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106385915051351046, guid: 306f2b942861c39418497760f2e04e01,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106385915051351046, guid: 306f2b942861c39418497760f2e04e01,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106385915051351046, guid: 306f2b942861c39418497760f2e04e01,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106385915051351046, guid: 306f2b942861c39418497760f2e04e01,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 4106385915051351046, guid: 306f2b942861c39418497760f2e04e01,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106385915051351046, guid: 306f2b942861c39418497760f2e04e01,
+        type: 3}
+      propertyPath: m_enableVertexGradient
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106385915051351046, guid: 306f2b942861c39418497760f2e04e01,
+        type: 3}
+      propertyPath: m_fontColorGradient.topLeft.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106385915051351046, guid: 306f2b942861c39418497760f2e04e01,
+        type: 3}
+      propertyPath: m_fontColorGradient.topLeft.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106385915051351046, guid: 306f2b942861c39418497760f2e04e01,
+        type: 3}
+      propertyPath: m_fontColorGradient.topLeft.r
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4824641247378358841, guid: 306f2b942861c39418497760f2e04e01,
         type: 3}
