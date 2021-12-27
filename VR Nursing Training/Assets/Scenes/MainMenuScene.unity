@@ -611,6 +611,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3a746225d7d7947baec53bfc04a34d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+  onDrop:
+    m_PersistentCalls:
+      m_Calls: []
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -1533,6 +1539,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3a746225d7d7947baec53bfc04a34d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+  onDrop:
+    m_PersistentCalls:
+      m_Calls: []
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -2146,6 +2158,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3a746225d7d7947baec53bfc04a34d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+  onDrop:
+    m_PersistentCalls:
+      m_Calls: []
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -2398,7 +2416,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1564922135, guid: 0af8f3646a662394eb8f95def6a25298, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 666088062749322105, guid: 0af8f3646a662394eb8f95def6a25298,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1405898044693227596, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
@@ -4043,6 +4066,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3a746225d7d7947baec53bfc04a34d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+  onDrop:
+    m_PersistentCalls:
+      m_Calls: []
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -7914,6 +7943,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3a746225d7d7947baec53bfc04a34d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+  onDrop:
+    m_PersistentCalls:
+      m_Calls: []
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -8357,6 +8392,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3a746225d7d7947baec53bfc04a34d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+  onDrop:
+    m_PersistentCalls:
+      m_Calls: []
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -9384,6 +9425,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3a746225d7d7947baec53bfc04a34d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+  onDrop:
+    m_PersistentCalls:
+      m_Calls: []
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -9945,6 +9992,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3a746225d7d7947baec53bfc04a34d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+  onDrop:
+    m_PersistentCalls:
+      m_Calls: []
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -10107,6 +10160,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3a746225d7d7947baec53bfc04a34d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+  onDrop:
+    m_PersistentCalls:
+      m_Calls: []
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -10402,6 +10461,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3a746225d7d7947baec53bfc04a34d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+  onDrop:
+    m_PersistentCalls:
+      m_Calls: []
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -10857,6 +10922,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3a746225d7d7947baec53bfc04a34d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+  onDrop:
+    m_PersistentCalls:
+      m_Calls: []
   onInteract:
     m_PersistentCalls:
       m_Calls:

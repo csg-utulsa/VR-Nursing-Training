@@ -7751,7 +7751,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &872840621
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8491,7 +8491,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &929231666
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12111,7 +12111,7 @@ PrefabInstance:
     - target: {fileID: 6700605892293357319, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
         type: 3}
       propertyPath: zoneName
-      value: Bathroom Entrance
+      value: Medcart
       objectReference: {fileID: 0}
     - target: {fileID: 7167235546179536697, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
         type: 3}
@@ -12232,12 +12232,12 @@ PrefabInstance:
     - target: {fileID: 1405898044693227596, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2632912369471152309, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7548493106137593522, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
@@ -14879,7 +14879,7 @@ PrefabInstance:
     - target: {fileID: 6700605892293357319, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
         type: 3}
       propertyPath: zoneName
-      value: Bathroom Entrance
+      value: Sugar pills
       objectReference: {fileID: 0}
     - target: {fileID: 7167235546179536697, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
         type: 3}
@@ -17257,7 +17257,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2106890910
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20025,6 +20025,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2594969060513896255}
     m_Modifications:
+    - target: {fileID: 6700605892293357319, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
+        type: 3}
+      propertyPath: zoneName
+      value: Med Room
+      objectReference: {fileID: 0}
     - target: {fileID: 7167235546179536697, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
         type: 3}
       propertyPath: m_RootOrder
@@ -20239,6 +20244,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: Clipboard
+      objectReference: {fileID: 0}
+    - target: {fileID: 6700605892293357319, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
+        type: 3}
+      propertyPath: zoneName
+      value: Front Desk
       objectReference: {fileID: 0}
     - target: {fileID: 7167235546179536697, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
         type: 3}
@@ -20824,7 +20834,7 @@ PrefabInstance:
     - target: {fileID: 6700605892293357319, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
         type: 3}
       propertyPath: zoneName
-      value: Button
+      value: Exit Button
       objectReference: {fileID: 0}
     - target: {fileID: 7167235546179536697, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
         type: 3}
@@ -21123,6 +21133,11 @@ PrefabInstance:
     - target: {fileID: 1251000881025170245, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
         type: 3}
       propertyPath: m_text
+      value: Lobby
+      objectReference: {fileID: 0}
+    - target: {fileID: 6700605892293357319, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
+        type: 3}
+      propertyPath: zoneName
       value: Lobby
       objectReference: {fileID: 0}
     - target: {fileID: 7167235546179536697, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,

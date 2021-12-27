@@ -34,6 +34,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children:
   - {fileID: 660152459567137274}
+  - {fileID: 6289647826543899690}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -129,20 +130,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bd43063534b3924eb5caef959443d75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isInteractable: 0
-  initialPosition: {x: 0, y: 0, z: 0}
-  initialAngles: {x: 0, y: 0, z: 0}
-  targets: []
-  material: {fileID: 0}
-  layer:
-    serializedVersion: 2
-    m_Bits: 0
-  combineMaterial: {fileID: 0}
-  combineDist: 0
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+  onDrop:
+    m_PersistentCalls:
+      m_Calls: []
   onCombine:
     m_PersistentCalls:
       m_Calls: []
+  interactEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  cursorHighlight:
+    m_PersistentCalls:
+      m_Calls: []
+  lookHighlight:
+    m_PersistentCalls:
+      m_Calls: []
+  initialPosition: {x: 0, y: 0, z: 0}
+  initialAngles: {x: 0, y: 0, z: 0}
+  material: {fileID: 0}
+  combineMaterial: {fileID: 0}
+  layer:
+    serializedVersion: 2
+    m_Bits: 0
+  targets: []
+  combineDist: 0
+  isInteractable: 0
   type: 
+  interactWithHand: 1
+  focusOnPickup: 0
+  distanceFromCamera: 0.5
+  focusAngles: {x: 0, y: 0, z: 0}
 --- !u!114 &-7380186919544661610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,6 +350,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a64d3e54b97bfd4ab4b632d2e843363, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+  onDrop:
+    m_PersistentCalls:
+      m_Calls: []
   onMark:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &8688015449757510379
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6289647826543899690}
+  m_Layer: 6
+  m_Name: Pivot Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6289647826543899690
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8688015449757510379}
+  m_LocalRotation: {x: 0.5, y: -0.5, z: -0.5, w: 0.5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1908345614253810548}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: -90}
