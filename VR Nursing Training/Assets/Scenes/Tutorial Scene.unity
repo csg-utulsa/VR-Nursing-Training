@@ -12246,9 +12246,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5781903147571470465, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91,
+        type: 2}
+    - target: {fileID: 5781903147571470465, guid: 0af8f3646a662394eb8f95def6a25298,
+        type: 3}
       propertyPath: m_fontStyle
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5781903147571470465, guid: 0af8f3646a662394eb8f95def6a25298,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
     - target: {fileID: 7548493106137593522, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
       propertyPath: m_InteractionManager
