@@ -2,24 +2,82 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
-public class InteractableScript : MonoBehaviour
+public class InteractableScript : InteractableBase, HoverableBase
 {
-    public bool isInteractable;
-    public Vector3 initialPosition;
-    public GameObject[] targets;
-    public Material material;
-    public LayerMask layer;
-    public Material combineMaterial;
-    public float combineDist;
-    private GameObject touchedObject;
-    private static int step;
+
+
+
+
+
     public UnityEvent onCombine;
+    public UnityEvent interactEvent;
+    public UnityEvent cursorHighlight;
+    public UnityEvent lookHighlight;
+
+    public Vector3 initialPosition;
+    public Vector3 initialAngles;
+
+    public Material material;
+    public Material combineMaterial;
+
+    public LayerMask layer;
+
+    public GameObject[] targets;
+    private GameObject respawnPoint;
+    private GameObject touchedObject;
+
+    private static int step;
+    public float combineDist;
+    public bool isInteractable;
+    public string type;
+
+    public bool interactWithHand = true;
+    public bool focusOnPickup = false;
+    public double distanceFromCamera = 0.5;
+    public Vector3 focusAngles = new Vector3(0,0,0);
+
+
+
+
+    public void CursorHighlight()
+    {
+        cursorHighlight.Invoke();
+    }
+
+    public void LookHighlight()
+    {
+        lookHighlight.Invoke();
+    }
+
+    public void CursorInteract()
+    {
+        //Do nothing, interactableBase interaction function takes over this
+    }
+
+
+    public override bool canInteractWithHand()
+    {
+        return interactWithHand;
+    }
 
     private void Start()
     {
+        
         step = 0;
-        initialPosition = gameObject.transform.position; // Saves starting location
+
+        respawnPoint = new GameObject(gameObject.name + "'s respawn object"); //Logan added these
+        respawnPoint.transform.position = gameObject.transform.position;
+        if (gameObject.transform.parent != null)
+        {
+            respawnPoint.transform.parent = gameObject.transform.parent.transform;
+        }
+        initialPosition = gameObject.transform.position;
+
+        initialAngles = gameObject.transform.eulerAngles;
+        
+        //Debug.Log("Object "+gameObject.name+", My position " + initialPosition+", Parent Position: "+ParentObjectTransform.position);
+        //Debug.Log("Parent Position: " + ParentObjectTransform.position);
+
         isInteractable = true;
         if(material != null) 
         {
@@ -36,6 +94,16 @@ public class InteractableScript : MonoBehaviour
     public GameObject getTarget() // Returns current target
     {
         return targets[step];
+    }
+
+    public void setType(string newType)
+    {
+        type = newType;
+    }
+    
+    public string getType()
+    {
+        return type;
     }
 
     public void setInteractable(bool input) 
@@ -56,6 +124,18 @@ public class InteractableScript : MonoBehaviour
     public Material getMaterial() // Returns Material of gameObj (probably not needed)
     {
         return(GetComponent<Renderer>().material);
+    }
+
+    public bool getFocusOnPickup(){
+        return focusOnPickup;
+    }
+
+    public Vector3 getFocusAngles(){
+        return focusAngles;
+    }
+
+    public double getFocusDistance(){
+        return distanceFromCamera;
     }
 
     private void FixedUpdate()
@@ -93,9 +173,38 @@ public class InteractableScript : MonoBehaviour
         }
     }
 
+    public override void Interact(Collider other)
+    {
+        Debug.Log("Interacted w/ InteractableScript on Obj");
+        //CombineObject(other.gameObject);
+        if (interactEvent != null)
+        {
+            interactEvent.Invoke();
+        }
+    }
+
+  
+
     public void Reset() // Resets position of gameObj (used by ground trigger script)
     {
-        gameObject.transform.position = initialPosition;
+
+        
+        gameObject.transform.position = respawnPoint.transform.position; //Logan added this
+
+        //gameObject.transform.position = initialPosition;
+        gameObject.transform.eulerAngles = initialAngles;
+
+        gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+    }
+
+    public void PlaceDown(){ // Places the object on a nearby surface
+    //TODO: Currently just goes back home.
+        Reset();
+    }
+
+    public void PlaceHere(Vector3 pos){
+        //Places the object at this position.
+        gameObject.transform.position = pos+new Vector3(0,0.1f,0);
         gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
     }
 

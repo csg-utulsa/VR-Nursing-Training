@@ -8,20 +8,33 @@ TagManager:
   - Pill
   - HalfPill
   - Teleport
+  - Hands
+  - PillContainer
+  - Patch
+  - PatchContainer
+  - Liquid
+  - LiquidContainer
+  - Handle
+  - PillCutter
+  - PlaceLocation
+  - Ignore
+  - MenuPanel
+  - MedLabel
+  - Sharpie
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - ResetButton
   - Water
   - UI
   - Pickupable
   - Drawer
   - Teleport
   - DrawerWall
-  - 
-  - 
-  - 
+  - Hands
+  - TeleportBeam
+  - HeadsUp
   - 
   - 
   - 
@@ -44,4 +57,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Above
+    uniqueID: 508449071
     locked: 0

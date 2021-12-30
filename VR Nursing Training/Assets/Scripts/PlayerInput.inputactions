@@ -28,6 +28,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Letgo",
+                    "type": "Button",
+                    "id": "09840fd3-f96e-4366-8b2d-caca59c0702c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -35,6 +43,17 @@
                     "name": "",
                     "id": "cdd9989f-8ba9-43dd-9887-b3f622766276",
                     "path": "<Mouse>/leftButton",
+                    "interactions": "Press(behavior=2)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "97b827b4-7aa7-4ffd-8f88-47c023e996d9",
+                    "path": "<Keyboard>/e",
                     "interactions": "Press(behavior=2)",
                     "processors": "",
                     "groups": "",
@@ -56,11 +75,33 @@
                 {
                     "name": "",
                     "id": "b33762df-f0b5-487d-9004-a24b0b17287e",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "Press(behavior=2)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5322fb5e-5e1d-43d8-bb07-2399758c366b",
                     "path": "<Keyboard>/e",
                     "interactions": "Press(behavior=2)",
                     "processors": "",
                     "groups": "",
                     "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "93f1b05e-ea6a-4a6c-983b-eb896fb94a6b",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "Press(behavior=2)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Letgo",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

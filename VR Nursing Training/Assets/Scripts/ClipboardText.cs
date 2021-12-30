@@ -5,20 +5,20 @@ using UnityEngine.UI;
 
 public class ClipboardText : MonoBehaviour
 {
-    public GameObject textObject;
+    [SerializeField] private GameObject textObject;
     Text text;
 
-    public string clientName;
-    public string age;
-    public string dateOfBirth;
-    public string allergies;
-    public string roomNumber;
-    public string patientHistory;
-    public string medicalDiagnosis;
-    public string currentVitalSigns;
-    public string doctorName;
-    public string dateTime;
-    public string[] orders;
+    [SerializeField] private string clientName;
+    [SerializeField] private string age;
+    [SerializeField] private string dateOfBirth;
+    [SerializeField] private string allergies;
+    [SerializeField] private string roomNumber;
+    [SerializeField] private string patientHistory;
+    [SerializeField] private string medicalDiagnosis;
+    [SerializeField] private string currentVitalSigns;
+    [SerializeField] private string doctorName;
+    [SerializeField] private string dateTime;
+    [SerializeField] private ScenarioGroup parentScenario;
 
     void Awake()
     {
@@ -34,11 +34,22 @@ public class ClipboardText : MonoBehaviour
                     doctorName + "\n\n" +
                     "ORDER SHEET" + "\n" +
                     "Date/Time: " + dateTime + "\n" +
-                    "Orders:" + "\n";
-        for (int i = 0; i < orders.Length; i++)
+                    "<color=blue>Orders:" + "\n" +
+                    "Use " + parentScenario.getCategory() + " Medication\n" +
+                    parentScenario.getMedicine();
+        if (parentScenario.getCategory() == "ORAL")
         {
-            text.text += "-" + orders[i] + "\n";
+            text.text += ", " + parentScenario.getDosage() + " Pills</color>\n";
         }
+        if (parentScenario.getCategory() == "PATCH")
+        {
+            text.text += "</color>\n";
+        }
+        if (parentScenario.getCategory() == "LIQUID")
+        {
+            text.text += ", " + parentScenario.getDosage() + "mL</color>\n";
+        }
+
         text.text += doctorName;
     }
 }

@@ -7,7 +7,8 @@ public class MouseLook3D : MonoBehaviour
     float xRotation = 0f;
     public Transform playerBody;
     public float mouseSensitivity = 100f;
-
+    public GameObject liquidCanvas;
+    public static bool flag = true;
     PlayerInput input;
 
     Vector2 mouseLook;
@@ -23,21 +24,26 @@ public class MouseLook3D : MonoBehaviour
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        //LiquidTriggerScript.measureCanvas = liquidCanvas;
     }
 
     // Update is called once per frame
     void Update()
     {
-        float mouseX = mouseLook.x * mouseSensitivity * Time.deltaTime;
-        float mouseY = mouseLook.y * mouseSensitivity * Time.deltaTime;
+        if (flag)
+        {
+            float mouseX = mouseLook.x * mouseSensitivity * Time.deltaTime;
+            float mouseY = mouseLook.y * mouseSensitivity * Time.deltaTime;
 
-        xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+            xRotation -= mouseY;
+            xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
-        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-        playerBody.Rotate(Vector3.up * mouseX);
+            transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+            playerBody.Rotate(Vector3.up * mouseX);
 
-        mouseLook = new Vector2(0f, 0f);
+            mouseLook = new Vector2(0f, 0f);
+        }
+        
     }
 
     private void OnEnable()

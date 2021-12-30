@@ -41,6 +41,14 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Letgo"",
+                    ""type"": ""Button"",
+                    ""id"": ""09840fd3-f96e-4366-8b2d-caca59c0702c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -48,6 +56,17 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""name"": """",
                     ""id"": ""cdd9989f-8ba9-43dd-9887-b3f622766276"",
                     ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": ""Press(behavior=2)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Click"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""97b827b4-7aa7-4ffd-8f88-47c023e996d9"",
+                    ""path"": ""<Keyboard>/e"",
                     ""interactions"": ""Press(behavior=2)"",
                     ""processors"": """",
                     ""groups"": """",
@@ -69,11 +88,33 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""b33762df-f0b5-487d-9004-a24b0b17287e"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": ""Press(behavior=2)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5322fb5e-5e1d-43d8-bb07-2399758c366b"",
                     ""path"": ""<Keyboard>/e"",
                     ""interactions"": ""Press(behavior=2)"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""93f1b05e-ea6a-4a6c-983b-eb896fb94a6b"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": ""Press(behavior=2)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Letgo"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -114,6 +155,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         m_CharacterControls3D_Click = m_CharacterControls3D.FindAction("Click", throwIfNotFound: true);
         m_CharacterControls3D_MouseLook = m_CharacterControls3D.FindAction("MouseLook", throwIfNotFound: true);
         m_CharacterControls3D_Interact = m_CharacterControls3D.FindAction("Interact", throwIfNotFound: true);
+        m_CharacterControls3D_Letgo = m_CharacterControls3D.FindAction("Letgo", throwIfNotFound: true);
         // CharacterControlsVR
         m_CharacterControlsVR = asset.FindActionMap("CharacterControlsVR", throwIfNotFound: true);
         m_CharacterControlsVR_Teleport = m_CharacterControlsVR.FindAction("Teleport", throwIfNotFound: true);
@@ -169,6 +211,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
     private readonly InputAction m_CharacterControls3D_Click;
     private readonly InputAction m_CharacterControls3D_MouseLook;
     private readonly InputAction m_CharacterControls3D_Interact;
+    private readonly InputAction m_CharacterControls3D_Letgo;
     public struct CharacterControls3DActions
     {
         private @PlayerInput m_Wrapper;
@@ -176,6 +219,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         public InputAction @Click => m_Wrapper.m_CharacterControls3D_Click;
         public InputAction @MouseLook => m_Wrapper.m_CharacterControls3D_MouseLook;
         public InputAction @Interact => m_Wrapper.m_CharacterControls3D_Interact;
+        public InputAction @Letgo => m_Wrapper.m_CharacterControls3D_Letgo;
         public InputActionMap Get() { return m_Wrapper.m_CharacterControls3D; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -194,6 +238,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 @Interact.started -= m_Wrapper.m_CharacterControls3DActionsCallbackInterface.OnInteract;
                 @Interact.performed -= m_Wrapper.m_CharacterControls3DActionsCallbackInterface.OnInteract;
                 @Interact.canceled -= m_Wrapper.m_CharacterControls3DActionsCallbackInterface.OnInteract;
+                @Letgo.started -= m_Wrapper.m_CharacterControls3DActionsCallbackInterface.OnLetgo;
+                @Letgo.performed -= m_Wrapper.m_CharacterControls3DActionsCallbackInterface.OnLetgo;
+                @Letgo.canceled -= m_Wrapper.m_CharacterControls3DActionsCallbackInterface.OnLetgo;
             }
             m_Wrapper.m_CharacterControls3DActionsCallbackInterface = instance;
             if (instance != null)
@@ -207,6 +254,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 @Interact.started += instance.OnInteract;
                 @Interact.performed += instance.OnInteract;
                 @Interact.canceled += instance.OnInteract;
+                @Letgo.started += instance.OnLetgo;
+                @Letgo.performed += instance.OnLetgo;
+                @Letgo.canceled += instance.OnLetgo;
             }
         }
     }
@@ -249,6 +299,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         void OnClick(InputAction.CallbackContext context);
         void OnMouseLook(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
+        void OnLetgo(InputAction.CallbackContext context);
     }
     public interface ICharacterControlsVRActions
     {
