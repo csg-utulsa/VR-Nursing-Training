@@ -13,10 +13,7 @@ public class DipScript2 : InteractableBase
     {
         Interact(other);
     }
-
-
-    //Hello
-
+    // my name is brennan
     public override void Interact(Collider other)
     {
         Debug.Log("Interact w/ water");
@@ -33,4 +30,6 @@ public class DipScript2 : InteractableBase
         }
     }
 
+
+    // Goodbye
 }
