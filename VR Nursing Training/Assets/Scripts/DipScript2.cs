@@ -15,6 +15,8 @@ public class DipScript2 : InteractableBase
     }
 
 
+    //Hello
+
     public override void Interact(Collider other)
     {
         Debug.Log("Interact w/ water");
