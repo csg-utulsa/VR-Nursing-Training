@@ -69,8 +69,8 @@ public class characterMovement3D : MonoBehaviour
     void Update()
     {
         checkHeldObjectValid();
-        handleMovement();
         handleInteraction();
+        handleMovement();
         handleLetgo();
         handleGrabAnim();
     }
