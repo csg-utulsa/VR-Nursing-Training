@@ -14,6 +14,7 @@ public class DipScript2 : InteractableBase
         Interact(other);
     }
 
+
     // Hello if you are reading this something went right
     public override void Interact(Collider other)
     {
@@ -30,5 +31,6 @@ public class DipScript2 : InteractableBase
             other.gameObject.GetComponent<InteractableScript>().setMaterial(material);
         }
     }
+
 
 }
