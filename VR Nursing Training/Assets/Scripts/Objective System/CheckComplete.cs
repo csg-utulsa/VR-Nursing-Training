@@ -47,6 +47,11 @@ public class CheckComplete : MonoBehaviour
                     if (noSkips)
                     {
                         if (checkmark != null) checkmark.SetActive(true);
+                        if (TeleportSet1)
+                        {
+                            TeleportSet1.SetActive(false);
+                            TeleportSet2.SetActive(true);
+                        }
                     }
                     else
                     {
@@ -56,11 +61,7 @@ public class CheckComplete : MonoBehaviour
                     if (reportObject != null) reportObject.SetActive(true);
                     if (reportText != null) text.text = scenarioParent.getReport();
                     scenarioParent.stopNodes();
-                    if (TeleportSet1)
-                    {
-                        TeleportSet1.SetActive(false);
-                        TeleportSet2.SetActive(true);
-                    }
+                    
                         
                 }
             }
