@@ -20,6 +20,8 @@ public class ClipboardText : MonoBehaviour
     [SerializeField] private string dateTime;
     [SerializeField] private ScenarioGroup parentScenario;
 
+    //Hello
+
     void Awake()
     {
         text = textObject.GetComponent<Text>();
