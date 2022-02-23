@@ -10,7 +10,8 @@ public class CheckComplete : MonoBehaviour
     [SerializeField] private Objective[] failObjectives;
     [SerializeField] private GameObject checkmark;
     [SerializeField] private GameObject failmark;
-
+    [SerializeField] private GameObject TeleportSet1;
+    [SerializeField] private GameObject TeleportSet2;
     [SerializeField] private GameObject reportObject;
     [SerializeField] private GameObject reportText;
     [SerializeField] private ScenarioStart scenarioParent;
@@ -55,6 +56,12 @@ public class CheckComplete : MonoBehaviour
                     if (reportObject != null) reportObject.SetActive(true);
                     if (reportText != null) text.text = scenarioParent.getReport();
                     scenarioParent.stopNodes();
+                    if (TeleportSet1)
+                    {
+                        TeleportSet1.SetActive(false);
+                        TeleportSet2.SetActive(true);
+                    }
+                        
                 }
             }
 
