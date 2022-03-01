@@ -14,7 +14,7 @@ public class MovePlayer : InteractableBase
     public override void Interact(Collider other)
     {
         Debug.Log("test");
-        player.transform.position = new Vector3(21.099f, 5, 18.465f);
+        player.transform.position = new Vector3(21.1f, 5, 19f);
     }
 
 }
