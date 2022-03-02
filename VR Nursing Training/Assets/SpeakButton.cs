@@ -39,7 +39,7 @@ public class SpeakButton : InteractableBase
             button1.transform.position += new Vector3(.0025f, .005f, -.005f);
             button2.transform.position += new Vector3(.0025f, .005f, 0);
             button3.transform.position += new Vector3(.0025f, .005f, .005f);
-            if (button2.transform.localPosition.y >= 2.629f)
+            if (button2.transform.localPosition.y >= 10f)
             {
                 Debug.Log("Stopping Buttons");
                 openstuff = false;
@@ -49,7 +49,7 @@ public class SpeakButton : InteractableBase
             button1.transform.position -= new Vector3(.0025f, .005f, -.005f);
             button2.transform.position -= new Vector3(.0025f, .005f, 0);
             button3.transform.position -= new Vector3(.0025f, .005f, .005f);
-            if (button2.transform.localPosition.y <= transform.localPosition.y)
+            if (button2.transform.localPosition.y <= Vector3.zero.y)
             {
                 Debug.Log("Stopping Buttons");
                 closestuff = false;
