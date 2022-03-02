@@ -33,11 +33,17 @@ public class MedCartTransition : MonoBehaviour
     {
         Vector3 posChange = targetCart.transform.position - transform.position;
         Quaternion rotChange = Quaternion.Euler(targetCart.transform.rotation.x - transform.rotation.x, targetCart.transform.rotation.y - transform.rotation.y, targetCart.transform.rotation.z - transform.rotation.z);
+        
         foreach (GameObject obj in triggerObjects)
         {
             obj.transform.position += posChange;
             obj.transform.rotation = Quaternion.Euler(transform.rotation.x + rotChange.x, transform.rotation.y + rotChange.y, transform.rotation.z + rotChange.z);
         }
         while (triggerObjects.Count > 0) triggerObjects.RemoveAt(0);
+
+        // Need to create an empty game object to be the parent of all medicines, move and rotate the empty object, and unparent the medicine before deleting the empty object
     }
 }
+
+// MAJOR EDIT: ONLY KEEP TRACK OF CORRECT ITEMS AND IGNORE THEIR POSITION
+// TAKE A SNAPSHOT OF OBJECT ON THE CART WHEN THE ROOM IS COMPLETED
