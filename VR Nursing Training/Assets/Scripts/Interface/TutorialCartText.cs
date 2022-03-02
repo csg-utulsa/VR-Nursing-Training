@@ -11,7 +11,7 @@ public class TutorialCartText : MonoBehaviour
     public GameObject tutorialCart = null;
     //private 
     //private double pillCountText = 0;
-    private double liquidCountText = 0;
+    //private double liquidCountText = 0;
 
     private void Awake()
     {

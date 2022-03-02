@@ -15,6 +15,7 @@ public class CheckComplete : MonoBehaviour
     [SerializeField] private GameObject reportObject;
     [SerializeField] private GameObject reportText;
     [SerializeField] private ScenarioStart scenarioParent;
+    [SerializeField] private GameObject nextRoomButton;
     Text text;
 
     private bool noSkips = true;
@@ -60,9 +61,8 @@ public class CheckComplete : MonoBehaviour
 
                     if (reportObject != null) reportObject.SetActive(true);
                     if (reportText != null) text.text = scenarioParent.getReport();
+                    if (nextRoomButton != null) nextRoomButton.SetActive(true);
                     scenarioParent.stopNodes();
-                    
-                        
                 }
             }
 
