@@ -1592,13 +1592,13 @@ GameObject:
   - component: {fileID: 81957080}
   - component: {fileID: 81957082}
   - component: {fileID: 81957081}
-  m_Layer: 10
+  m_Layer: 3
   m_Name: Speak Button (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &81957080
 Transform:
   m_ObjectHideFlags: 0
@@ -4513,13 +4513,13 @@ GameObject:
   - component: {fileID: 446210614}
   - component: {fileID: 446210616}
   - component: {fileID: 446210615}
-  m_Layer: 10
+  m_Layer: 3
   m_Name: Administer Medicine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &446210614
 Transform:
   m_ObjectHideFlags: 0
@@ -12035,7 +12035,7 @@ GameObject:
   - component: {fileID: 1168629369}
   - component: {fileID: 1168629368}
   - component: {fileID: 1168629370}
-  m_Layer: 10
+  m_Layer: 3
   m_Name: Speak Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12858,13 +12858,13 @@ GameObject:
   - component: {fileID: 1249721149}
   - component: {fileID: 1249721151}
   - component: {fileID: 1249721150}
-  m_Layer: 10
+  m_Layer: 3
   m_Name: Speak Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1249721149
 Transform:
   m_ObjectHideFlags: 0
