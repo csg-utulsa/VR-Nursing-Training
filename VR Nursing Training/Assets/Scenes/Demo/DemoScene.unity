@@ -1607,7 +1607,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 81957079}
   m_LocalRotation: {x: 0.15304591, y: 0.6903456, z: -0.15304591, w: 0.6903456}
-  m_LocalPosition: {x: 15.8619995, y: 2.6290002, z: 17.34549}
+  m_LocalPosition: {x: 15.753, y: 2.397, z: 17.645493}
   m_LocalScale: {x: 0.025, y: 0.025, z: 1}
   m_Children: []
   m_Father: {fileID: 1492245379}
@@ -4528,7 +4528,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 446210613}
   m_LocalRotation: {x: 0.15304591, y: 0.6903456, z: -0.15304591, w: 0.6903456}
-  m_LocalPosition: {x: 15.8619995, y: 2.6290002, z: 17.645493}
+  m_LocalPosition: {x: 15.753, y: 2.397, z: 17.645493}
   m_LocalScale: {x: 0.025, y: 0.025, z: 1}
   m_Children: []
   m_Father: {fileID: 1492245379}
@@ -12034,6 +12034,7 @@ GameObject:
   - component: {fileID: 1168629367}
   - component: {fileID: 1168629369}
   - component: {fileID: 1168629368}
+  - component: {fileID: 1168629370}
   m_Layer: 10
   m_Name: Speak Button
   m_TagString: Untagged
@@ -12119,6 +12120,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1168629370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168629366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c04c2805fabba74429dff97fb61c4715, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+  onDrop:
+    m_PersistentCalls:
+      m_Calls: []
+  button1: {fileID: 1249721148}
+  button2: {fileID: 446210613}
+  button3: {fileID: 81957079}
 --- !u!1001 &1180291982
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12851,7 +12873,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1249721148}
   m_LocalRotation: {x: 0.15304591, y: 0.6903456, z: -0.15304591, w: 0.6903456}
-  m_LocalPosition: {x: 15.862, y: 2.629, z: 17.945492}
+  m_LocalPosition: {x: 15.753, y: 2.397, z: 17.645493}
   m_LocalScale: {x: 0.025, y: 0.025, z: 1}
   m_Children: []
   m_Father: {fileID: 1492245379}
@@ -18022,7 +18044,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1849289980}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 10.24, y: 10.24, z: 0.2}
