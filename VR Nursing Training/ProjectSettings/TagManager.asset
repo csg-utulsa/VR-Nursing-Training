@@ -21,6 +21,7 @@ TagManager:
   - MenuPanel
   - MedLabel
   - Sharpie
+  - Button
   layers:
   - Default
   - TransparentFX
