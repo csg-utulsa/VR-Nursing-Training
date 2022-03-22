@@ -5,6 +5,7 @@ using UnityEngine;
 public class TransitionTestScript : InteractableBase
 {
     public MedCartTransition move;
+    public bool record = false;
     private void OnTriggerEnter(Collider other)
     {
         Interact(other);
@@ -14,7 +15,8 @@ public class TransitionTestScript : InteractableBase
     {
         if (other.gameObject.CompareTag("Hands"))
         {
-            move.moveObjects();
+            if (!record) move.moveObjects();
+            else move.recordObjects();
         }
     }
 

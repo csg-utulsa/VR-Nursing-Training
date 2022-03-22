@@ -6299,7 +6299,7 @@ PrefabInstance:
     - target: {fileID: 5061626115164700293, guid: df6004b36089eff4897c93b2944c73ee,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5380461377052272185, guid: df6004b36089eff4897c93b2944c73ee,
         type: 3}
@@ -6485,6 +6485,9 @@ MonoBehaviour:
   reportText: {fileID: 104443013}
   scenarioParent: {fileID: 1843458143}
   nextRoomButton: {fileID: 0}
+  eventsOnComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &588594062
 Transform:
   m_ObjectHideFlags: 0
@@ -27014,9 +27017,17 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 159191684, guid: 0af8f3646a662394eb8f95def6a25298, type: 3}
+      propertyPath: m_Radius
+      value: 0.015
+      objectReference: {fileID: 0}
     - target: {fileID: 226502561, guid: 0af8f3646a662394eb8f95def6a25298, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 226502564, guid: 0af8f3646a662394eb8f95def6a25298, type: 3}
+      propertyPath: m_Radius
+      value: 0.00001
       objectReference: {fileID: 0}
     - target: {fileID: 1455292153, guid: 0af8f3646a662394eb8f95def6a25298, type: 3}
       propertyPath: m_InteractionManager
@@ -27041,12 +27052,12 @@ PrefabInstance:
     - target: {fileID: 1405898044693227596, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2632912369471152309, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7548493106137593522, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
