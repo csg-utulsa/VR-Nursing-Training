@@ -18112,6 +18112,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Teleport Zone (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8242107070829370906, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6, type: 3}
 --- !u!1 &1843458142
@@ -27017,6 +27022,10 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1383005072}
+    - target: {fileID: 1477141302, guid: 0af8f3646a662394eb8f95def6a25298, type: 3}
+      propertyPath: raycastMask.m_Bits
+      value: 264
+      objectReference: {fileID: 0}
     - target: {fileID: 1564922136, guid: 0af8f3646a662394eb8f95def6a25298, type: 3}
       propertyPath: liquidObject
       value: 
