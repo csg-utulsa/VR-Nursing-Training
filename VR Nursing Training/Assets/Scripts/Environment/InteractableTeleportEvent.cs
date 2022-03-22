@@ -5,9 +5,16 @@ using UnityEngine.Events;
 
 public class InteractableTeleportEvent : MonoBehaviour
 {
-    public UnityEvent onTeleport;
+    public UnityEvent onTeleportEnter;
+    public UnityEvent onTeleportExit;
 
-    public virtual void TeleportInvoke(){
-        onTeleport.Invoke();
+    public virtual void TeleportEnter(){
+        onTeleportEnter.Invoke();
+    }
+
+    // Doesnt work yet
+    public virtual void TeleportExit()
+    {
+        onTeleportExit.Invoke();
     }
 }

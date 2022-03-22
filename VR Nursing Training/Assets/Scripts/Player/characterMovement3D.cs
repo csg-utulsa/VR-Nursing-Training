@@ -9,7 +9,7 @@ public class characterMovement3D : MonoBehaviour
     public GameObject handLocation;
     PlayerInput input;
 
-    public double transitionSpeed =0.25;
+    public double transitionSpeed = 0.25;
     public bool smoothPickup = true;
     public int interactRayCastDistance = 2;
 
@@ -457,7 +457,7 @@ public class characterMovement3D : MonoBehaviour
                 if (isClicking)
                 {
                     Debug.Log("Hit!");
-                    hit.collider.gameObject.transform.parent.GetComponent<InteractableTeleportEvent>().TeleportInvoke(); //trigger teleport event call
+                    hit.collider.gameObject.transform.parent.GetComponent<InteractableTeleportEvent>().TeleportEnter(); //trigger teleport event call
                     transform.position = hit.collider.gameObject.transform.parent.position;
                 }
             }

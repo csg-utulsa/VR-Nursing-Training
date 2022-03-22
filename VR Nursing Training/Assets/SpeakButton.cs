@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpeakButton : InteractableBase
 {
+    public GameObject[] buttons;
     public GameObject button1;
     public GameObject button2;
     public GameObject button3;
@@ -18,17 +19,16 @@ public class SpeakButton : InteractableBase
     public override void Interact(Collider other)
     {
         Debug.Log("Interacting with buttons");
-        if(toggle == false)
+        if (toggle == false)
         {
             OpenButton();
             toggle = true;
-        } else
+        }
+        else
         {
             CloseButton();
             toggle = false;
         }
-        
-        
     }
 
     // Update is called once per frame
@@ -36,6 +36,7 @@ public class SpeakButton : InteractableBase
     {
         if (openstuff)
         {
+            /**
             button1.transform.position += new Vector3(.0025f, .005f, -.005f);
             button2.transform.position += new Vector3(.0025f, .005f, 0);
             button3.transform.position += new Vector3(.0025f, .005f, .005f);
@@ -44,6 +45,8 @@ public class SpeakButton : InteractableBase
                 Debug.Log("Stopping Buttons");
                 openstuff = false;
             }
+            **/
+
         } else if (closestuff)
         {
             button1.transform.position -= new Vector3(.0025f, .005f, -.005f);

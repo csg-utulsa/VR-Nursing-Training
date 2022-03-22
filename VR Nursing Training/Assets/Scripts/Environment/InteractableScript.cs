@@ -9,10 +9,10 @@ public class InteractableScript : InteractableBase, HoverableBase
 
 
 
-    public UnityEvent onCombine;
-    public UnityEvent interactEvent;
-    public UnityEvent cursorHighlight;
-    public UnityEvent lookHighlight;
+    public UnityEvent onCombine; // Do we use?
+    public UnityEvent interactEvent; // Do we use?
+    public UnityEvent cursorHighlight; // Do we use?
+    public UnityEvent lookHighlight; // Do we use?
 
     public Vector3 initialPosition;
     public Vector3 initialAngles;
@@ -158,7 +158,7 @@ public class InteractableScript : InteractableBase, HoverableBase
         }
     }
 
-    public void CombineObject(GameObject touchedObj) // Logic for combining gameObjs
+    public void CombineObject(GameObject touchedObj) // Logic for combining gameObjs (ONLY USED FOR CUBES RIGHT NOW)
     {
         // Anything that needs to be transferred or continued with the combined obj needs to go in here
         touchedObj.SetActive(false);
@@ -187,8 +187,6 @@ public class InteractableScript : InteractableBase, HoverableBase
 
     public void Reset() // Resets position of gameObj (used by ground trigger script)
     {
-
-        
         gameObject.transform.position = respawnPoint.transform.position; //Logan added this
 
         //gameObject.transform.position = initialPosition;

@@ -8,9 +8,12 @@ public class InteractableSpeechButton : InteractableBase, HoverableBase
 {
 
     public UnityEvent interactEvent;
-
+    public GameObject[] buttonChildren;
     public bool isInteractable;
     public string type;
+    private bool toggle = false;
+    private bool openStuff;
+    private bool closeStuff;
 
     public bool interactWithHand = true;
 
@@ -21,8 +24,6 @@ public class InteractableSpeechButton : InteractableBase, HoverableBase
     public GameObject buttonVolume;
     public ParticleSystem HighlightAnimation;
     public bool highlighted = false;
-
-
 
     //HoverableBase things
 
@@ -45,13 +46,6 @@ public class InteractableSpeechButton : InteractableBase, HoverableBase
         interactEvent.Invoke();
     }
 
-
-
-
-
-
-
-
     public override bool canInteractWithHand()
     {
         return interactWithHand;
@@ -71,7 +65,6 @@ public class InteractableSpeechButton : InteractableBase, HoverableBase
     }
 
 
-
     private void Start()
     {
         if (buttonName != "")
@@ -79,6 +72,16 @@ public class InteractableSpeechButton : InteractableBase, HoverableBase
             buttonText.text = buttonName;
         }
 
+        // Gets Children that are buttons
+        for (int i = 0; i <= gameObject.transform.childCount; i++)
+        {
+            if (gameObject.transform.GetChild(i).CompareTag("Button"))
+            {
+                buttonChildren.SetValue(gameObject.transform.GetChild(i), i);
+            }
+
+            
+        }
     }
 
     private void FixedUpdate()
@@ -114,6 +117,11 @@ public class InteractableSpeechButton : InteractableBase, HoverableBase
         //         }
     }
 
+    public void OnTriggerEnter(Collider other)
+    {
+        Interact(other);
+    }
+
     public override void Interact(Collider other)
     {
         Debug.Log("Interacted w/ Floating speech button");
@@ -122,8 +130,36 @@ public class InteractableSpeechButton : InteractableBase, HoverableBase
         {
             //interactEvent.Invoke();
         }
+        if (toggle == false)
+        {
+            OpenButton();
+            toggle = true;
+        }
+        else
+        {
+            CloseButton();
+            toggle = false;
+        }
     }
 
+    public void OpenButton()
+    {
+        float z = 0;
+        for(int i = 0; i <= buttonChildren.Length; i++ )
+        {
+            z = i - ((buttonChildren.Length-1) / 2);
+            if (z % 2 == 0)
+            {
+                z -= .5f;
+            }
+        }
+    }
+
+    public void CloseButton()
+    {
+        closeStuff = true;
+        openStuff = false;
+    }
 
 }
 
