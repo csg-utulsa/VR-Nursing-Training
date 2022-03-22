@@ -7,43 +7,96 @@ public class MedCartTransition : MonoBehaviour
     // Moves the items on the current medcart to the target one
     // This script should be placed on the current medcart trigger
 
+    [Header("NOTE: THIS SCRIPT SHOULD BE PLACED ON A CART TRIGGER")]
+    [Tooltip("The cart trigger on the medcart items should be moved to")]
     public GameObject targetCart; // the trigger the items should be moved to
+    [Tooltip("If true, only the items on the cart when the room is completed will be moved.  If false, any medications on the cart when moveObjects() is called will be moved.")]
+    public bool snapshot = false;
     private List<GameObject> triggerObjects = new List<GameObject>();
+    private List<GameObject> previousParents = new List<GameObject>();
+    private List<GameObject> tempObjects = new List<GameObject>();
 
     // Add medicines that enter the trigger to the list
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Pill") || other.gameObject.CompareTag("HalfPill") || other.gameObject.CompareTag("Patch") || other.gameObject.CompareTag("Liquid"))
+        if (!snapshot)
         {
-            triggerObjects.Add(other.gameObject);
+            if (other.gameObject.CompareTag("Pill") || other.gameObject.CompareTag("HalfPill") || other.gameObject.CompareTag("Patch") || other.gameObject.CompareTag("Liquid"))
+            {
+                triggerObjects.Add(other.gameObject);
+            }
+        }
+        else
+        {
+            if (other.gameObject.CompareTag("Pill") || other.gameObject.CompareTag("HalfPill") || other.gameObject.CompareTag("Patch") || other.gameObject.CompareTag("Liquid"))
+            {
+                tempObjects.Add(other.gameObject);
+            }
         }
     }
 
     // Remove medicines that exit the trigger
     private void OnTriggerExit(Collider other)
     {
-        if (triggerObjects.Contains(other.gameObject))
+        if (!snapshot)
         {
-            triggerObjects.Remove(other.gameObject);
+            if (triggerObjects.Contains(other.gameObject))
+            {
+                triggerObjects.Remove(other.gameObject);
+            }
+        }
+        else
+        {
+            if (tempObjects.Contains(other.gameObject))
+            {
+                tempObjects.Remove(other.gameObject);
+            }
+        }
+    }
+
+    public void recordObjects()
+    {
+        // empty the current list of objects
+        while (triggerObjects.Count > 0) triggerObjects.RemoveAt(0);
+
+        // add all objects currently in the trigger
+        foreach (GameObject obj in tempObjects)
+        {
+            triggerObjects.Add(obj);
         }
     }
 
     // Move all objects from the current medcart to the new one
     public void moveObjects()
     {
-        Vector3 posChange = targetCart.transform.position - transform.position;
-        Quaternion rotChange = Quaternion.Euler(targetCart.transform.rotation.x - transform.rotation.x, targetCart.transform.rotation.y - transform.rotation.y, targetCart.transform.rotation.z - transform.rotation.z);
-        
-        foreach (GameObject obj in triggerObjects)
+        // create an empty parent object
+        GameObject moveParent = new GameObject("Move Parent");
+        moveParent.transform.position = transform.position;
+        moveParent.transform.rotation = transform.rotation;
+
+        // record original parents and parent each moving object to the empty object
+        for (int i = 0; i < triggerObjects.Count; i++)
         {
-            obj.transform.position += posChange;
-            obj.transform.rotation = Quaternion.Euler(transform.rotation.x + rotChange.x, transform.rotation.y + rotChange.y, transform.rotation.z + rotChange.z);
+            if (triggerObjects[i].transform.parent != null) previousParents.Add(triggerObjects[i].transform.parent.gameObject);
+            else previousParents.Add(null);
+            triggerObjects[i].transform.SetParent(moveParent.transform);
+        }
+
+        // move the parent object
+        moveParent.transform.position = targetCart.transform.position;
+        moveParent.transform.rotation = targetCart.transform.rotation;
+
+
+        // restore original parents and clear the lists
+        for (int i = 0; i < triggerObjects.Count; i++)
+        {
+            if (previousParents[i] != null) triggerObjects[i].transform.SetParent(previousParents[i].transform);
+            else triggerObjects[i].transform.SetParent(null);
         }
         while (triggerObjects.Count > 0) triggerObjects.RemoveAt(0);
+        while (previousParents.Count > 0) previousParents.RemoveAt(0);
 
-        // Need to create an empty game object to be the parent of all medicines, move and rotate the empty object, and unparent the medicine before deleting the empty object
+        // delete the empty parent object
+        Destroy(moveParent);
     }
 }
-
-// MAJOR EDIT: ONLY KEEP TRACK OF CORRECT ITEMS AND IGNORE THEIR POSITION
-// TAKE A SNAPSHOT OF OBJECT ON THE CART WHEN THE ROOM IS COMPLETED

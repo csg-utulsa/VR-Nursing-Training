@@ -5635,52 +5635,52 @@ PrefabInstance:
     - target: {fileID: 6995824551909757927, guid: cde976f77f70e5d4ca99cdc0f446fbda,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.347
+      value: -0.209
       objectReference: {fileID: 0}
     - target: {fileID: 6995824551909757927, guid: cde976f77f70e5d4ca99cdc0f446fbda,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.5977387
+      value: 5.717
       objectReference: {fileID: 0}
     - target: {fileID: 6995824551909757927, guid: cde976f77f70e5d4ca99cdc0f446fbda,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.084
+      value: -3.138
       objectReference: {fileID: 0}
     - target: {fileID: 6995824551909757927, guid: cde976f77f70e5d4ca99cdc0f446fbda,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9999323
+      value: 0.98174286
       objectReference: {fileID: 0}
     - target: {fileID: 6995824551909757927, guid: cde976f77f70e5d4ca99cdc0f446fbda,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0.06655897
       objectReference: {fileID: 0}
     - target: {fileID: 6995824551909757927, guid: cde976f77f70e5d4ca99cdc0f446fbda,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.011644093
+      value: -0.16401201
       objectReference: {fileID: 0}
     - target: {fileID: 6995824551909757927, guid: cde976f77f70e5d4ca99cdc0f446fbda,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.06964887
       objectReference: {fileID: 0}
     - target: {fileID: 6995824551909757927, guid: cde976f77f70e5d4ca99cdc0f446fbda,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 8.832
       objectReference: {fileID: 0}
     - target: {fileID: 6995824551909757927, guid: cde976f77f70e5d4ca99cdc0f446fbda,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 1.334
+      value: -18.452
       objectReference: {fileID: 0}
     - target: {fileID: 6995824551909757927, guid: cde976f77f70e5d4ca99cdc0f446fbda,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 6.679
       objectReference: {fileID: 0}
     - target: {fileID: 7664556957914220893, guid: cde976f77f70e5d4ca99cdc0f446fbda,
         type: 3}
@@ -5714,6 +5714,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetCart: {fileID: 7393943155898816083}
+  snapshot: 0
 --- !u!1 &558008932
 GameObject:
   m_ObjectHideFlags: 0
@@ -6472,6 +6473,22 @@ MonoBehaviour:
   reportObject: {fileID: 65378653}
   reportText: {fileID: 104443013}
   scenarioParent: {fileID: 1843458143}
+  nextRoomButton: {fileID: 0}
+  eventsOnComplete:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7393943155898816084}
+        m_TargetAssemblyTypeName: MedCartTransition, Assembly-CSharp
+        m_MethodName: recordObjects
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &588594062
 Transform:
   m_ObjectHideFlags: 0
@@ -21839,6 +21856,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetCart: {fileID: 551802249}
+  snapshot: 1
 --- !u!1001 &7548493107148386151
 PrefabInstance:
   m_ObjectHideFlags: 0
