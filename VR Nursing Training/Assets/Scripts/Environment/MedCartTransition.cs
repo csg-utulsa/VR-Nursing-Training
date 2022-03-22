@@ -15,6 +15,8 @@ public class MedCartTransition : MonoBehaviour
     private List<GameObject> triggerObjects = new List<GameObject>();
     private List<GameObject> previousParents = new List<GameObject>();
     private List<GameObject> tempObjects = new List<GameObject>();
+    private List<Vector3> recordedPositions = new List<Vector3>();
+    private List<Quaternion> recordedRotations = new List<Quaternion>();
 
     // Add medicines that enter the trigger to the list
     private void OnTriggerEnter(Collider other)
@@ -63,6 +65,8 @@ public class MedCartTransition : MonoBehaviour
         foreach (GameObject obj in tempObjects)
         {
             triggerObjects.Add(obj);
+            recordedPositions.Add(obj.transform.position);
+            recordedRotations.Add(obj.transform.rotation);
         }
     }
 
@@ -74,6 +78,15 @@ public class MedCartTransition : MonoBehaviour
         moveParent.transform.position = transform.position;
         moveParent.transform.rotation = transform.rotation;
 
+        // if in snapshot mode, move objects to their recorded positions
+        if (snapshot)
+        {
+            for (int i = 0; i < triggerObjects.Count; i++)
+            {
+                triggerObjects[i].transform.position = recordedPositions[i];
+                triggerObjects[i].transform.rotation = recordedRotations[i];
+            }
+        }
         // record original parents and parent each moving object to the empty object
         for (int i = 0; i < triggerObjects.Count; i++)
         {
@@ -95,6 +108,9 @@ public class MedCartTransition : MonoBehaviour
         }
         while (triggerObjects.Count > 0) triggerObjects.RemoveAt(0);
         while (previousParents.Count > 0) previousParents.RemoveAt(0);
+        while (tempObjects.Count > 0) tempObjects.RemoveAt(0);
+        while (recordedPositions.Count > 0) recordedPositions.RemoveAt(0);
+        while (recordedRotations.Count > 0) recordedRotations.RemoveAt(0);
 
         // delete the empty parent object
         Destroy(moveParent);
