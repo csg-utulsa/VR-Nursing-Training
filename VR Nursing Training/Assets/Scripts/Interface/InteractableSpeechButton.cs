@@ -35,6 +35,7 @@ public class InteractableSpeechButton : InteractableBase, HoverableBase
     public void LookHighlight()
     {
         //nothing
+        Debug.Log("WERG");
     }
 
     public void CursorInteract()
