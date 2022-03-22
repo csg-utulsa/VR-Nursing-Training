@@ -50,6 +50,7 @@ public class CheckComplete : MonoBehaviour
                     if (noSkips)
                     {
                         if (checkmark != null) checkmark.SetActive(true);
+                        eventsOnComplete.Invoke();
                         if (TeleportSet1)
                         {
                             TeleportSet1.SetActive(false);
