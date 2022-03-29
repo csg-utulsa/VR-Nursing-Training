@@ -8,7 +8,8 @@ public class InteractableSpeechButton : InteractableBase, HoverableBase
 {
 
     public UnityEvent interactEvent;
-    public GameObject[] buttonChildren;
+    public List<GameObject> buttonChildren;
+    public List<float> zvalues;
     public bool isInteractable;
     public string type;
     private bool toggle = false;
@@ -36,7 +37,7 @@ public class InteractableSpeechButton : InteractableBase, HoverableBase
     public void LookHighlight()
     {
         //nothing
-        Debug.Log("WERG");
+        //Debug.Log("WERG");
     }
 
     public void CursorInteract()
@@ -74,15 +75,30 @@ public class InteractableSpeechButton : InteractableBase, HoverableBase
         }
 
         // Gets Children that are buttons
-        for (int i = 0; i <= gameObject.transform.childCount; i++)
+        for (int i = 0; i < gameObject.transform.childCount; i++)
         {
             if (gameObject.transform.GetChild(i).CompareTag("Button"))
             {
-                buttonChildren.SetValue(gameObject.transform.GetChild(i), i);
-            }
 
-            
+                buttonChildren.Add(gameObject.transform.GetChild(i).gameObject);
+                
+            }
         }
+        Debug.Log("ActualCount " + buttonChildren.Count);
+
+        for (int i = 0; i < buttonChildren.Count; i++)
+        {
+            zvalues.Add(i - ((buttonChildren.Count - 1) / 2));
+            Debug.Log("CountZVals" + zvalues.Count);
+            if (zvalues[i] % 2 == 0f)
+            {
+                zvalues[i] -= .5f;
+            }
+        }
+        
+        
+
+
     }
 
     private void FixedUpdate()
@@ -99,6 +115,33 @@ public class InteractableSpeechButton : InteractableBase, HoverableBase
             HighlightAnimation.Clear();
             // HighlightAnimation.setEnable
         }
+        if (openStuff)
+        {
+            Debug.Log("Moving Buttons...");
+            for (int i = 0; i < buttonChildren.Count; i++)
+            {
+                buttonChildren[i].transform.Translate(.0025f, .005f, zvalues[i]/100);
+                if (buttonChildren[i].transform.localPosition.y >= 10f)
+                {
+                    Debug.Log("Stopping Buttons");
+                    openStuff = false;
+                }
+            }
+
+        } else if (closeStuff)
+        {
+            for (int i = 0; i < buttonChildren.Count; i++)
+            {
+                buttonChildren[i].transform.Translate(-.0025f, -.005f, -zvalues[i]/100);
+                if (buttonChildren[i].transform.localPosition.y <= Vector3.zero.y)
+                {
+                    closeStuff = false;
+                    buttonChildren[i].SetActive(false);
+                }
+            }
+        }
+        
+
 
         //         if (targets.Length > 0 && step < targets.Length && targets[step] != null)
         //         {
@@ -145,21 +188,24 @@ public class InteractableSpeechButton : InteractableBase, HoverableBase
 
     public void OpenButton()
     {
-        float z = 0;
-        for(int i = 0; i <= buttonChildren.Length; i++ )
+        if (buttonChildren.Count >= 1)
         {
-            z = i - ((buttonChildren.Length-1) / 2);
-            if (z % 2 == 0)
-            {
-                z -= .5f;
+            for (int i = 0; i < buttonChildren.Count; i++) {
+                buttonChildren[i].SetActive(true);
             }
+            openStuff = true;
+            closeStuff = false;
         }
+        
     }
 
     public void CloseButton()
     {
-        closeStuff = true;
-        openStuff = false;
+        if (buttonChildren.Count > 1)
+        {
+            closeStuff = true;
+            openStuff = false;
+        }
     }
 
 }
