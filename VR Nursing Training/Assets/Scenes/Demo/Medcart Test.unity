@@ -2318,6 +2318,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4eddda6d6f2e045438d2ef2ebccfd6e6, type: 3}
+--- !u!1 &177691201
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 177691202}
+  - component: {fileID: 177691203}
+  m_Layer: 0
+  m_Name: Cart Marked Patch
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &177691202
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177691201}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1700906719}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &177691203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177691201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bed5c6707fc6ef4aa88ef64f847e75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Cart Marked Patch
+  reportSuccess: Marked Patch Carted Successfully
+  reportSkip: Marked Patch Not Carted
+  reportFail: Marked Patch Not Carted
+  strikeCount: 0
+  failed: 0
+  active: 0
+  skipped: 0
+  complete: 0
+  canSkip: 0
+  canContinue: 0
+  successActions:
+  - {fileID: 7393943155898816085}
+  failActions: []
 --- !u!1 &189718505
 GameObject:
   m_ObjectHideFlags: 0
@@ -17307,6 +17364,7 @@ Transform:
   - {fileID: 1676930991}
   - {fileID: 815689885}
   - {fileID: 654992018}
+  - {fileID: 177691202}
   m_Father: {fileID: 1237110800}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17333,6 +17391,7 @@ MonoBehaviour:
   - {fileID: 1676930993}
   - {fileID: 815689887}
   - {fileID: 654992020}
+  - {fileID: 177691203}
 --- !u!4 &1703782464 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f134ecd79ce0eeb44a38041e50af3f0f,
@@ -22069,10 +22128,23 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1436730773}
     m_Modifications:
+    - target: {fileID: 1072718024, guid: cde976f77f70e5d4ca99cdc0f446fbda, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1072718031, guid: cde976f77f70e5d4ca99cdc0f446fbda, type: 3}
       propertyPath: sharpie
       value: 
       objectReference: {fileID: 355127568}
+    - target: {fileID: 1559491481, guid: cde976f77f70e5d4ca99cdc0f446fbda, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 486973451393720926, guid: cde976f77f70e5d4ca99cdc0f446fbda,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6995824551909757927, guid: cde976f77f70e5d4ca99cdc0f446fbda,
         type: 3}
       propertyPath: m_RootOrder
@@ -22155,6 +22227,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetCart: {fileID: 551802249}
   snapshot: 1
+--- !u!114 &7393943155898816085 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7002367645639039748, guid: cde976f77f70e5d4ca99cdc0f446fbda,
+    type: 3}
+  m_PrefabInstance: {fileID: 7393943155898816082}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a3ae133c9c695a49a046b15596b3c0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7548493107148386151
 PrefabInstance:
   m_ObjectHideFlags: 0
