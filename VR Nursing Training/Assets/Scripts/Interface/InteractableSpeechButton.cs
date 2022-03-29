@@ -10,9 +10,9 @@ public class InteractableSpeechButton : InteractableBase, HoverableBase
     public UnityEvent interactEvent;
     public List<GameObject> buttonChildren;
     public List<float> zvalues;
-    public static float xAxisSpacing = .0025f;
-    public static float yAxisSpacing = .005f;
-    public static float yDistance = 10;
+    [SerializeField] public static float xAxisSpacing = .0025f;
+    [SerializeField] public static float yAxisSpacing = .005f;
+    [SerializeField] public static float yDistance = 10;
     public bool isInteractable;
     public string type;
     private bool toggle = false;
@@ -177,8 +177,10 @@ public class InteractableSpeechButton : InteractableBase, HoverableBase
         //CombineObject(other.gameObject);
         if (interactEvent != null)
         {
-            //interactEvent.Invoke();
+            interactEvent.Invoke();
         }
+
+
         if (toggle == false)
         {
             OpenButton();
