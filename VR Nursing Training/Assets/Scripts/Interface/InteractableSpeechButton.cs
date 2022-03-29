@@ -10,6 +10,9 @@ public class InteractableSpeechButton : InteractableBase, HoverableBase
     public UnityEvent interactEvent;
     public List<GameObject> buttonChildren;
     public List<float> zvalues;
+    public static float xAxisSpacing = .0025f;
+    public static float yAxisSpacing = .005f;
+    public static float yDistance = 10;
     public bool isInteractable;
     public string type;
     private bool toggle = false;
@@ -88,9 +91,9 @@ public class InteractableSpeechButton : InteractableBase, HoverableBase
 
         for (int i = 0; i < buttonChildren.Count; i++)
         {
-            zvalues.Add(i - ((buttonChildren.Count - 1) / 2));
+            zvalues.Add(i - (Mathf.Floor((buttonChildren.Count - 1) / 2)));
             Debug.Log("CountZVals" + zvalues.Count);
-            if (zvalues[i] % 2 == 0f)
+            if (buttonChildren.Count % 2 == 0f)
             {
                 zvalues[i] -= .5f;
             }
@@ -120,8 +123,10 @@ public class InteractableSpeechButton : InteractableBase, HoverableBase
             Debug.Log("Moving Buttons...");
             for (int i = 0; i < buttonChildren.Count; i++)
             {
-                buttonChildren[i].transform.Translate(.0025f, .005f, zvalues[i]/100);
-                if (buttonChildren[i].transform.localPosition.y >= 10f)
+
+                //buttonChildren[i].transform.Translate(.0025f, .005f, zvalues[i] / 100);
+                buttonChildren[i].transform.position += new Vector3(xAxisSpacing, yAxisSpacing, zvalues[i] * .005f);
+                if (buttonChildren[i].transform.localPosition.y >= yDistance)
                 {
                     Debug.Log("Stopping Buttons");
                     openStuff = false;
@@ -132,7 +137,7 @@ public class InteractableSpeechButton : InteractableBase, HoverableBase
         {
             for (int i = 0; i < buttonChildren.Count; i++)
             {
-                buttonChildren[i].transform.Translate(-.0025f, -.005f, -zvalues[i]/100);
+                buttonChildren[i].transform.position += new Vector3(-xAxisSpacing, -yAxisSpacing, -zvalues[i] *.005f);
                 if (buttonChildren[i].transform.localPosition.y <= Vector3.zero.y)
                 {
                     closeStuff = false;
@@ -201,8 +206,12 @@ public class InteractableSpeechButton : InteractableBase, HoverableBase
 
     public void CloseButton()
     {
-        if (buttonChildren.Count > 1)
+        if (buttonChildren.Count >= 1)
         {
+            for (int i = 0; i < buttonChildren.Count; i++)
+            {
+                buttonChildren[i].GetComponent<InteractableSpeechButton>().CloseButton();
+            }
             closeStuff = true;
             openStuff = false;
         }
