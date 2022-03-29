@@ -5,7 +5,7 @@ using UnityEngine;
 public class MedCartTransition : MonoBehaviour
 {
     // Moves the items on the current medcart to the target one
-    // This script should be placed on the current medcart trigger
+    // This script should be placed on the current medcart trigger game object
 
     [Header("NOTE: THIS SCRIPT SHOULD BE PLACED ON A CART TRIGGER")]
     [Tooltip("The cart trigger on the medcart items should be moved to")]
