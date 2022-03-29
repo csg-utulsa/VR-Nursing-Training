@@ -36,4 +36,9 @@ public class PatchObjectScript : MonoBehaviour
             onDateSet.Invoke();
         }
     }
+
+    public bool isMarked()
+    {
+        return marked;
+    }
 }
