@@ -22424,6 +22424,21 @@ PrefabInstance:
       propertyPath: buttonChildren.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4225932161044452570, guid: f13350807c0738e4190f9a6a777085a0,
+        type: 3}
+      propertyPath: interactEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4225932161044452570, guid: f13350807c0738e4190f9a6a777085a0,
+        type: 3}
+      propertyPath: interactEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4225932161044452570, guid: f13350807c0738e4190f9a6a777085a0,
+        type: 3}
+      propertyPath: interactEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4225932161044452571, guid: f13350807c0738e4190f9a6a777085a0,
         type: 3}
       propertyPath: m_Name
