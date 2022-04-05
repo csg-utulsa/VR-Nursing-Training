@@ -91,7 +91,7 @@ public class HoverableCursor : MonoBehaviour
                     }
 
                     Debug.Log("HoverableCursor interact called");
-                    foundObject.CursorInteract();
+                    foundObject.Interact(gameObject.GetComponent<Collider>());
                 }else{
                     interactedLastFrame=false;
                 }

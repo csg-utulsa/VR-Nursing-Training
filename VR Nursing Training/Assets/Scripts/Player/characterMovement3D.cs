@@ -160,7 +160,8 @@ public class characterMovement3D : MonoBehaviour
                 //Debug.Log("Calling hoverableBase cursorHighlight in check 1");
 
                 if(isInteract){
-                    hit.collider.gameObject.GetComponent<HoverableBase>().CursorInteract();
+                    //hit.collider.gameObject.GetComponent<InteractableBase>().Interact(hit.collider);
+                    //break;
                 }
             }
             else
@@ -172,7 +173,8 @@ public class characterMovement3D : MonoBehaviour
                     hit.collider.gameObject.transform.parent.GetComponent<HoverableBase>().LookHighlight(); // LookHighlight is the same as CursorHighlight for 3D
                     //Debug.Log("Calling hoverableBase cursorHighlight in check 1");
                     if(isInteract){
-                        hit.collider.gameObject.transform.parent.GetComponent<HoverableBase>().CursorInteract();
+                       //hit.collider.gameObject.transform.parent.GetComponent<InteractableBase>().Interact(hit.collider);
+                       //break;
                     }
                 }
             }
@@ -245,6 +247,13 @@ public class characterMovement3D : MonoBehaviour
 
                             break;
                         }
+                        else if (otherGameObject.GetComponent<InteractableBase>().canInteractWithHand())
+                        {
+
+                            otherGameObject.GetComponent<InteractableBase>().Interact(handLocation.GetComponent<Collider>());
+                            Debug.Log("break on obj " + i + ", is an interactable base and interacted with bare hands on object " + otherGameObject.name);
+                            break;
+                        }
                         else if(hit.collider.gameObject.transform.parent != null && hit.collider.gameObject.transform.parent.GetComponent<InteractableScript>() != null)
                         {
                             otherGameObject = hit.collider.gameObject.transform.parent.gameObject;
@@ -269,13 +278,7 @@ public class characterMovement3D : MonoBehaviour
                         //    {
                         //        //...!?
                         //    }
-                        else if(otherGameObject.GetComponent<InteractableBase>().canInteractWithHand())
-                        {
-
-                            otherGameObject.GetComponent<InteractableBase>().Interact(handLocation.GetComponent<Collider>());
-                            Debug.Log("break on obj "+i+", is an interactable base and interacted with bare hands on object "+otherGameObject.name);
-                            break;
-                        }
+                        
                     } else
                     {
                         otherGameObject.GetComponent<InteractableBase>().Interact(handLocation.transform.GetChild(0).GetComponent<Collider>());

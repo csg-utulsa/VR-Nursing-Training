@@ -36,21 +36,15 @@ public class InteractableDialogBtn : InteractableBase, HoverableBase
     {
         //nothing
     }
-
-    public void CursorInteract()
+    
+    public override void Interact(Collider other)
     {
         //Interact something
         Debug.Log("CursorInteract called inside InteractbaleDialogButton and I don't know what to do");
         cup.GetComponent<LiquidObjectScript>().setDosage(dosageValue);
         interactEvent.Invoke();
     }
-
-
-
-
-
-
-
+    
 
     public override bool canInteractWithHand()
     {
@@ -109,6 +103,7 @@ public class InteractableDialogBtn : InteractableBase, HoverableBase
 //         }
     }
 
+    /**
     public override void Interact(Collider other)
     {
         Debug.Log("Interacted w/ Floating dialog button");
@@ -118,7 +113,7 @@ public class InteractableDialogBtn : InteractableBase, HoverableBase
             //interactEvent.Invoke();
         }
     }
-
+    **/
 
 }
 

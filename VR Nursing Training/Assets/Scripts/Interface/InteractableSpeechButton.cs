@@ -43,14 +43,14 @@ public class InteractableSpeechButton : InteractableBase, HoverableBase
         //Debug.Log("WERG");
     }
 
-    public void CursorInteract()
+   /* public override void Interact(Collider other)
     {
         //Interact something
         Debug.Log("CursorInteract called inside InteractableSpeechButton and invoking interactEvent");
         //cup.GetComponent<LiquidObjectScript>().setDosage(dosageValue);
         interactEvent.Invoke();
         //Interact(this.gameObject.Collider);
-    }
+    }*/
 
     public override bool canInteractWithHand()
     {
@@ -180,7 +180,6 @@ public class InteractableSpeechButton : InteractableBase, HoverableBase
         {
             interactEvent.Invoke();
         }
-
 
         if (toggle == false)
         {

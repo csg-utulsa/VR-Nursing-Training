@@ -17,5 +17,5 @@ public interface HoverableBase
 
     public void LookHighlight(); //Object is near the cursor or the user is looking at the object's general direction
 
-    public void CursorInteract(); //CursorHighlight is running AND the user interacts with it, through a trigger pull or otherwise. Does not honor whatever object is being held
+    //public void CursorInteract(); //CursorHighlight is running AND the user interacts with it, through a trigger pull or otherwise. Does not honor whatever object is being held
 }
