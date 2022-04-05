@@ -18814,7 +18814,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1849289980}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: -4.7995687, y: 2.4936466, z: -7.765}
+  m_LocalPosition: {x: -4.7995687, y: 2.4936466, z: -6.892}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 1492245379}
@@ -22424,21 +22424,6 @@ PrefabInstance:
       propertyPath: buttonChildren.Array.size
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4225932161044452570, guid: f13350807c0738e4190f9a6a777085a0,
-        type: 3}
-      propertyPath: interactEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4225932161044452570, guid: f13350807c0738e4190f9a6a777085a0,
-        type: 3}
-      propertyPath: interactEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4225932161044452570, guid: f13350807c0738e4190f9a6a777085a0,
-        type: 3}
-      propertyPath: interactEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4225932161044452571, guid: f13350807c0738e4190f9a6a777085a0,
         type: 3}
       propertyPath: m_Name
@@ -22951,12 +22936,12 @@ PrefabInstance:
     - target: {fileID: 1405898044693227596, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2632912369471152309, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7548493106137593522, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}

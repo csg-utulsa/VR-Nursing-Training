@@ -49,7 +49,7 @@ public class InteractableSpeechButton : InteractableBase, HoverableBase
         Debug.Log("CursorInteract called inside InteractableSpeechButton and invoking interactEvent");
         //cup.GetComponent<LiquidObjectScript>().setDosage(dosageValue);
         interactEvent.Invoke();
-        Interact(this.gameObject.Collider);
+        //Interact(this.gameObject.Collider);
     }
 
     public override bool canInteractWithHand()
