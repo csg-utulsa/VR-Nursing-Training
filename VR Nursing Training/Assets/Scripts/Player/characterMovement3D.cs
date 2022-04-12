@@ -206,7 +206,8 @@ public class characterMovement3D : MonoBehaviour
 
 
         if (isInteract){
-            Debug.Log("hit "+hits.Length+" objects");
+            Debug.Log("1 It is Interact");
+            //Debug.Log("hit "+hits.Length+" objects");
             for(int i = 0; i < hits.Length; i++){
                 
                 if (Physics.Raycast(camera3D.transform.position, camera3D.transform.forward, out hit, interactRayCastDistance) == true && hit.collider.gameObject.layer == 7 && hit.collider.gameObject.CompareTag("Handle") == false)
@@ -214,8 +215,8 @@ public class characterMovement3D : MonoBehaviour
                     Debug.Log("break on obj " + hit.collider.gameObject.name);
                     break;
                 }
-
-                if(hit.collider.gameObject.GetComponent<InteractableBase>() == null || hit.collider.gameObject.CompareTag("PillCutter") || hit.collider.gameObject.CompareTag("Ignore"))
+                Debug.Log("2 not break 1");
+                if (hit.collider.gameObject.GetComponent<InteractableBase>() == null || hit.collider.gameObject.CompareTag("PillCutter") || hit.collider.gameObject.CompareTag("Ignore"))
                 {
                     hit = hits[i];
 
@@ -225,10 +226,13 @@ public class characterMovement3D : MonoBehaviour
 
                 if ( hit.collider.gameObject.GetComponent<InteractableBase>() != null)
                 {
+                    Debug.Log("3 Is Interactable Base");
                     GameObject otherGameObject = hit.collider.gameObject;
                     if (handLocation.transform.childCount == 0) //hand is empty, pickup checks
                     {
+                        Debug.Log("4 Hand is empty");
                         if(hit.collider.gameObject.GetComponent<InteractableScript>() != null){ //Check if the target object is an InteractableScript and NOT a base class
+                            Debug.Log("5 Has Interactable Script (grab it)");
                             grabFrom = otherGameObject.transform.position;
                             grabFromAngle = otherGameObject.transform.eulerAngles;
                             grabTime = Time.time;
@@ -249,13 +253,14 @@ public class characterMovement3D : MonoBehaviour
                         }
                         else if (otherGameObject.GetComponent<InteractableBase>().canInteractWithHand())
                         {
-
+                            Debug.Log("6 Can Interact with hand (Interact)");
                             otherGameObject.GetComponent<InteractableBase>().Interact(handLocation.GetComponent<Collider>());
                             Debug.Log("break on obj " + i + ", is an interactable base and interacted with bare hands on object " + otherGameObject.name);
                             break;
                         }
                         else if(hit.collider.gameObject.transform.parent != null && hit.collider.gameObject.transform.parent.GetComponent<InteractableScript>() != null)
                         {
+                            Debug.Log("7 Parent has Interactable Script (grab)");
                             otherGameObject = hit.collider.gameObject.transform.parent.gameObject;
                             grabFrom = otherGameObject.transform.position;
                             grabFromAngle = otherGameObject.transform.eulerAngles;
@@ -281,11 +286,14 @@ public class characterMovement3D : MonoBehaviour
                         
                     } else
                     {
+                        Debug.Log("8 hand is not empty (Interact)");
                         otherGameObject.GetComponent<InteractableBase>().Interact(handLocation.transform.GetChild(0).GetComponent<Collider>());
                         Debug.Log("break on obj "+i+", is an interactable base and interacted with held object");
                         break;
                     }
                 }
+                Debug.Log("X End of Interact" + hit.collider.name);
+                
             }
         }
     }

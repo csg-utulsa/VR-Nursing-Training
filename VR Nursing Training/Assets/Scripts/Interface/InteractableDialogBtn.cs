@@ -40,9 +40,12 @@ public class InteractableDialogBtn : InteractableBase, HoverableBase
     public override void Interact(Collider other)
     {
         //Interact something
-        Debug.Log("CursorInteract called inside InteractbaleDialogButton and I don't know what to do");
-        cup.GetComponent<LiquidObjectScript>().setDosage(dosageValue);
-        interactEvent.Invoke();
+        Debug.Log("Screen Interacted!");
+        cup?.GetComponent<LiquidObjectScript>().setDosage(dosageValue);
+        if (interactEvent != null)
+        {
+            interactEvent.Invoke();
+        }
     }
     
 
