@@ -41,7 +41,7 @@ public class InteractableDialogBtn : InteractableBase, HoverableBase
     {
         //Interact something
         Debug.Log("Screen Interacted!");
-        cup?.GetComponent<LiquidObjectScript>().setDosage(dosageValue);
+        cup.GetComponent<LiquidObjectScript>().setDosage(dosageValue);
         if (interactEvent != null)
         {
             interactEvent.Invoke();
