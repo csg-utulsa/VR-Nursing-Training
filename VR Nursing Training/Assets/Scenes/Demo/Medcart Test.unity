@@ -18248,8 +18248,8 @@ MonoBehaviour:
   - {fileID: 507503610}
   - {fileID: 1205832086}
   - {fileID: 441976697}
-  randomStart: 1
-  startIndex: 0
+  randomStart: 0
+  startIndex: 1
 --- !u!4 &1843458144
 Transform:
   m_ObjectHideFlags: 0

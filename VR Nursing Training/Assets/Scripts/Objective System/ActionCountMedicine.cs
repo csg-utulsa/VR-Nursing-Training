@@ -53,13 +53,16 @@ public class ActionCountMedicine : ActionBase
             }
         }
 
-        // Count recently marked patches and remove them from the monitoring list
-        for (int i = 0; i < unmarkedPatches.Count; i++)
+        if (other.CompareTag("Patch"))
         {
-            if (unmarkedPatches[i].GetComponent<PatchObjectScript>().isMarked())
+            // Count recently marked patches and remove them from the monitoring list
+            for (int i = 0; i < unmarkedPatches.Count; i++)
             {
-                currentDosage += 1;
-                unmarkedPatches.RemoveAt(i);
+                if (unmarkedPatches[i].GetComponent<PatchObjectScript>().isMarked())
+                {
+                    currentDosage += 1;
+                    unmarkedPatches.RemoveAt(i);
+                }
             }
         }
     }
