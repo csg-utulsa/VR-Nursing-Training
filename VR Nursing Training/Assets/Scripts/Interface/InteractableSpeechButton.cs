@@ -31,6 +31,10 @@ public class InteractableSpeechButton : InteractableBase, HoverableBase
 
     //HoverableBase things
 
+    //ANDRES ADDITION OC DO NOT STEAL
+    private GameObject parentButton = null;
+
+
     public void CursorHighlight()
     {
         highlighted = true;
@@ -78,6 +82,13 @@ public class InteractableSpeechButton : InteractableBase, HoverableBase
             buttonText.text = buttonName;
         }
 
+        // ANDRES ADDITION
+        
+        if (transform.parent != null && transform.parent.GetComponent<InteractableSpeechButton>() != null)
+        {
+            parentButton = transform.parent.gameObject;
+        }
+
         // Gets Children that are buttons
         for (int i = 0; i < gameObject.transform.childCount; i++)
         {
@@ -99,10 +110,6 @@ public class InteractableSpeechButton : InteractableBase, HoverableBase
                 zvalues[i] -= .5f;
             }
         }
-        
-        
-
-
     }
 
     private void FixedUpdate()
@@ -204,6 +211,9 @@ public class InteractableSpeechButton : InteractableBase, HoverableBase
             openStuff = true;
             closeStuff = false;
         }
+
+        // ANDRES STUFF
+        CloseSiblings();
         
     }
 
@@ -220,5 +230,19 @@ public class InteractableSpeechButton : InteractableBase, HoverableBase
         }
     }
 
+    // Closes children of sibling buttons
+    public void CloseSiblings()
+    {
+        if (parentButton != null)
+        {
+            foreach (GameObject babyButton in parentButton.GetComponent<InteractableSpeechButton>().buttonChildren)
+            {
+                if (babyButton != this.gameObject)
+                {
+                    babyButton.GetComponent<InteractableSpeechButton>().CloseButton();
+                }
+            }
+        }
+    }
 }
 
