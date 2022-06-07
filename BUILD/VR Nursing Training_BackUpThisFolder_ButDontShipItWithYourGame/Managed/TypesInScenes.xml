@@ -72,6 +72,7 @@
 		<type fullname="HoverableCursor" preserve="nothing"/>
 		<type fullname="InteractableDialogBtn" preserve="nothing"/>
 		<type fullname="InteractableScript" preserve="nothing"/>
+		<type fullname="InteractableSpeechButton" preserve="nothing"/>
 		<type fullname="InteractableTeleportEvent" preserve="nothing"/>
 		<type fullname="LiquidObjectScript" preserve="nothing"/>
 		<type fullname="LiquidQuestionScript" preserve="nothing"/>
@@ -82,6 +83,7 @@
 		<type fullname="MenuButtonManager" preserve="nothing"/>
 		<type fullname="MenuButtonScript" preserve="nothing"/>
 		<type fullname="MouseLook3D" preserve="nothing"/>
+		<type fullname="MovePlayer" preserve="nothing"/>
 		<type fullname="NodeOrdered" preserve="nothing"/>
 		<type fullname="NodeSingle" preserve="nothing"/>
 		<type fullname="Objective" preserve="nothing"/>
@@ -97,6 +99,8 @@
 		<type fullname="SetLiquidSyrup" preserve="nothing"/>
 		<type fullname="SharpieObjectScript" preserve="nothing"/>
 		<type fullname="SharpieSpawnScript" preserve="nothing"/>
+		<type fullname="SimManagement" preserve="nothing"/>
+		<type fullname="SpeakButton" preserve="nothing"/>
 		<type fullname="StrikeManager" preserve="nothing"/>
 		<type fullname="TeleportIndicatorScript" preserve="nothing"/>
 		<type fullname="TutorialCartText" preserve="nothing"/>
@@ -171,6 +175,10 @@
 		<type fullname="UnityEngine.XR.OpenXR.Features.Interactions.ValveIndexControllerProfile" preserve="nothing"/>
 		<type fullname="UnityEngine.XR.OpenXR.OpenXRLoader" preserve="nothing"/>
 		<type fullname="UnityEngine.XR.OpenXR.OpenXRSettings" preserve="nothing"/>
+	</assembly>
+	<assembly fullname="Unity.XR.WindowsMixedReality">
+		<type fullname="UnityEngine.XR.WindowsMR.WindowsMRBuildSettings" preserve="nothing"/>
+		<type fullname="UnityEngine.XR.WindowsMR.WindowsMRSettings" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="UnityEngine.SpatialTracking">
 		<type fullname="UnityEngine.SpatialTracking.TrackedPoseDriver" preserve="nothing"/>

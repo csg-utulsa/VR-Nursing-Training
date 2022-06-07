@@ -16474,6 +16474,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t IntPtr_op_Explicit_m9092E57CE669E7B9
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t Marshal_AllocHGlobal_m6A2C9029FE6B9671891B8EEB9F051271A0EFF2F1 (intptr_t ___cb0, const RuntimeMethod* method);
 // System.Void System.Runtime.InteropServices.Marshal::copy_from_unmanaged(System.IntPtr,System.Int32,System.Array,System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Marshal_copy_from_unmanaged_mD094F62E0EAB94A195FE1DB4B84ACDF0B2240DC4 (intptr_t ___source0, int32_t ___startIndex1, RuntimeArray * ___destination2, int32_t ___length3, const RuntimeMethod* method);
+// System.Object System.Runtime.InteropServices.Marshal::GetObjectForCCW(System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject * Marshal_GetObjectForCCW_m09B48E0EA93B825DD58289729059E2A589106B4F (intptr_t ___pUnk0, const RuntimeMethod* method);
 // System.Boolean System.IntPtr::op_Equality(System.IntPtr,System.IntPtr)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool IntPtr_op_Equality_mD94F3FE43A65684EFF984A7B95E70D2520C0AC73 (intptr_t ___value10, intptr_t ___value21, const RuntimeMethod* method);
 // System.Void System.ArgumentException::.ctor(System.String,System.String)
@@ -23007,6 +23009,30 @@ IL_0005:
 		NullCheck(L_1);
 		int32_t L_2 = L_1->get__HResult_11();
 		return L_2;
+	}
+}
+// System.Object System.Runtime.InteropServices.Marshal::GetObjectForCCW(System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject * Marshal_GetObjectForCCW_m09B48E0EA93B825DD58289729059E2A589106B4F (intptr_t ___pUnk0, const RuntimeMethod* method)
+{
+	typedef RuntimeObject * (*Marshal_GetObjectForCCW_m09B48E0EA93B825DD58289729059E2A589106B4F_ftn) (intptr_t);
+	using namespace il2cpp::icalls;
+	return ((Marshal_GetObjectForCCW_m09B48E0EA93B825DD58289729059E2A589106B4F_ftn)mscorlib::System::Runtime::InteropServices::Marshal::GetObjectForCCW) (___pUnk0);
+}
+// System.Object System.Runtime.InteropServices.Marshal::GetObjectForIUnknown(System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject * Marshal_GetObjectForIUnknown_m9D5CB9B12B72BC4CCC46E363C805A03FFE644443 (intptr_t ___pUnk0, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Marshal_tEBAFAE20369FCB1B38C49C4E27A8D8C2C4B55058_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		intptr_t L_0 = ___pUnk0;
+		IL2CPP_RUNTIME_CLASS_INIT(Marshal_tEBAFAE20369FCB1B38C49C4E27A8D8C2C4B55058_il2cpp_TypeInfo_var);
+		RuntimeObject * L_1;
+		L_1 = Marshal_GetObjectForCCW_m09B48E0EA93B825DD58289729059E2A589106B4F((intptr_t)L_0, /*hidden argument*/NULL);
+		return L_1;
 	}
 }
 // System.Int32 System.Runtime.InteropServices.Marshal::GetLastWin32Error()

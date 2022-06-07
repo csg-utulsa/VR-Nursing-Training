@@ -789,6 +789,13 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "InteractableSpeechButton",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "InteractableTeleportEvent",
             "moduleName": "",
             "usedInScenes": []
@@ -853,6 +860,13 @@
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
             "fullManagedTypeName": "MouseLook3D",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "MovePlayer",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -958,6 +972,20 @@
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
             "fullManagedTypeName": "SharpieSpawnScript",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "SimManagement",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "SpeakButton",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -1322,6 +1350,20 @@
             "managedAssemblyName": "Unity.XR.OpenXR.dll",
             "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.XR.OpenXR.OpenXRSettings",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Unity.XR.WindowsMixedReality.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.XR.WindowsMR.WindowsMRBuildSettings",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Unity.XR.WindowsMixedReality.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.XR.WindowsMR.WindowsMRSettings",
             "moduleName": "",
             "usedInScenes": []
         },
