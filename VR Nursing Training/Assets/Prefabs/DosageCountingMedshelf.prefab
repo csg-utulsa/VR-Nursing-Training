@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 1072718025}
   - component: {fileID: 1072718029}
   - component: {fileID: 1072718028}
-  - component: {fileID: 1072718027}
+  - component: {fileID: 4753336807162523584}
   - component: {fileID: 1072718030}
   - component: {fileID: 1072718031}
   m_Layer: 6
@@ -263,8 +263,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1072718027
-MeshCollider:
+--- !u!65 &4753336807162523584
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -273,10 +273,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 10.000005, y: 1, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1072718030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,7 +313,7 @@ GameObject:
   - component: {fileID: 1119557323}
   - component: {fileID: 1119557327}
   - component: {fileID: 1119557326}
-  - component: {fileID: 1119557325}
+  - component: {fileID: 60709521043607937}
   - component: {fileID: 1119557324}
   m_Layer: 6
   m_Name: Cart Trigger (Check Medicine)
@@ -386,8 +385,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1119557325
-MeshCollider:
+--- !u!65 &60709521043607937
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -396,10 +395,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 10.000005, y: 1, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1119557324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -525,6 +523,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textObject: {fileID: 806907363}
   dosageSource: {fileID: 1072718030}
+--- !u!1 &5297169314533017237
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7002122957589765509}
+  - component: {fileID: 5166434444608674823}
+  m_Layer: 0
+  m_Name: Shelf Table Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7002122957589765509
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5297169314533017237}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.325, z: 0}
+  m_LocalScale: {x: 0.64225, y: 0.019985082, z: 0.57454}
+  m_Children: []
+  m_Father: {fileID: 6995824551909757927}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &5166434444608674823
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5297169314533017237}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000005, y: 1.6646136, z: 1.0000005}
+  m_Center: {x: 0.00000023201497, y: -0.33230683, z: -0.0000002593581}
 --- !u!64 &301163105
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -550,7 +592,7 @@ GameObject:
   - component: {fileID: 486973451393720926}
   - component: {fileID: 4981044470524260733}
   - component: {fileID: 3625338433256362653}
-  - component: {fileID: 2664348946695878907}
+  - component: {fileID: 5609581998387462164}
   - component: {fileID: 7002367645639039748}
   m_Layer: 6
   m_Name: Cart Trigger (Count Marked Patches)
@@ -622,8 +664,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &2664348946695878907
-MeshCollider:
+--- !u!65 &5609581998387462164
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -632,10 +674,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 10.000005, y: 1, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &7002367645639039748
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -22143,7 +22143,7 @@ PrefabInstance:
     - target: {fileID: 486973451393720926, guid: cde976f77f70e5d4ca99cdc0f446fbda,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6995824551909757927, guid: cde976f77f70e5d4ca99cdc0f446fbda,
         type: 3}
@@ -22205,7 +22205,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: medshelftex2noholes
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1119557325, guid: cde976f77f70e5d4ca99cdc0f446fbda, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cde976f77f70e5d4ca99cdc0f446fbda, type: 3}
 --- !u!1 &7393943155898816083 stripped
 GameObject:

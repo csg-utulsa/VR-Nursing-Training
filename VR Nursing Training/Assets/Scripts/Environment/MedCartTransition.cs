@@ -32,6 +32,7 @@ public class MedCartTransition : MonoBehaviour
         {
             if (other.gameObject.CompareTag("Pill") || other.gameObject.CompareTag("HalfPill") || other.gameObject.CompareTag("Patch") || other.gameObject.CompareTag("Liquid"))
             {
+                Debug.Log("!?!! ENTERING TRIGGER: " + other.gameObject);
                 tempObjects.Add(other.gameObject);
             }
         }
@@ -51,6 +52,7 @@ public class MedCartTransition : MonoBehaviour
         {
             if (tempObjects.Contains(other.gameObject))
             {
+                Debug.Log("!?!! LEAVING TRIGGER: " + other.gameObject);
                 tempObjects.Remove(other.gameObject);
             }
         }
@@ -61,9 +63,12 @@ public class MedCartTransition : MonoBehaviour
         // empty the current list of objects
         while (triggerObjects.Count > 0) triggerObjects.RemoveAt(0);
 
+        Debug.Log("!?! RECORDING OBJECTS: " + tempObjects.Count);
+
         // add all objects currently in the trigger
         foreach (GameObject obj in tempObjects)
         {
+            Debug.Log("!?! OBJECT: " + obj);
             triggerObjects.Add(obj);
             recordedPositions.Add(obj.transform.position);
             recordedRotations.Add(obj.transform.rotation);
