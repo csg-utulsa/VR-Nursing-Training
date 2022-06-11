@@ -32,7 +32,6 @@ public class MedCartTransition : MonoBehaviour
         {
             if (other.gameObject.CompareTag("Pill") || other.gameObject.CompareTag("HalfPill") || other.gameObject.CompareTag("Patch") || other.gameObject.CompareTag("Liquid"))
             {
-                Debug.Log("!?!! ENTERING TRIGGER: " + other.gameObject);
                 tempObjects.Add(other.gameObject);
             }
         }
@@ -52,7 +51,6 @@ public class MedCartTransition : MonoBehaviour
         {
             if (tempObjects.Contains(other.gameObject))
             {
-                Debug.Log("!?!! LEAVING TRIGGER: " + other.gameObject);
                 tempObjects.Remove(other.gameObject);
             }
         }
@@ -60,15 +58,14 @@ public class MedCartTransition : MonoBehaviour
 
     public void recordObjects()
     {
-        // empty the current list of objects
+        // empty the current list of objects and positions/rotations
         while (triggerObjects.Count > 0) triggerObjects.RemoveAt(0);
-
-        Debug.Log("!?! RECORDING OBJECTS: " + tempObjects.Count);
+        while (recordedPositions.Count > 0) recordedPositions.RemoveAt(0);
+        while (recordedRotations.Count > 0) recordedRotations.RemoveAt(0);
 
         // add all objects currently in the trigger
         foreach (GameObject obj in tempObjects)
         {
-            Debug.Log("!?! OBJECT: " + obj);
             triggerObjects.Add(obj);
             recordedPositions.Add(obj.transform.position);
             recordedRotations.Add(obj.transform.rotation);
@@ -111,11 +108,17 @@ public class MedCartTransition : MonoBehaviour
             if (previousParents[i] != null) triggerObjects[i].transform.SetParent(previousParents[i].transform);
             else triggerObjects[i].transform.SetParent(null);
         }
+        foreach (GameObject obj in tempObjects)
+        {
+            if (triggerObjects.Contains(obj)) // only clear items that have already been recorded
+            {
+                recordedPositions.RemoveAt(tempObjects.IndexOf(obj));
+                recordedRotations.RemoveAt(tempObjects.IndexOf(obj));
+                tempObjects.Remove(obj);
+            }
+        }
         while (triggerObjects.Count > 0) triggerObjects.RemoveAt(0);
         while (previousParents.Count > 0) previousParents.RemoveAt(0);
-        while (tempObjects.Count > 0) tempObjects.RemoveAt(0);
-        while (recordedPositions.Count > 0) recordedPositions.RemoveAt(0);
-        while (recordedRotations.Count > 0) recordedRotations.RemoveAt(0);
 
         // delete the empty parent object
         Destroy(moveParent);
