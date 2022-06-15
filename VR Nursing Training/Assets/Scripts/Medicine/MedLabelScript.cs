@@ -61,3 +61,5 @@ public class MedLabelScript : MonoBehaviour
         else labelIcon.SetActive(active);
     }
 }
+
+// TODO: Change to be activated by a scriptable event instead of having the hoverable base class?
