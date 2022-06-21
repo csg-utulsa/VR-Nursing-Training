@@ -10771,10 +10771,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c79caa176b15a7b43a1e6dab4c0e1295, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onPickup:
-    m_PersistentCalls:
-      m_Calls: []
-  onDrop:
+  interact:
     m_PersistentCalls:
       m_Calls: []
 --- !u!65 &973581974
@@ -12197,6 +12194,12 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!20 &1093377615 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 3041394142595202736, guid: 0af8f3646a662394eb8f95def6a25298,
+    type: 3}
+  m_PrefabInstance: {fileID: 7548493107148386151}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1101615523
 GameObject:
   m_ObjectHideFlags: 0
@@ -14752,6 +14755,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1363371222}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1371568260 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3041394142401281520, guid: 0af8f3646a662394eb8f95def6a25298,
+    type: 3}
+  m_PrefabInstance: {fileID: 7548493107148386151}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1372105437
 GameObject:
   m_ObjectHideFlags: 0
@@ -15312,6 +15321,25 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7548493107148386151}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1435791435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435791434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22daa01360865e649afb2ed9efaf551a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handLocation: {fileID: 1371568260}
+  camera3D: {fileID: 1093377615}
+  focus: 0
+  pickUpSpeed: 1
+  pickUpDistance: 5
+  interactDistance: 1
+  useDistance: 2
 --- !u!4 &1435943347 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f134ecd79ce0eeb44a38041e50af3f0f,
@@ -23032,6 +23060,10 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1383005072}
+    - target: {fileID: 1477141302, guid: 0af8f3646a662394eb8f95def6a25298, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1477141302, guid: 0af8f3646a662394eb8f95def6a25298, type: 3}
       propertyPath: raycastMask.m_Bits
       value: 264
