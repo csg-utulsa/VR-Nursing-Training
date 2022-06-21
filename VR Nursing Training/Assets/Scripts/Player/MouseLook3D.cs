@@ -17,7 +17,7 @@ public class MouseLook3D : MonoBehaviour
     {
         input = new PlayerInput();
 
-        input.CharacterControls3D.MouseLook.performed += ctx => mouseLook = ctx.ReadValue<Vector2>();
+        input.CharacterControls.MouseLook.performed += ctx => mouseLook = ctx.ReadValue<Vector2>();
 
     }
 
@@ -48,11 +48,11 @@ public class MouseLook3D : MonoBehaviour
 
     private void OnEnable()
     {
-        input.CharacterControls3D.Enable();
+        input.CharacterControls.Enable();
     }
 
     private void OnDisable()
     {
-        input.CharacterControls3D.Disable();
+        input.CharacterControls.Disable();
     }
 }

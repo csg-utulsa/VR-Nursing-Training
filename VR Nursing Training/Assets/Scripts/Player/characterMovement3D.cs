@@ -48,9 +48,9 @@ public class characterMovement3D : MonoBehaviour
     {
         input = new PlayerInput();
 
-        input.CharacterControls3D.Click.performed += ctx => isClicking = ctx.ReadValueAsButton();
-        input.CharacterControls3D.Interact.performed += ctx => isInteract = ctx.ReadValueAsButton();
-        input.CharacterControls3D.Letgo.performed += ctx => isLettingGo = ctx.ReadValueAsButton();
+        input.CharacterControls.PickUp.performed += ctx => isClicking = ctx.ReadValueAsButton();
+        input.CharacterControls.Use.performed += ctx => isInteract = ctx.ReadValueAsButton();
+        input.CharacterControls.PutDown.performed += ctx => isLettingGo = ctx.ReadValueAsButton();
 
         if (changeModeToVR)
         {
@@ -453,12 +453,12 @@ public class characterMovement3D : MonoBehaviour
 
             //Teleportation zone highlighting
             if(hit.collider.gameObject.CompareTag("Teleport")){
-                hit.collider.gameObject.transform.parent.GetComponent<TeleportIndicatorScript>().indicatorActive(true);
+                hit.collider.gameObject.transform.GetComponent<TeleportIndicatorScript>().indicatorActive(true);
                 if (isClicking)
                 {
                     Debug.Log("Hit!");
-                    hit.collider.gameObject.transform.parent.GetComponent<InteractableTeleportEvent>().TeleportEnter(); //trigger teleport event call
-                    transform.position = hit.collider.gameObject.transform.parent.position;
+                    hit.collider.gameObject.transform.GetComponent<InteractableTeleportEvent>().TeleportEnter(); //trigger teleport event call
+                    transform.position = hit.collider.gameObject.transform.position;
                 }
             }
         }
@@ -475,11 +475,11 @@ public class characterMovement3D : MonoBehaviour
 
     private void OnEnable()
     {
-        input.CharacterControls3D.Enable();
+        input.CharacterControls.Enable();
     }
 
     private void OnDisable()
     {
-        input.CharacterControls3D.Disable();
+        input.CharacterControls.Disable();
     }
 }
