@@ -3,21 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ResetScript : InteractableBase
+public class ResetScript : Interactable
 {
 
 
     private void OnTriggerEnter(Collider other)
     {
-        Interact(other);
+        Interact(other.gameObject);
     }
 
-    public override void Interact(Collider other)
+    public override void Interact(GameObject other)
     {
-        if (other.gameObject.CompareTag("Hands"))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-
 }

@@ -36,7 +36,7 @@ public class TeleportIndicatorScript : MonoBehaviour
         if (useCooldown)
         {
             if (cooldown > 0) cooldown--;
-            else indicatorActive(false);
+            //else indicatorActive(false);
         }
         direction = (transform.position- Camera.main.transform.position).normalized;
         direction.y = 0;

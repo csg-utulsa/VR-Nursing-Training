@@ -4,11 +4,6 @@ using UnityEngine;
 using UnityEngine.Events;
 public class InteractableScript : InteractableBase, HoverableBase
 {
-
-
-
-
-
     public UnityEvent onCombine; // Do we use?
     public UnityEvent interactEvent; // Do we use?
     public UnityEvent cursorHighlight; // Do we use?
