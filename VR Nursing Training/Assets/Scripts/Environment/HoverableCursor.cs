@@ -65,7 +65,7 @@ public class HoverableCursor : MonoBehaviour
 
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
 
         //scan for objects
@@ -91,19 +91,21 @@ public class HoverableCursor : MonoBehaviour
                     }
 
                     Debug.Log("HoverableCursor interact called");
-                    foundObject.CursorInteract();
+                    //foundObject.CursorInteract();
                 }else{
                     interactedLastFrame=false;
                 }
             }
         }
-
-
-
-
-
-
     }
+     */
+
+
+
+
+
+
+    
 
     public bool CheckIfActivated(XRController controller)
     {

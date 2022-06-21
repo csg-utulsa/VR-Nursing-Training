@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6435795497746262479}
   - component: {fileID: 1875394067285691926}
   - component: {fileID: 1671540770389423425}
+  - component: {fileID: -3553853013778524814}
   m_Layer: 6
   m_Name: pillcut2
   m_TagString: HalfPill
@@ -258,10 +259,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bd43063534b3924eb5caef959443d75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+  onDrop:
+    m_PersistentCalls:
+      m_Calls: []
   onCombine:
     m_PersistentCalls:
       m_Calls: []
   interactEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  cursorHighlight:
+    m_PersistentCalls:
+      m_Calls: []
+  lookHighlight:
     m_PersistentCalls:
       m_Calls: []
   initialPosition: {x: 0, y: 0, z: 0}
@@ -275,9 +288,28 @@ MonoBehaviour:
   combineDist: 0
   isInteractable: 0
   type: 
+  interactWithHand: 1
   focusOnPickup: 0
   distanceFromCamera: 0.5
   focusAngles: {x: 0, y: 0, z: 0}
+--- !u!114 &-3553853013778524814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928747300338365511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7941497a3b0ad10489045e1983f5a52d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+  onDrop:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6130828731884073773
 GameObject:
   m_ObjectHideFlags: 0

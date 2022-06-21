@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class MovePlayer : InteractableBase
-{
+public class MovePlayer : Interactable 
+{ 
     public GameObject player;
     public GameObject moveLocation;
     public UnityEvent moveActions;
@@ -13,11 +13,11 @@ public class MovePlayer : InteractableBase
     {
         if (other.tag == "Hands")
         {
-            Interact(other);
+            Interact(other.gameObject);
         }
     }
 
-    public override void Interact(Collider other)
+    public override void Interact(GameObject other)
     {
         player.transform.position = moveLocation.transform.position;
         player.transform.rotation = moveLocation.transform.rotation;

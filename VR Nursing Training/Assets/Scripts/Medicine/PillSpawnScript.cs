@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PillSpawnScript : InteractableBase
+public class PillSpawnScript : Interactable
 {
     public GameObject pill;
     private GameObject pill1;
@@ -16,16 +16,16 @@ public class PillSpawnScript : InteractableBase
     private string patchType;
 
 
-    public override bool canInteractWithHand(){
+    /*public override bool canInteractWithHand(){
         return false;
-    }
+    }*/
 
     private void OnTriggerEnter(Collider other)
     {
-        Interact(other);
+        Interact(other.gameObject);
     }
 
-    public override void Interact(Collider other)
+    public override void Interact(GameObject other)
     {
         if (other.CompareTag("PillContainer"))
         {

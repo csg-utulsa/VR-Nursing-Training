@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 597468280121390240}
   - component: {fileID: 6574998445387482109}
   - component: {fileID: 7717911432201916839}
+  - component: {fileID: -5447906183998597268}
   m_Layer: 6
   m_Name: Digoxin
   m_TagString: LiquidContainer
@@ -334,6 +335,24 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &-5447906183998597268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327579620394125822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7941497a3b0ad10489045e1983f5a52d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+  onDrop:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &3742368830217915190
 PrefabInstance:
   m_ObjectHideFlags: 0

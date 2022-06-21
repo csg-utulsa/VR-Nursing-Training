@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
 
-public class InteractableDialogBtn : InteractableBase, HoverableBase
+public class InteractableDialogBtn : Interactable
 {
 
     public UnityEvent interactEvent;
@@ -18,13 +18,8 @@ public class InteractableDialogBtn : InteractableBase, HoverableBase
     public GameObject cup;
     public string buttonName = "";
     public TextMeshPro buttonText;
-    public GameObject buttonVolume;
     public ParticleSystem HighlightAnimation;
     public bool highlighted = false;
-
-
-
-    //HoverableBase things
 
     public void CursorHighlight()
     {
@@ -32,35 +27,16 @@ public class InteractableDialogBtn : InteractableBase, HoverableBase
 
     }
 
-    public void LookHighlight()
+    public void HighlightStart()
     {
-        //nothing
+        HighlightAnimation.Play();
     }
 
-    public void CursorInteract()
+    public void HighlightStop()
     {
-        //Interact something
-        Debug.Log("CursorInteract called inside InteractbaleDialogButton and I don't know what to do");
-        cup.GetComponent<LiquidObjectScript>().setDosage(dosageValue);
-        interactEvent.Invoke();
-    }
-
-
-
-
-
-
-
-
-    public override bool canInteractWithHand()
-    {
-        return interactWithHand;
-    }
-
-
-    public void highlight(){
-        //shows particle effect while constantly called
-        highlighted = true; //will be set back to false later if the function isn't called again
+        Debug.Log("Stopping Highlight");
+        HighlightAnimation.Stop();
+        HighlightAnimation.Clear();
     }
 
     public void select(){
@@ -72,50 +48,20 @@ public class InteractableDialogBtn : InteractableBase, HoverableBase
 
     private void Start()
     {
-        if(buttonName != ""){
+        if(buttonName != "")
+        {
             buttonText.text=buttonName;
         }
 
     }
 
-    private void FixedUpdate()
-    {
-
-        if(highlighted){
-            HighlightAnimation.Play();
-            highlighted = false; //this variable will be set back to true if the cursor is still looking at the box.
-        }
-        else{
-            HighlightAnimation.Stop();
-            HighlightAnimation.Clear();
-           // HighlightAnimation.setEnable
-        }
-
-//         if (targets.Length > 0 && step < targets.Length && targets[step] != null)
-//         {
-//             Collider[] colliders = Physics.OverlapSphere(transform.position, combineDist, layer);
-//             if (colliders.Length > 1)
-//             {
-//                 touchedObject = colliders[0].gameObject;
-//             }
-//             else
-//             {
-//                 touchedObject = null;
-//             }
-//             if (touchedObject == targets[step])
-//             {
-//                 CombineObject(touchedObject);
-//             }
-//         }
-    }
-
-    public override void Interact(Collider other)
+    public override void Interact(GameObject other)
     {
         Debug.Log("Interacted w/ Floating dialog button");
-        //CombineObject(other.gameObject);
         if (interactEvent != null)
         {
-            //interactEvent.Invoke();
+            cup.GetComponent<LiquidObjectScript>().setDosage(dosageValue);
+            interactEvent.Invoke();
         }
     }
 

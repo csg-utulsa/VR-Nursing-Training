@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 1491155111830727310}
   - component: {fileID: 9096041263604121752}
   - component: {fileID: 175106695356426629}
+  - component: {fileID: -5898935325665782972}
   m_Layer: 6
   m_Name: pillnorm
   m_TagString: Pill
@@ -158,10 +159,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bd43063534b3924eb5caef959443d75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+  onDrop:
+    m_PersistentCalls:
+      m_Calls: []
   onCombine:
     m_PersistentCalls:
       m_Calls: []
   interactEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  cursorHighlight:
+    m_PersistentCalls:
+      m_Calls: []
+  lookHighlight:
     m_PersistentCalls:
       m_Calls: []
   initialPosition: {x: 0, y: 0, z: 0}
@@ -175,6 +188,7 @@ MonoBehaviour:
   combineDist: 0
   isInteractable: 0
   type: 
+  interactWithHand: 1
   focusOnPickup: 0
   distanceFromCamera: 0.5
   focusAngles: {x: 0, y: 0, z: 0}
@@ -308,3 +322,21 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &-5898935325665782972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2276514548419805056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7941497a3b0ad10489045e1983f5a52d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+  onDrop:
+    m_PersistentCalls:
+      m_Calls: []

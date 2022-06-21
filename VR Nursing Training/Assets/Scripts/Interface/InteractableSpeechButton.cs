@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
 
-public class InteractableSpeechButton : InteractableBase, HoverableBase
+public class InteractableSpeechButton : Interactable
 {
 
     public UnityEvent interactEvent;
@@ -47,33 +47,30 @@ public class InteractableSpeechButton : InteractableBase, HoverableBase
         //Debug.Log("WERG");
     }
 
-    public void CursorInteract()
+    /*public void CursorInteract()
     {
         //Interact something
         Debug.Log("CursorInteract called inside InteractableSpeechButton and invoking interactEvent");
         //cup.GetComponent<LiquidObjectScript>().setDosage(dosageValue);
         interactEvent.Invoke();
         //Interact(this.gameObject.Collider);
-    }
+    }*/
 
-    public override bool canInteractWithHand()
+    /*public override bool canInteractWithHand()
     {
         return interactWithHand;
-    }
+    }*/
 
 
-    public void highlight()
+    public void HighlightStart()
     {
-        //shows particle effect while constantly called
-        highlighted = true; //will be set back to false later if the function isn't called again
+        HighlightAnimation.Play();
     }
-
-    public void select()
+    public void HighlightStop()
     {
-        //returns the fact this button was picked to the controller
-        Debug.Log("Dialog button selected.");
+        HighlightAnimation.Stop();
+        HighlightAnimation.Clear();
     }
-
 
     private void Start()
     {
@@ -114,18 +111,6 @@ public class InteractableSpeechButton : InteractableBase, HoverableBase
 
     private void FixedUpdate()
     {
-
-        if (highlighted)
-        {
-            HighlightAnimation.Play();
-            highlighted = false; //this variable will be set back to true if the cursor is still looking at the box.
-        }
-        else
-        {
-            HighlightAnimation.Stop();
-            HighlightAnimation.Clear();
-            // HighlightAnimation.setEnable
-        }
         if (openStuff)
         {
             Debug.Log("Moving Buttons...");
@@ -141,7 +126,8 @@ public class InteractableSpeechButton : InteractableBase, HoverableBase
                 }
             }
 
-        } else if (closeStuff)
+        } 
+        else if (closeStuff)
         {
             for (int i = 0; i < buttonChildren.Count; i++)
             {
@@ -154,8 +140,6 @@ public class InteractableSpeechButton : InteractableBase, HoverableBase
             }
         }
         
-
-
         //         if (targets.Length > 0 && step < targets.Length && targets[step] != null)
         //         {
         //             Collider[] colliders = Physics.OverlapSphere(transform.position, combineDist, layer);
@@ -176,10 +160,10 @@ public class InteractableSpeechButton : InteractableBase, HoverableBase
 
     public void OnTriggerEnter(Collider other)
     {
-        Interact(other);
+        Interact(other.gameObject);
     }
 
-    public override void Interact(Collider other)
+    public override void Interact(GameObject other)
     {
         Debug.Log("Interacted w/ Floating speech button");
         //CombineObject(other.gameObject);

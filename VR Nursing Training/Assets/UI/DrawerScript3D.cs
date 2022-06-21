@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DrawerScript3D : InteractableBase
+public class DrawerScript3D : Interactable
 {
     public bool drawerOpen = false;
     private Animator drawerOpenAnim;
@@ -12,7 +12,7 @@ public class DrawerScript3D : InteractableBase
         drawerOpenAnim = gameObject.transform.parent.GetComponent<Animator>();
     }
 
-    public override void Interact(Collider other)
+    public override void Interact(GameObject other)
     {
         Debug.Log("Interacting...");
         

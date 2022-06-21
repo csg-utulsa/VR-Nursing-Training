@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class LiquidTriggerScript : InteractableBase
+public class LiquidTriggerScript : Interactable
 {
     public string[] requiredType;
     //public static GameObject measureCanvas;
@@ -18,15 +18,15 @@ public class LiquidTriggerScript : InteractableBase
 
     private void OnTriggerEnter(Collider other)
     {
-        Interact(other);
+        Interact(other.gameObject);
     }
 
-    public override void Interact(Collider other)
+    public override void Interact(GameObject other)
     {
         Debug.Log("Interacting...");
         if (other.CompareTag("LiquidContainer") && !complete)
         {
-            liquidType = other.gameObject.GetComponent<InteractableScript>().getType();
+            liquidType = other.GetComponent<InteractableScript>().getType();
             correctType = false;
             for (int i = 0; i < requiredType.Length; i++)
             {

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1429350446812544424}
   - component: {fileID: 5144751274282800947}
   - component: {fileID: -7380186919544661610}
+  - component: {fileID: 7705821102429033810}
   m_Layer: 6
   m_Name: sharpie
   m_TagString: Untagged
@@ -293,6 +294,24 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &7705821102429033810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238523523714365902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7941497a3b0ad10489045e1983f5a52d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+  onDrop:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2264389627811893011
 GameObject:
   m_ObjectHideFlags: 0

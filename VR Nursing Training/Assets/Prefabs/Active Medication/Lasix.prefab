@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 4297128320919824295}
   - component: {fileID: 3469197911496791919}
   - component: {fileID: 3439137681514518182}
+  - component: {fileID: -8931650655684127288}
   m_Layer: 6
   m_Name: Lasix
   m_TagString: PillContainer
@@ -333,6 +334,24 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &-8931650655684127288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3991067372537469685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7941497a3b0ad10489045e1983f5a52d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+  onDrop:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1929214683266603029
 PrefabInstance:
   m_ObjectHideFlags: 0

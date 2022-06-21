@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 2675745147721904464}
   - component: {fileID: 6736421137081381405}
   - component: {fileID: 8019181411656600492}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Patch Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,6 +188,7 @@ GameObject:
   - component: {fileID: 2277313234067073815}
   - component: {fileID: -5014029394938515869}
   - component: {fileID: 808961489368935974}
+  - component: {fileID: 353267962495516758}
   m_Layer: 6
   m_Name: PatchNitro
   m_TagString: Patch
@@ -479,6 +480,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textObject: {fileID: 4166836519636263620}
   onDateSet:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &353267962495516758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4816892652931515861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7941497a3b0ad10489045e1983f5a52d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+  onDrop:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &6112319932732296950

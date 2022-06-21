@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-public class PillCutterScript : InteractableBase
+public class PillCutterScript : Interactable
 {
     public GameObject topHalfPill;
     public GameObject bottomHalfPill;
@@ -15,17 +15,17 @@ public class PillCutterScript : InteractableBase
 
 
 
-    public override bool canInteractWithHand(){
+   /* public override bool canInteractWithHand(){
         return false;
-    }
+    }*/
 
     private void OnTriggerEnter(Collider other)
     {
-        Interact(other);
+        Interact(other.gameObject);
         
     }
 
-    public override void Interact(Collider other)
+    public override void Interact(GameObject other)
     {
         OrigPill = other.gameObject;
 

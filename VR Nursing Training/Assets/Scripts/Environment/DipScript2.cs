@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class DipScript2 : InteractableBase
+public class DipScript2 : Interactable
 {
     public Material material;
     public UnityEvent handWash;
@@ -11,23 +11,23 @@ public class DipScript2 : InteractableBase
 
     private void OnTriggerEnter(Collider other)
     {
-        Interact(other);
+        Interact(other.gameObject);
     }
 
 
-    public override void Interact(Collider other)
+    public override void Interact(GameObject other)
     {
         Debug.Log("Interact w/ water");
 
-        if (other.gameObject.CompareTag("Hands"))
+        if (other.CompareTag("Hands"))
         {
             Debug.Log("Washing Hands...");
             handWash.Invoke();
             BubbleAnimation.Play();
         }
-        else if (other.gameObject.GetComponent<InteractableScript>().isInteractable)
+        else if (other.GetComponent<InteractableScript>().isInteractable)
         {
-            other.gameObject.GetComponent<InteractableScript>().setMaterial(material);
+            other.GetComponent<InteractableScript>().setMaterial(material);
         }
     }
 
