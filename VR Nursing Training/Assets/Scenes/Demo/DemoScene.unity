@@ -123,6 +123,62 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &1285641
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1285643}
+  - component: {fileID: 1285642}
+  m_Layer: 0
+  m_Name: Place Patch
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1285642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bed5c6707fc6ef4aa88ef64f847e75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Place Patch
+  reportSuccess: Placed Patch Successfully
+  reportSkip: Didn't Place Patch
+  reportFail: Didn't Place Patch
+  strikeCount: 0
+  failed: 0
+  active: 0
+  skipped: 0
+  complete: 0
+  canSkip: 0
+  canContinue: 0
+  successActions: []
+  failActions: []
+--- !u!4 &1285643
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285641}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 547686158}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &14524839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -212,6 +268,83 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f134ecd79ce0eeb44a38041e50af3f0f, type: 3}
+--- !u!1 &17508673
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 17508674}
+  - component: {fileID: 17508675}
+  - component: {fileID: 17508676}
+  m_Layer: 0
+  m_Name: Name and DOB (Oral)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &17508674
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17508673}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 76969649}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &17508675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17508673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e956f245f0f1dc241bd7a0aa9aeb8522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousList:
+  - {fileID: 806016914}
+  active: 0
+  complete: 0
+  saturated: 0
+  canContinue: 0
+  canSkip: 0
+  objective: {fileID: 17508676}
+--- !u!114 &17508676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17508673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bed5c6707fc6ef4aa88ef64f847e75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Get Name and Date of Birth
+  reportSuccess: Got Name and Date of Birth Successfully
+  reportSkip: Didn't Get Name and Date of Birth
+  reportFail: Didn't Get Name and Date of Birth
+  strikeCount: 0
+  failed: 0
+  active: 0
+  skipped: 0
+  complete: 0
+  canSkip: 0
+  canContinue: 0
+  successActions: []
+  failActions: []
 --- !u!4 &20125081 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6821423216980800652, guid: f13350807c0738e4190f9a6a777085a0,
@@ -721,6 +854,83 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f134ecd79ce0eeb44a38041e50af3f0f, type: 3}
+--- !u!1 &53570096
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 53570097}
+  - component: {fileID: 53570098}
+  - component: {fileID: 53570099}
+  m_Layer: 0
+  m_Name: Give Pills
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &53570097
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53570096}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 76969649}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &53570098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53570096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e956f245f0f1dc241bd7a0aa9aeb8522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousList:
+  - {fileID: 1129291535}
+  active: 0
+  complete: 0
+  saturated: 0
+  canContinue: 0
+  canSkip: 0
+  objective: {fileID: 53570099}
+--- !u!114 &53570099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53570096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bed5c6707fc6ef4aa88ef64f847e75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Give Patient Pills
+  reportSuccess: Gave Patient Pills Successfully
+  reportSkip: Didn't Give Patient Pills
+  reportFail: Didn't Give Patient Pills
+  strikeCount: 0
+  failed: 0
+  active: 0
+  skipped: 0
+  complete: 0
+  canSkip: 0
+  canContinue: 0
+  successActions: []
+  failActions: []
 --- !u!1001 &57239140
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1255,6 +1465,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &76969648
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 76969649}
+  m_Layer: 0
+  m_Name: Oral Medication
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &76969649
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76969648}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 806016912}
+  - {fileID: 17508674}
+  - {fileID: 2008504994}
+  - {fileID: 1129291533}
+  - {fileID: 53570097}
+  - {fileID: 246810687}
+  - {fileID: 145030686}
+  m_Father: {fileID: 1923887327}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &81244710
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2276,6 +2523,82 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 116733554}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &119145471
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 119145474}
+  - component: {fileID: 119145472}
+  - component: {fileID: 119145473}
+  m_Layer: 0
+  m_Name: Preexisting Patch
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &119145472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119145471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e956f245f0f1dc241bd7a0aa9aeb8522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousList: []
+  active: 0
+  complete: 0
+  saturated: 0
+  canContinue: 0
+  canSkip: 0
+  objective: {fileID: 119145473}
+--- !u!114 &119145473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119145471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bed5c6707fc6ef4aa88ef64f847e75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Check for Pre-existing Patch
+  reportSuccess: Checked for Pre-existing Patch Successfully
+  reportSkip: Didn't Check for Pre-existing Patch
+  reportFail: Didn't Check for Pre-existing Patch
+  strikeCount: 0
+  failed: 0
+  active: 0
+  skipped: 0
+  complete: 0
+  canSkip: 0
+  canContinue: 0
+  successActions: []
+  failActions: []
+--- !u!4 &119145474
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119145471}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1532824728}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &136321644
 GameObject:
   m_ObjectHideFlags: 0
@@ -2306,6 +2629,83 @@ Transform:
   m_Father: {fileID: 81244712}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 86.296}
+--- !u!1 &145030685
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 145030686}
+  - component: {fileID: 145030688}
+  - component: {fileID: 145030687}
+  m_Layer: 0
+  m_Name: Complete (Oral)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &145030686
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145030685}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10.816851, y: -3.2039328, z: -28.034538}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 76969649}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &145030687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145030685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bed5c6707fc6ef4aa88ef64f847e75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Room Two Complete
+  reportSuccess: 
+  reportSkip: 
+  reportFail: 
+  strikeCount: 0
+  failed: 0
+  active: 0
+  skipped: 0
+  complete: 0
+  canSkip: 0
+  canContinue: 0
+  successActions: []
+  failActions: []
+--- !u!114 &145030688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145030685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e956f245f0f1dc241bd7a0aa9aeb8522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousList:
+  - {fileID: 246810688}
+  active: 0
+  complete: 0
+  saturated: 0
+  canContinue: 0
+  canSkip: 0
+  objective: {fileID: 145030687}
 --- !u!4 &152477225 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f134ecd79ce0eeb44a38041e50af3f0f,
@@ -3558,6 +3958,160 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2dc7b382d25903545b405802eb2198ab, type: 3}
+--- !u!1 &239502277
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 239502280}
+  - component: {fileID: 239502278}
+  - component: {fileID: 239502279}
+  m_Layer: 0
+  m_Name: Give Cup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &239502278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239502277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e956f245f0f1dc241bd7a0aa9aeb8522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousList:
+  - {fileID: 494462467}
+  active: 0
+  complete: 0
+  saturated: 0
+  canContinue: 0
+  canSkip: 0
+  objective: {fileID: 239502279}
+--- !u!114 &239502279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239502277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bed5c6707fc6ef4aa88ef64f847e75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Give Patient Cup
+  reportSuccess: Gave Patient Cup Successfully
+  reportSkip: Didn't Give Patient Cup
+  reportFail: Didn't Give Patient Cup
+  strikeCount: 0
+  failed: 0
+  active: 0
+  skipped: 0
+  complete: 0
+  canSkip: 0
+  canContinue: 0
+  successActions: []
+  failActions: []
+--- !u!4 &239502280
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239502277}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 526665948}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &246810686
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 246810687}
+  - component: {fileID: 246810688}
+  - component: {fileID: 246810689}
+  m_Layer: 0
+  m_Name: Final Questions (Oral)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &246810687
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246810686}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 76969649}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &246810688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246810686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e956f245f0f1dc241bd7a0aa9aeb8522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousList:
+  - {fileID: 53570098}
+  active: 0
+  complete: 0
+  saturated: 0
+  canContinue: 0
+  canSkip: 0
+  objective: {fileID: 246810689}
+--- !u!114 &246810689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246810686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bed5c6707fc6ef4aa88ef64f847e75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Ask for Questions
+  reportSuccess: Asked for Questions Successfully
+  reportSkip: Didn't Ask for Questions
+  reportFail: Didn't Ask for Questions
+  strikeCount: 0
+  failed: 0
+  active: 0
+  skipped: 0
+  complete: 0
+  canSkip: 0
+  canContinue: 0
+  successActions: []
+  failActions: []
 --- !u!1 &252703669
 GameObject:
   m_ObjectHideFlags: 0
@@ -3734,6 +4288,83 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f134ecd79ce0eeb44a38041e50af3f0f, type: 3}
+--- !u!1 &273026113
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 273026116}
+  - component: {fileID: 273026114}
+  - component: {fileID: 273026115}
+  m_Layer: 0
+  m_Name: Side Effects (Patch)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &273026114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273026113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e956f245f0f1dc241bd7a0aa9aeb8522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousList:
+  - {fileID: 1532824727}
+  active: 0
+  complete: 0
+  saturated: 0
+  canContinue: 0
+  canSkip: 0
+  objective: {fileID: 273026115}
+--- !u!114 &273026115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273026113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bed5c6707fc6ef4aa88ef64f847e75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Inform Patient of Side Effects
+  reportSuccess: Informed Patient of Side Effects Successfully
+  reportSkip: Didn't Inform Patient of Side Effects
+  reportFail: Didn't Inform Patient of Side Effects
+  strikeCount: 0
+  failed: 0
+  active: 0
+  skipped: 0
+  complete: 0
+  canSkip: 0
+  canContinue: 0
+  successActions: []
+  failActions: []
+--- !u!4 &273026116
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273026113}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1843832945}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &278191224
 GameObject:
   m_ObjectHideFlags: 0
@@ -4371,6 +5002,83 @@ Transform:
   - {fileID: 1708249806}
   m_Father: {fileID: 2001570399}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &341125048
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 341125051}
+  - component: {fileID: 341125049}
+  - component: {fileID: 341125050}
+  m_Layer: 0
+  m_Name: Final Questions (Patch)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &341125049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341125048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e956f245f0f1dc241bd7a0aa9aeb8522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousList:
+  - {fileID: 547686157}
+  active: 0
+  complete: 0
+  saturated: 0
+  canContinue: 0
+  canSkip: 0
+  objective: {fileID: 341125050}
+--- !u!114 &341125050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341125048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bed5c6707fc6ef4aa88ef64f847e75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Ask for Questions
+  reportSuccess: Asked for Questions Successfully
+  reportSkip: Didn't Ask for Questions
+  reportFail: Didn't Ask for Questions
+  strikeCount: 0
+  failed: 0
+  active: 0
+  skipped: 0
+  complete: 0
+  canSkip: 0
+  canContinue: 0
+  successActions: []
+  failActions: []
+--- !u!4 &341125051
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341125048}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1843832945}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &351718954
 GameObject:
@@ -5563,6 +6271,83 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f13350807c0738e4190f9a6a777085a0, type: 3}
+--- !u!1 &494462466
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 494462469}
+  - component: {fileID: 494462467}
+  - component: {fileID: 494462468}
+  m_Layer: 0
+  m_Name: Side Effects (Liquid)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &494462467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494462466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e956f245f0f1dc241bd7a0aa9aeb8522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousList:
+  - {fileID: 1822024210}
+  active: 0
+  complete: 0
+  saturated: 0
+  canContinue: 0
+  canSkip: 0
+  objective: {fileID: 494462468}
+--- !u!114 &494462468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494462466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bed5c6707fc6ef4aa88ef64f847e75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Inform Patient of Side Effects
+  reportSuccess: Informed Patient of Side Effects Successfully
+  reportSkip: Didn't Inform Patient of Side Effects
+  reportFail: Didn't Inform Patient of Side Effects
+  strikeCount: 0
+  failed: 0
+  active: 0
+  skipped: 0
+  complete: 0
+  canSkip: 0
+  canContinue: 0
+  successActions: []
+  failActions: []
+--- !u!4 &494462469
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494462466}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 526665948}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &497269639
 GameObject:
   m_ObjectHideFlags: 0
@@ -5978,6 +6763,82 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &515246088
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 515246091}
+  - component: {fileID: 515246089}
+  - component: {fileID: 515246090}
+  m_Layer: 0
+  m_Name: Take Vitals (Patch)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &515246089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515246088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e956f245f0f1dc241bd7a0aa9aeb8522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousList: []
+  active: 0
+  complete: 0
+  saturated: 0
+  canContinue: 0
+  canSkip: 0
+  objective: {fileID: 515246090}
+--- !u!114 &515246090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515246088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bed5c6707fc6ef4aa88ef64f847e75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Take Vitals
+  reportSuccess: Took Vitals Successfully
+  reportSkip: Didn't Take Vitals
+  reportFail: Didn't Take Vitals
+  strikeCount: 0
+  failed: 0
+  active: 0
+  skipped: 0
+  complete: 0
+  canSkip: 0
+  canContinue: 0
+  successActions: []
+  failActions: []
+--- !u!4 &515246091
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515246088}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1532824728}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &516806300
 GameObject:
   m_ObjectHideFlags: 0
@@ -6187,6 +7048,98 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &526665947
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 526665948}
+  m_Layer: 0
+  m_Name: Liquid Medication
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &526665948
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526665947}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1796382240}
+  - {fileID: 1675320448}
+  - {fileID: 1822024211}
+  - {fileID: 494462469}
+  - {fileID: 239502280}
+  - {fileID: 1001448922}
+  - {fileID: 585557524}
+  m_Father: {fileID: 1923887327}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &547686156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 547686158}
+  - component: {fileID: 547686157}
+  m_Layer: 0
+  m_Name: Apply Patch
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &547686157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547686156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1baf47257b0a02f4d9691ccc64363410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousList:
+  - {fileID: 273026114}
+  active: 0
+  complete: 0
+  saturated: 0
+  canContinue: 0
+  canSkip: 0
+  objectives:
+  - {fileID: 766686110}
+  - {fileID: 1285642}
+--- !u!4 &547686158
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547686156}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 766686111}
+  - {fileID: 1285643}
+  m_Father: {fileID: 1843832945}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &558008932
 GameObject:
@@ -6956,6 +7909,83 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 585330883}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &585557523
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 585557524}
+  - component: {fileID: 585557526}
+  - component: {fileID: 585557525}
+  m_Layer: 0
+  m_Name: Complete (Liquid)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &585557524
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585557523}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10.816851, y: -3.2039328, z: -28.034538}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 526665948}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &585557525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585557523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bed5c6707fc6ef4aa88ef64f847e75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Room Two Complete
+  reportSuccess: 
+  reportSkip: 
+  reportFail: 
+  strikeCount: 0
+  failed: 0
+  active: 0
+  skipped: 0
+  complete: 0
+  canSkip: 0
+  canContinue: 0
+  successActions: []
+  failActions: []
+--- !u!114 &585557526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585557523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e956f245f0f1dc241bd7a0aa9aeb8522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousList:
+  - {fileID: 1001448920}
+  active: 0
+  complete: 0
+  saturated: 0
+  canContinue: 0
+  canSkip: 0
+  objective: {fileID: 585557525}
 --- !u!1 &588594060
 GameObject:
   m_ObjectHideFlags: 0
@@ -8360,6 +9390,62 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &766686109
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 766686111}
+  - component: {fileID: 766686110}
+  m_Layer: 0
+  m_Name: Clean Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &766686110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766686109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bed5c6707fc6ef4aa88ef64f847e75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Clean Patch Area
+  reportSuccess: Cleaned Patch Area Successfully
+  reportSkip: Didn't Clean Patch Area
+  reportFail: Didn't Clean Patch Area
+  strikeCount: 0
+  failed: 0
+  active: 0
+  skipped: 0
+  complete: 0
+  canSkip: 0
+  canContinue: 0
+  successActions: []
+  failActions: []
+--- !u!4 &766686111
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766686109}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 547686158}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &769416742
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8652,6 +9738,160 @@ MonoBehaviour:
   canContinue: 0
   canSkip: 0
   objective: {fileID: 804065052}
+--- !u!1 &806016911
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 806016912}
+  - component: {fileID: 806016914}
+  - component: {fileID: 806016913}
+  m_Layer: 0
+  m_Name: Sanitize Hands (Oral)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &806016912
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 806016911}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 76969649}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &806016913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 806016911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bed5c6707fc6ef4aa88ef64f847e75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Sanitize Hands
+  reportSuccess: Hands Sanitized Successfully
+  reportSkip: Hands Not Sanitized
+  reportFail: Hands Not Sanitized
+  strikeCount: 0
+  failed: 0
+  active: 0
+  skipped: 0
+  complete: 0
+  canSkip: 0
+  canContinue: 0
+  successActions: []
+  failActions: []
+--- !u!114 &806016914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 806016911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e956f245f0f1dc241bd7a0aa9aeb8522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousList:
+  - {fileID: 278191226}
+  active: 0
+  complete: 0
+  saturated: 0
+  canContinue: 0
+  canSkip: 1
+  objective: {fileID: 806016913}
+--- !u!1 &809632280
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 809632283}
+  - component: {fileID: 809632281}
+  - component: {fileID: 809632282}
+  m_Layer: 0
+  m_Name: Name and DOB (Patch)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &809632281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809632280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e956f245f0f1dc241bd7a0aa9aeb8522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousList:
+  - {fileID: 1888260481}
+  active: 0
+  complete: 0
+  saturated: 0
+  canContinue: 0
+  canSkip: 0
+  objective: {fileID: 809632282}
+--- !u!114 &809632282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809632280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bed5c6707fc6ef4aa88ef64f847e75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Get Name and Date of Birth
+  reportSuccess: Got Name and Date of Birth Successfully
+  reportSkip: Didn't Get Name and Date of Birth
+  reportFail: Didn't Get Name and Date of Birth
+  strikeCount: 0
+  failed: 0
+  active: 0
+  skipped: 0
+  complete: 0
+  canSkip: 0
+  canContinue: 0
+  successActions: []
+  failActions: []
+--- !u!4 &809632283
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809632280}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1843832945}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &815689884
 GameObject:
   m_ObjectHideFlags: 0
@@ -11063,6 +12303,83 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 827514067}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1001448919
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1001448922}
+  - component: {fileID: 1001448920}
+  - component: {fileID: 1001448921}
+  m_Layer: 0
+  m_Name: Final Questions (Liquid)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1001448920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001448919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e956f245f0f1dc241bd7a0aa9aeb8522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousList:
+  - {fileID: 239502278}
+  active: 0
+  complete: 0
+  saturated: 0
+  canContinue: 0
+  canSkip: 0
+  objective: {fileID: 1001448921}
+--- !u!114 &1001448921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001448919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bed5c6707fc6ef4aa88ef64f847e75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Ask for Questions
+  reportSuccess: Asked for Questions Successfully
+  reportSkip: Didn't Ask for Questions
+  reportFail: Didn't Ask for Questions
+  strikeCount: 0
+  failed: 0
+  active: 0
+  skipped: 0
+  complete: 0
+  canSkip: 0
+  canContinue: 0
+  successActions: []
+  failActions: []
+--- !u!4 &1001448922
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001448919}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 526665948}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1015970670
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12183,6 +13500,82 @@ Camera:
     type: 3}
   m_PrefabInstance: {fileID: 7548493107148386151}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1097667463
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1097667466}
+  - component: {fileID: 1097667464}
+  - component: {fileID: 1097667465}
+  m_Layer: 0
+  m_Name: Take Vitals (Oral)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1097667464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097667463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e956f245f0f1dc241bd7a0aa9aeb8522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousList: []
+  active: 0
+  complete: 0
+  saturated: 0
+  canContinue: 0
+  canSkip: 0
+  objective: {fileID: 1097667465}
+--- !u!114 &1097667465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097667463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bed5c6707fc6ef4aa88ef64f847e75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Take Vitals
+  reportSuccess: Took Vitals Successfully
+  reportSkip: Didn't Take Vitals
+  reportFail: Didn't Take Vitals
+  strikeCount: 0
+  failed: 0
+  active: 0
+  skipped: 0
+  complete: 0
+  canSkip: 0
+  canContinue: 0
+  successActions: []
+  failActions: []
+--- !u!4 &1097667466
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097667463}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2008504994}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1101615523
 GameObject:
   m_ObjectHideFlags: 0
@@ -12482,6 +13875,83 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1124762150}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1129291532
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1129291533}
+  - component: {fileID: 1129291535}
+  - component: {fileID: 1129291534}
+  m_Layer: 0
+  m_Name: Side Effects (Oral)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1129291533
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129291532}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 76969649}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1129291534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129291532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bed5c6707fc6ef4aa88ef64f847e75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Inform Patient of Side Effects
+  reportSuccess: Informed Patient of Side Effects Successfully
+  reportSkip: Didn't Inform Patient of Side Effects
+  reportFail: Didn't Inform Patient of Side Effects
+  strikeCount: 0
+  failed: 0
+  active: 0
+  skipped: 0
+  complete: 0
+  canSkip: 0
+  canContinue: 0
+  successActions: []
+  failActions: []
+--- !u!114 &1129291535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129291532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e956f245f0f1dc241bd7a0aa9aeb8522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousList:
+  - {fileID: 2008504995}
+  active: 0
+  complete: 0
+  saturated: 0
+  canContinue: 0
+  canSkip: 0
+  objective: {fileID: 1129291534}
 --- !u!1 &1129548314
 GameObject:
   m_ObjectHideFlags: 0
@@ -14518,6 +15988,83 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 950339087}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1331209750
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1331209751}
+  - component: {fileID: 1331209753}
+  - component: {fileID: 1331209752}
+  m_Layer: 0
+  m_Name: Complete (Patch)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1331209751
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331209750}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10.816851, y: -3.2039328, z: -28.034538}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1843832945}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1331209752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331209750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bed5c6707fc6ef4aa88ef64f847e75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Room Two Complete
+  reportSuccess: 
+  reportSkip: 
+  reportFail: 
+  strikeCount: 0
+  failed: 0
+  active: 0
+  skipped: 0
+  complete: 0
+  canSkip: 0
+  canContinue: 0
+  successActions: []
+  failActions: []
+--- !u!114 &1331209753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331209750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e956f245f0f1dc241bd7a0aa9aeb8522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousList:
+  - {fileID: 341125049}
+  active: 0
+  complete: 0
+  saturated: 0
+  canContinue: 0
+  canSkip: 0
+  objective: {fileID: 1331209752}
 --- !u!1 &1335542735
 GameObject:
   m_ObjectHideFlags: 0
@@ -14738,6 +16285,82 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1363371222}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1366977343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1366977346}
+  - component: {fileID: 1366977344}
+  - component: {fileID: 1366977345}
+  m_Layer: 0
+  m_Name: Take Vitals (Liquid)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1366977344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366977343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e956f245f0f1dc241bd7a0aa9aeb8522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousList: []
+  active: 0
+  complete: 0
+  saturated: 0
+  canContinue: 0
+  canSkip: 0
+  objective: {fileID: 1366977345}
+--- !u!114 &1366977345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366977343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bed5c6707fc6ef4aa88ef64f847e75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Take Vitals
+  reportSuccess: Took Vitals Successfully
+  reportSkip: Didn't Take Vitals
+  reportFail: Didn't Take Vitals
+  strikeCount: 0
+  failed: 0
+  active: 0
+  skipped: 0
+  complete: 0
+  canSkip: 0
+  canContinue: 0
+  successActions: []
+  failActions: []
+--- !u!4 &1366977346
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366977343}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1822024211}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1371568260 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3041394142401281520, guid: 0af8f3646a662394eb8f95def6a25298,
@@ -15009,12 +16632,164 @@ Transform:
   m_Father: {fileID: 1565139489}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1410153047
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1410153050}
+  - component: {fileID: 1410153048}
+  - component: {fileID: 1410153049}
+  m_Layer: 0
+  m_Name: Pain Rating (Oral)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1410153048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410153047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e956f245f0f1dc241bd7a0aa9aeb8522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousList: []
+  active: 0
+  complete: 0
+  saturated: 0
+  canContinue: 0
+  canSkip: 0
+  objective: {fileID: 1410153049}
+--- !u!114 &1410153049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410153047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bed5c6707fc6ef4aa88ef64f847e75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Ask Pain Rating
+  reportSuccess: Asked Pain Rating Successfully
+  reportSkip: Didn't Ask Pain Rating
+  reportFail: Didn't Ask Pain Rating
+  strikeCount: 0
+  failed: 0
+  active: 0
+  skipped: 0
+  complete: 0
+  canSkip: 0
+  canContinue: 0
+  successActions: []
+  failActions: []
+--- !u!4 &1410153050
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410153047}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2008504994}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1410280359 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7548493106411160768, guid: 0af8f3646a662394eb8f95def6a25298,
     type: 3}
   m_PrefabInstance: {fileID: 7548493107148386151}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1410903736
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1410903739}
+  - component: {fileID: 1410903737}
+  - component: {fileID: 1410903738}
+  m_Layer: 0
+  m_Name: Pain Rating (Liquid)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1410903737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410903736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e956f245f0f1dc241bd7a0aa9aeb8522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousList: []
+  active: 0
+  complete: 0
+  saturated: 0
+  canContinue: 0
+  canSkip: 0
+  objective: {fileID: 1410903738}
+--- !u!114 &1410903738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410903736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bed5c6707fc6ef4aa88ef64f847e75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Ask Pain Rating
+  reportSuccess: Asked Pain Rating Successfully
+  reportSkip: Didn't Ask Pain Rating
+  reportFail: Didn't Ask Pain Rating
+  strikeCount: 0
+  failed: 0
+  active: 0
+  skipped: 0
+  complete: 0
+  canSkip: 0
+  canContinue: 0
+  successActions: []
+  failActions: []
+--- !u!4 &1410903739
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410903736}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1822024211}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1411074162
 GameObject:
   m_ObjectHideFlags: 0
@@ -16377,6 +18152,63 @@ MonoBehaviour:
   medicineCategory: LIQUID
   medicineType: DIGOXIN
   targetDosage: 5
+--- !u!1 &1532824726
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1532824728}
+  - component: {fileID: 1532824727}
+  m_Layer: 0
+  m_Name: Pre-med Procedure (Patch)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1532824727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532824726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21c02520d1aa04b4695542beb02cee27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousList:
+  - {fileID: 809632281}
+  active: 0
+  complete: 0
+  saturated: 0
+  canContinue: 0
+  canSkip: 0
+  nodes:
+  - {fileID: 2065263307}
+  - {fileID: 515246089}
+  - {fileID: 119145472}
+--- !u!4 &1532824728
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532824726}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2065263309}
+  - {fileID: 515246091}
+  - {fileID: 119145474}
+  m_Father: {fileID: 1843832945}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1534622522
 GameObject:
   m_ObjectHideFlags: 0
@@ -17707,6 +19539,83 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 203286465}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1675320445
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1675320448}
+  - component: {fileID: 1675320446}
+  - component: {fileID: 1675320447}
+  m_Layer: 0
+  m_Name: Name and DOB (Liquid)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1675320446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675320445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e956f245f0f1dc241bd7a0aa9aeb8522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousList:
+  - {fileID: 1796382238}
+  active: 0
+  complete: 0
+  saturated: 0
+  canContinue: 0
+  canSkip: 0
+  objective: {fileID: 1675320447}
+--- !u!114 &1675320447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675320445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bed5c6707fc6ef4aa88ef64f847e75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Get Name and Date of Birth
+  reportSuccess: Got Name and Date of Birth Successfully
+  reportSkip: Didn't Get Name and Date of Birth
+  reportFail: Didn't Get Name and Date of Birth
+  strikeCount: 0
+  failed: 0
+  active: 0
+  skipped: 0
+  complete: 0
+  canSkip: 0
+  canContinue: 0
+  successActions: []
+  failActions: []
+--- !u!4 &1675320448
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675320445}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 526665948}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1676930990
 GameObject:
   m_ObjectHideFlags: 0
@@ -18428,6 +20337,83 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1787213412}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1796382237
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1796382240}
+  - component: {fileID: 1796382238}
+  - component: {fileID: 1796382239}
+  m_Layer: 0
+  m_Name: Sanitize Hands (Liquid)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1796382238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796382237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e956f245f0f1dc241bd7a0aa9aeb8522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousList:
+  - {fileID: 351718956}
+  active: 0
+  complete: 0
+  saturated: 0
+  canContinue: 0
+  canSkip: 1
+  objective: {fileID: 1796382239}
+--- !u!114 &1796382239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796382237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bed5c6707fc6ef4aa88ef64f847e75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Sanitize Hands
+  reportSuccess: Hands Sanitized Successfully
+  reportSkip: Hands Not Sanitized
+  reportFail: Hands Not Sanitized
+  strikeCount: 0
+  failed: 0
+  active: 0
+  skipped: 0
+  complete: 0
+  canSkip: 0
+  canContinue: 0
+  successActions: []
+  failActions: []
+--- !u!4 &1796382240
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796382237}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 526665948}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1801351819
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18606,6 +20592,62 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f134ecd79ce0eeb44a38041e50af3f0f, type: 3}
+--- !u!1 &1822024209
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1822024211}
+  - component: {fileID: 1822024210}
+  m_Layer: 0
+  m_Name: Pre-med Procedure (Liquid)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1822024210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822024209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21c02520d1aa04b4695542beb02cee27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousList:
+  - {fileID: 1675320446}
+  active: 0
+  complete: 0
+  saturated: 0
+  canContinue: 0
+  canSkip: 0
+  nodes:
+  - {fileID: 1410903737}
+  - {fileID: 1366977344}
+  - {fileID: 0}
+--- !u!4 &1822024211
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822024209}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1410903739}
+  - {fileID: 1366977346}
+  m_Father: {fileID: 526665948}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1840985046
 GameObject:
   m_ObjectHideFlags: 0
@@ -18787,6 +20829,43 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4842687221378738546}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1843832944
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1843832945}
+  m_Layer: 0
+  m_Name: Patch Medication
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1843832945
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843832944}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1888260483}
+  - {fileID: 809632283}
+  - {fileID: 1532824728}
+  - {fileID: 273026116}
+  - {fileID: 547686158}
+  - {fileID: 341125051}
+  - {fileID: 1331209751}
+  m_Father: {fileID: 1923887327}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1849289980
 GameObject:
   m_ObjectHideFlags: 0
@@ -19708,6 +21787,83 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f134ecd79ce0eeb44a38041e50af3f0f, type: 3}
+--- !u!1 &1888260480
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1888260483}
+  - component: {fileID: 1888260481}
+  - component: {fileID: 1888260482}
+  m_Layer: 0
+  m_Name: Sanitize Hands (Patch)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1888260481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888260480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e956f245f0f1dc241bd7a0aa9aeb8522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousList:
+  - {fileID: 1700906720}
+  active: 0
+  complete: 0
+  saturated: 0
+  canContinue: 0
+  canSkip: 1
+  objective: {fileID: 1888260482}
+--- !u!114 &1888260482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888260480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bed5c6707fc6ef4aa88ef64f847e75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Sanitize Hands
+  reportSuccess: Hands Sanitized Successfully
+  reportSkip: Hands Not Sanitized
+  reportFail: Hands Not Sanitized
+  strikeCount: 0
+  failed: 0
+  active: 0
+  skipped: 0
+  complete: 0
+  canSkip: 0
+  canContinue: 0
+  successActions: []
+  failActions: []
+--- !u!4 &1888260483
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888260480}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1843832945}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1890883382
 GameObject:
   m_ObjectHideFlags: 0
@@ -19936,6 +22092,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f134ecd79ce0eeb44a38041e50af3f0f, type: 3}
+--- !u!1 &1923887326
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1923887327}
+  m_Layer: 0
+  m_Name: Room 2 Objectives Framework
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1923887327
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923887326}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 21.525219, y: 2.6973133, z: 33.33684}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 76969649}
+  - {fileID: 1843832945}
+  - {fileID: 526665948}
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1926244505
 GameObject:
   m_ObjectHideFlags: 0
@@ -20480,6 +22669,61 @@ MonoBehaviour:
   strikemark1: {fileID: 2113858558}
   strikemark2: {fileID: 1080652880}
   strikemark3: {fileID: 327995477}
+--- !u!1 &2008504993
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2008504994}
+  - component: {fileID: 2008504995}
+  m_Layer: 0
+  m_Name: Pre-med Procedure (Oral)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2008504994
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008504993}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1410153050}
+  - {fileID: 1097667466}
+  m_Father: {fileID: 76969649}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2008504995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008504993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21c02520d1aa04b4695542beb02cee27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousList:
+  - {fileID: 17508675}
+  active: 0
+  complete: 0
+  saturated: 0
+  canContinue: 0
+  canSkip: 0
+  nodes:
+  - {fileID: 1410153048}
+  - {fileID: 1097667464}
 --- !u!1 &2028160305
 GameObject:
   m_ObjectHideFlags: 0
@@ -21197,6 +23441,82 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 14524839}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2065263306
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2065263309}
+  - component: {fileID: 2065263307}
+  - component: {fileID: 2065263308}
+  m_Layer: 0
+  m_Name: Pain Rating (Patch)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2065263307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065263306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e956f245f0f1dc241bd7a0aa9aeb8522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousList: []
+  active: 0
+  complete: 0
+  saturated: 0
+  canContinue: 0
+  canSkip: 0
+  objective: {fileID: 2065263308}
+--- !u!114 &2065263308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065263306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bed5c6707fc6ef4aa88ef64f847e75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Ask Pain Rating
+  reportSuccess: Asked Pain Rating Successfully
+  reportSkip: Didn't Ask Pain Rating
+  reportFail: Didn't Ask Pain Rating
+  strikeCount: 0
+  failed: 0
+  active: 0
+  skipped: 0
+  complete: 0
+  canSkip: 0
+  canContinue: 0
+  successActions: []
+  failActions: []
+--- !u!4 &2065263309
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065263306}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1532824728}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2075859492
 PrefabInstance:
   m_ObjectHideFlags: 0
