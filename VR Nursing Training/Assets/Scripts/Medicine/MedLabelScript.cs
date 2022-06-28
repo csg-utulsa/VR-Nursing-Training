@@ -30,14 +30,14 @@ public class MedLabelScript : MonoBehaviour
         }
         labelText.SetActive(false);
         labelIcon.SetActive(false);
+
+        GetComponentInParent<DetectLooks>().lookTime = 0.2f;
+        GetComponentInParent<DetectLooks>().lookStarted.AddListener(() => labelActive(true));
+        GetComponentInParent<DetectLooks>().lookStopped.AddListener(() => labelActive(false));
     }
+
     public void Update()
     {
-        if (useCooldown)
-        {
-            if (cooldown > 0) cooldown--;
-            else labelActive(false);
-        }
         direction = (transform.position - Camera.main.transform.position).normalized;
         if (direction != Vector3.zero) labelText.gameObject.transform.rotation = Quaternion.LookRotation(direction);
         if (direction != Vector3.zero) labelIcon.gameObject.transform.rotation = Quaternion.LookRotation(direction);
@@ -47,19 +47,13 @@ public class MedLabelScript : MonoBehaviour
 
     public void labelActive(bool active)
     {
-        useCooldown = true;
-        if (active) cooldown = cooldownMax;
-        else cooldown = 0;
         if (useText) labelText.SetActive(active);
         else labelIcon.SetActive(active);
     }
 
-    public void labelActiveVR(bool active)
+    /*public void labelActiveVR(bool active)
     {
-        useCooldown = false;
         if (useText) labelText.SetActive(active);
         else labelIcon.SetActive(active);
-    }
+    }*/
 }
-
-// TODO: Change to be activated by a scriptable event instead of having the hoverable base class?

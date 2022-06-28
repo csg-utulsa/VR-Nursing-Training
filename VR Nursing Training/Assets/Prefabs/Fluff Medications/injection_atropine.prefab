@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 7812182433219143443}
   - component: {fileID: 6122963473219902900}
   - component: {fileID: 7812182433168822998}
+  - component: {fileID: 2995678935486268860}
   m_Layer: 6
   m_Name: injection_atropine
   m_TagString: Untagged
@@ -305,19 +306,7 @@ MonoBehaviour:
       m_Calls: []
   lookHighlight:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7454802975751779511}
-        m_TargetAssemblyTypeName: MedLabelScript, Assembly-CSharp
-        m_MethodName: labelActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
   initialPosition: {x: 0, y: 0, z: 0}
   initialAngles: {x: 0, y: 0, z: 0}
   material: {fileID: 0}
@@ -333,6 +322,25 @@ MonoBehaviour:
   focusOnPickup: 0
   distanceFromCamera: 0.5
   focusAngles: {x: 0, y: 0, z: 0}
+--- !u!114 &2995678935486268860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6965691321729644397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88bc8af11d043674d84e33c9b1808352, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lookStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  lookStopped:
+    m_PersistentCalls:
+      m_Calls: []
+  lookTime: 0.2
 --- !u!1001 &298505493728836591
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -343,7 +351,7 @@ PrefabInstance:
     - target: {fileID: 2874292576919866089, guid: ece95a75e3ae4fb42ac3c1a116a2e5ec,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5729563741662057297, guid: ece95a75e3ae4fb42ac3c1a116a2e5ec,
         type: 3}
@@ -449,15 +457,3 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 298505493728836591}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7454802975751779511 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7156297757605498712, guid: ece95a75e3ae4fb42ac3c1a116a2e5ec,
-    type: 3}
-  m_PrefabInstance: {fileID: 298505493728836591}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3d597b64de53d54f9135c31311e98f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

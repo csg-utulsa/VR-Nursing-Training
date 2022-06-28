@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 6574998445387482109}
   - component: {fileID: 7717911432201916839}
   - component: {fileID: -5447906183998597268}
+  - component: {fileID: 4505302495807713630}
   m_Layer: 6
   m_Name: Digoxin
   m_TagString: LiquidContainer
@@ -177,19 +178,7 @@ MonoBehaviour:
       m_Calls: []
   lookHighlight:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5818605065520415854}
-        m_TargetAssemblyTypeName: MedLabelScript, Assembly-CSharp
-        m_MethodName: labelActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
   initialPosition: {x: 0, y: 0, z: 0}
   initialAngles: {x: 0, y: 0, z: 0}
   material: {fileID: 0}
@@ -353,6 +342,25 @@ MonoBehaviour:
   onDrop:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4505302495807713630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327579620394125822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88bc8af11d043674d84e33c9b1808352, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lookStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  lookStopped:
+    m_PersistentCalls:
+      m_Calls: []
+  lookTime: 0.2
 --- !u!1001 &3742368830217915190
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -489,15 +497,3 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3742368830217915190}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5818605065520415854 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7156297757605498712, guid: ece95a75e3ae4fb42ac3c1a116a2e5ec,
-    type: 3}
-  m_PrefabInstance: {fileID: 3742368830217915190}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3d597b64de53d54f9135c31311e98f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

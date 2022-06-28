@@ -20,13 +20,13 @@ public class LocomotionController : MonoBehaviour
     void Update()
     {
         int count = 0;
-        foreach (Transform child in questionCanvas.transform)
+        /*foreach (Transform child in questionCanvas.transform)
         {
             if (child.gameObject.activeSelf)
             {
                 count++;
             }
-        }
+        }*/
         
         if (rightTeleportRay)
         {

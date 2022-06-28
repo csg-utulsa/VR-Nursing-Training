@@ -16713,12 +16713,6 @@ Transform:
   m_Father: {fileID: 2008504994}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1410280359 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7548493106411160768, guid: 0af8f3646a662394eb8f95def6a25298,
-    type: 3}
-  m_PrefabInstance: {fileID: 7548493107148386151}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1410903736
 GameObject:
   m_ObjectHideFlags: 0
@@ -23004,7 +22998,7 @@ PrefabInstance:
         type: 3}
       propertyPath: measureCanvas
       value: 
-      objectReference: {fileID: 1410280359}
+      objectReference: {fileID: 0}
     - target: {fileID: 3233983884454960485, guid: 5b13dd4a6e1fc5545ac6f8c46e38bbe2,
         type: 3}
       propertyPath: liquidMaterial

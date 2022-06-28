@@ -193,7 +193,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7763941653385876820}
   - component: {fileID: 7156297757605498712}
-  - component: {fileID: 6660082172773940901}
   m_Layer: 6
   m_Name: MedLabel
   m_TagString: MedLabel
@@ -233,19 +232,6 @@ MonoBehaviour:
   iconSprite: {fileID: 0}
   medicineParent: {fileID: 0}
   useText: 0
---- !u!65 &6660082172773940901
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6547308580655275975}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.01, y: 0.01, z: 0.01}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7307307034722850933
 GameObject:
   m_ObjectHideFlags: 0
