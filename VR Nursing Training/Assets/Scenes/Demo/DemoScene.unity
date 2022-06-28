@@ -1984,6 +1984,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8973596548493860705, guid: bc70a28b8ac8f9847b0c58e3c7de2654,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 124
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1874837731, guid: bc70a28b8ac8f9847b0c58e3c7de2654, type: 3}
     - {fileID: 2139732997, guid: bc70a28b8ac8f9847b0c58e3c7de2654, type: 3}
@@ -25394,23 +25399,43 @@ PrefabInstance:
     - target: {fileID: 1405898044693227596, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2632912369471152309, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7548493106137593522, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1383005072}
+    - target: {fileID: 7548493106137593522, guid: 0af8f3646a662394eb8f95def6a25298,
+        type: 3}
+      propertyPath: m_RaycastMask.m_Bits
+      value: 8384
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548493106137593522, guid: 0af8f3646a662394eb8f95def6a25298,
+        type: 3}
+      propertyPath: m_InteractionLayerMask.m_Bits
+      value: 8256
+      objectReference: {fileID: 0}
     - target: {fileID: 7548493106268794121, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1383005072}
+    - target: {fileID: 7548493106268794121, guid: 0af8f3646a662394eb8f95def6a25298,
+        type: 3}
+      propertyPath: m_RaycastMask.m_Bits
+      value: 8384
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548493106268794121, guid: 0af8f3646a662394eb8f95def6a25298,
+        type: 3}
+      propertyPath: m_InteractionLayerMask.m_Bits
+      value: 8256
+      objectReference: {fileID: 0}
     - target: {fileID: 7548493106411160781, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
       propertyPath: liquidObject
