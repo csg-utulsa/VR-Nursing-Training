@@ -257,7 +257,7 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
-  m_AttachTransform: {fileID: 0}
+  m_AttachTransform: {fileID: 6289647826543899690}
   m_AttachEaseInTime: 0.15
   m_MovementType: 2
   m_VelocityDamping: 1
@@ -369,12 +369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a64d3e54b97bfd4ab4b632d2e843363, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onPickup:
-    m_PersistentCalls:
-      m_Calls: []
-  onDrop:
-    m_PersistentCalls:
-      m_Calls: []
+  disableTriggerFunctionality: 0
   onMark:
     m_PersistentCalls:
       m_Calls: []

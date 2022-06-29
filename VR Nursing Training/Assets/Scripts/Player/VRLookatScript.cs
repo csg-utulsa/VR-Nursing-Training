@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class VRLookatScript : MonoBehaviour
 {
-    public void OnTriggerEnter(Collider other)
+    public void OnTriggerStay(Collider other)
     {
         if (other.gameObject.GetComponent<DetectLooks>() != null)
         {
-            other.gameObject.GetComponent<DetectLooks>().lookStarted.Invoke();
+            PlayerKeyboardInputScript.targetVector = other.transform.position;
+            PlayerKeyboardInputScript.VRLook = true;
         }
         else if (other.gameObject.transform.parent != null && other.gameObject.transform.parent.GetComponent<DetectLooks>() != null)
         {
-            other.gameObject.transform.parent.GetComponent<DetectLooks>().lookStarted.Invoke();
+            PlayerKeyboardInputScript.targetVector = other.transform.position;
+            PlayerKeyboardInputScript.VRLook = true;
         }
     }
 
@@ -20,11 +22,13 @@ public class VRLookatScript : MonoBehaviour
     {
         if (other.gameObject.GetComponent<DetectLooks>() != null)
         {
-            other.gameObject.GetComponent<DetectLooks>().lookStopped.Invoke();
+            PlayerKeyboardInputScript.targetVector = Vector3.forward;
+            PlayerKeyboardInputScript.VRLook = false;
         }
         else if (other.gameObject.transform.parent != null && other.gameObject.transform.parent.GetComponent<DetectLooks>() != null)
         {
-            other.gameObject.transform.parent.GetComponent<DetectLooks>().lookStopped.Invoke();
+            PlayerKeyboardInputScript.targetVector = Vector3.forward;
+            PlayerKeyboardInputScript.VRLook = false;
         }
     }
 }

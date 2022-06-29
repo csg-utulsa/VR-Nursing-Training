@@ -9,23 +9,23 @@ public class InteractableDialogBtn : Interactable
 
     public UnityEvent interactEvent;
 
-    public bool isInteractable;
-    public string type;
+    //public bool isInteractable;
+    //public string type;
 
-    public bool interactWithHand = true;
+    //public bool interactWithHand = true;
 
     public int dosageValue = 0;
     public GameObject cup;
     public string buttonName = "";
     public TextMeshPro buttonText;
     public ParticleSystem HighlightAnimation;
-    public bool highlighted = false;
+    //public bool highlighted = false;
 
-    public void CursorHighlight()
+    /*public void CursorHighlight()
     {
         highlighted = true;
 
-    }
+    }*/
 
     public void HighlightStart()
     {

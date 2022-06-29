@@ -7,11 +7,11 @@ using UnityEngine.Events;
 
 public class Interactable : MonoBehaviour
 {
-    //public UnityEvent interact;
+    public bool disableTriggerFunctionality;
 
     private void OnTriggerEnter(Collider other)
     {
-        Interact(other.gameObject);
+        if (!disableTriggerFunctionality) Interact(other.gameObject);
     }
 
     public virtual void Interact(GameObject other) { }

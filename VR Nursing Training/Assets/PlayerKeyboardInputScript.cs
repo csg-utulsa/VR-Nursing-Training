@@ -6,12 +6,15 @@ using UnityEngine;
 public class PlayerKeyboardInputScript: MonoBehaviour
 {
     public GameObject handLocation;
-    public Camera camera3D;
+    public Camera activeCamera;
     public bool focus;
     public int pickUpSpeed = 1;
     public int pickUpDistance = 5;
     public float interactDistance = 1;
     public float useDistance = 2;
+
+    public static bool VRLook = false;
+    public static Vector3 targetVector;
 
     PlayerInput input;
     GameObject heldObject = null;
@@ -19,7 +22,8 @@ public class PlayerKeyboardInputScript: MonoBehaviour
     bool usingObject = false;
     bool putingDownObject;
     bool teleport;
-    bool VRActive = false;
+
+    
     bool grabbingActive = false;
     
 
@@ -30,6 +34,7 @@ public class PlayerKeyboardInputScript: MonoBehaviour
         input.CharacterControls.Use.performed += ctx => usingObject = ctx.ReadValueAsButton();
         input.CharacterControls.PutDown.performed += ctx => putingDownObject = ctx.ReadValueAsButton();
         input.CharacterControls.Teleport.performed += ctx => teleport = ctx.ReadValueAsButton();
+        activeCamera = Camera.main;
     }
     private void OnEnable()
     {
@@ -44,29 +49,36 @@ public class PlayerKeyboardInputScript: MonoBehaviour
     void Update()
     {
         if (heldObject != null && !heldObject.activeSelf) { heldObject = null; }
-        if ((pickUpObject && heldObject == null) || grabbingActive)
+        if (VRLook) // Only care about looking when VR is enabled
         {
-            pickUpObject = false;
-            PickUp();
-        } 
-        else if(usingObject)
-        {
-            usingObject = false;
-            Use();
-        } 
-        else if (putingDownObject && heldObject != null)
-        {
-            putingDownObject = false;
-            PutDown();
-        }
-        else if(teleport)
-        {
-            teleport = false;
-            Teleport();
+            LookingAt(targetVector-activeCamera.transform.position);
         } 
         else
         {
-            LookingAt();
+            if ((pickUpObject && heldObject == null) || grabbingActive)
+            {
+                pickUpObject = false;
+                PickUp();
+            } 
+            else if(usingObject)
+            {
+                usingObject = false;
+                Use();
+            } 
+            else if (putingDownObject && heldObject != null)
+            {
+                putingDownObject = false;
+                PutDown();
+            }
+            else if(teleport)
+            {
+                teleport = false;
+                Teleport();
+            } 
+            else
+            {
+                LookingAt(activeCamera.transform.forward);
+            }
         }
     }
 
@@ -101,7 +113,7 @@ public class PlayerKeyboardInputScript: MonoBehaviour
         Rigidbody targetRb = heldObject.GetComponent<Rigidbody>();
         RaycastHit hit;
             
-        if (Physics.Raycast(camera3D.transform.position, camera3D.transform.forward, out hit, 2, LayerMask.GetMask("Default"), QueryTriggerInteraction.Ignore) && hit.normal == Vector3.up && hit.transform.CompareTag("PlaceLocation"))
+        if (Physics.Raycast(activeCamera.transform.position, activeCamera.transform.forward, out hit, 2, LayerMask.GetMask("Default"), QueryTriggerInteraction.Ignore) && hit.normal == Vector3.up && hit.transform.CompareTag("PlaceLocation"))
         {
             heldObject.transform.position = hit.point;
             heldObject.GetComponent<Collider>().isTrigger = false;
@@ -116,33 +128,34 @@ public class PlayerKeyboardInputScript: MonoBehaviour
     private void Use()
     {
         RaycastHit hit;
-        if (Physics.Raycast(camera3D.transform.position, camera3D.transform.forward, out hit, pickUpDistance, LayerMask.GetMask("Interactable"), QueryTriggerInteraction.Collide))
+        if (Physics.Raycast(activeCamera.transform.position, activeCamera.transform.forward, out hit, pickUpDistance, LayerMask.GetMask("Interactable") + LayerMask.GetMask("Drawer"), QueryTriggerInteraction.Collide))
         {
-            if (heldObject == null)
+            if (TryGetComponent<Interactable>(out Interactable script))
             {
-                hit.collider.gameObject.GetComponent<Interactable>().Interact(handLocation); // Interact With Hands
-            } 
-            else
-            {
-                hit.collider.gameObject.GetComponent<Interactable>().Interact(heldObject); // Pass interactable script the held objects collider
+                if (heldObject == null)
+                {
+                        script.Interact(handLocation); // Interact With Hands
+                } 
+                else
+                {
+                        script.Interact(heldObject); // Pass interactable script the held objects collider
+                }
             }
-            
         }
     }
     private void Teleport()
     {
         RaycastHit hit;
-        if (Physics.Raycast(camera3D.transform.position, camera3D.transform.forward, out hit, pickUpDistance, LayerMask.GetMask("Teleport"), QueryTriggerInteraction.Ignore))
+        if (Physics.Raycast(activeCamera.transform.position, activeCamera.transform.forward, out hit, pickUpDistance, LayerMask.GetMask("Teleport"), QueryTriggerInteraction.Ignore))
         {
             transform.position = hit.collider.gameObject.transform.position;
         }
     }
 
-    private void LookingAt()
+    private void LookingAt(Vector3 target)
     {
         RaycastHit hit;
-       // Debug.Log("Check Looks");
-        if (Physics.Raycast(camera3D.transform.position, camera3D.transform.forward, out hit, pickUpDistance, ~0, QueryTriggerInteraction.Ignore))
+        if (Physics.Raycast(activeCamera.transform.position, target, out hit, pickUpDistance, ~0, QueryTriggerInteraction.Ignore))
         {
             if (hit.collider.TryGetComponent<DetectLooks>(out DetectLooks scrpt))
             {
@@ -155,7 +168,7 @@ public class PlayerKeyboardInputScript: MonoBehaviour
     private GameObject GetObjectInFront()
     {
         RaycastHit hit;
-        if (Physics.Raycast(camera3D.transform.position, camera3D.transform.forward, out hit, pickUpDistance, LayerMask.GetMask("Pickupable") + LayerMask.GetMask("Drawer"), QueryTriggerInteraction.Ignore))
+        if (Physics.Raycast(activeCamera.transform.position, activeCamera.transform.forward, out hit, pickUpDistance, LayerMask.GetMask("Pickupable") + LayerMask.GetMask("Drawer"), QueryTriggerInteraction.Ignore))
         {
             Debug.Log(hit.collider.name);
             if (hit.collider.gameObject.TryGetComponent<Pickupable>(out Pickupable scrpt))
