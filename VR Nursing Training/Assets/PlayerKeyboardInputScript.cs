@@ -130,15 +130,15 @@ public class PlayerKeyboardInputScript: MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(activeCamera.transform.position, activeCamera.transform.forward, out hit, pickUpDistance, LayerMask.GetMask("Interactable") + LayerMask.GetMask("Drawer"), QueryTriggerInteraction.Collide))
         {
-            if (TryGetComponent<Interactable>(out Interactable script))
+            if (hit.collider.TryGetComponent<Interactable>(out Interactable script))
             {
                 if (heldObject == null)
                 {
-                        script.Interact(handLocation); // Interact With Hands
-                } 
+                    script.Interact(handLocation); // Interact With Hands
+                }
                 else
                 {
-                        script.Interact(heldObject); // Pass interactable script the held objects collider
+                    script.Interact(heldObject); // Pass interactable script the held objects collider
                 }
             }
         }
@@ -170,7 +170,7 @@ public class PlayerKeyboardInputScript: MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(activeCamera.transform.position, activeCamera.transform.forward, out hit, pickUpDistance, LayerMask.GetMask("Pickupable") + LayerMask.GetMask("Drawer"), QueryTriggerInteraction.Ignore))
         {
-            Debug.Log(hit.collider.name);
+            
             if (hit.collider.gameObject.TryGetComponent<Pickupable>(out Pickupable scrpt))
             {
                 return hit.collider.gameObject;
