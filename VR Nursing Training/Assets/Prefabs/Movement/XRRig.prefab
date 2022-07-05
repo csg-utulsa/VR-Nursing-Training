@@ -1372,8 +1372,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handLocation: {fileID: 3041394142401281520}
+  crosshair: {fileID: 7548493107911844023}
   activeCamera: {fileID: 0}
-  focus: 0
   pickUpSpeed: 10
   pickUpDistance: 5
   interactDistance: 1

@@ -92,7 +92,7 @@ MeshCollider:
   m_GameObject: {fileID: 828513968637097228}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -191,6 +191,7 @@ GameObject:
   - component: {fileID: 1199378420013366645}
   - component: {fileID: 1199378420013366641}
   - component: {fileID: 1199378420013366643}
+  - component: {fileID: 1311916332575552712}
   m_Layer: 6
   m_Name: ClipboardBody
   m_TagString: Untagged
@@ -411,6 +412,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bd43063534b3924eb5caef959443d75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+  onDrop:
+    m_PersistentCalls:
+      m_Calls: []
   onCombine:
     m_PersistentCalls:
       m_Calls: []
@@ -438,6 +445,26 @@ MonoBehaviour:
   focusOnPickup: 1
   distanceFromCamera: 0.4
   focusAngles: {x: 180, y: 0, z: -90}
+--- !u!114 &1311916332575552712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045871732776452138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7941497a3b0ad10489045e1983f5a52d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+  onDrop:
+    m_PersistentCalls:
+      m_Calls: []
+  focusOnPickup: 1
+  pickUpAngle: {x: 180, y: 0, z: -90}
 --- !u!1 &3226178464861739637
 GameObject:
   m_ObjectHideFlags: 0

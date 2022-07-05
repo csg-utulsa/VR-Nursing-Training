@@ -6,8 +6,8 @@ using UnityEngine;
 public class PlayerKeyboardInputScript: MonoBehaviour
 {
     public GameObject handLocation;
+    public GameObject crosshair;
     public Camera activeCamera;
-    public bool focus;
     public int pickUpSpeed = 1;
     public int pickUpDistance = 5;
     public float interactDistance = 1;
@@ -85,27 +85,26 @@ public class PlayerKeyboardInputScript: MonoBehaviour
 
     public void PickUp()
     {
-
         if (!grabbingActive)
         {
-            GameObject target = GetObjectInFront(); // Sets target object
-            if (target == null) return; // checks if target exists
-            Rigidbody targetRb = target.GetComponent<Rigidbody>(); // Gets targets Rigidbody
-            targetRb.useGravity = false;
-            targetRb.isKinematic = true;
-            target.GetComponent<Collider>().isTrigger = true;
-            grabbingActive = true;
-            heldObject = target;
-        }
+            RaycastHit hit;
 
-        heldObject.transform.position = Vector3.Lerp(heldObject.transform.position, handLocation.transform.position, Time.deltaTime * pickUpSpeed);
-        
-        if (Vector3.Distance(heldObject.transform.position, handLocation.transform.position) <= 0.01) // Target is Held
-        {
-            heldObject.transform.SetParent(handLocation.transform);
-            grabbingActive = false;
+            if (Physics.Raycast(activeCamera.transform.position, activeCamera.transform.forward, out hit, pickUpDistance, LayerMask.GetMask("Pickupable") + LayerMask.GetMask("Drawer"), QueryTriggerInteraction.Ignore))
+            {
+
+                if (hit.collider.gameObject.TryGetComponent<Pickupable>(out Pickupable scrpt))
+                {
+                    heldObject = hit.collider.gameObject;
+
+                    Rigidbody targetRb = heldObject.GetComponent<Rigidbody>(); // Gets targets Rigidbody
+                    targetRb.useGravity = false;
+                    targetRb.isKinematic = true;
+                    hit.collider.isTrigger = true;
+
+                    StartCoroutine(DoPickUp(scrpt.focusOnPickup, scrpt.pickUpAngle));
+                }
+            }
         }
-      
     }
 
     public void PutDown()
@@ -116,12 +115,16 @@ public class PlayerKeyboardInputScript: MonoBehaviour
         if (Physics.Raycast(activeCamera.transform.position, activeCamera.transform.forward, out hit, 2, LayerMask.GetMask("Default"), QueryTriggerInteraction.Ignore) && hit.normal == Vector3.up && hit.transform.CompareTag("PlaceLocation"))
         {
             heldObject.transform.position = hit.point;
+
             heldObject.GetComponent<Collider>().isTrigger = false;
             targetRb.useGravity = true;
             targetRb.isKinematic = false;
             grabbingActive = false;
+
             heldObject.transform.SetParent(null);
             heldObject = null;
+            crosshair.SetActive(true);
+            MouseLook3D.flag = true;
         }
     }
 
@@ -159,13 +162,55 @@ public class PlayerKeyboardInputScript: MonoBehaviour
         {
             if (hit.collider.TryGetComponent<DetectLooks>(out DetectLooks scrpt))
             {
-                //Debug.Log("StartingLook");
                 scrpt.PlayerIsLooking();
             }
         }
     }
 
-    private GameObject GetObjectInFront()
+    IEnumerator DoPickUp(bool focus, Vector3 focusAngle)
+    {
+        Vector3 targetLocation = handLocation.transform.position;
+        Vector3 targetRotation = handLocation.transform.eulerAngles;
+        float time = Time.time;
+        bool pickingUp = true;
+        grabbingActive = true;
+        
+
+        if (focus)
+        {
+            targetLocation = (activeCamera.transform.forward * .5f + activeCamera.transform.position);
+            targetRotation = activeCamera.transform.eulerAngles + focusAngle;
+            MouseLook3D.flag = false;
+            crosshair.SetActive(false);
+        }
+        else
+        {
+            targetLocation = handLocation.transform.position;
+            targetRotation = handLocation.transform.eulerAngles + focusAngle;
+        }
+
+        while (pickingUp)
+        {
+            double perc1 = Mathf.Clamp(Time.time - time, 0, .4f) / .4f;
+            double percent = Mathf.Clamp((Mathf.Sin((float)(Mathf.PI / 6.0f + (perc1) * Mathf.PI / 3.0f)) - 0.5f) * 2.0f, 0, 1); 
+
+            if ((Time.time - time) > .4)
+            {
+                percent = 1;
+                pickingUp = false;
+            }
+            heldObject.transform.position = Vector3.Lerp(heldObject.transform.position, targetLocation, (float)percent);
+            heldObject.transform.eulerAngles = Vector3.Lerp(heldObject.transform.eulerAngles, targetRotation, (float)percent); 
+
+            yield return new WaitForEndOfFrame();
+        }
+        grabbingActive = false;
+       
+        heldObject.transform.SetParent(handLocation.transform);
+    }
+
+
+    /*private GameObject GetObjectInFront()
     {
         RaycastHit hit;
         if (Physics.Raycast(activeCamera.transform.position, activeCamera.transform.forward, out hit, pickUpDistance, LayerMask.GetMask("Pickupable") + LayerMask.GetMask("Drawer"), QueryTriggerInteraction.Ignore))
@@ -177,6 +222,6 @@ public class PlayerKeyboardInputScript: MonoBehaviour
             }
         }
         return null;
-    }
+    }*/
 
 }
