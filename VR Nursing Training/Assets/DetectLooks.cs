@@ -26,7 +26,6 @@ public class DetectLooks : MonoBehaviour
         {
             lookStarted.Invoke();
             looked = true;
-            Debug.Log("Looked...");
         }
     }
        

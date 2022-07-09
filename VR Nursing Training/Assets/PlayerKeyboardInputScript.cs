@@ -134,12 +134,12 @@ public class PlayerKeyboardInputScript: MonoBehaviour
         else
         {
 
-            if ((_pickUpObject && _heldObject == null))
+            if ((_pickUpObject && !_grabbingActive && _heldObject == null))
             {
                 _pickUpObject = false;
                 PickUp();
             } 
-            else if (_putingDownObject && _heldObject != null)
+            else if (_putingDownObject && !_grabbingActive && _heldObject != null)
             {
                 _putingDownObject = false;
                 PutDown();
@@ -177,10 +177,10 @@ public class PlayerKeyboardInputScript: MonoBehaviour
                 {
                     _heldObject = hit.collider.gameObject;
 
-                    Rigidbody targetRb = _heldObject.GetComponent<Rigidbody>(); // Gets targets Rigidbody
+                    Rigidbody targetRb = _heldObject.GetComponent<Rigidbody>();
                     targetRb.useGravity = false;
                     targetRb.isKinematic = true;
-                    hit.collider.isTrigger = true;
+                    hit.collider.enabled = false;
 
                     StartCoroutine(DoPickUp(scrpt.focusOnPickup, scrpt.pickUpAngle));
                 }
@@ -194,13 +194,24 @@ public class PlayerKeyboardInputScript: MonoBehaviour
     private void PutDown()
     {
         Rigidbody targetRb = _heldObject.GetComponent<Rigidbody>();
+        Pickupable heldObjScrpt = _heldObject.GetComponent<Pickupable>();
         RaycastHit hit;
             
         if (Physics.Raycast(_activeCamera.transform.position, _activeCamera.transform.forward, out hit, _pickUpDistance, LayerMask.GetMask("Default"), QueryTriggerInteraction.Ignore) && hit.normal == Vector3.up && hit.transform.CompareTag("PlaceLocation"))
         {
+            _heldObject.GetComponent<Collider>().enabled = true;
+            
+            if (heldObjScrpt.useCustomDropRotation) 
+            {
+                heldObjScrpt.ResetCustomRotation();
+            }
+            else
+            {
+                heldObjScrpt.ResetRotation();
+            }
+            
             _heldObject.transform.position = hit.point;
 
-            _heldObject.GetComponent<Collider>().isTrigger = false;
             targetRb.useGravity = true;
             targetRb.isKinematic = false;
             _grabbingActive = false;
@@ -287,6 +298,7 @@ public class PlayerKeyboardInputScript: MonoBehaviour
         }
         else
         {
+            _heldObject.transform.SetParent(_handLocation.transform);
             targetLocation = _handLocation.transform.position;
             targetRotation = _handLocation.transform.eulerAngles + focusAngle;
         }
@@ -297,18 +309,26 @@ public class PlayerKeyboardInputScript: MonoBehaviour
             float perc1 = Mathf.Clamp(Time.time - time, 0, _pickUpSpeed) / _pickUpSpeed;
             float percent = Mathf.Clamp((Mathf.Sin((float)(Mathf.PI / 6.0f + (perc1) * Mathf.PI / 3.0f)) - 0.5f) * 2.0f, 0, 1); 
 
-            if ((Time.time - time) > _pickUpSpeed)
+            if ((Time.time - time) > _pickUpSpeed || _heldObject == null)
             {
                 percent = 1;
                 pickingUp = false;
             }
 
-            _heldObject.transform.position = Vector3.Lerp(_activeCamera.transform.position, targetLocation, (float)percent);
-            _heldObject.transform.eulerAngles = Vector3.Lerp(_activeCamera.transform.eulerAngles, targetRotation, (float)percent);
+            
+            if (focus) 
+            {
+                _heldObject.transform.position = Vector3.Lerp(_activeCamera.transform.position, targetLocation, (float)percent);
+                _heldObject.transform.eulerAngles = Vector3.Lerp(_activeCamera.transform.eulerAngles, targetRotation, (float)percent);
+            } else 
+            {
+                _heldObject.transform.position = Vector3.Lerp(_heldObject.transform.position,_handLocation.transform.position,(float)percent);
+            }
+            
 
             yield return _EOF;
         }
         _grabbingActive = false;
-        _heldObject.transform.SetParent(_handLocation.transform);
+        
     }
 }
