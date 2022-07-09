@@ -37,9 +37,8 @@ public class DetectLooks : MonoBehaviour
         PlayerStoppedLooking();
     }
 
-    public void PlayerStoppedLooking() // NOT IMPLEMENTED
+    public void PlayerStoppedLooking()
     {
         lookStopped.Invoke();
-        Debug.Log("Stopped Looking...");
     }
 }
