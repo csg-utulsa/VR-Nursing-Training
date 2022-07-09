@@ -1371,13 +1371,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22daa01360865e649afb2ed9efaf551a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  handLocation: {fileID: 3041394142401281520}
-  crosshair: {fileID: 7548493107911844023}
-  activeCamera: {fileID: 0}
-  pickUpSpeed: 10
-  pickUpDistance: 5
-  interactDistance: 1
-  useDistance: 2
+  _handLocation: {fileID: 0}
+  _crosshair: {fileID: 0}
+  _pickUpSpeed: 1
+  _pickUpDistance: 5
+  _teleportDistance: 5
+  _useDistance: 2
+  _lookAtDistance: 2
 --- !u!1 &7548493108043787241
 GameObject:
   m_ObjectHideFlags: 0

@@ -95,6 +95,17 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""42de12cf-8555-4d01-9926-05762105f815"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": ""Press(behavior=2)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Use"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""93f1b05e-ea6a-4a6c-983b-eb896fb94a6b"",
                     ""path"": ""<Mouse>/rightButton"",
                     ""interactions"": ""Press(behavior=2)"",
