@@ -124,6 +124,11 @@ public class Objective : MonoBehaviour
         return strikes;
     }
 
+    public void setStrikes(int value)
+    {
+        strikes = value;
+    }
+
     public string getDescription()
     {
         return description;
