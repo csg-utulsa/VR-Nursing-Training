@@ -131,6 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34ede401f7faf6a48a85f6444938752a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableTriggerFunctionality: 0
   pill: {fileID: 2276514548419805056, guid: 1bc346026eafb9040bf9e30a007a9580, type: 3}
   onSpawn:
     m_PersistentCalls:
@@ -315,11 +316,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 11510738142742926}
-  - component: {fileID: 952851165727344965}
-  - component: {fileID: 9166661334366910011}
-  - component: {fileID: 7451899167704625030}
   - component: {fileID: 7080492712890518086}
   - component: {fileID: 4842687221378738548}
+  - component: {fileID: 7622908927695559498}
   m_Layer: 6
   m_Name: Pill Cutter Trigger
   m_TagString: PillCutter
@@ -341,69 +340,6 @@ Transform:
   m_Father: {fileID: 3179222565389782532}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
---- !u!33 &952851165727344965
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 554788872845645819}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &9166661334366910011
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 554788872845645819}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7451899167704625030
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 554788872845645819}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &7080492712890518086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -416,6 +352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ce76f69307ce4c42b510982a0a60bc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableTriggerFunctionality: 0
   topHalfPill: {fileID: 928747300338365511, guid: c042b9cacf3d65f449200aced09f9e72,
     type: 3}
   bottomHalfPill: {fileID: 7965732120258267213, guid: 9c167991378303144ba1bd79095fa66d,
@@ -449,6 +386,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09da1f333edc5124fa4f9a73a7c43407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &7622908927695559498
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554788872845645819}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 1, z: 10.000001}
+  m_Center: {x: 0, y: 0.026694106, z: 0.000000021317517}
 --- !u!1 &2834187726843450558
 GameObject:
   m_ObjectHideFlags: 0

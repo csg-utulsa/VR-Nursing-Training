@@ -7,7 +7,6 @@ public class MouseLook3D : MonoBehaviour
     float xRotation = 0f;
     public Transform playerBody;
     public float mouseSensitivity = 100f;
-    public GameObject liquidCanvas;
     public static bool flag = true;
     PlayerInput input;
 
