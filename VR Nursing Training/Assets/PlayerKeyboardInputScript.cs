@@ -18,10 +18,10 @@ public class PlayerKeyboardInputScript: MonoBehaviour
     [Space(10)]
     [Header("Input Settings:")]
     [Tooltip("Speed at which objects get picked up.")]
-    [SerializeField] int _pickUpSpeed = 1;
+    [SerializeField] float _pickUpSpeed = 1;
 
     [Tooltip("Max distance an item can be picked up.")]
-    [SerializeField] int _pickUpDistance = 5;
+    [SerializeField] float _pickUpDistance = 5;
 
      [Tooltip("Max distance an item can be interacted with")]
     [SerializeField] float _teleportDistance = 5;
@@ -149,7 +149,7 @@ public class PlayerKeyboardInputScript: MonoBehaviour
                 _teleport = false;
                 Teleport();
             } 
-            else if(_usingObject)
+            else if(!_grabbingActive && _usingObject)
             {
                 _usingObject = false;
                 Use();
@@ -196,11 +196,20 @@ public class PlayerKeyboardInputScript: MonoBehaviour
         Rigidbody targetRb = _heldObject.GetComponent<Rigidbody>();
         Pickupable heldObjScrpt = _heldObject.GetComponent<Pickupable>();
         RaycastHit hit;
-            
+
+        if (heldObjScrpt.focusOnPickup)
+        {
+            heldObjScrpt.ResetObject();
+            MouseLook3D.flag = true;
+        }
+
         if (Physics.Raycast(_activeCamera.transform.position, _activeCamera.transform.forward, out hit, _pickUpDistance, LayerMask.GetMask("Default"), QueryTriggerInteraction.Ignore) && hit.normal == Vector3.up && hit.transform.CompareTag("PlaceLocation"))
         {
             _heldObject.GetComponent<Collider>().enabled = true;
-            
+            targetRb.useGravity = true;
+            targetRb.isKinematic = false;
+            _grabbingActive = false;
+
             if (heldObjScrpt.useCustomDropRotation) 
             {
                 heldObjScrpt.ResetCustomRotation();
@@ -209,15 +218,15 @@ public class PlayerKeyboardInputScript: MonoBehaviour
             {
                 heldObjScrpt.ResetRotation();
             }
-            targetRb.useGravity = true;
-            targetRb.isKinematic = false;
-            _grabbingActive = false;
+            
+            if (!heldObjScrpt.focusOnPickup)
+            {
+                _heldObject.transform.position = hit.point;
+            } 
 
-            _heldObject.transform.position = hit.point;
+            _crosshair.SetActive(true);
             _heldObject.transform.SetParent(null);
             _heldObject = null;
-            _crosshair.SetActive(true);
-            MouseLook3D.flag = true;
         }
     }
 
@@ -310,23 +319,25 @@ public class PlayerKeyboardInputScript: MonoBehaviour
             float perc1 = Mathf.Clamp(Time.time - time, 0, _pickUpSpeed) / _pickUpSpeed;
             float percent = Mathf.Clamp((Mathf.Sin((float)(Mathf.PI / 6.0f + (perc1) * Mathf.PI / 3.0f)) - 0.5f) * 2.0f, 0, 1); 
 
-            if ((Time.time - time) > _pickUpSpeed || _heldObject == null)
+            if ((Time.time - time) > _pickUpSpeed || _heldObject == null || _heldObject.transform.position == targetLocation)
             {
                 percent = 1;
-                pickingUp = false;
             }
-
+            Debug.Log(percent);
             
             if (focus) 
             {
-                _heldObject.transform.position = Vector3.Lerp(_activeCamera.transform.position, targetLocation, (float)percent);
-                _heldObject.transform.eulerAngles = Vector3.Lerp(_activeCamera.transform.eulerAngles, targetRotation, (float)percent);
+                _heldObject.transform.position = Vector3.Lerp(_activeCamera.transform.position, targetLocation, percent);
+                _heldObject.transform.eulerAngles = Vector3.Lerp(_activeCamera.transform.eulerAngles, targetRotation, percent);
             } else 
             {
-                _heldObject.transform.position = Vector3.Lerp(_heldObject.transform.position,_handLocation.transform.position,(float)percent);
+                _heldObject.transform.position = Vector3.Lerp(_heldObject.transform.position,_handLocation.transform.position,percent);
             }
             
-
+            if (percent == 1)
+            {
+                pickingUp = false;
+            }
             yield return _EOF;
         }
         _grabbingActive = false;
