@@ -323,7 +323,7 @@ public class PlayerKeyboardInputScript: MonoBehaviour
             {
                 percent = 1;
             }
-            Debug.Log(percent);
+            //Debug.Log(percent);
             
             if (focus) 
             {
