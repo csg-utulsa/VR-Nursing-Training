@@ -209,13 +209,11 @@ public class PlayerKeyboardInputScript: MonoBehaviour
             {
                 heldObjScrpt.ResetRotation();
             }
-            
-            _heldObject.transform.position = hit.point;
-
             targetRb.useGravity = true;
             targetRb.isKinematic = false;
             _grabbingActive = false;
 
+            _heldObject.transform.position = hit.point;
             _heldObject.transform.SetParent(null);
             _heldObject = null;
             _crosshair.SetActive(true);
@@ -253,6 +251,9 @@ public class PlayerKeyboardInputScript: MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(_activeCamera.transform.position, _activeCamera.transform.forward, out hit, _teleportDistance, LayerMask.GetMask("Teleport"), QueryTriggerInteraction.Ignore))
         {
+            _usingObject = false;
+            _putingDownObject = false;
+            _pickUpObject = false;
             transform.position = hit.collider.gameObject.transform.position;
         }
     }
