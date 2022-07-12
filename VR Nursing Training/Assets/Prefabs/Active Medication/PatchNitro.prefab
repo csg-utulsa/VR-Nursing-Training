@@ -137,12 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a64d3e54b97bfd4ab4b632d2e843363, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onPickup:
-    m_PersistentCalls:
-      m_Calls: []
-  onDrop:
-    m_PersistentCalls:
-      m_Calls: []
+  disableTriggerFunctionality: 0
   onMark:
     m_PersistentCalls:
       m_Calls:
@@ -494,12 +489,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7941497a3b0ad10489045e1983f5a52d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onPickup:
-    m_PersistentCalls:
-      m_Calls: []
-  onDrop:
-    m_PersistentCalls:
-      m_Calls: []
+  focusOnPickup: 0
+  pickUpAngle: {x: 0, y: 0, z: 0}
+  CustomDropRotation: {x: -90, y: 0, z: 0}
+  useCustomDropRotation: 1
+  StartPosition: {x: 0, y: 0, z: 0}
+  StartRotation: {x: 0, y: 0, z: 0}
 --- !u!1 &6112319932732296950
 GameObject:
   m_ObjectHideFlags: 0
