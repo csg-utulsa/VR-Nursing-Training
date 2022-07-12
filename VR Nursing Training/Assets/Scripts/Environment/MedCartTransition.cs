@@ -108,15 +108,16 @@ public class MedCartTransition : MonoBehaviour
             if (previousParents[i] != null) triggerObjects[i].transform.SetParent(previousParents[i].transform);
             else triggerObjects[i].transform.SetParent(null);
         }
-        foreach (GameObject obj in tempObjects)
+        foreach (GameObject obj in triggerObjects)
         {
-            if (triggerObjects.Contains(obj)) // only clear items that have already been recorded
+            if (tempObjects.Contains(obj)) // only clear items that have already been recorded
             {
                 recordedPositions.RemoveAt(tempObjects.IndexOf(obj));
                 recordedRotations.RemoveAt(tempObjects.IndexOf(obj));
                 tempObjects.Remove(obj);
             }
         }
+
         while (triggerObjects.Count > 0) triggerObjects.RemoveAt(0);
         while (previousParents.Count > 0) previousParents.RemoveAt(0);
 
