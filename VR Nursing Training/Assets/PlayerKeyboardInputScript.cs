@@ -133,8 +133,12 @@ public class PlayerKeyboardInputScript: MonoBehaviour
         } 
         else
         {
-
-            if ((_pickUpObject && !_grabbingActive && _heldObject == null))
+            if (_teleport)
+            {
+                _teleport = false;
+                Teleport();
+            }
+            else if ((_pickUpObject && !_grabbingActive && _heldObject == null))
             {
                 _pickUpObject = false;
                 PickUp();
@@ -144,11 +148,7 @@ public class PlayerKeyboardInputScript: MonoBehaviour
                 _putingDownObject = false;
                 PutDown();
             }
-            else if(_teleport)
-            {
-                _teleport = false;
-                Teleport();
-            } 
+            
             else if(!_grabbingActive && _usingObject)
             {
                 _usingObject = false;
@@ -317,7 +317,9 @@ public class PlayerKeyboardInputScript: MonoBehaviour
         while (pickingUp)
         {
             float perc1 = Mathf.Clamp(Time.time - time, 0, _pickUpSpeed) / _pickUpSpeed;
-            float percent = Mathf.Clamp((Mathf.Sin((float)(Mathf.PI / 6.0f + (perc1) * Mathf.PI / 3.0f)) - 0.5f) * 2.0f, 0, 1); 
+            float percent = Mathf.Clamp((Mathf.Sin((float)(Mathf.PI / 6.0f + (perc1) * Mathf.PI / 3.0f)) - 0.5f) * 2.0f, 0, 1);
+
+            percent = Mathf.Round(percent * 100f) / 100f; //Round
 
             if ((Time.time - time) > _pickUpSpeed || _heldObject == null || _heldObject.transform.position == targetLocation)
             {
