@@ -143,13 +143,13 @@ public class PlayerKeyboardInputScript: MonoBehaviour
                 _pickUpObject = false;
                 PickUp();
             } 
-            else if (_putingDownObject && !_grabbingActive && _heldObject != null)
+            else if (_putingDownObject  && _heldObject != null) //&& !_grabbingActive
             {
                 _putingDownObject = false;
                 PutDown();
             }
             
-            else if(!_grabbingActive && _usingObject)
+            else if(_usingObject) // !_grabbingActive && 
             {
                 _usingObject = false;
                 Use();
@@ -314,18 +314,20 @@ public class PlayerKeyboardInputScript: MonoBehaviour
         }
 
         // Picking up animation loop
-        while (pickingUp)
+        while (pickingUp && _grabbingActive)
         {
+           if ( _heldObject == null)
+            {
+                pickingUp = false;
+                break;
+            }
             float perc1 = Mathf.Clamp(Time.time - time, 0, _pickUpSpeed) / _pickUpSpeed;
             float percent = Mathf.Clamp((Mathf.Sin((float)(Mathf.PI / 6.0f + (perc1) * Mathf.PI / 3.0f)) - 0.5f) * 2.0f, 0, 1);
 
-            percent = Mathf.Round(percent * 100f) / 100f; //Round
-
-            if ((Time.time - time) > _pickUpSpeed || _heldObject == null || _heldObject.transform.position == targetLocation)
+            if ((Time.time - time) > _pickUpSpeed || _heldObject.transform.position == targetLocation)
             {
                 percent = 1;
             }
-            //Debug.Log(percent);
             
             if (focus) 
             {
