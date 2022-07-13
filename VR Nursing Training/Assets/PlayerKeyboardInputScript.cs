@@ -275,7 +275,7 @@ public class PlayerKeyboardInputScript: MonoBehaviour
     {
         RaycastHit hit;
 
-        if (Physics.Raycast(_activeCamera.transform.position, target, out hit, _lookAtDistance, ~0, QueryTriggerInteraction.Ignore))
+        if (Physics.Raycast(_activeCamera.transform.position, target, out hit, _lookAtDistance, LayerMask.GetMask("Interactable", "Pickupable", "Teleport","Drawer"), QueryTriggerInteraction.Ignore)) // Mabye Change LayerMask to only pickupable/interactable
         {
             if (hit.collider.TryGetComponent<DetectLooks>(out DetectLooks scrpt))
             {
