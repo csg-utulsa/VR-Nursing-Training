@@ -295,7 +295,6 @@ public class PlayerKeyboardInputScript: MonoBehaviour
         Vector3 targetLocation;
         Vector3 targetRotation;
         float time = Time.time;
-        bool pickingUp = true;
         _grabbingActive = true;
         
 
@@ -314,13 +313,13 @@ public class PlayerKeyboardInputScript: MonoBehaviour
         }
 
         // Picking up animation loop
-        while (pickingUp && _grabbingActive)
+        while (_grabbingActive)
         {
            if ( _heldObject == null)
-            {
-                pickingUp = false;
+           {
+                _grabbingActive = false;
                 break;
-            }
+           }
             float perc1 = Mathf.Clamp(Time.time - time, 0, _pickUpSpeed) / _pickUpSpeed;
             float percent = Mathf.Clamp((Mathf.Sin((float)(Mathf.PI / 6.0f + (perc1) * Mathf.PI / 3.0f)) - 0.5f) * 2.0f, 0, 1);
 
@@ -340,11 +339,9 @@ public class PlayerKeyboardInputScript: MonoBehaviour
             
             if (percent == 1)
             {
-                pickingUp = false;
+                _grabbingActive = false;
             }
             yield return _EOF;
         }
-        _grabbingActive = false;
-        
     }
 }
