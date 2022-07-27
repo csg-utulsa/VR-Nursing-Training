@@ -26923,14 +26923,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1436730773}
     m_Modifications:
-    - target: {fileID: 1998866410, guid: 5966f623927a18148a699630a177a1a9, type: 3}
-      propertyPath: m_Convex
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2128698124, guid: 5966f623927a18148a699630a177a1a9, type: 3}
-      propertyPath: m_Layer
-      value: 13
-      objectReference: {fileID: 0}
     - target: {fileID: 2128698126, guid: 5966f623927a18148a699630a177a1a9, type: 3}
       propertyPath: onSpawn.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -26955,16 +26947,6 @@ PrefabInstance:
       propertyPath: onSpawn.m_PersistentCalls.m_Calls.Array.data[5].m_Target
       value: 
       objectReference: {fileID: 653639080}
-    - target: {fileID: 275248530143692066, guid: 5966f623927a18148a699630a177a1a9,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 87
-      objectReference: {fileID: 0}
-    - target: {fileID: 554788872845645819, guid: 5966f623927a18148a699630a177a1a9,
-        type: 3}
-      propertyPath: m_Layer
-      value: 13
-      objectReference: {fileID: 0}
     - target: {fileID: 2834187726843450558, guid: 5966f623927a18148a699630a177a1a9,
         type: 3}
       propertyPath: m_Name

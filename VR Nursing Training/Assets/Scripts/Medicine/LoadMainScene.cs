@@ -5,16 +5,16 @@ using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Collider))]
 
-public class LoadMainScene : InteractableBase
+public class LoadMainScene : Interactable
 {
 
 
     private void OnTriggerEnter(Collider other)
     {
-        Interact(other);
+        Interact(other.gameObject);
     }
 
-    public override void Interact(Collider other)
+    public override void Interact(GameObject other)
     {
         if (other.gameObject.CompareTag("Hands"))
         {

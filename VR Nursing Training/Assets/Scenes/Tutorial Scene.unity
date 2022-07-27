@@ -777,6 +777,8 @@ GameObject:
   - component: {fileID: 98551845}
   - component: {fileID: 98551844}
   - component: {fileID: 98551843}
+  - component: {fileID: 98551851}
+  - component: {fileID: 98551850}
   m_Layer: 6
   m_Name: Pill bottle
   m_TagString: PillContainer
@@ -1068,6 +1070,68 @@ Transform:
   m_Father: {fileID: 1134659125}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 135}
+--- !u!114 &98551850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98551842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88bc8af11d043674d84e33c9b1808352, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lookStarted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 439048130}
+        m_TargetAssemblyTypeName: MedLabelScript, Assembly-CSharp
+        m_MethodName: labelActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  lookStopped:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 439048130}
+        m_TargetAssemblyTypeName: MedLabelScript, Assembly-CSharp
+        m_MethodName: labelActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  lookTime: 0.5
+  debugging: 0
+--- !u!114 &98551851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98551842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7941497a3b0ad10489045e1983f5a52d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  focusOnPickup: 0
+  pickUpAngle: {x: 0, y: 0, z: 0}
+  CustomDropRotation: {x: 0, y: 0, z: 0}
+  useCustomDropRotation: 0
+  StartPosition: {x: 0, y: 0, z: 0}
+  StartRotation: {x: 0, y: 0, z: 0}
 --- !u!1 &100652831
 GameObject:
   m_ObjectHideFlags: 0
@@ -2689,7 +2753,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1388834927}
-  m_RootOrder: 7
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &280052730
 MonoBehaviour:
@@ -6664,12 +6728,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a64d3e54b97bfd4ab4b632d2e843363, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onPickup:
-    m_PersistentCalls:
-      m_Calls: []
-  onDrop:
-    m_PersistentCalls:
-      m_Calls: []
+  disableTriggerFunctionality: 0
+  debugging: 0
   onMark:
     m_PersistentCalls:
       m_Calls:
@@ -7782,12 +7842,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bff6aa276958b7c4faaba453e818e29c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onPickup:
-    m_PersistentCalls:
-      m_Calls: []
-  onDrop:
-    m_PersistentCalls:
-      m_Calls: []
+  disableTriggerFunctionality: 0
+  debugging: 0
 --- !u!1 &872840620
 GameObject:
   m_ObjectHideFlags: 0
@@ -14370,12 +14426,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1574453596}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1608880335 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 159191681, guid: 0af8f3646a662394eb8f95def6a25298,
-    type: 3}
-  m_PrefabInstance: {fileID: 1388834926}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1610332654
 GameObject:
   m_ObjectHideFlags: 0
@@ -14528,12 +14578,6 @@ Transform:
   m_Father: {fileID: 205647848}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1634034159 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 226502561, guid: 0af8f3646a662394eb8f95def6a25298,
-    type: 3}
-  m_PrefabInstance: {fileID: 1388834926}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1639342389
 GameObject:
   m_ObjectHideFlags: 0
@@ -17138,7 +17182,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 2594969060010673964}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9bd43063534b3924eb5caef959443d75, type: 3}
   m_Name: 
@@ -18962,6 +19006,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1199378420013366643, guid: cab9d462c08238144a02f59b02ddb1c5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1199378420013366643, guid: cab9d462c08238144a02f59b02ddb1c5,
         type: 3}
@@ -21851,7 +21900,7 @@ GameObject:
   - component: {fileID: 2594969061861372834}
   - component: {fileID: 2594969061861372833}
   - component: {fileID: 867455753}
-  m_Layer: 3
+  m_Layer: 13
   m_Name: ElevatorButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22165,12 +22214,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5b9b484b057e534bb79c0cd7b4cebb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onPickup:
-    m_PersistentCalls:
-      m_Calls: []
-  onDrop:
-    m_PersistentCalls:
-      m_Calls: []
+  disableTriggerFunctionality: 0
+  debugging: 0
   requiredType:
   - DIGOXIN
   onPour:
@@ -22200,7 +22245,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1608880335}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -22212,7 +22257,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1634034159}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -22369,12 +22414,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89f1840a079f0404a949748f16791a5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onPickup:
-    m_PersistentCalls:
-      m_Calls: []
-  onDrop:
-    m_PersistentCalls:
-      m_Calls: []
+  disableTriggerFunctionality: 0
+  debugging: 0
   interactEvent:
     m_PersistentCalls:
       m_Calls:
@@ -22402,16 +22443,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  isInteractable: 0
-  type: 
-  interactWithHand: 1
   dosageValue: 0
   cup: {fileID: 3472772165644973200}
   buttonName: Sample Text
   buttonText: {fileID: 3301444244224361310}
-  buttonVolume: {fileID: 3301444242697679003}
   HighlightAnimation: {fileID: 6632182806612273687}
-  highlighted: 0
 --- !u!1 &3301444244224361308
 GameObject:
   m_ObjectHideFlags: 0
@@ -23255,12 +23291,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89f1840a079f0404a949748f16791a5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onPickup:
-    m_PersistentCalls:
-      m_Calls: []
-  onDrop:
-    m_PersistentCalls:
-      m_Calls: []
+  disableTriggerFunctionality: 0
+  debugging: 0
   interactEvent:
     m_PersistentCalls:
       m_Calls:
@@ -23288,16 +23320,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  isInteractable: 0
-  type: 
-  interactWithHand: 1
   dosageValue: 0
   cup: {fileID: 3472772165644973200}
   buttonName: Sample Text
   buttonText: {fileID: 3493132979903947362}
-  buttonVolume: {fileID: 3493132980793168295}
   HighlightAnimation: {fileID: 4729114839445916459}
-  highlighted: 0
 --- !u!1 &3493132981528746102
 GameObject:
   m_ObjectHideFlags: 0
@@ -28689,12 +28716,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89f1840a079f0404a949748f16791a5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onPickup:
-    m_PersistentCalls:
-      m_Calls: []
-  onDrop:
-    m_PersistentCalls:
-      m_Calls: []
+  disableTriggerFunctionality: 0
+  debugging: 0
   interactEvent:
     m_PersistentCalls:
       m_Calls:
@@ -28722,16 +28745,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  isInteractable: 0
-  type: 
-  interactWithHand: 1
   dosageValue: 0
   cup: {fileID: 3472772165644973200}
   buttonName: Sample Text
   buttonText: {fileID: 4390911572650350558}
-  buttonVolume: {fileID: 4390911573774394395}
   HighlightAnimation: {fileID: 5563229615849897623}
-  highlighted: 0
 --- !u!1 &4390911573774394395
 GameObject:
   m_ObjectHideFlags: 0
@@ -29110,12 +29128,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89f1840a079f0404a949748f16791a5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onPickup:
-    m_PersistentCalls:
-      m_Calls: []
-  onDrop:
-    m_PersistentCalls:
-      m_Calls: []
+  disableTriggerFunctionality: 0
+  debugging: 0
   interactEvent:
     m_PersistentCalls:
       m_Calls:
@@ -29143,7 +29157,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1608880335}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -29155,7 +29169,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1634034159}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -29167,16 +29181,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  isInteractable: 0
-  type: 
-  interactWithHand: 1
   dosageValue: 0
   cup: {fileID: 3472772165644973200}
   buttonName: Sample Text
   buttonText: {fileID: 4620266453562471311}
-  buttonVolume: {fileID: 4620266454183182410}
   HighlightAnimation: {fileID: 3586363730829318854}
-  highlighted: 0
 --- !u!1 &4620266454183182410
 GameObject:
   m_ObjectHideFlags: 0

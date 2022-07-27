@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 2128698125}
   - component: {fileID: 2128698127}
   - component: {fileID: 2128698126}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: Pill Cutter Tray
   m_TagString: PillCutter
   m_Icon: {fileID: 0}
@@ -132,6 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableTriggerFunctionality: 0
+  debugging: 0
   pill: {fileID: 2276514548419805056, guid: 1bc346026eafb9040bf9e30a007a9580, type: 3}
   onSpawn:
     m_PersistentCalls:
@@ -227,7 +228,7 @@ GameObject:
   m_TagString: PillCutter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 87
   m_IsActive: 1
 --- !u!4 &5470966209818815219
 Transform:
@@ -319,7 +320,7 @@ GameObject:
   - component: {fileID: 7080492712890518086}
   - component: {fileID: 4842687221378738548}
   - component: {fileID: 7622908927695559498}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: Pill Cutter Trigger
   m_TagString: PillCutter
   m_Icon: {fileID: 0}
@@ -353,6 +354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableTriggerFunctionality: 0
+  debugging: 0
   topHalfPill: {fileID: 928747300338365511, guid: c042b9cacf3d65f449200aced09f9e72,
     type: 3}
   bottomHalfPill: {fileID: 7965732120258267213, guid: 9c167991378303144ba1bd79095fa66d,
