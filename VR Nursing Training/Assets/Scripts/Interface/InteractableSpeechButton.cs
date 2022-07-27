@@ -15,7 +15,7 @@ public class InteractableSpeechButton : Interactable
     [SerializeField] public static float yDistance = 10;
     public bool isInteractable;
     public string type;
-    private bool toggle = false;
+    private bool buttonOpen = false;
     private bool openStuff;
     private bool closeStuff;
 
@@ -64,7 +64,10 @@ public class InteractableSpeechButton : Interactable
 
     public void HighlightStart()
     {
-        HighlightAnimation.Play();
+        if (GetComponent<Collider>().enabled)
+        {
+            HighlightAnimation.Play();
+        }
     }
     public void HighlightStop()
     {
@@ -96,12 +99,12 @@ public class InteractableSpeechButton : Interactable
                 
             }
         }
-        Debug.Log("ActualCount " + buttonChildren.Count);
+        //Debug.Log("ActualCount " + buttonChildren.Count);
 
         for (int i = 0; i < buttonChildren.Count; i++)
         {
             zvalues.Add(i - (Mathf.Floor((buttonChildren.Count - 1) / 2)));
-            Debug.Log("CountZVals" + zvalues.Count);
+            //Debug.Log("CountZVals" + zvalues.Count);
             if (buttonChildren.Count % 2 == 0f)
             {
                 zvalues[i] -= .5f;
@@ -109,11 +112,11 @@ public class InteractableSpeechButton : Interactable
         }
     }
 
-    private void FixedUpdate()
+    private void FixedUpdate() // Change to Coroutine Later
     {
         if (openStuff)
         {
-            Debug.Log("Moving Buttons...");
+            //Debug.Log("Moving Buttons...");
             for (int i = 0; i < buttonChildren.Count; i++)
             {
 
@@ -121,7 +124,8 @@ public class InteractableSpeechButton : Interactable
                 buttonChildren[i].transform.position += new Vector3(xAxisSpacing, yAxisSpacing, zvalues[i] * .005f);
                 if (buttonChildren[i].transform.localPosition.y >= yDistance)
                 {
-                    Debug.Log("Stopping Buttons");
+                    //Debug.Log("Stopping Buttons");
+                    buttonChildren[i].GetComponent<Collider>().enabled = true;
                     openStuff = false;
                 }
             }
@@ -165,7 +169,7 @@ public class InteractableSpeechButton : Interactable
 
     public override void Interact(GameObject other)
     {
-        Debug.Log("Interacted w/ Floating speech button");
+        //Debug.Log("Interacted w/ Floating speech button");
         //CombineObject(other.gameObject);
         if (interactEvent != null)
         {
@@ -173,15 +177,15 @@ public class InteractableSpeechButton : Interactable
         }
 
 
-        if (toggle == false)
+        if (buttonOpen == false)
         {
             OpenButton();
-            toggle = true;
+            buttonOpen = true;
         }
         else
         {
             CloseButton();
-            toggle = false;
+            buttonOpen = false;
         }
     }
 
@@ -190,6 +194,7 @@ public class InteractableSpeechButton : Interactable
         if (buttonChildren.Count >= 1)
         {
             for (int i = 0; i < buttonChildren.Count; i++) {
+                buttonChildren[i].GetComponent<Collider>().enabled = false;
                 buttonChildren[i].SetActive(true);
             }
             openStuff = true;
@@ -208,10 +213,13 @@ public class InteractableSpeechButton : Interactable
             for (int i = 0; i < buttonChildren.Count; i++)
             {
                 buttonChildren[i].GetComponent<InteractableSpeechButton>().CloseButton();
+                buttonChildren[i].GetComponent<Collider>().enabled = false;
             }
             closeStuff = true;
             openStuff = false;
+            
         }
+        buttonOpen = false;
     }
 
     // Closes children of sibling buttons
@@ -219,7 +227,7 @@ public class InteractableSpeechButton : Interactable
     {
         if (parentButton != null)
         {
-            foreach (GameObject babyButton in parentButton.GetComponent<InteractableSpeechButton>().buttonChildren)
+            foreach (GameObject babyButton in parentButton.GetComponent<InteractableSpeechButton>().buttonChildren) // Change to for loop later
             {
                 if (babyButton != this.gameObject)
                 {

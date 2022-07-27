@@ -4,33 +4,38 @@ using UnityEngine.InputSystem;
 using UnityEngine;
 
 // Made by: Brennan Crowder
-// Modified: 7/8/22
+// Modified: 7/26/22
 
 public class PlayerKeyboardInputScript: MonoBehaviour
 {
-    [Header("GameObject References:")]
-    [Tooltip("Location where objects will be held.")]
-    [SerializeField] GameObject _handLocation;
+    [Space(3),Header("GameObject References:")]
+    [Tooltip("Location where objects will be held."), SerializeField]
+    private GameObject _handLocation;
 
-    [Tooltip("Canvas with crosshair")]
-    [SerializeField] GameObject _crosshair;
+    [Tooltip("Canvas with crosshair"), SerializeField]
+    private GameObject _crosshair;
 
-    [Space(10)]
-    [Header("Input Settings:")]
-    [Tooltip("Speed at which objects get picked up.")]
-    [SerializeField] float _pickUpSpeed = 1;
+    [Space(3), Header("Input Settings:")]
+    [Tooltip("Speed at which objects get picked up."), SerializeField]
+    private float _pickUpSpeed = 1f;
 
-    [Tooltip("Max distance an item can be picked up.")]
-    [SerializeField] float _pickUpDistance = 5;
+    [Tooltip("Speed at which objects will be focused"), SerializeField]
+    private float _focusSpeed = .5f;
+     
+    [Tooltip("Max distance an item can be picked up."), SerializeField] 
+    private float _pickUpDistance = 2f;
 
-     [Tooltip("Max distance an item can be interacted with")]
-    [SerializeField] float _teleportDistance = 5;
+     [Tooltip("Max distance an item can be interacted with"), SerializeField]
+    private float _teleportDistance = 5f;
     
-     [Tooltip("Max distance an item can be used")]
-    [SerializeField] float _useDistance = 2;
+     [Tooltip("Max distance an item can be used"), SerializeField]
+    private float _useDistance = 2f;
 
-    [Tooltip("Max distance an object will call DetectLooks event.")]
-    [SerializeField] float _lookAtDistance = 2;
+    [Tooltip("Max distance an object will call DetectLooks event."), SerializeField]
+    private float _lookAtDistance = 2f;
+
+    [Tooltip("Enable to debug all input events."), SerializeField]
+    private bool fullDebugging = false;
     
     /// <summary>
     /// If true will runs the look at script passing the targetVector.
@@ -175,6 +180,11 @@ public class PlayerKeyboardInputScript: MonoBehaviour
 
                 if (hit.collider.gameObject.TryGetComponent<Pickupable>(out Pickupable scrpt))
                 {
+                    if (fullDebugging)
+                    {
+                        Debug.Log($"Picking Up {hit.collider}...");
+                    }
+
                     _heldObject = hit.collider.gameObject;
 
                     Rigidbody targetRb = _heldObject.GetComponent<Rigidbody>();
@@ -205,6 +215,11 @@ public class PlayerKeyboardInputScript: MonoBehaviour
 
         if (Physics.Raycast(_activeCamera.transform.position, _activeCamera.transform.forward, out hit, _pickUpDistance, LayerMask.GetMask("Default"), QueryTriggerInteraction.Ignore) && hit.normal == Vector3.up && hit.transform.CompareTag("PlaceLocation"))
         {
+            if (fullDebugging)
+            {
+                Debug.Log($"Putting down {_heldObject}...");
+            }
+
             _heldObject.GetComponent<Collider>().enabled = true;
             targetRb.useGravity = true;
             targetRb.isKinematic = false;
@@ -236,10 +251,15 @@ public class PlayerKeyboardInputScript: MonoBehaviour
     private void Use()
     {
         RaycastHit hit;
-        if (Physics.Raycast(_activeCamera.transform.position, _activeCamera.transform.forward, out hit, _useDistance, LayerMask.GetMask("Interactable") + LayerMask.GetMask("Drawer"), QueryTriggerInteraction.Collide))
+        if (Physics.Raycast(_activeCamera.transform.position, _activeCamera.transform.forward, out hit, _useDistance, LayerMask.GetMask("Interactable", "Drawer", "UI"), QueryTriggerInteraction.Collide))
         {
             if (hit.collider.TryGetComponent<Interactable>(out Interactable script))
             {
+                if (script.debugging || fullDebugging)
+                {
+                    Debug.Log($"Interactable Found!: {hit.collider.gameObject.name}");
+                }
+
                 if (_heldObject == null)
                 {
                     script.Interact(_handLocation); // Interact With Hands
@@ -258,8 +278,13 @@ public class PlayerKeyboardInputScript: MonoBehaviour
     private void Teleport()
     {
         RaycastHit hit;
-        if (Physics.Raycast(_activeCamera.transform.position, _activeCamera.transform.forward, out hit, _teleportDistance, LayerMask.GetMask("Teleport"), QueryTriggerInteraction.Ignore))
+        if (Physics.Raycast(_activeCamera.transform.position, _activeCamera.transform.forward, out hit, _teleportDistance, LayerMask.GetMask("Teleport"), QueryTriggerInteraction.Collide))
         {
+            if (fullDebugging)
+            {
+                Debug.Log("Teleporting...");
+            }
+
             _usingObject = false;
             _putingDownObject = false;
             _pickUpObject = false;
@@ -269,16 +294,23 @@ public class PlayerKeyboardInputScript: MonoBehaviour
 
     /// <summary>
     /// Activates DetectLooks script if raycast from activeCamera's position to target position hits object with detect looks script.
+    /// 
+    /// Script MUST be on a non trigger.
     /// </summary>
     /// <param name="target">position for direction of raycast</param>
     private void LookingAt(Vector3 target)
     {
         RaycastHit hit;
 
-        if (Physics.Raycast(_activeCamera.transform.position, target, out hit, _lookAtDistance, LayerMask.GetMask("Interactable", "Pickupable", "Teleport","Drawer"), QueryTriggerInteraction.Ignore)) // Mabye Change LayerMask to only pickupable/interactable
+        if (Physics.Raycast(_activeCamera.transform.position, target, out hit, _lookAtDistance, LayerMask.GetMask("Interactable", "Pickupable", "Teleport", "Drawer", "DetectLooks"), QueryTriggerInteraction.Ignore)) // Mabye Change LayerMask to only pickupable/interactable
         {
             if (hit.collider.TryGetComponent<DetectLooks>(out DetectLooks scrpt))
             {
+                if (scrpt.debugging)
+                {
+                    Debug.Log($"Looking At: {hit.collider.gameObject.name}");
+                }
+
                 scrpt.PlayerIsLooking();
             }
         }
@@ -294,6 +326,7 @@ public class PlayerKeyboardInputScript: MonoBehaviour
     {
         Vector3 targetLocation;
         Vector3 targetRotation;
+        float speed = _pickUpSpeed;
         float time = Time.time;
         _grabbingActive = true;
         
@@ -303,6 +336,7 @@ public class PlayerKeyboardInputScript: MonoBehaviour
             targetLocation = (_activeCamera.transform.forward * .5f + _activeCamera.transform.position);
             targetRotation = _activeCamera.transform.eulerAngles + focusAngle;
             MouseLook3D.flag = false;
+            speed = _focusSpeed;
             _crosshair.SetActive(false);
         }
         else
@@ -312,6 +346,10 @@ public class PlayerKeyboardInputScript: MonoBehaviour
             targetRotation = _handLocation.transform.eulerAngles + focusAngle;
         }
 
+        if (fullDebugging)
+        {
+            Debug.Log("Pickup Anim Starting...");
+        }
         // Picking up animation loop
         while (_grabbingActive)
         {
@@ -320,10 +358,10 @@ public class PlayerKeyboardInputScript: MonoBehaviour
                 _grabbingActive = false;
                 break;
            }
-            float perc1 = Mathf.Clamp(Time.time - time, 0, _pickUpSpeed) / _pickUpSpeed;
-            float percent = Mathf.Clamp((Mathf.Sin((float)(Mathf.PI / 6.0f + (perc1) * Mathf.PI / 3.0f)) - 0.5f) * 2.0f, 0, 1);
+            float perc1 = Mathf.Clamp(Time.time - time, 0, speed) / speed;
+            float percent = Mathf.Clamp((Mathf.Sin((Mathf.PI / 6.0f + perc1 * Mathf.PI / 3.0f)) - 0.5f) * 2.0f, 0, 1);
 
-            if ((Time.time - time) > _pickUpSpeed || _heldObject.transform.position == targetLocation)
+            if ((Time.time - time) > speed || _heldObject.transform.position == targetLocation)
             {
                 percent = 1;
             }
@@ -342,6 +380,10 @@ public class PlayerKeyboardInputScript: MonoBehaviour
                 _grabbingActive = false;
             }
             yield return _EOF;
+        }
+        if (fullDebugging)
+        {
+            Debug.Log("Pickup Anim Over...");
         }
     }
 }

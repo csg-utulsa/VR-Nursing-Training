@@ -9,13 +9,13 @@ public class MovePlayer : Interactable
     public GameObject moveLocation;
     public UnityEvent moveActions;
 
-    public void OnTriggerEnter(Collider other)
+    /*public void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Hands")
         {
             Interact(other.gameObject);
         }
-    }
+    }*/
 
     public override void Interact(GameObject other)
     {

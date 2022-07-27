@@ -17,11 +17,11 @@ public class DipScript2 : Interactable
 
     public override void Interact(GameObject other)
     {
-        Debug.Log("Interact w/ water");
+        //Debug.Log("Interact w/ water");
 
         if (other.CompareTag("Hands"))
         {
-            Debug.Log("Washing Hands...");
+            //Debug.Log("Washing Hands...");
             handWash.Invoke();
             BubbleAnimation.Play();
         }

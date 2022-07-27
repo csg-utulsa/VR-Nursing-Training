@@ -7,8 +7,9 @@ using UnityEngine.Events;
 
 public class Interactable : MonoBehaviour
 {
+    
     public bool disableTriggerFunctionality;
-
+    public bool debugging = false;
     private void OnTriggerEnter(Collider other)
     {
         if (!disableTriggerFunctionality) Interact(other.gameObject);

@@ -9,11 +9,16 @@ public class DetectLooks : MonoBehaviour
     public UnityEvent lookStarted;
     public UnityEvent lookStopped;
     public float lookTime = .5f;
+    public bool debugging = false;
     private bool looked = false;
     private WaitForSeconds wait;
     private void Awake()
     {
         wait = new WaitForSeconds(lookTime);
+        if (GetComponent<Collider>().isTrigger)
+        {
+            Debug.Log($"Not Detecting Looks On {name} Collider Cannot Be Trigger!");
+        }
     }
     public void PlayerIsLooking()
     {
@@ -24,6 +29,11 @@ public class DetectLooks : MonoBehaviour
         } 
         else
         {
+            if(debugging)
+            {
+                Debug.Log($"Invoking Look Started Event: {name}");
+            }
+
             lookStarted.Invoke();
             looked = true;
         }
@@ -39,6 +49,10 @@ public class DetectLooks : MonoBehaviour
 
     public void PlayerStoppedLooking()
     {
+        if (debugging)
+        {
+            Debug.Log($"Invoking Look Stopped Event: {name}");
+        }
         lookStopped.Invoke();
     }
 }

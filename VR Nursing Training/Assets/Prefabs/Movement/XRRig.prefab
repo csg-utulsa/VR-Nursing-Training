@@ -1373,11 +1373,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _handLocation: {fileID: 3041394142401281520}
   _crosshair: {fileID: 7548493107911844023}
-  _pickUpSpeed: 1
-  _pickUpDistance: 5
+  _pickUpSpeed: 2
+  _focusSpeed: 0.5
+  _pickUpDistance: 2
   _teleportDistance: 5
   _useDistance: 2
-  _lookAtDistance: 2
+  _lookAtDistance: 5
+  fullDebugging: 0
 --- !u!1 &7548493108043787241
 GameObject:
   m_ObjectHideFlags: 0
