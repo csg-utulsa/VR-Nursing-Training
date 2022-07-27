@@ -88,6 +88,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   lookTime: 0.1
+  debugging: 0
 --- !u!1 &3545351720565352701
 GameObject:
   m_ObjectHideFlags: 0
@@ -5170,7 +5171,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6996497271226645592
 Transform:
@@ -5215,6 +5216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableTriggerFunctionality: 0
+  debugging: 0
   interactEvent:
     m_PersistentCalls:
       m_Calls: []
