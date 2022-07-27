@@ -468,7 +468,7 @@ public class characterMovement3D : MonoBehaviour
             if (isClicking)
             {
                 Debug.Log("MenuPanel Hit...");
-                hit.collider.GetComponent<MenuButtonScript>().Interact(hit.collider);
+                hit.collider.GetComponent<MenuButtonScript>().Interact(hit.collider.gameObject);
             }
         } 
     }

@@ -440,7 +440,7 @@ GameObject:
   - component: {fileID: 109033896}
   - component: {fileID: 109033895}
   - component: {fileID: 109033897}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: QuitButton
   m_TagString: MenuPanel
   m_Icon: {fileID: 0}
@@ -611,12 +611,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3a746225d7d7947baec53bfc04a34d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onPickup:
-    m_PersistentCalls:
-      m_Calls: []
-  onDrop:
-    m_PersistentCalls:
-      m_Calls: []
+  disableTriggerFunctionality: 0
+  debugging: 0
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -641,7 +637,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 109033891}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0}
@@ -865,7 +861,6 @@ GameObject:
   - component: {fileID: 188260280}
   - component: {fileID: 188260283}
   - component: {fileID: 188260282}
-  - component: {fileID: 188260281}
   m_Layer: 0
   m_Name: Quit Panel
   m_TagString: Untagged
@@ -888,20 +883,6 @@ Transform:
   m_Father: {fileID: 936186763}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &188260281
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 188260279}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &188260282
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1055,7 +1036,6 @@ GameObject:
   - component: {fileID: 230426063}
   - component: {fileID: 230426066}
   - component: {fileID: 230426065}
-  - component: {fileID: 230426064}
   m_Layer: 0
   m_Name: DisablePanel
   m_TagString: Untagged
@@ -1078,20 +1058,6 @@ Transform:
   m_Father: {fileID: 830393375}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &230426064
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 230426062}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &230426065
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1152,7 +1118,6 @@ GameObject:
   - component: {fileID: 258868822}
   - component: {fileID: 258868825}
   - component: {fileID: 258868824}
-  - component: {fileID: 258868823}
   m_Layer: 0
   m_Name: BackGround (2)
   m_TagString: Untagged
@@ -1174,20 +1139,6 @@ Transform:
   m_Father: {fileID: 2086864246}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &258868823
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 258868821}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &258868824
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1344,7 +1295,6 @@ GameObject:
   - component: {fileID: 278887002}
   - component: {fileID: 278887005}
   - component: {fileID: 278887004}
-  - component: {fileID: 278887003}
   m_Layer: 0
   m_Name: Panel3
   m_TagString: Untagged
@@ -1367,20 +1317,6 @@ Transform:
   m_Father: {fileID: 830393375}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &278887003
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 278887001}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &278887004
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1441,7 +1377,6 @@ GameObject:
   - component: {fileID: 278899168}
   - component: {fileID: 278899171}
   - component: {fileID: 278899170}
-  - component: {fileID: 278899169}
   m_Layer: 0
   m_Name: TBD
   m_TagString: Untagged
@@ -1468,19 +1403,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 2, y: 0.5}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!65 &278899169
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 278899167}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &278899170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1628,7 +1550,7 @@ GameObject:
   - component: {fileID: 279005273}
   - component: {fileID: 279005272}
   - component: {fileID: 279005276}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: BackButton
   m_TagString: MenuPanel
   m_Icon: {fileID: 0}
@@ -1666,12 +1588,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3a746225d7d7947baec53bfc04a34d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onPickup:
-    m_PersistentCalls:
-      m_Calls: []
-  onDrop:
-    m_PersistentCalls:
-      m_Calls: []
+  disableTriggerFunctionality: 0
+  debugging: 0
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -1696,7 +1614,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 279005270}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0}
@@ -2060,7 +1978,6 @@ GameObject:
   - component: {fileID: 367031305}
   - component: {fileID: 367031308}
   - component: {fileID: 367031307}
-  - component: {fileID: 367031306}
   m_Layer: 0
   m_Name: TBD
   m_TagString: Untagged
@@ -2087,19 +2004,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 2, y: 0.5}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!65 &367031306
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 367031304}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &367031307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2247,7 +2151,7 @@ GameObject:
   - component: {fileID: 377258705}
   - component: {fileID: 377258704}
   - component: {fileID: 377258708}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: TutorialButton
   m_TagString: MenuPanel
   m_Icon: {fileID: 0}
@@ -2285,12 +2189,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3a746225d7d7947baec53bfc04a34d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onPickup:
-    m_PersistentCalls:
-      m_Calls: []
-  onDrop:
-    m_PersistentCalls:
-      m_Calls: []
+  disableTriggerFunctionality: 0
+  debugging: 0
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -2315,7 +2215,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 377258702}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0}
@@ -2550,6 +2450,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1244227777733237198, guid: 0af8f3646a662394eb8f95def6a25298,
+        type: 3}
+      propertyPath: _useDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1244227777733237198, guid: 0af8f3646a662394eb8f95def6a25298,
+        type: 3}
+      propertyPath: fullDebugging
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1405898044693227596, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
       propertyPath: m_IsActive
@@ -2589,6 +2499,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411917316767782726, guid: 0af8f3646a662394eb8f95def6a25298,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6869664533577968686, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
@@ -2639,6 +2554,11 @@ PrefabInstance:
         type: 3}
       propertyPath: onIncorrect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548493106716144490, guid: 0af8f3646a662394eb8f95def6a25298,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7548493106725990686, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
@@ -2763,7 +2683,7 @@ PrefabInstance:
     - target: {fileID: 7548493108140603191, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7548493107880779756, guid: 0af8f3646a662394eb8f95def6a25298, type: 3}
@@ -2937,7 +2857,6 @@ GameObject:
   - component: {fileID: 479093823}
   - component: {fileID: 479093826}
   - component: {fileID: 479093825}
-  - component: {fileID: 479093824}
   m_Layer: 0
   m_Name: Background Bottom
   m_TagString: Untagged
@@ -2959,20 +2878,6 @@ Transform:
   m_Father: {fileID: 2086864246}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &479093824
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 479093822}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &479093825
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3167,7 +3072,6 @@ GameObject:
   - component: {fileID: 546669624}
   - component: {fileID: 546669627}
   - component: {fileID: 546669626}
-  - component: {fileID: 546669625}
   m_Layer: 0
   m_Name: Panel1 (3)
   m_TagString: Untagged
@@ -3190,20 +3094,6 @@ Transform:
   m_Father: {fileID: 2086864246}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &546669625
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 546669623}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &546669626
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3360,7 +3250,6 @@ GameObject:
   - component: {fileID: 574495113}
   - component: {fileID: 574495116}
   - component: {fileID: 574495115}
-  - component: {fileID: 574495114}
   m_Layer: 0
   m_Name: BackgroundTop
   m_TagString: Untagged
@@ -3383,20 +3272,6 @@ Transform:
   m_Father: {fileID: 2086864246}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &574495114
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 574495112}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &574495115
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3604,7 +3479,6 @@ GameObject:
   - component: {fileID: 592395693}
   - component: {fileID: 592395696}
   - component: {fileID: 592395695}
-  - component: {fileID: 592395694}
   m_Layer: 0
   m_Name: Panel4
   m_TagString: Untagged
@@ -3627,20 +3501,6 @@ Transform:
   m_Father: {fileID: 830393375}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &592395694
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 592395692}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &592395695
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3871,7 +3731,6 @@ GameObject:
   - component: {fileID: 664233869}
   - component: {fileID: 664233872}
   - component: {fileID: 664233871}
-  - component: {fileID: 664233870}
   m_Layer: 0
   m_Name: BackPanel
   m_TagString: Untagged
@@ -3894,20 +3753,6 @@ Transform:
   m_Father: {fileID: 830393375}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &664233870
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 664233868}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &664233871
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3968,7 +3813,6 @@ GameObject:
   - component: {fileID: 699538239}
   - component: {fileID: 699538242}
   - component: {fileID: 699538241}
-  - component: {fileID: 699538240}
   m_Layer: 0
   m_Name: TBD
   m_TagString: Untagged
@@ -3995,19 +3839,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 2, y: 0.5}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!65 &699538240
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 699538238}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &699538241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4155,7 +3986,7 @@ GameObject:
   - component: {fileID: 710617165}
   - component: {fileID: 710617164}
   - component: {fileID: 710617168}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: EnableVRButton
   m_TagString: MenuPanel
   m_Icon: {fileID: 0}
@@ -4193,12 +4024,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3a746225d7d7947baec53bfc04a34d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onPickup:
-    m_PersistentCalls:
-      m_Calls: []
-  onDrop:
-    m_PersistentCalls:
-      m_Calls: []
+  disableTriggerFunctionality: 0
+  debugging: 0
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -4223,7 +4050,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 710617162}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0}
@@ -4587,7 +4414,6 @@ GameObject:
   - component: {fileID: 777507817}
   - component: {fileID: 777507820}
   - component: {fileID: 777507819}
-  - component: {fileID: 777507818}
   m_Layer: 0
   m_Name: Panel1
   m_TagString: Untagged
@@ -4610,20 +4436,6 @@ Transform:
   m_Father: {fileID: 2086864246}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &777507818
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 777507816}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &777507819
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4684,7 +4496,6 @@ GameObject:
   - component: {fileID: 790116229}
   - component: {fileID: 790116232}
   - component: {fileID: 790116231}
-  - component: {fileID: 790116230}
   m_Layer: 0
   m_Name: BackGround
   m_TagString: Untagged
@@ -4706,20 +4517,6 @@ Transform:
   m_Father: {fileID: 936186763}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &790116230
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 790116228}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &790116231
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4780,7 +4577,6 @@ GameObject:
   - component: {fileID: 806920055}
   - component: {fileID: 806920058}
   - component: {fileID: 806920057}
-  - component: {fileID: 806920056}
   m_Layer: 0
   m_Name: BackgroundTop
   m_TagString: Untagged
@@ -4803,20 +4599,6 @@ Transform:
   m_Father: {fileID: 936186763}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &806920056
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 806920054}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &806920057
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4915,7 +4697,6 @@ GameObject:
   - component: {fileID: 839417409}
   - component: {fileID: 839417412}
   - component: {fileID: 839417411}
-  - component: {fileID: 839417410}
   m_Layer: 0
   m_Name: Panel1 (6)
   m_TagString: Untagged
@@ -4938,20 +4719,6 @@ Transform:
   m_Father: {fileID: 2086864246}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &839417410
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 839417408}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &839417411
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5012,7 +4779,6 @@ GameObject:
   - component: {fileID: 880532635}
   - component: {fileID: 880532638}
   - component: {fileID: 880532637}
-  - component: {fileID: 880532636}
   m_Layer: 0
   m_Name: TBD
   m_TagString: Untagged
@@ -5039,19 +4805,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 2, y: 0.5}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!65 &880532636
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 880532634}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &880532637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5289,7 +5042,6 @@ GameObject:
   - component: {fileID: 930926324}
   - component: {fileID: 930926327}
   - component: {fileID: 930926326}
-  - component: {fileID: 930926325}
   m_Layer: 0
   m_Name: TBD
   m_TagString: Untagged
@@ -5316,19 +5068,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 2, y: 0.5}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!65 &930926325
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 930926323}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &930926326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5645,7 +5384,6 @@ GameObject:
   - component: {fileID: 1034446505}
   - component: {fileID: 1034446508}
   - component: {fileID: 1034446507}
-  - component: {fileID: 1034446506}
   m_Layer: 0
   m_Name: Panel1 (4)
   m_TagString: Untagged
@@ -5668,20 +5406,6 @@ Transform:
   m_Father: {fileID: 2086864246}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1034446506
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1034446504}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1034446507
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5742,7 +5466,6 @@ GameObject:
   - component: {fileID: 1090369920}
   - component: {fileID: 1090369923}
   - component: {fileID: 1090369922}
-  - component: {fileID: 1090369921}
   m_Layer: 0
   m_Name: Background Bottom
   m_TagString: Untagged
@@ -5764,20 +5487,6 @@ Transform:
   m_Father: {fileID: 830393375}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1090369921
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1090369919}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1090369922
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5838,7 +5547,6 @@ GameObject:
   - component: {fileID: 1093308098}
   - component: {fileID: 1093308101}
   - component: {fileID: 1093308100}
-  - component: {fileID: 1093308099}
   m_Layer: 0
   m_Name: Panel1 (5)
   m_TagString: Untagged
@@ -5861,20 +5569,6 @@ Transform:
   m_Father: {fileID: 2086864246}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1093308099
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1093308097}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1093308100
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6068,7 +5762,6 @@ GameObject:
   - component: {fileID: 1140446406}
   - component: {fileID: 1140446409}
   - component: {fileID: 1140446408}
-  - component: {fileID: 1140446407}
   m_Layer: 0
   m_Name: Credits Panel
   m_TagString: Untagged
@@ -6091,20 +5784,6 @@ Transform:
   m_Father: {fileID: 936186763}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1140446407
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1140446405}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1140446408
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6165,7 +5844,6 @@ GameObject:
   - component: {fileID: 1185399288}
   - component: {fileID: 1185399291}
   - component: {fileID: 1185399290}
-  - component: {fileID: 1185399289}
   m_Layer: 0
   m_Name: Settings Panel
   m_TagString: Untagged
@@ -6188,20 +5866,6 @@ Transform:
   m_Father: {fileID: 936186763}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1185399289
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1185399287}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1185399290
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6262,7 +5926,6 @@ GameObject:
   - component: {fileID: 1253103402}
   - component: {fileID: 1253103405}
   - component: {fileID: 1253103404}
-  - component: {fileID: 1253103403}
   m_Layer: 0
   m_Name: Panel1 (2)
   m_TagString: Untagged
@@ -6285,20 +5948,6 @@ Transform:
   m_Father: {fileID: 2086864246}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1253103403
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1253103401}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1253103404
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6402,7 +6051,6 @@ GameObject:
   - component: {fileID: 1283760535}
   - component: {fileID: 1283760538}
   - component: {fileID: 1283760537}
-  - component: {fileID: 1283760536}
   m_Layer: 0
   m_Name: Background Bottom
   m_TagString: Untagged
@@ -6424,20 +6072,6 @@ Transform:
   m_Father: {fileID: 936186763}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1283760536
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1283760534}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1283760537
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6594,7 +6228,6 @@ GameObject:
   - component: {fileID: 1317944228}
   - component: {fileID: 1317944231}
   - component: {fileID: 1317944230}
-  - component: {fileID: 1317944229}
   m_Layer: 0
   m_Name: Tutorial Panel
   m_TagString: Untagged
@@ -6617,20 +6250,6 @@ Transform:
   m_Father: {fileID: 936186763}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1317944229
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1317944227}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1317944230
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6921,7 +6540,6 @@ GameObject:
   - component: {fileID: 1336936482}
   - component: {fileID: 1336936485}
   - component: {fileID: 1336936484}
-  - component: {fileID: 1336936483}
   m_Layer: 0
   m_Name: EnablePanel
   m_TagString: Untagged
@@ -6944,20 +6562,6 @@ Transform:
   m_Father: {fileID: 830393375}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1336936483
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1336936481}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1336936484
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7285,7 +6889,6 @@ GameObject:
   - component: {fileID: 1451322311}
   - component: {fileID: 1451322314}
   - component: {fileID: 1451322313}
-  - component: {fileID: 1451322312}
   m_Layer: 0
   m_Name: BeginPanel
   m_TagString: Untagged
@@ -7308,20 +6911,6 @@ Transform:
   m_Father: {fileID: 936186763}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1451322312
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1451322310}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1451322313
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7382,7 +6971,6 @@ GameObject:
   - component: {fileID: 1463600398}
   - component: {fileID: 1463600401}
   - component: {fileID: 1463600400}
-  - component: {fileID: 1463600399}
   m_Layer: 0
   m_Name: Panel1 (9)
   m_TagString: Untagged
@@ -7405,20 +6993,6 @@ Transform:
   m_Father: {fileID: 2086864246}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1463600399
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1463600397}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1463600400
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7479,7 +7053,6 @@ GameObject:
   - component: {fileID: 1469953617}
   - component: {fileID: 1469953620}
   - component: {fileID: 1469953619}
-  - component: {fileID: 1469953618}
   m_Layer: 0
   m_Name: BackgroundTop
   m_TagString: Untagged
@@ -7502,20 +7075,6 @@ Transform:
   m_Father: {fileID: 830393375}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1469953618
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1469953616}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1469953619
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7942,7 +7501,7 @@ GameObject:
   - component: {fileID: 1519539746}
   - component: {fileID: 1519539745}
   - component: {fileID: 1519539747}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: BeginSimButton
   m_TagString: MenuPanel
   m_Icon: {fileID: 0}
@@ -8113,12 +7672,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3a746225d7d7947baec53bfc04a34d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onPickup:
-    m_PersistentCalls:
-      m_Calls: []
-  onDrop:
-    m_PersistentCalls:
-      m_Calls: []
+  disableTriggerFunctionality: 0
+  debugging: 0
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -8143,7 +7698,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1519539741}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0}
@@ -8240,7 +7795,6 @@ GameObject:
   - component: {fileID: 1565000953}
   - component: {fileID: 1565000956}
   - component: {fileID: 1565000955}
-  - component: {fileID: 1565000954}
   m_Layer: 0
   m_Name: TBD
   m_TagString: Untagged
@@ -8267,19 +7821,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 2, y: 0.5}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!65 &1565000954
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1565000952}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1565000955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8424,7 +7965,6 @@ GameObject:
   - component: {fileID: 1570118149}
   - component: {fileID: 1570118152}
   - component: {fileID: 1570118151}
-  - component: {fileID: 1570118150}
   m_Layer: 0
   m_Name: Panel1 (1)
   m_TagString: Untagged
@@ -8447,20 +7987,6 @@ Transform:
   m_Father: {fileID: 2086864246}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1570118150
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1570118148}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1570118151
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8524,7 +8050,7 @@ GameObject:
   - component: {fileID: 1573746571}
   - component: {fileID: 1573746570}
   - component: {fileID: 1573746574}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: TBD
   m_TagString: MenuPanel
   m_Icon: {fileID: 0}
@@ -8562,12 +8088,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3a746225d7d7947baec53bfc04a34d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onPickup:
-    m_PersistentCalls:
-      m_Calls: []
-  onDrop:
-    m_PersistentCalls:
-      m_Calls: []
+  disableTriggerFunctionality: 0
+  debugging: 0
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -8592,7 +8114,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1573746568}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0}
@@ -8822,7 +8344,6 @@ GameObject:
   - component: {fileID: 1629701031}
   - component: {fileID: 1629701034}
   - component: {fileID: 1629701033}
-  - component: {fileID: 1629701032}
   m_Layer: 0
   m_Name: TBD
   m_TagString: Untagged
@@ -8849,19 +8370,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 2, y: 0.5}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!65 &1629701032
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1629701030}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1629701033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9140,7 +8648,6 @@ GameObject:
   - component: {fileID: 1656960305}
   - component: {fileID: 1656960308}
   - component: {fileID: 1656960307}
-  - component: {fileID: 1656960306}
   m_Layer: 0
   m_Name: Panel1 (7)
   m_TagString: Untagged
@@ -9163,20 +8670,6 @@ Transform:
   m_Father: {fileID: 2086864246}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1656960306
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1656960304}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1656960307
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9237,7 +8730,6 @@ GameObject:
   - component: {fileID: 1716897434}
   - component: {fileID: 1716897437}
   - component: {fileID: 1716897436}
-  - component: {fileID: 1716897435}
   m_Layer: 0
   m_Name: TBD
   m_TagString: Untagged
@@ -9264,19 +8756,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 2, y: 0.5}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!65 &1716897435
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1716897433}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1716897436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9557,7 +9036,7 @@ GameObject:
   - component: {fileID: 1855104537}
   - component: {fileID: 1855104536}
   - component: {fileID: 1855104540}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: BackButton
   m_TagString: MenuPanel
   m_Icon: {fileID: 0}
@@ -9595,12 +9074,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3a746225d7d7947baec53bfc04a34d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onPickup:
-    m_PersistentCalls:
-      m_Calls: []
-  onDrop:
-    m_PersistentCalls:
-      m_Calls: []
+  disableTriggerFunctionality: 0
+  debugging: 0
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -9625,7 +9100,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1855104534}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0}
@@ -9991,7 +9466,7 @@ GameObject:
   - component: {fileID: 1979460708}
   - component: {fileID: 1979460707}
   - component: {fileID: 1979460709}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: SettingsButton
   m_TagString: MenuPanel
   m_Icon: {fileID: 0}
@@ -10162,12 +9637,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3a746225d7d7947baec53bfc04a34d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onPickup:
-    m_PersistentCalls:
-      m_Calls: []
-  onDrop:
-    m_PersistentCalls:
-      m_Calls: []
+  disableTriggerFunctionality: 0
+  debugging: 0
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -10192,7 +9663,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1979460703}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0}
@@ -10292,7 +9763,7 @@ GameObject:
   - component: {fileID: 1981615031}
   - component: {fileID: 1981615030}
   - component: {fileID: 1981615034}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: TBD
   m_TagString: MenuPanel
   m_Icon: {fileID: 0}
@@ -10330,12 +9801,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3a746225d7d7947baec53bfc04a34d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onPickup:
-    m_PersistentCalls:
-      m_Calls: []
-  onDrop:
-    m_PersistentCalls:
-      m_Calls: []
+  disableTriggerFunctionality: 0
+  debugging: 0
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -10360,7 +9827,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1981615028}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0}
@@ -10593,7 +10060,7 @@ GameObject:
   - component: {fileID: 1993061507}
   - component: {fileID: 1993061506}
   - component: {fileID: 1993061510}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Credits
   m_TagString: MenuPanel
   m_Icon: {fileID: 0}
@@ -10631,12 +10098,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3a746225d7d7947baec53bfc04a34d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onPickup:
-    m_PersistentCalls:
-      m_Calls: []
-  onDrop:
-    m_PersistentCalls:
-      m_Calls: []
+  disableTriggerFunctionality: 0
+  debugging: 0
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -10661,7 +10124,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1993061504}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0}
@@ -11054,7 +10517,7 @@ GameObject:
   - component: {fileID: 2025975673}
   - component: {fileID: 2025975672}
   - component: {fileID: 2025975676}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: DisableVRButton
   m_TagString: MenuPanel
   m_Icon: {fileID: 0}
@@ -11092,12 +10555,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3a746225d7d7947baec53bfc04a34d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onPickup:
-    m_PersistentCalls:
-      m_Calls: []
-  onDrop:
-    m_PersistentCalls:
-      m_Calls: []
+  disableTriggerFunctionality: 0
+  debugging: 0
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -11122,7 +10581,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2025975670}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0}
@@ -11448,7 +10907,6 @@ GameObject:
   - component: {fileID: 2064799054}
   - component: {fileID: 2064799057}
   - component: {fileID: 2064799056}
-  - component: {fileID: 2064799055}
   m_Layer: 0
   m_Name: BackGround (1)
   m_TagString: Untagged
@@ -11470,20 +10928,6 @@ Transform:
   m_Father: {fileID: 830393375}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &2064799055
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2064799053}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &2064799056
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11544,7 +10988,6 @@ GameObject:
   - component: {fileID: 2071803083}
   - component: {fileID: 2071803086}
   - component: {fileID: 2071803085}
-  - component: {fileID: 2071803084}
   m_Layer: 0
   m_Name: TBD
   m_TagString: Untagged
@@ -11571,19 +11014,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 2, y: 0.5}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!65 &2071803084
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2071803082}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2071803085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11772,7 +11202,6 @@ GameObject:
   - component: {fileID: 2113445786}
   - component: {fileID: 2113445789}
   - component: {fileID: 2113445788}
-  - component: {fileID: 2113445787}
   m_Layer: 0
   m_Name: Panel1 (8)
   m_TagString: Untagged
@@ -11795,20 +11224,6 @@ Transform:
   m_Father: {fileID: 2086864246}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &2113445787
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2113445785}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &2113445788
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11869,7 +11284,6 @@ GameObject:
   - component: {fileID: 2122051012}
   - component: {fileID: 2122051015}
   - component: {fileID: 2122051014}
-  - component: {fileID: 2122051013}
   m_Layer: 0
   m_Name: TBD
   m_TagString: Untagged
@@ -11896,19 +11310,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 2, y: 0.5}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!65 &2122051013
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2122051011}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2122051014
 MonoBehaviour:
   m_ObjectHideFlags: 0

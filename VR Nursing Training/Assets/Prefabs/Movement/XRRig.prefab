@@ -157,7 +157,7 @@ MonoBehaviour:
   m_RaycastMask:
     serializedVersion: 2
     m_Bits: 289
-  m_RaycastTriggerInteraction: 1
+  m_RaycastTriggerInteraction: 2
   m_HitClosestOnly: 1
   m_KeepSelectedTargetValid: 1
   m_HoverToSelect: 0
@@ -392,7 +392,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &403546114470933296
 Transform:
   m_ObjectHideFlags: 0
@@ -485,7 +485,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6869664533577968686
 Transform:
   m_ObjectHideFlags: 0
@@ -626,7 +626,7 @@ GameObject:
   - component: {fileID: 389519744402661273}
   - component: {fileID: 3340889655721641431}
   - component: {fileID: 5944552577514910452}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -851,7 +851,7 @@ GameObject:
   - component: {fileID: 7548493106716144490}
   - component: {fileID: 7548493106716144491}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: VRCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1040,7 +1040,7 @@ MonoBehaviour:
   m_InteractionManager: {fileID: 0}
   m_InteractionLayerMask:
     serializedVersion: 2
-    m_Bits: 8256
+    m_Bits: 192
   m_AttachTransform: {fileID: 0}
   m_StartingSelectedInteractable: {fileID: 0}
   m_HoverEntered:
@@ -1051,10 +1051,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7548493106725990684}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7548493106725990684}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   m_OnHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -1116,9 +1140,9 @@ MonoBehaviour:
   m_SphereCastRadius: 0.02
   m_RaycastMask:
     serializedVersion: 2
-    m_Bits: 8384
+    m_Bits: 192
   m_RaycastTriggerInteraction: 1
-  m_HitClosestOnly: 1
+  m_HitClosestOnly: 0
   m_KeepSelectedTargetValid: 1
   m_HoverToSelect: 0
   m_HoverTimeToSelect: 0.5
@@ -1340,7 +1364,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7548493107880779748}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c72f70595dda1ee4a99797a8bb2f48ba, type: 3}
   m_Name: 
@@ -1352,7 +1376,7 @@ MonoBehaviour:
   interactRayCastDistance: 2
   raycastMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 264
   interactMask:
     serializedVersion: 2
     m_Bits: 0
@@ -1373,6 +1397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _handLocation: {fileID: 3041394142401281520}
   _crosshair: {fileID: 7548493107911844023}
+  _activeCamera: {fileID: 3041394142595202736}
   _pickUpSpeed: 2
   _focusSpeed: 0.5
   _pickUpDistance: 2
@@ -1479,7 +1504,7 @@ MonoBehaviour:
   m_InteractionManager: {fileID: 0}
   m_InteractionLayerMask:
     serializedVersion: 2
-    m_Bits: 8256
+    m_Bits: 192
   m_AttachTransform: {fileID: 0}
   m_StartingSelectedInteractable: {fileID: 0}
   m_HoverEntered:
@@ -1490,10 +1515,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7548493108043787254}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7548493108043787254}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   m_OnHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -1555,9 +1604,9 @@ MonoBehaviour:
   m_SphereCastRadius: 0.02
   m_RaycastMask:
     serializedVersion: 2
-    m_Bits: 8384
+    m_Bits: 192
   m_RaycastTriggerInteraction: 1
-  m_HitClosestOnly: 1
+  m_HitClosestOnly: 0
   m_KeepSelectedTargetValid: 1
   m_HoverToSelect: 0
   m_HoverTimeToSelect: 0.5
@@ -1755,7 +1804,7 @@ MonoBehaviour:
   m_RaycastMask:
     serializedVersion: 2
     m_Bits: 289
-  m_RaycastTriggerInteraction: 1
+  m_RaycastTriggerInteraction: 2
   m_HitClosestOnly: 1
   m_KeepSelectedTargetValid: 1
   m_HoverToSelect: 0
@@ -2237,6 +2286,12 @@ GameObject:
 --- !u!4 &3041394142595202749 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4824641247378358842, guid: 306f2b942861c39418497760f2e04e01,
+    type: 3}
+  m_PrefabInstance: {fileID: 7548493107499138183}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &3041394142595202736 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 4824641247378358839, guid: 306f2b942861c39418497760f2e04e01,
     type: 3}
   m_PrefabInstance: {fileID: 7548493107499138183}
   m_PrefabAsset: {fileID: 0}

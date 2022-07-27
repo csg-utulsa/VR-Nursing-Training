@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class MenuButtonScript : InteractableBase
+public class MenuButtonScript : Interactable
 {
     public UnityEvent onInteract;
     public bool flag = false;
@@ -11,17 +11,17 @@ public class MenuButtonScript : InteractableBase
     private void OnTriggerEnter(Collider other)
     {
         flag = true;
-        Interact(other);
+        Interact(other.gameObject);
         
     }
     public void callInteract(Collider other)
     {
         flag = true;
-        Interact(other);
+        Interact(other.gameObject);
     }
 
 
-    public override void Interact(Collider other)
+    public override void Interact(GameObject other)
     {
         
         if (flag == true)

@@ -15,6 +15,9 @@ public class PlayerKeyboardInputScript: MonoBehaviour
     [Tooltip("Canvas with crosshair"), SerializeField]
     private GameObject _crosshair;
 
+    [Tooltip("Reference to the 3D camera."), SerializeField]
+    private Camera _activeCamera;
+
     [Space(3), Header("Input Settings:")]
     [Tooltip("Speed at which objects get picked up."), SerializeField]
     private float _pickUpSpeed = 1f;
@@ -46,12 +49,7 @@ public class PlayerKeyboardInputScript: MonoBehaviour
     /// Used by LookingAt method to check if the player is looking at target vector.
     /// </summary>
     public static Vector3 TargetVector;
-
-    /// <summary>
-    /// Reference to the scenes active main camera. Set in Awake.
-    /// </summary>
-    private Camera _activeCamera;
-
+   
     /// <summary>
     /// Reference to the input system. Set in Awake.
     /// </summary>
@@ -102,7 +100,7 @@ public class PlayerKeyboardInputScript: MonoBehaviour
         _input.CharacterControls.Use.performed += ctx => _usingObject = ctx.ReadValueAsButton();
         _input.CharacterControls.PutDown.performed += ctx => _putingDownObject = ctx.ReadValueAsButton();
         _input.CharacterControls.Teleport.performed += ctx => _teleport = ctx.ReadValueAsButton();
-        _activeCamera = Camera.main;
+        //_activeCamera = Camera.main;
     }
 
     /// <summary>
