@@ -31,8 +31,8 @@ public class MouseLook3D : MonoBehaviour
     {
         if (flag)
         {
-            float mouseX = mouseLook.x * mouseSensitivity * Time.deltaTime;
-            float mouseY = mouseLook.y * mouseSensitivity * Time.deltaTime;
+            float mouseX = mouseLook.x * mouseSensitivity; //* Time.deltaTime;
+            float mouseY = mouseLook.y * mouseSensitivity;// * Time.deltaTime;
 
             xRotation -= mouseY;
             xRotation = Mathf.Clamp(xRotation, -90f, 90f);

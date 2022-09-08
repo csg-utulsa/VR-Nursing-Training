@@ -334,8 +334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerBody: {fileID: 0}
-  mouseSensitivity: 20
-  liquidCanvas: {fileID: 0}
+  mouseSensitivity: 0.1
 --- !u!1 &4824641247571362167
 GameObject:
   m_ObjectHideFlags: 0
