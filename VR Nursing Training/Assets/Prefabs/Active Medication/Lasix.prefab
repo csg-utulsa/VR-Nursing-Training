@@ -26,6 +26,7 @@ Transform:
   m_LocalRotation: {x: -0.5, y: 0, z: 0, w: 0.8660254}
   m_LocalPosition: {x: 0.037039995, y: -0.013969998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4334941199460663375}
   m_RootOrder: 0
@@ -64,6 +65,7 @@ Transform:
   m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
   m_LocalPosition: {x: -0.5167, y: 5.9701, z: 2.55}
   m_LocalScale: {x: 0.030000003, y: 0.030000001, z: 0.029999997}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1560407905}
   - {fileID: 8177126541969214785}
@@ -89,6 +91,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -210,6 +213,9 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 64
+  m_InteractionLayers:
+    m_Bits: 64
+  m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
     m_PersistentCalls:
@@ -221,6 +227,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
     m_PersistentCalls:
       m_Calls: []
   m_SelectEntered:
@@ -335,12 +347,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7941497a3b0ad10489045e1983f5a52d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onPickup:
-    m_PersistentCalls:
-      m_Calls: []
-  onDrop:
-    m_PersistentCalls:
-      m_Calls: []
+  focusOnPickup: 0
+  pickUpAngle: {x: 0, y: 0, z: 0}
+  CustomDropRotation: {x: 0, y: 0, z: 0}
+  useCustomDropRotation: 0
+  StartPosition: {x: 0, y: 0, z: 0}
+  StartRotation: {x: 0, y: 0, z: 0}
 --- !u!114 &6713565149597992989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -360,6 +372,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   lookTime: 0.2
+  debugging: 0
 --- !u!1001 &1929214683266603029
 PrefabInstance:
   m_ObjectHideFlags: 0

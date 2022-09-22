@@ -26,6 +26,7 @@ Transform:
   m_LocalRotation: {x: -0.6123717, y: 0.6123732, z: 0.35355395, w: -0.35355297}
   m_LocalPosition: {x: 0.1025, y: -0.0038, z: -0.0008}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2326965241793344613}
   m_RootOrder: 0
@@ -63,6 +64,7 @@ Transform:
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0.614228, y: 6.1811, z: 2.4601}
   m_LocalScale: {x: 0.009999998, y: 0.009999998, z: 0.01}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1714578326420211393}
   - {fileID: 2140432461595197968}
@@ -88,6 +90,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -151,6 +154,9 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 64
+  m_InteractionLayers:
+    m_Bits: 64
+  m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
     m_PersistentCalls:
@@ -162,6 +168,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
     m_PersistentCalls:
       m_Calls: []
   m_SelectEntered:
@@ -341,6 +353,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   lookTime: 0.2
+  debugging: 0
 --- !u!1001 &8505989317853992772
 PrefabInstance:
   m_ObjectHideFlags: 0
