@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+// DEPRECATED
 public class DipTriggerScript : MonoBehaviour
 {
-    public Material material;
+    /*public Material material;
     public UnityEvent handWash;
     private void OnTriggerEnter(Collider other)
     {
         Interact(other.gameObject);
     }
 
-
+    /
     public void Interact(GameObject other)
     {
         Debug.Log("Interact w/ water");
@@ -27,5 +28,5 @@ public class DipTriggerScript : MonoBehaviour
             other.gameObject.GetComponent<InteractableScript>().setMaterial(material);
         }
     }
-
+    */
 }

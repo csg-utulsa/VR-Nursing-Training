@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+// DEPRECATED
 public class characterMovement3D : MonoBehaviour
 {
+    /*
     public GameObject camera3D;
     public GameObject handLocation;
     PlayerInput input;
@@ -177,6 +179,8 @@ public class characterMovement3D : MonoBehaviour
                 }
             }
         }
+    */
+
         /*
         //Highlighting done here, runs regardless of if interaction key is pressed
         for(int i = 0; i < hits.Length; i++){
@@ -200,7 +204,7 @@ public class characterMovement3D : MonoBehaviour
         }
         */
 
-
+    /*
 
 
         if (isInteract){
@@ -325,6 +329,7 @@ public class characterMovement3D : MonoBehaviour
             && hit.transform.CompareTag("PlaceLocation")
         ){ //raycast success
             //Move our target puck there for a moment
+    */
             /*
             placementToken.transform.position = hit.point;
             if(placementToken.GetComponent<TriggerTally>().collidersCount() == 0){
@@ -335,7 +340,7 @@ public class characterMovement3D : MonoBehaviour
                 placementToken.transform.position=placePos;
             }
             */
-
+            /*
             placementToken.transform.position = hit.point;
             if(placementToken.GetComponent<Place_ScanSurface>().placeOK()){
                 placePos = hit.point;
@@ -412,7 +417,7 @@ public class characterMovement3D : MonoBehaviour
         letgo = isLettingGo;
 
 
-
+    */
         /*
         if(isLettingGo){
 
@@ -428,6 +433,7 @@ public class characterMovement3D : MonoBehaviour
             }
         }
         */
+        /*
     }
 
     void handleMovement()
@@ -482,4 +488,5 @@ public class characterMovement3D : MonoBehaviour
     {
         input.CharacterControls.Disable();
     }
+    */
 }

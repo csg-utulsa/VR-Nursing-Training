@@ -25,9 +25,9 @@ public class DipScript2 : Interactable
             handWash.Invoke();
             BubbleAnimation.Play();
         }
-        else if (other.GetComponent<InteractableScript>().isInteractable)
+        else if (other.GetComponent<Pickupable>())
         {
-            other.GetComponent<InteractableScript>().setMaterial(material);
+            other.GetComponent<Renderer>().material = material;
         }
     }
 

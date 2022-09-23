@@ -2,38 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-public class InteractableScript : InteractableBase, HoverableBase
+public class InteractableScript : MonoBehaviour
 {
-    public UnityEvent onCombine; // Do we use?
+    //: InteractableBase
+
+    /*public UnityEvent onCombine; // Do we use?
     public UnityEvent interactEvent; // Do we use?
     public UnityEvent cursorHighlight; // Do we use?
-    public UnityEvent lookHighlight; // Do we use?
+    public UnityEvent lookHighlight; // Do we use?*/
 
-    public Vector3 initialPosition;
-    public Vector3 initialAngles;
+    //public Vector3 initialPosition;
+    // public Vector3 initialAngles;
 
-    public Material material;
-    public Material combineMaterial;
+    //public Material material;
+    //public Material combineMaterial;
 
-    public LayerMask layer;
+    //public LayerMask layer;
 
-    public GameObject[] targets;
-    private GameObject respawnPoint;
-    private GameObject touchedObject;
+    //public GameObject[] targets;
+    //private GameObject respawnPoint;
+    //private GameObject touchedObject;
 
-    private static int step;
-    public float combineDist;
-    public bool isInteractable;
+    //private static int step;
+    //public float combineDist;
+    //public bool isInteractable;
     public string type;
 
-    public bool interactWithHand = true;
-    public bool focusOnPickup = false;
-    public double distanceFromCamera = 0.5;
-    public Vector3 focusAngles = new Vector3(0,0,0);
+    //public bool interactWithHand = true;
+    //public bool focusOnPickup = false;
+    //public double distanceFromCamera = 0.5;
+    //public Vector3 focusAngles = new Vector3(0,0,0);
 
 
 
-
+    /*
     public void CursorHighlight()
     {
         cursorHighlight.Invoke();
@@ -90,7 +92,7 @@ public class InteractableScript : InteractableBase, HoverableBase
     {
         return targets[step];
     }
-
+    */
     public void setType(string newType)
     {
         type = newType;
@@ -100,7 +102,7 @@ public class InteractableScript : InteractableBase, HoverableBase
     {
         return type;
     }
-
+    /*
     public void setInteractable(bool input) 
     {
         isInteractable = input;
@@ -200,5 +202,6 @@ public class InteractableScript : InteractableBase, HoverableBase
         gameObject.transform.position = pos+new Vector3(0,0.1f,0);
         gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
     }
+    */
 
 }

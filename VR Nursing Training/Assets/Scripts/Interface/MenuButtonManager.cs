@@ -16,7 +16,7 @@ public class MenuButtonManager : MonoBehaviour
     public static bool VRToggle = false;
     private void Start()
     {
-        rigVR.GetComponent<characterMovement3D>().interactRayCastDistance = 10; // Changes raycast distance to be able to hit menu
+        //rigVR.GetComponent<characterMovement3D>().interactRayCastDistance = 10; // Changes raycast distance to be able to hit menu
         rigVR.GetComponent<LocomotionController>().toggleRightRayVisible = true;
         disableButton.transform.parent.gameObject.SetActive(false);
     }
@@ -31,11 +31,11 @@ public class MenuButtonManager : MonoBehaviour
         Debug.Log("VRToggle: " + VRToggle);
         if (VRToggle == true)
         {
-            characterMovement3D.changeModeToVR = true;
+            //characterMovement3D.changeModeToVR = true;
         } 
         else
         {
-            characterMovement3D.changeModeToVR = false;
+            //characterMovement3D.changeModeToVR = false;
         }
         SceneManager.LoadScene("DemoScene");
         
@@ -45,11 +45,11 @@ public class MenuButtonManager : MonoBehaviour
     {
         if (VRToggle == true)
         {
-            characterMovement3D.changeModeToVR = true;
+            //characterMovement3D.changeModeToVR = true;
         }
         else
         {
-            characterMovement3D.changeModeToVR = false;
+            //characterMovement3D.changeModeToVR = false;
         }
         // Load Tutorial Scene
         Debug.Log("Loading Tutorial");
@@ -93,7 +93,7 @@ public class MenuButtonManager : MonoBehaviour
     {
         Debug.Log("Enable VR");
         // Enable VR Camera Disable 3D
-        characterMovement3D.changeModeToVR = true; // Static Boolean Very Important
+        //characterMovement3D.changeModeToVR = true; // Static Boolean Very Important
         camObj3D.SetActive(false);
         camObjVR.SetActive(true);
         // Set Enable Button Disabled
@@ -107,7 +107,7 @@ public class MenuButtonManager : MonoBehaviour
     {
         Debug.Log("Disable VR");
         // Disable VR Enable 3D 
-        characterMovement3D.changeModeToVR = false;
+        //characterMovement3D.changeModeToVR = false;
         camObjVR.SetActive(false);
         camObj3D.SetActive(true);
         // Set Disable Button Disabled
