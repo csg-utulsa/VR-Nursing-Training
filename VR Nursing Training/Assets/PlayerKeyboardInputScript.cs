@@ -183,7 +183,7 @@ public class PlayerKeyboardInputScript: MonoBehaviour
                     {
                         Debug.Log($"Picking Up {hit.collider}...");
                     }
-                    _heldObject.GetComponent<Pickupable>().OnPickUp();
+                    scrpt.OnPickUp();
 
                     _heldObject = hit.collider.gameObject;
 
