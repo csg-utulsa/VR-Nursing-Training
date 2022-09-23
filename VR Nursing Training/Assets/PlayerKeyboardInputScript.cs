@@ -126,7 +126,8 @@ public class PlayerKeyboardInputScript: MonoBehaviour
     {
         // If held object is inactive remove reference.
         if (_heldObject != null && !_heldObject.activeSelf) 
-        { 
+        {
+            _heldObject.GetComponent<Pickupable>().OnPutDown();
             _heldObject = null; 
         }
 
@@ -182,6 +183,7 @@ public class PlayerKeyboardInputScript: MonoBehaviour
                     {
                         Debug.Log($"Picking Up {hit.collider}...");
                     }
+                    _heldObject.GetComponent<Pickupable>().OnPickUp();
 
                     _heldObject = hit.collider.gameObject;
 
@@ -235,7 +237,9 @@ public class PlayerKeyboardInputScript: MonoBehaviour
             if (!heldObjScrpt.focusOnPickup)
             {
                 _heldObject.transform.position = hit.point;
-            } 
+            }
+
+            _heldObject.GetComponent<Pickupable>().OnPutDown();
 
             _crosshair.SetActive(true);
             _heldObject.transform.SetParent(null);

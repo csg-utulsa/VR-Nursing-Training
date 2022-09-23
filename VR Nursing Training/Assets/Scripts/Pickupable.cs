@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.XR.Interaction.Toolkit;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(Collider))]
@@ -12,11 +14,16 @@ public class Pickupable : MonoBehaviour
     public bool useCustomDropRotation;
     [HideInInspector] public Vector3 StartPosition;
     [HideInInspector] public Vector3 StartRotation;
+    [Header("Events: "),Space(5)]
+    [SerializeField] private UnityEvent onPickUp;
+    [SerializeField] private UnityEvent onPutDown;
 
     private void Awake() 
     {
         StartPosition = transform.position;
         StartRotation = transform.eulerAngles;
+        GetComponent<XRGrabInteractable>().selectEntered.AddListener(OnPickUp);
+        GetComponent<XRGrabInteractable>().selectExited.AddListener(OnPutDown);
     }
 
     public void ResetObject() 
@@ -38,5 +45,15 @@ public class Pickupable : MonoBehaviour
     public void ResetCustomRotation() 
     {
         transform.eulerAngles = CustomDropRotation;
+    }
+
+    public void OnPickUp(SelectEnterEventArgs args = null)
+    {
+        onPickUp.Invoke();
+    }
+
+    public void OnPutDown(SelectExitEventArgs args = null)
+    {
+        onPutDown.Invoke();
     }
 }
