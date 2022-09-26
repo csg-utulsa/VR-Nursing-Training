@@ -1,0 +1,147 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6609510616611573099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c874928728d0fe24f8a481f8f608fb9d, type: 3}
+  m_Name: DebugLogNode
+  m_EditorClassIdentifier: 
+  _debugging: 0
+  nodeState: 1
+  started: 0
+  guid: dedd0b59d9608654ea35d05c5b465eb7
+  position: {x: 544.2, y: 365.8}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+    debugLogsPrinted: 0
+    approachDistance: 1
+    animationBaseSpeed: 0.1
+    _distanceToOpponent: 0
+  nodeName: Debug Log Node
+  description: 
+  message: 
+  returnTrue: 1
+  overrideName: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8b2a71711d986e44ac36d048862f2bb, type: 3}
+  m_Name: test
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: 4632444150830073786}
+  treeState: 1
+  nodes:
+  - {fileID: 4632444150830073786}
+  - {fileID: -6609510616611573099}
+  - {fileID: 2345388778243897535}
+  - {fileID: 7931133754018232864}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+    debugLogsPrinted: 0
+    approachDistance: 1
+    animationBaseSpeed: 0.1
+    _distanceToOpponent: 0
+--- !u!114 &2345388778243897535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccb15dc8153f0344699e92018f5d46ba, type: 3}
+  m_Name: SelectorNode
+  m_EditorClassIdentifier: 
+  _debugging: 0
+  nodeState: 1
+  started: 0
+  guid: bf4e8a160fba5d54c9fd9408bac341c4
+  position: {x: 302.80005, y: 292.00003}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+    debugLogsPrinted: 0
+    approachDistance: 1
+    animationBaseSpeed: 0.1
+    _distanceToOpponent: 0
+  nodeName: Selector Node
+  description: 
+  children: []
+  curChild: 0
+  invertOrder: 0
+  randomizeOrder: 0
+  pickTillSuccess: 1
+  overrideName: 
+--- !u!114 &4632444150830073786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc5f70845def82844aa25e20ad967067, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  _debugging: 0
+  nodeState: 1
+  started: 0
+  guid: 03c08ca1df798af4ab7a8bfbe8fe11ec
+  position: {x: 377, y: 144.91202}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+    debugLogsPrinted: 0
+    approachDistance: 1
+    animationBaseSpeed: 0.1
+    _distanceToOpponent: 0
+  nodeName: Root Node
+  description: 
+  child: {fileID: -6609510616611573099}
+  overrideName: 
+--- !u!114 &7931133754018232864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45368b67460d03f45a72b3b515c6c084, type: 3}
+  m_Name: WaitNode
+  m_EditorClassIdentifier: 
+  _debugging: 0
+  nodeState: 1
+  started: 0
+  guid: 403744b050acb5541b100b9317cd68b9
+  position: {x: 0, y: 0}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+    debugLogsPrinted: 0
+    approachDistance: 1
+    animationBaseSpeed: 0.1
+    _distanceToOpponent: 0
+  nodeName: Wait for 1s
+  description: 
+  waitTime: 1
+  useParameter: 0
+  parameterName: 
+  overrideName: 
