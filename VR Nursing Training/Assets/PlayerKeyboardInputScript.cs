@@ -388,4 +388,12 @@ public class PlayerKeyboardInputScript: MonoBehaviour
             Debug.Log("Pickup Anim Over...");
         }
     }
+
+    // Returns the object that is currently being grabbed (in 3D) or null if object has already reached hand or not holding an object at all
+    public GameObject getGrabbingObject()
+    {
+        if (!_grabbingActive) return null; // return null if not currently grabbing an object
+
+        return _heldObject; // if currently grabbing an object return that object
+    }
 }
