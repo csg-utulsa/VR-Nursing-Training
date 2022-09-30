@@ -39,6 +39,7 @@ public class XRRigSingleton : MonoBehaviour
             Debug.Log("XR NOT Detected");
             setVRActive(false);
         }
+        //camVR = vrActive;
         
         #endregion
     }
