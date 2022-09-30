@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -633,7 +633,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  flag: 0
 --- !u!65 &109033896
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -666,6 +665,7 @@ MonoBehaviour:
     m_Bits: 32
   m_InteractionLayers:
     m_Bits: 32
+  m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
@@ -1060,7 +1060,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &230426063
 Transform:
   m_ObjectHideFlags: 0
@@ -1634,7 +1634,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  flag: 0
 --- !u!65 &279005273
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1802,6 +1801,7 @@ MonoBehaviour:
     m_Bits: 288
   m_InteractionLayers:
     m_Bits: 288
+  m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
@@ -2249,7 +2249,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  flag: 0
 --- !u!65 &377258705
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2416,6 +2415,7 @@ MonoBehaviour:
     m_Bits: 32
   m_InteractionLayers:
     m_Bits: 32
+  m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
@@ -2516,12 +2516,12 @@ PrefabInstance:
     - target: {fileID: 1405898044693227596, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2632912369471152309, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3041394142595202748, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
@@ -2611,7 +2611,7 @@ PrefabInstance:
     - target: {fileID: 7548493106716144490, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7548493106725990686, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
@@ -2750,18 +2750,6 @@ GameObject:
 --- !u!224 &418251173 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7548493107911844019, guid: 0af8f3646a662394eb8f95def6a25298,
-    type: 3}
-  m_PrefabInstance: {fileID: 418251170}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &418251176 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1405898044693227596, guid: 0af8f3646a662394eb8f95def6a25298,
-    type: 3}
-  m_PrefabInstance: {fileID: 418251170}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &418251179 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2632912369471152309, guid: 0af8f3646a662394eb8f95def6a25298,
     type: 3}
   m_PrefabInstance: {fileID: 418251170}
   m_PrefabAsset: {fileID: 0}
@@ -3514,11 +3502,9 @@ MonoBehaviour:
   menuPlane: {fileID: 936186762}
   settingsPlane: {fileID: 830393374}
   creditsBoard: {fileID: 2086864245}
-  camObjVR: {fileID: 418251176}
-  camObj3D: {fileID: 418251179}
   rigVR: {fileID: 418251171}
-  disableButton: {fileID: 2025975670}
-  enableButton: {fileID: 710617162}
+  disablePanel: {fileID: 230426062}
+  enablePanel: {fileID: 1336936481}
 --- !u!4 &591025299
 Transform:
   m_ObjectHideFlags: 0
@@ -4116,7 +4102,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  flag: 0
 --- !u!65 &710617165
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4283,6 +4268,7 @@ MonoBehaviour:
     m_Bits: 32
   m_InteractionLayers:
     m_Bits: 1
+  m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
@@ -4311,8 +4297,8 @@ MonoBehaviour:
         m_MethodName: Interact
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 710617165}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Collider, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4755,7 +4741,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &830393375
 Transform:
   m_ObjectHideFlags: 0
@@ -5316,7 +5302,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &936186763
 Transform:
   m_ObjectHideFlags: 0
@@ -6670,7 +6656,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1336936482
 Transform:
   m_ObjectHideFlags: 0
@@ -7831,7 +7817,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  flag: 0
 --- !u!65 &1519539746
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7864,6 +7849,7 @@ MonoBehaviour:
     m_Bits: 32
   m_InteractionLayers:
     m_Bits: 32
+  m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
@@ -8261,7 +8247,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  flag: 0
 --- !u!65 &1573746571
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8428,6 +8413,7 @@ MonoBehaviour:
     m_Bits: 32
   m_InteractionLayers:
     m_Bits: 32
+  m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
@@ -9266,7 +9252,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  flag: 0
 --- !u!65 &1855104537
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9433,6 +9418,7 @@ MonoBehaviour:
     m_Bits: 32
   m_InteractionLayers:
     m_Bits: 32
+  m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
@@ -9842,7 +9828,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  flag: 0
 --- !u!65 &1979460708
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9875,6 +9860,7 @@ MonoBehaviour:
     m_Bits: 32
   m_InteractionLayers:
     m_Bits: 32
+  m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
@@ -10016,7 +10002,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  flag: 0
 --- !u!65 &1981615031
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10183,6 +10168,7 @@ MonoBehaviour:
     m_Bits: 32
   m_InteractionLayers:
     m_Bits: 1
+  m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
@@ -10324,7 +10310,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  flag: 0
 --- !u!65 &1993061507
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10491,6 +10476,7 @@ MonoBehaviour:
     m_Bits: 32
   m_InteractionLayers:
     m_Bits: 32
+  m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
@@ -10797,7 +10783,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  flag: 0
 --- !u!65 &2025975673
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10964,6 +10949,7 @@ MonoBehaviour:
     m_Bits: 32
   m_InteractionLayers:
     m_Bits: 1
+  m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
@@ -10992,8 +10978,8 @@ MonoBehaviour:
         m_MethodName: Interact
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2025975673}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Collider, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

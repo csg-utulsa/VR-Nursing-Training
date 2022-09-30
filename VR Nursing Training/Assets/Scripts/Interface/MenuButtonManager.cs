@@ -8,17 +8,22 @@ public class MenuButtonManager : MonoBehaviour
     public GameObject menuPlane;
     public GameObject settingsPlane;
     public GameObject creditsBoard;
-    public GameObject camObjVR;
-    public GameObject camObj3D;
+    //public GameObject camObjVR;
+    //public GameObject camObj3D;
     public GameObject rigVR;
-    public GameObject disableButton;
-    public GameObject enableButton;
-    public static bool VRToggle = false;
+    public GameObject disablePanel;
+    public GameObject enablePanel;
+    //public static bool VRToggle = false;
+    public static XRRigSingleton singleton;
+    
     private void Start()
     {
+        singleton = XRRigSingleton.xrs;
         //rigVR.GetComponent<characterMovement3D>().interactRayCastDistance = 10; // Changes raycast distance to be able to hit menu
         rigVR.GetComponent<LocomotionController>().toggleRightRayVisible = true;
-        disableButton.transform.parent.gameObject.SetActive(false);
+        disablePanel.SetActive(false);
+
+        //singleton.getVRActive();
     }
 
    
@@ -28,33 +33,14 @@ public class MenuButtonManager : MonoBehaviour
     {
         // Load Simulation Start Scene
         // Set any needed values before loading
-        Debug.Log("VRToggle: " + VRToggle);
-        if (VRToggle == true)
-        {
-            //characterMovement3D.changeModeToVR = true;
-        } 
-        else
-        {
-            //characterMovement3D.changeModeToVR = false;
-        }
         SceneManager.LoadScene("DemoScene");
-        
     }
 
     public void BeginTutorial()
     {
-        if (VRToggle == true)
-        {
-            //characterMovement3D.changeModeToVR = true;
-        }
-        else
-        {
-            //characterMovement3D.changeModeToVR = false;
-        }
         // Load Tutorial Scene
-        Debug.Log("Loading Tutorial");
+        // Debug.Log("Loading Tutorial");
         SceneManager.LoadScene("Tutorial Scene");
-        // SceneManager.LoadScene("TutorialScene"); (Not Implemented Yet)
     }
 
     public void OpenSettings()
@@ -93,13 +79,11 @@ public class MenuButtonManager : MonoBehaviour
     {
         Debug.Log("Enable VR");
         // Enable VR Camera Disable 3D
-        //characterMovement3D.changeModeToVR = true; // Static Boolean Very Important
-        camObj3D.SetActive(false);
-        camObjVR.SetActive(true);
+        singleton.setVRActive(true);
         // Set Enable Button Disabled
-        enableButton.transform.parent.gameObject.SetActive(false);
+        enablePanel.SetActive(false);
         // Set Disable Button Enabled
-        disableButton.transform.parent.gameObject.SetActive(true);
+        disablePanel.SetActive(true);
 
     }
 
@@ -107,13 +91,13 @@ public class MenuButtonManager : MonoBehaviour
     {
         Debug.Log("Disable VR");
         // Disable VR Enable 3D 
-        //characterMovement3D.changeModeToVR = false;
-        camObjVR.SetActive(false);
-        camObj3D.SetActive(true);
+        singleton.setVRActive(false);
+
         // Set Disable Button Disabled
-        disableButton.transform.parent.gameObject.SetActive(false);
+        disablePanel.SetActive(false);
+
         // Set Enable Button Enabled
-        enableButton.transform.parent.gameObject.SetActive(true);
+        enablePanel.SetActive(true);
     }
 
     #endregion

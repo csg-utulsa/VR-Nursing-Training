@@ -12,8 +12,10 @@ public class XRRigSingleton : MonoBehaviour
     private bool vrActive;
     [Tooltip("VR Camera Reference")]
     [SerializeField] private GameObject rootVR;
+    private Camera camVR;
     [Tooltip("3D Camera Reference")]
     [SerializeField] private GameObject root3D;
+    private Camera cam3D;
     private void Awake()
     {
         #region Singleton
@@ -37,6 +39,7 @@ public class XRRigSingleton : MonoBehaviour
             Debug.Log("XR NOT Detected");
             setVRActive(false);
         }
+        
         #endregion
     }
 
@@ -60,9 +63,16 @@ public class XRRigSingleton : MonoBehaviour
     /// <param name="active"></param>
     public void setVRActive(bool active)
     {
-        vrActive = active;
-        rootVR.SetActive(vrActive);
-        root3D.SetActive(!vrActive);
+        if (active && XRGeneralSettings.Instance.Manager.activeLoader == null)
+        {
+            Debug.LogError("Attempted to enable VR, but failed to detect XR Device");
+        } else
+        {
+            vrActive = active;
+            rootVR.SetActive(vrActive);
+            root3D.SetActive(!vrActive);
+        }
+        
     }
 
 }
