@@ -19,6 +19,3 @@
     border-radius: 30px;
     background-color: rgb(0, 0, 0);
 }
-
-.thing {
-}
