@@ -11,7 +11,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class HoverableCursor : MonoBehaviour
 {
-
+    /*
 
     InteractableDialogBtn foundObject = null;
     public XRController ControllerObserver;
@@ -105,11 +105,12 @@ public class HoverableCursor : MonoBehaviour
 
 
 
-    
+    /*
 
     public bool CheckIfActivated(XRController controller)
     {
         InputHelpers.IsPressed(controller.inputDevice, teleportActivationButton, out bool isActivated, activationThreshhold);
         return isActivated;
     }
+    */
 }
