@@ -10,11 +10,13 @@ public class XRRigSingleton : MonoBehaviour
     /// Set true ONLY when a XR Rig is detected
     /// </summary>
     private bool vrActive;
-    [Tooltip("VR Camera Reference")]
+    [Tooltip("VR Root Reference")]
     [SerializeField] private GameObject rootVR;
+    [Tooltip("VR Camera Reference")]
     [SerializeField] private Camera camVR;
-    [Tooltip("3D Camera Reference")]
+    [Tooltip("3D Root Reference")]
     [SerializeField] private GameObject root3D;
+    [Tooltip("3D Camera Reference")]
     [SerializeField] private Camera cam3D;
 
     private Camera activeCamera;
