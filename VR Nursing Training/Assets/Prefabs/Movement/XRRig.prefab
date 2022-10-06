@@ -1427,7 +1427,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rootVR: {fileID: 1405898044693227596}
+  camVR: {fileID: 7548493106716144489}
   root3D: {fileID: 2632912369471152309}
+  cam3D: {fileID: 3041394142595202736}
 --- !u!1 &7548493108043787241
 GameObject:
   m_ObjectHideFlags: 0
