@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class MovePlayer : Interactable 
 { 
-    public GameObject player;
+    private GameObject player;
     public GameObject moveLocation;
     public UnityEvent moveActions;
 
@@ -16,7 +16,10 @@ public class MovePlayer : Interactable
             Interact(other.gameObject);
         }
     }*/
-
+    private void Awake()
+    {
+        player = XRRigSingleton.xrs.gameObject;
+    }
     public override void Interact(GameObject other)
     {
         player.transform.position = moveLocation.transform.position;
