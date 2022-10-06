@@ -59,7 +59,7 @@ public class NodeSingle : Node
         canContinue = true;
         active = false;
         skipPrevious();
-        Debug.Log("Node Complete"); // DEBUG ONLY
+        // Debug.Log("Node Complete"); // DEBUG ONLY
     }
 
     // Updates the node to be skipped
@@ -70,7 +70,7 @@ public class NodeSingle : Node
         canContinue = true;
         active = false;
         skipPrevious();
-        Debug.Log("Node Skipped"); // DEBUG ONLY
+        //Debug.Log("Node Skipped"); // DEBUG ONLY
     }
 
     // Updates the node to be activated
@@ -78,7 +78,7 @@ public class NodeSingle : Node
     {
         active = true;
         objective.active = true;
-        Debug.Log("Node Activated"); // DEBUG ONLY
+        //Debug.Log("Node Activated"); // DEBUG ONLY
         Debug.Log(objective.getDescription()); // DEBUG ONLY
     }
 
