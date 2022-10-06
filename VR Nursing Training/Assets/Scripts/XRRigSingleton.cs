@@ -12,10 +12,16 @@ public class XRRigSingleton : MonoBehaviour
     private bool vrActive;
     [Tooltip("VR Camera Reference")]
     [SerializeField] private GameObject rootVR;
-    private Camera camVR;
+    [SerializeField] private Camera camVR;
     [Tooltip("3D Camera Reference")]
     [SerializeField] private GameObject root3D;
-    private Camera cam3D;
+    [SerializeField] private Camera cam3D;
+
+    private Camera activeCamera;
+
+    /// <summary>
+    /// Creates singleton/destroys if already exists, Sets starting camera
+    /// </summary>
     private void Awake()
     {
         #region Singleton
@@ -39,20 +45,40 @@ public class XRRigSingleton : MonoBehaviour
             Debug.Log("XR NOT Detected");
             setVRActive(false);
         }
-        //camVR = vrActive;
-        
         #endregion
     }
 
-    public GameObject getRootVR()
+    /// <summary>
+    /// Returns the VR master gameobject for the VR Camera
+    /// </summary>
+    /// <returns></returns>
+    public GameObject getRootVR() // May not need
     {
         return rootVR;
     }
 
-    public GameObject getRoot3D()
+    /// <summary>
+    /// Returns the 3D master gameobject for the 3D camera
+    /// </summary>
+    /// <returns></returns>
+    public GameObject getRoot3D() // May not need
     {
         return root3D;
     }
+
+    /// <summary>
+    /// Returns the current active camera in the scene
+    /// </summary>
+    /// <returns></returns>
+    public Camera getActiveCamera()
+    {
+        return activeCamera;
+    }
+
+    /// <summary>
+    /// Returns true if the VR Camera is active
+    /// </summary>
+    /// <returns></returns>
     public bool getVRActive()
     {
         return vrActive;
@@ -62,16 +88,19 @@ public class XRRigSingleton : MonoBehaviour
     /// Sets public bool setVRActive to parameter and enables/disables cameras based on bool
     /// </summary>
     /// <param name="active"></param>
-    public void setVRActive(bool active)
+    public bool setVRActive(bool active)
     {
         if (active && XRGeneralSettings.Instance.Manager.activeLoader == null)
         {
             Debug.LogError("Attempted to enable VR, but failed to detect XR Device");
+            return false;
         } else
         {
             vrActive = active;
             rootVR.SetActive(vrActive);
             root3D.SetActive(!vrActive);
+            activeCamera = active ? camVR : cam3D;
+            return true;
         }
         
     }

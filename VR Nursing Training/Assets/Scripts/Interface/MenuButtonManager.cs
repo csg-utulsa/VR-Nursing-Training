@@ -78,27 +78,25 @@ public class MenuButtonManager : MonoBehaviour
     public void EnableVR()
     {
         Debug.Log("Enable VR");
-        // Enable VR Camera Disable 3D
-        singleton.setVRActive(true);
-        // Set Enable Button Disabled
-        enablePanel.SetActive(false);
-        // Set Disable Button Enabled
-        disablePanel.SetActive(true);
+        // Enable Set VR Active && Swaps panels
+        if (singleton.setVRActive(true))
+        {
+            enablePanel.SetActive(false);
+            disablePanel.SetActive(true);
+        }
+        
+     
+        
 
     }
 
     public void DisableVR()
     {
         Debug.Log("Disable VR");
-        // Disable VR Enable 3D 
+        // Disable VR Enable 3D && Swaps panels
         singleton.setVRActive(false);
-
-        // Set Disable Button Disabled
         disablePanel.SetActive(false);
-
-        // Set Enable Button Enabled
         enablePanel.SetActive(true);
     }
-
     #endregion
 }
