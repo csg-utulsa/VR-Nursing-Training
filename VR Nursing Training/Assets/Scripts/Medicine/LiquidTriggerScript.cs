@@ -16,10 +16,10 @@ public class LiquidTriggerScript : Interactable
     private bool complete = false;
     private string liquidType;
 
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter(Collider other)
     {
         Interact(other.gameObject);
-    }
+    }*/
 
     public override void Interact(GameObject other)
     {
@@ -39,14 +39,8 @@ public class LiquidTriggerScript : Interactable
             {
                 
                 Debug.Log("Liquid Doing Thing");
-                //liquidEmpty.SetActive(false);
-                //liquidFull.SetActive(true);
                 onPour.Invoke(liquidType);
-                //measureCanvas.SetActive(true);
-                //measureCanvas.GetComponent<LiquidQuestionScript>().setCup(this);
                 parentLiquid.GetComponent<InteractableScript>().setType(liquidType);
-                //Cursor.lockState = CursorLockMode.None;
-                //MouseLook3D.flag = false;
             }
             
         }
