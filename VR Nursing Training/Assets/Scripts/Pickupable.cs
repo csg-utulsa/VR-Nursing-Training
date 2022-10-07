@@ -22,8 +22,19 @@ public class Pickupable : MonoBehaviour
     {
         StartPosition = transform.position;
         StartRotation = transform.eulerAngles;
+       
+    }
+
+    private void OnEnable()
+    {
         GetComponent<XRGrabInteractable>().selectEntered.AddListener(OnPickUp);
         GetComponent<XRGrabInteractable>().selectExited.AddListener(OnPutDown);
+    }
+
+    private void OnDisable()
+    {
+        GetComponent<XRGrabInteractable>().selectEntered.RemoveListener(OnPickUp);
+        GetComponent<XRGrabInteractable>().selectExited.RemoveListener(OnPutDown);
     }
 
     public void ResetObject() 
