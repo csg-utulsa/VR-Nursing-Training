@@ -14567,16 +14567,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c04c2805fabba74429dff97fb61c4715, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onPickup:
-    m_PersistentCalls:
-      m_Calls: []
-  onDrop:
-    m_PersistentCalls:
-      m_Calls: []
-  buttons: []
-  button1: {fileID: 1249721148}
-  button2: {fileID: 446210613}
-  button3: {fileID: 81957079}
 --- !u!1 &1181735223
 GameObject:
   m_ObjectHideFlags: 0
@@ -17016,12 +17006,6 @@ Transform:
   m_Father: {fileID: 1552333892}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1435791434 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7548493107880779748, guid: 0af8f3646a662394eb8f95def6a25298,
-    type: 3}
-  m_PrefabInstance: {fileID: 7548493107148386151}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1436730772
 GameObject:
   m_ObjectHideFlags: 0
@@ -20556,7 +20540,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disableTriggerFunctionality: 0
   debugging: 0
-  player: {fileID: 1435791434}
   moveLocation: {fileID: 1413768178}
   moveActions:
     m_PersistentCalls:
@@ -28290,7 +28273,7 @@ PrefabInstance:
     - target: {fileID: 1405898044693227596, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2632912369471152309, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
