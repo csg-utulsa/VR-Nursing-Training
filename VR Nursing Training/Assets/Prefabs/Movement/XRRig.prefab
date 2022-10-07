@@ -686,7 +686,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6355221872398161125
 Transform:
   m_ObjectHideFlags: 0
@@ -1404,6 +1404,7 @@ MonoBehaviour:
   camVR: {fileID: 7548493106716144489}
   root3D: {fileID: 2632912369471152309}
   cam3D: {fileID: 3041394142595202736}
+  debugVRActive: 0
 --- !u!1 &7548493108043787241
 GameObject:
   m_ObjectHideFlags: 0

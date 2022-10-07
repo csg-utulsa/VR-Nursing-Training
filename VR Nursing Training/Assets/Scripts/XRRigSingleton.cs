@@ -38,6 +38,7 @@ public class XRRigSingleton : MonoBehaviour
             Debug.Log("DESTROYING DUPLICATE");
             xrs.transform.position = this.transform.position;
             Destroy(gameObject);
+            return;
         }
         if (XRGeneralSettings.Instance.Manager.activeLoader != null || debugVRActive)
         {
