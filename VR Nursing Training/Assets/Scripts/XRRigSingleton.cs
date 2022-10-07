@@ -21,6 +21,8 @@ public class XRRigSingleton : MonoBehaviour
 
     private Camera activeCamera;
 
+    public bool debugVRActive = false;
+
     /// <summary>
     /// Creates singleton/destroys if already exists, Sets starting camera
     /// </summary>
@@ -37,7 +39,7 @@ public class XRRigSingleton : MonoBehaviour
             xrs.transform.position = this.transform.position;
             Destroy(gameObject);
         }
-        if (XRGeneralSettings.Instance.Manager.activeLoader != null)
+        if (XRGeneralSettings.Instance.Manager.activeLoader != null || debugVRActive)
         {
             Debug.Log("XR Detected..");
             setVRActive(true);
@@ -92,7 +94,7 @@ public class XRRigSingleton : MonoBehaviour
     /// <param name="active"></param>
     public bool setVRActive(bool active)
     {
-        if (active && XRGeneralSettings.Instance.Manager.activeLoader == null)
+        if (active && XRGeneralSettings.Instance.Manager.activeLoader == null && !debugVRActive)
         {
             Debug.LogError("Attempted to enable VR, but failed to detect XR Device");
             return false;

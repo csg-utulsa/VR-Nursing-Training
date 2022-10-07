@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // Made by: Brennan Crowder
 // Modified: 7/26/22
@@ -100,7 +101,18 @@ public class PlayerKeyboardInputScript: MonoBehaviour
         _input.CharacterControls.Use.performed += ctx => _usingObject = ctx.ReadValueAsButton();
         _input.CharacterControls.PutDown.performed += ctx => _putingDownObject = ctx.ReadValueAsButton();
         _input.CharacterControls.Teleport.performed += ctx => _teleport = ctx.ReadValueAsButton();
-        //_activeCamera = Camera.main;
+    }
+
+    /// <summary>
+    /// Destroys any held items at time of level being loaded
+    /// </summary>
+    /// <param name="level"></param>
+    private void OnLevelLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (_heldObject != null)
+        {
+            Destroy(_heldObject);
+        }
     }
 
     /// <summary>
@@ -108,6 +120,7 @@ public class PlayerKeyboardInputScript: MonoBehaviour
     /// </summary>
     private void OnEnable()
     {
+        SceneManager.sceneLoaded += OnLevelLoaded;
         _input.CharacterControls.Enable();
     }
 
@@ -116,6 +129,7 @@ public class PlayerKeyboardInputScript: MonoBehaviour
     /// </summary>
     private void OnDisable()
     {
+        SceneManager.sceneLoaded -= OnLevelLoaded;
         _input.CharacterControls.Disable();
     }
 
@@ -128,6 +142,7 @@ public class PlayerKeyboardInputScript: MonoBehaviour
         if (_heldObject != null && !_heldObject.activeSelf) 
         {
             _heldObject.GetComponent<Pickupable>().OnPutDown();
+            UnParent(_heldObject);
             _heldObject = null; 
         }
 
@@ -197,7 +212,6 @@ public class PlayerKeyboardInputScript: MonoBehaviour
             }
         }
     }
-
     /// <summary>
     /// Puts down held object at location player is looking if the player is looking at a flat surface.
     /// </summary>
@@ -242,9 +256,22 @@ public class PlayerKeyboardInputScript: MonoBehaviour
             _heldObject.GetComponent<Pickupable>().OnPutDown();
 
             _crosshair.SetActive(true);
-            _heldObject.transform.SetParent(null);
+            UnParent(_heldObject);
             _heldObject = null;
+
         }
+    }
+
+    /// <summary>
+    /// Creates temporary parent in order to prevent dont destroy on load
+    /// </summary>
+    /// <param name="obj"></param>
+    private void UnParent(GameObject obj)
+    {
+        GameObject temp = new GameObject("Temp");
+        obj.transform.SetParent(temp.transform, true);
+        obj.transform.SetParent(null);
+        Destroy(temp);
     }
 
     /// <summary>
