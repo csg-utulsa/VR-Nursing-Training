@@ -19,11 +19,11 @@ public class PillCutterScript : Interactable
         return false;
     }*/
 
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter(Collider other)
     {
         Interact(other.gameObject);
         
-    }
+    }*/
 
     public override void Interact(GameObject other)
     {

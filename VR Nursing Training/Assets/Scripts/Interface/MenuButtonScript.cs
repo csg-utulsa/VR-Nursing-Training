@@ -8,12 +8,12 @@ public class MenuButtonScript : Interactable
     public UnityEvent onInteract;
     //public bool flag = false;
     
-    private void OnTriggerEnter(Collider other)
+   /* private void OnTriggerEnter(Collider other)
     {
         //flag = true;
         Interact(other.gameObject);
         
-    }
+    }*/
     public void callInteract(Collider other)
     {
         //flag = true;

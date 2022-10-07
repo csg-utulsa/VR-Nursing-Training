@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+// DEPRECATED
+
 public class PatchSpawnScript : InteractableBase
 {
-    [SerializeField] private GameObject patchNitro;
+    /*[SerializeField] private GameObject patchNitro;
 
     private GameObject patch;
     private string patchType;
@@ -27,5 +29,5 @@ public class PatchSpawnScript : InteractableBase
                 onSpawn.Invoke(patchType);
             }
         }
-    }
+    }*/
 }

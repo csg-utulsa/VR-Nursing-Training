@@ -13,10 +13,10 @@ public class SharpieObjectScript : Interactable
     }*/
 
     // Mark Patches
-    private void OnTriggerEnter(Collider other)
+   /* private void OnTriggerEnter(Collider other)
     {
         Interact(other.gameObject);
-    }
+    }*/
     public override void Interact(GameObject other)
     {
         if (other.CompareTag("Sharpie"))

@@ -9,10 +9,10 @@ public class DipScript2 : Interactable
     public UnityEvent handWash;
     public ParticleSystem BubbleAnimation;
 
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter(Collider other)
     {
         Interact(other.gameObject);
-    }
+    }*/
 
 
     public override void Interact(GameObject other)

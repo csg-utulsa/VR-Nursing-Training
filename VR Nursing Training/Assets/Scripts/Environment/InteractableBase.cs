@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+// DEPRECATED USE "Interactble" Base Class Instead
+
 public class InteractableBase : MonoBehaviour
 {
     //NOTE: For this to work in VR, the vr interactable base **must** perform a callback on activate to the InteractableBase OnPickup and OnDrop equivalent.
     //-Logan
-
+    /*
     public UnityEvent onPickup;
     public UnityEvent onDrop;
 
@@ -28,7 +30,7 @@ public class InteractableBase : MonoBehaviour
         return true;
     }
 
-
+    */
 
 
 }

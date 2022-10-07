@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// DEPRECATED
 public class SpeakButton : InteractableBase
 {
-    public GameObject[] buttons;
+   /* public GameObject[] buttons;
     public GameObject button1;
     public GameObject button2;
     public GameObject button3;
@@ -46,7 +47,7 @@ public class SpeakButton : InteractableBase
                 openstuff = false;
             }
             **/
-
+   /*
         } else if (closestuff)
         {
             button1.transform.position -= new Vector3(.0025f, .005f, -.005f);
@@ -76,5 +77,5 @@ public class SpeakButton : InteractableBase
     {
         closestuff = true;
         openstuff = false;
-    }
+    }*/
 }

@@ -162,10 +162,10 @@ public class InteractableSpeechButton : Interactable
         //         }
     }
 
-    public void OnTriggerEnter(Collider other)
+    /*public void OnTriggerEnter(Collider other)
     {
         Interact(other.gameObject);
-    }
+    }*/
 
     public override void Interact(GameObject other)
     {

@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// DEPRECATED
 public class TransitionTestScript : InteractableBase
 {
+    /*
     public MedCartTransition move;
     public bool record = false;
     private void OnTriggerEnter(Collider other)
@@ -19,5 +21,5 @@ public class TransitionTestScript : InteractableBase
             else move.recordObjects();
         }
     }
-
+    */
 }
