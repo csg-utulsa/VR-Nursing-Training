@@ -486,7 +486,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6869664533577968686}
-  - component: {fileID: 1503125720}
   m_Layer: 0
   m_Name: VR(EnableForVR)
   m_TagString: Untagged
@@ -512,18 +511,6 @@ Transform:
   m_Father: {fileID: 7548493107880779759}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1503125720
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1405898044693227596}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6762fa541bebbf348ab17c0db4f18fbe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1633017879070023666
 GameObject:
   m_ObjectHideFlags: 0
@@ -1251,7 +1238,6 @@ GameObject:
   - component: {fileID: 7548493107880779747}
   - component: {fileID: 7548493107880779757}
   - component: {fileID: 7548493107880779758}
-  - component: {fileID: 1477141302}
   - component: {fileID: 1244227777733237198}
   - component: {fileID: 6653217148411578278}
   m_Layer: 0
@@ -1380,18 +1366,6 @@ MonoBehaviour:
   m_Controllers:
   - {fileID: 0}
   m_DeadZone: 0.75
---- !u!114 &1477141302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7548493107880779748}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c72f70595dda1ee4a99797a8bb2f48ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1244227777733237198
 MonoBehaviour:
   m_ObjectHideFlags: 0
