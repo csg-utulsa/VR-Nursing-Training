@@ -44,7 +44,7 @@ public class PlayerKeyboardInputScript: MonoBehaviour
     /// <summary>
     /// If true will runs the look at script passing the targetVector.
     /// </summary>
-    public static bool VRLook = false;
+    public static bool VRLook = false; // Outdated and no longer used, only kept here to keep old VRLook script from throwing errors
 
     /// <summary>
     /// Used by LookingAt method to check if the player is looking at target vector.
@@ -146,10 +146,6 @@ public class PlayerKeyboardInputScript: MonoBehaviour
             _heldObject = null; 
         }
 
-        if (VRLook)
-        {
-            LookingAt(TargetVector-_activeCamera.transform.position);
-        } 
         else
         {
             if (_teleport)
@@ -327,7 +323,7 @@ public class PlayerKeyboardInputScript: MonoBehaviour
     /// Script MUST be on a non trigger.
     /// </summary>
     /// <param name="target">position for direction of raycast</param>
-    private void LookingAt(Vector3 target)
+    public void LookingAt(Vector3 target)
     {
         RaycastHit hit;
 

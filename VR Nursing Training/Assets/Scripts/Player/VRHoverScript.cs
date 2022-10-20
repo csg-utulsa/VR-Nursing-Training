@@ -5,10 +5,17 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class VRHoverScript : MonoBehaviour
 {
+    PlayerKeyboardInputScript inputScript;
+
+    private void Awake()
+    {
+        inputScript = transform.root.gameObject.GetComponent<PlayerKeyboardInputScript>();
+    }
+
     public void OnHover(HoverEnterEventArgs args)
     {
         GameObject hoverObj = args.interactableObject.transform.gameObject;
-        Debug.Log("HOVERING OVER OBJECT " + hoverObj.name); // For debug purposes only !!!???!!!
-
+        inputScript.LookingAt(hoverObj.transform.position);
+        Debug.Log("HOVERING OVER OBJECT " + hoverObj.name); // For debug purposes only
     }
 }
