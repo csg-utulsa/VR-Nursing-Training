@@ -21,8 +21,9 @@ public class SharpieObjectScript : Interactable
     {
         if (other.CompareTag("Sharpie"))
         {
+            Debug.Log("Marking Patch");
             gameObject.transform.parent.GetComponent<PatchObjectScript>().markPatch();
-            other.GetComponentInChildren<SharpieObjectScript>().onMark.Invoke(gameObject.transform.parent.GetComponent<InteractableScript>().getType());
+            other.GetComponentInChildren<SharpieObjectScript>().onMark.Invoke(gameObject.transform.parent.GetComponent<MedicineData>().getMedicineName());
         }
     }
 }

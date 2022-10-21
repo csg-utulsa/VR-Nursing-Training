@@ -72,7 +72,32 @@ public class ActionCountMedicine : ActionBase
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Liquid"))
+        if (TryGetComponent<MedicineData>(out MedicineData scrpt))
+        {
+
+            if (scrpt.getMedicineType() == MedicineTypes.LiquidContainer)
+            {
+                if (scrpt.getMedicineName() == medicineType)
+                {
+                    currentDosage = other.gameObject.GetComponent<LiquidObjectScript>().getDosage();
+                }
+            }
+            if (scrpt.getMedicineType() == MedicineTypes.Patch)
+            {
+                for (int i = 0; i < unmarkedPatches.Count; i++)
+                {
+                    if (unmarkedPatches[i].GetComponent<PatchObjectScript>().isMarked())
+                    {
+                        currentDosage += 1;
+                        unmarkedPatches.RemoveAt(i);
+                    }
+                }
+            }
+        }
+
+
+
+        else if (other.CompareTag("Liquid"))
         {
             if (other.gameObject.GetComponent<InteractableScript>().getType() == medicineType)
             {
@@ -80,7 +105,7 @@ public class ActionCountMedicine : ActionBase
             }
         }
 
-        if (other.CompareTag("Patch"))
+        /*if (other.CompareTag("Patch"))
         {
             // Count recently marked patches and remove them from the monitoring list
             for (int i = 0; i < unmarkedPatches.Count; i++)
@@ -91,7 +116,7 @@ public class ActionCountMedicine : ActionBase
                     unmarkedPatches.RemoveAt(i);
                 }
             }
-        }
+        }*/
     }
     private void OnTriggerExit(Collider other)
     {
@@ -99,7 +124,27 @@ public class ActionCountMedicine : ActionBase
         {
             if (scrpt.getMedicineName() == medicineType)
             {
-                currentDosage -= scrpt.getMedicineDosage();
+                if (scrpt.getMedicineType() == MedicineTypes.Patch)
+                {
+                    if (!requireMarkedPatch || other.GetComponent<PatchObjectScript>().isMarked())
+                    {
+                        currentDosage -= scrpt.getMedicineDosage();
+                    }
+
+                    if (unmarkedPatches.Contains(other.gameObject))
+                    {
+                        unmarkedPatches.Remove(other.gameObject);
+                    }
+                } else if(scrpt.getMedicineType() == MedicineTypes.LiquidContainer)
+                {
+                    currentDosage -= other.gameObject.GetComponent<LiquidObjectScript>().getDosage();
+                }
+                else
+                {
+                    currentDosage -= scrpt.getMedicineDosage();
+                }
+                
+                
             }
         }
 
@@ -117,7 +162,7 @@ public class ActionCountMedicine : ActionBase
                 currentDosage -= 0.5;
             }
         }*/
-        if (other.CompareTag("Patch") && (!requireMarkedPatch || other.GetComponent<PatchObjectScript>().isMarked()))
+        /*if (other.CompareTag("Patch") && (!requireMarkedPatch || other.GetComponent<PatchObjectScript>().isMarked()))
         {
             if (other.gameObject.GetComponent<InteractableScript>().getType() == medicineType)
             {
@@ -129,7 +174,7 @@ public class ActionCountMedicine : ActionBase
             {
                 unmarkedPatches.Remove(other.gameObject);
             }
-        }
+        }*/
         if (other.CompareTag("Liquid"))
         {
             if (other.gameObject.GetComponent<InteractableScript>().getType() == medicineType)

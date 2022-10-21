@@ -8,9 +8,12 @@ public class SharpieSpawnScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Patch"))
+        if (other.TryGetComponent<MedicineData>(out MedicineData scrpt))
         {
-            sharpie.SetActive(true);
+            if (scrpt.getMedicineType() == MedicineTypes.Patch)
+            {
+                sharpie.SetActive(true);
+            }
         }
     }
 }

@@ -36,6 +36,7 @@ public class PillCutterScript : Interactable
                 //Debug.Log("Dispensing");
                 scrpt.dispenseObject(spawnLocation.transform.position, spawnLocation.transform.rotation);
                 scrpt.dispenseObject(spawnLocation.transform.position, spawnLocation.transform.rotation);
+                Destroy(other);
                 onCut.Invoke();
             }
         }

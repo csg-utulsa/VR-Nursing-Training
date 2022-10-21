@@ -21,18 +21,24 @@ public class MedCartTransition : MonoBehaviour
     // Add medicines that enter the trigger to the list
     private void OnTriggerEnter(Collider other)
     {
-        if (!snapshot)
+        if (other.TryGetComponent<MedicineData>(out MedicineData scrpt) || other.CompareTag("Liquid"))
         {
-            if (other.gameObject.CompareTag("Pill") || other.gameObject.CompareTag("HalfPill") || other.gameObject.CompareTag("Patch") || other.gameObject.CompareTag("Liquid"))
+            Debug.Log(other.name);
+            if (!snapshot)
             {
-                triggerObjects.Add(other.gameObject);
+                if (other.CompareTag("Liquid") || MedicineScriptableObject.validFinalMedicine.HasFlag(scrpt.getMedicineType()))
+                {
+                    triggerObjects.Add(other.gameObject);
+                }
+
+
             }
-        }
-        else
-        {
-            if (other.gameObject.CompareTag("Pill") || other.gameObject.CompareTag("HalfPill") || other.gameObject.CompareTag("Patch") || other.gameObject.CompareTag("Liquid"))
+            else
             {
-                tempObjects.Add(other.gameObject);
+                if (other.CompareTag("Liquid") || MedicineScriptableObject.validFinalMedicine.HasFlag(scrpt.getMedicineType()))
+                {
+                    tempObjects.Add(other.gameObject);
+                }
             }
         }
     }

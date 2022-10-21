@@ -64,7 +64,7 @@ public class MedicineScriptableObject : ScriptableObject
     /// All medicine types that can dispense an object
     /// </summary>
     [HideInInspector] public MedicineTypes validMedicineContainers = MedicineTypes.PillContainer | MedicineTypes.FullPill | MedicineTypes.PatchContainer;
-    [HideInInspector] public MedicineTypes validFinalMedicine = MedicineTypes.FullPill | MedicineTypes.HalfPill | MedicineTypes.Patch;
+    [HideInInspector] public static MedicineTypes validFinalMedicine = MedicineTypes.FullPill | MedicineTypes.HalfPill | MedicineTypes.Patch;
 
     [HideInInspector] public bool isRoot;
 
@@ -137,7 +137,7 @@ public class MedicineCustomEditor: Editor
         } 
 
         // Check if the medicineType is submittable ex. pill, patch, halfpill, liquidcup
-        if (obj.validFinalMedicine.HasFlag(obj.medicineType))
+        if (MedicineScriptableObject.validFinalMedicine.HasFlag(obj.medicineType))
         {
             // Display input box for dosage
             obj.dosage = EditorGUILayout.FloatField("Dosage", obj.dosage);

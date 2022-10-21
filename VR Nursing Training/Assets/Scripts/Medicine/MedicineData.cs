@@ -7,7 +7,7 @@ public class MedicineData : MonoBehaviour
 {
     public MedicineScriptableObject medicineScriptableObj;
     private float medCount;
-    public string medicineName;
+    private string medicineName;
 
     private void Awake()
     {
@@ -53,7 +53,8 @@ public class MedicineData : MonoBehaviour
             newMed.GetComponent<MedicineData>().medicineName = medicineName;
 
             return newMed;
-        } else if (!medicineScriptableObj.isRoot)
+        } 
+        if (medCount <= 0f && !medicineScriptableObj.isRoot)
         {
             Destroy(gameObject);
             return null;

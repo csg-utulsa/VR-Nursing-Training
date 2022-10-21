@@ -26,7 +26,7 @@ public class LiquidTriggerScript : Interactable
         Debug.Log("Interacting...");
         if (other.CompareTag("LiquidContainer") && !complete)
         {
-            liquidType = other.GetComponent<InteractableScript>().getType();
+            liquidType = other.GetComponent<MedicineData>().getMedicineName();
             correctType = false;
             for (int i = 0; i < requiredType.Length; i++)
             {

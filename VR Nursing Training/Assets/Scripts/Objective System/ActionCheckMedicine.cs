@@ -10,12 +10,22 @@ public class ActionCheckMedicine : ActionBase
 
     private void OnTriggerEnter(Collider other)
     {
-        if ((onCollision) && (other.CompareTag("Pill") || other.CompareTag("HalfPill") || other.CompareTag("Patch") || other.CompareTag("Liquid")))
+        if (other.TryGetComponent<MedicineData>(out MedicineData scrpt) || other.CompareTag("Liquid"))
         {
-            Debug.Log("On Cart Trigger" + other.name);
-            CheckMedicine(other.gameObject.GetComponent<InteractableScript>().getType());
-
+            if ((onCollision) && (other.CompareTag("Liquid") || MedicineScriptableObject.validFinalMedicine.HasFlag(scrpt.getMedicineType())))
+            {
+                Debug.Log("On Cart Trigger" + other.name);
+                if (other.CompareTag("Liquid"))
+                {
+                    CheckMedicine(other.GetComponent<InteractableScript>().getType());
+                }
+                else
+                {
+                    CheckMedicine(scrpt.getMedicineName());
+                }
+            }
         }
+        
     }
 
     public void CheckMedicine(string checkType)
