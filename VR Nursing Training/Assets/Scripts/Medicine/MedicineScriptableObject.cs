@@ -7,6 +7,20 @@ using System;
 using UnityEditor;
 #endif
 
+/// <summary>
+/// Enum for the different types of medicine
+/// </summary>
+public enum MedicineTypes
+{
+    Fake = 1, // 0 No Dispense
+    PillContainer = 1 << 1, // 1
+    FullPill = 1 << 2, // 2
+    HalfPill = 1 << 3, // 3 No Dispense
+    PatchContainer = 1 << 4, // 4
+    Patch = 1 << 5, // 5 No Dispense
+    LiquidContainer = 1 << 6 // 6 No Dispense
+}
+
 [CreateAssetMenu(fileName = "Medicine", menuName = "ScriptableObjects/Medicine", order = 1)]
 public class MedicineScriptableObject : ScriptableObject
 {
@@ -14,12 +28,12 @@ public class MedicineScriptableObject : ScriptableObject
     /// Actual name of the Medication
     /// Ex. DIGOXIN, IBUPROFEN
     /// </summary>
-    [HideInInspector] public string medicineName;
+    [HideInInspector] public string medicineName = "";
 
     /// <summary>
-    /// Model for the medication
+    /// Prefab for the medication
     /// </summary>
-    [HideInInspector] public GameObject model;
+    [HideInInspector] public GameObject prefab;
 
     /// <summary>
     /// Scriptable object that this medicine will dispense
@@ -29,7 +43,7 @@ public class MedicineScriptableObject : ScriptableObject
     /// <summary>
     /// If set to false will not allow this medicine to interact with dispensers
     /// </summary>
-    private bool doDispense = false;
+    [HideInInspector] public bool doDispense = false;
 
     /// <summary>
     /// Object dosage of a single instance of this object
@@ -39,21 +53,8 @@ public class MedicineScriptableObject : ScriptableObject
     /// <summary>
     /// Total amount of medicine this object can dispense
     /// </summary>
-    [HideInInspector] public int dispenseCount = 0;
+    [HideInInspector] public float dispenseCount = 0;
 
-    /// <summary>
-    /// Enum for the different types of medicine
-    /// </summary>
-    public enum MedicineTypes 
-    { 
-        Fake = 1, // 0 No Dispense
-        PillContainer = 1 << 1, // 1
-        FullPill = 1 << 2, // 2
-        HalfPill = 1 << 3, // 3 No Dispense
-        PatchContainer = 1 << 4, // 4
-        Patch = 1 << 5, // 5 No Dispense
-        LiquidContainer = 1 << 6 // 6 No Dispense
-    }
     /// <summary>
     /// Medicine type for this gameObject
     /// </summary>
@@ -65,14 +66,17 @@ public class MedicineScriptableObject : ScriptableObject
     [HideInInspector] public MedicineTypes validMedicineContainers = MedicineTypes.PillContainer | MedicineTypes.FullPill | MedicineTypes.PatchContainer;
     [HideInInspector] public MedicineTypes validFinalMedicine = MedicineTypes.FullPill | MedicineTypes.HalfPill | MedicineTypes.Patch;
 
+    [HideInInspector] public bool isRoot;
+
     /// <summary>
     /// Sets default values for specified type
     /// </summary>
-    private void OnAwake()
+    private void Awake() 
     {
         if (validMedicineContainers.HasFlag(medicineType))
         {
             doDispense = true;
+            
         }
     }
 
@@ -84,6 +88,8 @@ public class MedicineScriptableObject : ScriptableObject
     {
         return doDispense;
     }
+
+    
 
 }
 
@@ -97,9 +103,9 @@ public class MedicineCustomEditor: Editor
         base.OnInspectorGUI();
         MedicineScriptableObject obj = target as MedicineScriptableObject;
 
-        obj.model = EditorGUILayout.ObjectField("Medicine Model", obj.model, typeof(GameObject), false) as GameObject;
+        obj.prefab = EditorGUILayout.ObjectField("Medicine Prefab", obj.prefab, typeof(GameObject), false) as GameObject;
         // Assert that the medicine has a model
-        if (obj.model == null)
+        if (obj.prefab == null)
         {
             EditorGUILayout.HelpBox("Medicine is missing model reference", MessageType.Warning);
             EditorGUILayout.Space(fieldSpace);
@@ -108,6 +114,7 @@ public class MedicineCustomEditor: Editor
         // Check if medicineType is a container
         if (obj.validMedicineContainers.HasFlag(obj.medicineType))
         {
+
             // Display input box for dispensedMedicine
             obj.dispensedMedicine = EditorGUILayout.ObjectField("Dispensed Medicine", obj.dispensedMedicine, typeof(MedicineScriptableObject), false) as MedicineScriptableObject;
             
@@ -119,7 +126,7 @@ public class MedicineCustomEditor: Editor
             }
 
             // Display input box for dispenseCount
-            obj.dispenseCount = EditorGUILayout.IntField("Dispense Count", obj.dispenseCount);
+            obj.dispenseCount = EditorGUILayout.FloatField("Dispense Count", obj.dispenseCount);
 
             // Assert that the containers dispense count is valid
             if (obj.dispenseCount <= 0)
@@ -146,8 +153,8 @@ public class MedicineCustomEditor: Editor
         {
             // Display input box for medicineName
             obj.medicineName = EditorGUILayout.TextField("Name of Medicine", obj.medicineName);
-
-            if(obj.medicineName == "")
+            obj.isRoot = true;
+            if (obj.medicineName == "")
             {
                 EditorGUILayout.HelpBox("Medicine name is empty", MessageType.Warning);
             }

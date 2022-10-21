@@ -22,6 +22,7 @@ public class XRRigSingleton : MonoBehaviour
     private Camera activeCamera;
 
     public bool debugVRActive = false;
+    public bool debug3DActive = false;
 
     /// <summary>
     /// Creates singleton/destroys if already exists, Sets starting camera
@@ -40,7 +41,7 @@ public class XRRigSingleton : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-        if (XRGeneralSettings.Instance.Manager.activeLoader != null || debugVRActive)
+        if ((XRGeneralSettings.Instance.Manager.activeLoader != null || debugVRActive) && !debug3DActive)
         {
             Debug.Log("XR Detected..");
             setVRActive(true);

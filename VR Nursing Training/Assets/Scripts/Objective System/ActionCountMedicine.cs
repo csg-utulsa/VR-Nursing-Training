@@ -11,7 +11,34 @@ public class ActionCountMedicine : ActionBase
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Pill"))
+        if (other.TryGetComponent<MedicineData>(out MedicineData scrpt))
+        {
+            if (scrpt.getMedicineName() == medicineType)
+            {
+                if (scrpt.getMedicineType() == MedicineTypes.Patch)
+                {
+                    // if marked patches aren't required or the patch is marked, count it
+                    if (!requireMarkedPatch || other.gameObject.GetComponent<PatchObjectScript>().isMarked())
+                    {
+                        currentDosage += scrpt.getMedicineDosage();
+                    }
+                    // if marks are required but the patch was unmarked, add it to a list to monitor it
+                    else if (requireMarkedPatch)
+                    {
+                        unmarkedPatches.Add(other.gameObject);
+                    }
+                }
+                else
+                {
+                    currentDosage += scrpt.getMedicineDosage();
+                }
+                
+                
+            }
+        }
+
+
+        /*if (other.CompareTag("Pill"))
         {
             if (other.gameObject.GetComponent<InteractableScript>().getType() == medicineType)
             {
@@ -24,8 +51,8 @@ public class ActionCountMedicine : ActionBase
             {
                 currentDosage += 0.5;
             }
-        }
-        if (other.CompareTag("Patch"))
+        }*/
+        /*if (other.CompareTag("Patch"))
         {
             if (other.gameObject.GetComponent<InteractableScript>().getType() == medicineType)
             {
@@ -41,7 +68,7 @@ public class ActionCountMedicine : ActionBase
                     unmarkedPatches.Add(other.gameObject);
                 }
             }
-        }
+        }*/
     }
     private void OnTriggerStay(Collider other)
     {
@@ -68,7 +95,15 @@ public class ActionCountMedicine : ActionBase
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Pill"))
+        if (other.TryGetComponent<MedicineData>(out MedicineData scrpt))
+        {
+            if (scrpt.getMedicineName() == medicineType)
+            {
+                currentDosage -= scrpt.getMedicineDosage();
+            }
+        }
+
+        /*if (other.CompareTag("Pill"))
         {
             if (other.gameObject.GetComponent<InteractableScript>().getType() == medicineType)
             {
@@ -81,7 +116,7 @@ public class ActionCountMedicine : ActionBase
             {
                 currentDosage -= 0.5;
             }
-        }
+        }*/
         if (other.CompareTag("Patch") && (!requireMarkedPatch || other.GetComponent<PatchObjectScript>().isMarked()))
         {
             if (other.gameObject.GetComponent<InteractableScript>().getType() == medicineType)

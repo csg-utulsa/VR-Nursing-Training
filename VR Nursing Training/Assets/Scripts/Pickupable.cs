@@ -22,7 +22,11 @@ public class Pickupable : MonoBehaviour
     {
         StartPosition = transform.position;
         StartRotation = transform.eulerAngles;
-       
+        if (gameObject.layer != LayerMask.NameToLayer("Pickupable"))
+        {
+            Debug.LogWarning("Gameobject not set to pickupable layer, Force setting it");
+            gameObject.layer = LayerMask.NameToLayer("Pickupable");
+        }
     }
 
     private void OnEnable()
