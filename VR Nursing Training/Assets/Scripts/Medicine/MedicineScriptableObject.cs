@@ -18,7 +18,8 @@ public enum MedicineTypes
     HalfPill = 1 << 3, // 3 No Dispense
     PatchContainer = 1 << 4, // 4
     Patch = 1 << 5, // 5 No Dispense
-    LiquidContainer = 1 << 6 // 6 No Dispense
+    LiquidContainer = 1 << 6, // 6 No Dispense
+    Liquid = 1 << 7 // 7
 }
 
 [CreateAssetMenu(fileName = "Medicine", menuName = "ScriptableObjects/Medicine", order = 1)]
@@ -63,10 +64,21 @@ public class MedicineScriptableObject : ScriptableObject
     /// <summary>
     /// All medicine types that can dispense an object
     /// </summary>
-    [HideInInspector] public MedicineTypes validMedicineContainers = MedicineTypes.PillContainer | MedicineTypes.FullPill | MedicineTypes.PatchContainer;
-    [HideInInspector] public static MedicineTypes validFinalMedicine = MedicineTypes.FullPill | MedicineTypes.HalfPill | MedicineTypes.Patch;
+    [HideInInspector] public static MedicineTypes validMedicineContainers = MedicineTypes.PillContainer | MedicineTypes.FullPill | MedicineTypes.PatchContainer | MedicineTypes.LiquidContainer;
+
+    /// <summary>
+    /// All medicine types that can be submitted
+    /// </summary>
+    [HideInInspector] public static MedicineTypes validFinalMedicine = MedicineTypes.FullPill | MedicineTypes.HalfPill | MedicineTypes.Patch | MedicineTypes.Liquid;
+
+    /// <summary>
+    /// All medicine that have dosage set through script / can't be set in inspector
+    /// </summary>
+    [HideInInspector] public static MedicineTypes dynamicDosageMedicine = MedicineTypes.Liquid;
 
     [HideInInspector] public bool isRoot;
+
+    [HideInInspector] public bool isDynamic;
 
     /// <summary>
     /// Sets default values for specified type
@@ -77,6 +89,11 @@ public class MedicineScriptableObject : ScriptableObject
         {
             doDispense = true;
             
+        }
+
+        if (dynamicDosageMedicine.HasFlag(medicineType))
+        {
+            isDynamic = true;
         }
     }
 
@@ -112,7 +129,7 @@ public class MedicineCustomEditor: Editor
         }
 
         // Check if medicineType is a container
-        if (obj.validMedicineContainers.HasFlag(obj.medicineType))
+        if (MedicineScriptableObject.validMedicineContainers.HasFlag(obj.medicineType))
         {
 
             // Display input box for dispensedMedicine
@@ -139,13 +156,19 @@ public class MedicineCustomEditor: Editor
         // Check if the medicineType is submittable ex. pill, patch, halfpill, liquidcup
         if (MedicineScriptableObject.validFinalMedicine.HasFlag(obj.medicineType))
         {
-            // Display input box for dosage
-            obj.dosage = EditorGUILayout.FloatField("Dosage", obj.dosage);
-
-            if (obj.dosage <= 0)
+            // If needs a dosage assigned
+            if (!MedicineScriptableObject.dynamicDosageMedicine.HasFlag(obj.medicineType))
             {
-                EditorGUILayout.HelpBox("\"dosage\" Must Be > 0 for the medicine type " + obj.medicineType, MessageType.Warning);
+                // Display input box for dosage
+                obj.dosage = EditorGUILayout.FloatField("Dosage", obj.dosage);
+
+                // If dosage not correct
+                if (obj.dosage <= 0)
+                {
+                    EditorGUILayout.HelpBox("\"dosage\" Must Be > 0 for the medicine type " + obj.medicineType, MessageType.Warning);
+                }
             }
+            
 
             EditorGUILayout.HelpBox("Note: The specified medicine type " + obj.medicineType + " will inherit the Medicine Name of its container object", MessageType.Info);
             EditorGUILayout.Space(fieldSpace);

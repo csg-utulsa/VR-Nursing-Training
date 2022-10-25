@@ -5,16 +5,7 @@ using UnityEngine.Events;
 
 public class PillSpawnScript : Interactable
 {
-    //public GameObject pill;
-   // private GameObject pill1;
-    //private GameObject pill2;
-   // private GameObject pill3;
     public UnityEvent<string> onSpawn;
-
-    public GameObject patchNitro;
-    //private GameObject patch;
-    //private string patchType;
-
     private Vector3 spawnLoc;
 
     private void Awake()
@@ -38,25 +29,6 @@ public class PillSpawnScript : Interactable
                 scrpt.dispenseObject(spawnLoc, transform.rotation);
                 onSpawn.Invoke(scrpt.getMedicineName());
             }
-            //pill1 = Instantiate(pill, transform.position + new Vector3(0, 1, 0), transform.rotation);
-            //pill2 = Instantiate(pill, transform.position + new Vector3(0, 1, 0), transform.rotation);
-            //pill3 = Instantiate(pill, transform.position + new Vector3(0, 1, 0), transform.rotation);
-
-            
-
-            //pill1.GetComponent<InteractableScript>().setType(other.gameObject.GetComponent<InteractableScript>().getType());
-            //pill2.GetComponent<InteractableScript>().setType(other.gameObject.GetComponent<InteractableScript>().getType());
-            //pill3.GetComponent<InteractableScript>().setType(other.gameObject.GetComponent<InteractableScript>().getType());
-            
         }
-        /*if (other.CompareTag("PatchContainer"))
-        {
-            patchType = other.gameObject.GetComponent<InteractableScript>().getType();
-            if (patchType == "NITROGLYCERIN")
-            {
-                patch = Instantiate(patchNitro, transform.position + new Vector3(0, 1, 0), transform.rotation);
-                //onSpawn.Invoke(patchType);
-            }
-        }*/
     }
 }

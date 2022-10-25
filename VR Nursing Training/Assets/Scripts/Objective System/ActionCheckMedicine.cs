@@ -10,19 +10,12 @@ public class ActionCheckMedicine : ActionBase
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent<MedicineData>(out MedicineData scrpt) || other.CompareTag("Liquid"))
+        if (other.TryGetComponent<MedicineData>(out MedicineData scrpt)) //|| other.CompareTag("Liquid"))
         {
-            if ((onCollision) && (other.CompareTag("Liquid") || MedicineScriptableObject.validFinalMedicine.HasFlag(scrpt.getMedicineType())))
+            if ((onCollision) || MedicineScriptableObject.validFinalMedicine.HasFlag(scrpt.getMedicineType())) //&& (other.CompareTag("Liquid"))
             {
                 Debug.Log("On Cart Trigger" + other.name);
-                if (other.CompareTag("Liquid"))
-                {
-                    CheckMedicine(other.GetComponent<InteractableScript>().getType());
-                }
-                else
-                {
-                    CheckMedicine(scrpt.getMedicineName());
-                }
+                CheckMedicine(scrpt.getMedicineName());
             }
         }
         
@@ -30,7 +23,7 @@ public class ActionCheckMedicine : ActionBase
 
     public void CheckMedicine(string checkType)
     {
-        if ((!notTarget && checkType == medicineType) || (notTarget && checkType != medicineType))
+        if ((!notTarget && checkType == medicineType) || (notTarget && (checkType.CompareTo(medicineType) != 0)))
         {
             performAction();
         }

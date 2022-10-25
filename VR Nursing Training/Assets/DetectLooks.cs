@@ -17,7 +17,7 @@ public class DetectLooks : MonoBehaviour
         wait = new WaitForSeconds(lookTime);
         if (GetComponent<Collider>().isTrigger)
         {
-            Debug.Log($"Not Detecting Looks On {name} Collider Cannot Be Trigger!");
+            Debug.LogWarning($"Not Detecting Looks On {name} Collider Cannot Be Trigger!");
         }
     }
     public void PlayerIsLooking()

@@ -11,7 +11,7 @@ public class Interactable : MonoBehaviour
     public bool disableTriggerFunctionality;
     public bool debugging = false;
 
-    private void Awake()
+    private void Start()
     {
         if (!XRRigSingleton.xrs.getVRActive())
         {

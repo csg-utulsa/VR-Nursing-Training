@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
+// DEPRECATED
+/*
 public class LiquidObjectScript : MonoBehaviour
 {
     private int dosage;
@@ -16,4 +17,4 @@ public class LiquidObjectScript : MonoBehaviour
     {
         dosage = newDosage;
     }
-}
+}*/

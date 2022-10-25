@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+/// <summary>
+/// DEPRECATED
+/// </summary>
 public class LiquidQuestionScript : MonoBehaviour
 {
-    [SerializeField] private GameObject[] Answers;
+    /*[SerializeField] private GameObject[] Answers;
     [SerializeField] private int[] dosageOptions;
 
     [SerializeField] private GameObject correctAnswer;
 
-    [SerializeField] private LiquidObjectScript liquidObject;
+    //[SerializeField] private LiquidObjectScript liquidObject;
 
     public UnityEvent onCorrect;
     public UnityEvent onIncorrect;
@@ -23,7 +26,7 @@ public class LiquidQuestionScript : MonoBehaviour
         {
             Debug.Log("Correct Answer!");
             onCorrect.Invoke();
-            currentCup.setComplete(true);
+            //currentCup.setComplete(true);
         }
         else
         {
@@ -35,7 +38,7 @@ public class LiquidQuestionScript : MonoBehaviour
         {
             if (selected == Answers[i])
             {
-                liquidObject.setDosage(dosageOptions[i]);
+                //liquidObject.setDosage(dosageOptions[i]);
             }
         }
         MouseLook3D.flag = true;
@@ -46,5 +49,5 @@ public class LiquidQuestionScript : MonoBehaviour
     public void setCup(LiquidTriggerScript cup)
     {
         currentCup = cup;
-    }
+    }*/
 }

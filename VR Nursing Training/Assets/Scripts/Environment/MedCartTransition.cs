@@ -21,12 +21,11 @@ public class MedCartTransition : MonoBehaviour
     // Add medicines that enter the trigger to the list
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent<MedicineData>(out MedicineData scrpt) || other.CompareTag("Liquid"))
+        if (other.TryGetComponent<MedicineData>(out MedicineData scrpt)) //|| other.CompareTag("Liquid"))
         {
-            Debug.Log(other.name);
             if (!snapshot)
             {
-                if (other.CompareTag("Liquid") || MedicineScriptableObject.validFinalMedicine.HasFlag(scrpt.getMedicineType()))
+                if (MedicineScriptableObject.validFinalMedicine.HasFlag(scrpt.getMedicineType())) // other.CompareTag("Liquid") || 
                 {
                     triggerObjects.Add(other.gameObject);
                 }
@@ -35,7 +34,7 @@ public class MedCartTransition : MonoBehaviour
             }
             else
             {
-                if (other.CompareTag("Liquid") || MedicineScriptableObject.validFinalMedicine.HasFlag(scrpt.getMedicineType()))
+                if (MedicineScriptableObject.validFinalMedicine.HasFlag(scrpt.getMedicineType())) // other.CompareTag("Liquid") || 
                 {
                     tempObjects.Add(other.gameObject);
                 }

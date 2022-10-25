@@ -25,9 +25,9 @@ public class TutorialCountMedicine : ActionBase
         {
             Debug.Log("Liquid Staying " + other.name);
             Debug.Log("Med Type: " + medicineType);
-            if (other.gameObject.GetComponent<InteractableScript>().getType() == medicineType)
+            if (other.GetComponent<MedicineData>().getMedicineName() == medicineType)
             {
-                liquidCount = other.gameObject.GetComponent<LiquidObjectScript>().getDosage();
+                liquidCount = other.GetComponent<MedicineData>().getMedicineDosage();
                 Debug.Log("Cur Dosage: " + liquidCount);
                 Debug.Log("Target Dosage: " + targetDosage);
             }
@@ -45,9 +45,9 @@ public class TutorialCountMedicine : ActionBase
         }
         if (other.CompareTag("Liquid"))
         {
-            if (other.gameObject.GetComponent<InteractableScript>().getType() == medicineType)
+            if (other.GetComponent<MedicineData>().getMedicineName() == medicineType)
             {
-                liquidCount -= other.gameObject.GetComponent<LiquidObjectScript>().getDosage();
+                liquidCount -= other.GetComponent<MedicineData>().getMedicineDosage();
             }
         }
     }

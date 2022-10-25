@@ -12,7 +12,7 @@ public class SetLiquidSyrup : MonoBehaviour
 
     private void SetParentSyrup()
     {
-        gameObject.transform.parent.GetComponent<InteractableScript>().setType("SYRUP");
-        gameObject.transform.parent.GetComponent<LiquidObjectScript>().setDosage(20);
+        //gameObject.transform.parent.GetComponent<MedicineData>().set;
+        //gameObject.transform.parent.GetComponent<LiquidObjectScript>().setDosage(20);
     }
 }
