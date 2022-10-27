@@ -20,7 +20,7 @@ public class LiquidTriggerScript : Interactable
     private GameObject liquidContainer;
 
     //private bool correctType;
-    private bool complete = false;
+    //private bool complete = false;
     //private string liquidType;
     private GameObject emptyCup;
     private void Start()
