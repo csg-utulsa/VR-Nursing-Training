@@ -48,7 +48,7 @@ public class MedicineData : MonoBehaviour
             // Assign local medicine name (for reference by children)
             medicineName = medicineScriptableObj.medicineName;
         }
-        // Assign local count for containers i.e. 30 for PillContainers, 2 for FullPills
+        // Assign local count for containers i.e. 30 for PillContainers, 1 for FullPills
         medCount = medicineScriptableObj.dispenseCount;
 }
 
@@ -108,33 +108,25 @@ public class MedicineData : MonoBehaviour
             // Dispensed Object
             var newMed = Instantiate(medicineScriptableObj.dispensedMedicine.prefab, pos, rot);
 
-            // If medicine had a dynamic dosage subtract typical 1 ELSE subtract dosage of the dispensed object
-            if (medicineScriptableObj.dispensedMedicine.isDynamic)
-            {
-                medCount -= 1;
-            } 
-            else
-            {
-                medCount -= medicineScriptableObj.dispensedMedicine.dosage;
-            }
+            // Decrease med count
+            medCount -= 1;
 
             // Set new medicine's name i.e. DIGOXIN, IBUPROFEN etc.
             newMed.GetComponent<MedicineData>().medicineName = medicineName;
 
+            // If container is out of medicine and if it is not a original container i.e. FullPill
+            if (medCount <= 0f && !medicineScriptableObj.isRoot)
+            {
+                // Delete container (typically FullPill after dispensed HalfPills)
+                Destroy(gameObject);
+            }
+
+            // Return new medicine gameobject
             return newMed;
         } 
-        // If container is out of medicine and if it is not a original container i.e. FullPill
-        if (medCount <= 0f && !medicineScriptableObj.isRoot)
-        {
-            // Delete container (typically FullPill after dispensed HalfPills)
-            Destroy(gameObject);
-            return null;
-        }
-        else
-        {
-            // Container is out of medication and is not destroyable
-            return null;
-        }
+        
+        // Container is out of medication
+        return null;
     }
 
     /// <summary>
