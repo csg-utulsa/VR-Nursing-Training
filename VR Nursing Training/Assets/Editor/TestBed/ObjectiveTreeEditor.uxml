@@ -1,0 +1,12 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:VisualElement name="Container" style="min-width: 100px; min-height: 100px; flex-shrink: 0; flex-grow: 1;">
+        <SplitView fixed-pane-initial-dimension="93">
+            <ui:VisualElement name="ToolboxContainer" style="min-width: 250px; border-left-color: rgb(147, 147, 147); border-right-color: rgb(147, 147, 147); border-top-color: rgb(147, 147, 147); border-bottom-color: rgb(147, 147, 147); border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px; flex-grow: 0.25; max-width: 250px;">
+                <SplitView orientation="Vertical">
+                    <ui:VisualElement name="BlockPallette" style="min-height: 310px;" />
+                    <ui:VisualElement name="VariablePallette" />
+                </SplitView>
+            </ui:VisualElement>
+        </SplitView>
+    </ui:VisualElement>
+</ui:UXML>
