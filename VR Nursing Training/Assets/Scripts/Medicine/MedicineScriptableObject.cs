@@ -105,9 +105,6 @@ public class MedicineScriptableObject : ScriptableObject
     {
         return doDispense;
     }
-
-    
-
 }
 
 #if UNITY_EDITOR
@@ -119,8 +116,9 @@ public class MedicineCustomEditor: Editor
     {
         base.OnInspectorGUI();
         MedicineScriptableObject obj = target as MedicineScriptableObject;
-
+        EditorGUI.BeginChangeCheck();
         obj.prefab = EditorGUILayout.ObjectField("Medicine Prefab", obj.prefab, typeof(GameObject), false) as GameObject;
+        
         // Assert that the medicine has a model
         if (obj.prefab == null)
         {
@@ -182,8 +180,12 @@ public class MedicineCustomEditor: Editor
                 EditorGUILayout.HelpBox("Medicine name is empty", MessageType.Warning);
             }
         }
-        
-        
+        if (EditorGUI.EndChangeCheck())
+        {
+            EditorUtility.SetDirty(obj);
+            Debug.Log("Set Dirty");
+        }
+
     }
 }
 #endif

@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Nitroglycerin
   m_EditorClassIdentifier: 
   medicineName: NITROGLYCERIN
-  prefab: {fileID: 0}
+  prefab: {fileID: 8445903996361425620, guid: 3ecedf90f78999b4583e1c0919fe2654, type: 3}
   dispensedMedicine: {fileID: 11400000, guid: 30a0dd53304792940b5af902d44b4588, type: 2}
+  doDispense: 1
   dosage: -1
   dispenseCount: 5
   medicineType: 16
-  validMedicineContainers: 22
-  validFinalMedicine: 44
+  isRoot: 1
+  isDynamic: 0

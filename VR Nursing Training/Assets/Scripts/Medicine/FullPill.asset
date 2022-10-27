@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: FullPill
   m_EditorClassIdentifier: 
   medicineName: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 5486006618350478690, guid: b2ec7f6fe9545404ebcdba3aa6463cb0, type: 3}
   dispensedMedicine: {fileID: 11400000, guid: 4b1bd6b4a6b3a044aab0346b848fb69e, type: 2}
+  doDispense: 1
   dosage: 1
   dispenseCount: 2
   medicineType: 4
-  validMedicineContainers: 22
-  validFinalMedicine: 44
+  isRoot: 0
+  isDynamic: 0

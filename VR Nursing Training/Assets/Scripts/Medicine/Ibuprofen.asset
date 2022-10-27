@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Ibuprofen
   m_EditorClassIdentifier: 
   medicineName: IBUPROFEN
-  prefab: {fileID: 0}
+  prefab: {fileID: 7225212631360577804, guid: 95f9518b31d3f544383c26958ef83e51, type: 3}
   dispensedMedicine: {fileID: 11400000, guid: b7da5afc8391d804ca4736267c08923c, type: 2}
+  doDispense: 1
   dosage: -1
   dispenseCount: 30
   medicineType: 2
-  validMedicineContainers: 22
-  validFinalMedicine: 44
+  isRoot: 1
+  isDynamic: 0

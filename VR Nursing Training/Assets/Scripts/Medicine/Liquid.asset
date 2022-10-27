@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Liquid
   m_EditorClassIdentifier: 
   medicineName: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 1641346799923962931, guid: 6f31b2e3b09e17f4f88c157141d97a70, type: 3}
   dispensedMedicine: {fileID: 0}
   doDispense: 1
   dosage: -1
   dispenseCount: 0
   medicineType: 128
   isRoot: 0
+  isDynamic: 1

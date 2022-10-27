@@ -15,8 +15,9 @@ MonoBehaviour:
   medicineName: DIGOXIN
   prefab: {fileID: 2722161061795673744, guid: 454ff34f666446d4aba003a6aa3df537, type: 3}
   dispensedMedicine: {fileID: 11400000, guid: c906c2a9f6eadc746a67602e38a98211, type: 2}
-  doDispense: 0
+  doDispense: 1
   dosage: -1
   dispenseCount: 1
   medicineType: 64
   isRoot: 1
+  isDynamic: 0

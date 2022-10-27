@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Patch
   m_EditorClassIdentifier: 
   medicineName: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 2728151633174135407, guid: ddccbeb58333c4a4ba552e01c7966176, type: 3}
   dispensedMedicine: {fileID: 0}
+  doDispense: 0
   dosage: 1
   dispenseCount: 0
   medicineType: 32
-  validMedicineContainers: 22
-  validFinalMedicine: 44
+  isRoot: 0
+  isDynamic: 0

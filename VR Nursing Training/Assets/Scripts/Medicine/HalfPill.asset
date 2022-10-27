@@ -13,12 +13,11 @@ MonoBehaviour:
   m_Name: HalfPill
   m_EditorClassIdentifier: 
   medicineName: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 4277267284173803410, guid: 1e85952e874b7224e9b7fa9226618fd6, type: 3}
   dispensedMedicine: {fileID: 0}
   doDispense: 0
   dosage: 0.5
   dispenseCount: 0
   medicineType: 8
-  validMedicineContainers: 22
-  validFinalMedicine: 44
   isRoot: 0
+  isDynamic: 0
