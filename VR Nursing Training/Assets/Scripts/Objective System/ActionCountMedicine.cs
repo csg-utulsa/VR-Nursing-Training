@@ -80,15 +80,12 @@ public class ActionCountMedicine : ActionBase
                     //currentDosage = scrpt.getMedicineDosage();
                 }
             }*/
-            if (scrpt.getMedicineType() == MedicineTypes.Patch)
+            if (scrpt.getMedicineType() == MedicineTypes.Patch && unmarkedPatches.Contains(other.gameObject))
             {
-                for (int i = 0; i < unmarkedPatches.Count; i++)
+                if (other.GetComponent<PatchObjectScript>().isMarked())
                 {
-                    if (unmarkedPatches[i].GetComponent<PatchObjectScript>().isMarked())
-                    {
-                        currentDosage += 1;
-                        unmarkedPatches.RemoveAt(i);
-                    }
+                    currentDosage += scrpt.getMedicineDosage();
+                    unmarkedPatches.Remove(other.gameObject);
                 }
             }
             if (scrpt.getMedicineType() == MedicineTypes.Liquid)

@@ -201,7 +201,7 @@ public class PlayerKeyboardInputScript: MonoBehaviour
                     Rigidbody targetRb = _heldObject.GetComponent<Rigidbody>();
                     targetRb.useGravity = false;
                     targetRb.isKinematic = true;
-                    hit.collider.enabled = false;
+                    //hit.collider.enabled = false;
 
                     StartCoroutine(DoPickUp(scrpt.focusOnPickup, scrpt.pickUpAngle));
                 }
@@ -230,7 +230,7 @@ public class PlayerKeyboardInputScript: MonoBehaviour
                 Debug.Log($"Putting down {_heldObject}...");
             }
 
-            _heldObject.GetComponent<Collider>().enabled = true;
+            //_heldObject.GetComponent<Collider>().enabled = true;
             targetRb.useGravity = true;
             targetRb.isKinematic = false;
             _grabbingActive = false;
