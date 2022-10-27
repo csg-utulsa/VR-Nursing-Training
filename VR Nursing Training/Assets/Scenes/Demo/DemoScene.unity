@@ -8402,7 +8402,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1700906719}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &654992020
 MonoBehaviour:
@@ -9972,7 +9972,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1700906719}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &815689887
 MonoBehaviour:
@@ -18676,8 +18676,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1676930991}
-  - {fileID: 815689885}
   - {fileID: 654992018}
+  - {fileID: 815689885}
   m_Father: {fileID: 1237110800}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18702,8 +18702,8 @@ MonoBehaviour:
   canSkip: 0
   objectives:
   - {fileID: 1676930993}
-  - {fileID: 815689887}
   - {fileID: 654992020}
+  - {fileID: 815689887}
 --- !u!1 &1708249805
 GameObject:
   m_ObjectHideFlags: 0
@@ -27074,6 +27074,10 @@ PrefabInstance:
     - target: {fileID: 1072718024, guid: cde976f77f70e5d4ca99cdc0f446fbda, type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1072718030, guid: cde976f77f70e5d4ca99cdc0f446fbda, type: 3}
+      propertyPath: requireMarkedPatch
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1072718031, guid: cde976f77f70e5d4ca99cdc0f446fbda, type: 3}
       propertyPath: sharpie

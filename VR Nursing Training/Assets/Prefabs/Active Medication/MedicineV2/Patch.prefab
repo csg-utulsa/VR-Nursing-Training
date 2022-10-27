@@ -292,6 +292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textObject: {fileID: 3104551019601942815}
+  marked: 0
   onDateSet:
     m_PersistentCalls:
       m_Calls: []
@@ -565,4 +566,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: hello there
+  m_Text: 
