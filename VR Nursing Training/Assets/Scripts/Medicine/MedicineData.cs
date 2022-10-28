@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 /// <summary>
 /// Script for creating medicine objects based on a provided medicineScriptableObj
 /// </summary>
-[RequireComponent(typeof(Pickupable))]
+[RequireComponent(typeof(Pickupable))] // Pickupable Requires: XRGrabInteractable, Collider, and Rigidbody
 public class MedicineData : MonoBehaviour
 {
     /// <summary>

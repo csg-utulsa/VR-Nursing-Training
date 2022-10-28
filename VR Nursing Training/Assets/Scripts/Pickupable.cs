@@ -6,6 +6,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(Collider))]
+[RequireComponent(typeof(XRGrabInteractable))]
 public class Pickupable : MonoBehaviour
 {
     public bool focusOnPickup = false;
