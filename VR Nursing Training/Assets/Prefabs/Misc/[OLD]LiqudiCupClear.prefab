@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9053196394362130628}
   - component: {fileID: 6505341284509393934}
   m_Layer: 0
-  m_Name: LiqudiCupClear
+  m_Name: '[OLD]LiqudiCupClear'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
