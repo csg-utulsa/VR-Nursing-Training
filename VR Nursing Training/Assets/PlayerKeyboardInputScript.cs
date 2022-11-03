@@ -199,9 +199,10 @@ public class PlayerKeyboardInputScript: MonoBehaviour
                     _heldObject = hit.collider.gameObject;
 
                     Rigidbody targetRb = _heldObject.GetComponent<Rigidbody>();
+                    targetRb.detectCollisions = false;
                     targetRb.useGravity = false;
                     targetRb.isKinematic = true;
-                    //hit.collider.enabled = false;
+                    
 
                     StartCoroutine(DoPickUp(scrpt.focusOnPickup, scrpt.pickUpAngle));
                 }
@@ -231,6 +232,7 @@ public class PlayerKeyboardInputScript: MonoBehaviour
             }
 
             //_heldObject.GetComponent<Collider>().enabled = true;
+            targetRb.detectCollisions = true;
             targetRb.useGravity = true;
             targetRb.isKinematic = false;
             _grabbingActive = false;
@@ -246,7 +248,7 @@ public class PlayerKeyboardInputScript: MonoBehaviour
             
             if (!heldObjScrpt.focusOnPickup)
             {
-                _heldObject.transform.position = hit.point;
+                _heldObject.transform.position = hit.point + new Vector3(0,_heldObject.GetComponent<Collider>().bounds.extents.y + .1f,0);
             }
 
             _heldObject.GetComponent<Pickupable>().OnPutDown();
@@ -369,6 +371,7 @@ public class PlayerKeyboardInputScript: MonoBehaviour
             _heldObject.transform.SetParent(_handLocation.transform);
             targetLocation = _handLocation.transform.position;
             targetRotation = _handLocation.transform.eulerAngles + focusAngle;
+            
         }
 
         if (fullDebugging)
@@ -402,6 +405,11 @@ public class PlayerKeyboardInputScript: MonoBehaviour
             
             if (percent == 1)
             {
+                if (!focus)
+                {
+                    
+                }
+                
                 _grabbingActive = false;
             }
             yield return _EOF;
