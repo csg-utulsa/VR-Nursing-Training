@@ -15,7 +15,7 @@ public class TeleportIndicatorScript : MonoBehaviour
     private int cooldownMax = 3;
     private int cooldown = 0;
     private Vector3 direction;
-
+    private TeleportationAnchor anchor;
     // For phasing animation
     /* private Color matColor = Color.green;
      private float alphaStart = 0.5f;
@@ -29,18 +29,17 @@ public class TeleportIndicatorScript : MonoBehaviour
     {
         text = indicatorText.GetComponent<TextMeshProUGUI>();
         text.text = zoneName;
+        anchor = GetComponent<TeleportationAnchor>();
         /*matColor.a = alphaStart;
         indicatorMaterial.color = matColor;*/
     }
     public void Update()
     {
-        if (TryGetComponent<TeleportationAnchor>(out TeleportationAnchor script))
+        if (anchor.teleportationProvider == null)
         {
-            if (script.teleportationProvider == null)
-            {
-                script.teleportationProvider = FindObjectOfType<TeleportationProvider>(false);
-            }
+            anchor.teleportationProvider = FindObjectOfType<TeleportationProvider>(false);
         }
+        
 
         if (useCooldown)
         {
