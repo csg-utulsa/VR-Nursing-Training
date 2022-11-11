@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.XR.Interaction.Toolkit;
 using TMPro;
 
 public class TeleportIndicatorScript : MonoBehaviour
 {
     [SerializeField] private GameObject indicatorZone;
-    //[SerializeField] private Material indicatorMaterial;
     [SerializeField] private GameObject indicatorText;
     [SerializeField] private string zoneName;
     private TextMeshProUGUI text;
@@ -17,12 +17,13 @@ public class TeleportIndicatorScript : MonoBehaviour
     private Vector3 direction;
 
     // For phasing animation
-   /* private Color matColor = Color.green;
-    private float alphaStart = 0.5f;
-    private float alphaMax = 0.6f;
-    private float alphaMin = 0.4f;
-    private float alphaChange = 0.0003f;
-    private float alphaDir = 1;*/
+    /* private Color matColor = Color.green;
+     private float alphaStart = 0.5f;
+     private float alphaMax = 0.6f;
+     private float alphaMin = 0.4f;
+     private float alphaChange = 0.0003f;
+     private float alphaDir = 1;*/
+
 
     public void Awake()
     {
@@ -33,6 +34,14 @@ public class TeleportIndicatorScript : MonoBehaviour
     }
     public void Update()
     {
+        if (TryGetComponent<TeleportationAnchor>(out TeleportationAnchor script))
+        {
+            if (script.teleportationProvider == null)
+            {
+                script.teleportationProvider = FindObjectOfType<TeleportationProvider>(false);
+            }
+        }
+
         if (useCooldown)
         {
             if (cooldown > 0) cooldown--;
