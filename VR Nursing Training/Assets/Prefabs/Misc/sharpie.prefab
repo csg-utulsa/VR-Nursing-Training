@@ -133,39 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bd43063534b3924eb5caef959443d75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onPickup:
-    m_PersistentCalls:
-      m_Calls: []
-  onDrop:
-    m_PersistentCalls:
-      m_Calls: []
-  onCombine:
-    m_PersistentCalls:
-      m_Calls: []
-  interactEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  cursorHighlight:
-    m_PersistentCalls:
-      m_Calls: []
-  lookHighlight:
-    m_PersistentCalls:
-      m_Calls: []
-  initialPosition: {x: 0, y: 0, z: 0}
-  initialAngles: {x: 0, y: 0, z: 0}
-  material: {fileID: 0}
-  combineMaterial: {fileID: 0}
-  layer:
-    serializedVersion: 2
-    m_Bits: 0
-  targets: []
-  combineDist: 0
-  isInteractable: 0
   type: 
-  interactWithHand: 1
-  focusOnPickup: 0
-  distanceFromCamera: 0.5
-  focusAngles: {x: 0, y: 0, z: 0}
 --- !u!114 &-7380186919544661610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,6 +153,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   m_InteractionLayers:
     m_Bits: 4294967295
+  m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
@@ -269,6 +238,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_AttachTransform: {fileID: 6289647826543899690}
+  m_UseDynamicAttach: 0
+  m_MatchAttachPosition: 1
+  m_MatchAttachRotation: 1
+  m_SnapToColliderVolume: 1
   m_AttachEaseInTime: 0.15
   m_MovementType: 2
   m_VelocityDamping: 1
@@ -318,11 +291,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   focusOnPickup: 0
-  pickUpAngle: {x: 0, y: 0, z: 0}
+  pickUpAngle: {x: 0, y: 90, z: 45}
   CustomDropRotation: {x: 0, y: 0, z: 0}
   useCustomDropRotation: 0
   StartPosition: {x: 0, y: 0, z: 0}
   StartRotation: {x: 0, y: 0, z: 0}
+  onPickUp:
+    m_PersistentCalls:
+      m_Calls: []
+  onPutDown:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2264389627811893011
 GameObject:
   m_ObjectHideFlags: 0
