@@ -1478,7 +1478,7 @@ MonoBehaviour:
   _handLocation: {fileID: 3041394142401281520}
   _crosshair: {fileID: 7548493107911844023}
   _activeCamera: {fileID: 3041394142595202736}
-  _pickUpSpeed: 2
+  _pickUpTime: 0.5
   _focusSpeed: 0.5
   _pickUpDistance: 2
   _teleportDistance: 5

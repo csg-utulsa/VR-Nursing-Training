@@ -375,7 +375,7 @@ public class PlayerKeyboardInputScript: MonoBehaviour
             _heldObject.transform.SetParent(_handLocation.transform);
             heldObjStartRotation = _heldObject.transform.localRotation;
             targetLocation = _handLocation.transform.position;
-            targetRotation = Quaternion.Euler(_handLocation.transform.rotation.eulerAngles + pickUpAngle);
+            targetRotation = Quaternion.Euler(_handLocation.transform.localRotation.eulerAngles + pickUpAngle);
             pickUpTime = _pickUpTime;
         }
 
@@ -400,7 +400,7 @@ public class PlayerKeyboardInputScript: MonoBehaviour
             if (!focus) // "Camera can move"
             {
                 targetLocation = _handLocation.transform.position; // Update Target's Current Location
-                targetRotation = _handLocation.transform.localRotation; // Update Target's Current Rotation
+                targetRotation = Quaternion.Euler(_handLocation.transform.localRotation.eulerAngles + pickUpAngle); ; // Update Target's Current Rotation
             }
 
             float perc1 = Mathf.Clamp(Time.time - time, 0, pickUpTime) / pickUpTime; // 0 -> 1 in "pickUpTime" seconds
