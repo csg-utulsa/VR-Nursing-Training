@@ -20,8 +20,8 @@ public class PlayerKeyboardInputScript: MonoBehaviour
     private Camera _activeCamera;
 
     [Space(3), Header("Input Settings:")]
-    [Tooltip("Speed at which objects get picked up."), SerializeField]
-    private float _pickUpSpeed = 1f;
+    [Tooltip("Time it takes to pick up an item in seconds."), SerializeField]
+    private float _pickUpTime = 1f;
 
     [Tooltip("Speed at which objects will be focused"), SerializeField]
     private float _focusSpeed = .5f;
@@ -347,73 +347,77 @@ public class PlayerKeyboardInputScript: MonoBehaviour
     /// Called by PickUp. Over time will move the target object to the hand location.
     /// </summary>
     /// <param name="focus">If true will focus the object based on focus angle.</param>
-    /// <param name="focusAngle">Angle that the target object will be focused.</param>
+    /// <param name="pickUpAngle">Angle that the target object will be focused.</param>
     /// <returns></returns>
-    IEnumerator DoPickUp(bool focus, Vector3 focusAngle)
+    IEnumerator DoPickUp(bool focus, Vector3 pickUpAngle)
     {
-        Vector3 targetLocation;
-        Vector3 targetRotation;
-        float speed = _pickUpSpeed;
-        float time = Time.time;
-        _grabbingActive = true;
-        
+        Vector3 heldObjStartLocation = _heldObject.transform.position; // Held Object's Location
+        Quaternion heldObjStartRotation; // Held Object's Rotation
 
-        if (focus)
+        Vector3 targetLocation; // End Target's Location
+        Quaternion targetRotation; // End Target's Rotation
+        float pickUpTime; // Time is takes to pick up object
+
+        // Setup Targets & Variables
+        if (focus) // "Clipboard"
         {
-            targetLocation = (_activeCamera.transform.forward * .5f + _activeCamera.transform.position);
-            targetRotation = _activeCamera.transform.eulerAngles + focusAngle;
             MouseLook3D.flag = false;
-            speed = _focusSpeed;
             _crosshair.SetActive(false);
+
+            _heldObject.transform.SetParent(null);
+            heldObjStartRotation = _heldObject.transform.rotation;
+            targetLocation = (_activeCamera.transform.forward * .5f + _activeCamera.transform.position);
+            targetRotation = Quaternion.Euler(_activeCamera.transform.rotation.eulerAngles + pickUpAngle);
+            pickUpTime = _focusSpeed;
         }
-        else
+        else // "Everything else"
         {
             _heldObject.transform.SetParent(_handLocation.transform);
+            heldObjStartRotation = _heldObject.transform.localRotation;
             targetLocation = _handLocation.transform.position;
-            targetRotation = _handLocation.transform.eulerAngles + focusAngle;
-            
+            targetRotation = Quaternion.Euler(_handLocation.transform.rotation.eulerAngles + pickUpAngle);
+            pickUpTime = _pickUpTime;
         }
+
+        _grabbingActive = true;
+
+        float time = Time.time; // Timestamp for start of pickup
 
         if (fullDebugging)
         {
             Debug.Log("Pickup Anim Starting...");
         }
-        // Picking up animation loop
+
+        // Pick up animation loop
         while (_grabbingActive)
         {
-           if ( _heldObject == null)
-           {
+            if ( _heldObject == null)
+            {
                 _grabbingActive = false;
                 break;
-           }
-            float perc1 = Mathf.Clamp(Time.time - time, 0, speed) / speed;
-            float percent = Mathf.Clamp((Mathf.Sin((Mathf.PI / 6.0f + perc1 * Mathf.PI / 3.0f)) - 0.5f) * 2.0f, 0, 1);
+            }
+           
+            if (!focus) // "Camera can move"
+            {
+                targetLocation = _handLocation.transform.position; // Update Target's Current Location
+                targetRotation = _handLocation.transform.localRotation; // Update Target's Current Rotation
+            }
 
-            if ((Time.time - time) > speed || _heldObject.transform.position == targetLocation)
+            float perc1 = Mathf.Clamp(Time.time - time, 0, pickUpTime) / pickUpTime; // 0 -> 1 in "pickUpTime" seconds
+            float percent = Mathf.Clamp((Mathf.Sin((Mathf.PI / 6.0f + perc1 * Mathf.PI / 3.0f)) - 0.5f) * 2.0f, 0, 1); // 0 -> 1 based on sin wave for smoother anim
+   
+            _heldObject.transform.position = Vector3.Lerp(heldObjStartLocation, targetLocation, percent); // Lerp Positions
+            _heldObject.transform.localRotation = Quaternion.Lerp(heldObjStartRotation, targetRotation, percent); // Lerp Rotations
+
+            if (percent == 1) // Done Lerping
             {
-                percent = 1;
-            }
-            
-            if (focus) 
-            {
-                _heldObject.transform.position = Vector3.Lerp(_activeCamera.transform.position, targetLocation, percent);
-                _heldObject.transform.eulerAngles = Vector3.Lerp(_activeCamera.transform.eulerAngles, targetRotation, percent);
-            } else 
-            {
-                _heldObject.transform.position = Vector3.Lerp(_heldObject.transform.position,_handLocation.transform.position,percent);
-            }
-            
-            if (percent == 1)
-            {
-                if (!focus)
-                {
-                    
-                }
-                
+                _heldObject.transform.position = targetLocation;
+                _heldObject.transform.localRotation = targetRotation;
                 _grabbingActive = false;
             }
             yield return _EOF;
         }
+
         if (fullDebugging)
         {
             Debug.Log("Pickup Anim Over...");
