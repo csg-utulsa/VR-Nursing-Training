@@ -56,7 +56,7 @@ public GameObject spawnedController;
 
         } else {
 		//No devices found, all hope is lost; Assume we're using an HTC Vive.
-		Debug.Log("No devices found for VR Interacting devices, assuming HTC Vive as fallback.");
+		Debug.Log("No devices found for VR Interacting devices, using fallback.");
 		GameObject prefab = controllerPrefabFallback;
 		spawnedController = Instantiate(prefab,transform);
 		//gameObject.transform.eulerAngles = new Vector3(45,0,0); //Angle tweak because our controllers don't line up perfectly without it
