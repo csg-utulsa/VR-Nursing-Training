@@ -291,7 +291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   focusOnPickup: 0
-  pickUpAngle: {x: 0, y: 90, z: 45}
+  pickUpAngle: {x: 180, y: 0, z: 270}
   CustomDropRotation: {x: 0, y: 0, z: 0}
   useCustomDropRotation: 0
   StartPosition: {x: 0, y: 0, z: 0}

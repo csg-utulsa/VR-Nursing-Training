@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.XR.Management;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class XRRigSingleton : MonoBehaviour
@@ -18,9 +19,14 @@ public class XRRigSingleton : MonoBehaviour
     [SerializeField] private GameObject root3D;
     [Tooltip("3D Camera Reference")]
     [SerializeField] private Camera cam3D;
-
+    [Tooltip("RightController Reference")]
+    [SerializeField] private GameObject rightController;
+    [Tooltip("LeftController Reference")]
+    [SerializeField] private GameObject leftController;
+    /// <summary>
+    /// Set in setVRActive to either the 3D or VR camera
+    /// </summary>
     private Camera activeCamera;
-
     public bool debugVRActive = false;
     public bool debug3DActive = false;
 
@@ -29,6 +35,7 @@ public class XRRigSingleton : MonoBehaviour
     /// </summary>
     private void Awake()
     {
+        SceneManager.activeSceneChanged += NewScene;
         #region Singleton
         if (xrs == null)
         {
@@ -53,6 +60,14 @@ public class XRRigSingleton : MonoBehaviour
         }
         #endregion
     }
+
+    private void NewScene(Scene prev, Scene next)
+    {
+        var a = GetComponent<LocomotionController>();
+        a.toggleRightRayVisible = false;
+        a.toggleLeftRayVisible = false;
+    }
+
 
     /// <summary>
     /// Returns the VR master gameobject for the VR Camera
