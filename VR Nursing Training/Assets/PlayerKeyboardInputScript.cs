@@ -20,6 +20,10 @@ public class PlayerKeyboardInputScript: MonoBehaviour
     private Camera _activeCamera;
 
     [Space(3), Header("Input Settings:")]
+
+    [Tooltip("Mouse sensitivity"), SerializeField]
+    private float _mouseSensitivity = .1f;
+
     [Tooltip("Time it takes to pick up an item in seconds."), SerializeField]
     private float _pickUpTime = 1f;
 
@@ -40,7 +44,22 @@ public class PlayerKeyboardInputScript: MonoBehaviour
 
     [Tooltip("Enable to debug all input events."), SerializeField]
     private bool fullDebugging = false;
-    
+
+    /// <summary>
+    /// Tracks left and right rotation from mouse
+    /// </summary>
+    private float _deltaYRotation = 0f;
+
+    /// <summary>
+    /// Tracks up and down rotation from mouse
+    /// </summary>
+    private float _deltaXRotation = 0f;
+
+    /// <summary>
+    /// If set true freezes camera / mouse rotation
+    /// </summary>
+    private bool _mouseLock = false;
+
     /// <summary>
     /// If true will runs the look at script passing the targetVector.
     /// </summary>
@@ -101,6 +120,9 @@ public class PlayerKeyboardInputScript: MonoBehaviour
         _input.CharacterControls.Use.performed += ctx => _usingObject = ctx.ReadValueAsButton();
         _input.CharacterControls.PutDown.performed += ctx => _putingDownObject = ctx.ReadValueAsButton();
         _input.CharacterControls.Teleport.performed += ctx => _teleport = ctx.ReadValueAsButton();
+
+        _input.CharacterControls.MouseLook.performed += MouseLook;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     /// <summary>
@@ -181,7 +203,7 @@ public class PlayerKeyboardInputScript: MonoBehaviour
     /// </summary>
     private void PickUp()
     {
-        if (!_grabbingActive)
+        if (!_grabbingActive) //&& _heldObject == null)
         {
             RaycastHit hit;
 
@@ -203,7 +225,6 @@ public class PlayerKeyboardInputScript: MonoBehaviour
                     targetRb.useGravity = false;
                     targetRb.isKinematic = true;
                     
-
                     StartCoroutine(DoPickUp(scrpt.focusOnPickup, scrpt.pickUpAngle));
                 }
             }
@@ -221,7 +242,7 @@ public class PlayerKeyboardInputScript: MonoBehaviour
         if (heldObjScrpt.focusOnPickup)
         {
             heldObjScrpt.ResetObject();
-            MouseLook3D.flag = true;
+            _mouseLock = false;
         }
 
         if (Physics.Raycast(_activeCamera.transform.position, _activeCamera.transform.forward, out hit, _pickUpDistance, LayerMask.GetMask("Default"), QueryTriggerInteraction.Ignore) && hit.normal == Vector3.up && hit.transform.CompareTag("PlaceLocation"))
@@ -231,7 +252,6 @@ public class PlayerKeyboardInputScript: MonoBehaviour
                 Debug.Log($"Putting down {_heldObject}...");
             }
 
-            //_heldObject.GetComponent<Collider>().enabled = true;
             targetRb.detectCollisions = true;
             targetRb.useGravity = true;
             targetRb.isKinematic = false;
@@ -361,10 +381,11 @@ public class PlayerKeyboardInputScript: MonoBehaviour
         // Setup Targets & Variables
         if (focus) // "Clipboard"
         {
-            MouseLook3D.flag = false;
+            _mouseLock = true;
             _crosshair.SetActive(false);
 
             _heldObject.transform.SetParent(null);
+
             heldObjStartRotation = _heldObject.transform.rotation;
             targetLocation = (_activeCamera.transform.forward * .5f + _activeCamera.transform.position);
             targetRotation = Quaternion.Euler(_activeCamera.transform.rotation.eulerAngles + pickUpAngle);
@@ -430,5 +451,31 @@ public class PlayerKeyboardInputScript: MonoBehaviour
         if (!_grabbingActive) return null; // return null if not currently grabbing an object
 
         return _heldObject; // if currently grabbing an object return that object
+    }
+
+   /// <summary>
+   /// Used to freeze and unfreeze camera rotation from mouse
+   /// </summary>
+   /// <param name="b">true: mouse frozen; false: mouse unfrozen</param>
+    public void lockMouse(bool b)
+    {
+        _mouseLock = b;
+    }
+
+    /// <summary>
+    /// Controls camera movement based on mouse
+    /// </summary>
+    /// <param name="args"></param>
+    public void MouseLook(InputAction.CallbackContext args)
+    {
+        if (_mouseLock)
+        {
+            return;
+        }
+        Vector2 mouseLook = args.ReadValue<Vector2>();
+        _deltaYRotation += mouseLook.x * _mouseSensitivity;
+        _deltaXRotation -= mouseLook.y * _mouseSensitivity;
+        _deltaXRotation = Mathf.Clamp(_deltaXRotation, -90, 90);
+        _activeCamera.transform.rotation = Quaternion.Euler(_deltaXRotation, _deltaYRotation, 0f);
     }
 }

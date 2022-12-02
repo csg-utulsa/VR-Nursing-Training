@@ -20,7 +20,6 @@ public class MenuButtonManager : MonoBehaviour
     {
         singleton = XRRigSingleton.xrs;
         //rigVR.GetComponent<characterMovement3D>().interactRayCastDistance = 10; // Changes raycast distance to be able to hit menu
-        rigVR.GetComponent<LocomotionController>().toggleRightRayVisible = true;
         disablePanel.SetActive(false);
 
         //singleton.getVRActive();

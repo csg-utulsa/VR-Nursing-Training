@@ -2,28 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+
+// DEPRECATED
 public class MouseLook3D : MonoBehaviour
 {
-    float xRotation = 0f;
+    /*float dXRotation = 0f;
+    float dYRotation = 0f;
     public Transform playerBody;
     public float mouseSensitivity = 100f;
     public static bool flag = true;
     PlayerInput input;
 
-    Vector2 mouseLook;
+   // Vector2 mouseLook;
 
     private void Awake()
     {
-        input = new PlayerInput();
+        //input = new PlayerInput();
 
-        input.CharacterControls.MouseLook.performed += ctx => mouseLook = ctx.ReadValue<Vector2>();
-
+        //input.CharacterControls.MouseLook.performed += ctx => mouseLook = ctx.ReadValue<Vector2>();
+        //input.CharacterControls.MouseLook.performed += MouseLook;
     }
 
     private void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        //LiquidTriggerScript.measureCanvas = liquidCanvas;
+        //Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
@@ -31,18 +33,27 @@ public class MouseLook3D : MonoBehaviour
     {
         if (flag)
         {
-            float mouseX = mouseLook.x * mouseSensitivity; //* Time.deltaTime;
-            float mouseY = mouseLook.y * mouseSensitivity;// * Time.deltaTime;
+            float mouseX = mouseLook.x * mouseSensitivity;
+            float mouseY = mouseLook.y * mouseSensitivity;
 
-            xRotation -= mouseY;
-            xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+            LRRotation += mouseX;
+            UDRotation -= mouseY;
+            UDRotation = Mathf.Clamp(UDRotation, -90f, 90f);
 
-            transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-            playerBody.Rotate(Vector3.up * mouseX);
-
-            mouseLook = new Vector2(0f, 0f);
+            transform.localRotation = Quaternion.Euler(UDRotation, LRRotation, 0f);
+            //playerBody.Rotate(Vector3.up * mouseX);
         }
         
+    }
+    private void MouseLook(InputAction.CallbackContext args)
+    {
+        Vector2 mouseLook = args.ReadValue<Vector2>();
+
+        dYRotation += mouseLook.x * mouseSensitivity;
+        dXRotation -= mouseLook.y * mouseSensitivity;
+        dXRotation = Mathf.Clamp(dXRotation, -90, 90);
+
+        transform.rotation = Quaternion.Euler(dXRotation, dYRotation, 0f);
     }
 
     private void OnEnable()
@@ -53,5 +64,5 @@ public class MouseLook3D : MonoBehaviour
     private void OnDisable()
     {
         input.CharacterControls.Disable();
-    }
+    }*/
 }
