@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1455292150}
-  - component: {fileID: 1455292154}
   - component: {fileID: 1455292153}
   - component: {fileID: 1455292152}
   - component: {fileID: 1455292151}
@@ -35,37 +34,6 @@ Transform:
   m_Father: {fileID: 7548493108043787240}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1455292154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1455292149}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ae26e19cd956134bbdf3c6f65bf393a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UpdateTrackingType: 0
-  m_EnableInputTracking: 0
-  m_EnableInputActions: 1
-  m_ModelPrefab: {fileID: 0}
-  m_ModelParent: {fileID: 0}
-  m_Model: {fileID: 0}
-  m_AnimateModel: 0
-  m_ModelSelectTransition: 
-  m_ModelDeSelectTransition: 
-  m_ControllerNode: 4
-  m_SelectUsage: 2
-  m_ActivateUsage: 2
-  m_UIPressUsage: 2
-  m_AxisToPressThreshold: 0.2
-  m_RotateAnchorLeft: 0
-  m_RotateAnchorRight: 0
-  m_MoveObjectIn: 0
-  m_MoveObjectOut: 0
-  m_PoseProvider: {fileID: 0}
 --- !u!114 &1455292153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1457,12 +1425,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2724fca3adc2a042a23f588e328d314, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightTeleportRay: {fileID: 7548493108140603187}
-  leftTeleportRay: {fileID: 1455292154}
-  teleportActivationButton: 2
-  activationThreshhold: 0.1
-  toggleRightRayVisible: 0
-  toggleLeftRayVisible: 0
 --- !u!114 &1244227777733237198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1501,6 +1463,10 @@ MonoBehaviour:
   camVR: {fileID: 7548493106716144489}
   root3D: {fileID: 2632912369471152309}
   cam3D: {fileID: 3041394142595202736}
+  rightController: {fileID: 0}
+  rightTeleportRay: {fileID: 0}
+  leftController: {fileID: 0}
+  leftTeleportRay: {fileID: 0}
   debugVRActive: 0
   debug3DActive: 0
 --- !u!1 &7548493108043787241
@@ -1760,7 +1726,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7548493108140603191}
-  - component: {fileID: 7548493108140603187}
   - component: {fileID: 7548493108140603188}
   - component: {fileID: 7548493108140603189}
   - component: {fileID: 7548493108140603190}
@@ -1786,37 +1751,6 @@ Transform:
   m_Father: {fileID: 7548493106725990686}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7548493108140603187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7548493108140603176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ae26e19cd956134bbdf3c6f65bf393a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UpdateTrackingType: 0
-  m_EnableInputTracking: 0
-  m_EnableInputActions: 1
-  m_ModelPrefab: {fileID: 0}
-  m_ModelParent: {fileID: 0}
-  m_Model: {fileID: 0}
-  m_AnimateModel: 0
-  m_ModelSelectTransition: 
-  m_ModelDeSelectTransition: 
-  m_ControllerNode: 5
-  m_SelectUsage: 2
-  m_ActivateUsage: 2
-  m_UIPressUsage: 2
-  m_AxisToPressThreshold: 0.2
-  m_RotateAnchorLeft: 0
-  m_RotateAnchorRight: 0
-  m_MoveObjectIn: 0
-  m_MoveObjectOut: 0
-  m_PoseProvider: {fileID: 0}
 --- !u!114 &7548493108140603188
 MonoBehaviour:
   m_ObjectHideFlags: 0
