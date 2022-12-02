@@ -81,26 +81,6 @@ public class PlayerKeyboardInputScript: MonoBehaviour
     private GameObject _heldObject = null;
 
     /// <summary>
-    /// Input listener for picking up objects.
-    /// </summary>
-    private bool _pickUpObject = false;
-
-    /// <summary>
-    /// Input listener for using objects.
-    /// </summary>
-    private bool _usingObject = false;
-
-    /// <summary>
-    /// Input listener for putting down objects.
-    /// </summary>
-    private bool _putingDownObject = false;
-
-    /// <summary>
-    /// Input listener for teleporting.
-    /// </summary>
-    private bool _teleport;
-
-    /// <summary>
     /// Set to true when the couroutine DoPickUp is running.
     /// </summary>
     private bool _grabbingActive = false;
@@ -116,11 +96,10 @@ public class PlayerKeyboardInputScript: MonoBehaviour
     void Awake()
     {
         _input = new PlayerInput();
-        _input.CharacterControls.PickUp.performed += ctx => _pickUpObject = ctx.ReadValueAsButton();
-        _input.CharacterControls.Use.performed += ctx => _usingObject = ctx.ReadValueAsButton();
-        _input.CharacterControls.PutDown.performed += ctx => _putingDownObject = ctx.ReadValueAsButton();
-        _input.CharacterControls.Teleport.performed += ctx => _teleport = ctx.ReadValueAsButton();
-
+        _input.CharacterControls.PickUp.started += PickUp;//ctx => _pickUpObject = ctx.ReadValueAsButton();
+        _input.CharacterControls.Use.started += Use;//ctx => _usingObject = ctx.ReadValueAsButton();
+        _input.CharacterControls.PutDown.started += PutDown;//ctx => _putingDownObject = ctx.ReadValueAsButton();
+        _input.CharacterControls.Teleport.canceled += Teleport;//ctx => _teleport = ctx.ReadValueAsButton();
         _input.CharacterControls.MouseLook.performed += MouseLook;
         Cursor.lockState = CursorLockMode.Locked;
     }
@@ -167,43 +146,18 @@ public class PlayerKeyboardInputScript: MonoBehaviour
             UnParent(_heldObject);
             _heldObject = null; 
         }
-
         else
         {
-            if (_teleport)
-            {
-                _teleport = false;
-                Teleport();
-            }
-            else if ((_pickUpObject && !_grabbingActive && _heldObject == null))
-            {
-                _pickUpObject = false;
-                PickUp();
-            } 
-            else if (_putingDownObject  && _heldObject != null) //&& !_grabbingActive
-            {
-                _putingDownObject = false;
-                PutDown();
-            }
-            
-            else if(_usingObject) // !_grabbingActive && 
-            {
-                _usingObject = false;
-                Use();
-            } 
-            else
-            {
-                LookingAt(_activeCamera.transform.forward);
-            }
+            LookingAt(_activeCamera.transform.forward);
         }
     }
 
     /// <summary>
     /// Attempts to pick up an object in front of it with the Pickupable script and Layer.
     /// </summary>
-    private void PickUp()
+    private void PickUp(InputAction.CallbackContext args)
     {
-        if (!_grabbingActive) //&& _heldObject == null)
+        if (!_grabbingActive && _heldObject == null)
         {
             RaycastHit hit;
 
@@ -233,8 +187,12 @@ public class PlayerKeyboardInputScript: MonoBehaviour
     /// <summary>
     /// Puts down held object at location player is looking if the player is looking at a flat surface.
     /// </summary>
-    private void PutDown()
+    private void PutDown(InputAction.CallbackContext args)
     {
+        if (_heldObject == null)
+        {
+            return;
+        }
         Rigidbody targetRb = _heldObject.GetComponent<Rigidbody>();
         Pickupable heldObjScrpt = _heldObject.GetComponent<Pickupable>();
         RaycastHit hit;
@@ -295,7 +253,7 @@ public class PlayerKeyboardInputScript: MonoBehaviour
     /// <summary>
     /// Will attempt to call the Interactable script on the object the player is looking at. Passes the heldObject or hand gameobject to the Interactable script on target.
     /// </summary>
-    private void Use()
+    private void Use(InputAction.CallbackContext args)
     {
         RaycastHit hit;
         if (Physics.Raycast(_activeCamera.transform.position, _activeCamera.transform.forward, out hit, _useDistance, LayerMask.GetMask("Interactable", "Drawer", "UI"), QueryTriggerInteraction.Collide))
@@ -322,7 +280,7 @@ public class PlayerKeyboardInputScript: MonoBehaviour
     /// <summary>
     /// Teleports the player to the teleport zone if they are looking at one.
     /// </summary>
-    private void Teleport()
+    private void Teleport(InputAction.CallbackContext args)
     {
         RaycastHit hit;
         if (Physics.Raycast(_activeCamera.transform.position, _activeCamera.transform.forward, out hit, _teleportDistance, LayerMask.GetMask("Teleport"), QueryTriggerInteraction.Collide))
@@ -332,9 +290,9 @@ public class PlayerKeyboardInputScript: MonoBehaviour
                 Debug.Log("Teleporting...");
             }
 
-            _usingObject = false;
-            _putingDownObject = false;
-            _pickUpObject = false;
+            //_usingObject = false;
+            //_putingDownObject = false;
+            //_pickUpObject = false;
             transform.position = hit.collider.gameObject.transform.position;
         }
     }

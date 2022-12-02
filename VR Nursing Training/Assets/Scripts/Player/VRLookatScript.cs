@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// DEPRECATED
+
 public class VRLookatScript : MonoBehaviour
 {
-    public void OnTriggerStay(Collider other)
+    /*public void OnTriggerStay(Collider other)
     {
         if (other.gameObject.GetComponent<DetectLooks>() != null)
         {
@@ -30,5 +32,5 @@ public class VRLookatScript : MonoBehaviour
             PlayerKeyboardInputScript.TargetVector = Vector3.forward;
             PlayerKeyboardInputScript.VRLook = false;
         }
-    }
+    }*/
 }
