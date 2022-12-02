@@ -1350,7 +1350,6 @@ GameObject:
   - component: {fileID: 7548493107880779759}
   - component: {fileID: 3502992935054489499}
   - component: {fileID: 7548493107880779745}
-  - component: {fileID: 7548493107880779757}
   - component: {fileID: 1244227777733237198}
   - component: {fileID: 6653217148411578278}
   m_Layer: 0
@@ -1413,18 +1412,6 @@ MonoBehaviour:
   m_TrackingOriginMode: 2
   m_TrackingSpace: 1
   m_CameraYOffset: 1.36144
---- !u!114 &7548493107880779757
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7548493107880779748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2724fca3adc2a042a23f588e328d314, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1244227777733237198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1463,10 +1450,10 @@ MonoBehaviour:
   camVR: {fileID: 7548493106716144489}
   root3D: {fileID: 2632912369471152309}
   cam3D: {fileID: 3041394142595202736}
-  rightController: {fileID: 0}
-  rightTeleportRay: {fileID: 0}
-  leftController: {fileID: 0}
-  leftTeleportRay: {fileID: 0}
+  rightController: {fileID: 7548493106725990687}
+  rightTeleportRay: {fileID: 7548493108140603176}
+  leftController: {fileID: 7548493108043787241}
+  leftTeleportRay: {fileID: 1455292149}
   debugVRActive: 0
   debug3DActive: 0
 --- !u!1 &7548493108043787241
