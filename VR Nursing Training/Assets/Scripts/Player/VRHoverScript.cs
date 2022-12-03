@@ -11,13 +11,27 @@ public class VRHoverScript : MonoBehaviour
     private void Awake()
     {
         GetComponent<XRRayInteractor>().hoverEntered.AddListener(OnHover);
+        GetComponent<XRRayInteractor>().hoverExited.AddListener(OnHoverExit);
         inputScript = XRRigSingleton.xrs.GetComponent<PlayerKeyboardInputScript>();
     }
 
     public void OnHover(HoverEnterEventArgs args)
     {
         GameObject hoverObj = args.interactableObject.transform.gameObject;
-        inputScript.LookingAt(hoverObj.transform.position);
+        if (hoverObj.TryGetComponent<DetectLooks>(out DetectLooks script))
+        {
+            script.PlayerIsLooking();
+        }
+        //inputScript.LookingAt(hoverObj.transform.position);
         Debug.Log("HOVERING OVER OBJECT " + hoverObj.name); // For debug purposes only
+    }
+
+    public void OnHoverExit(HoverExitEventArgs args)
+    {
+        GameObject hoverObj = args.interactableObject.transform.gameObject;
+        if (hoverObj.TryGetComponent<DetectLooks>(out DetectLooks script))
+        {
+            script.PlayerStoppedLooking();
+        }
     }
 }

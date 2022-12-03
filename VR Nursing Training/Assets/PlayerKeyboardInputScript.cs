@@ -17,7 +17,7 @@ public class PlayerKeyboardInputScript: MonoBehaviour
     private GameObject _crosshair;
 
     [Tooltip("Reference to the 3D camera."), SerializeField]
-    private Camera _activeCamera;
+    public Camera _activeCamera;
 
     [Space(3), Header("Input Settings:")]
 
@@ -89,6 +89,8 @@ public class PlayerKeyboardInputScript: MonoBehaviour
     /// Coroutine delay cached.
     /// </summary>
     private WaitForEndOfFrame _EOF;
+    public bool vrActive = false;
+
 
     /// <summary>
     /// Sets references to Input System, Input Listeners, and activeCamera
@@ -146,7 +148,7 @@ public class PlayerKeyboardInputScript: MonoBehaviour
             UnParent(_heldObject);
             _heldObject = null; 
         }
-        else
+        else if (vrActive)
         {
             LookingAt(_activeCamera.transform.forward);
         }

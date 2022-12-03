@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1455292153}
   - component: {fileID: 1455292152}
   - component: {fileID: 1455292151}
+  - component: {fileID: 1133652251449391187}
   m_Layer: 11
   m_Name: Left Teleport Ray
   m_TagString: Untagged
@@ -350,6 +351,37 @@ MonoBehaviour:
   m_SnapThresholdDistance: 10
   m_Reticle: {fileID: 0}
   m_StopLineAtFirstRaycastHit: 1
+--- !u!114 &1133652251449391187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455292149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ae26e19cd956134bbdf3c6f65bf393a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UpdateTrackingType: 0
+  m_EnableInputTracking: 0
+  m_EnableInputActions: 1
+  m_ModelPrefab: {fileID: 0}
+  m_ModelParent: {fileID: 0}
+  m_Model: {fileID: 0}
+  m_AnimateModel: 0
+  m_ModelSelectTransition: 
+  m_ModelDeSelectTransition: 
+  m_ControllerNode: 5
+  m_SelectUsage: 3
+  m_ActivateUsage: 2
+  m_UIPressUsage: 2
+  m_AxisToPressThreshold: 0.1
+  m_RotateAnchorLeft: 16
+  m_RotateAnchorRight: 17
+  m_MoveObjectIn: 14
+  m_MoveObjectOut: 15
+  m_PoseProvider: {fileID: 0}
 --- !u!1 &666088062749322105
 GameObject:
   m_ObjectHideFlags: 0
@@ -1160,7 +1192,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 192
   m_InteractionLayers:
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
   m_StartingSelectedInteractable: {fileID: 0}
@@ -1427,6 +1459,7 @@ MonoBehaviour:
   _handLocation: {fileID: 3041394142401281520}
   _crosshair: {fileID: 7548493107911844023}
   _activeCamera: {fileID: 3041394142595202736}
+  _mouseSensitivity: 0.1
   _pickUpTime: 0.5
   _focusSpeed: 0.5
   _pickUpDistance: 2
@@ -1558,7 +1591,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 192
   m_InteractionLayers:
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
   m_StartingSelectedInteractable: {fileID: 0}
@@ -1716,6 +1749,7 @@ GameObject:
   - component: {fileID: 7548493108140603188}
   - component: {fileID: 7548493108140603189}
   - component: {fileID: 7548493108140603190}
+  - component: {fileID: 316850384428236613}
   m_Layer: 11
   m_Name: Right Teleport Ray
   m_TagString: Untagged
@@ -2054,6 +2088,37 @@ MonoBehaviour:
   m_SnapThresholdDistance: 10
   m_Reticle: {fileID: 0}
   m_StopLineAtFirstRaycastHit: 1
+--- !u!114 &316850384428236613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7548493108140603176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ae26e19cd956134bbdf3c6f65bf393a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UpdateTrackingType: 0
+  m_EnableInputTracking: 0
+  m_EnableInputActions: 1
+  m_ModelPrefab: {fileID: 0}
+  m_ModelParent: {fileID: 0}
+  m_Model: {fileID: 0}
+  m_AnimateModel: 0
+  m_ModelSelectTransition: 
+  m_ModelDeSelectTransition: 
+  m_ControllerNode: 5
+  m_SelectUsage: 2
+  m_ActivateUsage: 2
+  m_UIPressUsage: 2
+  m_AxisToPressThreshold: 0.1
+  m_RotateAnchorLeft: 16
+  m_RotateAnchorRight: 17
+  m_MoveObjectIn: 14
+  m_MoveObjectOut: 15
+  m_PoseProvider: {fileID: 0}
 --- !u!1001 &7548493106881633762
 PrefabInstance:
   m_ObjectHideFlags: 0
