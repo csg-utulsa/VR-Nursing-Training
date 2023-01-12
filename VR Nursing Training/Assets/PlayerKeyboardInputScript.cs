@@ -16,8 +16,8 @@ public class PlayerKeyboardInputScript: MonoBehaviour
     [Tooltip("Canvas with crosshair"), SerializeField]
     private GameObject _crosshair;
 
-    [Tooltip("Reference to the 3D camera."), SerializeField]
-    public Camera _activeCamera;
+    [Tooltip("Reference to the active camera."), SerializeField]
+    private Camera _activeCamera;
 
     [Space(3), Header("Input Settings:")]
 
@@ -89,7 +89,11 @@ public class PlayerKeyboardInputScript: MonoBehaviour
     /// Coroutine delay cached.
     /// </summary>
     private WaitForEndOfFrame _EOF;
-    public bool vrActive = false;
+
+    /// <summary>
+    /// Set true if XRRigSingleton has vr active
+    /// </summary>
+    private bool vrActive;
 
 
     /// <summary>
@@ -116,6 +120,13 @@ public class PlayerKeyboardInputScript: MonoBehaviour
         {
             Destroy(_heldObject);
         }
+        var xRRigSingleton = XRRigSingleton.xrs;
+        vrActive = xRRigSingleton.getVRActive();
+        if (vrActive)
+        {
+            _activeCamera = xRRigSingleton.getActiveCamera();
+        }
+        
     }
 
     /// <summary>
@@ -148,7 +159,7 @@ public class PlayerKeyboardInputScript: MonoBehaviour
             UnParent(_heldObject);
             _heldObject = null; 
         }
-        else if (vrActive)
+        else if (!vrActive)
         {
             LookingAt(_activeCamera.transform.forward);
         }
