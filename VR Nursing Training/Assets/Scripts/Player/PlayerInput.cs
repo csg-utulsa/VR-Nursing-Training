@@ -154,6 +154,15 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pickup"",
+                    ""type"": ""Button"",
+                    ""id"": ""cec7edcf-a79e-46c9-8f64-527a8dba3320"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -165,6 +174,39 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Teleport"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0814bcf9-03dd-4f63-832d-044a6b47d5d7"",
+                    ""path"": ""<XRController>{LeftHand}/triggerButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pickup"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""20a934fd-e64a-4976-a496-963c7dcf1b10"",
+                    ""path"": ""<XRController>{RightHand}/triggerButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pickup"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""193798d7-356a-4683-99de-29b585b9780f"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pickup"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -183,6 +225,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         // CharacterControlsVR
         m_CharacterControlsVR = asset.FindActionMap("CharacterControlsVR", throwIfNotFound: true);
         m_CharacterControlsVR_Teleport = m_CharacterControlsVR.FindAction("Teleport", throwIfNotFound: true);
+        m_CharacterControlsVR_Pickup = m_CharacterControlsVR.FindAction("Pickup", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -308,11 +351,13 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
     private readonly InputActionMap m_CharacterControlsVR;
     private ICharacterControlsVRActions m_CharacterControlsVRActionsCallbackInterface;
     private readonly InputAction m_CharacterControlsVR_Teleport;
+    private readonly InputAction m_CharacterControlsVR_Pickup;
     public struct CharacterControlsVRActions
     {
         private @PlayerInput m_Wrapper;
         public CharacterControlsVRActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @Teleport => m_Wrapper.m_CharacterControlsVR_Teleport;
+        public InputAction @Pickup => m_Wrapper.m_CharacterControlsVR_Pickup;
         public InputActionMap Get() { return m_Wrapper.m_CharacterControlsVR; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -325,6 +370,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @Teleport.started -= m_Wrapper.m_CharacterControlsVRActionsCallbackInterface.OnTeleport;
                 @Teleport.performed -= m_Wrapper.m_CharacterControlsVRActionsCallbackInterface.OnTeleport;
                 @Teleport.canceled -= m_Wrapper.m_CharacterControlsVRActionsCallbackInterface.OnTeleport;
+                @Pickup.started -= m_Wrapper.m_CharacterControlsVRActionsCallbackInterface.OnPickup;
+                @Pickup.performed -= m_Wrapper.m_CharacterControlsVRActionsCallbackInterface.OnPickup;
+                @Pickup.canceled -= m_Wrapper.m_CharacterControlsVRActionsCallbackInterface.OnPickup;
             }
             m_Wrapper.m_CharacterControlsVRActionsCallbackInterface = instance;
             if (instance != null)
@@ -332,6 +380,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @Teleport.started += instance.OnTeleport;
                 @Teleport.performed += instance.OnTeleport;
                 @Teleport.canceled += instance.OnTeleport;
+                @Pickup.started += instance.OnPickup;
+                @Pickup.performed += instance.OnPickup;
+                @Pickup.canceled += instance.OnPickup;
             }
         }
     }
@@ -347,5 +398,6 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
     public interface ICharacterControlsVRActions
     {
         void OnTeleport(InputAction.CallbackContext context);
+        void OnPickup(InputAction.CallbackContext context);
     }
 }
