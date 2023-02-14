@@ -318,6 +318,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   m_InteractionLayers:
     m_Bits: 4294967295
+  m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
@@ -378,8 +379,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_AttachTransform: {fileID: 7126211709819787637}
+  m_UseDynamicAttach: 0
+  m_MatchAttachPosition: 1
+  m_MatchAttachRotation: 1
+  m_SnapToColliderVolume: 1
   m_AttachEaseInTime: 0.15
-  m_MovementType: 2
+  m_MovementType: 0
   m_VelocityDamping: 1
   m_VelocityScale: 1
   m_AngularVelocityDamping: 1
@@ -426,39 +431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bd43063534b3924eb5caef959443d75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onPickup:
-    m_PersistentCalls:
-      m_Calls: []
-  onDrop:
-    m_PersistentCalls:
-      m_Calls: []
-  onCombine:
-    m_PersistentCalls:
-      m_Calls: []
-  interactEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  cursorHighlight:
-    m_PersistentCalls:
-      m_Calls: []
-  lookHighlight:
-    m_PersistentCalls:
-      m_Calls: []
-  initialPosition: {x: 0, y: 0, z: 0}
-  initialAngles: {x: 0, y: 0, z: 0}
-  material: {fileID: 0}
-  combineMaterial: {fileID: 0}
-  layer:
-    serializedVersion: 2
-    m_Bits: 0
-  targets: []
-  combineDist: 0
-  isInteractable: 0
   type: 
-  interactWithHand: 1
-  focusOnPickup: 1
-  distanceFromCamera: 0.4
-  focusAngles: {x: 180, y: 0, z: -90}
 --- !u!114 &1311916332575552712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -477,6 +450,12 @@ MonoBehaviour:
   useCustomDropRotation: 0
   StartPosition: {x: 0, y: 0, z: 0}
   StartRotation: {x: 0, y: 0, z: 0}
+  onPickUp:
+    m_PersistentCalls:
+      m_Calls: []
+  onPutDown:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3226178464861739637
 GameObject:
   m_ObjectHideFlags: 0
