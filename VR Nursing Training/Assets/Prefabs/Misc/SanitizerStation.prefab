@@ -54,7 +54,7 @@ GameObject:
   - component: {fileID: 7203526046684347749}
   - component: {fileID: 1120106647544716631}
   - component: {fileID: 7246323075810801663}
-  m_Layer: 4
+  m_Layer: 13
   m_Name: Sanitizer Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,6 +118,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   BubbleAnimation: {fileID: 5767977863948766815}
+  inactiveTeles: []
 --- !u!1 &8453186518924561673
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a73cd8da96996145abf9a252eb27fe4, type: 3}
+  m_Name: Ibuprofen
+  m_EditorClassIdentifier: 
+  medicineName: IBUPROFEN
+  prefab: {fileID: 7225212631360577804, guid: 95f9518b31d3f544383c26958ef83e51, type: 3}
+  dispensedMedicine: {fileID: 11400000, guid: b7da5afc8391d804ca4736267c08923c, type: 2}
+  doDispense: 1
+  dosage: -1
+  dispenseCount: 30
+  medicineType: 2
+  isRoot: 1
+  isDynamic: 0

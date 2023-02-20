@@ -21,11 +21,12 @@ TagManager:
   - MenuPanel
   - MedLabel
   - Sharpie
+  - Button
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - ResetButton
+  - GeneralButton
   - Water
   - UI
   - Pickupable
@@ -35,8 +36,8 @@ TagManager:
   - Hands
   - TeleportBeam
   - HeadsUp
-  - 
-  - 
+  - Interactable
+  - DetectLooks
   - 
   - 
   - 
