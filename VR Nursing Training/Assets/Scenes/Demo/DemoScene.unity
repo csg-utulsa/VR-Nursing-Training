@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -26394,6 +26394,11 @@ PrefabInstance:
       propertyPath: onPour.m_PersistentCalls.m_Calls.Array.data[7].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Transform, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2796096591273297155, guid: aa48dfa2edb40ea409c8609706b3f1c9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 60c500a33c69fe64d96f4eae3d3bf155, type: 2}
     - target: {fileID: 2796096591748828369, guid: aa48dfa2edb40ea409c8609706b3f1c9,
         type: 3}
       propertyPath: interactEvent.m_PersistentCalls.m_Calls.Array.size
@@ -26574,6 +26579,21 @@ PrefabInstance:
       propertyPath: interactEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4031579057425420675, guid: aa48dfa2edb40ea409c8609706b3f1c9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a68c1fa8802a5b04998a86312d0bc0a2, type: 2}
+    - target: {fileID: 4280307460678648045, guid: aa48dfa2edb40ea409c8609706b3f1c9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4280307461734704191, guid: aa48dfa2edb40ea409c8609706b3f1c9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 088a9d4ff905bef48b7fd3dd5784e721, type: 2}
     - target: {fileID: 4280307461941800429, guid: aa48dfa2edb40ea409c8609706b3f1c9,
         type: 3}
       propertyPath: interactEvent.m_PersistentCalls.m_Calls.Array.size
@@ -26754,6 +26774,11 @@ PrefabInstance:
       propertyPath: interactEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 5405118732214760914, guid: aa48dfa2edb40ea409c8609706b3f1c9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f04627f375f1c614290c0eacc1146609, type: 2}
     - target: {fileID: 8595443485652910532, guid: aa48dfa2edb40ea409c8609706b3f1c9,
         type: 3}
       propertyPath: m_RootOrder
