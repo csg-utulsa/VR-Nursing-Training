@@ -29,6 +29,7 @@ Transform:
   m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
   m_LocalPosition: {x: -0.000389, y: 0, z: 0.00001}
   m_LocalScale: {x: 0.0002142063, y: 0.000001, z: 0.00027641698}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 160511641662098844}
   m_Father: {fileID: 1670753191565138576}
@@ -53,6 +54,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -92,7 +94,7 @@ MeshCollider:
   m_GameObject: {fileID: 828513968637097228}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -125,6 +127,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.00097, y: 0.00097, z: 0.001}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 160511641662098844}
   m_RootOrder: 0
@@ -191,6 +194,7 @@ GameObject:
   - component: {fileID: 1199378420013366645}
   - component: {fileID: 1199378420013366641}
   - component: {fileID: 1199378420013366643}
+  - component: {fileID: 1311916332575552712}
   m_Layer: 6
   m_Name: ClipboardBody
   m_TagString: Untagged
@@ -208,6 +212,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6135846482362399466}
   - {fileID: 7126211709819787637}
@@ -233,6 +238,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -310,6 +316,10 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
+  m_InteractionLayers:
+    m_Bits: 4294967295
+  m_DistanceCalculationMode: 1
+  m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
     m_PersistentCalls:
@@ -321,6 +331,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
     m_PersistentCalls:
       m_Calls: []
   m_SelectEntered:
@@ -363,8 +379,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_AttachTransform: {fileID: 7126211709819787637}
+  m_UseDynamicAttach: 0
+  m_MatchAttachPosition: 1
+  m_MatchAttachRotation: 1
+  m_SnapToColliderVolume: 1
   m_AttachEaseInTime: 0.15
-  m_MovementType: 2
+  m_MovementType: 0
   m_VelocityDamping: 1
   m_VelocityScale: 1
   m_AngularVelocityDamping: 1
@@ -411,33 +431,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bd43063534b3924eb5caef959443d75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onCombine:
-    m_PersistentCalls:
-      m_Calls: []
-  interactEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  cursorHighlight:
-    m_PersistentCalls:
-      m_Calls: []
-  lookHighlight:
-    m_PersistentCalls:
-      m_Calls: []
-  initialPosition: {x: 0, y: 0, z: 0}
-  initialAngles: {x: 0, y: 0, z: 0}
-  material: {fileID: 0}
-  combineMaterial: {fileID: 0}
-  layer:
-    serializedVersion: 2
-    m_Bits: 0
-  targets: []
-  combineDist: 0
-  isInteractable: 0
   type: 
-  interactWithHand: 1
+--- !u!114 &1311916332575552712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045871732776452138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7941497a3b0ad10489045e1983f5a52d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   focusOnPickup: 1
-  distanceFromCamera: 0.4
-  focusAngles: {x: 180, y: 0, z: -90}
+  pickUpAngle: {x: 180, y: 0, z: -90}
+  CustomDropRotation: {x: 0, y: 0, z: 0}
+  useCustomDropRotation: 0
+  StartPosition: {x: 0, y: 0, z: 0}
+  StartRotation: {x: 0, y: 0, z: 0}
+  onPickUp:
+    m_PersistentCalls:
+      m_Calls: []
+  onPutDown:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3226178464861739637
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,6 +485,7 @@ RectTransform:
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3992502275750097393}
   m_Father: {fileID: 6135846482362399466}
@@ -564,6 +583,7 @@ Transform:
   m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
   m_LocalPosition: {x: -0.00093, y: -0.001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1670753191565138576}
   m_RootOrder: 1
@@ -595,6 +615,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 1.7634718, y: 5.996414, z: -1.045071}
   m_LocalScale: {x: 100.00003, y: 100.00003, z: 100}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1670753191565138576}
   m_Father: {fileID: 0}

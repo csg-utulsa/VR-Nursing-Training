@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class CheckComplete : MonoBehaviour
 {
@@ -10,10 +11,13 @@ public class CheckComplete : MonoBehaviour
     [SerializeField] private Objective[] failObjectives;
     [SerializeField] private GameObject checkmark;
     [SerializeField] private GameObject failmark;
-
+    [SerializeField] private GameObject TeleportSet1;
+    [SerializeField] private GameObject TeleportSet2;
     [SerializeField] private GameObject reportObject;
     [SerializeField] private GameObject reportText;
     [SerializeField] private ScenarioStart scenarioParent;
+    [SerializeField] private GameObject nextRoomButton;
+    public UnityEvent eventsOnComplete;
     Text text;
 
     private bool noSkips = true;
@@ -46,6 +50,12 @@ public class CheckComplete : MonoBehaviour
                     if (noSkips)
                     {
                         if (checkmark != null) checkmark.SetActive(true);
+                        eventsOnComplete.Invoke();
+                        if (TeleportSet1)
+                        {
+                            TeleportSet1.SetActive(false);
+                            TeleportSet2.SetActive(true);
+                        }
                     }
                     else
                     {
@@ -54,6 +64,7 @@ public class CheckComplete : MonoBehaviour
 
                     if (reportObject != null) reportObject.SetActive(true);
                     if (reportText != null) text.text = scenarioParent.getReport();
+                    if (nextRoomButton != null) nextRoomButton.SetActive(true);
                     scenarioParent.stopNodes();
                 }
             }

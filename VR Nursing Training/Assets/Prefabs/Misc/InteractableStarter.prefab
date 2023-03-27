@@ -32,6 +32,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -55,6 +56,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -113,22 +115,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bd43063534b3924eb5caef959443d75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isInteractable: 0
-  initialPosition: {x: 0, y: 0, z: 0}
-  initialAngles: {x: 0, y: 0, z: 0}
-  targets:
-  - {fileID: 0}
-  - {fileID: 0}
-  material: {fileID: 0}
-  layer:
-    serializedVersion: 2
-    m_Bits: 64
-  combineMaterial: {fileID: 0}
-  combineDist: 0.2
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+  onDrop:
+    m_PersistentCalls:
+      m_Calls: []
   onCombine:
     m_PersistentCalls:
       m_Calls: []
+  interactEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  cursorHighlight:
+    m_PersistentCalls:
+      m_Calls: []
+  lookHighlight:
+    m_PersistentCalls:
+      m_Calls: []
+  initialPosition: {x: 0, y: 0, z: 0}
+  initialAngles: {x: 0, y: 0, z: 0}
+  material: {fileID: 0}
+  combineMaterial: {fileID: 0}
+  layer:
+    serializedVersion: 2
+    m_Bits: 64
+  targets:
+  - {fileID: 0}
+  - {fileID: 0}
+  combineDist: 0.2
+  isInteractable: 0
   type: 
+  interactWithHand: 1
+  focusOnPickup: 0
+  distanceFromCamera: 0.5
+  focusAngles: {x: 0, y: 0, z: 0}
 --- !u!114 &4300527510234720419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,6 +167,9 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 64
+  m_InteractionLayers:
+    m_Bits: 64
+  m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
     m_PersistentCalls:
@@ -157,6 +181,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
     m_PersistentCalls:
       m_Calls: []
   m_SelectEntered:

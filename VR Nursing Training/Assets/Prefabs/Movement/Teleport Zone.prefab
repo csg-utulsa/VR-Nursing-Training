@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2863926140449629690
 Transform:
   m_ObjectHideFlags: 0
@@ -28,10 +28,11 @@ Transform:
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 500, y: 500, z: 50000}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3020837054581837955}
   m_Father: {fileID: 7167235546179536697}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1157827748534397535
 MeshFilter:
@@ -52,6 +53,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -111,6 +113,7 @@ RectTransform:
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: 0, y: 0, z: 0.0008259997}
   m_LocalScale: {x: 0.000009, y: 0.0000045, z: 0.000009}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8596271466084293927}
   m_Father: {fileID: 2863926140449629690}
@@ -182,51 +185,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!1 &6604012450064258848
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 906950886774177355}
-  - component: {fileID: 3814434698817980798}
-  m_Layer: 8
-  m_Name: Transparent Layer
-  m_TagString: Teleport
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &906950886774177355
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6604012450064258848}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 55, z: 0}
-  m_LocalScale: {x: 1, y: 66.090355, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7167235546179536697}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &3814434698817980798
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6604012450064258848}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 1.277404
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: -0.36130148, z: -0.00000011920929}
 --- !u!1 &7374765911677010040
 GameObject:
   m_ObjectHideFlags: 0
@@ -255,6 +213,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3020837054581837955}
   m_RootOrder: 0
@@ -294,8 +253,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Teleport Zone
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -375,6 +334,8 @@ GameObject:
   - component: {fileID: 441075861359207125}
   - component: {fileID: 6700605892293357319}
   - component: {fileID: 7643818197759861378}
+  - component: {fileID: 1433991085434450544}
+  - component: {fileID: 9012095343520398983}
   m_Layer: 8
   m_Name: Teleport Zone
   m_TagString: Teleport
@@ -392,8 +353,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.078, z: 0}
   m_LocalScale: {x: 0.5, y: 0.022589, z: 0.5}
+  m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 906950886774177355}
   - {fileID: 2863926140449629690}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -417,6 +378,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -464,6 +426,10 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 256
+  m_InteractionLayers:
+    m_Bits: 256
+  m_DistanceCalculationMode: 1
+  m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
     m_PersistentCalls:
@@ -499,6 +465,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
     m_PersistentCalls:
       m_Calls: []
   m_SelectEntered:
@@ -543,6 +515,9 @@ MonoBehaviour:
   m_TeleportationProvider: {fileID: 0}
   m_MatchOrientation: 0
   m_TeleportTrigger: 0
+  m_Teleporting:
+    m_PersistentCalls:
+      m_Calls: []
   m_TeleportAnchorTransform: {fileID: 7167235546179536697}
 --- !u!114 &6700605892293357319
 MonoBehaviour:
@@ -571,6 +546,67 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ab793844aa91de428a453842696b3a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onTeleport:
+  onTeleportEnter:
     m_PersistentCalls:
       m_Calls: []
+  onTeleportExit:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1433991085434450544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8242107070829370906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88bc8af11d043674d84e33c9b1808352, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lookStarted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6700605892293357319}
+        m_TargetAssemblyTypeName: TeleportIndicatorScript, Assembly-CSharp
+        m_MethodName: indicatorActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  lookStopped:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6700605892293357319}
+        m_TargetAssemblyTypeName: TeleportIndicatorScript, Assembly-CSharp
+        m_MethodName: indicatorActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  lookTime: 0.25
+  debugging: 0
+--- !u!136 &9012095343520398983
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8242107070829370906}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.54
+  m_Height: 126.7
+  m_Direction: 1
+  m_Center: {x: 0, y: 40, z: 0}
