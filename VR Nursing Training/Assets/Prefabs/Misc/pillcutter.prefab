@@ -26,6 +26,7 @@ Transform:
   m_LocalRotation: {x: -0, y: 0.7660445, z: -0, w: 0.64278764}
   m_LocalPosition: {x: 0.0008097787, y: 0.04002675, z: -0.028955944}
   m_LocalScale: {x: 0.32728288, y: 0.32728294, z: 0.32728288}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3179222565389782532}
   m_RootOrder: 4
@@ -57,6 +58,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5470966209818815219}
   m_RootOrder: 0
@@ -102,6 +104,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3179222565389782532}
   m_RootOrder: 3
@@ -133,7 +136,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disableTriggerFunctionality: 0
   debugging: 0
-  pill: {fileID: 2276514548419805056, guid: 1bc346026eafb9040bf9e30a007a9580, type: 3}
+  allowedDispensers: 02000000
+  SpawnLoc: {fileID: 0}
   onSpawn:
     m_PersistentCalls:
       m_Calls:
@@ -209,8 +213,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  patchNitro: {fileID: 4816892652931515861, guid: 034b5bc6e25549d4a8f1e761c7819922,
-    type: 3}
 --- !u!1 &275248530143692066
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,6 +242,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 0.100000024, y: 0.100000024, z: 0.100000024}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 728116884}
   m_Father: {fileID: 3179222565389782532}
@@ -264,6 +267,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -317,9 +321,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 11510738142742926}
-  - component: {fileID: 7080492712890518086}
   - component: {fileID: 4842687221378738548}
   - component: {fileID: 7622908927695559498}
+  - component: {fileID: 665299995395187666}
   m_Layer: 13
   m_Name: Pill Cutter Trigger
   m_TagString: PillCutter
@@ -337,45 +341,11 @@ Transform:
   m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
   m_LocalPosition: {x: -0.0002, y: 0.0552, z: -0.0565}
   m_LocalScale: {x: 0.009054997, y: 0.024999999, z: 0.003988135}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3179222565389782532}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
---- !u!114 &7080492712890518086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 554788872845645819}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ce76f69307ce4c42b510982a0a60bc4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  disableTriggerFunctionality: 0
-  debugging: 0
-  topHalfPill: {fileID: 928747300338365511, guid: c042b9cacf3d65f449200aced09f9e72,
-    type: 3}
-  bottomHalfPill: {fileID: 7965732120258267213, guid: 9c167991378303144ba1bd79095fa66d,
-    type: 3}
-  spawnLocation: {fileID: 651199415}
-  onCut:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4842687221378738548}
-        m_TargetAssemblyTypeName: ActionBase, Assembly-CSharp
-        m_MethodName: performAction
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  type: 
 --- !u!114 &4842687221378738548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -401,6 +371,37 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 1, z: 10.000001}
   m_Center: {x: 0, y: 0.026694106, z: 0.000000021317517}
+--- !u!114 &665299995395187666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554788872845645819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34ede401f7faf6a48a85f6444938752a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disableTriggerFunctionality: 0
+  debugging: 0
+  allowedDispensers: 04000000
+  SpawnLoc: {fileID: 651199416}
+  onSpawn:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4842687221378738548}
+        m_TargetAssemblyTypeName: ActionBase, Assembly-CSharp
+        m_MethodName: performAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2834187726843450558
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,6 +428,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0.78263915, y: 6.1499996, z: 2.030703}
   m_LocalScale: {x: 3.05546, y: 3.05546, z: 3.05546}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5470966209818815219}
   - {fileID: 3505031374672658132}
@@ -465,6 +467,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071067}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 0.011813296, y: 0.011813296, z: 0.011813296}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3179222565389782532}
   m_RootOrder: 1
@@ -488,6 +491,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1

@@ -90,7 +90,7 @@ public class MedicineData : MonoBehaviour
     }
 
     /// <summary>
-    /// Dispenses medicine for this obj
+    /// Dispenses single medicine for this obj
     /// </summary>
     /// <param name="pos">position</param>
     /// <param name="rot">rotation</param>
@@ -128,6 +128,36 @@ public class MedicineData : MonoBehaviour
         
         // Container is out of medication
         return null;
+    }
+
+    /// <summary>
+    /// Dispenses a default amount of objects for this obj
+    /// </summary>
+    /// <param name="pos">position</param>
+    /// <param name="rot">rotation</param>
+    /// <returns> Array of GameObjects that it dispensed OR null if object is unable to dispense</returns>
+    public GameObject[] dispenseObjects(Vector3 pos, Quaternion rot)
+    {
+        return dispenseObjects(pos, rot, medicineScriptableObj.amntPerDispense);
+    }
+
+    /// <summary>
+    /// Dispenses a given amount of objects for this obj
+    /// </summary>
+    /// <param name="pos">position</param>
+    /// <param name="rot">rotation</param>
+    /// <param name="dispenseAmnt">how many objects to spawn</param>
+    /// <returns> Array of GameObjects that it dispensed OR null if object is unable to dispense</returns>
+    public GameObject[] dispenseObjects(Vector3 pos, Quaternion rot, int dispenseAmnt)
+    {
+        GameObject[] dispensedObjects = new GameObject[dispenseAmnt];
+
+        for (int i = 0; i < dispenseAmnt; i++)
+        {
+            dispensedObjects[i] = dispenseObject(pos, rot);
+        }
+        return dispensedObjects;
+
     }
 
     /// <summary>

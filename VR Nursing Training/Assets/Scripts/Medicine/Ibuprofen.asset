@@ -18,6 +18,7 @@ MonoBehaviour:
   doDispense: 1
   dosage: -1
   dispenseCount: 30
+  amntPerDispense: 3
   medicineType: 2
   isRoot: 1
   isDynamic: 0
