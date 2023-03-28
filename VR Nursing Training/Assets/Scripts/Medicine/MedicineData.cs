@@ -138,14 +138,7 @@ public class MedicineData : MonoBehaviour
     /// <returns> Array of GameObjects that it dispensed OR null if object is unable to dispense</returns>
     public GameObject[] dispenseObjects(Vector3 pos, Quaternion rot)
     {
-        GameObject[] dispensedObjects = new GameObject[medicineScriptableObj.amntPerDispense];
-
-        for (int i = 0; i < medicineScriptableObj.amntPerDispense; i++)
-        {
-            dispensedObjects[i] = dispenseObject(pos, rot);
-        }
-        return dispensedObjects;
-
+        return dispenseObjects(pos, rot, medicineScriptableObj.amntPerDispense);
     }
 
     /// <summary>
