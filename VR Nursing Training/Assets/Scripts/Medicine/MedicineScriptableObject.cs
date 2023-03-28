@@ -57,6 +57,11 @@ public class MedicineScriptableObject : ScriptableObject
     [HideInInspector] public float dispenseCount = 0;
 
     /// <summary>
+    /// Amount of objects this object dispenses per use
+    /// </summary>
+    [HideInInspector] public int amntPerDispense = 1;
+
+    /// <summary>
     /// Medicine type for this gameObject
     /// </summary>
     public MedicineTypes medicineType;
@@ -149,6 +154,10 @@ public class MedicineCustomEditor: Editor
                 EditorGUILayout.HelpBox("\"dispenseCount\" Must Be > 0 for the medicine type " + obj.medicineType,MessageType.Warning);
                 EditorGUILayout.Space(fieldSpace);
             }
+
+            // Display input box for amntPerDispense
+            obj.amntPerDispense = EditorGUILayout.IntField("Objects Dispensed Per Use", obj.amntPerDispense);
+
         } 
 
         // Check if the medicineType is submittable ex. pill, patch, halfpill, liquidcup

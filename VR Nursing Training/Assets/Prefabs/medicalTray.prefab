@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1320710364320908192
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7390861347796980851}
+  m_Layer: 13
+  m_Name: MedicineSpawnPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7390861347796980851
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320710364320908192}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.05}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9074716951946168687}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8548973731551630293
 GameObject:
   m_ObjectHideFlags: 0
@@ -11,7 +42,10 @@ GameObject:
   - component: {fileID: 9074716951946168687}
   - component: {fileID: 5350282308596827850}
   - component: {fileID: 7900705866807538176}
-  m_Layer: 0
+  - component: {fileID: 1597074542584901607}
+  - component: {fileID: 3270282181548174133}
+  - component: {fileID: 4169316592404491019}
+  m_Layer: 13
   m_Name: medicalTray
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,9 +61,10 @@ Transform:
   m_GameObject: {fileID: 8548973731551630293}
   m_LocalRotation: {x: -0.7071067, y: -0.000000030908616, z: 0.000000030908623, w: 0.7071068}
   m_LocalPosition: {x: 6.1672907, y: 3.9933596, z: 3.7881873}
-  m_LocalScale: {x: 50, y: 75, z: 10}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_LocalScale: {x: 10, y: 15, z: 2}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 7390861347796980851}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -83,3 +118,49 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1597074542584901607
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8548973731551630293}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0175, y: 0.0175, z: 0.025}
+  m_Center: {x: 0, y: 0, z: 0.0125}
+--- !u!64 &3270282181548174133
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8548973731551630293}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5495902117074765545, guid: 28a4fdb65c6bd4a408348570e22346c5, type: 3}
+--- !u!114 &4169316592404491019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8548973731551630293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34ede401f7faf6a48a85f6444938752a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disableTriggerFunctionality: 0
+  debugging: 0
+  allowedDispensers: 0200000010000000
+  SpawnLoc: {fileID: 7390861347796980851}
+  onSpawn:
+    m_PersistentCalls:
+      m_Calls: []
