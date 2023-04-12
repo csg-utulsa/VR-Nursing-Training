@@ -13,16 +13,15 @@
 
 
 // 0x00000001 System.Void UnityEngine.XR.OpenXR.Features.OculusQuestSupport.OculusQuestFeature::.ctor()
-extern void OculusQuestFeature__ctor_m4970DAE3DE765F70C8353B4B0523C844AA9A62FF (void);
+extern void OculusQuestFeature__ctor_mF38393F1A5FA04C3AF781D82EC58A4CBB9D85AA2 (void);
 static Il2CppMethodPointer s_methodPointers[1] = 
 {
-	OculusQuestFeature__ctor_m4970DAE3DE765F70C8353B4B0523C844AA9A62FF,
+	OculusQuestFeature__ctor_mF38393F1A5FA04C3AF781D82EC58A4CBB9D85AA2,
 };
 static const int32_t s_InvokerIndices[1] = 
 {
-	2823,
+	4839,
 };
-extern const CustomAttributesCacheGenerator g_Unity_XR_OpenXR_Features_OculusQuestSupport_AttributeGenerators[];
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Unity_XR_OpenXR_Features_OculusQuestSupport_CodeGenModule;
 const Il2CppCodeGenModule g_Unity_XR_OpenXR_Features_OculusQuestSupport_CodeGenModule = 
 {
@@ -39,7 +38,6 @@ const Il2CppCodeGenModule g_Unity_XR_OpenXR_Features_OculusQuestSupport_CodeGenM
 	0,
 	NULL,
 	NULL,
-	g_Unity_XR_OpenXR_Features_OculusQuestSupport_AttributeGenerators,
 	NULL, // module initializer,
 	NULL,
 	NULL,

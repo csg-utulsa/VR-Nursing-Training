@@ -12,1469 +12,2162 @@
 
 
 
-// 0x00000001 System.Void DrawerScript3D::Start()
-extern void DrawerScript3D_Start_m60D5FD035FB9242BEF4CB875276E3E89E754FF1D (void);
-// 0x00000002 System.Void DrawerScript3D::Interact(UnityEngine.Collider)
-extern void DrawerScript3D_Interact_m8A697A7DE8278E3C7E60D6DE5B3939B8870A18FD (void);
-// 0x00000003 System.Void DrawerScript3D::.ctor()
-extern void DrawerScript3D__ctor_m40A2C2A4078D266512834A739B60C2FEE1B1D1CB (void);
-// 0x00000004 System.Void InteractableDialogBtn::CursorHighlight()
-extern void InteractableDialogBtn_CursorHighlight_m15CB1410CAFF6D26C58693755F59A3C2CA5FD9D8 (void);
-// 0x00000005 System.Void InteractableDialogBtn::LookHighlight()
-extern void InteractableDialogBtn_LookHighlight_m35FAE8580EDB75ACE437ECCB9905499A62009BB0 (void);
-// 0x00000006 System.Void InteractableDialogBtn::CursorInteract()
-extern void InteractableDialogBtn_CursorInteract_m43A9B5EE739216DAC6F524E6791D84AC77192DE1 (void);
-// 0x00000007 System.Boolean InteractableDialogBtn::canInteractWithHand()
-extern void InteractableDialogBtn_canInteractWithHand_m4CCD091E8E002CF9575219AAE902927935CC286C (void);
-// 0x00000008 System.Void InteractableDialogBtn::highlight()
-extern void InteractableDialogBtn_highlight_m7AB6B4E0F1A0D29374087D2DD0577A2A0D7EE95D (void);
-// 0x00000009 System.Void InteractableDialogBtn::select()
-extern void InteractableDialogBtn_select_m36F080E7A731C9E35D650C333EEB9B8021F5BF63 (void);
-// 0x0000000A System.Void InteractableDialogBtn::Start()
-extern void InteractableDialogBtn_Start_mD1B124AF37FA882381BAC6449EEDDE1536F6E319 (void);
-// 0x0000000B System.Void InteractableDialogBtn::FixedUpdate()
-extern void InteractableDialogBtn_FixedUpdate_m46C9554B613EB5EF841DC25F2FF30E726FFFFD3F (void);
-// 0x0000000C System.Void InteractableDialogBtn::Interact(UnityEngine.Collider)
-extern void InteractableDialogBtn_Interact_m2005E3EAAB944C8BC9942EB0886C0AEF5C164C88 (void);
-// 0x0000000D System.Void InteractableDialogBtn::.ctor()
-extern void InteractableDialogBtn__ctor_m41FAA21ED8BC59DD1337D09A16BD835FE8FADA76 (void);
-// 0x0000000E System.Void InteractableDialogController::Start()
-extern void InteractableDialogController_Start_mD8FCD3A1B70494B968091A9CC5B9BE600B2913C9 (void);
-// 0x0000000F System.Void InteractableDialogController::Update()
-extern void InteractableDialogController_Update_m3274F0CCB16005F4B7845C556462A789FC3550A9 (void);
-// 0x00000010 System.Void InteractableDialogController::.ctor()
-extern void InteractableDialogController__ctor_m864B44B3997F65840A31AFE2E91F1EF3F407514F (void);
-// 0x00000011 System.Void InteractableTeleportEvent::TeleportInvoke()
-extern void InteractableTeleportEvent_TeleportInvoke_m379BDF2C96C8C0001D9B1194271B026676EE67D1 (void);
-// 0x00000012 System.Void InteractableTeleportEvent::.ctor()
-extern void InteractableTeleportEvent__ctor_mF1A846ADFF28F24B10730BF8C5941CE98B962D9F (void);
-// 0x00000013 System.Void MenuButtonHover::OnTriggerEnter(UnityEngine.Collider)
-extern void MenuButtonHover_OnTriggerEnter_m3DF6F6641C7E57228C19B0E65B61A8A972942425 (void);
-// 0x00000014 System.Void MenuButtonHover::OnTriggerExit(UnityEngine.Collider)
-extern void MenuButtonHover_OnTriggerExit_mADE3007408D1F7DB4B0EAD625E09D08ACD14E410 (void);
-// 0x00000015 System.Void MenuButtonHover::.ctor()
-extern void MenuButtonHover__ctor_m7A4C0E472C8969A0970ED1A54AAC619A7599485F (void);
-// 0x00000016 System.Void MenuButtonManager::Start()
-extern void MenuButtonManager_Start_mBDCBF249E22C12B125A386DA72B590A3988271FD (void);
-// 0x00000017 System.Void MenuButtonManager::BeginSimulation()
-extern void MenuButtonManager_BeginSimulation_mD94A87D98066038CB9B66166E5664BDB60FB96FF (void);
-// 0x00000018 System.Void MenuButtonManager::BeginTutorial()
-extern void MenuButtonManager_BeginTutorial_mDF4E93177798777D96C2DCF8D1AA04F76C8F9A81 (void);
-// 0x00000019 System.Void MenuButtonManager::OpenSettings()
-extern void MenuButtonManager_OpenSettings_mDB4C8C39DA4E93C8DAD1E612EE04302C5CEFAEAC (void);
-// 0x0000001A System.Void MenuButtonManager::BackToMenu()
-extern void MenuButtonManager_BackToMenu_m9FA08A938EECB78B0707FBCB7528EBAD0040CB3C (void);
-// 0x0000001B System.Void MenuButtonManager::OpenCredits()
-extern void MenuButtonManager_OpenCredits_mDF266844E30615BF5E901BDFADD962FB1459327E (void);
-// 0x0000001C System.Void MenuButtonManager::QuitGame()
-extern void MenuButtonManager_QuitGame_m509AB21FB4898BCA61EE08ABB41C328253A83EC1 (void);
-// 0x0000001D System.Void MenuButtonManager::EnableVR()
-extern void MenuButtonManager_EnableVR_m5C489853FFA78EF3BADDCD529DC0E919638C8532 (void);
-// 0x0000001E System.Void MenuButtonManager::DisableVR()
-extern void MenuButtonManager_DisableVR_mD2CC6B8E21076EEE2906F5DBA5315894B7DDAD9B (void);
-// 0x0000001F System.Void MenuButtonManager::.ctor()
-extern void MenuButtonManager__ctor_m91EF9A350F4D8691FEF13B8B38EC6AD02DB971F3 (void);
-// 0x00000020 System.Void MenuButtonManager::.cctor()
-extern void MenuButtonManager__cctor_m637741934B17E5D56139AF54A0537D87373FC4E2 (void);
-// 0x00000021 System.Void MenuButtonScript::OnTriggerEnter(UnityEngine.Collider)
-extern void MenuButtonScript_OnTriggerEnter_m7DE98D2CA37500EFE7D4369CF314037A57189A01 (void);
-// 0x00000022 System.Void MenuButtonScript::callInteract(UnityEngine.Collider)
-extern void MenuButtonScript_callInteract_mACC81552B3FDD7DBBF6BA2E71E490FADF8E93A18 (void);
-// 0x00000023 System.Void MenuButtonScript::Interact(UnityEngine.Collider)
-extern void MenuButtonScript_Interact_m3B371C379F4A35992A0C5FE910D0AABDF785A5E7 (void);
-// 0x00000024 System.Void MenuButtonScript::.ctor()
-extern void MenuButtonScript__ctor_mF861C0339224F90BDE443872F24555228BC3190E (void);
-// 0x00000025 System.Boolean Place_ScanSurface::rangerScan(UnityEngine.Vector3)
-extern void Place_ScanSurface_rangerScan_m95FFCE9E849FB281A5529BF7991F4B3C03E676B5 (void);
-// 0x00000026 System.Boolean Place_ScanSurface::placeOK()
-extern void Place_ScanSurface_placeOK_m0E8ED9FA0B7C026A2DFE86538B73AAD530DA4BA0 (void);
-// 0x00000027 System.Void Place_ScanSurface::.ctor()
-extern void Place_ScanSurface__ctor_m6969FEA08CBF3ED781F9BEE0E582AB4DEF7C0E22 (void);
-// 0x00000028 System.Void ClipboardText::Awake()
-extern void ClipboardText_Awake_m0899A0652156AE0FF88040AB49D3330561C5FCD6 (void);
-// 0x00000029 System.Void ClipboardText::.ctor()
-extern void ClipboardText__ctor_mE9DCF3DDE67EBA43EA2A7671C806869BFB7B6DA3 (void);
-// 0x0000002A System.Void DipScript2::OnTriggerEnter(UnityEngine.Collider)
-extern void DipScript2_OnTriggerEnter_mC04080F5465419D66E0C8BEE810F1ACE2BD6032A (void);
-// 0x0000002B System.Void DipScript2::Interact(UnityEngine.Collider)
-extern void DipScript2_Interact_m1392DC025D24ECAEA59C2A8A17F289BD9D85EFBF (void);
-// 0x0000002C System.Void DipScript2::.ctor()
-extern void DipScript2__ctor_m8A2793A30C275DFB3F669CE501B8B95B03CB6F6A (void);
-// 0x0000002D System.Void DipTriggerScript::OnTriggerEnter(UnityEngine.Collider)
-extern void DipTriggerScript_OnTriggerEnter_mCFBE96DF4CECF227F29C14BB1FD2FDF1A40D04E5 (void);
-// 0x0000002E System.Void DipTriggerScript::Interact(UnityEngine.GameObject)
-extern void DipTriggerScript_Interact_m328AB60F13E56105D701750D63ADD493F837AF93 (void);
-// 0x0000002F System.Void DipTriggerScript::.ctor()
-extern void DipTriggerScript__ctor_mBB5EA9C195FBB74A2670401FD72ABD4309DF405D (void);
-// 0x00000030 System.Void DosageIndicator::Awake()
-extern void DosageIndicator_Awake_mB0B3865E5BA77E2B2FE1707413DFB9A0DAF1B6AB (void);
-// 0x00000031 System.Void DosageIndicator::Update()
-extern void DosageIndicator_Update_m66CCC9080139DB9E5132598C6FF6CD8A648AB683 (void);
-// 0x00000032 System.Void DosageIndicator::.ctor()
-extern void DosageIndicator__ctor_mDE9A58B9A09D87041BEB8D2B85AA5BD4869E75D5 (void);
-// 0x00000033 System.Void ElevatorOpen::Start()
-extern void ElevatorOpen_Start_mA182B42B2177808E6C47C6EA5DFA651C52F78986 (void);
-// 0x00000034 System.Void ElevatorOpen::OpenDoor()
-extern void ElevatorOpen_OpenDoor_m6A3826D3D2750E7B722188A945B5A854A8351A4C (void);
-// 0x00000035 System.Void ElevatorOpen::.ctor()
-extern void ElevatorOpen__ctor_m7A8DF26CC9CA95C0CED2BA81B444043CB7670BD7 (void);
-// 0x00000036 System.Void EscapeScript::Update()
-extern void EscapeScript_Update_m5865E26CA156570F65C90CFFF76393BB8E3BD117 (void);
-// 0x00000037 System.Void EscapeScript::.ctor()
-extern void EscapeScript__ctor_m51EF5D58328FC6B27D8C5ABE02C0C251B5B47DDE (void);
-// 0x00000038 System.Void GroundTriggerScript::OnTriggerEnter(UnityEngine.Collider)
-extern void GroundTriggerScript_OnTriggerEnter_m7BFC340471515E9CF7580034B8F35BBD6207841A (void);
-// 0x00000039 System.Void GroundTriggerScript::.ctor()
-extern void GroundTriggerScript__ctor_m92CA9D6155A33AB4796E43823BB180B07AE08CD8 (void);
-// 0x0000003A System.Void HandPresence::Start()
-extern void HandPresence_Start_m57D3E943594E51243AFC2CF1B631FAC7642CF81F (void);
-// 0x0000003B System.Void HandPresence::Update()
-extern void HandPresence_Update_mD06E18241FAF0B0CE24CD135284469E55B5D6024 (void);
-// 0x0000003C System.Void HandPresence::.ctor()
-extern void HandPresence__ctor_m0DF9DD2FCB2762D18666B42454C47FBF1CEF883E (void);
-// 0x0000003D System.Boolean HandPresence::<Start>b__8_0(UnityEngine.GameObject)
-extern void HandPresence_U3CStartU3Eb__8_0_m7DD2BC2D5E6048DC068FE0450348C9313CA4FEEF (void);
-// 0x0000003E System.Void HoverableBase::CursorHighlight()
-// 0x0000003F System.Void HoverableBase::LookHighlight()
-// 0x00000040 System.Void HoverableBase::CursorInteract()
-// 0x00000041 System.Void HoverableCursor::Start()
-extern void HoverableCursor_Start_mE17F46DBC369CA40DDEA96769C547F8997099F08 (void);
-// 0x00000042 System.Void HoverableCursor::OnTriggerEnter(UnityEngine.Collider)
-extern void HoverableCursor_OnTriggerEnter_m52665D5BD024CB1B1BAEAD3FA6F236B6B3E6829E (void);
-// 0x00000043 System.Void HoverableCursor::OnTriggerExit(UnityEngine.Collider)
-extern void HoverableCursor_OnTriggerExit_mAF7C0157F588BC0A416C382DCEBACF7BCFBC0925 (void);
-// 0x00000044 System.Void HoverableCursor::Update()
-extern void HoverableCursor_Update_m9AC7D632A87209EFF80EE2C2A6AAD97D5BE3E3E0 (void);
-// 0x00000045 System.Boolean HoverableCursor::CheckIfActivated(UnityEngine.XR.Interaction.Toolkit.XRController)
-extern void HoverableCursor_CheckIfActivated_m4E90EF4B5D2AFD5B8433E171E475C0E9B7EFD466 (void);
-// 0x00000046 System.Void HoverableCursor::.ctor()
-extern void HoverableCursor__ctor_m1485AB6DBD8DDF920A3DAB6726C15C7EE690C15A (void);
-// 0x00000047 System.Void InteractableBase::PickupInvoke()
-extern void InteractableBase_PickupInvoke_m44E16329924C617970AC7143F31BF92C40F344D7 (void);
-// 0x00000048 System.Void InteractableBase::DropInvoke()
-extern void InteractableBase_DropInvoke_mB394A4D486B68F2F221FB3186A9BFD6101EE07ED (void);
-// 0x00000049 System.Void InteractableBase::Interact(UnityEngine.Collider)
-extern void InteractableBase_Interact_m0A0B9B596D77D77064345CA5462C3163BF60E1D7 (void);
-// 0x0000004A System.Boolean InteractableBase::canInteractWithHand()
-extern void InteractableBase_canInteractWithHand_m2FB454CB54191445EBFE4D1447DC45E702B2F2D2 (void);
-// 0x0000004B System.Void InteractableBase::.ctor()
-extern void InteractableBase__ctor_m5E54597C2130F47A86A863E9D0F24F73479A6856 (void);
-// 0x0000004C System.Void InteractableScript::CursorHighlight()
-extern void InteractableScript_CursorHighlight_m3BA76D0B687F7B98B1EB1D346D3FC725F83B584E (void);
-// 0x0000004D System.Void InteractableScript::LookHighlight()
-extern void InteractableScript_LookHighlight_m8B83A5A7BD513FA0FE069E75FA5B9E38131CDFFC (void);
-// 0x0000004E System.Void InteractableScript::CursorInteract()
-extern void InteractableScript_CursorInteract_m7BB10546E233233E63F9767A5B3BCDF451A2B166 (void);
-// 0x0000004F System.Boolean InteractableScript::canInteractWithHand()
-extern void InteractableScript_canInteractWithHand_m0478F2912D308C67C6A9A663D3CFFC81F196654B (void);
-// 0x00000050 System.Void InteractableScript::Start()
-extern void InteractableScript_Start_m7CC03A04DC73CC5AFC838769C685309F80886EB6 (void);
-// 0x00000051 System.Void InteractableScript::setTarget(UnityEngine.GameObject)
-extern void InteractableScript_setTarget_mE1BCFC141C6FF62B2ADBCECEDB1A512CD24A7779 (void);
-// 0x00000052 UnityEngine.GameObject InteractableScript::getTarget()
-extern void InteractableScript_getTarget_m6B363910AFD6FEA118EBBDDEBEF4724D198ED99E (void);
-// 0x00000053 System.Void InteractableScript::setType(System.String)
-extern void InteractableScript_setType_m251B15E41F33455C21C99871FD96B768B2D006E7 (void);
-// 0x00000054 System.String InteractableScript::getType()
-extern void InteractableScript_getType_m50E07F1AAC8FBB2B4682CA2C8F0B563C8FE1E0F1 (void);
-// 0x00000055 System.Void InteractableScript::setInteractable(System.Boolean)
-extern void InteractableScript_setInteractable_mFC333D34455E32871E43ED5BA1B7BB4D67021511 (void);
-// 0x00000056 System.Boolean InteractableScript::getisInteractable()
-extern void InteractableScript_getisInteractable_m920FE47F7F5ADD5021ADF02470DC1E3B07C5DF76 (void);
-// 0x00000057 System.Void InteractableScript::setMaterial(UnityEngine.Material)
-extern void InteractableScript_setMaterial_m83AA830F1A61A5CD432554B6A4B8826C55AA967A (void);
-// 0x00000058 UnityEngine.Material InteractableScript::getMaterial()
-extern void InteractableScript_getMaterial_m2D8FF5FB5637F036D4A47F5D218685A92CA1ED23 (void);
-// 0x00000059 System.Boolean InteractableScript::getFocusOnPickup()
-extern void InteractableScript_getFocusOnPickup_m2D0F46C230274E3D38CE145511D8E468F9B2DB84 (void);
-// 0x0000005A UnityEngine.Vector3 InteractableScript::getFocusAngles()
-extern void InteractableScript_getFocusAngles_m1CDCC74596523B1F423C3AD71995D66C01217F22 (void);
-// 0x0000005B System.Double InteractableScript::getFocusDistance()
-extern void InteractableScript_getFocusDistance_mDE01A4B60AEABD9667A6E880BA32A0F0315790E5 (void);
-// 0x0000005C System.Void InteractableScript::FixedUpdate()
-extern void InteractableScript_FixedUpdate_mE02B9F5758401772A40210AA3EACC69E9A13702D (void);
-// 0x0000005D System.Void InteractableScript::CombineObject(UnityEngine.GameObject)
-extern void InteractableScript_CombineObject_m96E0514BE1592F58D3E1026DA3834651EC191106 (void);
-// 0x0000005E System.Void InteractableScript::Interact(UnityEngine.Collider)
-extern void InteractableScript_Interact_m71B2FDFC5FE18E1F9D2C4BD186228A4F956D04B0 (void);
-// 0x0000005F System.Void InteractableScript::Reset()
-extern void InteractableScript_Reset_m2B37BED086B4CBB2719E0EBC21B464887DA2215B (void);
-// 0x00000060 System.Void InteractableScript::PlaceDown()
-extern void InteractableScript_PlaceDown_mC6673CA881ACFC3B837D4E940577002AFAD8E52F (void);
-// 0x00000061 System.Void InteractableScript::PlaceHere(UnityEngine.Vector3)
-extern void InteractableScript_PlaceHere_m8CCA0145F8F30D401DBA09262FD5BD1744620007 (void);
-// 0x00000062 System.Void InteractableScript::.ctor()
-extern void InteractableScript__ctor_m2154170B970792F736FD41A8B4925A4AD0AE9964 (void);
-// 0x00000063 System.Int32 LiquidObjectScript::getDosage()
-extern void LiquidObjectScript_getDosage_m568BF611591AC93A29F6168DDD980CE506781386 (void);
-// 0x00000064 System.Void LiquidObjectScript::setDosage(System.Int32)
-extern void LiquidObjectScript_setDosage_m404AA85AE7FA10EEAEE1F06B3E7D74FE988E9C13 (void);
-// 0x00000065 System.Void LiquidObjectScript::.ctor()
-extern void LiquidObjectScript__ctor_mC70BC2F3AA4D44212E7CF77589DF5EEC9CDBC7CD (void);
-// 0x00000066 System.Void LiquidQuestionScript::answerSelected(UnityEngine.GameObject)
-extern void LiquidQuestionScript_answerSelected_m861FC173DC8004AAD5E873D82318EE7B8C36D518 (void);
-// 0x00000067 System.Void LiquidQuestionScript::setCup(LiquidTriggerScript)
-extern void LiquidQuestionScript_setCup_m780AC8AFA0F6B224A4C30D9EAAE6CFC91B04F519 (void);
-// 0x00000068 System.Void LiquidQuestionScript::.ctor()
-extern void LiquidQuestionScript__ctor_m1EB0EC4038CCDC92DCC90D4EBAB688178D2317E9 (void);
-// 0x00000069 System.Void LiquidTriggerScript::OnTriggerEnter(UnityEngine.Collider)
-extern void LiquidTriggerScript_OnTriggerEnter_m2CFE5B3E0F545E91574F23ABDCA2100C952219C7 (void);
-// 0x0000006A System.Void LiquidTriggerScript::Interact(UnityEngine.Collider)
-extern void LiquidTriggerScript_Interact_mC88B43A693F40447CE3C29F0CB16943071AD7459 (void);
-// 0x0000006B System.Void LiquidTriggerScript::setComplete(System.Boolean)
-extern void LiquidTriggerScript_setComplete_m2B0ABCDC0AEA4A97012915E43B4538837BD7063E (void);
-// 0x0000006C System.Void LiquidTriggerScript::.ctor()
-extern void LiquidTriggerScript__ctor_mDC95EED99DB4E1E8C3EE12EAFEA3E64D4EBA041B (void);
-// 0x0000006D System.Void LoadMainScene::OnTriggerEnter(UnityEngine.Collider)
-extern void LoadMainScene_OnTriggerEnter_mFE6F499DE62F11659DC0AFE90246E7DAC25CC113 (void);
-// 0x0000006E System.Void LoadMainScene::Interact(UnityEngine.Collider)
-extern void LoadMainScene_Interact_m09B42D5ACB62726702F2515F738ECB47E3FA3FEC (void);
-// 0x0000006F System.Void LoadMainScene::.ctor()
-extern void LoadMainScene__ctor_m2C46133FEAFD828DDF6710C6226BF9EEB815A366 (void);
-// 0x00000070 System.Void LocomotionController::Update()
-extern void LocomotionController_Update_mB90F198EF2BB631E8CA39FD60080DB28279F8E72 (void);
-// 0x00000071 System.Boolean LocomotionController::CheckIfActivated(UnityEngine.XR.Interaction.Toolkit.XRController)
-extern void LocomotionController_CheckIfActivated_m02DD2DB0D5CA19A25EC01523D115548FD2A43685 (void);
-// 0x00000072 System.Void LocomotionController::.ctor()
-extern void LocomotionController__ctor_m5AA73F4FF00769A834D5732FC4BD08BDD4634BDF (void);
-// 0x00000073 System.Void MedLabelScript::Awake()
-extern void MedLabelScript_Awake_m845005B41DC700ABCF19F87CEFC004403B03A852 (void);
-// 0x00000074 System.Void MedLabelScript::Update()
-extern void MedLabelScript_Update_mDEFCFEB9040C0D6A79FCFBD656E40B26E83971B4 (void);
-// 0x00000075 System.Void MedLabelScript::labelActive(System.Boolean)
-extern void MedLabelScript_labelActive_m659BEB0CC13BF72E714F00D7C2A941321BBF5F31 (void);
-// 0x00000076 System.Void MedLabelScript::labelActiveVR(System.Boolean)
-extern void MedLabelScript_labelActiveVR_m9AE56B63B245CA1F137D7F5E1993FDE3FEB9E615 (void);
-// 0x00000077 System.Void MedLabelScript::.ctor()
-extern void MedLabelScript__ctor_m37E2B31B79A4DE2019ADC64E09D693DA8B81471B (void);
-// 0x00000078 System.Void MouseLook3D::Awake()
-extern void MouseLook3D_Awake_mC3EBA61D750DDAEC45ACAD49439B35BE6B64F999 (void);
-// 0x00000079 System.Void MouseLook3D::Start()
-extern void MouseLook3D_Start_m5EA1BE68E0FF9A1E1605E838BBE4B05D855D5215 (void);
-// 0x0000007A System.Void MouseLook3D::Update()
-extern void MouseLook3D_Update_m130BF1734C7434ED2F55A31A41EF3E576C80789E (void);
-// 0x0000007B System.Void MouseLook3D::OnEnable()
-extern void MouseLook3D_OnEnable_mA5F23F6396321205428500A50003323BDBE0A015 (void);
-// 0x0000007C System.Void MouseLook3D::OnDisable()
-extern void MouseLook3D_OnDisable_m0F3431425F135C2F36A446E8931FAC0657A2CB9F (void);
-// 0x0000007D System.Void MouseLook3D::.ctor()
-extern void MouseLook3D__ctor_m595CD6BA9F9B3A727CF6393D1CE49E13945C72DA (void);
-// 0x0000007E System.Void MouseLook3D::.cctor()
-extern void MouseLook3D__cctor_m5C58C480EADCBA225016CF538A301FCF202F668E (void);
-// 0x0000007F System.Void MouseLook3D::<Awake>b__7_0(UnityEngine.InputSystem.InputAction/CallbackContext)
-extern void MouseLook3D_U3CAwakeU3Eb__7_0_mC29F69B550768DBF3D88BFABF8F4839D9081E243 (void);
-// 0x00000080 System.Void ActionBase::performAction()
-extern void ActionBase_performAction_m79A524DAF48C92759E78D5FB7781D90BE6C9D463 (void);
-// 0x00000081 System.Void ActionBase::setObjective(Objective,System.Boolean)
-extern void ActionBase_setObjective_m1B855BB7875495D33988FABBF741C32EE7CB7508 (void);
-// 0x00000082 System.Void ActionBase::setMedicine(System.String)
-extern void ActionBase_setMedicine_mE193EDF33268331243B706E03707D4AC6A84F576 (void);
-// 0x00000083 System.Void ActionBase::setDosage(System.Double)
-extern void ActionBase_setDosage_m1DEB7A21C7579C4D1D98D77AD4088DE65077BC55 (void);
-// 0x00000084 System.String ActionBase::getMedicine()
-extern void ActionBase_getMedicine_m71A87C22904C5255C2A61054D16E7EA4A0F1D7B9 (void);
-// 0x00000085 System.Double ActionBase::getDosage()
-extern void ActionBase_getDosage_mE499ED71374C99510811F6A3A39145589C5E6295 (void);
-// 0x00000086 System.Void ActionBase::.ctor()
-extern void ActionBase__ctor_m5F2AE8F756FC0F3894819BCBE41AA9610E251F50 (void);
-// 0x00000087 System.Void ActionCheckMedicine::OnTriggerEnter(UnityEngine.Collider)
-extern void ActionCheckMedicine_OnTriggerEnter_mEAB3F648788C2C7F74F1336A65E3D60A2CD0015D (void);
-// 0x00000088 System.Void ActionCheckMedicine::CheckMedicine(System.String)
-extern void ActionCheckMedicine_CheckMedicine_mD114E6E0714CA48AA955691BA4EEB26FD460C071 (void);
-// 0x00000089 System.Void ActionCheckMedicine::.ctor()
-extern void ActionCheckMedicine__ctor_m7C8DCD2B63F7CB9621839431009F55CF5F27B9D3 (void);
-// 0x0000008A System.Void ActionCountMedicine::OnTriggerEnter(UnityEngine.Collider)
-extern void ActionCountMedicine_OnTriggerEnter_m66974EA519F84E8F9D787292F51267B0F38765E2 (void);
-// 0x0000008B System.Void ActionCountMedicine::OnTriggerStay(UnityEngine.Collider)
-extern void ActionCountMedicine_OnTriggerStay_mF09B720E50799D55877B263108F16BE1DF5AC40A (void);
-// 0x0000008C System.Void ActionCountMedicine::OnTriggerExit(UnityEngine.Collider)
-extern void ActionCountMedicine_OnTriggerExit_mF6436E26C60C9E9628D29242D7D879692EE323A3 (void);
-// 0x0000008D System.Void ActionCountMedicine::Update()
-extern void ActionCountMedicine_Update_m11505C410B85534B859C98F33E4A46B78724FC2C (void);
-// 0x0000008E System.Double ActionCountMedicine::getCurrentDosage()
-extern void ActionCountMedicine_getCurrentDosage_m0E1D98B36350393E49422B69C8EE65725A5B5026 (void);
-// 0x0000008F System.Void ActionCountMedicine::.ctor()
-extern void ActionCountMedicine__ctor_m7399FB6669FFCC05E1FC9C7DA2D7C718B95503ED (void);
-// 0x00000090 System.Void ActionKey::onKeyPress(UnityEngine.InputSystem.InputAction/CallbackContext)
-extern void ActionKey_onKeyPress_mBAA75DAA22786F72F53CFC405C2062CB79411CB5 (void);
-// 0x00000091 System.Void ActionKey::.ctor()
-extern void ActionKey__ctor_m6E8D08B54BFE5C41DCD89A54CBCD715C012E66FB (void);
-// 0x00000092 System.Void ActionTrigger::OnTriggerEnter(UnityEngine.Collider)
-extern void ActionTrigger_OnTriggerEnter_m39616D927601BAF360BE45259652D88FC8587835 (void);
-// 0x00000093 System.Void ActionTrigger::.ctor()
-extern void ActionTrigger__ctor_m9AC5BD287A2DB405953D30852D64DE941BDB0C75 (void);
-// 0x00000094 System.Void CheckComplete::Awake()
-extern void CheckComplete_Awake_mF766BEA248CAF3EBF47A3A3FBAFE9E89DEBB034D (void);
-// 0x00000095 System.Void CheckComplete::Update()
-extern void CheckComplete_Update_m731792ECA1C0182ED333ED2497E0F936A8029188 (void);
-// 0x00000096 System.Void CheckComplete::.ctor()
-extern void CheckComplete__ctor_m57A1C8A21AECF080A89A80F4FC57C31B85314EE7 (void);
-// 0x00000097 System.Void Node::Start()
-extern void Node_Start_mD5A874701C8F1F302B75996006C85C1064EFC777 (void);
-// 0x00000098 System.Void Node::Update()
-extern void Node_Update_m69DDB8996B915A9D8B7C0A0F4C3BF89F51C50E73 (void);
-// 0x00000099 System.Void Node::skipPrevious()
-extern void Node_skipPrevious_mAC561124658BEA713B36D64B2FB6141AD2BE30D3 (void);
-// 0x0000009A System.Void Node::setScenarioParent(ScenarioStart)
-extern void Node_setScenarioParent_mE549F88A1B163F03350E7A15C68905C219505BC9 (void);
-// 0x0000009B ScenarioStart Node::getScenarioParent()
-extern void Node_getScenarioParent_m2C3E9F5B1AAF8ECAEA37A1778904044FC0115AA7 (void);
-// 0x0000009C System.Void Node::initializeNode()
-extern void Node_initializeNode_m7ABAC373D308C73A3297F3FD1AE2B459DD189172 (void);
-// 0x0000009D System.Void Node::checkCanContinue()
-extern void Node_checkCanContinue_m06E112F782B86DD9FD710691FF38EC2A753EDAD8 (void);
-// 0x0000009E System.Void Node::checkComplete()
-extern void Node_checkComplete_mC4500A7BE16EDCA17C15DC2C7465693C7FE23E5F (void);
-// 0x0000009F System.Void Node::checkSaturated()
-extern void Node_checkSaturated_m87251B6471A40C1ACDEFEB576E6EE3EE0540AE22 (void);
-// 0x000000A0 System.Void Node::completeNode()
-extern void Node_completeNode_m5E0F970346D39CF062EA67F9B8F38727BF413B1E (void);
-// 0x000000A1 System.Void Node::skipNode()
-extern void Node_skipNode_m691682548515080E8F0E7EE8D521A2164A6FB29B (void);
-// 0x000000A2 System.Void Node::activateNode()
-extern void Node_activateNode_m8DEBE64B37172D2752672C59896D681AB2BAB380 (void);
-// 0x000000A3 System.Void Node::deactivateNode()
-extern void Node_deactivateNode_mDB60B0FBAA219349D148227DB215F99F7DEDA1D4 (void);
-// 0x000000A4 System.Void Node::updateObjectives()
-extern void Node_updateObjectives_m4E63B2BFA49DC0EEF408BA1E1A53E02213365B75 (void);
-// 0x000000A5 System.Void Node::.ctor()
-extern void Node__ctor_m0AEA190CB650FF922EE4686CF7E81AD5ED588C47 (void);
-// 0x000000A6 System.Void NodeBranch::initializeNode()
-extern void NodeBranch_initializeNode_m8128FA0D403E9954507B5760AB41664E7A6252A9 (void);
-// 0x000000A7 System.Void NodeBranch::checkCanContinue()
-extern void NodeBranch_checkCanContinue_m2C1D7316D2D371C8FC50E9F70F3F3F09C7FC826A (void);
-// 0x000000A8 System.Void NodeBranch::checkComplete()
-extern void NodeBranch_checkComplete_m7A9F2ACFB76143D715BAB290DD7508D7F9FFC632 (void);
-// 0x000000A9 System.Void NodeBranch::checkSaturated()
-extern void NodeBranch_checkSaturated_m0B42992D20CC572ADAE39C01FD30E9F8CE5D74E6 (void);
-// 0x000000AA System.Void NodeBranch::completeNode()
-extern void NodeBranch_completeNode_mF9D422799E3E60A6F6654D3460FCA8A6BFF5C06C (void);
-// 0x000000AB System.Void NodeBranch::skipNode()
-extern void NodeBranch_skipNode_m38444576376F623A697F5A1C5632CC68CC40E2A2 (void);
-// 0x000000AC System.Void NodeBranch::activateNode()
-extern void NodeBranch_activateNode_m4D15E6E26954F042F9F22FBFC3DC7E2A5ED16571 (void);
-// 0x000000AD System.Void NodeBranch::deactivateNode()
-extern void NodeBranch_deactivateNode_mA8E49793975A8D6377CA43B58074451449F4D469 (void);
-// 0x000000AE System.Void NodeBranch::updateObjectives()
-extern void NodeBranch_updateObjectives_m4EF37C2F0214774EC5A3264CB46D7ABFE5E30867 (void);
-// 0x000000AF System.Void NodeBranch::.ctor()
-extern void NodeBranch__ctor_m9C7B3A6E4E3CF0FD37B720E84D5737753CAEA0FA (void);
-// 0x000000B0 System.Void NodeOrdered::initializeNode()
-extern void NodeOrdered_initializeNode_mF6B0E7B10FE9EFE27647EDE192B7FBAD73DD3110 (void);
-// 0x000000B1 System.Void NodeOrdered::checkCanContinue()
-extern void NodeOrdered_checkCanContinue_m5A883A900A3CBAE405A67A68E24386207F756D20 (void);
-// 0x000000B2 System.Void NodeOrdered::checkComplete()
-extern void NodeOrdered_checkComplete_m27304AFA195E3975C209548C5280646AC4586C96 (void);
-// 0x000000B3 System.Void NodeOrdered::checkSaturated()
-extern void NodeOrdered_checkSaturated_mB286D70C156FD11628CEC68038CC63CE045D06B0 (void);
-// 0x000000B4 System.Void NodeOrdered::completeNode()
-extern void NodeOrdered_completeNode_mE1DCD679EAC20DAB25744128CAD006A6BB0DF005 (void);
-// 0x000000B5 System.Void NodeOrdered::skipNode()
-extern void NodeOrdered_skipNode_m5960F7FD5FF8662F0EC2AD3A5AA09B617FD1B8CB (void);
-// 0x000000B6 System.Void NodeOrdered::activateNode()
-extern void NodeOrdered_activateNode_m24048F2FADF779AC747C3BB1D35A077B94BF646E (void);
-// 0x000000B7 System.Void NodeOrdered::deactivateNode()
-extern void NodeOrdered_deactivateNode_mE5040FD4C83E0C485D5BAC03B64CF08D5329B24A (void);
-// 0x000000B8 System.Void NodeOrdered::updateObjectives()
-extern void NodeOrdered_updateObjectives_m1CAB21A1AA3C3815A5009FA47D21C872AA496287 (void);
-// 0x000000B9 System.Void NodeOrdered::.ctor()
-extern void NodeOrdered__ctor_m6565325CA5CC5DDBA3D350B72738297CD06463A2 (void);
-// 0x000000BA System.Void NodeSingle::initializeNode()
-extern void NodeSingle_initializeNode_mEABB36E62403EB41BFEE636E2BC46227152EE36A (void);
-// 0x000000BB System.Void NodeSingle::checkCanContinue()
-extern void NodeSingle_checkCanContinue_m3C41CD819176BB1A8ADC3866DC11B83396B108FC (void);
-// 0x000000BC System.Void NodeSingle::checkComplete()
-extern void NodeSingle_checkComplete_mE7E2A3CDC650D4D916C7B7A1B096EA29F121BD86 (void);
-// 0x000000BD System.Void NodeSingle::checkSaturated()
-extern void NodeSingle_checkSaturated_m7711F56314328DB0C0A67E8A60ABC2C63BBC0DCA (void);
-// 0x000000BE System.Void NodeSingle::completeNode()
-extern void NodeSingle_completeNode_m1B9D0527786D6BAB1144F3ADDD46A03B58B10FEB (void);
-// 0x000000BF System.Void NodeSingle::skipNode()
-extern void NodeSingle_skipNode_m5F74480B33E7F03B0393E907FE81A82E6095C586 (void);
-// 0x000000C0 System.Void NodeSingle::activateNode()
-extern void NodeSingle_activateNode_mF9A0CF855D10080BD63459DEB41E954BFCFC23F2 (void);
-// 0x000000C1 System.Void NodeSingle::deactivateNode()
-extern void NodeSingle_deactivateNode_m7DD96CFF28AEB6D124496DDE8B65113F1E5FCCF0 (void);
-// 0x000000C2 System.Void NodeSingle::updateObjectives()
-extern void NodeSingle_updateObjectives_m5B2E8A128BDF7673CDEE090C36422AEAB0580E47 (void);
-// 0x000000C3 System.Void NodeSingle::.ctor()
-extern void NodeSingle__ctor_mDD3EF8AF4F06988B36F1A83AA5DD7F4AFE2C2605 (void);
-// 0x000000C4 System.Void NodeUnordered::initializeNode()
-extern void NodeUnordered_initializeNode_mA3C6FFB5A0C2E9FBDDBB4BFA9ABEB0E505120085 (void);
-// 0x000000C5 System.Void NodeUnordered::checkCanContinue()
-extern void NodeUnordered_checkCanContinue_m5289667B214AF3D6DBF5F21BFD32C0227183D7B3 (void);
-// 0x000000C6 System.Void NodeUnordered::checkComplete()
-extern void NodeUnordered_checkComplete_mCA287C8734FA3156DBE92363C0AA3B6F51C0700C (void);
-// 0x000000C7 System.Void NodeUnordered::checkSaturated()
-extern void NodeUnordered_checkSaturated_mB1E175ADDAD63755B602E68899A98064F301FF8C (void);
-// 0x000000C8 System.Void NodeUnordered::completeNode()
-extern void NodeUnordered_completeNode_m6638B45DCF07F79A160A07539B2386F7422B77DC (void);
-// 0x000000C9 System.Void NodeUnordered::skipNode()
-extern void NodeUnordered_skipNode_m692A4B24B72DF03395C7458A7F7174CC02BE6939 (void);
-// 0x000000CA System.Void NodeUnordered::activateNode()
-extern void NodeUnordered_activateNode_m1D134256E6EBB7B661E5B75C807D9B7AC68AE3A1 (void);
-// 0x000000CB System.Void NodeUnordered::deactivateNode()
-extern void NodeUnordered_deactivateNode_m1EC88FA1D3C030C21C74FBA7399B49DF0A9F5BE0 (void);
-// 0x000000CC System.Void NodeUnordered::updateObjectives()
-extern void NodeUnordered_updateObjectives_m553C09219205B48B0BADF69926BD8C1DC8535D90 (void);
-// 0x000000CD System.Void NodeUnordered::.ctor()
-extern void NodeUnordered__ctor_m89B23A70572A53AD78F1941BBE4A8F2DDED4D4F6 (void);
-// 0x000000CE System.Void Objective::Start()
-extern void Objective_Start_m97947EC29CAD8A2EA6E0A80F094270196B306DF5 (void);
-// 0x000000CF System.Void Objective::Update()
-extern void Objective_Update_m4669B5A0AE8FC41168DBC01492D4795C27A308A0 (void);
-// 0x000000D0 System.Void Objective::completeObjective()
-extern void Objective_completeObjective_m6035988048B700FEE91683940F827652F475C141 (void);
-// 0x000000D1 System.Void Objective::skipObjective()
-extern void Objective_skipObjective_mD341B0949720157D8BAB3A99320D85F0A69C653A (void);
-// 0x000000D2 System.Void Objective::failObjective()
-extern void Objective_failObjective_mF672CA94A1F32F64034F8551FDAD8D73491ECC2A (void);
-// 0x000000D3 System.Void Objective::setParent(Node)
-extern void Objective_setParent_mFF2D43F7CD911A114C28951F3C27DC35D9E62029 (void);
-// 0x000000D4 System.Int32 Objective::getStrikes()
-extern void Objective_getStrikes_m842801C08EE396BA162CCE27071261B85B70E1A9 (void);
-// 0x000000D5 System.String Objective::getDescription()
-extern void Objective_getDescription_mFECE05DB830D1CE9FBD1A156C7EE1E4C8D465308 (void);
-// 0x000000D6 System.Void Objective::.ctor()
-extern void Objective__ctor_m80933A9657AA3D33388A2EEB11A3A5972D0194FD (void);
-// 0x000000D7 Node[] ScenarioGroup::getNodes()
-extern void ScenarioGroup_getNodes_mACE9AB994F5A3176F39935B3E27E855446D9AF77 (void);
-// 0x000000D8 System.String ScenarioGroup::getCategory()
-extern void ScenarioGroup_getCategory_m65B7E7CE911601B6FCA1DAE77937839665DBF155 (void);
-// 0x000000D9 System.String ScenarioGroup::getMedicine()
-extern void ScenarioGroup_getMedicine_m8263061BB4F22B4AA305DFA88B036DEA16DC58FB (void);
-// 0x000000DA System.Double ScenarioGroup::getDosage()
-extern void ScenarioGroup_getDosage_m4EAF45E1C4CFE779315F0393245D144BD39D1696 (void);
-// 0x000000DB System.Void ScenarioGroup::.ctor()
-extern void ScenarioGroup__ctor_m78FB02B1C482873BA670F4483FB0AC49CED77E36 (void);
-// 0x000000DC System.Void ScenarioStart::Start()
-extern void ScenarioStart_Start_mF87CFB63998E49E92B4DB986DDA9BDA2FAEE425E (void);
-// 0x000000DD System.Void ScenarioStart::addReport(System.String)
-extern void ScenarioStart_addReport_m1E24F0FABE3B1E499136AF1B9F56DB81ACF022C3 (void);
-// 0x000000DE System.String ScenarioStart::getReport()
-extern void ScenarioStart_getReport_m86FD07750852ACC986F1BE176EB782A3AC3B9695 (void);
-// 0x000000DF System.Void ScenarioStart::addNode(Node)
-extern void ScenarioStart_addNode_m95ACE8723495F698D99723DEF35BC900830125DE (void);
-// 0x000000E0 System.Void ScenarioStart::stopNodes()
-extern void ScenarioStart_stopNodes_m13F77069C8DB53FD86DF1AFE46A4E5DBF6A9C71B (void);
-// 0x000000E1 System.String ScenarioStart::getMedicine()
-extern void ScenarioStart_getMedicine_mE3D80DAB75BA0CB6E474A68A0FFB9CD7CB8A3B31 (void);
-// 0x000000E2 System.Double ScenarioStart::getDosage()
-extern void ScenarioStart_getDosage_m33C3C232DB4AFA543D66B8C1EF4A77E16E785C1F (void);
-// 0x000000E3 System.Void ScenarioStart::.ctor()
-extern void ScenarioStart__ctor_m271855E0897C0117B2A136B9A4C9E8F72E2ECDF3 (void);
-// 0x000000E4 System.Void StrikeManager::Update()
-extern void StrikeManager_Update_mC5DE8DD3A1E290C0FCD5252208F110B38DD343B0 (void);
-// 0x000000E5 System.Void StrikeManager::.ctor()
-extern void StrikeManager__ctor_m5AF6F4FA96546626DE6AEAD58BD7988D713AB0A1 (void);
-// 0x000000E6 System.Void TutorialCountMedicine::OnTriggerEnter(UnityEngine.Collider)
-extern void TutorialCountMedicine_OnTriggerEnter_mB3834D361C8D40396F62F5CBFDE13CE158A10B14 (void);
-// 0x000000E7 System.Void TutorialCountMedicine::OnTriggerStay(UnityEngine.Collider)
-extern void TutorialCountMedicine_OnTriggerStay_m6A9A151767E7C0DCB47355FFE4F45C0A313D2B5A (void);
-// 0x000000E8 System.Void TutorialCountMedicine::OnTriggerExit(UnityEngine.Collider)
-extern void TutorialCountMedicine_OnTriggerExit_mE3D5529A60558DB2322F3CC7CCD5311B5D07C056 (void);
-// 0x000000E9 System.Void TutorialCountMedicine::Update()
-extern void TutorialCountMedicine_Update_m497E18DC70E66D48F0B0D012EDF0BC51FF8E6775 (void);
-// 0x000000EA System.Double TutorialCountMedicine::getCurrentPills()
-extern void TutorialCountMedicine_getCurrentPills_mFF34B17D051BD09971F482F36273A31A24DF6DD7 (void);
-// 0x000000EB System.Double TutorialCountMedicine::GetCurrentLiquid()
-extern void TutorialCountMedicine_GetCurrentLiquid_m669BAB8B674CE50C7F678AE709D2FAA8C03CC692 (void);
-// 0x000000EC System.Void TutorialCountMedicine::.ctor()
-extern void TutorialCountMedicine__ctor_mCD0EBF2609ADC4AF5261092C8711E83EE3E50830 (void);
-// 0x000000ED System.Void PatchObjectScript::Awake()
-extern void PatchObjectScript_Awake_m97190F26BC5E280468F9E2B5B58071BE592148B2 (void);
-// 0x000000EE System.Void PatchObjectScript::markPatch()
-extern void PatchObjectScript_markPatch_mEB4CFD51508B28C9B0BE3EDED1A976BFFFFD1EC2 (void);
-// 0x000000EF System.Void PatchObjectScript::.ctor()
-extern void PatchObjectScript__ctor_mBE75AC70B9561A772512D564985D0EC469D54CEE (void);
-// 0x000000F0 System.Void PatchSpawnScript::OnTriggerEnter(UnityEngine.Collider)
-extern void PatchSpawnScript_OnTriggerEnter_mC2ACF8C25586B5DC5A975D4B51CDDE5EC8B45BB3 (void);
-// 0x000000F1 System.Void PatchSpawnScript::Interact(UnityEngine.Collider)
-extern void PatchSpawnScript_Interact_mD6C406F16813BAE2578FB788709CE230573A4EE4 (void);
-// 0x000000F2 System.Void PatchSpawnScript::.ctor()
-extern void PatchSpawnScript__ctor_m80CDDC987B341197E703492BF6B2424F4697520E (void);
-// 0x000000F3 System.Boolean PillCutterScript::canInteractWithHand()
-extern void PillCutterScript_canInteractWithHand_m35D1B2F1DB5CF15AD26BE1C889CD4A6A3547A5C2 (void);
-// 0x000000F4 System.Void PillCutterScript::OnTriggerEnter(UnityEngine.Collider)
-extern void PillCutterScript_OnTriggerEnter_m77CCBD43EF1AEAA1B8836A9CD048775445A7E7AE (void);
-// 0x000000F5 System.Void PillCutterScript::Interact(UnityEngine.Collider)
-extern void PillCutterScript_Interact_m1708FC45870B8CDF4ADBB631A334F2011F9FBB7D (void);
-// 0x000000F6 System.Void PillCutterScript::.ctor()
-extern void PillCutterScript__ctor_m7ADA3E4986E9CE8A7FB9B837EC1FAC1EF2B50C8B (void);
-// 0x000000F7 System.Boolean PillSpawnScript::canInteractWithHand()
-extern void PillSpawnScript_canInteractWithHand_m4329084E7F70843A115C21D3DDF697590E58D3D3 (void);
-// 0x000000F8 System.Void PillSpawnScript::OnTriggerEnter(UnityEngine.Collider)
-extern void PillSpawnScript_OnTriggerEnter_m7F54B4771DBF73CF14BEE71BB8C0DCC77E0840B2 (void);
-// 0x000000F9 System.Void PillSpawnScript::Interact(UnityEngine.Collider)
-extern void PillSpawnScript_Interact_m2AB84E3BB6AC7D9ECC44C1CC18C24359F13BF3D2 (void);
-// 0x000000FA System.Void PillSpawnScript::.ctor()
-extern void PillSpawnScript__ctor_m872B1EBA0815614B67A787608749EAF5EAC136E2 (void);
-// 0x000000FB UnityEngine.InputSystem.InputActionAsset PlayerInput::get_asset()
-extern void PlayerInput_get_asset_mE0BD6F32CD2E67A27121A83086C27A440C78A75D (void);
-// 0x000000FC System.Void PlayerInput::.ctor()
-extern void PlayerInput__ctor_m84EAB041CD5C8D268A3C5741EC3A70B5F1E47B20 (void);
-// 0x000000FD System.Void PlayerInput::Dispose()
-extern void PlayerInput_Dispose_m560794A2B84F1C6308F607BF82B1E4A1EDF38E21 (void);
-// 0x000000FE System.Nullable`1<UnityEngine.InputSystem.InputBinding> PlayerInput::get_bindingMask()
-extern void PlayerInput_get_bindingMask_m6FEAD996A00EA3AC27C0898E069434158F51B6B1 (void);
-// 0x000000FF System.Void PlayerInput::set_bindingMask(System.Nullable`1<UnityEngine.InputSystem.InputBinding>)
-extern void PlayerInput_set_bindingMask_mB99FECA9A895F7C3CC173A398D214CD7E396ECAB (void);
-// 0x00000100 System.Nullable`1<UnityEngine.InputSystem.Utilities.ReadOnlyArray`1<UnityEngine.InputSystem.InputDevice>> PlayerInput::get_devices()
-extern void PlayerInput_get_devices_m2C4D8056997D2AD069A3C001596C612AEE861D4B (void);
-// 0x00000101 System.Void PlayerInput::set_devices(System.Nullable`1<UnityEngine.InputSystem.Utilities.ReadOnlyArray`1<UnityEngine.InputSystem.InputDevice>>)
-extern void PlayerInput_set_devices_m9634FFA028D8E54FE40AC7CF96B3C33A431F723A (void);
-// 0x00000102 UnityEngine.InputSystem.Utilities.ReadOnlyArray`1<UnityEngine.InputSystem.InputControlScheme> PlayerInput::get_controlSchemes()
-extern void PlayerInput_get_controlSchemes_m2690472EC4C18DB835007DEFC198771F971F6295 (void);
-// 0x00000103 System.Boolean PlayerInput::Contains(UnityEngine.InputSystem.InputAction)
-extern void PlayerInput_Contains_m6505973E16FA35B9083BA39E9DE8B82DAD266BAD (void);
-// 0x00000104 System.Collections.Generic.IEnumerator`1<UnityEngine.InputSystem.InputAction> PlayerInput::GetEnumerator()
-extern void PlayerInput_GetEnumerator_mB336E324CBA4DF0E1B13334D8D79891B4E984E68 (void);
-// 0x00000105 System.Collections.IEnumerator PlayerInput::System.Collections.IEnumerable.GetEnumerator()
-extern void PlayerInput_System_Collections_IEnumerable_GetEnumerator_mC4FB5A6DEF54DCC127F7710AE1CE80BFAE93E46A (void);
-// 0x00000106 System.Void PlayerInput::Enable()
-extern void PlayerInput_Enable_m51F97ADF330547539E0B99A3FB8139ADD5266D93 (void);
-// 0x00000107 System.Void PlayerInput::Disable()
-extern void PlayerInput_Disable_m7E5A729CAA47FB37AF38169AED455C8350E6F68C (void);
-// 0x00000108 PlayerInput/CharacterControls3DActions PlayerInput::get_CharacterControls3D()
-extern void PlayerInput_get_CharacterControls3D_mC45523CCC395F49104793E5BF288E6A036B55340 (void);
-// 0x00000109 PlayerInput/CharacterControlsVRActions PlayerInput::get_CharacterControlsVR()
-extern void PlayerInput_get_CharacterControlsVR_mCFFEB0ED12666D42673AF4BD511A0A81929EBBFA (void);
-// 0x0000010A System.Void PlayerInput/CharacterControls3DActions::.ctor(PlayerInput)
-extern void CharacterControls3DActions__ctor_m8A4A4BAE2D53E1198B73EB353B5B6174D8BEE3C0 (void);
-// 0x0000010B UnityEngine.InputSystem.InputAction PlayerInput/CharacterControls3DActions::get_Click()
-extern void CharacterControls3DActions_get_Click_m11B0733C8D8C87724152EFA490054F52A42C6642 (void);
-// 0x0000010C UnityEngine.InputSystem.InputAction PlayerInput/CharacterControls3DActions::get_MouseLook()
-extern void CharacterControls3DActions_get_MouseLook_m18B94A9C1DC4CFF4B9FA4D33487C09A237BA6379 (void);
-// 0x0000010D UnityEngine.InputSystem.InputAction PlayerInput/CharacterControls3DActions::get_Interact()
-extern void CharacterControls3DActions_get_Interact_m61B68C0CD8194D25F656A5045395A0A9B38129DD (void);
-// 0x0000010E UnityEngine.InputSystem.InputAction PlayerInput/CharacterControls3DActions::get_Letgo()
-extern void CharacterControls3DActions_get_Letgo_m54454F2BEF70570290CADA8B24F4872C54F71F94 (void);
-// 0x0000010F UnityEngine.InputSystem.InputActionMap PlayerInput/CharacterControls3DActions::Get()
-extern void CharacterControls3DActions_Get_m3FCD969ED0E3C2BE65809C87FE9AABDA56FAA040 (void);
-// 0x00000110 System.Void PlayerInput/CharacterControls3DActions::Enable()
-extern void CharacterControls3DActions_Enable_mAB098E36069B932A76F50E7208AFAA3451F0D7FD (void);
-// 0x00000111 System.Void PlayerInput/CharacterControls3DActions::Disable()
-extern void CharacterControls3DActions_Disable_m950F7539DD8E7F03F39EB2B3F54DA9952D205D8E (void);
-// 0x00000112 System.Boolean PlayerInput/CharacterControls3DActions::get_enabled()
-extern void CharacterControls3DActions_get_enabled_m30BD4C8C368F0D90A17C0C89202A685A6ABAB230 (void);
-// 0x00000113 UnityEngine.InputSystem.InputActionMap PlayerInput/CharacterControls3DActions::op_Implicit(PlayerInput/CharacterControls3DActions)
-extern void CharacterControls3DActions_op_Implicit_mB0142EC97909E963BB12BBEEE696BE16CEE4AC76 (void);
-// 0x00000114 System.Void PlayerInput/CharacterControls3DActions::SetCallbacks(PlayerInput/ICharacterControls3DActions)
-extern void CharacterControls3DActions_SetCallbacks_mA408C60B5AD6BCE44B4ABC533E20742C8DC4A243 (void);
-// 0x00000115 System.Void PlayerInput/CharacterControlsVRActions::.ctor(PlayerInput)
-extern void CharacterControlsVRActions__ctor_m68627AB1654FAB8F81D47270BB12623CD3E5D5F1 (void);
-// 0x00000116 UnityEngine.InputSystem.InputAction PlayerInput/CharacterControlsVRActions::get_Teleport()
-extern void CharacterControlsVRActions_get_Teleport_mDBF912F48D6D41A4E3D254490065EC4589AC359C (void);
-// 0x00000117 UnityEngine.InputSystem.InputActionMap PlayerInput/CharacterControlsVRActions::Get()
-extern void CharacterControlsVRActions_Get_mAB5C2855C5519D60D85E19F567BB20DC04139158 (void);
-// 0x00000118 System.Void PlayerInput/CharacterControlsVRActions::Enable()
-extern void CharacterControlsVRActions_Enable_m315ADB1971A2608F5707C21FE634177604AA060B (void);
-// 0x00000119 System.Void PlayerInput/CharacterControlsVRActions::Disable()
-extern void CharacterControlsVRActions_Disable_m3AC0598ED3467611E1C4F648002E517D1E90519F (void);
-// 0x0000011A System.Boolean PlayerInput/CharacterControlsVRActions::get_enabled()
-extern void CharacterControlsVRActions_get_enabled_m8A24148BEC651C71BDBD23D7B1804A62A39C9D52 (void);
-// 0x0000011B UnityEngine.InputSystem.InputActionMap PlayerInput/CharacterControlsVRActions::op_Implicit(PlayerInput/CharacterControlsVRActions)
-extern void CharacterControlsVRActions_op_Implicit_m4764B2A15016A8FADF0ECAF59E3CA9D4B15606D9 (void);
-// 0x0000011C System.Void PlayerInput/CharacterControlsVRActions::SetCallbacks(PlayerInput/ICharacterControlsVRActions)
-extern void CharacterControlsVRActions_SetCallbacks_m2A12F84AFEA008E3B4CB6E02F7331C73041A33F2 (void);
-// 0x0000011D System.Void PlayerInput/ICharacterControls3DActions::OnClick(UnityEngine.InputSystem.InputAction/CallbackContext)
-// 0x0000011E System.Void PlayerInput/ICharacterControls3DActions::OnMouseLook(UnityEngine.InputSystem.InputAction/CallbackContext)
-// 0x0000011F System.Void PlayerInput/ICharacterControls3DActions::OnInteract(UnityEngine.InputSystem.InputAction/CallbackContext)
-// 0x00000120 System.Void PlayerInput/ICharacterControls3DActions::OnLetgo(UnityEngine.InputSystem.InputAction/CallbackContext)
-// 0x00000121 System.Void PlayerInput/ICharacterControlsVRActions::OnTeleport(UnityEngine.InputSystem.InputAction/CallbackContext)
-// 0x00000122 System.Void QuestionScript::answerSelected(UnityEngine.GameObject)
-extern void QuestionScript_answerSelected_mEE151DA27942CF8A0B637CDF660F6070545DA782 (void);
-// 0x00000123 System.Void QuestionScript::.ctor()
-extern void QuestionScript__ctor_m78027F225DB844170934FFD7DA27FC1DDC3A2F7A (void);
-// 0x00000124 System.Void ResetScript::OnTriggerEnter(UnityEngine.Collider)
-extern void ResetScript_OnTriggerEnter_mDF0E6BACF44F845410853487A2C60C5A413021BB (void);
-// 0x00000125 System.Void ResetScript::Interact(UnityEngine.Collider)
-extern void ResetScript_Interact_m1DFC94A46F49E08B1CF32212556851EBA82C5B37 (void);
-// 0x00000126 System.Void ResetScript::.ctor()
-extern void ResetScript__ctor_m1D4ACC3C21B58C75D2257001F4D227DDAAAD4531 (void);
-// 0x00000127 System.Void SanitizerScript::Awake()
-extern void SanitizerScript_Awake_m1E249C6271170B58FBA1CE052767E0B9395E1F6A (void);
-// 0x00000128 System.Void SanitizerScript::OnTriggerEnter(UnityEngine.Collider)
-extern void SanitizerScript_OnTriggerEnter_mA24A443204FBE59AACA92084DFC6C8EA8F9E0FD7 (void);
-// 0x00000129 System.Void SanitizerScript::Interact(UnityEngine.Collider)
-extern void SanitizerScript_Interact_m873FDA73919BD83C89A2B76096635E678429D926 (void);
-// 0x0000012A System.Void SanitizerScript::ActivateObjects(System.Boolean)
-extern void SanitizerScript_ActivateObjects_m7E3ADDE0BF2CD9F8A98D1DB5ABE5484158A1E5EF (void);
-// 0x0000012B System.Void SanitizerScript::.ctor()
-extern void SanitizerScript__ctor_m8D668F6AE1EA2827F3DC92736F7209B9558B3054 (void);
-// 0x0000012C System.Void SetLiquidSyrup::Start()
-extern void SetLiquidSyrup_Start_mB3624F063EFEB2C7A4510FFE17B1FD12AA7C1D5F (void);
-// 0x0000012D System.Void SetLiquidSyrup::SetParentSyrup()
-extern void SetLiquidSyrup_SetParentSyrup_m23092C3D44B0A8B2C96B5DE4AE3A9DBE664A1D07 (void);
-// 0x0000012E System.Void SetLiquidSyrup::.ctor()
-extern void SetLiquidSyrup__ctor_m34B5332AE91367849728CC0280B79E9B3CA3AB9A (void);
-// 0x0000012F System.Boolean SharpieObjectScript::canInteractWithHand()
-extern void SharpieObjectScript_canInteractWithHand_m92FD45CC77A30F2824B66D5B2EF38D8AB1FA1C08 (void);
-// 0x00000130 System.Void SharpieObjectScript::OnTriggerEnter(UnityEngine.Collider)
-extern void SharpieObjectScript_OnTriggerEnter_m75A33414AB799B5D6022DE76CC0EF76F632EB3B1 (void);
-// 0x00000131 System.Void SharpieObjectScript::Interact(UnityEngine.Collider)
-extern void SharpieObjectScript_Interact_mA2C03872750E810C65016A1EA512FF49A26462CF (void);
-// 0x00000132 System.Void SharpieObjectScript::.ctor()
-extern void SharpieObjectScript__ctor_m174DA24E0CA6C516006BE7251FFD466D296BED30 (void);
-// 0x00000133 System.Void SharpieSpawnScript::OnTriggerEnter(UnityEngine.Collider)
-extern void SharpieSpawnScript_OnTriggerEnter_m01E5F4E1A4645872056ABD00BFD32A158387EDDE (void);
-// 0x00000134 System.Void SharpieSpawnScript::.ctor()
-extern void SharpieSpawnScript__ctor_m86F9A47A2559C44868853F3ADD2DEB921A22CD27 (void);
-// 0x00000135 System.Void TeleportIndicatorScript::Awake()
-extern void TeleportIndicatorScript_Awake_m2A3FD2508F9F04C1BC51C4E6242867C129AD34EB (void);
-// 0x00000136 System.Void TeleportIndicatorScript::Update()
-extern void TeleportIndicatorScript_Update_m1BF53338CF3377AAAECF52E9D4B4ED68EC1FE91D (void);
-// 0x00000137 System.Void TeleportIndicatorScript::indicatorActive(System.Boolean)
-extern void TeleportIndicatorScript_indicatorActive_mDF5D49F71D77D421BE3A67CA248ED93D001D6A4B (void);
-// 0x00000138 System.Void TeleportIndicatorScript::indicatorActiveVR(System.Boolean)
-extern void TeleportIndicatorScript_indicatorActiveVR_mAAB7CB132D06A79BE2FD6D1C845ABF59790C5A62 (void);
-// 0x00000139 System.Void TeleportIndicatorScript::.ctor()
-extern void TeleportIndicatorScript__ctor_m341597475AA2A3D1F1785CAFFCD63BE4731AEE5D (void);
-// 0x0000013A System.Void TutorialCartText::Awake()
-extern void TutorialCartText_Awake_m9B85373F94FEE5B3B0DDB21DEF454597692D353E (void);
-// 0x0000013B System.Void TutorialCartText::Update()
-extern void TutorialCartText_Update_m58B662383451EAECA0C1BEFA5535F6A10662B3D3 (void);
-// 0x0000013C System.Void TutorialCartText::.ctor()
-extern void TutorialCartText__ctor_mFE14B8568D68C1352672BA803E007C57CEDCFA45 (void);
-// 0x0000013D System.Void TutorialLiquid::Awake()
-extern void TutorialLiquid_Awake_mA2C74CE38017C4B0587CBE875D67D5C8A883B8F6 (void);
-// 0x0000013E System.Void TutorialLiquid::SetDosage(System.Boolean)
-extern void TutorialLiquid_SetDosage_m27D61628CD9E00C525B2A25583B26D72D607C69D (void);
-// 0x0000013F System.Boolean TutorialLiquid::getDosage()
-extern void TutorialLiquid_getDosage_m69693072F58D6FF4EC9891A9CF8B9A72A01DE17E (void);
-// 0x00000140 System.Void TutorialLiquid::.ctor()
-extern void TutorialLiquid__ctor_m1A0052FEF683D75CF4E9337782DB83CBF31195D8 (void);
-// 0x00000141 System.Void TutorialManager::Start()
-extern void TutorialManager_Start_m0CE3E9449B63E7930C4035203E1ED9B260E72D59 (void);
-// 0x00000142 System.Void TutorialManager::Update()
-extern void TutorialManager_Update_m0486AA97C0E1344C37EE31B176ED32EE3B4446D9 (void);
-// 0x00000143 System.Void TutorialManager::overrideSetMessage(System.String)
-extern void TutorialManager_overrideSetMessage_m339467EB75329EDDA74DC7CA7A542968D75F6D74 (void);
-// 0x00000144 System.Void TutorialManager::overrideSetTime(System.Int32)
-extern void TutorialManager_overrideSetTime_m2A30182C7A7E5B1AF868450FA0722D284BCDC6C8 (void);
-// 0x00000145 System.Void TutorialManager::.ctor()
-extern void TutorialManager__ctor_m1A6F653729E4CCE30F0A0BC39EEB304409459A84 (void);
-// 0x00000146 System.Void TutorialText::Awake()
-extern void TutorialText_Awake_m6A4FC8763BCF1D3B09B4BD385279772C8E9AFBDF (void);
-// 0x00000147 System.Void TutorialText::Update()
-extern void TutorialText_Update_m3070918573AECA5D6F7E51C8DF1CB5300A76A022 (void);
-// 0x00000148 System.Void TutorialText::.ctor()
-extern void TutorialText__ctor_mD0EF3C12D39D80C2E531FC9A1BE098E196B710E9 (void);
-// 0x00000149 System.Void VRLookatScript::OnTriggerStay(UnityEngine.Collider)
-extern void VRLookatScript_OnTriggerStay_m00E47AA74B126A184C9D30CB8D257938D01713F5 (void);
-// 0x0000014A System.Void VRLookatScript::.ctor()
-extern void VRLookatScript__ctor_mFA2E80B926D5ADC28CB24C87F10266911603C5D5 (void);
-// 0x0000014B System.Void characterMovement3D::Awake()
-extern void characterMovement3D_Awake_mF65A2A23CEA754B64E59DEE7150809E7509A58F9 (void);
-// 0x0000014C System.Void characterMovement3D::Start()
-extern void characterMovement3D_Start_mBC2C688A7CD6C8CF5350C717501D81528D90D1C3 (void);
-// 0x0000014D System.Void characterMovement3D::Update()
-extern void characterMovement3D_Update_m214BA07D46838073C241151FEE1403DDE526F941 (void);
-// 0x0000014E System.Void characterMovement3D::checkHeldObjectValid()
-extern void characterMovement3D_checkHeldObjectValid_mF711716CE785543CB6926A5466E987D2B356E7AE (void);
-// 0x0000014F System.Void characterMovement3D::handleGrabAnim()
-extern void characterMovement3D_handleGrabAnim_m06A2F170AC687BA1818DA3648191F9ED9A4D64BB (void);
-// 0x00000150 System.Void characterMovement3D::handleInteraction()
-extern void characterMovement3D_handleInteraction_m5FABB9F3CC6D7784BC03395C7E661803CCE60693 (void);
-// 0x00000151 System.Void characterMovement3D::initPlace()
-extern void characterMovement3D_initPlace_m10939510094F7E9017F29D50A3533108D99E70E2 (void);
-// 0x00000152 System.Void characterMovement3D::finishPlace()
-extern void characterMovement3D_finishPlace_m9B0D81794F819B2DBB368EE8FCB2357200A99598 (void);
-// 0x00000153 System.Void characterMovement3D::checkPlace()
-extern void characterMovement3D_checkPlace_m963A8C9DC418D5B24683CEC9FC3247E3742B4EBE (void);
-// 0x00000154 System.Void characterMovement3D::attemptPlace()
-extern void characterMovement3D_attemptPlace_mC57A6EF7BC28D401AEEBB943B222E59D79E2C058 (void);
-// 0x00000155 System.Void characterMovement3D::handleLetgo()
-extern void characterMovement3D_handleLetgo_m8C55B155045EB28A31F9B65BADB3FD40601386F8 (void);
-// 0x00000156 System.Void characterMovement3D::handleMovement()
-extern void characterMovement3D_handleMovement_m5339E21A5389472F67986FB92A329B09BC04B0EF (void);
-// 0x00000157 System.Void characterMovement3D::OnEnable()
-extern void characterMovement3D_OnEnable_m197FCB4B09E7EBE8704358B9BC8C2506672CB672 (void);
-// 0x00000158 System.Void characterMovement3D::OnDisable()
-extern void characterMovement3D_OnDisable_m9E841BD99351E0A8E3DE0708A160416F61ABE790 (void);
-// 0x00000159 System.Void characterMovement3D::.ctor()
-extern void characterMovement3D__ctor_m4EF183F072AE285F281CBB3308BB4ED1B0673ED3 (void);
-// 0x0000015A System.Void characterMovement3D::<Awake>b__25_0(UnityEngine.InputSystem.InputAction/CallbackContext)
-extern void characterMovement3D_U3CAwakeU3Eb__25_0_mF99BCE55220503AB1D25580B692C03E3F4000645 (void);
-// 0x0000015B System.Void characterMovement3D::<Awake>b__25_1(UnityEngine.InputSystem.InputAction/CallbackContext)
-extern void characterMovement3D_U3CAwakeU3Eb__25_1_m5166620ECE601AEA1D10DFDAB5C38FFFDF515E88 (void);
-// 0x0000015C System.Void characterMovement3D::<Awake>b__25_2(UnityEngine.InputSystem.InputAction/CallbackContext)
-extern void characterMovement3D_U3CAwakeU3Eb__25_2_m777B9B0FE3C778A213A7CDBFBC1B6B1D29FB64E0 (void);
-// 0x0000015D System.Collections.Generic.HashSet`1<UnityEngine.Collider> TriggerTally::GetColliders()
-extern void TriggerTally_GetColliders_mEA4E5EFDB196FE9D788D9E96D34A0FA3AE6A5520 (void);
-// 0x0000015E System.Int32 TriggerTally::collidersCount()
-extern void TriggerTally_collidersCount_m45417D3A55C336778A4D78BC56C4A7A14C17ED14 (void);
-// 0x0000015F System.Void TriggerTally::OnTriggerEnter(UnityEngine.Collider)
-extern void TriggerTally_OnTriggerEnter_m9F7BF948BBB467D243C3E5F3F2A3B2C92E1BDCCD (void);
-// 0x00000160 System.Void TriggerTally::OnTriggerExit(UnityEngine.Collider)
-extern void TriggerTally_OnTriggerExit_m47C9A6221E4D762085D829C3582982A1D1BA41E5 (void);
-// 0x00000161 System.Void TriggerTally::.ctor()
-extern void TriggerTally__ctor_m1F521069F9DA40C2A35A025E86867E65DD09520B (void);
-// 0x00000162 System.Void VROnlyScript::Start()
-extern void VROnlyScript_Start_mACEBD5AFB6D95BD5594A307B36FA9DFD51F6DA3F (void);
-// 0x00000163 System.Void VROnlyScript::.ctor()
-extern void VROnlyScript__ctor_m843A95DFDED8601C4D360588003C4EF241B1B7F2 (void);
-static Il2CppMethodPointer s_methodPointers[355] = 
+// 0x00000001 System.Void DetectLooks::Awake()
+extern void DetectLooks_Awake_m84DD36964464F51AF863D443A1C90D734A5ECBC5 (void);
+// 0x00000002 System.Void DetectLooks::PlayerIsLooking()
+extern void DetectLooks_PlayerIsLooking_mDFB75F9CB7942C1DFA8E9D4175F26187ADF91FBC (void);
+// 0x00000003 System.Collections.IEnumerator DetectLooks::Cooldown()
+extern void DetectLooks_Cooldown_mD2B4C55F60F671A825209C66876F20A5E2F269BC (void);
+// 0x00000004 System.Void DetectLooks::PlayerStoppedLooking()
+extern void DetectLooks_PlayerStoppedLooking_m107E4CE71426BD0B618083AAA0EDE5C526AF5360 (void);
+// 0x00000005 System.Void DetectLooks::.ctor()
+extern void DetectLooks__ctor_m8E4FAC6D3A3BA308C861A5D197DA516B2A32901A (void);
+// 0x00000006 System.Void DetectLooks/<Cooldown>d__8::.ctor(System.Int32)
+extern void U3CCooldownU3Ed__8__ctor_m33D7B6A8CD727C8A1797CBF8A14E2D3F69D7CE89 (void);
+// 0x00000007 System.Void DetectLooks/<Cooldown>d__8::System.IDisposable.Dispose()
+extern void U3CCooldownU3Ed__8_System_IDisposable_Dispose_m98532B90C5CFB2FF7A7FC66F163408DA334E8D67 (void);
+// 0x00000008 System.Boolean DetectLooks/<Cooldown>d__8::MoveNext()
+extern void U3CCooldownU3Ed__8_MoveNext_mC17D4DDDFAECF11C10D10677A6703821F8AEBBEF (void);
+// 0x00000009 System.Object DetectLooks/<Cooldown>d__8::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CCooldownU3Ed__8_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m6BE3DAE8795D38238B42CF97468F300F39057A38 (void);
+// 0x0000000A System.Void DetectLooks/<Cooldown>d__8::System.Collections.IEnumerator.Reset()
+extern void U3CCooldownU3Ed__8_System_Collections_IEnumerator_Reset_m1C6B849136DD9E7DAF6D551A14AC5054227B83F0 (void);
+// 0x0000000B System.Object DetectLooks/<Cooldown>d__8::System.Collections.IEnumerator.get_Current()
+extern void U3CCooldownU3Ed__8_System_Collections_IEnumerator_get_Current_m65730286FCAB787909F60CE2A1A20BB0E550B3F8 (void);
+// 0x0000000C System.Void Interactable::Start()
+extern void Interactable_Start_mD86591D3E519919109098287E81907A8931D6BC2 (void);
+// 0x0000000D System.Void Interactable::OnTriggerEnter(UnityEngine.Collider)
+extern void Interactable_OnTriggerEnter_m58C58E8589CB325F037F43076C52F0483EA35B08 (void);
+// 0x0000000E System.Void Interactable::Interact(UnityEngine.GameObject)
+extern void Interactable_Interact_m51CAE66281DE2857870324E9ECD2DB3909B2A49A (void);
+// 0x0000000F System.Void Interactable::.ctor()
+extern void Interactable__ctor_m9AA3E7B2D2090FE20FD4EDB4AE1FE9BAC5414988 (void);
+// 0x00000010 System.Void MovePlayer::Awake()
+extern void MovePlayer_Awake_mA4570FA7533BE28804B90724CDC3C7EEF5310821 (void);
+// 0x00000011 System.Void MovePlayer::Interact(UnityEngine.GameObject)
+extern void MovePlayer_Interact_m3DFAA732FD4473854A3481E4C10D10627BF205D5 (void);
+// 0x00000012 System.Void MovePlayer::.ctor()
+extern void MovePlayer__ctor_m193AFF3E915B78AB820AF503E1E4772214351CDC (void);
+// 0x00000013 System.Void PlayerKeyboardInputScript::Awake()
+extern void PlayerKeyboardInputScript_Awake_mA3DF5242BC7BA9AB4487BB99C672A2A6492712EB (void);
+// 0x00000014 System.Void PlayerKeyboardInputScript::OnLevelLoaded(UnityEngine.SceneManagement.Scene,UnityEngine.SceneManagement.LoadSceneMode)
+extern void PlayerKeyboardInputScript_OnLevelLoaded_m2115AEB16DD2F2F28AE33C43D6044C3BE59CDF8F (void);
+// 0x00000015 System.Void PlayerKeyboardInputScript::OnEnable()
+extern void PlayerKeyboardInputScript_OnEnable_m50F43FD9B07D7BBEF144E545ABE277E775A9A0CE (void);
+// 0x00000016 System.Void PlayerKeyboardInputScript::OnDisable()
+extern void PlayerKeyboardInputScript_OnDisable_mD2E270A3D7486A26403ABD8A6AAD41E57EE190D0 (void);
+// 0x00000017 System.Void PlayerKeyboardInputScript::Update()
+extern void PlayerKeyboardInputScript_Update_m87F9110B5036A5134D5393BF72F9FF28E142F7DF (void);
+// 0x00000018 System.Void PlayerKeyboardInputScript::PickUp(UnityEngine.InputSystem.InputAction/CallbackContext)
+extern void PlayerKeyboardInputScript_PickUp_m3B01D5BF7330427B086C401556BD9C6C9299A1BE (void);
+// 0x00000019 System.Void PlayerKeyboardInputScript::PutDown(UnityEngine.InputSystem.InputAction/CallbackContext)
+extern void PlayerKeyboardInputScript_PutDown_mE30DD91591884F7E5F8AE4FD339BB408E9916979 (void);
+// 0x0000001A System.Void PlayerKeyboardInputScript::UnParent(UnityEngine.GameObject)
+extern void PlayerKeyboardInputScript_UnParent_m1A1CC8D673E67AE0A082A3B7DDE54EECD9B8BDF6 (void);
+// 0x0000001B System.Void PlayerKeyboardInputScript::Use(UnityEngine.InputSystem.InputAction/CallbackContext)
+extern void PlayerKeyboardInputScript_Use_mA5C32A0A19372EE30FCDFE11BB1A5AA30E04968C (void);
+// 0x0000001C System.Void PlayerKeyboardInputScript::Teleport(UnityEngine.InputSystem.InputAction/CallbackContext)
+extern void PlayerKeyboardInputScript_Teleport_m285E6DF60BB8647F991981BDB73BDB4C42353E91 (void);
+// 0x0000001D System.Void PlayerKeyboardInputScript::LookingAt(UnityEngine.Vector3)
+extern void PlayerKeyboardInputScript_LookingAt_m42B7DA133D146294B3CA52F3B0438A939ED0D3E0 (void);
+// 0x0000001E System.Collections.IEnumerator PlayerKeyboardInputScript::DoPickUp(System.Boolean,UnityEngine.Vector3)
+extern void PlayerKeyboardInputScript_DoPickUp_mE829D058DDEC34789EE2F720AD3455F1A3003B86 (void);
+// 0x0000001F UnityEngine.GameObject PlayerKeyboardInputScript::getGrabbingObject()
+extern void PlayerKeyboardInputScript_getGrabbingObject_m174C0D3DF7D391C4C3F8912F14F14F8E5CA9F850 (void);
+// 0x00000020 System.Void PlayerKeyboardInputScript::lockMouse(System.Boolean)
+extern void PlayerKeyboardInputScript_lockMouse_m798F80645C4FB666100D9110CABB4236975A9C4A (void);
+// 0x00000021 System.Void PlayerKeyboardInputScript::MouseLook(UnityEngine.InputSystem.InputAction/CallbackContext)
+extern void PlayerKeyboardInputScript_MouseLook_mF722740AC39056973800BB03C0F7A3D825FEBD16 (void);
+// 0x00000022 System.Void PlayerKeyboardInputScript::.ctor()
+extern void PlayerKeyboardInputScript__ctor_m4AC106B4CAA9F0665027C89DA1CE44D2221EBBDA (void);
+// 0x00000023 System.Void PlayerKeyboardInputScript/<DoPickUp>d__32::.ctor(System.Int32)
+extern void U3CDoPickUpU3Ed__32__ctor_mDE36F7D35CFBBDFA731EEFA8F9837F9BB573E03C (void);
+// 0x00000024 System.Void PlayerKeyboardInputScript/<DoPickUp>d__32::System.IDisposable.Dispose()
+extern void U3CDoPickUpU3Ed__32_System_IDisposable_Dispose_m9F08F401C1143ED0070F7B6BA4B9F28C53201137 (void);
+// 0x00000025 System.Boolean PlayerKeyboardInputScript/<DoPickUp>d__32::MoveNext()
+extern void U3CDoPickUpU3Ed__32_MoveNext_mDA5694FD9563F2E60ED6C0D077022DE79BBD34AB (void);
+// 0x00000026 System.Object PlayerKeyboardInputScript/<DoPickUp>d__32::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CDoPickUpU3Ed__32_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mC42C2134A7944C825799A5416E1C5A6C7425CE98 (void);
+// 0x00000027 System.Void PlayerKeyboardInputScript/<DoPickUp>d__32::System.Collections.IEnumerator.Reset()
+extern void U3CDoPickUpU3Ed__32_System_Collections_IEnumerator_Reset_m38918E8634F5896DEE8B8712C865461DD24D1413 (void);
+// 0x00000028 System.Object PlayerKeyboardInputScript/<DoPickUp>d__32::System.Collections.IEnumerator.get_Current()
+extern void U3CDoPickUpU3Ed__32_System_Collections_IEnumerator_get_Current_m2F855E53357CF8A5BF928165D9A65B143E7A7D01 (void);
+// 0x00000029 System.Void ActionNode::.ctor()
+extern void ActionNode__ctor_mDD17E220BD7393266370EC50C55000C80C209888 (void);
+// 0x0000002A NodeBase CompositeNode::Clone()
+extern void CompositeNode_Clone_m2B9DEE7EDB0577A1CDDAB008C409933E4D1541E1 (void);
+// 0x0000002B System.Void CompositeNode::.ctor()
+extern void CompositeNode__ctor_m2E605D28E41B95AF9898A9109CDBCB6D812D30E6 (void);
+// 0x0000002C System.Void CompositeNode/<>c::.cctor()
+extern void U3CU3Ec__cctor_m3526D7D3E5023260CB9EC34162D9B36DD41CA438 (void);
+// 0x0000002D System.Void CompositeNode/<>c::.ctor()
+extern void U3CU3Ec__ctor_mC0074BDB02ABA8FD94C2C90AA02F05C330BB9844 (void);
+// 0x0000002E NodeBase CompositeNode/<>c::<Clone>b__2_0(NodeBase)
+extern void U3CU3Ec_U3CCloneU3Eb__2_0_mA855A44D1AE7976037F557FA2A00431F87E7BC4D (void);
+// 0x0000002F NodeBase ConditionNode::Clone()
+extern void ConditionNode_Clone_m1A56784714E7687F95440F1D4A61F1C65947D687 (void);
+// 0x00000030 NodeBase/NodeState ConditionNode::OnUpdateInit()
+extern void ConditionNode_OnUpdateInit_mBDBF1F92788AF50FB3E209CD66768B2AF4B3C2D8 (void);
+// 0x00000031 System.Void ConditionNode::.ctor()
+extern void ConditionNode__ctor_mE1D4034198240E2985D43BB643E0C4A67FC1B273 (void);
+// 0x00000032 NodeBase DecoratorNode::Clone()
+extern void DecoratorNode_Clone_m1A16002509EEFE6036F5EAC5BDBDC80DF4363519 (void);
+// 0x00000033 System.Void DecoratorNode::.ctor()
+extern void DecoratorNode__ctor_m14843F0D37A69A29440E74703E86C63D97DDA8C2 (void);
+// 0x00000034 System.Void NodeBase::Awake()
+extern void NodeBase_Awake_m0FEC6636DEF6D8E4B055E70ADBECDEBDFF0B43AB (void);
+// 0x00000035 NodeBase/NodeState NodeBase::Update()
+extern void NodeBase_Update_mC25DB2073FEFD81305757E71AC5313937885F2D4 (void);
+// 0x00000036 NodeBase NodeBase::Clone()
+extern void NodeBase_Clone_mD421351CBD58628CBACF7FE86B96980C0C6F51B0 (void);
+// 0x00000037 System.Void NodeBase::SetNodeName(System.String)
+extern void NodeBase_SetNodeName_m11830103AE672149699FD1F10A27A55E7658A168 (void);
+// 0x00000038 System.Void NodeBase::OnStart()
+// 0x00000039 System.Void NodeBase::OnStop()
+// 0x0000003A NodeBase/NodeState NodeBase::OnUpdate()
+// 0x0000003B NodeBase/NodeState NodeBase::OnUpdateInit()
+extern void NodeBase_OnUpdateInit_mAB7AEA80A76DF1ED512641983C96F039CB6DC544 (void);
+// 0x0000003C System.Void NodeBase::UpdateNodeObjectName()
+// 0x0000003D System.Void NodeBase::.ctor()
+extern void NodeBase__ctor_m2CA082F0853BA909EE184119C139675A5518743B (void);
+// 0x0000003E System.Void DebugLogNode::Awake()
+extern void DebugLogNode_Awake_m30E2321C41780DF16165B1D25E20F47BCC901153 (void);
+// 0x0000003F System.Void DebugLogNode::SetNodeName(System.String)
+extern void DebugLogNode_SetNodeName_m1C260137361DF1D0979B198B1E4FAD08CD9B11FF (void);
+// 0x00000040 System.Void DebugLogNode::UpdateNodeObjectName()
+extern void DebugLogNode_UpdateNodeObjectName_m643A861B799D3714C5CCAA4D7A179B3E5BC837C3 (void);
+// 0x00000041 System.Void DebugLogNode::OnStart()
+extern void DebugLogNode_OnStart_mC8ADE6E3406026EAA1FBF25BA852080710560396 (void);
+// 0x00000042 System.Void DebugLogNode::OnStop()
+extern void DebugLogNode_OnStop_mC71200A15F461124CF869B43A78FAF1CC3A97610 (void);
+// 0x00000043 NodeBase/NodeState DebugLogNode::OnUpdate()
+extern void DebugLogNode_OnUpdate_m005E89495946289C64B04CB3343CDBED7B838A11 (void);
+// 0x00000044 System.Void DebugLogNode::.ctor()
+extern void DebugLogNode__ctor_m0874B349997AE50412CCA43096B5826B6E529119 (void);
+// 0x00000045 System.Void WaitNode::Awake()
+extern void WaitNode_Awake_m1302D3177D6651309AA9C6B0F8F83B7D5A087A61 (void);
+// 0x00000046 System.Void WaitNode::SetNodeName(System.String)
+extern void WaitNode_SetNodeName_m9C45BA4B1190A102DDE6074D9C1C7DE53EC7A895 (void);
+// 0x00000047 System.Void WaitNode::UpdateNodeObjectName()
+extern void WaitNode_UpdateNodeObjectName_mE7465B6C4D2B6D1AAECC47973DA4EF6EFE3487E3 (void);
+// 0x00000048 System.Void WaitNode::OnStart()
+extern void WaitNode_OnStart_m7E8F5BCE6910A235EA5E6616F54C0057B983B9CC (void);
+// 0x00000049 System.Void WaitNode::OnStop()
+extern void WaitNode_OnStop_mE0AF98C980CE56BE648CCEB230F3974E17D2849F (void);
+// 0x0000004A NodeBase/NodeState WaitNode::OnUpdate()
+extern void WaitNode_OnUpdate_m040A18F0BC48A5C56455A6E9D088A461B74EA9D4 (void);
+// 0x0000004B System.Void WaitNode::.ctor()
+extern void WaitNode__ctor_m80AB47AD10EC20D8C6E4D663D24AD9A0B03E588A (void);
+// 0x0000004C System.Void BehaviorTree::Awake()
+extern void BehaviorTree_Awake_mD7DB67BADAB3B2E77093544F13E2DD092B15F0B3 (void);
+// 0x0000004D System.Void BehaviorTree::treeInit()
+extern void BehaviorTree_treeInit_m1FEC1A6FBB5232F8C83F1A9EBA498D0E90BC07BE (void);
+// 0x0000004E System.Void BehaviorTree::ResetState()
+extern void BehaviorTree_ResetState_mAA60ED3A45B4026BF89E092DB9FB7776D635D1CD (void);
+// 0x0000004F NodeBase/NodeState BehaviorTree::Update()
+extern void BehaviorTree_Update_m3214F126A4BD6DD0DFE6F862BD54EE5A37115DAA (void);
+// 0x00000050 System.Collections.Generic.List`1<NodeBase> BehaviorTree::GetChildren(NodeBase)
+extern void BehaviorTree_GetChildren_mA99C1C77C9AD8DADB6F06F4E3B5DD65A20B50D25 (void);
+// 0x00000051 System.Collections.Generic.List`1<NodeBase> BehaviorTree::RemoveInvalidChildren(System.Collections.Generic.List`1<NodeBase>)
+extern void BehaviorTree_RemoveInvalidChildren_mE317F6E2B9BC07990183737CD4026000D36015C0 (void);
+// 0x00000052 System.Void BehaviorTree::Traverse(NodeBase,System.Action`1<NodeBase>)
+extern void BehaviorTree_Traverse_m10E345627D9267A7BDA2C748A1C3B40C106FC4AE (void);
+// 0x00000053 BehaviorTree BehaviorTree::Clone()
+extern void BehaviorTree_Clone_m7F8560F9846124654AAEC681342E388BA853CCE6 (void);
+// 0x00000054 System.Void BehaviorTree::Bind()
+extern void BehaviorTree_Bind_mC50F8EB7D88E4E577D4E82587B8D869DFCE39613 (void);
+// 0x00000055 System.Void BehaviorTree::.ctor()
+extern void BehaviorTree__ctor_m8F8F2C1E66A3324E0D8AF3E15DE6CF4A30673D84 (void);
+// 0x00000056 System.Void BehaviorTree::<Bind>b__12_0(NodeBase)
+extern void BehaviorTree_U3CBindU3Eb__12_0_m22AE799804FD73B646C5DC6B0E99C4766837D1D7 (void);
+// 0x00000057 System.Void BehaviorTree/<>c::.cctor()
+extern void U3CU3Ec__cctor_m4FC6CEA42CF9A8DFF7906EE118BBB24D3D381B8F (void);
+// 0x00000058 System.Void BehaviorTree/<>c::.ctor()
+extern void U3CU3Ec__ctor_m538FE6AE2852D040C528AC93BDFF6E3319B09D57 (void);
+// 0x00000059 System.Void BehaviorTree/<>c::<ResetState>b__6_0(NodeBase)
+extern void U3CU3Ec_U3CResetStateU3Eb__6_0_m74E3660227607440F524FAEDE6F5CA07FAAE3EE7 (void);
+// 0x0000005A System.Void BehaviorTree/<>c__DisplayClass10_0::.ctor()
+extern void U3CU3Ec__DisplayClass10_0__ctor_m21D049B3EF654F62A6BA37369783A230A78CAA80 (void);
+// 0x0000005B System.Void BehaviorTree/<>c__DisplayClass10_0::<Traverse>b__0(NodeBase)
+extern void U3CU3Ec__DisplayClass10_0_U3CTraverseU3Eb__0_mB344D9DA29488D3EA1C6C9E8737E6B45648CB513 (void);
+// 0x0000005C System.Void BehaviorTree/<>c__DisplayClass11_0::.ctor()
+extern void U3CU3Ec__DisplayClass11_0__ctor_m3B98FF7132ECDC6BE221A042B7B0E961EB4A39CA (void);
+// 0x0000005D System.Void BehaviorTree/<>c__DisplayClass11_0::<Clone>b__0(NodeBase)
+extern void U3CU3Ec__DisplayClass11_0_U3CCloneU3Eb__0_m20A6827CBEA5C4E91F38B9C7FF76D9E24064E5CC (void);
+// 0x0000005E System.Void Blackboard::SetRadius(System.Single)
+extern void Blackboard_SetRadius_mE46B5CDF044722645C7587B82731CC3BF5C80BBC (void);
+// 0x0000005F System.Single Blackboard::GetOpponentDistance()
+extern void Blackboard_GetOpponentDistance_mB27F3D2D3565C9EC4147EC4B7959089F35064AC9 (void);
+// 0x00000060 System.Single Blackboard::GetRadius()
+extern void Blackboard_GetRadius_m9C15AC5C98EADA19003D7A54B7480DC3A2E108FE (void);
+// 0x00000061 System.Void Blackboard::SetDistanceToOpponent(System.Single)
+extern void Blackboard_SetDistanceToOpponent_mC22414DAC1B4D2D14D9D05F3353AB70EB239CE6B (void);
+// 0x00000062 System.Void Blackboard::.ctor()
+extern void Blackboard__ctor_mDA34D0604160B2B8D7B42443351B1B4B93BB3174 (void);
+// 0x00000063 System.Void BTRunner::Awake()
+extern void BTRunner_Awake_mFABF1AEC18E9E48FE89273FCFD749022ACA8E4AA (void);
+// 0x00000064 System.Void BTRunner::Start()
+extern void BTRunner_Start_m56293705D011F4F88721BC9E9066B46B158C26A8 (void);
+// 0x00000065 System.Void BTRunner::Update()
+extern void BTRunner_Update_m740441CA4CCB55FDAFD69304F5F2F9AB1C418785 (void);
+// 0x00000066 System.Void BTRunner::RebindTree(BehaviorTree)
+extern void BTRunner_RebindTree_mC4EE7C551646513C49A51C1C3DFFC0392C956747 (void);
+// 0x00000067 System.Void BTRunner::.ctor()
+extern void BTRunner__ctor_mA383599A5B5C699DD50B83EB075C97322BE8589C (void);
+// 0x00000068 System.Void SelectorNode::Awake()
+extern void SelectorNode_Awake_mF80B021C8C0D61CB29586FD2B7A0C2ACC4CF1452 (void);
+// 0x00000069 System.Void SelectorNode::SetNodeName(System.String)
+extern void SelectorNode_SetNodeName_mB56515FF61443183BDFB4304C28FB909E9ADD2E6 (void);
+// 0x0000006A System.Void SelectorNode::UpdateNodeObjectName()
+extern void SelectorNode_UpdateNodeObjectName_m72214C74CF9D6E3D5640E8DDEE85A04FA2D183E4 (void);
+// 0x0000006B System.Void SelectorNode::OnStart()
+extern void SelectorNode_OnStart_m1517226F0137455AFD118DE901A0B94493228B9A (void);
+// 0x0000006C System.Void SelectorNode::OnStop()
+extern void SelectorNode_OnStop_m96B33723419EAE6EC5ACB5BEA224BD73B1372091 (void);
+// 0x0000006D NodeBase/NodeState SelectorNode::OnUpdate()
+extern void SelectorNode_OnUpdate_m05461DCE2304FAB6764E0D03DBF0319CB8D68C99 (void);
+// 0x0000006E System.Void SelectorNode::.ctor()
+extern void SelectorNode__ctor_m32990BA93263CB1371AB5B2EEC315D5FB85E9337 (void);
+// 0x0000006F System.Void SequencerNode::Awake()
+extern void SequencerNode_Awake_mC0A2D0B1C3661705FB4CA8723C3559A5BB11FB96 (void);
+// 0x00000070 System.Void SequencerNode::SetNodeName(System.String)
+extern void SequencerNode_SetNodeName_m8272BC557F8E083FE83648A214588338DCB23667 (void);
+// 0x00000071 System.Void SequencerNode::UpdateNodeObjectName()
+extern void SequencerNode_UpdateNodeObjectName_m97E31F1E321442DC2A21A17F8930164BE7F2AF1D (void);
+// 0x00000072 System.Void SequencerNode::OnStart()
+extern void SequencerNode_OnStart_mB50A3BAB999118B6D1DCBE5F081DC1962BBE34EA (void);
+// 0x00000073 System.Void SequencerNode::OnStop()
+extern void SequencerNode_OnStop_mD97A15E04E4A0E5490575F2181FE3635A686B81E (void);
+// 0x00000074 NodeBase/NodeState SequencerNode::OnUpdate()
+extern void SequencerNode_OnUpdate_m000CEA91036744DEE78A0663044476DD5205E4CA (void);
+// 0x00000075 System.Void SequencerNode::.ctor()
+extern void SequencerNode__ctor_mBE9126B6ECD6B109B1A123C4FEBF841A0EC9C7B1 (void);
+// 0x00000076 System.Void ConditionTrueFalse::Awake()
+extern void ConditionTrueFalse_Awake_m3ECA6B5553DC154EB6445CA53E2C8FDB5F3EC48A (void);
+// 0x00000077 System.Void ConditionTrueFalse::SetNodeName(System.String)
+extern void ConditionTrueFalse_SetNodeName_mE04C22994E9BCC0975A1422D846A29B89AEEDC71 (void);
+// 0x00000078 System.Void ConditionTrueFalse::UpdateNodeObjectName()
+extern void ConditionTrueFalse_UpdateNodeObjectName_mC1806DF0CD68D39C4C1A0DFFCDDA4F33B50C968E (void);
+// 0x00000079 System.Void ConditionTrueFalse::OnStart()
+extern void ConditionTrueFalse_OnStart_mFC3BFB989ECBEAADC6FB3154DCBA3C26C3327C66 (void);
+// 0x0000007A System.Void ConditionTrueFalse::OnStop()
+extern void ConditionTrueFalse_OnStop_m3E2487D2B9ACB44112D9F9B5482DBF59B55AE395 (void);
+// 0x0000007B NodeBase/NodeState ConditionTrueFalse::OnUpdate()
+extern void ConditionTrueFalse_OnUpdate_m474270141F302090BF6B1F7F2351A009D79A0A0C (void);
+// 0x0000007C System.Void ConditionTrueFalse::.ctor()
+extern void ConditionTrueFalse__ctor_mEF7535314E8E8CE25B6803445D096115D87B0557 (void);
+// 0x0000007D System.Void InverterNode::Awake()
+extern void InverterNode_Awake_m6F3745AEE9D7910131252D201E486C1C9B2C8E1C (void);
+// 0x0000007E System.Void InverterNode::SetNodeName(System.String)
+extern void InverterNode_SetNodeName_m320F1B68B80FE19B220C13468D3E7B8A57D25027 (void);
+// 0x0000007F System.Void InverterNode::UpdateNodeObjectName()
+extern void InverterNode_UpdateNodeObjectName_m8BBCD78FB31790A4425433F424C8087E956E2C19 (void);
+// 0x00000080 System.Void InverterNode::OnStart()
+extern void InverterNode_OnStart_m67C4C9420B65AD00D5686BE6697AFF551DB1F9B1 (void);
+// 0x00000081 System.Void InverterNode::OnStop()
+extern void InverterNode_OnStop_mDACE1C3572D85803F12A6DD5A77E4DCCF4E33F50 (void);
+// 0x00000082 NodeBase/NodeState InverterNode::OnUpdate()
+extern void InverterNode_OnUpdate_m79707E2E6E9C5AA631F3F6D4A7956E694D2E4262 (void);
+// 0x00000083 System.Void InverterNode::.ctor()
+extern void InverterNode__ctor_mFE796F6B5C0B9A5B848D6339754C231A1305D291 (void);
+// 0x00000084 System.Void RepeaterNode::Awake()
+extern void RepeaterNode_Awake_m623E2F8E5D8D6DC2A5FD88D7DECBFDD133D7DF03 (void);
+// 0x00000085 System.Void RepeaterNode::SetNodeName(System.String)
+extern void RepeaterNode_SetNodeName_m01087F5B77A8A4A99EEEF50BEC15AD9191997F74 (void);
+// 0x00000086 System.Void RepeaterNode::UpdateNodeObjectName()
+extern void RepeaterNode_UpdateNodeObjectName_m016C784D5868B485B68174A922AEDD9242E5D4F7 (void);
+// 0x00000087 System.Void RepeaterNode::OnStart()
+extern void RepeaterNode_OnStart_mEB790FC3A582F36062ECD4FDC77D40608515DCE5 (void);
+// 0x00000088 System.Void RepeaterNode::OnStop()
+extern void RepeaterNode_OnStop_m41CCA1FD8E2C92889D6F80AFC067A4EFF7884226 (void);
+// 0x00000089 NodeBase/NodeState RepeaterNode::OnUpdate()
+extern void RepeaterNode_OnUpdate_m75C3DDD3B1133047087C2DFF53A889B1C9456F02 (void);
+// 0x0000008A System.Void RepeaterNode::.ctor()
+extern void RepeaterNode__ctor_m76110B0AE0FB136577B9891BC3C6A6C8F8A91E6A (void);
+// 0x0000008B System.Void RootNode::Awake()
+extern void RootNode_Awake_m8DCAF525B279093791D1264F5FE3B54F62A5A551 (void);
+// 0x0000008C System.Void RootNode::SetNodeName(System.String)
+extern void RootNode_SetNodeName_m354C556EB7E6CA68C6DFFC41FC8030ED7D21CA6E (void);
+// 0x0000008D System.Void RootNode::UpdateNodeObjectName()
+extern void RootNode_UpdateNodeObjectName_m77963043C08746E6F477F363467CC430DC5CD4CE (void);
+// 0x0000008E System.Void RootNode::OnStart()
+extern void RootNode_OnStart_mD10D0864A5329A97F6CD57DE728A29D9EEFD53BC (void);
+// 0x0000008F System.Void RootNode::OnStop()
+extern void RootNode_OnStop_m98549D2275BFFC1C2AE286AF47542F64AD4FD171 (void);
+// 0x00000090 NodeBase/NodeState RootNode::OnUpdate()
+extern void RootNode_OnUpdate_m122FCA9407A2035D2FF6E8BDB2151024624F4937 (void);
+// 0x00000091 NodeBase RootNode::Clone()
+extern void RootNode_Clone_m016C0B01A83D822B856BBDABB703DB25E83038DE (void);
+// 0x00000092 System.Void RootNode::.ctor()
+extern void RootNode__ctor_m5B42ED375CE5C30A930D74DE7E54E908A40D5033 (void);
+// 0x00000093 System.Void DipScript2::Interact(UnityEngine.GameObject)
+extern void DipScript2_Interact_m2DA6C0AC5ADF3AEA8D1C01EEF7D42D8F39BA78C2 (void);
+// 0x00000094 System.Void DipScript2::.ctor()
+extern void DipScript2__ctor_mFE8AFA222F294A11286091697FBF36936CF13061 (void);
+// 0x00000095 System.Void DipTriggerScript::.ctor()
+extern void DipTriggerScript__ctor_mE8892DF5C16F6FB83E2BD295D96D122E7B5822CD (void);
+// 0x00000096 System.Void ElevatorOpen::Start()
+extern void ElevatorOpen_Start_mAA7F7CD7C7E5372A86FF42B44B7656912801D8D0 (void);
+// 0x00000097 System.Void ElevatorOpen::OpenDoor()
+extern void ElevatorOpen_OpenDoor_m25949970AC46AD7CC09D6CB7B23F949308061470 (void);
+// 0x00000098 System.Void ElevatorOpen::.ctor()
+extern void ElevatorOpen__ctor_m990DC75F6165E3D687B497F68A48918B8B5D45A7 (void);
+// 0x00000099 System.Void GroundTriggerScript::OnTriggerEnter(UnityEngine.Collider)
+extern void GroundTriggerScript_OnTriggerEnter_m030E4629E5BD7905753AFD7D6F4E9D3A848A396B (void);
+// 0x0000009A System.Void GroundTriggerScript::.ctor()
+extern void GroundTriggerScript__ctor_m3437A86762A0EAFE3C115AC8DAF188B291380C67 (void);
+// 0x0000009B System.Void HoverableBase::CursorHighlight()
+// 0x0000009C System.Void HoverableBase::LookHighlight()
+// 0x0000009D System.Void HoverableBase::CursorInteract()
+// 0x0000009E System.Void HoverableCursor::.ctor()
+extern void HoverableCursor__ctor_m986DC165603A439B862984C9830D338B7CCB0ABB (void);
+// 0x0000009F System.Void InteractableBase::.ctor()
+extern void InteractableBase__ctor_mBBA61B40BBAD4DA0A5A8E9EC4C6735CB4D88ADDA (void);
+// 0x000000A0 System.Void InteractableScript::setType(System.String)
+extern void InteractableScript_setType_m80D5960DF269AB47A5B5087155E058F7B0B5F325 (void);
+// 0x000000A1 System.String InteractableScript::getType()
+extern void InteractableScript_getType_m135B9D9F5BD8E1611885740FD44FAB9CC07F78B3 (void);
+// 0x000000A2 System.Void InteractableScript::.ctor()
+extern void InteractableScript__ctor_mE82355A2946B12BFB4B7CDD5E18E8A4334EAC66D (void);
+// 0x000000A3 System.Void InteractableTeleportEvent::TeleportEnter()
+extern void InteractableTeleportEvent_TeleportEnter_m7225BE3425AE4324C38F44C554055737C687876A (void);
+// 0x000000A4 System.Void InteractableTeleportEvent::TeleportExit()
+extern void InteractableTeleportEvent_TeleportExit_mEC0D69168CA8FC7E3DD622CA5776D57D25DE1FC8 (void);
+// 0x000000A5 System.Void InteractableTeleportEvent::.ctor()
+extern void InteractableTeleportEvent__ctor_m7C2894C454A0F4FF1844F2B5E5179ABB2357AC9C (void);
+// 0x000000A6 System.Void MedCartTransition::OnTriggerEnter(UnityEngine.Collider)
+extern void MedCartTransition_OnTriggerEnter_mD4354D12B62061EE0D1B2208E2BD0BBD6628351B (void);
+// 0x000000A7 System.Void MedCartTransition::OnTriggerExit(UnityEngine.Collider)
+extern void MedCartTransition_OnTriggerExit_m5F77D0362DF4E31CAC2C27B7A563F881F776A219 (void);
+// 0x000000A8 System.Void MedCartTransition::recordObjects()
+extern void MedCartTransition_recordObjects_m125727E1E33F3896CD591B08B2E6F39585A15879 (void);
+// 0x000000A9 System.Void MedCartTransition::moveObjects()
+extern void MedCartTransition_moveObjects_m6EB7E5E0583BF3B293F5585FCE828192E54C4E70 (void);
+// 0x000000AA System.Void MedCartTransition::.ctor()
+extern void MedCartTransition__ctor_m64676F1E09F8C796C75A15113319A374F590F082 (void);
+// 0x000000AB System.Void SanitizerScript::Awake()
+extern void SanitizerScript_Awake_mC97076F37954B3E34D95033DDD3CC533B6A2FA97 (void);
+// 0x000000AC System.Void SanitizerScript::Interact(UnityEngine.GameObject)
+extern void SanitizerScript_Interact_m117AE51870EFB06445B9B1D3A85D9AD68943CD82 (void);
+// 0x000000AD System.Void SanitizerScript::ActivateObjects(System.Boolean)
+extern void SanitizerScript_ActivateObjects_mF111EBFA7ACA5A4B393F2785AF73BB89DA1FAA67 (void);
+// 0x000000AE System.Void SanitizerScript::.ctor()
+extern void SanitizerScript__ctor_m13D4B99A8579C58706E796A7AE886A2E2CA40831 (void);
+// 0x000000AF System.Void SharpieObjectScript::Interact(UnityEngine.GameObject)
+extern void SharpieObjectScript_Interact_m89B8643F7DD05CC595619DA2899164ACBE0C281A (void);
+// 0x000000B0 System.Void SharpieObjectScript::.ctor()
+extern void SharpieObjectScript__ctor_mA73DA1836632F0DDCB61D06D6F4779B26357AF65 (void);
+// 0x000000B1 System.Void SharpieSpawnScript::OnTriggerEnter(UnityEngine.Collider)
+extern void SharpieSpawnScript_OnTriggerEnter_m09B296CAB7C908C01A81D69545CDFB7335777AB8 (void);
+// 0x000000B2 System.Void SharpieSpawnScript::.ctor()
+extern void SharpieSpawnScript__ctor_m3CA9078711C94E5EDF78B5C1ACBCFF07A489CCB6 (void);
+// 0x000000B3 System.Void TeleportIndicatorScript::Awake()
+extern void TeleportIndicatorScript_Awake_m38B1B0C32D6231E9AC3E998D6B36EE82D8EDD3CA (void);
+// 0x000000B4 System.Void TeleportIndicatorScript::Update()
+extern void TeleportIndicatorScript_Update_m8C7E6B8672A9E4B2FE68B2EAA282B0060AD1E0F0 (void);
+// 0x000000B5 System.Void TeleportIndicatorScript::indicatorActive(System.Boolean)
+extern void TeleportIndicatorScript_indicatorActive_m1114FF2482C1C09C3F718B6ED52A3CEADCEB9EF4 (void);
+// 0x000000B6 System.Void TeleportIndicatorScript::indicatorActiveVR(System.Boolean)
+extern void TeleportIndicatorScript_indicatorActiveVR_m2C8AF993D9DD20EB2E78EF4568685BB80BD06CA4 (void);
+// 0x000000B7 System.Void TeleportIndicatorScript::.ctor()
+extern void TeleportIndicatorScript__ctor_m1ABAA8716D5415EBC154041E2EFE390F109699A1 (void);
+// 0x000000B8 System.Void UnParentOnEnable::OnEnable()
+extern void UnParentOnEnable_OnEnable_m735C0114489B46BEBEB536AD92F4B1AC9CED4692 (void);
+// 0x000000B9 System.Void UnParentOnEnable::.ctor()
+extern void UnParentOnEnable__ctor_mB11A6CCD465C04CBF39A49F41E23540FC17DFA14 (void);
+// 0x000000BA System.Void ClipboardText::Awake()
+extern void ClipboardText_Awake_mC88ED413901D777580D294848C34F01CCBFDBB33 (void);
+// 0x000000BB System.Void ClipboardText::.ctor()
+extern void ClipboardText__ctor_mD0E74BE24CFC493F5D04F09E7FC58D99DCA9828E (void);
+// 0x000000BC System.Void DosageIndicator::Awake()
+extern void DosageIndicator_Awake_mABD19104CC7451BECB5E2ADCE6F37245639E30BC (void);
+// 0x000000BD System.Void DosageIndicator::Update()
+extern void DosageIndicator_Update_m346515C55C11322B40BA3AC76D70703982C8B7A4 (void);
+// 0x000000BE System.Void DosageIndicator::.ctor()
+extern void DosageIndicator__ctor_m86E1BFB8AE1D48D1A1B70C515942AB875F8B8592 (void);
+// 0x000000BF System.Void InteractableDialogBtn::HighlightStart()
+extern void InteractableDialogBtn_HighlightStart_m0CE0C079180FA20E41F6A9A5EF38A3452BBE7DCE (void);
+// 0x000000C0 System.Void InteractableDialogBtn::HighlightStop()
+extern void InteractableDialogBtn_HighlightStop_m1BB615C8830092A3AF74EBE3C446533D83E21220 (void);
+// 0x000000C1 System.Void InteractableDialogBtn::Awake()
+extern void InteractableDialogBtn_Awake_mE7212CCF481F36477880A0FBEED44FB55B4D5FE4 (void);
+// 0x000000C2 System.Void InteractableDialogBtn::Interact(UnityEngine.GameObject)
+extern void InteractableDialogBtn_Interact_mC4188EC70BA56F8FB91975456B700FA3B974C415 (void);
+// 0x000000C3 System.Void InteractableDialogBtn::.ctor()
+extern void InteractableDialogBtn__ctor_mF7442A2753422C697E4C1C79AED58EC808533558 (void);
+// 0x000000C4 System.Void InteractableDialogController::Start()
+extern void InteractableDialogController_Start_m6B885A9258E09F89BECB7030CA5F6BC028A53EB6 (void);
+// 0x000000C5 System.Void InteractableDialogController::Update()
+extern void InteractableDialogController_Update_mA50D8C165DF28257CC2B13CE8B3FDABE5C033DA9 (void);
+// 0x000000C6 System.Void InteractableDialogController::.ctor()
+extern void InteractableDialogController__ctor_m445CDF4A2EAC9B303D398005F8C3E3BD86FDBD1B (void);
+// 0x000000C7 System.Void InteractableSpeechButton::CursorHighlight()
+extern void InteractableSpeechButton_CursorHighlight_m420126FCE55B971541F02AD03EF948560348E02A (void);
+// 0x000000C8 System.Void InteractableSpeechButton::LookHighlight()
+extern void InteractableSpeechButton_LookHighlight_m1F5DDBE5443724C761669BF21A48C9FBED2E7A67 (void);
+// 0x000000C9 System.Void InteractableSpeechButton::HighlightStart()
+extern void InteractableSpeechButton_HighlightStart_m6EC19B331A8A9E8B77AE5FF950AA31030ABE5D69 (void);
+// 0x000000CA System.Void InteractableSpeechButton::HighlightStop()
+extern void InteractableSpeechButton_HighlightStop_m7D1CBDB8FF7F1E907274A51F135C2C140A9487CE (void);
+// 0x000000CB System.Void InteractableSpeechButton::Start()
+extern void InteractableSpeechButton_Start_mF5C7D8EA00AB7B0FE5563BC68AFCC3746B276034 (void);
+// 0x000000CC System.Void InteractableSpeechButton::FixedUpdate()
+extern void InteractableSpeechButton_FixedUpdate_mFF3BA55CBC6C5DA2715D9DF54AEF5B28D5C23FDB (void);
+// 0x000000CD System.Void InteractableSpeechButton::Interact(UnityEngine.GameObject)
+extern void InteractableSpeechButton_Interact_mA18F223FE087DB9FD695465FD57FA389F8D69570 (void);
+// 0x000000CE System.Void InteractableSpeechButton::OpenButton()
+extern void InteractableSpeechButton_OpenButton_m77B85991636038FFA3916EEAAE584262032F13E3 (void);
+// 0x000000CF System.Void InteractableSpeechButton::CloseButton()
+extern void InteractableSpeechButton_CloseButton_mA70E63182F93F419E16A9207C402CCF811FD4706 (void);
+// 0x000000D0 System.Void InteractableSpeechButton::CloseSiblings()
+extern void InteractableSpeechButton_CloseSiblings_m0FFAAF2293C19D7BC2620A35D7B9E9F465859827 (void);
+// 0x000000D1 System.Void InteractableSpeechButton::.ctor()
+extern void InteractableSpeechButton__ctor_mB78AB546769797C214703C5542DE67CB54BE032E (void);
+// 0x000000D2 System.Void InteractableSpeechButton::.cctor()
+extern void InteractableSpeechButton__cctor_mB61D72454550C61A17AC7D68D582FD5B0BF9AE20 (void);
+// 0x000000D3 System.Void LiquidQuestionScript::.ctor()
+extern void LiquidQuestionScript__ctor_mC24EC5772B48891EA37E00B401892BC785D7ABC1 (void);
+// 0x000000D4 System.Void MenuButtonHover::OnTriggerEnter(UnityEngine.Collider)
+extern void MenuButtonHover_OnTriggerEnter_m24F36AB3C8FA6C92B7D0E97C824E3789718ADD72 (void);
+// 0x000000D5 System.Void MenuButtonHover::OnTriggerExit(UnityEngine.Collider)
+extern void MenuButtonHover_OnTriggerExit_m2B238B2CA7954274ED84233208327A7DE9238BA1 (void);
+// 0x000000D6 System.Void MenuButtonHover::.ctor()
+extern void MenuButtonHover__ctor_m852E6E7294076FD1C9AC56F83BFCD6BA974C2B0F (void);
+// 0x000000D7 System.Void MenuButtonManager::Start()
+extern void MenuButtonManager_Start_m05DFBA7B1E938838EBB1C2F9C5D9E15BAD7887A5 (void);
+// 0x000000D8 System.Void MenuButtonManager::BeginSimulation()
+extern void MenuButtonManager_BeginSimulation_mB150F28E7FFED91AED982B9FCBA433F4FB462528 (void);
+// 0x000000D9 System.Void MenuButtonManager::BeginTutorial()
+extern void MenuButtonManager_BeginTutorial_mC03EA5B928E0DA73BAE130BF29FB6F0CA58F0AF2 (void);
+// 0x000000DA System.Void MenuButtonManager::OpenSettings()
+extern void MenuButtonManager_OpenSettings_m8BBF353410DF0AFC251D47B66756C2ACCE0DE71A (void);
+// 0x000000DB System.Void MenuButtonManager::BackToMenu()
+extern void MenuButtonManager_BackToMenu_m8B8C146C1886D1CE0ABF483570F2DFE238FF1655 (void);
+// 0x000000DC System.Void MenuButtonManager::OpenCredits()
+extern void MenuButtonManager_OpenCredits_mE4B2688518611488698FACB821D701CE35E40781 (void);
+// 0x000000DD System.Void MenuButtonManager::QuitGame()
+extern void MenuButtonManager_QuitGame_m4FFCD490FF07AB2039BB92C3366F84F51FEAE418 (void);
+// 0x000000DE System.Void MenuButtonManager::EnableVR()
+extern void MenuButtonManager_EnableVR_m2991B753FBB40B64DBCB61F1934815A33C2D29F3 (void);
+// 0x000000DF System.Void MenuButtonManager::DisableVR()
+extern void MenuButtonManager_DisableVR_m949EE1539BB602415130FA623BF52D186D73CB32 (void);
+// 0x000000E0 System.Void MenuButtonManager::.ctor()
+extern void MenuButtonManager__ctor_mBE1CE9ADE4188DDF71500B3341DE7DE362AB9BDD (void);
+// 0x000000E1 System.Void MenuButtonScript::callInteract(UnityEngine.Collider)
+extern void MenuButtonScript_callInteract_m1B567F7DD4E8A86A90871669D09793E8807A3111 (void);
+// 0x000000E2 System.Void MenuButtonScript::Interact(UnityEngine.GameObject)
+extern void MenuButtonScript_Interact_m2DDCCAB8BB8054ED9B144D696A566685505BA2DC (void);
+// 0x000000E3 System.Void MenuButtonScript::.ctor()
+extern void MenuButtonScript__ctor_m905A7CFE1B4993EED2D0E275DBABB6C071DB9CE4 (void);
+// 0x000000E4 System.Void QuestionScript::answerSelected(UnityEngine.GameObject)
+extern void QuestionScript_answerSelected_mFB21C23686AA538FF5C0F0630E9125738F5C30D2 (void);
+// 0x000000E5 System.Void QuestionScript::.ctor()
+extern void QuestionScript__ctor_m4CFEA87C6DEA579081B8CFD589776CB603911133 (void);
+// 0x000000E6 System.Void TutorialCartText::Awake()
+extern void TutorialCartText_Awake_m1D732D741A6DB3B2AAA054382C47D42E20B13708 (void);
+// 0x000000E7 System.Void TutorialCartText::Update()
+extern void TutorialCartText_Update_m324FCAE49FCBB3778BEB5B90901005C15BC4E7BB (void);
+// 0x000000E8 System.Void TutorialCartText::.ctor()
+extern void TutorialCartText__ctor_mDEFD1225AD184BA5E03F0AE03D08B50901D56584 (void);
+// 0x000000E9 System.Void DontDestroyScript::Awake()
+extern void DontDestroyScript_Awake_m6BF3C85B0B95A3ABA8AF3D98D64693B20BAB1FE2 (void);
+// 0x000000EA System.Void DontDestroyScript::.ctor()
+extern void DontDestroyScript__ctor_m0701A6E41C0453173B885FE33AC51F226C4CA631 (void);
+// 0x000000EB System.Void EscapeScript::Update()
+extern void EscapeScript_Update_m43F8A310ED0D3D6AFE5C627B418A587CEE88D725 (void);
+// 0x000000EC System.Void EscapeScript::.ctor()
+extern void EscapeScript__ctor_mA713C44E6564F217858B4BA07F0292660B712A1C (void);
+// 0x000000ED System.Void HideOnStart::Start()
+extern void HideOnStart_Start_mA4EDEBC2465EFFA24B6B151512F22D251AF95FDC (void);
+// 0x000000EE System.Void HideOnStart::.ctor()
+extern void HideOnStart__ctor_m6CE4D784548E126F7C2C49C30ED7B72E24D0DD91 (void);
+// 0x000000EF System.Void ResetScript::Interact(UnityEngine.GameObject)
+extern void ResetScript_Interact_m66C6F8C6252D43F8F68B28253C51290A68581F93 (void);
+// 0x000000F0 System.Void ResetScript::.ctor()
+extern void ResetScript__ctor_mFECC0C7F30F86174A977C0813F777556F963DA52 (void);
+// 0x000000F1 System.Void LiquidTriggerScript::Start()
+extern void LiquidTriggerScript_Start_mABA359EFC4F0016F9876D3B1378A4D5621EEA98E (void);
+// 0x000000F2 System.Void LiquidTriggerScript::Interact(UnityEngine.GameObject)
+extern void LiquidTriggerScript_Interact_m0081F2DED18E0AADCDE7FEE99C8C0D338EE6C5D2 (void);
+// 0x000000F3 System.Void LiquidTriggerScript::setMedicine(System.Single)
+extern void LiquidTriggerScript_setMedicine_m8F1F3D158E4F8D3B4C5116006A3A57880311EDFA (void);
+// 0x000000F4 System.Void LiquidTriggerScript::.ctor()
+extern void LiquidTriggerScript__ctor_m62F9ED4B5A1FE1DB10424BC6AC53DAC9E31EE168 (void);
+// 0x000000F5 System.Void LoadMainScene::Interact(UnityEngine.GameObject)
+extern void LoadMainScene_Interact_m2CAFB655C3E8E4C2997FF1B71D9C79ECA7A4EA4C (void);
+// 0x000000F6 System.Void LoadMainScene::.ctor()
+extern void LoadMainScene__ctor_m714F4FD5D08AB8BADDAEDD522FDE025A470E8AD8 (void);
+// 0x000000F7 System.Void MedicineData::Awake()
+extern void MedicineData_Awake_mC470065DBEC7C3D9A4352C047FFD66D176D8B929 (void);
+// 0x000000F8 System.String MedicineData::getMedicineName()
+extern void MedicineData_getMedicineName_m9EC63EC702CA778F59A9B4E0314494E9CB516DAE (void);
+// 0x000000F9 System.Single MedicineData::getMedicineDosage()
+extern void MedicineData_getMedicineDosage_m259ADCEF6831CFCC4B77C635266EF53F35BBCD9E (void);
+// 0x000000FA MedicineTypes MedicineData::getMedicineType()
+extern void MedicineData_getMedicineType_m7D6C45568F01AA9F6871FEBD1162D9025FEDC8B9 (void);
+// 0x000000FB UnityEngine.GameObject MedicineData::dispenseObject(UnityEngine.Vector3,UnityEngine.Quaternion)
+extern void MedicineData_dispenseObject_m30694388A9A7D7451BE954759281FA64A6E0CA13 (void);
+// 0x000000FC UnityEngine.GameObject[] MedicineData::dispenseObjects(UnityEngine.Vector3,UnityEngine.Quaternion)
+extern void MedicineData_dispenseObjects_m4A83CAFD69DEE61A9870A11EBB918E151430A8F6 (void);
+// 0x000000FD UnityEngine.GameObject[] MedicineData::dispenseObjects(UnityEngine.Vector3,UnityEngine.Quaternion,System.Int32)
+extern void MedicineData_dispenseObjects_mD6B49CD13FEBEACDE529C11BC50A34685694649C (void);
+// 0x000000FE System.Boolean MedicineData::setMedicineDosage(System.Single)
+extern void MedicineData_setMedicineDosage_mC3BF108A54CC5EBB12231F08FDB0AC4F81AA5C14 (void);
+// 0x000000FF System.Void MedicineData::.ctor()
+extern void MedicineData__ctor_mB5B73563665B9C56A017649601A513D329B83712 (void);
+// 0x00000100 System.Void MedicineScriptableObject::Awake()
+extern void MedicineScriptableObject_Awake_m64A5485CD1478A19F22A09423F62E53FEC1E5CA1 (void);
+// 0x00000101 System.Boolean MedicineScriptableObject::getDoDispense()
+extern void MedicineScriptableObject_getDoDispense_m555B85641FB546EC1BB14F65E8DD48AF03706618 (void);
+// 0x00000102 System.Void MedicineScriptableObject::.ctor()
+extern void MedicineScriptableObject__ctor_mB69C472DE9F5EF35DB8F888429B4FFF398FBD642 (void);
+// 0x00000103 System.Void MedicineScriptableObject::.cctor()
+extern void MedicineScriptableObject__cctor_m59EDF5EF35A5902A182939AAF1F4112EECFAF72F (void);
+// 0x00000104 System.Void MedicineSpawnScript::Awake()
+extern void MedicineSpawnScript_Awake_m9FC74849980CFAD83C2873753665D8914C206C64 (void);
+// 0x00000105 System.Void MedicineSpawnScript::Interact(UnityEngine.GameObject)
+extern void MedicineSpawnScript_Interact_mA7E9D92E8A73CF11BBAF439AE7063560D0115853 (void);
+// 0x00000106 System.Void MedicineSpawnScript::.ctor()
+extern void MedicineSpawnScript__ctor_mC50E82E289341BB4152E4D917649219A9B828F17 (void);
+// 0x00000107 System.Void MedLabelScript::Awake()
+extern void MedLabelScript_Awake_m92214CA94BE8711F308BC49D0C7151491E6F5AD5 (void);
+// 0x00000108 System.Void MedLabelScript::Update()
+extern void MedLabelScript_Update_m3FE72DDDBB9BAE952223F105D2F71F64EA685CAA (void);
+// 0x00000109 System.Void MedLabelScript::labelActive(System.Boolean)
+extern void MedLabelScript_labelActive_m3B427896FA435B50752D7641B1B5740D5903E602 (void);
+// 0x0000010A System.Void MedLabelScript::.ctor()
+extern void MedLabelScript__ctor_m61B8825E6D63D1DC4FD24EBA6491D45203BCEBAB (void);
+// 0x0000010B System.Void MedLabelScript::<Awake>b__14_0()
+extern void MedLabelScript_U3CAwakeU3Eb__14_0_m7DF438992BAA4F87D62EF73CCD792C1EF673B979 (void);
+// 0x0000010C System.Void MedLabelScript::<Awake>b__14_1()
+extern void MedLabelScript_U3CAwakeU3Eb__14_1_m2ED8264CBE7B8B9F2A9928413D286628A1D7F1AE (void);
+// 0x0000010D System.Void PatchObjectScript::Awake()
+extern void PatchObjectScript_Awake_m61ACEF32ECC66B2211B3C846EE918CF08301D31B (void);
+// 0x0000010E System.Void PatchObjectScript::markPatch()
+extern void PatchObjectScript_markPatch_mE89A4105FB814BFC0ECA8E3A35B97C12CF623FCF (void);
+// 0x0000010F System.Boolean PatchObjectScript::isMarked()
+extern void PatchObjectScript_isMarked_m191346A2C641A94905613DE19D5825E06E27375E (void);
+// 0x00000110 System.Void PatchObjectScript::.ctor()
+extern void PatchObjectScript__ctor_mF46CE1E2CB1B28678DF80A1F3E7A94A8102EDF2B (void);
+// 0x00000111 System.Void PatchSpawnScript::.ctor()
+extern void PatchSpawnScript__ctor_m229536057945D98D7303F1BC5971EABE30FC9995 (void);
+// 0x00000112 System.Void SetLiquidSyrup::Start()
+extern void SetLiquidSyrup_Start_mA3D7C3B6EC13BF6FAED21EA3FBCADFD22AAB2542 (void);
+// 0x00000113 System.Void SetLiquidSyrup::SetParentSyrup()
+extern void SetLiquidSyrup_SetParentSyrup_mEA85940EE9E2E99523D0C0CDD58BE9FEAA356BB9 (void);
+// 0x00000114 System.Void SetLiquidSyrup::.ctor()
+extern void SetLiquidSyrup__ctor_mA9DE937991A135134A57811C5E5647A3D44153D6 (void);
+// 0x00000115 System.Void ActionBase::performAction()
+extern void ActionBase_performAction_m1681A8F6347A8ACE928D65E6B72114B4BB99066E (void);
+// 0x00000116 System.Void ActionBase::setObjective(Objective,System.Boolean)
+extern void ActionBase_setObjective_mC30E47C1852E6C9BC37E46297CC7DF390790BECF (void);
+// 0x00000117 System.Void ActionBase::setMedicine(System.String)
+extern void ActionBase_setMedicine_m693D2910CADF94CE2C6A25ABF5CEB8D0690ECF6C (void);
+// 0x00000118 System.Void ActionBase::setDosage(System.Double)
+extern void ActionBase_setDosage_m6610DF4BDE90283B7FF17614E860C305734786EC (void);
+// 0x00000119 System.String ActionBase::getMedicine()
+extern void ActionBase_getMedicine_m2B5C7CCA1CBB9471FD8EC4D41D7D2DBBDE5B27AD (void);
+// 0x0000011A System.Double ActionBase::getDosage()
+extern void ActionBase_getDosage_m595599E816F37811B843E8542FBDAAC3B630611E (void);
+// 0x0000011B System.Void ActionBase::.ctor()
+extern void ActionBase__ctor_mF1821CCF12A72833186419E1E5060CCE471D38A8 (void);
+// 0x0000011C System.Void ActionCheckMedicine::OnTriggerEnter(UnityEngine.Collider)
+extern void ActionCheckMedicine_OnTriggerEnter_mBF3FCAD76D0BEC4717B01B6ADDDCB9782211CEC0 (void);
+// 0x0000011D System.Void ActionCheckMedicine::CheckMedicine(System.String)
+extern void ActionCheckMedicine_CheckMedicine_mB4C35C6EB606F6533690D79B1548D74A9506477B (void);
+// 0x0000011E System.Void ActionCheckMedicine::.ctor()
+extern void ActionCheckMedicine__ctor_m0814E001547A5677CD3E95146F3C68B020109A5E (void);
+// 0x0000011F System.Void ActionCountMedicine::OnTriggerEnter(UnityEngine.Collider)
+extern void ActionCountMedicine_OnTriggerEnter_mF63B7D2C22B148C59F3EEA84F1E5B00750D1572F (void);
+// 0x00000120 System.Void ActionCountMedicine::OnTriggerStay(UnityEngine.Collider)
+extern void ActionCountMedicine_OnTriggerStay_m75DBC1D414BB28115FF1C71689E437048E7EC846 (void);
+// 0x00000121 System.Void ActionCountMedicine::OnTriggerExit(UnityEngine.Collider)
+extern void ActionCountMedicine_OnTriggerExit_m68DA9AAD36FBBD32C88706F87580CAC3301C781D (void);
+// 0x00000122 System.Void ActionCountMedicine::Update()
+extern void ActionCountMedicine_Update_m7D84D6793D74D0D8C8B01484E8F26A874958C668 (void);
+// 0x00000123 System.Double ActionCountMedicine::getCurrentDosage()
+extern void ActionCountMedicine_getCurrentDosage_m8045D6864DC72AAEE815E0A4ED5BC621818EDFED (void);
+// 0x00000124 System.Void ActionCountMedicine::.ctor()
+extern void ActionCountMedicine__ctor_mE4E0FC942A9C8CFDC8677AED0F130AB1186CB182 (void);
+// 0x00000125 System.Void ActionKey::onKeyPress(UnityEngine.InputSystem.InputAction/CallbackContext)
+extern void ActionKey_onKeyPress_m9422274A1DD48105BC2C13A1FDBCBF2EE896740A (void);
+// 0x00000126 System.Void ActionKey::.ctor()
+extern void ActionKey__ctor_m6626F771B1A73416518160A50DDDE4BD93AAFBD3 (void);
+// 0x00000127 System.Void ActionTrigger::OnTriggerEnter(UnityEngine.Collider)
+extern void ActionTrigger_OnTriggerEnter_m02B0C485902F019298BA0575C3F92E97428C1F50 (void);
+// 0x00000128 System.Void ActionTrigger::.ctor()
+extern void ActionTrigger__ctor_m3442C8C2A020028A06E2D10402A4966C41E2C2B9 (void);
+// 0x00000129 System.Void CheckComplete::Awake()
+extern void CheckComplete_Awake_m3C2A67718517160E09ADE870C0C2B4F1D0CFD9A8 (void);
+// 0x0000012A System.Void CheckComplete::Update()
+extern void CheckComplete_Update_m6DCE27AEF0083474D629CD823277C4BE22666484 (void);
+// 0x0000012B System.Void CheckComplete::.ctor()
+extern void CheckComplete__ctor_m08A4B39C99CE663E21991EC0A5DE5C6765C30BD3 (void);
+// 0x0000012C System.Void GroupStrikeManager::Update()
+extern void GroupStrikeManager_Update_m3CF00CF9A6A78BF3000B9C4F465C7D477DBCE706 (void);
+// 0x0000012D System.Void GroupStrikeManager::.ctor()
+extern void GroupStrikeManager__ctor_mCE7943F76439095665452669D7493E84B8FEDE82 (void);
+// 0x0000012E System.Void Node::Start()
+extern void Node_Start_m6F05A48434A100F7F875C86D18971F505C7AB62A (void);
+// 0x0000012F System.Void Node::Update()
+extern void Node_Update_m99DCAFA82D96A4ADA80136BD90BF7A4BFD69860B (void);
+// 0x00000130 System.Void Node::skipPrevious()
+extern void Node_skipPrevious_mB14A38F6C4C22E88587E732632F0AB5C70E45771 (void);
+// 0x00000131 System.Void Node::setScenarioParent(ScenarioStart)
+extern void Node_setScenarioParent_m7717AB1A847B13905DFA406569D44D270C3BD12E (void);
+// 0x00000132 ScenarioStart Node::getScenarioParent()
+extern void Node_getScenarioParent_m761D3D80FE3FC6081CA9CE8AF75F4D03E2031862 (void);
+// 0x00000133 System.Void Node::initializeNode()
+extern void Node_initializeNode_mB463EC1BE1B0CF0D202691D651FFB808702F2599 (void);
+// 0x00000134 System.Void Node::checkCanContinue()
+extern void Node_checkCanContinue_m32AA707E217BA8093FBFCEB94BA1A1F422D0DBB6 (void);
+// 0x00000135 System.Void Node::checkComplete()
+extern void Node_checkComplete_mA1FE23237F2B836D3D521DEF93600C5ED8A42B2F (void);
+// 0x00000136 System.Void Node::checkSaturated()
+extern void Node_checkSaturated_mB22566E2249E58931E856A4F796F034640F66868 (void);
+// 0x00000137 System.Void Node::completeNode()
+extern void Node_completeNode_mD80F4483E55D3ACA213EA1B1E920A7A4D6BCEFA0 (void);
+// 0x00000138 System.Void Node::skipNode()
+extern void Node_skipNode_m8DEADC6C421E5C026125B651A725DA2403C3AA88 (void);
+// 0x00000139 System.Void Node::activateNode()
+extern void Node_activateNode_mD585B08FE1C2C7F0B5901999E78BFA0E76FECFEB (void);
+// 0x0000013A System.Void Node::deactivateNode()
+extern void Node_deactivateNode_m701FED6CD81C364A1ED74F7B35A0F92B328EEA7F (void);
+// 0x0000013B System.Void Node::updateObjectives()
+extern void Node_updateObjectives_m6EE2375370A57221FE82E5017279A1CA1FAD44D9 (void);
+// 0x0000013C System.Void Node::.ctor()
+extern void Node__ctor_m5DBFA7A6885EBEC3891ADE47E642413C0B376549 (void);
+// 0x0000013D System.Void NodeBranch::initializeNode()
+extern void NodeBranch_initializeNode_m4B25307F97EB33EE8DFB9101111E5F0BF88C57EC (void);
+// 0x0000013E System.Void NodeBranch::checkCanContinue()
+extern void NodeBranch_checkCanContinue_m97D922537BF3CC88E0E82B131B19A6D0181C4A1B (void);
+// 0x0000013F System.Void NodeBranch::checkComplete()
+extern void NodeBranch_checkComplete_mB5AE8C744D2392E5DB47CD5F30C8D66B57F80E82 (void);
+// 0x00000140 System.Void NodeBranch::checkSaturated()
+extern void NodeBranch_checkSaturated_m5C3E1C8FB3C987472C61C62659A382C8C76676F2 (void);
+// 0x00000141 System.Void NodeBranch::completeNode()
+extern void NodeBranch_completeNode_m766AC0BC458EF62BD28F09133AB8A4106CD90325 (void);
+// 0x00000142 System.Void NodeBranch::skipNode()
+extern void NodeBranch_skipNode_mC58BC159C46E69C24D4107D4D4313C7289287F4E (void);
+// 0x00000143 System.Void NodeBranch::activateNode()
+extern void NodeBranch_activateNode_m9B69F90B4E4BD41441929BFE91941F78BA79CA59 (void);
+// 0x00000144 System.Void NodeBranch::deactivateNode()
+extern void NodeBranch_deactivateNode_m3E34002E09C787E188997361043A36B8734305A7 (void);
+// 0x00000145 System.Void NodeBranch::updateObjectives()
+extern void NodeBranch_updateObjectives_m49E04833569EF1B07FD89B7492C1641F1595DCF2 (void);
+// 0x00000146 System.Void NodeBranch::.ctor()
+extern void NodeBranch__ctor_mD0D83F8B0BE1AADB9B2066968764057E2E9999C6 (void);
+// 0x00000147 System.Void NodeOrdered::initializeNode()
+extern void NodeOrdered_initializeNode_m8D3EC155DF54E3DDED10259EC09F1F31062B9623 (void);
+// 0x00000148 System.Void NodeOrdered::checkCanContinue()
+extern void NodeOrdered_checkCanContinue_mA68C14EF44D9830CDB05D1A2E8D1218E9F104133 (void);
+// 0x00000149 System.Void NodeOrdered::checkComplete()
+extern void NodeOrdered_checkComplete_m4B00AD664971040CE8D2A637FDCB2E220110C733 (void);
+// 0x0000014A System.Void NodeOrdered::checkSaturated()
+extern void NodeOrdered_checkSaturated_m430296CB37F69E631E7B743DBA29801D1D61B629 (void);
+// 0x0000014B System.Void NodeOrdered::completeNode()
+extern void NodeOrdered_completeNode_mED314EEBB2BA542B972931AEF0E624A93B74B316 (void);
+// 0x0000014C System.Void NodeOrdered::skipNode()
+extern void NodeOrdered_skipNode_m23CEDD8B260608B29B66CAE41DD3E89A20DCDDF2 (void);
+// 0x0000014D System.Void NodeOrdered::activateNode()
+extern void NodeOrdered_activateNode_mB2140E21419B65446D25764D97EF653E704687A3 (void);
+// 0x0000014E System.Void NodeOrdered::deactivateNode()
+extern void NodeOrdered_deactivateNode_mE9823D0E21636DCB49A26F6950E198B938632790 (void);
+// 0x0000014F System.Void NodeOrdered::updateObjectives()
+extern void NodeOrdered_updateObjectives_mBEA93D8AA0F5C449E5A339F2E3866FBAA8E791A7 (void);
+// 0x00000150 System.Void NodeOrdered::.ctor()
+extern void NodeOrdered__ctor_m2842F0AE4725D628E6D99A07B95DE5CE465DB21F (void);
+// 0x00000151 System.Void NodeSingle::initializeNode()
+extern void NodeSingle_initializeNode_m7AE3FE82EDA7DF4F1DDD11F7279FD5515A2EDD38 (void);
+// 0x00000152 System.Void NodeSingle::checkCanContinue()
+extern void NodeSingle_checkCanContinue_m82805E2865D2D150BD4CDD7C7ADA566F78C7CC42 (void);
+// 0x00000153 System.Void NodeSingle::checkComplete()
+extern void NodeSingle_checkComplete_m7D2BA54413B2252F7E28CE3135BE96EB3D64FC74 (void);
+// 0x00000154 System.Void NodeSingle::checkSaturated()
+extern void NodeSingle_checkSaturated_m36D60AEA5CBA99DCAF0EAF3C3E0DE9B9CC863C87 (void);
+// 0x00000155 System.Void NodeSingle::completeNode()
+extern void NodeSingle_completeNode_m2FDFCF310E6AB7444EEC54A73432FF4C2A8A5146 (void);
+// 0x00000156 System.Void NodeSingle::skipNode()
+extern void NodeSingle_skipNode_m8471187B61094C50129C4096B70EC189500CEF73 (void);
+// 0x00000157 System.Void NodeSingle::activateNode()
+extern void NodeSingle_activateNode_mE38773F9B95025179AC4E758A7A2127D504BDA22 (void);
+// 0x00000158 System.Void NodeSingle::deactivateNode()
+extern void NodeSingle_deactivateNode_mA606A4C449A8A15D2B804EA0BFD4D1E89385A75D (void);
+// 0x00000159 System.Void NodeSingle::updateObjectives()
+extern void NodeSingle_updateObjectives_m54ADFAAB669DFC0D301D724A6865B8E03D8817A6 (void);
+// 0x0000015A System.Void NodeSingle::.ctor()
+extern void NodeSingle__ctor_mE19232C5E77C7C01CAF8EAE2BD619A3A4A396BD1 (void);
+// 0x0000015B System.Void NodeUnordered::initializeNode()
+extern void NodeUnordered_initializeNode_m76F7A39C289312756197B9B2F44E8FC5256CF5C8 (void);
+// 0x0000015C System.Void NodeUnordered::checkCanContinue()
+extern void NodeUnordered_checkCanContinue_mE2C4964BEF09523E74876E9139A9C5ECC0206514 (void);
+// 0x0000015D System.Void NodeUnordered::checkComplete()
+extern void NodeUnordered_checkComplete_mC319E810CF182FE979DDEAD7FCD083F78BCC6522 (void);
+// 0x0000015E System.Void NodeUnordered::checkSaturated()
+extern void NodeUnordered_checkSaturated_m435975025F7025683F1132318D4184CD7DA2A4D3 (void);
+// 0x0000015F System.Void NodeUnordered::completeNode()
+extern void NodeUnordered_completeNode_mC1CD212DDE5222FA660C8B08D2070D823FEEC49E (void);
+// 0x00000160 System.Void NodeUnordered::skipNode()
+extern void NodeUnordered_skipNode_m08C9B58B4B8043F201F2264006B0E1B10982B8DB (void);
+// 0x00000161 System.Void NodeUnordered::activateNode()
+extern void NodeUnordered_activateNode_m95A3C6A2AC5EC7C034824B0FCE8BF513EFB4FE59 (void);
+// 0x00000162 System.Void NodeUnordered::deactivateNode()
+extern void NodeUnordered_deactivateNode_m91459C01F042B46AB11B37CE7472787972A06032 (void);
+// 0x00000163 System.Void NodeUnordered::updateObjectives()
+extern void NodeUnordered_updateObjectives_mE5958C6CEDD8456CE357122389F20029CF07F71F (void);
+// 0x00000164 System.Void NodeUnordered::.ctor()
+extern void NodeUnordered__ctor_m3BFF68383984FAA6B188168B90928B6C9ED35150 (void);
+// 0x00000165 System.Void Objective::Start()
+extern void Objective_Start_m8F934B7B6AD0701B2533697EFDD0CF1B36D8D257 (void);
+// 0x00000166 System.Void Objective::Update()
+extern void Objective_Update_mBA85C83BE21259964E9D84AF86845D21F9B3EF32 (void);
+// 0x00000167 System.Void Objective::completeObjective()
+extern void Objective_completeObjective_mE8D78C368CEE501EDBC77863D3DEE1EA4E4A11D3 (void);
+// 0x00000168 System.Void Objective::skipObjective()
+extern void Objective_skipObjective_m1B714B54B1BEA8C585DCEF81A4478DBCEDB23C5E (void);
+// 0x00000169 System.Void Objective::failObjective()
+extern void Objective_failObjective_m2D570C7C2A41BF746061CD9A44DBFE84840E8A7A (void);
+// 0x0000016A System.Void Objective::setParent(Node)
+extern void Objective_setParent_mAA5EBAE8BD5A331392F2F752B275D69B5510C5B7 (void);
+// 0x0000016B System.Int32 Objective::getStrikes()
+extern void Objective_getStrikes_mC0751EC0A435A0FEF01FEAD98D5EBB26FA8658D2 (void);
+// 0x0000016C System.Void Objective::setStrikes(System.Int32)
+extern void Objective_setStrikes_m8171021A04A70115EA490CE9E0B770DFB4D19F86 (void);
+// 0x0000016D System.String Objective::getDescription()
+extern void Objective_getDescription_m394A16AAB1A29827B01326D5D3E7260FDB7DC457 (void);
+// 0x0000016E System.Void Objective::.ctor()
+extern void Objective__ctor_m458DB8885F36CD507E1E9726AE492F8829601C92 (void);
+// 0x0000016F Node[] ScenarioGroup::getNodes()
+extern void ScenarioGroup_getNodes_m4CD01B6B5EF2EE0F2B070F4DC5AD8B12780E0BAF (void);
+// 0x00000170 System.String ScenarioGroup::getCategory()
+extern void ScenarioGroup_getCategory_mEE284897FB32C3A4FB508C899A062AD57FD3017C (void);
+// 0x00000171 System.String ScenarioGroup::getMedicine()
+extern void ScenarioGroup_getMedicine_m0261300759C01F63355EFCB12452F21E5B26D2C0 (void);
+// 0x00000172 System.Double ScenarioGroup::getDosage()
+extern void ScenarioGroup_getDosage_mD39C0273316981C4C3AE4ED047D44F2E3605CD99 (void);
+// 0x00000173 System.Void ScenarioGroup::.ctor()
+extern void ScenarioGroup__ctor_m7863D533014CF5966BAE1AB79AFE16DBDF8EB24E (void);
+// 0x00000174 System.Void ScenarioStart::Start()
+extern void ScenarioStart_Start_m11630EE28D67EA5A68D326669097EEF8A46B264F (void);
+// 0x00000175 System.Void ScenarioStart::addReport(System.String)
+extern void ScenarioStart_addReport_m0D5A93541502C6D24FF944C1C4EE81574C3975B3 (void);
+// 0x00000176 System.String ScenarioStart::getReport()
+extern void ScenarioStart_getReport_m78166027D4B21DE895FFBC703E140EA8AF4894DE (void);
+// 0x00000177 System.Void ScenarioStart::addNode(Node)
+extern void ScenarioStart_addNode_m01205001A5081F770D3CA3F14440CC1C95302AC5 (void);
+// 0x00000178 System.Void ScenarioStart::stopNodes()
+extern void ScenarioStart_stopNodes_m37477089FB918E0266CB98578090E71D0556FB2B (void);
+// 0x00000179 System.String ScenarioStart::getMedicine()
+extern void ScenarioStart_getMedicine_m0CEDFFC95649CFF53F41F606C69C692D1816BB04 (void);
+// 0x0000017A System.Double ScenarioStart::getDosage()
+extern void ScenarioStart_getDosage_mCEB74411C2AF3705EBF451EC828A4691D24A52E8 (void);
+// 0x0000017B System.Void ScenarioStart::.ctor()
+extern void ScenarioStart__ctor_m67EE894AE4D822564516289FF29B8C86A226FCB8 (void);
+// 0x0000017C System.Void ShareStrikes::Awake()
+extern void ShareStrikes_Awake_m9540B0EE2D2092F2A8382F147B69D2A7661F49C0 (void);
+// 0x0000017D System.Void ShareStrikes::Update()
+extern void ShareStrikes_Update_m4E96CB745056547F167E836F266983A2C03E555A (void);
+// 0x0000017E System.Void ShareStrikes::.ctor()
+extern void ShareStrikes__ctor_mD5FB51431A968A1936DFD6CB210B74F66E1F6F53 (void);
+// 0x0000017F System.Void StrikeManager::Update()
+extern void StrikeManager_Update_m56348326D64F42043665214790343D958483AB7D (void);
+// 0x00000180 System.Void StrikeManager::.ctor()
+extern void StrikeManager__ctor_m09AA18FC85E83C31DA7759D1B9F69F6299EA5106 (void);
+// 0x00000181 System.Void TutorialCountMedicine::OnTriggerEnter(UnityEngine.Collider)
+extern void TutorialCountMedicine_OnTriggerEnter_m2368A48EC64D3BCF6F9816E4F3B67534313E100A (void);
+// 0x00000182 System.Void TutorialCountMedicine::OnTriggerStay(UnityEngine.Collider)
+extern void TutorialCountMedicine_OnTriggerStay_mFD01A124A3AE09127693B330DF55A10241491257 (void);
+// 0x00000183 System.Void TutorialCountMedicine::OnTriggerExit(UnityEngine.Collider)
+extern void TutorialCountMedicine_OnTriggerExit_m3220BC0E33F98588E797E352B570A6DC63AD6ED6 (void);
+// 0x00000184 System.Void TutorialCountMedicine::Update()
+extern void TutorialCountMedicine_Update_m28EB81D7B179BC663C4A29FC72D1BBB47E8069B9 (void);
+// 0x00000185 System.Double TutorialCountMedicine::getCurrentPills()
+extern void TutorialCountMedicine_getCurrentPills_mA7133066DAA16883E1FE5D3793A7D169A775BC6C (void);
+// 0x00000186 System.Double TutorialCountMedicine::GetCurrentLiquid()
+extern void TutorialCountMedicine_GetCurrentLiquid_m48FC16D29D2F58404E2CABB35276E066F260B854 (void);
+// 0x00000187 System.Void TutorialCountMedicine::.ctor()
+extern void TutorialCountMedicine__ctor_mBC46DF6A4215636184D5CD76718379A361B1A729 (void);
+// 0x00000188 System.Void ObjTrigger::Awake()
+extern void ObjTrigger_Awake_m89177287F2E3B8658397A7372BAC5A804362CEDE (void);
+// 0x00000189 System.Void ObjTrigger::OnTriggerEnter(UnityEngine.Collider)
+extern void ObjTrigger_OnTriggerEnter_mC5286268ADC8CEBCF76737883313AB26E6B29F04 (void);
+// 0x0000018A System.Void ObjTrigger::OnTriggerExit(UnityEngine.Collider)
+extern void ObjTrigger_OnTriggerExit_mD613F49EA40F9594D0D8E9C20FCB2847BC9B7A6F (void);
+// 0x0000018B System.Void ObjTrigger::OnEnter(UnityEngine.GameObject)
+extern void ObjTrigger_OnEnter_mAFBB5B2924EBCB7CE7D8489EB2F561B6E7060083 (void);
+// 0x0000018C System.Void ObjTrigger::OnExit(UnityEngine.GameObject)
+extern void ObjTrigger_OnExit_mB795FC06093EF3039F2527E0EAC2AD2BAA7E963D (void);
+// 0x0000018D System.Void ObjTrigger::.ctor()
+extern void ObjTrigger__ctor_mB67BE698BF76106E2C80AE5A24376D4B5358FFF9 (void);
+// 0x0000018E System.Void Pickupable::Awake()
+extern void Pickupable_Awake_m0EEC900393D1A178BD56FD06A03C7E9C2D09567F (void);
+// 0x0000018F System.Void Pickupable::OnEnable()
+extern void Pickupable_OnEnable_m7D50F522DF2062661DCCC5EA0CA422D7ABC58F25 (void);
+// 0x00000190 System.Void Pickupable::OnDisable()
+extern void Pickupable_OnDisable_m60581A49F525E738B9DAAF1EDF0066C6C99D045B (void);
+// 0x00000191 System.Void Pickupable::ResetObject()
+extern void Pickupable_ResetObject_mEF20D8B033AAC15E81AB7219B5E6AF374D04B0EC (void);
+// 0x00000192 System.Void Pickupable::ResetPosition()
+extern void Pickupable_ResetPosition_m0DE1D7E8D2B8F2297C41F84763591B970EDA6E35 (void);
+// 0x00000193 System.Void Pickupable::ResetRotation()
+extern void Pickupable_ResetRotation_m772A647FB3FA9DCA7E2CFAB126712FE6B93BB20B (void);
+// 0x00000194 System.Void Pickupable::ResetCustomRotation()
+extern void Pickupable_ResetCustomRotation_m8A0734A3811936ACD2ADAB1BC184B382471A0F72 (void);
+// 0x00000195 System.Void Pickupable::OnPickUp(UnityEngine.XR.Interaction.Toolkit.SelectEnterEventArgs)
+extern void Pickupable_OnPickUp_m1C6A1ABB11BFF55E5906FFF09794749BD9386B1C (void);
+// 0x00000196 System.Void Pickupable::OnPutDown(UnityEngine.XR.Interaction.Toolkit.SelectExitEventArgs)
+extern void Pickupable_OnPutDown_m94B76C9D03EA9EF57A1C57FCFD13AF9AC35A2F46 (void);
+// 0x00000197 System.Void Pickupable::.ctor()
+extern void Pickupable__ctor_mA27DB8630AC6F3967B9847D260D97D716E2CA09A (void);
+// 0x00000198 System.Void characterMovement3D::.ctor()
+extern void characterMovement3D__ctor_m514FC902099DEC90891EB3337A3F8F01230C1595 (void);
+// 0x00000199 System.Void HandPresence::Start()
+extern void HandPresence_Start_mE67D7EC79A463A9F0E3982FB1E243AF5339CA7BD (void);
+// 0x0000019A System.Void HandPresence::Update()
+extern void HandPresence_Update_mE058201F513055444E53B277E2892C8992A48F1F (void);
+// 0x0000019B System.Void HandPresence::.ctor()
+extern void HandPresence__ctor_m03ECA94662AE2E2EA641339AA36CB7E7295DF719 (void);
+// 0x0000019C System.Boolean HandPresence::<Start>b__8_0(UnityEngine.GameObject)
+extern void HandPresence_U3CStartU3Eb__8_0_mF1B4CB314CE10CDEAE25B022AD89E5C92993C998 (void);
+// 0x0000019D System.Void LocomotionController::.ctor()
+extern void LocomotionController__ctor_m5728DE2969F2E36B468284F07A3D148B8020E4F6 (void);
+// 0x0000019E System.Void MouseLook3D::.ctor()
+extern void MouseLook3D__ctor_m7F514A1179B170A6CF509EFBB17B0EA19BFE69D2 (void);
+// 0x0000019F System.Boolean Place_ScanSurface::rangerScan(UnityEngine.Vector3)
+extern void Place_ScanSurface_rangerScan_mBFC5446D32EE9DEF1785F2E5DD7A942459DEFDA0 (void);
+// 0x000001A0 System.Boolean Place_ScanSurface::placeOK()
+extern void Place_ScanSurface_placeOK_mD146C17AEE1FD1510104721C0E2B55C4D9962AA3 (void);
+// 0x000001A1 System.Void Place_ScanSurface::.ctor()
+extern void Place_ScanSurface__ctor_m60735BB551623D848E8B3BCD86455F45B3934813 (void);
+// 0x000001A2 UnityEngine.InputSystem.InputActionAsset PlayerInput::get_asset()
+extern void PlayerInput_get_asset_mB150BFBAFA2BC91504C640B0065EF84C41EEF998 (void);
+// 0x000001A3 System.Void PlayerInput::.ctor()
+extern void PlayerInput__ctor_m24FD924FB39A9A023CDEA8F6916EEC47B471B3A8 (void);
+// 0x000001A4 System.Void PlayerInput::Dispose()
+extern void PlayerInput_Dispose_mED8AB62E19D2B6DF4610354C380D122AF54F60F5 (void);
+// 0x000001A5 System.Nullable`1<UnityEngine.InputSystem.InputBinding> PlayerInput::get_bindingMask()
+extern void PlayerInput_get_bindingMask_mE9D628D8534C3F84B6120729E5868509A86FBF50 (void);
+// 0x000001A6 System.Void PlayerInput::set_bindingMask(System.Nullable`1<UnityEngine.InputSystem.InputBinding>)
+extern void PlayerInput_set_bindingMask_m32F66DD9FBB010F6F9297F345C4D3D5C5FADC354 (void);
+// 0x000001A7 System.Nullable`1<UnityEngine.InputSystem.Utilities.ReadOnlyArray`1<UnityEngine.InputSystem.InputDevice>> PlayerInput::get_devices()
+extern void PlayerInput_get_devices_m970521FB3C8BC58D21FBAD5535438670E5B5A76D (void);
+// 0x000001A8 System.Void PlayerInput::set_devices(System.Nullable`1<UnityEngine.InputSystem.Utilities.ReadOnlyArray`1<UnityEngine.InputSystem.InputDevice>>)
+extern void PlayerInput_set_devices_mF37D9BFB40C8FE4F6D6AA4B750CE412AD651D7F0 (void);
+// 0x000001A9 UnityEngine.InputSystem.Utilities.ReadOnlyArray`1<UnityEngine.InputSystem.InputControlScheme> PlayerInput::get_controlSchemes()
+extern void PlayerInput_get_controlSchemes_m7894888243769B1B8E856FBF1525FE8818F51B50 (void);
+// 0x000001AA System.Boolean PlayerInput::Contains(UnityEngine.InputSystem.InputAction)
+extern void PlayerInput_Contains_mEABB2AA00C1CC1F789CAC71C9B301622ED8EA65E (void);
+// 0x000001AB System.Collections.Generic.IEnumerator`1<UnityEngine.InputSystem.InputAction> PlayerInput::GetEnumerator()
+extern void PlayerInput_GetEnumerator_m718C2FBF1A4AE370122B0CBA506776EBF2A0C4A6 (void);
+// 0x000001AC System.Collections.IEnumerator PlayerInput::System.Collections.IEnumerable.GetEnumerator()
+extern void PlayerInput_System_Collections_IEnumerable_GetEnumerator_m79D4B6BDDF3AC172AEAE8B9C3E140C55CF95D54C (void);
+// 0x000001AD System.Void PlayerInput::Enable()
+extern void PlayerInput_Enable_mE3EC3D4631D753DB2B6EEA9FF407DC0CA920A2E5 (void);
+// 0x000001AE System.Void PlayerInput::Disable()
+extern void PlayerInput_Disable_m9DA10D3B65ECD087D0C78E77A9719D31F1EC23ED (void);
+// 0x000001AF System.Collections.Generic.IEnumerable`1<UnityEngine.InputSystem.InputBinding> PlayerInput::get_bindings()
+extern void PlayerInput_get_bindings_m18B4B8DE3CB2CE5BAA798B334C162667408E8F38 (void);
+// 0x000001B0 UnityEngine.InputSystem.InputAction PlayerInput::FindAction(System.String,System.Boolean)
+extern void PlayerInput_FindAction_m742A99ACB197ECCC39B4F25315FA5F29832883F9 (void);
+// 0x000001B1 System.Int32 PlayerInput::FindBinding(UnityEngine.InputSystem.InputBinding,UnityEngine.InputSystem.InputAction&)
+extern void PlayerInput_FindBinding_m6214B5095DA36F8751C0C80C7963346EBA298321 (void);
+// 0x000001B2 PlayerInput/CharacterControlsActions PlayerInput::get_CharacterControls()
+extern void PlayerInput_get_CharacterControls_mD42861149A1DF9DA2B7D9E1CFA495EC9BE88EC0E (void);
+// 0x000001B3 PlayerInput/CharacterControlsVRActions PlayerInput::get_CharacterControlsVR()
+extern void PlayerInput_get_CharacterControlsVR_m448E2F03DA9F81FE4BDAEF8B751196BC6786E353 (void);
+// 0x000001B4 System.Void PlayerInput/CharacterControlsActions::.ctor(PlayerInput)
+extern void CharacterControlsActions__ctor_m55E44F389F5E9B140628111A11F1F7F01DBDE467 (void);
+// 0x000001B5 UnityEngine.InputSystem.InputAction PlayerInput/CharacterControlsActions::get_PickUp()
+extern void CharacterControlsActions_get_PickUp_m8749F86BCF567BFA04D17A4AEBF53E0E1C0CA8B1 (void);
+// 0x000001B6 UnityEngine.InputSystem.InputAction PlayerInput/CharacterControlsActions::get_MouseLook()
+extern void CharacterControlsActions_get_MouseLook_m194A5DB92657D805C332FA6AAEA0EFB5E39D097F (void);
+// 0x000001B7 UnityEngine.InputSystem.InputAction PlayerInput/CharacterControlsActions::get_Use()
+extern void CharacterControlsActions_get_Use_mDD11AF64F60F790E5EBD6B84F41690ACF9051596 (void);
+// 0x000001B8 UnityEngine.InputSystem.InputAction PlayerInput/CharacterControlsActions::get_PutDown()
+extern void CharacterControlsActions_get_PutDown_m753FAA6C22AC199627E0C1B6B63512DCAAA26F71 (void);
+// 0x000001B9 UnityEngine.InputSystem.InputAction PlayerInput/CharacterControlsActions::get_Teleport()
+extern void CharacterControlsActions_get_Teleport_m595D8EB97A96851A70565BDE8522F604D3649822 (void);
+// 0x000001BA UnityEngine.InputSystem.InputActionMap PlayerInput/CharacterControlsActions::Get()
+extern void CharacterControlsActions_Get_m76BC2485BCF9C739BD9912386BF7DDE0276DAF6B (void);
+// 0x000001BB System.Void PlayerInput/CharacterControlsActions::Enable()
+extern void CharacterControlsActions_Enable_m89261AE4F4E1CCC826972D353FB680B0858037BE (void);
+// 0x000001BC System.Void PlayerInput/CharacterControlsActions::Disable()
+extern void CharacterControlsActions_Disable_m2DDB9795F9E54BBB64488323AAE057598DB5A52F (void);
+// 0x000001BD System.Boolean PlayerInput/CharacterControlsActions::get_enabled()
+extern void CharacterControlsActions_get_enabled_m6C137A89F6E00B99630ED1A468E9B26E28B487DD (void);
+// 0x000001BE UnityEngine.InputSystem.InputActionMap PlayerInput/CharacterControlsActions::op_Implicit(PlayerInput/CharacterControlsActions)
+extern void CharacterControlsActions_op_Implicit_m2BF075E2B6041D552D7BF38867808D1D8F3A6FF6 (void);
+// 0x000001BF System.Void PlayerInput/CharacterControlsActions::SetCallbacks(PlayerInput/ICharacterControlsActions)
+extern void CharacterControlsActions_SetCallbacks_mEF4BDA37CB9248266E378FA6032FA2FBB25B14D8 (void);
+// 0x000001C0 System.Void PlayerInput/CharacterControlsVRActions::.ctor(PlayerInput)
+extern void CharacterControlsVRActions__ctor_m66B013DBFB2F45A0C43F89C6B9666CE2211357FC (void);
+// 0x000001C1 UnityEngine.InputSystem.InputAction PlayerInput/CharacterControlsVRActions::get_Teleport()
+extern void CharacterControlsVRActions_get_Teleport_m0949EE95B2A27AC5EF485C69DC429FD54D3AFCC2 (void);
+// 0x000001C2 UnityEngine.InputSystem.InputAction PlayerInput/CharacterControlsVRActions::get_Pickup()
+extern void CharacterControlsVRActions_get_Pickup_mEA302EB066B776B2FD869A9C1688346FE474FE70 (void);
+// 0x000001C3 UnityEngine.InputSystem.InputActionMap PlayerInput/CharacterControlsVRActions::Get()
+extern void CharacterControlsVRActions_Get_m5F46F8322F0B2D5AA8C18F147B8532D8143F1FE9 (void);
+// 0x000001C4 System.Void PlayerInput/CharacterControlsVRActions::Enable()
+extern void CharacterControlsVRActions_Enable_m7D4161DC956D246007341C4ECB17EF70261698B7 (void);
+// 0x000001C5 System.Void PlayerInput/CharacterControlsVRActions::Disable()
+extern void CharacterControlsVRActions_Disable_m0D82EDEFE1CC65513B923F7CCB1591052CE2DE59 (void);
+// 0x000001C6 System.Boolean PlayerInput/CharacterControlsVRActions::get_enabled()
+extern void CharacterControlsVRActions_get_enabled_mC20452A3D97AA206C28145029E07CE3024167B81 (void);
+// 0x000001C7 UnityEngine.InputSystem.InputActionMap PlayerInput/CharacterControlsVRActions::op_Implicit(PlayerInput/CharacterControlsVRActions)
+extern void CharacterControlsVRActions_op_Implicit_m9E2C516F634A9FBA7A2559A213756FC17DD8B9B7 (void);
+// 0x000001C8 System.Void PlayerInput/CharacterControlsVRActions::SetCallbacks(PlayerInput/ICharacterControlsVRActions)
+extern void CharacterControlsVRActions_SetCallbacks_mD603A75398CB10CAF19C6DD13AE0E9ABE2C0C366 (void);
+// 0x000001C9 System.Void PlayerInput/ICharacterControlsActions::OnPickUp(UnityEngine.InputSystem.InputAction/CallbackContext)
+// 0x000001CA System.Void PlayerInput/ICharacterControlsActions::OnMouseLook(UnityEngine.InputSystem.InputAction/CallbackContext)
+// 0x000001CB System.Void PlayerInput/ICharacterControlsActions::OnUse(UnityEngine.InputSystem.InputAction/CallbackContext)
+// 0x000001CC System.Void PlayerInput/ICharacterControlsActions::OnPutDown(UnityEngine.InputSystem.InputAction/CallbackContext)
+// 0x000001CD System.Void PlayerInput/ICharacterControlsActions::OnTeleport(UnityEngine.InputSystem.InputAction/CallbackContext)
+// 0x000001CE System.Void PlayerInput/ICharacterControlsVRActions::OnTeleport(UnityEngine.InputSystem.InputAction/CallbackContext)
+// 0x000001CF System.Void PlayerInput/ICharacterControlsVRActions::OnPickup(UnityEngine.InputSystem.InputAction/CallbackContext)
+// 0x000001D0 System.Void VRHoverScript::Awake()
+extern void VRHoverScript_Awake_mFDBB7FE9207853E7087273E0CA00CB7EFD627812 (void);
+// 0x000001D1 System.Void VRHoverScript::OnHover(UnityEngine.XR.Interaction.Toolkit.HoverEnterEventArgs)
+extern void VRHoverScript_OnHover_m645347A1FF239C1132798A9A0EB17CD5656CC51A (void);
+// 0x000001D2 System.Void VRHoverScript::OnHoverExit(UnityEngine.XR.Interaction.Toolkit.HoverExitEventArgs)
+extern void VRHoverScript_OnHoverExit_m0A2061841D711DCB097CDDCF05D4190DBD47FFB5 (void);
+// 0x000001D3 System.Void VRHoverScript::.ctor()
+extern void VRHoverScript__ctor_m2DD79B1A66BAA2E5844524F74740A27DF2509119 (void);
+// 0x000001D4 System.Void VRLookatScript::.ctor()
+extern void VRLookatScript__ctor_m308B900D6DEEC9C7A17CC64F2F1C734165175496 (void);
+// 0x000001D5 System.Void XRMouseInputRebinder::Awake()
+extern void XRMouseInputRebinder_Awake_m94E1916811475C6AAC30623A06AC566B2B5CBF1B (void);
+// 0x000001D6 System.Void XRMouseInputRebinder::setPickupBinding(System.Boolean)
+extern void XRMouseInputRebinder_setPickupBinding_m203EED662ACBD115672DBA8D70410E23B09B2D96 (void);
+// 0x000001D7 System.Void XRMouseInputRebinder::.ctor()
+extern void XRMouseInputRebinder__ctor_m24622BC3197ACE94C6892990B2E9DE43D46B6ACF (void);
+// 0x000001D8 System.Void Printer::Awake()
+extern void Printer_Awake_m825BBD5ED8AA32612ECA509895850B848E5B7BF0 (void);
+// 0x000001D9 System.Void Printer::print(System.String)
+extern void Printer_print_m9D4DA106292AD967E2256973930F130BEEDD05E5 (void);
+// 0x000001DA System.Void Printer::printDialougue(System.String,System.Boolean,System.Boolean)
+extern void Printer_printDialougue_mA0FD8BF7AF3E4FA501D85104D04EEBE761F09593 (void);
+// 0x000001DB System.Collections.IEnumerator Printer::printMessage(System.String,System.Boolean,System.Boolean)
+extern void Printer_printMessage_m1102D30D7E45ECC030131CAD89A06C815C2651BD (void);
+// 0x000001DC System.Void Printer::.ctor()
+extern void Printer__ctor_m6227F2D6165ABBAD78C031D7BF141437230AA5D6 (void);
+// 0x000001DD System.Void Printer/<printMessage>d__5::.ctor(System.Int32)
+extern void U3CprintMessageU3Ed__5__ctor_mAFA035FF2618B885CAC2EC10C272C6DF9FA5D49A (void);
+// 0x000001DE System.Void Printer/<printMessage>d__5::System.IDisposable.Dispose()
+extern void U3CprintMessageU3Ed__5_System_IDisposable_Dispose_m7D67476DCDE711D7BDDF54AD71E0C10BE9611799 (void);
+// 0x000001DF System.Boolean Printer/<printMessage>d__5::MoveNext()
+extern void U3CprintMessageU3Ed__5_MoveNext_m0D576DB0CCC7647E25732262B51E288B8BB8359A (void);
+// 0x000001E0 System.Object Printer/<printMessage>d__5::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CprintMessageU3Ed__5_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mFB15DA81ED0919BEDA3CB724F39B6143634CC1DC (void);
+// 0x000001E1 System.Void Printer/<printMessage>d__5::System.Collections.IEnumerator.Reset()
+extern void U3CprintMessageU3Ed__5_System_Collections_IEnumerator_Reset_mC26B8FBD1B3DC95561017774D477E3D8D006CC36 (void);
+// 0x000001E2 System.Object Printer/<printMessage>d__5::System.Collections.IEnumerator.get_Current()
+extern void U3CprintMessageU3Ed__5_System_Collections_IEnumerator_get_Current_mF26707321644995FE9A9D30B2F0DB9BF16CAAF43 (void);
+// 0x000001E3 System.Void SimObject::Start()
+extern void SimObject_Start_m86F751290D21F0EB29BF09229BDC66A9274A430C (void);
+// 0x000001E4 System.Void SimObject::Update()
+extern void SimObject_Update_mB449A2B0DECC9FBA6CD1D2761141674D27BDE02E (void);
+// 0x000001E5 System.Void SimObject::.ctor()
+extern void SimObject__ctor_mBF2BD6A719859F2C698496043DC49C97B238F928 (void);
+// 0x000001E6 System.Void TransitionTestScript::.ctor()
+extern void TransitionTestScript__ctor_m16F57FD3CE9787E74D64775C9706845D3B75DCD1 (void);
+// 0x000001E7 System.Collections.Generic.HashSet`1<UnityEngine.Collider> TriggerTally::GetColliders()
+extern void TriggerTally_GetColliders_m7014E03963383C0421DAAB24FC023B7F02227BC6 (void);
+// 0x000001E8 System.Int32 TriggerTally::collidersCount()
+extern void TriggerTally_collidersCount_m78CE839875F554C85815883A9F8B29CCDE629296 (void);
+// 0x000001E9 System.Void TriggerTally::OnTriggerEnter(UnityEngine.Collider)
+extern void TriggerTally_OnTriggerEnter_m42E6435FE430B97D61916DC4BFA24B9419C8A3D3 (void);
+// 0x000001EA System.Void TriggerTally::OnTriggerExit(UnityEngine.Collider)
+extern void TriggerTally_OnTriggerExit_m1D6A330C0404C352D2A45AB4053A2CCFA0232B35 (void);
+// 0x000001EB System.Void TriggerTally::.ctor()
+extern void TriggerTally__ctor_m88A3301B329477AE49B0B878163A214B4FDC993E (void);
+// 0x000001EC System.Void TutorialLiquid::Awake()
+extern void TutorialLiquid_Awake_m375360F9661D88D7009004FCDFF4F9273712889B (void);
+// 0x000001ED System.Void TutorialLiquid::SetDosage(System.Boolean)
+extern void TutorialLiquid_SetDosage_m579A0CABBF32650079613AA63A70BDCFC230641F (void);
+// 0x000001EE System.Boolean TutorialLiquid::getDosage()
+extern void TutorialLiquid_getDosage_m42C240CF5DC9F2238950500CF2087449D86E0BD5 (void);
+// 0x000001EF System.Void TutorialLiquid::.ctor()
+extern void TutorialLiquid__ctor_mFDB2FFC601516A9A22407923BC69F2F7E28B7669 (void);
+// 0x000001F0 System.Void TutorialManager::Start()
+extern void TutorialManager_Start_m716464779E3BF419A75708721DFE6BB65954D4F9 (void);
+// 0x000001F1 System.Void TutorialManager::Update()
+extern void TutorialManager_Update_m70510E69FAE81B019F2427B18E6F2F4D80A20DB5 (void);
+// 0x000001F2 System.Void TutorialManager::overrideSetMessage(System.String)
+extern void TutorialManager_overrideSetMessage_m1929F4486C9A0FBCD6E97FC05488AED1108ED876 (void);
+// 0x000001F3 System.Void TutorialManager::overrideSetTime(System.Int32)
+extern void TutorialManager_overrideSetTime_m876A12DB557170D09D71B5AC589C39D55519D794 (void);
+// 0x000001F4 System.Void TutorialManager::.ctor()
+extern void TutorialManager__ctor_m5DF15FACAE927F11F4CD3E6162A8FEE01B406E16 (void);
+// 0x000001F5 System.Void TutorialText::Awake()
+extern void TutorialText_Awake_m05A861AB76B7C149EEBBA27EA87123B2A8205659 (void);
+// 0x000001F6 System.Void TutorialText::Update()
+extern void TutorialText_Update_m51F964576D8370E4FBFBB4F76FAB2D106CD32789 (void);
+// 0x000001F7 System.Void TutorialText::.ctor()
+extern void TutorialText__ctor_mCEBFA4351D93DF1FC115ADEAC3EEB756374BAC13 (void);
+// 0x000001F8 System.Void VROnlyScript::Start()
+extern void VROnlyScript_Start_mA27EE8E6134CA8D519F643E192FCC7F6E32771B2 (void);
+// 0x000001F9 System.Void VROnlyScript::.ctor()
+extern void VROnlyScript__ctor_m89BFBCF3E65F76801218850523E1178D8B740D3C (void);
+// 0x000001FA XRRigSingleton XRRigSingleton::get_xrs()
+extern void XRRigSingleton_get_xrs_mADDF2551AFB7626B731CAE8D9858255CF36EC555 (void);
+// 0x000001FB System.Void XRRigSingleton::set_xrs(XRRigSingleton)
+extern void XRRigSingleton_set_xrs_m15EEABED9F9B246A0E7A0CC3652822C4B69456E2 (void);
+// 0x000001FC System.Void XRRigSingleton::Awake()
+extern void XRRigSingleton_Awake_mB7DB68E15C210394FDDCA6EF90F4C8F01D97D0BA (void);
+// 0x000001FD System.Void XRRigSingleton::NewScene(UnityEngine.SceneManagement.Scene,UnityEngine.SceneManagement.Scene)
+extern void XRRigSingleton_NewScene_mCF10A1121F79B0CA3C92E3F95C774761D91FF631 (void);
+// 0x000001FE UnityEngine.GameObject XRRigSingleton::getRootVR()
+extern void XRRigSingleton_getRootVR_mBA523A7D25C2640055270065ED310D6038B3EAAA (void);
+// 0x000001FF UnityEngine.GameObject XRRigSingleton::getRoot3D()
+extern void XRRigSingleton_getRoot3D_mDDC904E1B16D32416EC357CAA8667941E7B59B3D (void);
+// 0x00000200 UnityEngine.Camera XRRigSingleton::getActiveCamera()
+extern void XRRigSingleton_getActiveCamera_mB05698A914AA399BD90F79A50C4255CA92E0160D (void);
+// 0x00000201 System.Boolean XRRigSingleton::getVRActive()
+extern void XRRigSingleton_getVRActive_m24F55E31AD7646AC5740D37330D850059D102F9E (void);
+// 0x00000202 System.Boolean XRRigSingleton::setVRActive(System.Boolean,System.Boolean)
+extern void XRRigSingleton_setVRActive_mA1570AF6E8E059ECDBFFBFCBC56E1B8307F39E62 (void);
+// 0x00000203 System.Void XRRigSingleton::rightRayActivate(UnityEngine.XR.Interaction.Toolkit.HoverEnterEventArgs)
+extern void XRRigSingleton_rightRayActivate_m6CD4AA1B4AF3A350BA78CBFA4BAEE7472F6EA460 (void);
+// 0x00000204 System.Void XRRigSingleton::rightRayDeactivate(UnityEngine.XR.Interaction.Toolkit.HoverExitEventArgs)
+extern void XRRigSingleton_rightRayDeactivate_m00AF07DC02620C9A2C12A70B265EA4FEDCCDF502 (void);
+// 0x00000205 System.Void XRRigSingleton::leftRayActivate(UnityEngine.XR.Interaction.Toolkit.HoverEnterEventArgs)
+extern void XRRigSingleton_leftRayActivate_mA204EBAD72EC982AFA917F34972EFBDA54B0C36F (void);
+// 0x00000206 System.Void XRRigSingleton::leftRayDeactivate(UnityEngine.XR.Interaction.Toolkit.HoverExitEventArgs)
+extern void XRRigSingleton_leftRayDeactivate_m816117F8E6BA8885198C832CBBC8FFEB9715C209 (void);
+// 0x00000207 System.Void XRRigSingleton::.ctor()
+extern void XRRigSingleton__ctor_m8BB8DE157669A2DEB8D337F592FD72C2DAE53EDE (void);
+// 0x00000208 System.Boolean SimManagement::getVRCursorsActiveState()
+extern void SimManagement_getVRCursorsActiveState_m301BEBDEA849400CFD372E975EDC10CF9F67A0F5 (void);
+// 0x00000209 System.Void SimManagement::setVRCursorsActiveState(System.Boolean)
+extern void SimManagement_setVRCursorsActiveState_mAD26F56AA1FB74E965B4E43ADC911035F50A91EA (void);
+// 0x0000020A System.Void SimManagement::CheckSMIsInScene()
+extern void SimManagement_CheckSMIsInScene_mE6A3ED8E7522664C802FBCCAB95F4004C90753E7 (void);
+// 0x0000020B System.Void SimManagement::Start()
+extern void SimManagement_Start_m0B024984F9015EDC2DFF63DF96BAF0A9636A11E0 (void);
+// 0x0000020C System.Void SimManagement::Update()
+extern void SimManagement_Update_m94EF1B27C77E927BF479FA618F7A58463C23D32F (void);
+// 0x0000020D System.Void SimManagement::.ctor()
+extern void SimManagement__ctor_m3488AC4EC5BD767C92302870890BE880197C35F2 (void);
+// 0x0000020E System.Void SpeakButton::.ctor()
+extern void SpeakButton__ctor_m019951AFE86B0EB5E7F8E0CF64DAFDD723F21F66 (void);
+// 0x0000020F System.Void DrawerScript3D::Start()
+extern void DrawerScript3D_Start_m33D5FCFDC3DD127D18AEF324686B597387733EAE (void);
+// 0x00000210 System.Void DrawerScript3D::Interact(UnityEngine.GameObject)
+extern void DrawerScript3D_Interact_m27138D74513F33EBC644D4FC6BD3553E8693BE6E (void);
+// 0x00000211 System.Void DrawerScript3D::.ctor()
+extern void DrawerScript3D__ctor_m1F6E4924B0AF6F7B0B4C705BC417D71178A52A70 (void);
+static Il2CppMethodPointer s_methodPointers[529] = 
 {
-	DrawerScript3D_Start_m60D5FD035FB9242BEF4CB875276E3E89E754FF1D,
-	DrawerScript3D_Interact_m8A697A7DE8278E3C7E60D6DE5B3939B8870A18FD,
-	DrawerScript3D__ctor_m40A2C2A4078D266512834A739B60C2FEE1B1D1CB,
-	InteractableDialogBtn_CursorHighlight_m15CB1410CAFF6D26C58693755F59A3C2CA5FD9D8,
-	InteractableDialogBtn_LookHighlight_m35FAE8580EDB75ACE437ECCB9905499A62009BB0,
-	InteractableDialogBtn_CursorInteract_m43A9B5EE739216DAC6F524E6791D84AC77192DE1,
-	InteractableDialogBtn_canInteractWithHand_m4CCD091E8E002CF9575219AAE902927935CC286C,
-	InteractableDialogBtn_highlight_m7AB6B4E0F1A0D29374087D2DD0577A2A0D7EE95D,
-	InteractableDialogBtn_select_m36F080E7A731C9E35D650C333EEB9B8021F5BF63,
-	InteractableDialogBtn_Start_mD1B124AF37FA882381BAC6449EEDDE1536F6E319,
-	InteractableDialogBtn_FixedUpdate_m46C9554B613EB5EF841DC25F2FF30E726FFFFD3F,
-	InteractableDialogBtn_Interact_m2005E3EAAB944C8BC9942EB0886C0AEF5C164C88,
-	InteractableDialogBtn__ctor_m41FAA21ED8BC59DD1337D09A16BD835FE8FADA76,
-	InteractableDialogController_Start_mD8FCD3A1B70494B968091A9CC5B9BE600B2913C9,
-	InteractableDialogController_Update_m3274F0CCB16005F4B7845C556462A789FC3550A9,
-	InteractableDialogController__ctor_m864B44B3997F65840A31AFE2E91F1EF3F407514F,
-	InteractableTeleportEvent_TeleportInvoke_m379BDF2C96C8C0001D9B1194271B026676EE67D1,
-	InteractableTeleportEvent__ctor_mF1A846ADFF28F24B10730BF8C5941CE98B962D9F,
-	MenuButtonHover_OnTriggerEnter_m3DF6F6641C7E57228C19B0E65B61A8A972942425,
-	MenuButtonHover_OnTriggerExit_mADE3007408D1F7DB4B0EAD625E09D08ACD14E410,
-	MenuButtonHover__ctor_m7A4C0E472C8969A0970ED1A54AAC619A7599485F,
-	MenuButtonManager_Start_mBDCBF249E22C12B125A386DA72B590A3988271FD,
-	MenuButtonManager_BeginSimulation_mD94A87D98066038CB9B66166E5664BDB60FB96FF,
-	MenuButtonManager_BeginTutorial_mDF4E93177798777D96C2DCF8D1AA04F76C8F9A81,
-	MenuButtonManager_OpenSettings_mDB4C8C39DA4E93C8DAD1E612EE04302C5CEFAEAC,
-	MenuButtonManager_BackToMenu_m9FA08A938EECB78B0707FBCB7528EBAD0040CB3C,
-	MenuButtonManager_OpenCredits_mDF266844E30615BF5E901BDFADD962FB1459327E,
-	MenuButtonManager_QuitGame_m509AB21FB4898BCA61EE08ABB41C328253A83EC1,
-	MenuButtonManager_EnableVR_m5C489853FFA78EF3BADDCD529DC0E919638C8532,
-	MenuButtonManager_DisableVR_mD2CC6B8E21076EEE2906F5DBA5315894B7DDAD9B,
-	MenuButtonManager__ctor_m91EF9A350F4D8691FEF13B8B38EC6AD02DB971F3,
-	MenuButtonManager__cctor_m637741934B17E5D56139AF54A0537D87373FC4E2,
-	MenuButtonScript_OnTriggerEnter_m7DE98D2CA37500EFE7D4369CF314037A57189A01,
-	MenuButtonScript_callInteract_mACC81552B3FDD7DBBF6BA2E71E490FADF8E93A18,
-	MenuButtonScript_Interact_m3B371C379F4A35992A0C5FE910D0AABDF785A5E7,
-	MenuButtonScript__ctor_mF861C0339224F90BDE443872F24555228BC3190E,
-	Place_ScanSurface_rangerScan_m95FFCE9E849FB281A5529BF7991F4B3C03E676B5,
-	Place_ScanSurface_placeOK_m0E8ED9FA0B7C026A2DFE86538B73AAD530DA4BA0,
-	Place_ScanSurface__ctor_m6969FEA08CBF3ED781F9BEE0E582AB4DEF7C0E22,
-	ClipboardText_Awake_m0899A0652156AE0FF88040AB49D3330561C5FCD6,
-	ClipboardText__ctor_mE9DCF3DDE67EBA43EA2A7671C806869BFB7B6DA3,
-	DipScript2_OnTriggerEnter_mC04080F5465419D66E0C8BEE810F1ACE2BD6032A,
-	DipScript2_Interact_m1392DC025D24ECAEA59C2A8A17F289BD9D85EFBF,
-	DipScript2__ctor_m8A2793A30C275DFB3F669CE501B8B95B03CB6F6A,
-	DipTriggerScript_OnTriggerEnter_mCFBE96DF4CECF227F29C14BB1FD2FDF1A40D04E5,
-	DipTriggerScript_Interact_m328AB60F13E56105D701750D63ADD493F837AF93,
-	DipTriggerScript__ctor_mBB5EA9C195FBB74A2670401FD72ABD4309DF405D,
-	DosageIndicator_Awake_mB0B3865E5BA77E2B2FE1707413DFB9A0DAF1B6AB,
-	DosageIndicator_Update_m66CCC9080139DB9E5132598C6FF6CD8A648AB683,
-	DosageIndicator__ctor_mDE9A58B9A09D87041BEB8D2B85AA5BD4869E75D5,
-	ElevatorOpen_Start_mA182B42B2177808E6C47C6EA5DFA651C52F78986,
-	ElevatorOpen_OpenDoor_m6A3826D3D2750E7B722188A945B5A854A8351A4C,
-	ElevatorOpen__ctor_m7A8DF26CC9CA95C0CED2BA81B444043CB7670BD7,
-	EscapeScript_Update_m5865E26CA156570F65C90CFFF76393BB8E3BD117,
-	EscapeScript__ctor_m51EF5D58328FC6B27D8C5ABE02C0C251B5B47DDE,
-	GroundTriggerScript_OnTriggerEnter_m7BFC340471515E9CF7580034B8F35BBD6207841A,
-	GroundTriggerScript__ctor_m92CA9D6155A33AB4796E43823BB180B07AE08CD8,
-	HandPresence_Start_m57D3E943594E51243AFC2CF1B631FAC7642CF81F,
-	HandPresence_Update_mD06E18241FAF0B0CE24CD135284469E55B5D6024,
-	HandPresence__ctor_m0DF9DD2FCB2762D18666B42454C47FBF1CEF883E,
-	HandPresence_U3CStartU3Eb__8_0_m7DD2BC2D5E6048DC068FE0450348C9313CA4FEEF,
+	DetectLooks_Awake_m84DD36964464F51AF863D443A1C90D734A5ECBC5,
+	DetectLooks_PlayerIsLooking_mDFB75F9CB7942C1DFA8E9D4175F26187ADF91FBC,
+	DetectLooks_Cooldown_mD2B4C55F60F671A825209C66876F20A5E2F269BC,
+	DetectLooks_PlayerStoppedLooking_m107E4CE71426BD0B618083AAA0EDE5C526AF5360,
+	DetectLooks__ctor_m8E4FAC6D3A3BA308C861A5D197DA516B2A32901A,
+	U3CCooldownU3Ed__8__ctor_m33D7B6A8CD727C8A1797CBF8A14E2D3F69D7CE89,
+	U3CCooldownU3Ed__8_System_IDisposable_Dispose_m98532B90C5CFB2FF7A7FC66F163408DA334E8D67,
+	U3CCooldownU3Ed__8_MoveNext_mC17D4DDDFAECF11C10D10677A6703821F8AEBBEF,
+	U3CCooldownU3Ed__8_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m6BE3DAE8795D38238B42CF97468F300F39057A38,
+	U3CCooldownU3Ed__8_System_Collections_IEnumerator_Reset_m1C6B849136DD9E7DAF6D551A14AC5054227B83F0,
+	U3CCooldownU3Ed__8_System_Collections_IEnumerator_get_Current_m65730286FCAB787909F60CE2A1A20BB0E550B3F8,
+	Interactable_Start_mD86591D3E519919109098287E81907A8931D6BC2,
+	Interactable_OnTriggerEnter_m58C58E8589CB325F037F43076C52F0483EA35B08,
+	Interactable_Interact_m51CAE66281DE2857870324E9ECD2DB3909B2A49A,
+	Interactable__ctor_m9AA3E7B2D2090FE20FD4EDB4AE1FE9BAC5414988,
+	MovePlayer_Awake_mA4570FA7533BE28804B90724CDC3C7EEF5310821,
+	MovePlayer_Interact_m3DFAA732FD4473854A3481E4C10D10627BF205D5,
+	MovePlayer__ctor_m193AFF3E915B78AB820AF503E1E4772214351CDC,
+	PlayerKeyboardInputScript_Awake_mA3DF5242BC7BA9AB4487BB99C672A2A6492712EB,
+	PlayerKeyboardInputScript_OnLevelLoaded_m2115AEB16DD2F2F28AE33C43D6044C3BE59CDF8F,
+	PlayerKeyboardInputScript_OnEnable_m50F43FD9B07D7BBEF144E545ABE277E775A9A0CE,
+	PlayerKeyboardInputScript_OnDisable_mD2E270A3D7486A26403ABD8A6AAD41E57EE190D0,
+	PlayerKeyboardInputScript_Update_m87F9110B5036A5134D5393BF72F9FF28E142F7DF,
+	PlayerKeyboardInputScript_PickUp_m3B01D5BF7330427B086C401556BD9C6C9299A1BE,
+	PlayerKeyboardInputScript_PutDown_mE30DD91591884F7E5F8AE4FD339BB408E9916979,
+	PlayerKeyboardInputScript_UnParent_m1A1CC8D673E67AE0A082A3B7DDE54EECD9B8BDF6,
+	PlayerKeyboardInputScript_Use_mA5C32A0A19372EE30FCDFE11BB1A5AA30E04968C,
+	PlayerKeyboardInputScript_Teleport_m285E6DF60BB8647F991981BDB73BDB4C42353E91,
+	PlayerKeyboardInputScript_LookingAt_m42B7DA133D146294B3CA52F3B0438A939ED0D3E0,
+	PlayerKeyboardInputScript_DoPickUp_mE829D058DDEC34789EE2F720AD3455F1A3003B86,
+	PlayerKeyboardInputScript_getGrabbingObject_m174C0D3DF7D391C4C3F8912F14F14F8E5CA9F850,
+	PlayerKeyboardInputScript_lockMouse_m798F80645C4FB666100D9110CABB4236975A9C4A,
+	PlayerKeyboardInputScript_MouseLook_mF722740AC39056973800BB03C0F7A3D825FEBD16,
+	PlayerKeyboardInputScript__ctor_m4AC106B4CAA9F0665027C89DA1CE44D2221EBBDA,
+	U3CDoPickUpU3Ed__32__ctor_mDE36F7D35CFBBDFA731EEFA8F9837F9BB573E03C,
+	U3CDoPickUpU3Ed__32_System_IDisposable_Dispose_m9F08F401C1143ED0070F7B6BA4B9F28C53201137,
+	U3CDoPickUpU3Ed__32_MoveNext_mDA5694FD9563F2E60ED6C0D077022DE79BBD34AB,
+	U3CDoPickUpU3Ed__32_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mC42C2134A7944C825799A5416E1C5A6C7425CE98,
+	U3CDoPickUpU3Ed__32_System_Collections_IEnumerator_Reset_m38918E8634F5896DEE8B8712C865461DD24D1413,
+	U3CDoPickUpU3Ed__32_System_Collections_IEnumerator_get_Current_m2F855E53357CF8A5BF928165D9A65B143E7A7D01,
+	ActionNode__ctor_mDD17E220BD7393266370EC50C55000C80C209888,
+	CompositeNode_Clone_m2B9DEE7EDB0577A1CDDAB008C409933E4D1541E1,
+	CompositeNode__ctor_m2E605D28E41B95AF9898A9109CDBCB6D812D30E6,
+	U3CU3Ec__cctor_m3526D7D3E5023260CB9EC34162D9B36DD41CA438,
+	U3CU3Ec__ctor_mC0074BDB02ABA8FD94C2C90AA02F05C330BB9844,
+	U3CU3Ec_U3CCloneU3Eb__2_0_mA855A44D1AE7976037F557FA2A00431F87E7BC4D,
+	ConditionNode_Clone_m1A56784714E7687F95440F1D4A61F1C65947D687,
+	ConditionNode_OnUpdateInit_mBDBF1F92788AF50FB3E209CD66768B2AF4B3C2D8,
+	ConditionNode__ctor_mE1D4034198240E2985D43BB643E0C4A67FC1B273,
+	DecoratorNode_Clone_m1A16002509EEFE6036F5EAC5BDBDC80DF4363519,
+	DecoratorNode__ctor_m14843F0D37A69A29440E74703E86C63D97DDA8C2,
+	NodeBase_Awake_m0FEC6636DEF6D8E4B055E70ADBECDEBDFF0B43AB,
+	NodeBase_Update_mC25DB2073FEFD81305757E71AC5313937885F2D4,
+	NodeBase_Clone_mD421351CBD58628CBACF7FE86B96980C0C6F51B0,
+	NodeBase_SetNodeName_m11830103AE672149699FD1F10A27A55E7658A168,
 	NULL,
 	NULL,
 	NULL,
-	HoverableCursor_Start_mE17F46DBC369CA40DDEA96769C547F8997099F08,
-	HoverableCursor_OnTriggerEnter_m52665D5BD024CB1B1BAEAD3FA6F236B6B3E6829E,
-	HoverableCursor_OnTriggerExit_mAF7C0157F588BC0A416C382DCEBACF7BCFBC0925,
-	HoverableCursor_Update_m9AC7D632A87209EFF80EE2C2A6AAD97D5BE3E3E0,
-	HoverableCursor_CheckIfActivated_m4E90EF4B5D2AFD5B8433E171E475C0E9B7EFD466,
-	HoverableCursor__ctor_m1485AB6DBD8DDF920A3DAB6726C15C7EE690C15A,
-	InteractableBase_PickupInvoke_m44E16329924C617970AC7143F31BF92C40F344D7,
-	InteractableBase_DropInvoke_mB394A4D486B68F2F221FB3186A9BFD6101EE07ED,
-	InteractableBase_Interact_m0A0B9B596D77D77064345CA5462C3163BF60E1D7,
-	InteractableBase_canInteractWithHand_m2FB454CB54191445EBFE4D1447DC45E702B2F2D2,
-	InteractableBase__ctor_m5E54597C2130F47A86A863E9D0F24F73479A6856,
-	InteractableScript_CursorHighlight_m3BA76D0B687F7B98B1EB1D346D3FC725F83B584E,
-	InteractableScript_LookHighlight_m8B83A5A7BD513FA0FE069E75FA5B9E38131CDFFC,
-	InteractableScript_CursorInteract_m7BB10546E233233E63F9767A5B3BCDF451A2B166,
-	InteractableScript_canInteractWithHand_m0478F2912D308C67C6A9A663D3CFFC81F196654B,
-	InteractableScript_Start_m7CC03A04DC73CC5AFC838769C685309F80886EB6,
-	InteractableScript_setTarget_mE1BCFC141C6FF62B2ADBCECEDB1A512CD24A7779,
-	InteractableScript_getTarget_m6B363910AFD6FEA118EBBDDEBEF4724D198ED99E,
-	InteractableScript_setType_m251B15E41F33455C21C99871FD96B768B2D006E7,
-	InteractableScript_getType_m50E07F1AAC8FBB2B4682CA2C8F0B563C8FE1E0F1,
-	InteractableScript_setInteractable_mFC333D34455E32871E43ED5BA1B7BB4D67021511,
-	InteractableScript_getisInteractable_m920FE47F7F5ADD5021ADF02470DC1E3B07C5DF76,
-	InteractableScript_setMaterial_m83AA830F1A61A5CD432554B6A4B8826C55AA967A,
-	InteractableScript_getMaterial_m2D8FF5FB5637F036D4A47F5D218685A92CA1ED23,
-	InteractableScript_getFocusOnPickup_m2D0F46C230274E3D38CE145511D8E468F9B2DB84,
-	InteractableScript_getFocusAngles_m1CDCC74596523B1F423C3AD71995D66C01217F22,
-	InteractableScript_getFocusDistance_mDE01A4B60AEABD9667A6E880BA32A0F0315790E5,
-	InteractableScript_FixedUpdate_mE02B9F5758401772A40210AA3EACC69E9A13702D,
-	InteractableScript_CombineObject_m96E0514BE1592F58D3E1026DA3834651EC191106,
-	InteractableScript_Interact_m71B2FDFC5FE18E1F9D2C4BD186228A4F956D04B0,
-	InteractableScript_Reset_m2B37BED086B4CBB2719E0EBC21B464887DA2215B,
-	InteractableScript_PlaceDown_mC6673CA881ACFC3B837D4E940577002AFAD8E52F,
-	InteractableScript_PlaceHere_m8CCA0145F8F30D401DBA09262FD5BD1744620007,
-	InteractableScript__ctor_m2154170B970792F736FD41A8B4925A4AD0AE9964,
-	LiquidObjectScript_getDosage_m568BF611591AC93A29F6168DDD980CE506781386,
-	LiquidObjectScript_setDosage_m404AA85AE7FA10EEAEE1F06B3E7D74FE988E9C13,
-	LiquidObjectScript__ctor_mC70BC2F3AA4D44212E7CF77589DF5EEC9CDBC7CD,
-	LiquidQuestionScript_answerSelected_m861FC173DC8004AAD5E873D82318EE7B8C36D518,
-	LiquidQuestionScript_setCup_m780AC8AFA0F6B224A4C30D9EAAE6CFC91B04F519,
-	LiquidQuestionScript__ctor_m1EB0EC4038CCDC92DCC90D4EBAB688178D2317E9,
-	LiquidTriggerScript_OnTriggerEnter_m2CFE5B3E0F545E91574F23ABDCA2100C952219C7,
-	LiquidTriggerScript_Interact_mC88B43A693F40447CE3C29F0CB16943071AD7459,
-	LiquidTriggerScript_setComplete_m2B0ABCDC0AEA4A97012915E43B4538837BD7063E,
-	LiquidTriggerScript__ctor_mDC95EED99DB4E1E8C3EE12EAFEA3E64D4EBA041B,
-	LoadMainScene_OnTriggerEnter_mFE6F499DE62F11659DC0AFE90246E7DAC25CC113,
-	LoadMainScene_Interact_m09B42D5ACB62726702F2515F738ECB47E3FA3FEC,
-	LoadMainScene__ctor_m2C46133FEAFD828DDF6710C6226BF9EEB815A366,
-	LocomotionController_Update_mB90F198EF2BB631E8CA39FD60080DB28279F8E72,
-	LocomotionController_CheckIfActivated_m02DD2DB0D5CA19A25EC01523D115548FD2A43685,
-	LocomotionController__ctor_m5AA73F4FF00769A834D5732FC4BD08BDD4634BDF,
-	MedLabelScript_Awake_m845005B41DC700ABCF19F87CEFC004403B03A852,
-	MedLabelScript_Update_mDEFCFEB9040C0D6A79FCFBD656E40B26E83971B4,
-	MedLabelScript_labelActive_m659BEB0CC13BF72E714F00D7C2A941321BBF5F31,
-	MedLabelScript_labelActiveVR_m9AE56B63B245CA1F137D7F5E1993FDE3FEB9E615,
-	MedLabelScript__ctor_m37E2B31B79A4DE2019ADC64E09D693DA8B81471B,
-	MouseLook3D_Awake_mC3EBA61D750DDAEC45ACAD49439B35BE6B64F999,
-	MouseLook3D_Start_m5EA1BE68E0FF9A1E1605E838BBE4B05D855D5215,
-	MouseLook3D_Update_m130BF1734C7434ED2F55A31A41EF3E576C80789E,
-	MouseLook3D_OnEnable_mA5F23F6396321205428500A50003323BDBE0A015,
-	MouseLook3D_OnDisable_m0F3431425F135C2F36A446E8931FAC0657A2CB9F,
-	MouseLook3D__ctor_m595CD6BA9F9B3A727CF6393D1CE49E13945C72DA,
-	MouseLook3D__cctor_m5C58C480EADCBA225016CF538A301FCF202F668E,
-	MouseLook3D_U3CAwakeU3Eb__7_0_mC29F69B550768DBF3D88BFABF8F4839D9081E243,
-	ActionBase_performAction_m79A524DAF48C92759E78D5FB7781D90BE6C9D463,
-	ActionBase_setObjective_m1B855BB7875495D33988FABBF741C32EE7CB7508,
-	ActionBase_setMedicine_mE193EDF33268331243B706E03707D4AC6A84F576,
-	ActionBase_setDosage_m1DEB7A21C7579C4D1D98D77AD4088DE65077BC55,
-	ActionBase_getMedicine_m71A87C22904C5255C2A61054D16E7EA4A0F1D7B9,
-	ActionBase_getDosage_mE499ED71374C99510811F6A3A39145589C5E6295,
-	ActionBase__ctor_m5F2AE8F756FC0F3894819BCBE41AA9610E251F50,
-	ActionCheckMedicine_OnTriggerEnter_mEAB3F648788C2C7F74F1336A65E3D60A2CD0015D,
-	ActionCheckMedicine_CheckMedicine_mD114E6E0714CA48AA955691BA4EEB26FD460C071,
-	ActionCheckMedicine__ctor_m7C8DCD2B63F7CB9621839431009F55CF5F27B9D3,
-	ActionCountMedicine_OnTriggerEnter_m66974EA519F84E8F9D787292F51267B0F38765E2,
-	ActionCountMedicine_OnTriggerStay_mF09B720E50799D55877B263108F16BE1DF5AC40A,
-	ActionCountMedicine_OnTriggerExit_mF6436E26C60C9E9628D29242D7D879692EE323A3,
-	ActionCountMedicine_Update_m11505C410B85534B859C98F33E4A46B78724FC2C,
-	ActionCountMedicine_getCurrentDosage_m0E1D98B36350393E49422B69C8EE65725A5B5026,
-	ActionCountMedicine__ctor_m7399FB6669FFCC05E1FC9C7DA2D7C718B95503ED,
-	ActionKey_onKeyPress_mBAA75DAA22786F72F53CFC405C2062CB79411CB5,
-	ActionKey__ctor_m6E8D08B54BFE5C41DCD89A54CBCD715C012E66FB,
-	ActionTrigger_OnTriggerEnter_m39616D927601BAF360BE45259652D88FC8587835,
-	ActionTrigger__ctor_m9AC5BD287A2DB405953D30852D64DE941BDB0C75,
-	CheckComplete_Awake_mF766BEA248CAF3EBF47A3A3FBAFE9E89DEBB034D,
-	CheckComplete_Update_m731792ECA1C0182ED333ED2497E0F936A8029188,
-	CheckComplete__ctor_m57A1C8A21AECF080A89A80F4FC57C31B85314EE7,
-	Node_Start_mD5A874701C8F1F302B75996006C85C1064EFC777,
-	Node_Update_m69DDB8996B915A9D8B7C0A0F4C3BF89F51C50E73,
-	Node_skipPrevious_mAC561124658BEA713B36D64B2FB6141AD2BE30D3,
-	Node_setScenarioParent_mE549F88A1B163F03350E7A15C68905C219505BC9,
-	Node_getScenarioParent_m2C3E9F5B1AAF8ECAEA37A1778904044FC0115AA7,
-	Node_initializeNode_m7ABAC373D308C73A3297F3FD1AE2B459DD189172,
-	Node_checkCanContinue_m06E112F782B86DD9FD710691FF38EC2A753EDAD8,
-	Node_checkComplete_mC4500A7BE16EDCA17C15DC2C7465693C7FE23E5F,
-	Node_checkSaturated_m87251B6471A40C1ACDEFEB576E6EE3EE0540AE22,
-	Node_completeNode_m5E0F970346D39CF062EA67F9B8F38727BF413B1E,
-	Node_skipNode_m691682548515080E8F0E7EE8D521A2164A6FB29B,
-	Node_activateNode_m8DEBE64B37172D2752672C59896D681AB2BAB380,
-	Node_deactivateNode_mDB60B0FBAA219349D148227DB215F99F7DEDA1D4,
-	Node_updateObjectives_m4E63B2BFA49DC0EEF408BA1E1A53E02213365B75,
-	Node__ctor_m0AEA190CB650FF922EE4686CF7E81AD5ED588C47,
-	NodeBranch_initializeNode_m8128FA0D403E9954507B5760AB41664E7A6252A9,
-	NodeBranch_checkCanContinue_m2C1D7316D2D371C8FC50E9F70F3F3F09C7FC826A,
-	NodeBranch_checkComplete_m7A9F2ACFB76143D715BAB290DD7508D7F9FFC632,
-	NodeBranch_checkSaturated_m0B42992D20CC572ADAE39C01FD30E9F8CE5D74E6,
-	NodeBranch_completeNode_mF9D422799E3E60A6F6654D3460FCA8A6BFF5C06C,
-	NodeBranch_skipNode_m38444576376F623A697F5A1C5632CC68CC40E2A2,
-	NodeBranch_activateNode_m4D15E6E26954F042F9F22FBFC3DC7E2A5ED16571,
-	NodeBranch_deactivateNode_mA8E49793975A8D6377CA43B58074451449F4D469,
-	NodeBranch_updateObjectives_m4EF37C2F0214774EC5A3264CB46D7ABFE5E30867,
-	NodeBranch__ctor_m9C7B3A6E4E3CF0FD37B720E84D5737753CAEA0FA,
-	NodeOrdered_initializeNode_mF6B0E7B10FE9EFE27647EDE192B7FBAD73DD3110,
-	NodeOrdered_checkCanContinue_m5A883A900A3CBAE405A67A68E24386207F756D20,
-	NodeOrdered_checkComplete_m27304AFA195E3975C209548C5280646AC4586C96,
-	NodeOrdered_checkSaturated_mB286D70C156FD11628CEC68038CC63CE045D06B0,
-	NodeOrdered_completeNode_mE1DCD679EAC20DAB25744128CAD006A6BB0DF005,
-	NodeOrdered_skipNode_m5960F7FD5FF8662F0EC2AD3A5AA09B617FD1B8CB,
-	NodeOrdered_activateNode_m24048F2FADF779AC747C3BB1D35A077B94BF646E,
-	NodeOrdered_deactivateNode_mE5040FD4C83E0C485D5BAC03B64CF08D5329B24A,
-	NodeOrdered_updateObjectives_m1CAB21A1AA3C3815A5009FA47D21C872AA496287,
-	NodeOrdered__ctor_m6565325CA5CC5DDBA3D350B72738297CD06463A2,
-	NodeSingle_initializeNode_mEABB36E62403EB41BFEE636E2BC46227152EE36A,
-	NodeSingle_checkCanContinue_m3C41CD819176BB1A8ADC3866DC11B83396B108FC,
-	NodeSingle_checkComplete_mE7E2A3CDC650D4D916C7B7A1B096EA29F121BD86,
-	NodeSingle_checkSaturated_m7711F56314328DB0C0A67E8A60ABC2C63BBC0DCA,
-	NodeSingle_completeNode_m1B9D0527786D6BAB1144F3ADDD46A03B58B10FEB,
-	NodeSingle_skipNode_m5F74480B33E7F03B0393E907FE81A82E6095C586,
-	NodeSingle_activateNode_mF9A0CF855D10080BD63459DEB41E954BFCFC23F2,
-	NodeSingle_deactivateNode_m7DD96CFF28AEB6D124496DDE8B65113F1E5FCCF0,
-	NodeSingle_updateObjectives_m5B2E8A128BDF7673CDEE090C36422AEAB0580E47,
-	NodeSingle__ctor_mDD3EF8AF4F06988B36F1A83AA5DD7F4AFE2C2605,
-	NodeUnordered_initializeNode_mA3C6FFB5A0C2E9FBDDBB4BFA9ABEB0E505120085,
-	NodeUnordered_checkCanContinue_m5289667B214AF3D6DBF5F21BFD32C0227183D7B3,
-	NodeUnordered_checkComplete_mCA287C8734FA3156DBE92363C0AA3B6F51C0700C,
-	NodeUnordered_checkSaturated_mB1E175ADDAD63755B602E68899A98064F301FF8C,
-	NodeUnordered_completeNode_m6638B45DCF07F79A160A07539B2386F7422B77DC,
-	NodeUnordered_skipNode_m692A4B24B72DF03395C7458A7F7174CC02BE6939,
-	NodeUnordered_activateNode_m1D134256E6EBB7B661E5B75C807D9B7AC68AE3A1,
-	NodeUnordered_deactivateNode_m1EC88FA1D3C030C21C74FBA7399B49DF0A9F5BE0,
-	NodeUnordered_updateObjectives_m553C09219205B48B0BADF69926BD8C1DC8535D90,
-	NodeUnordered__ctor_m89B23A70572A53AD78F1941BBE4A8F2DDED4D4F6,
-	Objective_Start_m97947EC29CAD8A2EA6E0A80F094270196B306DF5,
-	Objective_Update_m4669B5A0AE8FC41168DBC01492D4795C27A308A0,
-	Objective_completeObjective_m6035988048B700FEE91683940F827652F475C141,
-	Objective_skipObjective_mD341B0949720157D8BAB3A99320D85F0A69C653A,
-	Objective_failObjective_mF672CA94A1F32F64034F8551FDAD8D73491ECC2A,
-	Objective_setParent_mFF2D43F7CD911A114C28951F3C27DC35D9E62029,
-	Objective_getStrikes_m842801C08EE396BA162CCE27071261B85B70E1A9,
-	Objective_getDescription_mFECE05DB830D1CE9FBD1A156C7EE1E4C8D465308,
-	Objective__ctor_m80933A9657AA3D33388A2EEB11A3A5972D0194FD,
-	ScenarioGroup_getNodes_mACE9AB994F5A3176F39935B3E27E855446D9AF77,
-	ScenarioGroup_getCategory_m65B7E7CE911601B6FCA1DAE77937839665DBF155,
-	ScenarioGroup_getMedicine_m8263061BB4F22B4AA305DFA88B036DEA16DC58FB,
-	ScenarioGroup_getDosage_m4EAF45E1C4CFE779315F0393245D144BD39D1696,
-	ScenarioGroup__ctor_m78FB02B1C482873BA670F4483FB0AC49CED77E36,
-	ScenarioStart_Start_mF87CFB63998E49E92B4DB986DDA9BDA2FAEE425E,
-	ScenarioStart_addReport_m1E24F0FABE3B1E499136AF1B9F56DB81ACF022C3,
-	ScenarioStart_getReport_m86FD07750852ACC986F1BE176EB782A3AC3B9695,
-	ScenarioStart_addNode_m95ACE8723495F698D99723DEF35BC900830125DE,
-	ScenarioStart_stopNodes_m13F77069C8DB53FD86DF1AFE46A4E5DBF6A9C71B,
-	ScenarioStart_getMedicine_mE3D80DAB75BA0CB6E474A68A0FFB9CD7CB8A3B31,
-	ScenarioStart_getDosage_m33C3C232DB4AFA543D66B8C1EF4A77E16E785C1F,
-	ScenarioStart__ctor_m271855E0897C0117B2A136B9A4C9E8F72E2ECDF3,
-	StrikeManager_Update_mC5DE8DD3A1E290C0FCD5252208F110B38DD343B0,
-	StrikeManager__ctor_m5AF6F4FA96546626DE6AEAD58BD7988D713AB0A1,
-	TutorialCountMedicine_OnTriggerEnter_mB3834D361C8D40396F62F5CBFDE13CE158A10B14,
-	TutorialCountMedicine_OnTriggerStay_m6A9A151767E7C0DCB47355FFE4F45C0A313D2B5A,
-	TutorialCountMedicine_OnTriggerExit_mE3D5529A60558DB2322F3CC7CCD5311B5D07C056,
-	TutorialCountMedicine_Update_m497E18DC70E66D48F0B0D012EDF0BC51FF8E6775,
-	TutorialCountMedicine_getCurrentPills_mFF34B17D051BD09971F482F36273A31A24DF6DD7,
-	TutorialCountMedicine_GetCurrentLiquid_m669BAB8B674CE50C7F678AE709D2FAA8C03CC692,
-	TutorialCountMedicine__ctor_mCD0EBF2609ADC4AF5261092C8711E83EE3E50830,
-	PatchObjectScript_Awake_m97190F26BC5E280468F9E2B5B58071BE592148B2,
-	PatchObjectScript_markPatch_mEB4CFD51508B28C9B0BE3EDED1A976BFFFFD1EC2,
-	PatchObjectScript__ctor_mBE75AC70B9561A772512D564985D0EC469D54CEE,
-	PatchSpawnScript_OnTriggerEnter_mC2ACF8C25586B5DC5A975D4B51CDDE5EC8B45BB3,
-	PatchSpawnScript_Interact_mD6C406F16813BAE2578FB788709CE230573A4EE4,
-	PatchSpawnScript__ctor_m80CDDC987B341197E703492BF6B2424F4697520E,
-	PillCutterScript_canInteractWithHand_m35D1B2F1DB5CF15AD26BE1C889CD4A6A3547A5C2,
-	PillCutterScript_OnTriggerEnter_m77CCBD43EF1AEAA1B8836A9CD048775445A7E7AE,
-	PillCutterScript_Interact_m1708FC45870B8CDF4ADBB631A334F2011F9FBB7D,
-	PillCutterScript__ctor_m7ADA3E4986E9CE8A7FB9B837EC1FAC1EF2B50C8B,
-	PillSpawnScript_canInteractWithHand_m4329084E7F70843A115C21D3DDF697590E58D3D3,
-	PillSpawnScript_OnTriggerEnter_m7F54B4771DBF73CF14BEE71BB8C0DCC77E0840B2,
-	PillSpawnScript_Interact_m2AB84E3BB6AC7D9ECC44C1CC18C24359F13BF3D2,
-	PillSpawnScript__ctor_m872B1EBA0815614B67A787608749EAF5EAC136E2,
-	PlayerInput_get_asset_mE0BD6F32CD2E67A27121A83086C27A440C78A75D,
-	PlayerInput__ctor_m84EAB041CD5C8D268A3C5741EC3A70B5F1E47B20,
-	PlayerInput_Dispose_m560794A2B84F1C6308F607BF82B1E4A1EDF38E21,
-	PlayerInput_get_bindingMask_m6FEAD996A00EA3AC27C0898E069434158F51B6B1,
-	PlayerInput_set_bindingMask_mB99FECA9A895F7C3CC173A398D214CD7E396ECAB,
-	PlayerInput_get_devices_m2C4D8056997D2AD069A3C001596C612AEE861D4B,
-	PlayerInput_set_devices_m9634FFA028D8E54FE40AC7CF96B3C33A431F723A,
-	PlayerInput_get_controlSchemes_m2690472EC4C18DB835007DEFC198771F971F6295,
-	PlayerInput_Contains_m6505973E16FA35B9083BA39E9DE8B82DAD266BAD,
-	PlayerInput_GetEnumerator_mB336E324CBA4DF0E1B13334D8D79891B4E984E68,
-	PlayerInput_System_Collections_IEnumerable_GetEnumerator_mC4FB5A6DEF54DCC127F7710AE1CE80BFAE93E46A,
-	PlayerInput_Enable_m51F97ADF330547539E0B99A3FB8139ADD5266D93,
-	PlayerInput_Disable_m7E5A729CAA47FB37AF38169AED455C8350E6F68C,
-	PlayerInput_get_CharacterControls3D_mC45523CCC395F49104793E5BF288E6A036B55340,
-	PlayerInput_get_CharacterControlsVR_mCFFEB0ED12666D42673AF4BD511A0A81929EBBFA,
-	CharacterControls3DActions__ctor_m8A4A4BAE2D53E1198B73EB353B5B6174D8BEE3C0,
-	CharacterControls3DActions_get_Click_m11B0733C8D8C87724152EFA490054F52A42C6642,
-	CharacterControls3DActions_get_MouseLook_m18B94A9C1DC4CFF4B9FA4D33487C09A237BA6379,
-	CharacterControls3DActions_get_Interact_m61B68C0CD8194D25F656A5045395A0A9B38129DD,
-	CharacterControls3DActions_get_Letgo_m54454F2BEF70570290CADA8B24F4872C54F71F94,
-	CharacterControls3DActions_Get_m3FCD969ED0E3C2BE65809C87FE9AABDA56FAA040,
-	CharacterControls3DActions_Enable_mAB098E36069B932A76F50E7208AFAA3451F0D7FD,
-	CharacterControls3DActions_Disable_m950F7539DD8E7F03F39EB2B3F54DA9952D205D8E,
-	CharacterControls3DActions_get_enabled_m30BD4C8C368F0D90A17C0C89202A685A6ABAB230,
-	CharacterControls3DActions_op_Implicit_mB0142EC97909E963BB12BBEEE696BE16CEE4AC76,
-	CharacterControls3DActions_SetCallbacks_mA408C60B5AD6BCE44B4ABC533E20742C8DC4A243,
-	CharacterControlsVRActions__ctor_m68627AB1654FAB8F81D47270BB12623CD3E5D5F1,
-	CharacterControlsVRActions_get_Teleport_mDBF912F48D6D41A4E3D254490065EC4589AC359C,
-	CharacterControlsVRActions_Get_mAB5C2855C5519D60D85E19F567BB20DC04139158,
-	CharacterControlsVRActions_Enable_m315ADB1971A2608F5707C21FE634177604AA060B,
-	CharacterControlsVRActions_Disable_m3AC0598ED3467611E1C4F648002E517D1E90519F,
-	CharacterControlsVRActions_get_enabled_m8A24148BEC651C71BDBD23D7B1804A62A39C9D52,
-	CharacterControlsVRActions_op_Implicit_m4764B2A15016A8FADF0ECAF59E3CA9D4B15606D9,
-	CharacterControlsVRActions_SetCallbacks_m2A12F84AFEA008E3B4CB6E02F7331C73041A33F2,
+	NodeBase_OnUpdateInit_mAB7AEA80A76DF1ED512641983C96F039CB6DC544,
+	NULL,
+	NodeBase__ctor_m2CA082F0853BA909EE184119C139675A5518743B,
+	DebugLogNode_Awake_m30E2321C41780DF16165B1D25E20F47BCC901153,
+	DebugLogNode_SetNodeName_m1C260137361DF1D0979B198B1E4FAD08CD9B11FF,
+	DebugLogNode_UpdateNodeObjectName_m643A861B799D3714C5CCAA4D7A179B3E5BC837C3,
+	DebugLogNode_OnStart_mC8ADE6E3406026EAA1FBF25BA852080710560396,
+	DebugLogNode_OnStop_mC71200A15F461124CF869B43A78FAF1CC3A97610,
+	DebugLogNode_OnUpdate_m005E89495946289C64B04CB3343CDBED7B838A11,
+	DebugLogNode__ctor_m0874B349997AE50412CCA43096B5826B6E529119,
+	WaitNode_Awake_m1302D3177D6651309AA9C6B0F8F83B7D5A087A61,
+	WaitNode_SetNodeName_m9C45BA4B1190A102DDE6074D9C1C7DE53EC7A895,
+	WaitNode_UpdateNodeObjectName_mE7465B6C4D2B6D1AAECC47973DA4EF6EFE3487E3,
+	WaitNode_OnStart_m7E8F5BCE6910A235EA5E6616F54C0057B983B9CC,
+	WaitNode_OnStop_mE0AF98C980CE56BE648CCEB230F3974E17D2849F,
+	WaitNode_OnUpdate_m040A18F0BC48A5C56455A6E9D088A461B74EA9D4,
+	WaitNode__ctor_m80AB47AD10EC20D8C6E4D663D24AD9A0B03E588A,
+	BehaviorTree_Awake_mD7DB67BADAB3B2E77093544F13E2DD092B15F0B3,
+	BehaviorTree_treeInit_m1FEC1A6FBB5232F8C83F1A9EBA498D0E90BC07BE,
+	BehaviorTree_ResetState_mAA60ED3A45B4026BF89E092DB9FB7776D635D1CD,
+	BehaviorTree_Update_m3214F126A4BD6DD0DFE6F862BD54EE5A37115DAA,
+	BehaviorTree_GetChildren_mA99C1C77C9AD8DADB6F06F4E3B5DD65A20B50D25,
+	BehaviorTree_RemoveInvalidChildren_mE317F6E2B9BC07990183737CD4026000D36015C0,
+	BehaviorTree_Traverse_m10E345627D9267A7BDA2C748A1C3B40C106FC4AE,
+	BehaviorTree_Clone_m7F8560F9846124654AAEC681342E388BA853CCE6,
+	BehaviorTree_Bind_mC50F8EB7D88E4E577D4E82587B8D869DFCE39613,
+	BehaviorTree__ctor_m8F8F2C1E66A3324E0D8AF3E15DE6CF4A30673D84,
+	BehaviorTree_U3CBindU3Eb__12_0_m22AE799804FD73B646C5DC6B0E99C4766837D1D7,
+	U3CU3Ec__cctor_m4FC6CEA42CF9A8DFF7906EE118BBB24D3D381B8F,
+	U3CU3Ec__ctor_m538FE6AE2852D040C528AC93BDFF6E3319B09D57,
+	U3CU3Ec_U3CResetStateU3Eb__6_0_m74E3660227607440F524FAEDE6F5CA07FAAE3EE7,
+	U3CU3Ec__DisplayClass10_0__ctor_m21D049B3EF654F62A6BA37369783A230A78CAA80,
+	U3CU3Ec__DisplayClass10_0_U3CTraverseU3Eb__0_mB344D9DA29488D3EA1C6C9E8737E6B45648CB513,
+	U3CU3Ec__DisplayClass11_0__ctor_m3B98FF7132ECDC6BE221A042B7B0E961EB4A39CA,
+	U3CU3Ec__DisplayClass11_0_U3CCloneU3Eb__0_m20A6827CBEA5C4E91F38B9C7FF76D9E24064E5CC,
+	Blackboard_SetRadius_mE46B5CDF044722645C7587B82731CC3BF5C80BBC,
+	Blackboard_GetOpponentDistance_mB27F3D2D3565C9EC4147EC4B7959089F35064AC9,
+	Blackboard_GetRadius_m9C15AC5C98EADA19003D7A54B7480DC3A2E108FE,
+	Blackboard_SetDistanceToOpponent_mC22414DAC1B4D2D14D9D05F3353AB70EB239CE6B,
+	Blackboard__ctor_mDA34D0604160B2B8D7B42443351B1B4B93BB3174,
+	BTRunner_Awake_mFABF1AEC18E9E48FE89273FCFD749022ACA8E4AA,
+	BTRunner_Start_m56293705D011F4F88721BC9E9066B46B158C26A8,
+	BTRunner_Update_m740441CA4CCB55FDAFD69304F5F2F9AB1C418785,
+	BTRunner_RebindTree_mC4EE7C551646513C49A51C1C3DFFC0392C956747,
+	BTRunner__ctor_mA383599A5B5C699DD50B83EB075C97322BE8589C,
+	SelectorNode_Awake_mF80B021C8C0D61CB29586FD2B7A0C2ACC4CF1452,
+	SelectorNode_SetNodeName_mB56515FF61443183BDFB4304C28FB909E9ADD2E6,
+	SelectorNode_UpdateNodeObjectName_m72214C74CF9D6E3D5640E8DDEE85A04FA2D183E4,
+	SelectorNode_OnStart_m1517226F0137455AFD118DE901A0B94493228B9A,
+	SelectorNode_OnStop_m96B33723419EAE6EC5ACB5BEA224BD73B1372091,
+	SelectorNode_OnUpdate_m05461DCE2304FAB6764E0D03DBF0319CB8D68C99,
+	SelectorNode__ctor_m32990BA93263CB1371AB5B2EEC315D5FB85E9337,
+	SequencerNode_Awake_mC0A2D0B1C3661705FB4CA8723C3559A5BB11FB96,
+	SequencerNode_SetNodeName_m8272BC557F8E083FE83648A214588338DCB23667,
+	SequencerNode_UpdateNodeObjectName_m97E31F1E321442DC2A21A17F8930164BE7F2AF1D,
+	SequencerNode_OnStart_mB50A3BAB999118B6D1DCBE5F081DC1962BBE34EA,
+	SequencerNode_OnStop_mD97A15E04E4A0E5490575F2181FE3635A686B81E,
+	SequencerNode_OnUpdate_m000CEA91036744DEE78A0663044476DD5205E4CA,
+	SequencerNode__ctor_mBE9126B6ECD6B109B1A123C4FEBF841A0EC9C7B1,
+	ConditionTrueFalse_Awake_m3ECA6B5553DC154EB6445CA53E2C8FDB5F3EC48A,
+	ConditionTrueFalse_SetNodeName_mE04C22994E9BCC0975A1422D846A29B89AEEDC71,
+	ConditionTrueFalse_UpdateNodeObjectName_mC1806DF0CD68D39C4C1A0DFFCDDA4F33B50C968E,
+	ConditionTrueFalse_OnStart_mFC3BFB989ECBEAADC6FB3154DCBA3C26C3327C66,
+	ConditionTrueFalse_OnStop_m3E2487D2B9ACB44112D9F9B5482DBF59B55AE395,
+	ConditionTrueFalse_OnUpdate_m474270141F302090BF6B1F7F2351A009D79A0A0C,
+	ConditionTrueFalse__ctor_mEF7535314E8E8CE25B6803445D096115D87B0557,
+	InverterNode_Awake_m6F3745AEE9D7910131252D201E486C1C9B2C8E1C,
+	InverterNode_SetNodeName_m320F1B68B80FE19B220C13468D3E7B8A57D25027,
+	InverterNode_UpdateNodeObjectName_m8BBCD78FB31790A4425433F424C8087E956E2C19,
+	InverterNode_OnStart_m67C4C9420B65AD00D5686BE6697AFF551DB1F9B1,
+	InverterNode_OnStop_mDACE1C3572D85803F12A6DD5A77E4DCCF4E33F50,
+	InverterNode_OnUpdate_m79707E2E6E9C5AA631F3F6D4A7956E694D2E4262,
+	InverterNode__ctor_mFE796F6B5C0B9A5B848D6339754C231A1305D291,
+	RepeaterNode_Awake_m623E2F8E5D8D6DC2A5FD88D7DECBFDD133D7DF03,
+	RepeaterNode_SetNodeName_m01087F5B77A8A4A99EEEF50BEC15AD9191997F74,
+	RepeaterNode_UpdateNodeObjectName_m016C784D5868B485B68174A922AEDD9242E5D4F7,
+	RepeaterNode_OnStart_mEB790FC3A582F36062ECD4FDC77D40608515DCE5,
+	RepeaterNode_OnStop_m41CCA1FD8E2C92889D6F80AFC067A4EFF7884226,
+	RepeaterNode_OnUpdate_m75C3DDD3B1133047087C2DFF53A889B1C9456F02,
+	RepeaterNode__ctor_m76110B0AE0FB136577B9891BC3C6A6C8F8A91E6A,
+	RootNode_Awake_m8DCAF525B279093791D1264F5FE3B54F62A5A551,
+	RootNode_SetNodeName_m354C556EB7E6CA68C6DFFC41FC8030ED7D21CA6E,
+	RootNode_UpdateNodeObjectName_m77963043C08746E6F477F363467CC430DC5CD4CE,
+	RootNode_OnStart_mD10D0864A5329A97F6CD57DE728A29D9EEFD53BC,
+	RootNode_OnStop_m98549D2275BFFC1C2AE286AF47542F64AD4FD171,
+	RootNode_OnUpdate_m122FCA9407A2035D2FF6E8BDB2151024624F4937,
+	RootNode_Clone_m016C0B01A83D822B856BBDABB703DB25E83038DE,
+	RootNode__ctor_m5B42ED375CE5C30A930D74DE7E54E908A40D5033,
+	DipScript2_Interact_m2DA6C0AC5ADF3AEA8D1C01EEF7D42D8F39BA78C2,
+	DipScript2__ctor_mFE8AFA222F294A11286091697FBF36936CF13061,
+	DipTriggerScript__ctor_mE8892DF5C16F6FB83E2BD295D96D122E7B5822CD,
+	ElevatorOpen_Start_mAA7F7CD7C7E5372A86FF42B44B7656912801D8D0,
+	ElevatorOpen_OpenDoor_m25949970AC46AD7CC09D6CB7B23F949308061470,
+	ElevatorOpen__ctor_m990DC75F6165E3D687B497F68A48918B8B5D45A7,
+	GroundTriggerScript_OnTriggerEnter_m030E4629E5BD7905753AFD7D6F4E9D3A848A396B,
+	GroundTriggerScript__ctor_m3437A86762A0EAFE3C115AC8DAF188B291380C67,
+	NULL,
+	NULL,
+	NULL,
+	HoverableCursor__ctor_m986DC165603A439B862984C9830D338B7CCB0ABB,
+	InteractableBase__ctor_mBBA61B40BBAD4DA0A5A8E9EC4C6735CB4D88ADDA,
+	InteractableScript_setType_m80D5960DF269AB47A5B5087155E058F7B0B5F325,
+	InteractableScript_getType_m135B9D9F5BD8E1611885740FD44FAB9CC07F78B3,
+	InteractableScript__ctor_mE82355A2946B12BFB4B7CDD5E18E8A4334EAC66D,
+	InteractableTeleportEvent_TeleportEnter_m7225BE3425AE4324C38F44C554055737C687876A,
+	InteractableTeleportEvent_TeleportExit_mEC0D69168CA8FC7E3DD622CA5776D57D25DE1FC8,
+	InteractableTeleportEvent__ctor_m7C2894C454A0F4FF1844F2B5E5179ABB2357AC9C,
+	MedCartTransition_OnTriggerEnter_mD4354D12B62061EE0D1B2208E2BD0BBD6628351B,
+	MedCartTransition_OnTriggerExit_m5F77D0362DF4E31CAC2C27B7A563F881F776A219,
+	MedCartTransition_recordObjects_m125727E1E33F3896CD591B08B2E6F39585A15879,
+	MedCartTransition_moveObjects_m6EB7E5E0583BF3B293F5585FCE828192E54C4E70,
+	MedCartTransition__ctor_m64676F1E09F8C796C75A15113319A374F590F082,
+	SanitizerScript_Awake_mC97076F37954B3E34D95033DDD3CC533B6A2FA97,
+	SanitizerScript_Interact_m117AE51870EFB06445B9B1D3A85D9AD68943CD82,
+	SanitizerScript_ActivateObjects_mF111EBFA7ACA5A4B393F2785AF73BB89DA1FAA67,
+	SanitizerScript__ctor_m13D4B99A8579C58706E796A7AE886A2E2CA40831,
+	SharpieObjectScript_Interact_m89B8643F7DD05CC595619DA2899164ACBE0C281A,
+	SharpieObjectScript__ctor_mA73DA1836632F0DDCB61D06D6F4779B26357AF65,
+	SharpieSpawnScript_OnTriggerEnter_m09B296CAB7C908C01A81D69545CDFB7335777AB8,
+	SharpieSpawnScript__ctor_m3CA9078711C94E5EDF78B5C1ACBCFF07A489CCB6,
+	TeleportIndicatorScript_Awake_m38B1B0C32D6231E9AC3E998D6B36EE82D8EDD3CA,
+	TeleportIndicatorScript_Update_m8C7E6B8672A9E4B2FE68B2EAA282B0060AD1E0F0,
+	TeleportIndicatorScript_indicatorActive_m1114FF2482C1C09C3F718B6ED52A3CEADCEB9EF4,
+	TeleportIndicatorScript_indicatorActiveVR_m2C8AF993D9DD20EB2E78EF4568685BB80BD06CA4,
+	TeleportIndicatorScript__ctor_m1ABAA8716D5415EBC154041E2EFE390F109699A1,
+	UnParentOnEnable_OnEnable_m735C0114489B46BEBEB536AD92F4B1AC9CED4692,
+	UnParentOnEnable__ctor_mB11A6CCD465C04CBF39A49F41E23540FC17DFA14,
+	ClipboardText_Awake_mC88ED413901D777580D294848C34F01CCBFDBB33,
+	ClipboardText__ctor_mD0E74BE24CFC493F5D04F09E7FC58D99DCA9828E,
+	DosageIndicator_Awake_mABD19104CC7451BECB5E2ADCE6F37245639E30BC,
+	DosageIndicator_Update_m346515C55C11322B40BA3AC76D70703982C8B7A4,
+	DosageIndicator__ctor_m86E1BFB8AE1D48D1A1B70C515942AB875F8B8592,
+	InteractableDialogBtn_HighlightStart_m0CE0C079180FA20E41F6A9A5EF38A3452BBE7DCE,
+	InteractableDialogBtn_HighlightStop_m1BB615C8830092A3AF74EBE3C446533D83E21220,
+	InteractableDialogBtn_Awake_mE7212CCF481F36477880A0FBEED44FB55B4D5FE4,
+	InteractableDialogBtn_Interact_mC4188EC70BA56F8FB91975456B700FA3B974C415,
+	InteractableDialogBtn__ctor_mF7442A2753422C697E4C1C79AED58EC808533558,
+	InteractableDialogController_Start_m6B885A9258E09F89BECB7030CA5F6BC028A53EB6,
+	InteractableDialogController_Update_mA50D8C165DF28257CC2B13CE8B3FDABE5C033DA9,
+	InteractableDialogController__ctor_m445CDF4A2EAC9B303D398005F8C3E3BD86FDBD1B,
+	InteractableSpeechButton_CursorHighlight_m420126FCE55B971541F02AD03EF948560348E02A,
+	InteractableSpeechButton_LookHighlight_m1F5DDBE5443724C761669BF21A48C9FBED2E7A67,
+	InteractableSpeechButton_HighlightStart_m6EC19B331A8A9E8B77AE5FF950AA31030ABE5D69,
+	InteractableSpeechButton_HighlightStop_m7D1CBDB8FF7F1E907274A51F135C2C140A9487CE,
+	InteractableSpeechButton_Start_mF5C7D8EA00AB7B0FE5563BC68AFCC3746B276034,
+	InteractableSpeechButton_FixedUpdate_mFF3BA55CBC6C5DA2715D9DF54AEF5B28D5C23FDB,
+	InteractableSpeechButton_Interact_mA18F223FE087DB9FD695465FD57FA389F8D69570,
+	InteractableSpeechButton_OpenButton_m77B85991636038FFA3916EEAAE584262032F13E3,
+	InteractableSpeechButton_CloseButton_mA70E63182F93F419E16A9207C402CCF811FD4706,
+	InteractableSpeechButton_CloseSiblings_m0FFAAF2293C19D7BC2620A35D7B9E9F465859827,
+	InteractableSpeechButton__ctor_mB78AB546769797C214703C5542DE67CB54BE032E,
+	InteractableSpeechButton__cctor_mB61D72454550C61A17AC7D68D582FD5B0BF9AE20,
+	LiquidQuestionScript__ctor_mC24EC5772B48891EA37E00B401892BC785D7ABC1,
+	MenuButtonHover_OnTriggerEnter_m24F36AB3C8FA6C92B7D0E97C824E3789718ADD72,
+	MenuButtonHover_OnTriggerExit_m2B238B2CA7954274ED84233208327A7DE9238BA1,
+	MenuButtonHover__ctor_m852E6E7294076FD1C9AC56F83BFCD6BA974C2B0F,
+	MenuButtonManager_Start_m05DFBA7B1E938838EBB1C2F9C5D9E15BAD7887A5,
+	MenuButtonManager_BeginSimulation_mB150F28E7FFED91AED982B9FCBA433F4FB462528,
+	MenuButtonManager_BeginTutorial_mC03EA5B928E0DA73BAE130BF29FB6F0CA58F0AF2,
+	MenuButtonManager_OpenSettings_m8BBF353410DF0AFC251D47B66756C2ACCE0DE71A,
+	MenuButtonManager_BackToMenu_m8B8C146C1886D1CE0ABF483570F2DFE238FF1655,
+	MenuButtonManager_OpenCredits_mE4B2688518611488698FACB821D701CE35E40781,
+	MenuButtonManager_QuitGame_m4FFCD490FF07AB2039BB92C3366F84F51FEAE418,
+	MenuButtonManager_EnableVR_m2991B753FBB40B64DBCB61F1934815A33C2D29F3,
+	MenuButtonManager_DisableVR_m949EE1539BB602415130FA623BF52D186D73CB32,
+	MenuButtonManager__ctor_mBE1CE9ADE4188DDF71500B3341DE7DE362AB9BDD,
+	MenuButtonScript_callInteract_m1B567F7DD4E8A86A90871669D09793E8807A3111,
+	MenuButtonScript_Interact_m2DDCCAB8BB8054ED9B144D696A566685505BA2DC,
+	MenuButtonScript__ctor_m905A7CFE1B4993EED2D0E275DBABB6C071DB9CE4,
+	QuestionScript_answerSelected_mFB21C23686AA538FF5C0F0630E9125738F5C30D2,
+	QuestionScript__ctor_m4CFEA87C6DEA579081B8CFD589776CB603911133,
+	TutorialCartText_Awake_m1D732D741A6DB3B2AAA054382C47D42E20B13708,
+	TutorialCartText_Update_m324FCAE49FCBB3778BEB5B90901005C15BC4E7BB,
+	TutorialCartText__ctor_mDEFD1225AD184BA5E03F0AE03D08B50901D56584,
+	DontDestroyScript_Awake_m6BF3C85B0B95A3ABA8AF3D98D64693B20BAB1FE2,
+	DontDestroyScript__ctor_m0701A6E41C0453173B885FE33AC51F226C4CA631,
+	EscapeScript_Update_m43F8A310ED0D3D6AFE5C627B418A587CEE88D725,
+	EscapeScript__ctor_mA713C44E6564F217858B4BA07F0292660B712A1C,
+	HideOnStart_Start_mA4EDEBC2465EFFA24B6B151512F22D251AF95FDC,
+	HideOnStart__ctor_m6CE4D784548E126F7C2C49C30ED7B72E24D0DD91,
+	ResetScript_Interact_m66C6F8C6252D43F8F68B28253C51290A68581F93,
+	ResetScript__ctor_mFECC0C7F30F86174A977C0813F777556F963DA52,
+	LiquidTriggerScript_Start_mABA359EFC4F0016F9876D3B1378A4D5621EEA98E,
+	LiquidTriggerScript_Interact_m0081F2DED18E0AADCDE7FEE99C8C0D338EE6C5D2,
+	LiquidTriggerScript_setMedicine_m8F1F3D158E4F8D3B4C5116006A3A57880311EDFA,
+	LiquidTriggerScript__ctor_m62F9ED4B5A1FE1DB10424BC6AC53DAC9E31EE168,
+	LoadMainScene_Interact_m2CAFB655C3E8E4C2997FF1B71D9C79ECA7A4EA4C,
+	LoadMainScene__ctor_m714F4FD5D08AB8BADDAEDD522FDE025A470E8AD8,
+	MedicineData_Awake_mC470065DBEC7C3D9A4352C047FFD66D176D8B929,
+	MedicineData_getMedicineName_m9EC63EC702CA778F59A9B4E0314494E9CB516DAE,
+	MedicineData_getMedicineDosage_m259ADCEF6831CFCC4B77C635266EF53F35BBCD9E,
+	MedicineData_getMedicineType_m7D6C45568F01AA9F6871FEBD1162D9025FEDC8B9,
+	MedicineData_dispenseObject_m30694388A9A7D7451BE954759281FA64A6E0CA13,
+	MedicineData_dispenseObjects_m4A83CAFD69DEE61A9870A11EBB918E151430A8F6,
+	MedicineData_dispenseObjects_mD6B49CD13FEBEACDE529C11BC50A34685694649C,
+	MedicineData_setMedicineDosage_mC3BF108A54CC5EBB12231F08FDB0AC4F81AA5C14,
+	MedicineData__ctor_mB5B73563665B9C56A017649601A513D329B83712,
+	MedicineScriptableObject_Awake_m64A5485CD1478A19F22A09423F62E53FEC1E5CA1,
+	MedicineScriptableObject_getDoDispense_m555B85641FB546EC1BB14F65E8DD48AF03706618,
+	MedicineScriptableObject__ctor_mB69C472DE9F5EF35DB8F888429B4FFF398FBD642,
+	MedicineScriptableObject__cctor_m59EDF5EF35A5902A182939AAF1F4112EECFAF72F,
+	MedicineSpawnScript_Awake_m9FC74849980CFAD83C2873753665D8914C206C64,
+	MedicineSpawnScript_Interact_mA7E9D92E8A73CF11BBAF439AE7063560D0115853,
+	MedicineSpawnScript__ctor_mC50E82E289341BB4152E4D917649219A9B828F17,
+	MedLabelScript_Awake_m92214CA94BE8711F308BC49D0C7151491E6F5AD5,
+	MedLabelScript_Update_m3FE72DDDBB9BAE952223F105D2F71F64EA685CAA,
+	MedLabelScript_labelActive_m3B427896FA435B50752D7641B1B5740D5903E602,
+	MedLabelScript__ctor_m61B8825E6D63D1DC4FD24EBA6491D45203BCEBAB,
+	MedLabelScript_U3CAwakeU3Eb__14_0_m7DF438992BAA4F87D62EF73CCD792C1EF673B979,
+	MedLabelScript_U3CAwakeU3Eb__14_1_m2ED8264CBE7B8B9F2A9928413D286628A1D7F1AE,
+	PatchObjectScript_Awake_m61ACEF32ECC66B2211B3C846EE918CF08301D31B,
+	PatchObjectScript_markPatch_mE89A4105FB814BFC0ECA8E3A35B97C12CF623FCF,
+	PatchObjectScript_isMarked_m191346A2C641A94905613DE19D5825E06E27375E,
+	PatchObjectScript__ctor_mF46CE1E2CB1B28678DF80A1F3E7A94A8102EDF2B,
+	PatchSpawnScript__ctor_m229536057945D98D7303F1BC5971EABE30FC9995,
+	SetLiquidSyrup_Start_mA3D7C3B6EC13BF6FAED21EA3FBCADFD22AAB2542,
+	SetLiquidSyrup_SetParentSyrup_mEA85940EE9E2E99523D0C0CDD58BE9FEAA356BB9,
+	SetLiquidSyrup__ctor_mA9DE937991A135134A57811C5E5647A3D44153D6,
+	ActionBase_performAction_m1681A8F6347A8ACE928D65E6B72114B4BB99066E,
+	ActionBase_setObjective_mC30E47C1852E6C9BC37E46297CC7DF390790BECF,
+	ActionBase_setMedicine_m693D2910CADF94CE2C6A25ABF5CEB8D0690ECF6C,
+	ActionBase_setDosage_m6610DF4BDE90283B7FF17614E860C305734786EC,
+	ActionBase_getMedicine_m2B5C7CCA1CBB9471FD8EC4D41D7D2DBBDE5B27AD,
+	ActionBase_getDosage_m595599E816F37811B843E8542FBDAAC3B630611E,
+	ActionBase__ctor_mF1821CCF12A72833186419E1E5060CCE471D38A8,
+	ActionCheckMedicine_OnTriggerEnter_mBF3FCAD76D0BEC4717B01B6ADDDCB9782211CEC0,
+	ActionCheckMedicine_CheckMedicine_mB4C35C6EB606F6533690D79B1548D74A9506477B,
+	ActionCheckMedicine__ctor_m0814E001547A5677CD3E95146F3C68B020109A5E,
+	ActionCountMedicine_OnTriggerEnter_mF63B7D2C22B148C59F3EEA84F1E5B00750D1572F,
+	ActionCountMedicine_OnTriggerStay_m75DBC1D414BB28115FF1C71689E437048E7EC846,
+	ActionCountMedicine_OnTriggerExit_m68DA9AAD36FBBD32C88706F87580CAC3301C781D,
+	ActionCountMedicine_Update_m7D84D6793D74D0D8C8B01484E8F26A874958C668,
+	ActionCountMedicine_getCurrentDosage_m8045D6864DC72AAEE815E0A4ED5BC621818EDFED,
+	ActionCountMedicine__ctor_mE4E0FC942A9C8CFDC8677AED0F130AB1186CB182,
+	ActionKey_onKeyPress_m9422274A1DD48105BC2C13A1FDBCBF2EE896740A,
+	ActionKey__ctor_m6626F771B1A73416518160A50DDDE4BD93AAFBD3,
+	ActionTrigger_OnTriggerEnter_m02B0C485902F019298BA0575C3F92E97428C1F50,
+	ActionTrigger__ctor_m3442C8C2A020028A06E2D10402A4966C41E2C2B9,
+	CheckComplete_Awake_m3C2A67718517160E09ADE870C0C2B4F1D0CFD9A8,
+	CheckComplete_Update_m6DCE27AEF0083474D629CD823277C4BE22666484,
+	CheckComplete__ctor_m08A4B39C99CE663E21991EC0A5DE5C6765C30BD3,
+	GroupStrikeManager_Update_m3CF00CF9A6A78BF3000B9C4F465C7D477DBCE706,
+	GroupStrikeManager__ctor_mCE7943F76439095665452669D7493E84B8FEDE82,
+	Node_Start_m6F05A48434A100F7F875C86D18971F505C7AB62A,
+	Node_Update_m99DCAFA82D96A4ADA80136BD90BF7A4BFD69860B,
+	Node_skipPrevious_mB14A38F6C4C22E88587E732632F0AB5C70E45771,
+	Node_setScenarioParent_m7717AB1A847B13905DFA406569D44D270C3BD12E,
+	Node_getScenarioParent_m761D3D80FE3FC6081CA9CE8AF75F4D03E2031862,
+	Node_initializeNode_mB463EC1BE1B0CF0D202691D651FFB808702F2599,
+	Node_checkCanContinue_m32AA707E217BA8093FBFCEB94BA1A1F422D0DBB6,
+	Node_checkComplete_mA1FE23237F2B836D3D521DEF93600C5ED8A42B2F,
+	Node_checkSaturated_mB22566E2249E58931E856A4F796F034640F66868,
+	Node_completeNode_mD80F4483E55D3ACA213EA1B1E920A7A4D6BCEFA0,
+	Node_skipNode_m8DEADC6C421E5C026125B651A725DA2403C3AA88,
+	Node_activateNode_mD585B08FE1C2C7F0B5901999E78BFA0E76FECFEB,
+	Node_deactivateNode_m701FED6CD81C364A1ED74F7B35A0F92B328EEA7F,
+	Node_updateObjectives_m6EE2375370A57221FE82E5017279A1CA1FAD44D9,
+	Node__ctor_m5DBFA7A6885EBEC3891ADE47E642413C0B376549,
+	NodeBranch_initializeNode_m4B25307F97EB33EE8DFB9101111E5F0BF88C57EC,
+	NodeBranch_checkCanContinue_m97D922537BF3CC88E0E82B131B19A6D0181C4A1B,
+	NodeBranch_checkComplete_mB5AE8C744D2392E5DB47CD5F30C8D66B57F80E82,
+	NodeBranch_checkSaturated_m5C3E1C8FB3C987472C61C62659A382C8C76676F2,
+	NodeBranch_completeNode_m766AC0BC458EF62BD28F09133AB8A4106CD90325,
+	NodeBranch_skipNode_mC58BC159C46E69C24D4107D4D4313C7289287F4E,
+	NodeBranch_activateNode_m9B69F90B4E4BD41441929BFE91941F78BA79CA59,
+	NodeBranch_deactivateNode_m3E34002E09C787E188997361043A36B8734305A7,
+	NodeBranch_updateObjectives_m49E04833569EF1B07FD89B7492C1641F1595DCF2,
+	NodeBranch__ctor_mD0D83F8B0BE1AADB9B2066968764057E2E9999C6,
+	NodeOrdered_initializeNode_m8D3EC155DF54E3DDED10259EC09F1F31062B9623,
+	NodeOrdered_checkCanContinue_mA68C14EF44D9830CDB05D1A2E8D1218E9F104133,
+	NodeOrdered_checkComplete_m4B00AD664971040CE8D2A637FDCB2E220110C733,
+	NodeOrdered_checkSaturated_m430296CB37F69E631E7B743DBA29801D1D61B629,
+	NodeOrdered_completeNode_mED314EEBB2BA542B972931AEF0E624A93B74B316,
+	NodeOrdered_skipNode_m23CEDD8B260608B29B66CAE41DD3E89A20DCDDF2,
+	NodeOrdered_activateNode_mB2140E21419B65446D25764D97EF653E704687A3,
+	NodeOrdered_deactivateNode_mE9823D0E21636DCB49A26F6950E198B938632790,
+	NodeOrdered_updateObjectives_mBEA93D8AA0F5C449E5A339F2E3866FBAA8E791A7,
+	NodeOrdered__ctor_m2842F0AE4725D628E6D99A07B95DE5CE465DB21F,
+	NodeSingle_initializeNode_m7AE3FE82EDA7DF4F1DDD11F7279FD5515A2EDD38,
+	NodeSingle_checkCanContinue_m82805E2865D2D150BD4CDD7C7ADA566F78C7CC42,
+	NodeSingle_checkComplete_m7D2BA54413B2252F7E28CE3135BE96EB3D64FC74,
+	NodeSingle_checkSaturated_m36D60AEA5CBA99DCAF0EAF3C3E0DE9B9CC863C87,
+	NodeSingle_completeNode_m2FDFCF310E6AB7444EEC54A73432FF4C2A8A5146,
+	NodeSingle_skipNode_m8471187B61094C50129C4096B70EC189500CEF73,
+	NodeSingle_activateNode_mE38773F9B95025179AC4E758A7A2127D504BDA22,
+	NodeSingle_deactivateNode_mA606A4C449A8A15D2B804EA0BFD4D1E89385A75D,
+	NodeSingle_updateObjectives_m54ADFAAB669DFC0D301D724A6865B8E03D8817A6,
+	NodeSingle__ctor_mE19232C5E77C7C01CAF8EAE2BD619A3A4A396BD1,
+	NodeUnordered_initializeNode_m76F7A39C289312756197B9B2F44E8FC5256CF5C8,
+	NodeUnordered_checkCanContinue_mE2C4964BEF09523E74876E9139A9C5ECC0206514,
+	NodeUnordered_checkComplete_mC319E810CF182FE979DDEAD7FCD083F78BCC6522,
+	NodeUnordered_checkSaturated_m435975025F7025683F1132318D4184CD7DA2A4D3,
+	NodeUnordered_completeNode_mC1CD212DDE5222FA660C8B08D2070D823FEEC49E,
+	NodeUnordered_skipNode_m08C9B58B4B8043F201F2264006B0E1B10982B8DB,
+	NodeUnordered_activateNode_m95A3C6A2AC5EC7C034824B0FCE8BF513EFB4FE59,
+	NodeUnordered_deactivateNode_m91459C01F042B46AB11B37CE7472787972A06032,
+	NodeUnordered_updateObjectives_mE5958C6CEDD8456CE357122389F20029CF07F71F,
+	NodeUnordered__ctor_m3BFF68383984FAA6B188168B90928B6C9ED35150,
+	Objective_Start_m8F934B7B6AD0701B2533697EFDD0CF1B36D8D257,
+	Objective_Update_mBA85C83BE21259964E9D84AF86845D21F9B3EF32,
+	Objective_completeObjective_mE8D78C368CEE501EDBC77863D3DEE1EA4E4A11D3,
+	Objective_skipObjective_m1B714B54B1BEA8C585DCEF81A4478DBCEDB23C5E,
+	Objective_failObjective_m2D570C7C2A41BF746061CD9A44DBFE84840E8A7A,
+	Objective_setParent_mAA5EBAE8BD5A331392F2F752B275D69B5510C5B7,
+	Objective_getStrikes_mC0751EC0A435A0FEF01FEAD98D5EBB26FA8658D2,
+	Objective_setStrikes_m8171021A04A70115EA490CE9E0B770DFB4D19F86,
+	Objective_getDescription_m394A16AAB1A29827B01326D5D3E7260FDB7DC457,
+	Objective__ctor_m458DB8885F36CD507E1E9726AE492F8829601C92,
+	ScenarioGroup_getNodes_m4CD01B6B5EF2EE0F2B070F4DC5AD8B12780E0BAF,
+	ScenarioGroup_getCategory_mEE284897FB32C3A4FB508C899A062AD57FD3017C,
+	ScenarioGroup_getMedicine_m0261300759C01F63355EFCB12452F21E5B26D2C0,
+	ScenarioGroup_getDosage_mD39C0273316981C4C3AE4ED047D44F2E3605CD99,
+	ScenarioGroup__ctor_m7863D533014CF5966BAE1AB79AFE16DBDF8EB24E,
+	ScenarioStart_Start_m11630EE28D67EA5A68D326669097EEF8A46B264F,
+	ScenarioStart_addReport_m0D5A93541502C6D24FF944C1C4EE81574C3975B3,
+	ScenarioStart_getReport_m78166027D4B21DE895FFBC703E140EA8AF4894DE,
+	ScenarioStart_addNode_m01205001A5081F770D3CA3F14440CC1C95302AC5,
+	ScenarioStart_stopNodes_m37477089FB918E0266CB98578090E71D0556FB2B,
+	ScenarioStart_getMedicine_m0CEDFFC95649CFF53F41F606C69C692D1816BB04,
+	ScenarioStart_getDosage_mCEB74411C2AF3705EBF451EC828A4691D24A52E8,
+	ScenarioStart__ctor_m67EE894AE4D822564516289FF29B8C86A226FCB8,
+	ShareStrikes_Awake_m9540B0EE2D2092F2A8382F147B69D2A7661F49C0,
+	ShareStrikes_Update_m4E96CB745056547F167E836F266983A2C03E555A,
+	ShareStrikes__ctor_mD5FB51431A968A1936DFD6CB210B74F66E1F6F53,
+	StrikeManager_Update_m56348326D64F42043665214790343D958483AB7D,
+	StrikeManager__ctor_m09AA18FC85E83C31DA7759D1B9F69F6299EA5106,
+	TutorialCountMedicine_OnTriggerEnter_m2368A48EC64D3BCF6F9816E4F3B67534313E100A,
+	TutorialCountMedicine_OnTriggerStay_mFD01A124A3AE09127693B330DF55A10241491257,
+	TutorialCountMedicine_OnTriggerExit_m3220BC0E33F98588E797E352B570A6DC63AD6ED6,
+	TutorialCountMedicine_Update_m28EB81D7B179BC663C4A29FC72D1BBB47E8069B9,
+	TutorialCountMedicine_getCurrentPills_mA7133066DAA16883E1FE5D3793A7D169A775BC6C,
+	TutorialCountMedicine_GetCurrentLiquid_m48FC16D29D2F58404E2CABB35276E066F260B854,
+	TutorialCountMedicine__ctor_mBC46DF6A4215636184D5CD76718379A361B1A729,
+	ObjTrigger_Awake_m89177287F2E3B8658397A7372BAC5A804362CEDE,
+	ObjTrigger_OnTriggerEnter_mC5286268ADC8CEBCF76737883313AB26E6B29F04,
+	ObjTrigger_OnTriggerExit_mD613F49EA40F9594D0D8E9C20FCB2847BC9B7A6F,
+	ObjTrigger_OnEnter_mAFBB5B2924EBCB7CE7D8489EB2F561B6E7060083,
+	ObjTrigger_OnExit_mB795FC06093EF3039F2527E0EAC2AD2BAA7E963D,
+	ObjTrigger__ctor_mB67BE698BF76106E2C80AE5A24376D4B5358FFF9,
+	Pickupable_Awake_m0EEC900393D1A178BD56FD06A03C7E9C2D09567F,
+	Pickupable_OnEnable_m7D50F522DF2062661DCCC5EA0CA422D7ABC58F25,
+	Pickupable_OnDisable_m60581A49F525E738B9DAAF1EDF0066C6C99D045B,
+	Pickupable_ResetObject_mEF20D8B033AAC15E81AB7219B5E6AF374D04B0EC,
+	Pickupable_ResetPosition_m0DE1D7E8D2B8F2297C41F84763591B970EDA6E35,
+	Pickupable_ResetRotation_m772A647FB3FA9DCA7E2CFAB126712FE6B93BB20B,
+	Pickupable_ResetCustomRotation_m8A0734A3811936ACD2ADAB1BC184B382471A0F72,
+	Pickupable_OnPickUp_m1C6A1ABB11BFF55E5906FFF09794749BD9386B1C,
+	Pickupable_OnPutDown_m94B76C9D03EA9EF57A1C57FCFD13AF9AC35A2F46,
+	Pickupable__ctor_mA27DB8630AC6F3967B9847D260D97D716E2CA09A,
+	characterMovement3D__ctor_m514FC902099DEC90891EB3337A3F8F01230C1595,
+	HandPresence_Start_mE67D7EC79A463A9F0E3982FB1E243AF5339CA7BD,
+	HandPresence_Update_mE058201F513055444E53B277E2892C8992A48F1F,
+	HandPresence__ctor_m03ECA94662AE2E2EA641339AA36CB7E7295DF719,
+	HandPresence_U3CStartU3Eb__8_0_mF1B4CB314CE10CDEAE25B022AD89E5C92993C998,
+	LocomotionController__ctor_m5728DE2969F2E36B468284F07A3D148B8020E4F6,
+	MouseLook3D__ctor_m7F514A1179B170A6CF509EFBB17B0EA19BFE69D2,
+	Place_ScanSurface_rangerScan_mBFC5446D32EE9DEF1785F2E5DD7A942459DEFDA0,
+	Place_ScanSurface_placeOK_mD146C17AEE1FD1510104721C0E2B55C4D9962AA3,
+	Place_ScanSurface__ctor_m60735BB551623D848E8B3BCD86455F45B3934813,
+	PlayerInput_get_asset_mB150BFBAFA2BC91504C640B0065EF84C41EEF998,
+	PlayerInput__ctor_m24FD924FB39A9A023CDEA8F6916EEC47B471B3A8,
+	PlayerInput_Dispose_mED8AB62E19D2B6DF4610354C380D122AF54F60F5,
+	PlayerInput_get_bindingMask_mE9D628D8534C3F84B6120729E5868509A86FBF50,
+	PlayerInput_set_bindingMask_m32F66DD9FBB010F6F9297F345C4D3D5C5FADC354,
+	PlayerInput_get_devices_m970521FB3C8BC58D21FBAD5535438670E5B5A76D,
+	PlayerInput_set_devices_mF37D9BFB40C8FE4F6D6AA4B750CE412AD651D7F0,
+	PlayerInput_get_controlSchemes_m7894888243769B1B8E856FBF1525FE8818F51B50,
+	PlayerInput_Contains_mEABB2AA00C1CC1F789CAC71C9B301622ED8EA65E,
+	PlayerInput_GetEnumerator_m718C2FBF1A4AE370122B0CBA506776EBF2A0C4A6,
+	PlayerInput_System_Collections_IEnumerable_GetEnumerator_m79D4B6BDDF3AC172AEAE8B9C3E140C55CF95D54C,
+	PlayerInput_Enable_mE3EC3D4631D753DB2B6EEA9FF407DC0CA920A2E5,
+	PlayerInput_Disable_m9DA10D3B65ECD087D0C78E77A9719D31F1EC23ED,
+	PlayerInput_get_bindings_m18B4B8DE3CB2CE5BAA798B334C162667408E8F38,
+	PlayerInput_FindAction_m742A99ACB197ECCC39B4F25315FA5F29832883F9,
+	PlayerInput_FindBinding_m6214B5095DA36F8751C0C80C7963346EBA298321,
+	PlayerInput_get_CharacterControls_mD42861149A1DF9DA2B7D9E1CFA495EC9BE88EC0E,
+	PlayerInput_get_CharacterControlsVR_m448E2F03DA9F81FE4BDAEF8B751196BC6786E353,
+	CharacterControlsActions__ctor_m55E44F389F5E9B140628111A11F1F7F01DBDE467,
+	CharacterControlsActions_get_PickUp_m8749F86BCF567BFA04D17A4AEBF53E0E1C0CA8B1,
+	CharacterControlsActions_get_MouseLook_m194A5DB92657D805C332FA6AAEA0EFB5E39D097F,
+	CharacterControlsActions_get_Use_mDD11AF64F60F790E5EBD6B84F41690ACF9051596,
+	CharacterControlsActions_get_PutDown_m753FAA6C22AC199627E0C1B6B63512DCAAA26F71,
+	CharacterControlsActions_get_Teleport_m595D8EB97A96851A70565BDE8522F604D3649822,
+	CharacterControlsActions_Get_m76BC2485BCF9C739BD9912386BF7DDE0276DAF6B,
+	CharacterControlsActions_Enable_m89261AE4F4E1CCC826972D353FB680B0858037BE,
+	CharacterControlsActions_Disable_m2DDB9795F9E54BBB64488323AAE057598DB5A52F,
+	CharacterControlsActions_get_enabled_m6C137A89F6E00B99630ED1A468E9B26E28B487DD,
+	CharacterControlsActions_op_Implicit_m2BF075E2B6041D552D7BF38867808D1D8F3A6FF6,
+	CharacterControlsActions_SetCallbacks_mEF4BDA37CB9248266E378FA6032FA2FBB25B14D8,
+	CharacterControlsVRActions__ctor_m66B013DBFB2F45A0C43F89C6B9666CE2211357FC,
+	CharacterControlsVRActions_get_Teleport_m0949EE95B2A27AC5EF485C69DC429FD54D3AFCC2,
+	CharacterControlsVRActions_get_Pickup_mEA302EB066B776B2FD869A9C1688346FE474FE70,
+	CharacterControlsVRActions_Get_m5F46F8322F0B2D5AA8C18F147B8532D8143F1FE9,
+	CharacterControlsVRActions_Enable_m7D4161DC956D246007341C4ECB17EF70261698B7,
+	CharacterControlsVRActions_Disable_m0D82EDEFE1CC65513B923F7CCB1591052CE2DE59,
+	CharacterControlsVRActions_get_enabled_mC20452A3D97AA206C28145029E07CE3024167B81,
+	CharacterControlsVRActions_op_Implicit_m9E2C516F634A9FBA7A2559A213756FC17DD8B9B7,
+	CharacterControlsVRActions_SetCallbacks_mD603A75398CB10CAF19C6DD13AE0E9ABE2C0C366,
 	NULL,
 	NULL,
 	NULL,
 	NULL,
 	NULL,
-	QuestionScript_answerSelected_mEE151DA27942CF8A0B637CDF660F6070545DA782,
-	QuestionScript__ctor_m78027F225DB844170934FFD7DA27FC1DDC3A2F7A,
-	ResetScript_OnTriggerEnter_mDF0E6BACF44F845410853487A2C60C5A413021BB,
-	ResetScript_Interact_m1DFC94A46F49E08B1CF32212556851EBA82C5B37,
-	ResetScript__ctor_m1D4ACC3C21B58C75D2257001F4D227DDAAAD4531,
-	SanitizerScript_Awake_m1E249C6271170B58FBA1CE052767E0B9395E1F6A,
-	SanitizerScript_OnTriggerEnter_mA24A443204FBE59AACA92084DFC6C8EA8F9E0FD7,
-	SanitizerScript_Interact_m873FDA73919BD83C89A2B76096635E678429D926,
-	SanitizerScript_ActivateObjects_m7E3ADDE0BF2CD9F8A98D1DB5ABE5484158A1E5EF,
-	SanitizerScript__ctor_m8D668F6AE1EA2827F3DC92736F7209B9558B3054,
-	SetLiquidSyrup_Start_mB3624F063EFEB2C7A4510FFE17B1FD12AA7C1D5F,
-	SetLiquidSyrup_SetParentSyrup_m23092C3D44B0A8B2C96B5DE4AE3A9DBE664A1D07,
-	SetLiquidSyrup__ctor_m34B5332AE91367849728CC0280B79E9B3CA3AB9A,
-	SharpieObjectScript_canInteractWithHand_m92FD45CC77A30F2824B66D5B2EF38D8AB1FA1C08,
-	SharpieObjectScript_OnTriggerEnter_m75A33414AB799B5D6022DE76CC0EF76F632EB3B1,
-	SharpieObjectScript_Interact_mA2C03872750E810C65016A1EA512FF49A26462CF,
-	SharpieObjectScript__ctor_m174DA24E0CA6C516006BE7251FFD466D296BED30,
-	SharpieSpawnScript_OnTriggerEnter_m01E5F4E1A4645872056ABD00BFD32A158387EDDE,
-	SharpieSpawnScript__ctor_m86F9A47A2559C44868853F3ADD2DEB921A22CD27,
-	TeleportIndicatorScript_Awake_m2A3FD2508F9F04C1BC51C4E6242867C129AD34EB,
-	TeleportIndicatorScript_Update_m1BF53338CF3377AAAECF52E9D4B4ED68EC1FE91D,
-	TeleportIndicatorScript_indicatorActive_mDF5D49F71D77D421BE3A67CA248ED93D001D6A4B,
-	TeleportIndicatorScript_indicatorActiveVR_mAAB7CB132D06A79BE2FD6D1C845ABF59790C5A62,
-	TeleportIndicatorScript__ctor_m341597475AA2A3D1F1785CAFFCD63BE4731AEE5D,
-	TutorialCartText_Awake_m9B85373F94FEE5B3B0DDB21DEF454597692D353E,
-	TutorialCartText_Update_m58B662383451EAECA0C1BEFA5535F6A10662B3D3,
-	TutorialCartText__ctor_mFE14B8568D68C1352672BA803E007C57CEDCFA45,
-	TutorialLiquid_Awake_mA2C74CE38017C4B0587CBE875D67D5C8A883B8F6,
-	TutorialLiquid_SetDosage_m27D61628CD9E00C525B2A25583B26D72D607C69D,
-	TutorialLiquid_getDosage_m69693072F58D6FF4EC9891A9CF8B9A72A01DE17E,
-	TutorialLiquid__ctor_m1A0052FEF683D75CF4E9337782DB83CBF31195D8,
-	TutorialManager_Start_m0CE3E9449B63E7930C4035203E1ED9B260E72D59,
-	TutorialManager_Update_m0486AA97C0E1344C37EE31B176ED32EE3B4446D9,
-	TutorialManager_overrideSetMessage_m339467EB75329EDDA74DC7CA7A542968D75F6D74,
-	TutorialManager_overrideSetTime_m2A30182C7A7E5B1AF868450FA0722D284BCDC6C8,
-	TutorialManager__ctor_m1A6F653729E4CCE30F0A0BC39EEB304409459A84,
-	TutorialText_Awake_m6A4FC8763BCF1D3B09B4BD385279772C8E9AFBDF,
-	TutorialText_Update_m3070918573AECA5D6F7E51C8DF1CB5300A76A022,
-	TutorialText__ctor_mD0EF3C12D39D80C2E531FC9A1BE098E196B710E9,
-	VRLookatScript_OnTriggerStay_m00E47AA74B126A184C9D30CB8D257938D01713F5,
-	VRLookatScript__ctor_mFA2E80B926D5ADC28CB24C87F10266911603C5D5,
-	characterMovement3D_Awake_mF65A2A23CEA754B64E59DEE7150809E7509A58F9,
-	characterMovement3D_Start_mBC2C688A7CD6C8CF5350C717501D81528D90D1C3,
-	characterMovement3D_Update_m214BA07D46838073C241151FEE1403DDE526F941,
-	characterMovement3D_checkHeldObjectValid_mF711716CE785543CB6926A5466E987D2B356E7AE,
-	characterMovement3D_handleGrabAnim_m06A2F170AC687BA1818DA3648191F9ED9A4D64BB,
-	characterMovement3D_handleInteraction_m5FABB9F3CC6D7784BC03395C7E661803CCE60693,
-	characterMovement3D_initPlace_m10939510094F7E9017F29D50A3533108D99E70E2,
-	characterMovement3D_finishPlace_m9B0D81794F819B2DBB368EE8FCB2357200A99598,
-	characterMovement3D_checkPlace_m963A8C9DC418D5B24683CEC9FC3247E3742B4EBE,
-	characterMovement3D_attemptPlace_mC57A6EF7BC28D401AEEBB943B222E59D79E2C058,
-	characterMovement3D_handleLetgo_m8C55B155045EB28A31F9B65BADB3FD40601386F8,
-	characterMovement3D_handleMovement_m5339E21A5389472F67986FB92A329B09BC04B0EF,
-	characterMovement3D_OnEnable_m197FCB4B09E7EBE8704358B9BC8C2506672CB672,
-	characterMovement3D_OnDisable_m9E841BD99351E0A8E3DE0708A160416F61ABE790,
-	characterMovement3D__ctor_m4EF183F072AE285F281CBB3308BB4ED1B0673ED3,
-	characterMovement3D_U3CAwakeU3Eb__25_0_mF99BCE55220503AB1D25580B692C03E3F4000645,
-	characterMovement3D_U3CAwakeU3Eb__25_1_m5166620ECE601AEA1D10DFDAB5C38FFFDF515E88,
-	characterMovement3D_U3CAwakeU3Eb__25_2_m777B9B0FE3C778A213A7CDBFBC1B6B1D29FB64E0,
-	TriggerTally_GetColliders_mEA4E5EFDB196FE9D788D9E96D34A0FA3AE6A5520,
-	TriggerTally_collidersCount_m45417D3A55C336778A4D78BC56C4A7A14C17ED14,
-	TriggerTally_OnTriggerEnter_m9F7BF948BBB467D243C3E5F3F2A3B2C92E1BDCCD,
-	TriggerTally_OnTriggerExit_m47C9A6221E4D762085D829C3582982A1D1BA41E5,
-	TriggerTally__ctor_m1F521069F9DA40C2A35A025E86867E65DD09520B,
-	VROnlyScript_Start_mACEBD5AFB6D95BD5594A307B36FA9DFD51F6DA3F,
-	VROnlyScript__ctor_m843A95DFDED8601C4D360588003C4EF241B1B7F2,
+	NULL,
+	NULL,
+	VRHoverScript_Awake_mFDBB7FE9207853E7087273E0CA00CB7EFD627812,
+	VRHoverScript_OnHover_m645347A1FF239C1132798A9A0EB17CD5656CC51A,
+	VRHoverScript_OnHoverExit_m0A2061841D711DCB097CDDCF05D4190DBD47FFB5,
+	VRHoverScript__ctor_m2DD79B1A66BAA2E5844524F74740A27DF2509119,
+	VRLookatScript__ctor_m308B900D6DEEC9C7A17CC64F2F1C734165175496,
+	XRMouseInputRebinder_Awake_m94E1916811475C6AAC30623A06AC566B2B5CBF1B,
+	XRMouseInputRebinder_setPickupBinding_m203EED662ACBD115672DBA8D70410E23B09B2D96,
+	XRMouseInputRebinder__ctor_m24622BC3197ACE94C6892990B2E9DE43D46B6ACF,
+	Printer_Awake_m825BBD5ED8AA32612ECA509895850B848E5B7BF0,
+	Printer_print_m9D4DA106292AD967E2256973930F130BEEDD05E5,
+	Printer_printDialougue_mA0FD8BF7AF3E4FA501D85104D04EEBE761F09593,
+	Printer_printMessage_m1102D30D7E45ECC030131CAD89A06C815C2651BD,
+	Printer__ctor_m6227F2D6165ABBAD78C031D7BF141437230AA5D6,
+	U3CprintMessageU3Ed__5__ctor_mAFA035FF2618B885CAC2EC10C272C6DF9FA5D49A,
+	U3CprintMessageU3Ed__5_System_IDisposable_Dispose_m7D67476DCDE711D7BDDF54AD71E0C10BE9611799,
+	U3CprintMessageU3Ed__5_MoveNext_m0D576DB0CCC7647E25732262B51E288B8BB8359A,
+	U3CprintMessageU3Ed__5_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mFB15DA81ED0919BEDA3CB724F39B6143634CC1DC,
+	U3CprintMessageU3Ed__5_System_Collections_IEnumerator_Reset_mC26B8FBD1B3DC95561017774D477E3D8D006CC36,
+	U3CprintMessageU3Ed__5_System_Collections_IEnumerator_get_Current_mF26707321644995FE9A9D30B2F0DB9BF16CAAF43,
+	SimObject_Start_m86F751290D21F0EB29BF09229BDC66A9274A430C,
+	SimObject_Update_mB449A2B0DECC9FBA6CD1D2761141674D27BDE02E,
+	SimObject__ctor_mBF2BD6A719859F2C698496043DC49C97B238F928,
+	TransitionTestScript__ctor_m16F57FD3CE9787E74D64775C9706845D3B75DCD1,
+	TriggerTally_GetColliders_m7014E03963383C0421DAAB24FC023B7F02227BC6,
+	TriggerTally_collidersCount_m78CE839875F554C85815883A9F8B29CCDE629296,
+	TriggerTally_OnTriggerEnter_m42E6435FE430B97D61916DC4BFA24B9419C8A3D3,
+	TriggerTally_OnTriggerExit_m1D6A330C0404C352D2A45AB4053A2CCFA0232B35,
+	TriggerTally__ctor_m88A3301B329477AE49B0B878163A214B4FDC993E,
+	TutorialLiquid_Awake_m375360F9661D88D7009004FCDFF4F9273712889B,
+	TutorialLiquid_SetDosage_m579A0CABBF32650079613AA63A70BDCFC230641F,
+	TutorialLiquid_getDosage_m42C240CF5DC9F2238950500CF2087449D86E0BD5,
+	TutorialLiquid__ctor_mFDB2FFC601516A9A22407923BC69F2F7E28B7669,
+	TutorialManager_Start_m716464779E3BF419A75708721DFE6BB65954D4F9,
+	TutorialManager_Update_m70510E69FAE81B019F2427B18E6F2F4D80A20DB5,
+	TutorialManager_overrideSetMessage_m1929F4486C9A0FBCD6E97FC05488AED1108ED876,
+	TutorialManager_overrideSetTime_m876A12DB557170D09D71B5AC589C39D55519D794,
+	TutorialManager__ctor_m5DF15FACAE927F11F4CD3E6162A8FEE01B406E16,
+	TutorialText_Awake_m05A861AB76B7C149EEBBA27EA87123B2A8205659,
+	TutorialText_Update_m51F964576D8370E4FBFBB4F76FAB2D106CD32789,
+	TutorialText__ctor_mCEBFA4351D93DF1FC115ADEAC3EEB756374BAC13,
+	VROnlyScript_Start_mA27EE8E6134CA8D519F643E192FCC7F6E32771B2,
+	VROnlyScript__ctor_m89BFBCF3E65F76801218850523E1178D8B740D3C,
+	XRRigSingleton_get_xrs_mADDF2551AFB7626B731CAE8D9858255CF36EC555,
+	XRRigSingleton_set_xrs_m15EEABED9F9B246A0E7A0CC3652822C4B69456E2,
+	XRRigSingleton_Awake_mB7DB68E15C210394FDDCA6EF90F4C8F01D97D0BA,
+	XRRigSingleton_NewScene_mCF10A1121F79B0CA3C92E3F95C774761D91FF631,
+	XRRigSingleton_getRootVR_mBA523A7D25C2640055270065ED310D6038B3EAAA,
+	XRRigSingleton_getRoot3D_mDDC904E1B16D32416EC357CAA8667941E7B59B3D,
+	XRRigSingleton_getActiveCamera_mB05698A914AA399BD90F79A50C4255CA92E0160D,
+	XRRigSingleton_getVRActive_m24F55E31AD7646AC5740D37330D850059D102F9E,
+	XRRigSingleton_setVRActive_mA1570AF6E8E059ECDBFFBFCBC56E1B8307F39E62,
+	XRRigSingleton_rightRayActivate_m6CD4AA1B4AF3A350BA78CBFA4BAEE7472F6EA460,
+	XRRigSingleton_rightRayDeactivate_m00AF07DC02620C9A2C12A70B265EA4FEDCCDF502,
+	XRRigSingleton_leftRayActivate_mA204EBAD72EC982AFA917F34972EFBDA54B0C36F,
+	XRRigSingleton_leftRayDeactivate_m816117F8E6BA8885198C832CBBC8FFEB9715C209,
+	XRRigSingleton__ctor_m8BB8DE157669A2DEB8D337F592FD72C2DAE53EDE,
+	SimManagement_getVRCursorsActiveState_m301BEBDEA849400CFD372E975EDC10CF9F67A0F5,
+	SimManagement_setVRCursorsActiveState_mAD26F56AA1FB74E965B4E43ADC911035F50A91EA,
+	SimManagement_CheckSMIsInScene_mE6A3ED8E7522664C802FBCCAB95F4004C90753E7,
+	SimManagement_Start_m0B024984F9015EDC2DFF63DF96BAF0A9636A11E0,
+	SimManagement_Update_m94EF1B27C77E927BF479FA618F7A58463C23D32F,
+	SimManagement__ctor_m3488AC4EC5BD767C92302870890BE880197C35F2,
+	SpeakButton__ctor_m019951AFE86B0EB5E7F8E0CF64DAFDD723F21F66,
+	DrawerScript3D_Start_m33D5FCFDC3DD127D18AEF324686B597387733EAE,
+	DrawerScript3D_Interact_m27138D74513F33EBC644D4FC6BD3553E8693BE6E,
+	DrawerScript3D__ctor_m1F6E4924B0AF6F7B0B4C705BC417D71178A52A70,
 };
-extern void CharacterControls3DActions__ctor_m8A4A4BAE2D53E1198B73EB353B5B6174D8BEE3C0_AdjustorThunk (void);
-extern void CharacterControls3DActions_get_Click_m11B0733C8D8C87724152EFA490054F52A42C6642_AdjustorThunk (void);
-extern void CharacterControls3DActions_get_MouseLook_m18B94A9C1DC4CFF4B9FA4D33487C09A237BA6379_AdjustorThunk (void);
-extern void CharacterControls3DActions_get_Interact_m61B68C0CD8194D25F656A5045395A0A9B38129DD_AdjustorThunk (void);
-extern void CharacterControls3DActions_get_Letgo_m54454F2BEF70570290CADA8B24F4872C54F71F94_AdjustorThunk (void);
-extern void CharacterControls3DActions_Get_m3FCD969ED0E3C2BE65809C87FE9AABDA56FAA040_AdjustorThunk (void);
-extern void CharacterControls3DActions_Enable_mAB098E36069B932A76F50E7208AFAA3451F0D7FD_AdjustorThunk (void);
-extern void CharacterControls3DActions_Disable_m950F7539DD8E7F03F39EB2B3F54DA9952D205D8E_AdjustorThunk (void);
-extern void CharacterControls3DActions_get_enabled_m30BD4C8C368F0D90A17C0C89202A685A6ABAB230_AdjustorThunk (void);
-extern void CharacterControls3DActions_SetCallbacks_mA408C60B5AD6BCE44B4ABC533E20742C8DC4A243_AdjustorThunk (void);
-extern void CharacterControlsVRActions__ctor_m68627AB1654FAB8F81D47270BB12623CD3E5D5F1_AdjustorThunk (void);
-extern void CharacterControlsVRActions_get_Teleport_mDBF912F48D6D41A4E3D254490065EC4589AC359C_AdjustorThunk (void);
-extern void CharacterControlsVRActions_Get_mAB5C2855C5519D60D85E19F567BB20DC04139158_AdjustorThunk (void);
-extern void CharacterControlsVRActions_Enable_m315ADB1971A2608F5707C21FE634177604AA060B_AdjustorThunk (void);
-extern void CharacterControlsVRActions_Disable_m3AC0598ED3467611E1C4F648002E517D1E90519F_AdjustorThunk (void);
-extern void CharacterControlsVRActions_get_enabled_m8A24148BEC651C71BDBD23D7B1804A62A39C9D52_AdjustorThunk (void);
-extern void CharacterControlsVRActions_SetCallbacks_m2A12F84AFEA008E3B4CB6E02F7331C73041A33F2_AdjustorThunk (void);
-static Il2CppTokenAdjustorThunkPair s_adjustorThunks[17] = 
+extern void CharacterControlsActions__ctor_m55E44F389F5E9B140628111A11F1F7F01DBDE467_AdjustorThunk (void);
+extern void CharacterControlsActions_get_PickUp_m8749F86BCF567BFA04D17A4AEBF53E0E1C0CA8B1_AdjustorThunk (void);
+extern void CharacterControlsActions_get_MouseLook_m194A5DB92657D805C332FA6AAEA0EFB5E39D097F_AdjustorThunk (void);
+extern void CharacterControlsActions_get_Use_mDD11AF64F60F790E5EBD6B84F41690ACF9051596_AdjustorThunk (void);
+extern void CharacterControlsActions_get_PutDown_m753FAA6C22AC199627E0C1B6B63512DCAAA26F71_AdjustorThunk (void);
+extern void CharacterControlsActions_get_Teleport_m595D8EB97A96851A70565BDE8522F604D3649822_AdjustorThunk (void);
+extern void CharacterControlsActions_Get_m76BC2485BCF9C739BD9912386BF7DDE0276DAF6B_AdjustorThunk (void);
+extern void CharacterControlsActions_Enable_m89261AE4F4E1CCC826972D353FB680B0858037BE_AdjustorThunk (void);
+extern void CharacterControlsActions_Disable_m2DDB9795F9E54BBB64488323AAE057598DB5A52F_AdjustorThunk (void);
+extern void CharacterControlsActions_get_enabled_m6C137A89F6E00B99630ED1A468E9B26E28B487DD_AdjustorThunk (void);
+extern void CharacterControlsActions_SetCallbacks_mEF4BDA37CB9248266E378FA6032FA2FBB25B14D8_AdjustorThunk (void);
+extern void CharacterControlsVRActions__ctor_m66B013DBFB2F45A0C43F89C6B9666CE2211357FC_AdjustorThunk (void);
+extern void CharacterControlsVRActions_get_Teleport_m0949EE95B2A27AC5EF485C69DC429FD54D3AFCC2_AdjustorThunk (void);
+extern void CharacterControlsVRActions_get_Pickup_mEA302EB066B776B2FD869A9C1688346FE474FE70_AdjustorThunk (void);
+extern void CharacterControlsVRActions_Get_m5F46F8322F0B2D5AA8C18F147B8532D8143F1FE9_AdjustorThunk (void);
+extern void CharacterControlsVRActions_Enable_m7D4161DC956D246007341C4ECB17EF70261698B7_AdjustorThunk (void);
+extern void CharacterControlsVRActions_Disable_m0D82EDEFE1CC65513B923F7CCB1591052CE2DE59_AdjustorThunk (void);
+extern void CharacterControlsVRActions_get_enabled_mC20452A3D97AA206C28145029E07CE3024167B81_AdjustorThunk (void);
+extern void CharacterControlsVRActions_SetCallbacks_mD603A75398CB10CAF19C6DD13AE0E9ABE2C0C366_AdjustorThunk (void);
+static Il2CppTokenAdjustorThunkPair s_adjustorThunks[19] = 
 {
-	{ 0x0600010A, CharacterControls3DActions__ctor_m8A4A4BAE2D53E1198B73EB353B5B6174D8BEE3C0_AdjustorThunk },
-	{ 0x0600010B, CharacterControls3DActions_get_Click_m11B0733C8D8C87724152EFA490054F52A42C6642_AdjustorThunk },
-	{ 0x0600010C, CharacterControls3DActions_get_MouseLook_m18B94A9C1DC4CFF4B9FA4D33487C09A237BA6379_AdjustorThunk },
-	{ 0x0600010D, CharacterControls3DActions_get_Interact_m61B68C0CD8194D25F656A5045395A0A9B38129DD_AdjustorThunk },
-	{ 0x0600010E, CharacterControls3DActions_get_Letgo_m54454F2BEF70570290CADA8B24F4872C54F71F94_AdjustorThunk },
-	{ 0x0600010F, CharacterControls3DActions_Get_m3FCD969ED0E3C2BE65809C87FE9AABDA56FAA040_AdjustorThunk },
-	{ 0x06000110, CharacterControls3DActions_Enable_mAB098E36069B932A76F50E7208AFAA3451F0D7FD_AdjustorThunk },
-	{ 0x06000111, CharacterControls3DActions_Disable_m950F7539DD8E7F03F39EB2B3F54DA9952D205D8E_AdjustorThunk },
-	{ 0x06000112, CharacterControls3DActions_get_enabled_m30BD4C8C368F0D90A17C0C89202A685A6ABAB230_AdjustorThunk },
-	{ 0x06000114, CharacterControls3DActions_SetCallbacks_mA408C60B5AD6BCE44B4ABC533E20742C8DC4A243_AdjustorThunk },
-	{ 0x06000115, CharacterControlsVRActions__ctor_m68627AB1654FAB8F81D47270BB12623CD3E5D5F1_AdjustorThunk },
-	{ 0x06000116, CharacterControlsVRActions_get_Teleport_mDBF912F48D6D41A4E3D254490065EC4589AC359C_AdjustorThunk },
-	{ 0x06000117, CharacterControlsVRActions_Get_mAB5C2855C5519D60D85E19F567BB20DC04139158_AdjustorThunk },
-	{ 0x06000118, CharacterControlsVRActions_Enable_m315ADB1971A2608F5707C21FE634177604AA060B_AdjustorThunk },
-	{ 0x06000119, CharacterControlsVRActions_Disable_m3AC0598ED3467611E1C4F648002E517D1E90519F_AdjustorThunk },
-	{ 0x0600011A, CharacterControlsVRActions_get_enabled_m8A24148BEC651C71BDBD23D7B1804A62A39C9D52_AdjustorThunk },
-	{ 0x0600011C, CharacterControlsVRActions_SetCallbacks_m2A12F84AFEA008E3B4CB6E02F7331C73041A33F2_AdjustorThunk },
+	{ 0x060001B4, CharacterControlsActions__ctor_m55E44F389F5E9B140628111A11F1F7F01DBDE467_AdjustorThunk },
+	{ 0x060001B5, CharacterControlsActions_get_PickUp_m8749F86BCF567BFA04D17A4AEBF53E0E1C0CA8B1_AdjustorThunk },
+	{ 0x060001B6, CharacterControlsActions_get_MouseLook_m194A5DB92657D805C332FA6AAEA0EFB5E39D097F_AdjustorThunk },
+	{ 0x060001B7, CharacterControlsActions_get_Use_mDD11AF64F60F790E5EBD6B84F41690ACF9051596_AdjustorThunk },
+	{ 0x060001B8, CharacterControlsActions_get_PutDown_m753FAA6C22AC199627E0C1B6B63512DCAAA26F71_AdjustorThunk },
+	{ 0x060001B9, CharacterControlsActions_get_Teleport_m595D8EB97A96851A70565BDE8522F604D3649822_AdjustorThunk },
+	{ 0x060001BA, CharacterControlsActions_Get_m76BC2485BCF9C739BD9912386BF7DDE0276DAF6B_AdjustorThunk },
+	{ 0x060001BB, CharacterControlsActions_Enable_m89261AE4F4E1CCC826972D353FB680B0858037BE_AdjustorThunk },
+	{ 0x060001BC, CharacterControlsActions_Disable_m2DDB9795F9E54BBB64488323AAE057598DB5A52F_AdjustorThunk },
+	{ 0x060001BD, CharacterControlsActions_get_enabled_m6C137A89F6E00B99630ED1A468E9B26E28B487DD_AdjustorThunk },
+	{ 0x060001BF, CharacterControlsActions_SetCallbacks_mEF4BDA37CB9248266E378FA6032FA2FBB25B14D8_AdjustorThunk },
+	{ 0x060001C0, CharacterControlsVRActions__ctor_m66B013DBFB2F45A0C43F89C6B9666CE2211357FC_AdjustorThunk },
+	{ 0x060001C1, CharacterControlsVRActions_get_Teleport_m0949EE95B2A27AC5EF485C69DC429FD54D3AFCC2_AdjustorThunk },
+	{ 0x060001C2, CharacterControlsVRActions_get_Pickup_mEA302EB066B776B2FD869A9C1688346FE474FE70_AdjustorThunk },
+	{ 0x060001C3, CharacterControlsVRActions_Get_m5F46F8322F0B2D5AA8C18F147B8532D8143F1FE9_AdjustorThunk },
+	{ 0x060001C4, CharacterControlsVRActions_Enable_m7D4161DC956D246007341C4ECB17EF70261698B7_AdjustorThunk },
+	{ 0x060001C5, CharacterControlsVRActions_Disable_m0D82EDEFE1CC65513B923F7CCB1591052CE2DE59_AdjustorThunk },
+	{ 0x060001C6, CharacterControlsVRActions_get_enabled_mC20452A3D97AA206C28145029E07CE3024167B81_AdjustorThunk },
+	{ 0x060001C8, CharacterControlsVRActions_SetCallbacks_mD603A75398CB10CAF19C6DD13AE0E9ABE2C0C366_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[355] = 
+static const int32_t s_InvokerIndices[529] = 
 {
-	2823,
-	2268,
-	2823,
-	2823,
-	2823,
-	2823,
-	2792,
-	2823,
-	2823,
-	2823,
-	2823,
-	2268,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2268,
-	2268,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	4370,
-	2268,
-	2268,
-	2268,
-	2823,
-	1996,
-	2792,
-	2823,
-	2823,
-	2823,
-	2268,
-	2268,
-	2823,
-	2268,
-	2268,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2268,
-	2823,
-	2823,
-	2823,
-	2823,
-	1944,
-	2823,
-	2823,
-	2823,
-	2823,
-	2268,
-	2268,
-	2823,
-	1944,
-	2823,
-	2823,
-	2823,
-	2268,
-	2792,
-	2823,
-	2823,
-	2823,
-	2823,
-	2792,
-	2823,
-	2268,
-	2768,
-	2268,
-	2768,
-	2289,
-	2792,
-	2268,
-	2768,
-	2792,
-	2820,
-	2717,
-	2823,
-	2268,
-	2268,
-	2823,
-	2823,
-	2317,
-	2823,
-	2750,
-	2252,
-	2823,
-	2268,
-	2268,
-	2823,
-	2268,
-	2268,
-	2289,
-	2823,
-	2268,
-	2268,
-	2823,
-	2823,
-	1944,
-	2823,
-	2823,
-	2823,
-	2289,
-	2289,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	4370,
-	2336,
-	2823,
-	1299,
-	2268,
-	2219,
-	2768,
-	2717,
-	2823,
-	2268,
-	2268,
-	2823,
-	2268,
-	2268,
-	2268,
-	2823,
-	2717,
-	2823,
-	2336,
-	2823,
-	2268,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2268,
-	2768,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2268,
-	2750,
-	2768,
-	2823,
-	2768,
-	2768,
-	2768,
-	2717,
-	2823,
-	2823,
-	2268,
-	2768,
-	2268,
-	2823,
-	2768,
-	2717,
-	2823,
-	2823,
-	2823,
-	2268,
-	2268,
-	2268,
-	2823,
-	2717,
-	2717,
-	2823,
-	2823,
-	2823,
-	2823,
-	2268,
-	2268,
-	2823,
-	2792,
-	2268,
-	2268,
-	2823,
-	2792,
-	2268,
-	2268,
-	2823,
-	2768,
-	2823,
-	2823,
-	2658,
-	2175,
-	2656,
-	2173,
-	2668,
-	1944,
-	2768,
-	2768,
-	2823,
-	2823,
-	2876,
-	2877,
-	2268,
-	2768,
-	2768,
-	2768,
-	2768,
-	2768,
-	2823,
-	2823,
-	2792,
-	4183,
-	2268,
-	2268,
-	2768,
-	2768,
-	2823,
-	2823,
-	2792,
-	4184,
-	2268,
-	2336,
-	2336,
-	2336,
-	2336,
-	2336,
-	2268,
-	2823,
-	2268,
-	2268,
-	2823,
-	2823,
-	2268,
-	2268,
-	2289,
-	2823,
-	2823,
-	2823,
-	2823,
-	2792,
-	2268,
-	2268,
-	2823,
-	2268,
-	2823,
-	2823,
-	2823,
-	2289,
-	2289,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2289,
-	2792,
-	2823,
-	2823,
-	2823,
-	2268,
-	2252,
-	2823,
-	2823,
-	2823,
-	2823,
-	2268,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2823,
-	2336,
-	2336,
-	2336,
-	2768,
-	2750,
-	2268,
-	2268,
-	2823,
-	2823,
-	2823,
+	4839,
+	4839,
+	4729,
+	4839,
+	4839,
+	3794,
+	4839,
+	4639,
+	4729,
+	4839,
+	4729,
+	4839,
+	3818,
+	3818,
+	4839,
+	4839,
+	3818,
+	4839,
+	4839,
+	2134,
+	4839,
+	4839,
+	4839,
+	3935,
+	3935,
+	3818,
+	3935,
+	3935,
+	3905,
+	1601,
+	4729,
+	3731,
+	3935,
+	4839,
+	3794,
+	4839,
+	4639,
+	4729,
+	4839,
+	4729,
+	4839,
+	4729,
+	4839,
+	7399,
+	4839,
+	3359,
+	4729,
+	4702,
+	4839,
+	4729,
+	4839,
+	4839,
+	4702,
+	4729,
+	3818,
+	0,
+	0,
+	0,
+	4702,
+	0,
+	4839,
+	4839,
+	3818,
+	4839,
+	4839,
+	4839,
+	4702,
+	4839,
+	4839,
+	3818,
+	4839,
+	4839,
+	4839,
+	4702,
+	4839,
+	4839,
+	4839,
+	4839,
+	4702,
+	3359,
+	3359,
+	2103,
+	4729,
+	4839,
+	4839,
+	3818,
+	7399,
+	4839,
+	3818,
+	4839,
+	3818,
+	4839,
+	3818,
+	3854,
+	4772,
+	4772,
+	3854,
+	4839,
+	4839,
+	4839,
+	4839,
+	3818,
+	4839,
+	4839,
+	3818,
+	4839,
+	4839,
+	4839,
+	4702,
+	4839,
+	4839,
+	3818,
+	4839,
+	4839,
+	4839,
+	4702,
+	4839,
+	4839,
+	3818,
+	4839,
+	4839,
+	4839,
+	4702,
+	4839,
+	4839,
+	3818,
+	4839,
+	4839,
+	4839,
+	4702,
+	4839,
+	4839,
+	3818,
+	4839,
+	4839,
+	4839,
+	4702,
+	4839,
+	4839,
+	3818,
+	4839,
+	4839,
+	4839,
+	4702,
+	4729,
+	4839,
+	3818,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	3818,
+	4839,
+	0,
+	0,
+	0,
+	4839,
+	4839,
+	3818,
+	4729,
+	4839,
+	4839,
+	4839,
+	4839,
+	3818,
+	3818,
+	4839,
+	4839,
+	4839,
+	4839,
+	3818,
+	3731,
+	4839,
+	3818,
+	4839,
+	3818,
+	4839,
+	4839,
+	4839,
+	3731,
+	3731,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	3818,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	3818,
+	4839,
+	4839,
+	4839,
+	4839,
+	7399,
+	4839,
+	3818,
+	3818,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	3818,
+	3818,
+	4839,
+	3818,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	3818,
+	4839,
+	4839,
+	3818,
+	3854,
+	4839,
+	3818,
+	4839,
+	4839,
+	4729,
+	4772,
+	4702,
+	1626,
+	1626,
+	934,
+	2701,
+	4839,
+	4839,
+	4639,
+	4839,
+	7399,
+	4839,
+	3818,
+	4839,
+	4839,
+	4839,
+	3731,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4639,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	2089,
+	3818,
+	3752,
+	4729,
+	4656,
+	4839,
+	3818,
+	3818,
+	4839,
+	3818,
+	3818,
+	3818,
+	4839,
+	4656,
+	4839,
+	3935,
+	4839,
+	3818,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	3818,
+	4729,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	3818,
+	4702,
+	3794,
+	4729,
+	4839,
+	4729,
+	4729,
+	4729,
+	4656,
+	4839,
+	4839,
+	3818,
+	4729,
+	3818,
+	4839,
+	4729,
+	4656,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	3818,
+	3818,
+	3818,
+	4839,
+	4656,
+	4656,
+	4839,
+	4839,
+	3818,
+	3818,
+	3818,
+	3818,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	3818,
+	3818,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	2663,
+	4839,
+	4839,
+	2761,
+	4639,
+	4839,
+	4729,
+	4839,
+	4839,
+	4550,
+	3654,
+	4548,
+	3652,
+	4560,
+	2663,
+	4729,
+	4729,
+	4839,
+	4839,
+	4729,
+	1615,
+	1414,
+	4910,
+	4911,
+	3818,
+	4729,
+	4729,
+	4729,
+	4729,
+	4729,
+	4729,
+	4839,
+	4839,
+	4639,
+	7063,
+	3818,
+	3818,
+	4729,
+	4729,
+	4729,
+	4839,
+	4839,
+	4639,
+	7064,
+	3818,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	4839,
+	3818,
+	3818,
+	4839,
+	4839,
+	4839,
+	3731,
+	4839,
+	4839,
+	3818,
+	1057,
+	916,
+	4839,
+	3794,
+	4839,
+	4639,
+	4729,
+	4839,
+	4729,
+	4839,
+	4839,
+	4839,
+	4839,
+	4729,
+	4702,
+	3818,
+	3818,
+	4839,
+	4839,
+	3731,
+	4639,
+	4839,
+	4839,
+	4839,
+	3818,
+	3794,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	7358,
+	7227,
+	4839,
+	2135,
+	4729,
+	4729,
+	4729,
+	4639,
+	1180,
+	3818,
+	3818,
+	3818,
+	3818,
+	4839,
+	4639,
+	3731,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	4839,
+	3818,
+	4839,
 };
-extern const CustomAttributesCacheGenerator g_AssemblyU2DCSharp_AttributeGenerators[];
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	355,
+	529,
 	s_methodPointers,
-	17,
+	19,
 	s_adjustorThunks,
 	s_InvokerIndices,
 	0,
@@ -1484,7 +2177,6 @@ const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule =
 	0,
 	NULL,
 	NULL,
-	g_AssemblyU2DCSharp_AttributeGenerators,
 	NULL, // module initializer,
 	NULL,
 	NULL,

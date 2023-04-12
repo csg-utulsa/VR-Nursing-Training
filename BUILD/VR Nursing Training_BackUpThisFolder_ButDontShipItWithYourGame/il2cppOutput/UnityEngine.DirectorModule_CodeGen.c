@@ -13,24 +13,23 @@
 
 
 // 0x00000001 System.Void UnityEngine.Playables.PlayableDirector::SendOnPlayableDirectorPlay()
-extern void PlayableDirector_SendOnPlayableDirectorPlay_mB5DE72647457F7E3757EAD2A39859BD835DE83FE (void);
+extern void PlayableDirector_SendOnPlayableDirectorPlay_m7F75DBA4355DAA92F53AC337BB952069B63081A0 (void);
 // 0x00000002 System.Void UnityEngine.Playables.PlayableDirector::SendOnPlayableDirectorPause()
-extern void PlayableDirector_SendOnPlayableDirectorPause_m6F06A18921F0F68BAE114F5DAF032CEAA77EDBC7 (void);
+extern void PlayableDirector_SendOnPlayableDirectorPause_m1B8EE7CBD23957C664AA417A9261194DFFFADFE1 (void);
 // 0x00000003 System.Void UnityEngine.Playables.PlayableDirector::SendOnPlayableDirectorStop()
-extern void PlayableDirector_SendOnPlayableDirectorStop_m60479449EA74C565E5D7B34E15CA60030C216D08 (void);
+extern void PlayableDirector_SendOnPlayableDirectorStop_m4E9AEB579B8EA66ECC6FA9BE23BBF7973AB3EDD7 (void);
 static Il2CppMethodPointer s_methodPointers[3] = 
 {
-	PlayableDirector_SendOnPlayableDirectorPlay_mB5DE72647457F7E3757EAD2A39859BD835DE83FE,
-	PlayableDirector_SendOnPlayableDirectorPause_m6F06A18921F0F68BAE114F5DAF032CEAA77EDBC7,
-	PlayableDirector_SendOnPlayableDirectorStop_m60479449EA74C565E5D7B34E15CA60030C216D08,
+	PlayableDirector_SendOnPlayableDirectorPlay_m7F75DBA4355DAA92F53AC337BB952069B63081A0,
+	PlayableDirector_SendOnPlayableDirectorPause_m1B8EE7CBD23957C664AA417A9261194DFFFADFE1,
+	PlayableDirector_SendOnPlayableDirectorStop_m4E9AEB579B8EA66ECC6FA9BE23BBF7973AB3EDD7,
 };
 static const int32_t s_InvokerIndices[3] = 
 {
-	2823,
-	2823,
-	2823,
+	4839,
+	4839,
+	4839,
 };
-extern const CustomAttributesCacheGenerator g_UnityEngine_DirectorModule_AttributeGenerators[];
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_DirectorModule_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_DirectorModule_CodeGenModule = 
 {
@@ -47,7 +46,6 @@ const Il2CppCodeGenModule g_UnityEngine_DirectorModule_CodeGenModule =
 	0,
 	NULL,
 	NULL,
-	g_UnityEngine_DirectorModule_AttributeGenerators,
 	NULL, // module initializer,
 	NULL,
 	NULL,
