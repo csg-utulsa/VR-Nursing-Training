@@ -39,7 +39,7 @@ public class XRRigSingleton : MonoBehaviour
     //[SerializeField] private GameObject leftTeleportRay;
 
     
-    private PlayerInput _playerInput;
+    private UnityEngine.InputSystem.PlayerInput _playerInput;
 
     private InputAction _mouseLookAction;
 
@@ -105,7 +105,7 @@ public class XRRigSingleton : MonoBehaviour
 
         _playerRB = GetComponent<Rigidbody>();
 
-        _playerInput = GetComponent<PlayerInput>();
+        _playerInput = GetComponent<UnityEngine.InputSystem.PlayerInput>();
         foreach(InputAction action in _playerInput.actions)
         {
             action.Enable();
@@ -136,7 +136,7 @@ public class XRRigSingleton : MonoBehaviour
         leftRayDeactivate();
     }
 
-    private void OnControlsChanged(PlayerInput input)
+    private void OnControlsChanged(UnityEngine.InputSystem.PlayerInput input)
     {
         Debug.Log("Controls changed to: " + input.currentControlScheme);
         Cursor.lockState = CursorLockMode.None;
