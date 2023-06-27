@@ -241,7 +241,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: -2024308242397127297, guid: c348712bda248c246b8c49b3db54643f,
+    m_Reference: {fileID: 8809622792399879467, guid: 40c4da2d768ddfd4fbf9efa0f3844f14,
       type: 3}
   m_RotationAction:
     m_UseReference: 1
@@ -254,7 +254,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 8248158260566104461, guid: c348712bda248c246b8c49b3db54643f,
+    m_Reference: {fileID: -6153009028248894857, guid: 40c4da2d768ddfd4fbf9efa0f3844f14,
       type: 3}
   m_TrackingStateAction:
     m_UseReference: 1
@@ -267,7 +267,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 684395432459739428, guid: c348712bda248c246b8c49b3db54643f,
+    m_Reference: {fileID: -5654751685325292584, guid: 40c4da2d768ddfd4fbf9efa0f3844f14,
       type: 3}
   m_SelectAction:
     m_UseReference: 1
@@ -280,7 +280,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: -6131295136447488360, guid: c348712bda248c246b8c49b3db54643f,
+    m_Reference: {fileID: -3517888037636660328, guid: 40c4da2d768ddfd4fbf9efa0f3844f14,
       type: 3}
   m_SelectActionValue:
     m_UseReference: 1
@@ -293,7 +293,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 6558622148059887818, guid: c348712bda248c246b8c49b3db54643f,
+    m_Reference: {fileID: -7376303150753462591, guid: 40c4da2d768ddfd4fbf9efa0f3844f14,
       type: 3}
   m_ActivateAction:
     m_UseReference: 1
@@ -306,7 +306,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f,
+    m_Reference: {fileID: -4727335749826866086, guid: 40c4da2d768ddfd4fbf9efa0f3844f14,
       type: 3}
   m_ActivateActionValue:
     m_UseReference: 1
@@ -319,7 +319,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: -4289430672226363583, guid: c348712bda248c246b8c49b3db54643f,
+    m_Reference: {fileID: -4841704838675492436, guid: 40c4da2d768ddfd4fbf9efa0f3844f14,
       type: 3}
   m_UIPressAction:
     m_UseReference: 1
@@ -332,7 +332,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: -6395602842196007441, guid: c348712bda248c246b8c49b3db54643f,
+    m_Reference: {fileID: -6343929350437515430, guid: 40c4da2d768ddfd4fbf9efa0f3844f14,
       type: 3}
   m_UIPressActionValue:
     m_UseReference: 1
@@ -345,7 +345,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 71106601250685021, guid: c348712bda248c246b8c49b3db54643f,
+    m_Reference: {fileID: -251070964901113469, guid: 40c4da2d768ddfd4fbf9efa0f3844f14,
       type: 3}
   m_HapticDeviceAction:
     m_UseReference: 1
@@ -358,7 +358,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: -8785819595477538065, guid: c348712bda248c246b8c49b3db54643f,
+    m_Reference: {fileID: 2761685944624886990, guid: 40c4da2d768ddfd4fbf9efa0f3844f14,
       type: 3}
   m_RotateAnchorAction:
     m_UseReference: 1
@@ -371,7 +371,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: -7363382999065477798, guid: c348712bda248c246b8c49b3db54643f,
+    m_Reference: {fileID: 2304331769015831009, guid: 40c4da2d768ddfd4fbf9efa0f3844f14,
       type: 3}
   m_TranslateAnchorAction:
     m_UseReference: 1
@@ -384,7 +384,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 7779212132400271959, guid: c348712bda248c246b8c49b3db54643f,
+    m_Reference: {fileID: 3624744071282567883, guid: 40c4da2d768ddfd4fbf9efa0f3844f14,
       type: 3}
   m_ButtonPressPoint: 0.5
 --- !u!114 &7245833522198020536
@@ -484,7 +484,7 @@ MonoBehaviour:
   m_SphereCastRadius: 0.1
   m_RaycastMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 32763
   m_RaycastTriggerInteraction: 1
   m_HitClosestOnly: 0
   m_HoverToSelect: 0
@@ -799,7 +799,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: -1202870644750028995, guid: 40c4da2d768ddfd4fbf9efa0f3844f14,
+    m_Reference: {fileID: -5630383676513512039, guid: 40c4da2d768ddfd4fbf9efa0f3844f14,
       type: 3}
   m_SelectActionValue:
     m_UseReference: 0
@@ -825,7 +825,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 392097381790944330, guid: 40c4da2d768ddfd4fbf9efa0f3844f14,
+    m_Reference: {fileID: -4292472685407007621, guid: 40c4da2d768ddfd4fbf9efa0f3844f14,
       type: 3}
   m_ActivateActionValue:
     m_UseReference: 0
@@ -851,7 +851,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: -2961829312671971574, guid: 40c4da2d768ddfd4fbf9efa0f3844f14,
+    m_Reference: {fileID: -3570443873491950049, guid: 40c4da2d768ddfd4fbf9efa0f3844f14,
       type: 3}
   m_UIPressActionValue:
     m_UseReference: 0
@@ -903,7 +903,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 2636409506389721238, guid: 40c4da2d768ddfd4fbf9efa0f3844f14,
+    m_Reference: {fileID: -2955028167021820144, guid: 40c4da2d768ddfd4fbf9efa0f3844f14,
       type: 3}
   m_ButtonPressPoint: 0.5
 --- !u!114 &9196005514612376676
@@ -988,7 +988,7 @@ MonoBehaviour:
   m_LineType: 0
   m_BlendVisualLinePoints: 1
   m_MaxRaycastDistance: 30
-  m_RayOriginTransform: {fileID: 0}
+  m_RayOriginTransform: {fileID: 8903709935695389264}
   m_ReferenceFrame: {fileID: 0}
   m_Velocity: 16
   m_Acceleration: 9.8
@@ -1003,7 +1003,7 @@ MonoBehaviour:
   m_SphereCastRadius: 0.1
   m_RaycastMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 32763
   m_RaycastTriggerInteraction: 1
   m_HitClosestOnly: 0
   m_HoverToSelect: 0
@@ -1225,7 +1225,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8088128091401591958}
   - component: {fileID: 945726795116545037}
-  m_Layer: 0
+  - component: {fileID: 743171859178758777}
+  - component: {fileID: 2803599989719874408}
+  m_Layer: 2
   m_Name: XRRigV2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1265,6 +1267,252 @@ MonoBehaviour:
   m_CameraFloorOffsetObject: {fileID: 7721491804756910909}
   m_RequestedTrackingOriginMode: 0
   m_CameraYOffset: 1.1176
+--- !u!114 &743171859178758777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6365166185256849998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d4641660d9aee6449594421f591a9ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 4522729694380398211}
+  rightController: {fileID: 8892617449969180575}
+  leftController: {fileID: 3242661145392920527}
+  mouseController: {fileID: 4444670727188937571}
+  debugVRActive: 0
+  debug3DActive: 0
+  _mouseSensitivity: 0.1
+--- !u!114 &2803599989719874408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6365166185256849998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 40c4da2d768ddfd4fbf9efa0f3844f14,
+    type: 3}
+  m_NotificationBehavior: 3
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8d1999ae-29c5-493b-b2fa-fc874114aa8f
+    m_ActionName: Interactions/Select[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f004d5d6-6d87-47f9-80ef-91897f6ece58
+    m_ActionName: Interactions/Activate[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5a39c268-16f5-4268-ab2a-ab4cee3124eb
+    m_ActionName: Interactions/UI Press[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 73a6ef1b-aca1-42dc-8725-d4e54cc0dbe5
+    m_ActionName: Interactions/Translate Anchor[/Mouse/scroll]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a31448bf-3adb-44e8-9eb1-df0e5512cd67
+    m_ActionName: Interactions/MouseLook[/Mouse/delta]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2b473311-b75b-4620-9313-b0fd4a54b96d
+    m_ActionName: Movement/KeyboardMovement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7b9c0454-6baa-4a7f-985f-5cfe2f0f6142
+    m_ActionName: Movement/Teleport Select
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 08a770b0-9f0b-4cf2-a820-5cccf161f7d5
+    m_ActionName: Movement/Teleport Mode Activate
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8d002c78-83b6-468b-92be-15060f45809a
+    m_ActionName: Movement/Teleport Mode Cancel
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ad6336f6-9691-4c9b-a388-91d0c2c2f190
+    m_ActionName: XRI Head/Position
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 711ca9b3-00f2-46cb-ace7-bf3d4094bc82
+    m_ActionName: XRI Head/Rotation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1bfd7933-ac3f-4a6d-b606-6133e799098f
+    m_ActionName: XRI LeftHand/Position
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6c39a66a-84e8-4db4-bda8-8dae3647944d
+    m_ActionName: XRI LeftHand/Rotation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bc2647bf-d6d3-4756-a225-bd2731eca0a0
+    m_ActionName: XRI LeftHand/Tracking State
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 267f462e-0a94-4460-ad3e-74b00cfdfee5
+    m_ActionName: XRI LeftHand/Haptic Device
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2409891f-0771-4e17-92a5-bb62fcd31d89
+    m_ActionName: XRI RightHand/Position
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fd3c142a-f7de-4667-9740-c2b455741d71
+    m_ActionName: XRI RightHand/Rotation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 09952263-22c1-42c1-b44c-e61a8e905278
+    m_ActionName: XRI RightHand/Tracking State
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 46d53ae5-ae70-458b-ba0e-26c7f61982c8
+    m_ActionName: XRI RightHand/Haptic Device
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 93f2c390-e1d8-413a-90db-b9258705bd93
+    m_ActionName: XRI UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 78194dfd-766c-4d88-94e0-f5b75ef35e41
+    m_ActionName: XRI UI/Submit[/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fca19629-0ae8-4f3a-8226-f72880bf986b
+    m_ActionName: XRI UI/Cancel[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 440c221b-77b2-4ab2-945d-7b033217c2f2
+    m_ActionName: XRI UI/Point[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5c07e6f7-1445-460b-9af7-ac48880c2e08
+    m_ActionName: XRI UI/Click[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 323c061a-401f-4abc-a3d2-e57996ab52bb
+    m_ActionName: XRI UI/ScrollWheel[/Mouse/scroll]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 88580561-666f-4709-80ab-ca9a32306a9e
+    m_ActionName: XRI UI/MiddleClick[/Mouse/middleButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ff89aaab-418b-44fa-8d30-63e3add9f1e2
+    m_ActionName: XRI UI/RightClick[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2ceb5dc0-e9d9-483c-b129-421dc5c1f415
+    m_ActionName: XRI LeftHand Interactions/Select
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 584b0d7f-c6a2-4ae4-8813-801c8538c40d
+    m_ActionName: XRI LeftHand Interactions/Select Value
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 421cd072-d58b-4086-9d4d-9af992b7ee7e
+    m_ActionName: XRI LeftHand Interactions/Activate
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f2af37e1-801e-4036-8b90-4f125caca520
+    m_ActionName: XRI LeftHand Interactions/Activate Value
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 04d55ee9-d8ee-4ab6-a6d3-228d4252a2a3
+    m_ActionName: XRI LeftHand Interactions/UI Press
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d8b48afb-a65e-421b-9004-179381702936
+    m_ActionName: XRI LeftHand Interactions/UI Press Value
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 07a871b6-eb3d-48c1-ae29-d6c687b374c8
+    m_ActionName: XRI LeftHand Interactions/Rotate Anchor
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9297be5d-f3a2-4d7a-a9d1-818eb8e2e07b
+    m_ActionName: XRI LeftHand Interactions/Translate Anchor
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7e7b2537-07d6-426f-90f0-b6f2e5f8f3e1
+    m_ActionName: XRI LeftHand Movement/Teleport Select
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9fb25bb3-fbfc-40df-a7ea-a00b01c00246
+    m_ActionName: XRI LeftHand Movement/Teleport Mode Activate
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4000370a-ed79-4545-9ff1-30aa2c078528
+    m_ActionName: XRI LeftHand Movement/Teleport Mode Cancel
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: df6cbc20-9a7a-4bcb-a280-32a54874ca02
+    m_ActionName: XRI RightHand Interactions/Select
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9ef87e8c-2586-49c2-a9bc-d960026590ad
+    m_ActionName: XRI RightHand Interactions/Select Value
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ee4cb067-302c-4072-8003-315872de0583
+    m_ActionName: XRI RightHand Interactions/Activate
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f33d39e7-1f0f-485f-811b-e99808e12f36
+    m_ActionName: XRI RightHand Interactions/Activate Value
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7430774a-8645-4bf3-be7b-53ed66f229c8
+    m_ActionName: XRI RightHand Interactions/UI Press
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 818c42ec-bb61-4cff-bbc0-e617c3776281
+    m_ActionName: XRI RightHand Interactions/UI Press Value
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f0788f23-5571-4a8f-a4e4-4bec938c080d
+    m_ActionName: XRI RightHand Interactions/Rotate Anchor
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 12c2471d-5c69-49d4-97c6-98bd548e4179
+    m_ActionName: XRI RightHand Interactions/Translate Anchor
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b2a6b445-7a47-4536-a661-1eef0993f123
+    m_ActionName: XRI RightHand Movement/Teleport Select
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a39ff631-95b6-46dc-8ca8-4337f50d2757
+    m_ActionName: XRI RightHand Movement/Teleport Mode Activate
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0a0e8ac7-8c3c-499c-bc7b-0387ecc5529e
+    m_ActionName: XRI RightHand Movement/Teleport Mode Cancel
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: XRFullBody
+  m_DefaultActionMap: XRI Mouse&Key Interactions
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &7721491804756910909
 GameObject:
   m_ObjectHideFlags: 0
@@ -1367,7 +1615,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: -3326005586356538449, guid: c348712bda248c246b8c49b3db54643f,
+    m_Reference: {fileID: 5130409271424234855, guid: 40c4da2d768ddfd4fbf9efa0f3844f14,
       type: 3}
   m_RotationAction:
     m_UseReference: 1
@@ -1380,7 +1628,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 5101698808175986029, guid: c348712bda248c246b8c49b3db54643f,
+    m_Reference: {fileID: -809485320499237085, guid: 40c4da2d768ddfd4fbf9efa0f3844f14,
       type: 3}
   m_TrackingStateAction:
     m_UseReference: 1
@@ -1393,7 +1641,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: -1277054153949319361, guid: c348712bda248c246b8c49b3db54643f,
+    m_Reference: {fileID: -411718330570707724, guid: 40c4da2d768ddfd4fbf9efa0f3844f14,
       type: 3}
   m_SelectAction:
     m_UseReference: 1
@@ -1406,7 +1654,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 187161793506945269, guid: c348712bda248c246b8c49b3db54643f,
+    m_Reference: {fileID: 1074006746623585828, guid: 40c4da2d768ddfd4fbf9efa0f3844f14,
       type: 3}
   m_SelectActionValue:
     m_UseReference: 1
@@ -1419,7 +1667,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: -1758520528963094988, guid: c348712bda248c246b8c49b3db54643f,
+    m_Reference: {fileID: -2721913386587872402, guid: 40c4da2d768ddfd4fbf9efa0f3844f14,
       type: 3}
   m_ActivateAction:
     m_UseReference: 1
@@ -1432,7 +1680,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f,
+    m_Reference: {fileID: 7759071899063215566, guid: 40c4da2d768ddfd4fbf9efa0f3844f14,
       type: 3}
   m_ActivateActionValue:
     m_UseReference: 1
@@ -1445,7 +1693,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 7904272356298805229, guid: c348712bda248c246b8c49b3db54643f,
+    m_Reference: {fileID: 1682721737177207126, guid: 40c4da2d768ddfd4fbf9efa0f3844f14,
       type: 3}
   m_UIPressAction:
     m_UseReference: 1
@@ -1458,7 +1706,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 3279264004350380116, guid: c348712bda248c246b8c49b3db54643f,
+    m_Reference: {fileID: -8808407865612150969, guid: 40c4da2d768ddfd4fbf9efa0f3844f14,
       type: 3}
   m_UIPressActionValue:
     m_UseReference: 1
@@ -1471,7 +1719,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: -5908353012961274365, guid: c348712bda248c246b8c49b3db54643f,
+    m_Reference: {fileID: -7387668749186593224, guid: 40c4da2d768ddfd4fbf9efa0f3844f14,
       type: 3}
   m_HapticDeviceAction:
     m_UseReference: 1
@@ -1484,7 +1732,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: -8222252007134549311, guid: c348712bda248c246b8c49b3db54643f,
+    m_Reference: {fileID: 1692500805155594599, guid: 40c4da2d768ddfd4fbf9efa0f3844f14,
       type: 3}
   m_RotateAnchorAction:
     m_UseReference: 1
@@ -1497,7 +1745,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: -5913262927076077117, guid: c348712bda248c246b8c49b3db54643f,
+    m_Reference: {fileID: -2495621641636269987, guid: 40c4da2d768ddfd4fbf9efa0f3844f14,
       type: 3}
   m_TranslateAnchorAction:
     m_UseReference: 1
@@ -1510,7 +1758,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 875253871413052681, guid: c348712bda248c246b8c49b3db54643f,
+    m_Reference: {fileID: 7075321585893776405, guid: 40c4da2d768ddfd4fbf9efa0f3844f14,
       type: 3}
   m_ButtonPressPoint: 0.5
 --- !u!114 &2504895399765937263
@@ -1610,7 +1858,7 @@ MonoBehaviour:
   m_SphereCastRadius: 0.1
   m_RaycastMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 32763
   m_RaycastTriggerInteraction: 1
   m_HitClosestOnly: 0
   m_HoverToSelect: 0
