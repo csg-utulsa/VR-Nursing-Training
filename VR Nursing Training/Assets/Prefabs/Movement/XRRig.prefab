@@ -1100,29 +1100,31 @@ MonoBehaviour:
   m_EnableTurnAround: 1
   m_DelayTime: 0
   m_LeftHandSnapTurnAction:
-    m_UseReference: 0
+    m_UseReference: 1
     m_Action:
       m_Name: Left Hand Snap Turn
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 0ba74a73-55b9-4c73-9a3c-f264e1ccc69d
+      m_Id: a1d07c24-ca50-422a-a23f-685d9fabf63b
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: 1010738217276881514, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
   m_RightHandSnapTurnAction:
-    m_UseReference: 0
+    m_UseReference: 1
     m_Action:
       m_Name: Right Hand Snap Turn
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: c45a2275-04b9-40fe-81b6-79fce97e2cbd
+      m_Id: a7b54797-6974-4f75-81d0-42b9c15ef1e0
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: -6493913391331992944, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
 --- !u!1 &7548493106716144493
 GameObject:
   m_ObjectHideFlags: 0
