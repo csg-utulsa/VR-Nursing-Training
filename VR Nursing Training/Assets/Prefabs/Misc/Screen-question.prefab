@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5061626115164700292}
   - component: {fileID: 1362812555552543226}
+  - component: {fileID: 3307770212271172231}
   m_Layer: 0
   m_Name: Screen-question
   m_TagString: Untagged
@@ -44,6 +45,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f82f58d97e9bf64c8078dbe49bf104b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3307770212271172231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5061626115164700293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e604392ab159e17499f4fc1a94c950c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &5061626115826394061

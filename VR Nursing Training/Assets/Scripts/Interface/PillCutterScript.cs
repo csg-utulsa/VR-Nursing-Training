@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+// DEPRECATED
+/*
 public class PillCutterScript : Interactable
 {
     public GameObject spawnLocation;
@@ -23,4 +25,4 @@ public class PillCutterScript : Interactable
         }
     }
 
-}
+}*/
