@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1861,7 +1861,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 377258702}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1b3a746225d7d7947baec53bfc04a34d, type: 3}
   m_Name: 
@@ -2037,7 +2037,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 377258702}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a35f6cfbfba9b548aaa00d52cfe8a50, type: 3}
   m_Name: 
@@ -3981,7 +3981,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &925383070
 Light:
   m_ObjectHideFlags: 0
@@ -5614,6 +5614,12 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7918335002988649766, guid: 8d944b54f95fe744bac49176dc39b423,
+        type: 3}
+      propertyPath: m_Materials.Array.data[4]
+      value: 
+      objectReference: {fileID: -8848810374240701247, guid: 8d944b54f95fe744bac49176dc39b423,
+        type: 3}
     - target: {fileID: -7818821944579700886, guid: 8d944b54f95fe744bac49176dc39b423,
         type: 3}
       propertyPath: m_Mesh
@@ -5629,6 +5635,11 @@ PrefabInstance:
     - target: {fileID: -7116940939648550301, guid: 8d944b54f95fe744bac49176dc39b423,
         type: 3}
       propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7029948723529949830, guid: 8d944b54f95fe744bac49176dc39b423,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4989485981423707399, guid: 8d944b54f95fe744bac49176dc39b423,
@@ -5857,6 +5868,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.00000004470349
+      objectReference: {fileID: 0}
+    - target: {fileID: 7398634332063382548, guid: 8d944b54f95fe744bac49176dc39b423,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d944b54f95fe744bac49176dc39b423, type: 3}
