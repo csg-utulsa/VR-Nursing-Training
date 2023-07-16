@@ -18640,7 +18640,7 @@ MonoBehaviour:
   reportSuccess: Measured Correct Dosage
   reportSkip: Didn't Measured Liquid
   reportFail: Got Wrong Dosage
-  strikeCount: 3
+  strikeCount: 1
   failed: 0
   active: 0
   skipped: 0
