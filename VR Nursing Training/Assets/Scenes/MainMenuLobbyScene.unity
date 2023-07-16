@@ -2137,6 +2137,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1133652251449391187, guid: 0af8f3646a662394eb8f95def6a25298,
+        type: 3}
+      propertyPath: m_SelectUsage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1133652251449391187, guid: 0af8f3646a662394eb8f95def6a25298,
+        type: 3}
+      propertyPath: m_ControllerNode
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1244227777733237198, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
       propertyPath: _useDistance
