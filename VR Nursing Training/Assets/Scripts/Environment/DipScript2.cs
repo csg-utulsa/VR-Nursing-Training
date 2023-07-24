@@ -9,19 +9,10 @@ public class DipScript2 : Interactable
     public UnityEvent handWash;
     public ParticleSystem BubbleAnimation;
 
-    /*private void OnTriggerEnter(Collider other)
-    {
-        Interact(other.gameObject);
-    }*/
-
-
     public override void Interact(GameObject other)
     {
-        //Debug.Log("Interact w/ water");
-
         if (other.CompareTag("Hands"))
         {
-            //Debug.Log("Washing Hands...");
             handWash.Invoke();
             BubbleAnimation.Play();
         }

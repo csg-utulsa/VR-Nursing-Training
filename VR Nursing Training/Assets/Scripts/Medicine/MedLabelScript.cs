@@ -28,7 +28,7 @@ public class MedLabelScript : MonoBehaviour
         if (useText)
         {
             text = labelText.GetComponent<TextMeshProUGUI>();
-            text.text = medicineParent.GetComponent<InteractableScript>().type;
+            text.text = medicineParent.GetComponent<MedicineData>().getMedicineName();
         }
         else
         {

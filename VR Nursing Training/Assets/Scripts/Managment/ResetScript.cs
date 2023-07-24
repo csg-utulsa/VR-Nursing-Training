@@ -5,13 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class ResetScript : Interactable
 {
-
-
-    /*private void OnTriggerEnter(Collider other)
-    {
-        Interact(other.gameObject);
-    }*/
-
     public override void Interact(GameObject other)
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);

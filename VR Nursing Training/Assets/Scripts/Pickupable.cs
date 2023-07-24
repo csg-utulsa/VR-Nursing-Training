@@ -44,8 +44,8 @@ public class Pickupable : MonoBehaviour
 
     public void ResetObject() 
     {
-        transform.position = StartPosition;
-        transform.eulerAngles = StartRotation;
+        ResetPosition();
+        ResetRotation();
     }
 
     public void ResetPosition() 

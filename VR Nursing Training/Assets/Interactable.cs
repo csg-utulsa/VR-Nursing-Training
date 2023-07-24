@@ -5,24 +5,24 @@ using UnityEngine.Events;
 
 [RequireComponent(typeof(Collider))]
 
-public class Interactable : MonoBehaviour
+public abstract class Interactable : MonoBehaviour
 {
     
     public bool disableTriggerFunctionality;
     public bool debugging = false;
 
-    private void Start()
+    /*private void Start()
     {
-        if (!XRRigSingleton.xrs.getVRActive())
+        *//*if (!XRRigSingleton.xrs.getVRActive())
         {
             disableTriggerFunctionality = true;
-        }    
-    }
+        }    *//*
+    }*/
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!disableTriggerFunctionality) Interact(other.gameObject);
+        if (!XRRigSingleton.xrs.getVRActive()) Interact(other.gameObject);
     }
 
-    public virtual void Interact(GameObject other) { }
+    public abstract void Interact(GameObject other);
 }

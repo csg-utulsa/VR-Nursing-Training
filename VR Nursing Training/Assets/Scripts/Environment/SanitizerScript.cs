@@ -14,11 +14,6 @@ public class SanitizerScript : Interactable
         ActivateObjects(false);
     }
 
-    /*private void OnTriggerEnter(Collider other)
-    {
-        Interact(other.gameObject);
-    }*/
-
     public override void Interact(GameObject other)
     {
         if (other.gameObject.CompareTag("Hands"))
@@ -42,12 +37,5 @@ public class SanitizerScript : Interactable
         }
     }
 
-    /*private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.CompareTag("Hands"))
-        {
-            BubbleAnimation.Stop();
-        }
-    }*/
 }
 

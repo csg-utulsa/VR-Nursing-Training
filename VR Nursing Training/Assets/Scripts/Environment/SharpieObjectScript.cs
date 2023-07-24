@@ -7,16 +7,6 @@ public class SharpieObjectScript : Interactable
 {
     public UnityEvent<string> onMark;
 
-    /*public override bool canInteractWithHand()
-    {
-        return false;
-    }*/
-
-    // Mark Patches
-   /* private void OnTriggerEnter(Collider other)
-    {
-        Interact(other.gameObject);
-    }*/
     public override void Interact(GameObject other)
     {
         if (other.CompareTag("Sharpie"))
