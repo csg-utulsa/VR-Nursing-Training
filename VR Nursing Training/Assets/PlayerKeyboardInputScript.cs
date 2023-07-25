@@ -102,10 +102,10 @@ public class PlayerKeyboardInputScript: MonoBehaviour
     void Awake()
     {
         _input = new PlayerInput();
-        _input.CharacterControls.PickUp.started += PickUp;//ctx => _pickUpObject = ctx.ReadValueAsButton();
-        _input.CharacterControls.Use.started += Use;//ctx => _usingObject = ctx.ReadValueAsButton();
-        _input.CharacterControls.PutDown.started += PutDown;//ctx => _putingDownObject = ctx.ReadValueAsButton();
-        _input.CharacterControls.Teleport.canceled += Teleport;//ctx => _teleport = ctx.ReadValueAsButton();
+        _input.CharacterControls.PickUp.started += PickUp;
+        _input.CharacterControls.Use.started += Use;
+        _input.CharacterControls.PutDown.started += PutDown;
+        _input.CharacterControls.Teleport.canceled += Teleport;
         _input.CharacterControls.MouseLook.performed += MouseLook;
         Cursor.lockState = CursorLockMode.Locked;
     }

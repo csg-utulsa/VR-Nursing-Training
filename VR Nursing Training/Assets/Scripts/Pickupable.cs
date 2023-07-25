@@ -21,11 +21,12 @@ public class Pickupable : MonoBehaviour
 
     private void Awake() 
     {
+        Debug.Assert(GetComponent<Collider>().isTrigger == false, "Pickupable: "+name+" collider must be set to trigger!") ;
         StartPosition = transform.position;
         StartRotation = transform.eulerAngles;
         if (gameObject.layer != LayerMask.NameToLayer("Pickupable"))
         {
-            Debug.LogWarning("Gameobject not set to pickupable layer, Force setting it");
+            Debug.LogWarning("Pickupable gameobject: "+name+" not set to pickupable layer, Force setting it");
             gameObject.layer = LayerMask.NameToLayer("Pickupable");
         }
     }

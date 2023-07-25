@@ -30,6 +30,8 @@ public class MedicineSpawnScript : Interactable
 
     private void Awake()
     {
+        Debug.Assert(GetComponent<Collider>().isTrigger, "Interactable: "+ name +" collider is not set to trigger and will not function!");
+
         // Set value for spawnLoc
         if (SpawnLoc == null)
         {
