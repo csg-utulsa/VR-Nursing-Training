@@ -7,17 +7,7 @@ using UnityEngine.Events;
 
 public abstract class Interactable : MonoBehaviour
 {
-    
-    public bool disableTriggerFunctionality;
     public bool debugging = false;
-
-    /*private void Start()
-    {
-        *//*if (!XRRigSingleton.xrs.getVRActive())
-        {
-            disableTriggerFunctionality = true;
-        }    *//*
-    }*/
 
     private void OnTriggerEnter(Collider other)
     {
