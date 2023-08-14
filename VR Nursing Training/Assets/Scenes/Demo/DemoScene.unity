@@ -18640,7 +18640,7 @@ MonoBehaviour:
   reportSuccess: Measured Correct Dosage
   reportSkip: Didn't Measured Liquid
   reportFail: Got Wrong Dosage
-  strikeCount: 3
+  strikeCount: 1
   failed: 0
   active: 0
   skipped: 0
@@ -19401,7 +19401,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1849289981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26333,10 +26333,20 @@ PrefabInstance:
       propertyPath: onIncorrect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 105428426}
+    - target: {fileID: 1133652251449391187, guid: 0af8f3646a662394eb8f95def6a25298,
+        type: 3}
+      propertyPath: m_SelectUsage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1133652251449391187, guid: 0af8f3646a662394eb8f95def6a25298,
+        type: 3}
+      propertyPath: m_ControllerNode
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1405898044693227596, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2632912369471152309, guid: 0af8f3646a662394eb8f95def6a25298,
         type: 3}
@@ -26957,6 +26967,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4280307461734704189, guid: aa48dfa2edb40ea409c8609706b3f1c9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4280307461734704189, guid: aa48dfa2edb40ea409c8609706b3f1c9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4280307461734704191, guid: aa48dfa2edb40ea409c8609706b3f1c9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4280307461734704191, guid: aa48dfa2edb40ea409c8609706b3f1c9,
         type: 3}
