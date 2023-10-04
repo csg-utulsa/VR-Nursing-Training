@@ -15,6 +15,13 @@ public class LiquidTriggerScript : Interactable
     // Object Trying to Pour
     private GameObject liquidContainer;
 
+    // Fill minigame parameters
+    [Header("Fill Minigame")]
+    public float pourRate = 5;
+    public float maxFill = 30;
+    public Transform fillIndicatorBar;
+    public float currentFill = 0;
+
     private GameObject emptyCup;
     private void Start()
     {
@@ -34,11 +41,42 @@ public class LiquidTriggerScript : Interactable
 
                     liquidContainer = other.gameObject;
                     
-                    // Display Question
+                    // Activate pour event (check medicine and make fill bar visible)
                     onPour.Invoke(scrpt.getMedicineName());
+
+                    // Increment fill if in non-VR mode
+                    if (!XRRigSingleton.xrs.getVRActive())
+                    {
+                        AdjustFillBar(currentFill + pourRate); ;
+                    }
                 }
             }
         }
+    }
+
+    public void OnTriggerStay(Collider other)
+    {
+        // ignore if the colliding object is not medicine
+        if (!other.TryGetComponent<MedicineData>(out MedicineData medData)) return;
+        if (requiredType == medData.getMedicineName()) // requireType[i]
+        {
+            if (debugging) Debug.Log("Filling with: " + other.name);
+
+            // Continuous fill for VR mode
+            if (XRRigSingleton.xrs.getVRActive())
+            {
+                AdjustFillBar(currentFill + pourRate * Time.deltaTime);
+            }
+        }
+    }
+
+    public void AdjustFillBar(float fillAmount)
+    {
+        currentFill = Mathf.Clamp(fillAmount, 0, maxFill);
+
+        Vector3 newScale = fillIndicatorBar.localScale;
+        newScale.y = currentFill / maxFill;
+        fillIndicatorBar.localScale = newScale;
     }
 
     public void setMedicine(float dosage)
