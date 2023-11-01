@@ -22,10 +22,12 @@ public class LiquidTriggerScript : Interactable
     public Transform fillIndicatorBar;
     public float currentFill = 0;
 
-    private GameObject emptyCup;
+    private GameObject cupObject;
+    private bool cupEmpty = true;
+
     private void Start()
     {
-        emptyCup = transform.parent.gameObject;
+        cupObject = transform.parent.gameObject;
     }
 
     public override void Interact(GameObject other)
@@ -85,16 +87,18 @@ public class LiquidTriggerScript : Interactable
     {
         if (liquidContainer.TryGetComponent<MedicineData>(out MedicineData scrpt))
         {
-            /*GameObject newObj = scrpt.dispenseObject(emptyCup.transform.position, emptyCup.transform.rotation);
-
-            if (newObj != null)
+            if(cupEmpty)
             {
-                newObj.GetComponent<MedicineData>().setMedicineDosage(dosage);
+                GameObject temp = cupObject;
+                cupObject = scrpt.dispenseObject(cupObject.transform.position, cupObject.transform.rotation);
+                Destroy(temp);
             }
-            
-            Destroy(emptyCup);*/
-            scrpt.setMedicineDosage(dosage);
-            AdjustFillBar(dosage);
+
+            if (cupObject != null)
+            {
+                cupObject.GetComponent<MedicineData>().setMedicineDosage(dosage);
+                AdjustFillBar(dosage);
+            }
         }
     }
 }
