@@ -47,7 +47,8 @@ public class LiquidTriggerScript : Interactable
                     // Increment fill if in non-VR mode
                     if (!XRRigSingleton.xrs.getVRActive())
                     {
-                        AdjustFillBar(currentFill + pourRate); ;
+                        setMedicine(currentFill + pourRate);
+                        //AdjustFillBar(currentFill + pourRate);
                     }
                 }
             }
@@ -65,7 +66,8 @@ public class LiquidTriggerScript : Interactable
             // Continuous fill for VR mode
             if (XRRigSingleton.xrs.getVRActive())
             {
-                AdjustFillBar(currentFill + pourRate * Time.deltaTime);
+                setMedicine(currentFill + pourRate * Time.deltaTime);
+                //AdjustFillBar(currentFill + pourRate * Time.deltaTime);
             }
         }
     }
@@ -83,14 +85,16 @@ public class LiquidTriggerScript : Interactable
     {
         if (liquidContainer.TryGetComponent<MedicineData>(out MedicineData scrpt))
         {
-            GameObject newObj = scrpt.dispenseObject(emptyCup.transform.position, emptyCup.transform.rotation);
+            /*GameObject newObj = scrpt.dispenseObject(emptyCup.transform.position, emptyCup.transform.rotation);
 
             if (newObj != null)
             {
                 newObj.GetComponent<MedicineData>().setMedicineDosage(dosage);
             }
             
-            Destroy(emptyCup);
+            Destroy(emptyCup);*/
+            scrpt.setMedicineDosage(dosage);
+            AdjustFillBar(dosage);
         }
     }
 }
