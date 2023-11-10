@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -72,3 +72,4 @@ public class ScenarioStart : MonoBehaviour
         return targetDosage;
     }
 }
+*/
