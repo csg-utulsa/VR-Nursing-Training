@@ -18,9 +18,9 @@ public class ClipboardText : MonoBehaviour
     [SerializeField] private string currentVitalSigns;
     [SerializeField] private string doctorName;
     [SerializeField] private string dateTime;
-    [SerializeField] private ScenarioGroup parentScenario;
+    //[SerializeField] private ScenarioGroup parentScenario;
 
-    void Awake()
+    /*void Awake()
     {
         text = textObject.GetComponent<Text>();
         text.text = "Client name: " + clientName + "\n" +
@@ -51,5 +51,5 @@ public class ClipboardText : MonoBehaviour
         }
 
         text.text += doctorName;
-    }
+    }*/
 }

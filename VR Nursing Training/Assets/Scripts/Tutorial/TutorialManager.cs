@@ -40,7 +40,7 @@ public class TutorialManager : MonoBehaviour
         // Manage text
         for (int i = 0; i < textNodeList.Length; i++)
         {
-            if (textNodeList[i].active)
+            if (textNodeList[i].GetCurrentState() == Node.NodeStates.Active)
             {
                 if (previousMessage != i) overrideTime = 0;
                 if (overrideTime == 0)
@@ -63,7 +63,7 @@ public class TutorialManager : MonoBehaviour
         // Manage Activation and Deactivation
         for (int i = 0; i < activateNodeList.Length; i++)
         {
-            if (activateNodeList[i].active)
+            if (activateNodeList[i].GetCurrentState() == Node.NodeStates.Active)
             {
                 if (activateObjects.Length > i) activateObjects[i].SetActive(true);
             }
@@ -71,7 +71,7 @@ public class TutorialManager : MonoBehaviour
 
         for (int i = 0; i < deactivateNodeList.Length; i++)
         {
-            if (deactivateNodeList[i].active)
+            if (deactivateNodeList[i].GetCurrentState() == Node.NodeStates.Active)
             {
                 if (deactivateObjects.Length > i) deactivateObjects[i].SetActive(false);
             }

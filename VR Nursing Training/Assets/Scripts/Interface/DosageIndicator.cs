@@ -7,7 +7,7 @@ public class DosageIndicator : MonoBehaviour
 {
     [SerializeField] private GameObject textObject;
     Text text;
-    [SerializeField] private ActionCountMedicine dosageSource;
+    //[SerializeField] private ActionCountMedicine dosageSource;
 
     void Awake()
     {
@@ -16,9 +16,9 @@ public class DosageIndicator : MonoBehaviour
 
     void Update()
     {
-        if (dosageSource != null)
-        {
-            text.text = dosageSource.getCurrentDosage().ToString();
-        }
+        //if (dosageSource != null)
+        //{
+        //    text.text = dosageSource.getCurrentDosage().ToString();
+        //}
     }
 }
