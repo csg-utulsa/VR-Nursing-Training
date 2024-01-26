@@ -21,6 +21,11 @@ public class Node : MonoBehaviour
 
     public List<Node> NextNodes;
 
+    public bool Active
+    {
+        get { return currentState == NodeStates.Active; }
+    }
+
     public bool Completed
     {
         get
