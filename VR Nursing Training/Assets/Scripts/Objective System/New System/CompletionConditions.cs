@@ -43,7 +43,6 @@ public class CompletionConditions : MonoBehaviour
     public string VariableKey;
 
     private bool _completed = false;
-    private OTSVariable _variableToCheck;
 
     //Comparison settings
     private NumericComparators _numericComparator;
@@ -52,7 +51,7 @@ public class CompletionConditions : MonoBehaviour
     private BoolComparators _boolComparator;
     private bool _compareToOTSVariable;
     //Things too compare to
-    private OTSVariable _variableToCompare;
+    private string _variableKeyToCompare;
     private int _intToCompare = -1;
     private float _floatToCompare = -1;
     private string _stringToCompare;
@@ -85,10 +84,20 @@ public class CompletionConditions : MonoBehaviour
     {
         bool result = false;
 
-        float valueToCheck = (float)_variableToCheck.GetValue();
-        float valueToCompare = _compareToOTSVariable ? (float)_variableToCompare.GetValue() : isInt ? _intToCompare : _floatToCompare;
+        float valueToCheck = isInt ? OTSVariableManager.GetInstance().GetIntVariable(VariableKey) : OTSVariableManager.GetInstance().GetFloatVariable(VariableKey);
+        float valueToCompare;
 
-        switch(_numericComparator)
+        if (_compareToOTSVariable)
+        {
+            valueToCompare = isInt ? OTSVariableManager.GetInstance().GetIntVariable(_variableKeyToCompare) : OTSVariableManager.GetInstance().GetFloatVariable(_variableKeyToCompare);
+        }
+        else
+        {
+            valueToCompare = isInt ? _intToCompare : _floatToCompare;
+        }
+
+
+            switch (_numericComparator)
         {
             case NumericComparators.LessThan:
                 result = valueToCheck < valueToCompare;
@@ -117,8 +126,8 @@ public class CompletionConditions : MonoBehaviour
     {
         bool result = false;
 
-        string valueToCheck = (string)_variableToCheck.GetValue();
-        string valueToCompare = _compareToOTSVariable ? (string)_variableToCompare.GetValue() : _stringToCompare;
+        string valueToCheck = OTSVariableManager.GetInstance().GetStringVariable(VariableKey);
+        string valueToCompare = _compareToOTSVariable ? OTSVariableManager.GetInstance().GetStringVariable(_variableKeyToCompare) : _stringToCompare;
 
         switch (_stringComparator)
         {
@@ -143,8 +152,8 @@ public class CompletionConditions : MonoBehaviour
     {
         bool result = false;
 
-        bool valueToCheck = (bool)_variableToCheck.GetValue();
-        bool valueToCompare = _compareToOTSVariable ? (bool)_variableToCompare.GetValue() : _boolToCompare;
+        bool valueToCheck = OTSVariableManager.GetInstance().GetBoolVariable(VariableKey);
+        bool valueToCompare = _compareToOTSVariable ? OTSVariableManager.GetInstance().GetBoolVariable(_variableKeyToCompare) : _boolToCompare;
 
         if(_boolComparator == BoolComparators.NotEqual)
         {

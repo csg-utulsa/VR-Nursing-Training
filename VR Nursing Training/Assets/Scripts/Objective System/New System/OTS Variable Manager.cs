@@ -12,15 +12,24 @@ public enum OTSVariableTypes
 }
 
 /// <summary>
-/// Centralized script to hold variables used to check for completion of nodes
+/// Centralized script to access and adjust variables used in a procedure
 /// </summary>
 public class OTSVariableManager : Singleton<OTSVariableManager>
 {
-    public List<int> ints = new List<int>();
-    public List<string> strings = new List<string>();
-    public List<float> floats = new List<float>();
-    public List<bool> bools = new List<bool>();
-    public List<GameObject> gameObjects = new List<GameObject>();
+    /// <summary>
+    /// Centralized location for accessing variables related to the OTS
+    ///
+    [CreateAssetMenu(menuName = "Scriptable Objects/Objective Tree")]
+    public class OTSVariableSet : ScriptableObject
+    {
+        public Dictionary<string, int> IntegerVariables;
+        public Dictionary<string, string> StringVariables;
+        public Dictionary<string, float> FloatVariables;
+        public Dictionary<string, bool> BoolVariables;
+        public Dictionary<string, GameObject> GameObjectVariables;
+    }
+
+    public OTSVariableSet CurrentVariableSet;
 
     // Start is called before the first frame update
     void Start()
@@ -28,14 +37,33 @@ public class OTSVariableManager : Singleton<OTSVariableManager>
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void UpdateVariablesFromJSON()
     {
 
+    }
+
+    public int GetIntVariable(string key)
+    {
+        return CurrentVariableSet.IntegerVariables[key];
+    }
+
+    public string GetStringVariable(string key)
+    {
+        return CurrentVariableSet.StringVariables[key];
+    }
+
+    public float GetFloatVariable(string key)
+    {
+        return CurrentVariableSet.FloatVariables[key];
+    }
+
+    public bool GetBoolVariable(string key)
+    {
+        return CurrentVariableSet.BoolVariables[key];
+    }
+
+    public GameObject GetGameObjectVariable(string key)
+    {
+        return CurrentVariableSet.GameObjectVariables[key];
     }
 }
