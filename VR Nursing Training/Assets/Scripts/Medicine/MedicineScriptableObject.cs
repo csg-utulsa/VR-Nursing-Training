@@ -22,7 +22,7 @@ public enum MedicineTypes
     Liquid = 1 << 7 // 7
 }
 
-[CreateAssetMenu(fileName = "Medicine", menuName = "ScriptableObjects/Medicine", order = 1)]
+[CreateAssetMenu(fileName = "Medicine", menuName = "Scriptable Objects/Medicine", order = 1)]
 public class MedicineScriptableObject : ScriptableObject
 {
     /// <summary>

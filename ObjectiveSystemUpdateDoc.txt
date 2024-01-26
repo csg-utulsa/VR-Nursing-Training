@@ -1,0 +1,13 @@
+Scripts to update to new Objective System:
+- Dosage Indicator
+- Clipboard Text
+
+Game Objects to Update to new system in Demo Scene
+- Room 1 Objectives
+- Room 2 Objectives
+
+Scripts to add to new Objective System
+- Progress Checker/Report Card script
+
+Other TO DO
+- Make a custom display for the OTS Variables script with buttons to copy the text to reference a variable in script
