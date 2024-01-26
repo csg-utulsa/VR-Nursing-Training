@@ -7,6 +7,8 @@ public class Sequence : Node
     public Node StartNode;
     public Node[] EndNodes;
 
+    private int EndNodesComplete;
+
     // Start is called before the first frame update
     protected override void Start()
     {
@@ -29,9 +31,18 @@ public class Sequence : Node
     //Complete the sequence as successful when the sequence completes
     private void EndNodeUpdated(Node endNode, NodeStates newState)
     {
-        if(newState == NodeStates.Successful)
+        if(endNode.Completed)
+        {
+            EndNodesComplete++;
+        }
+
+        if (newState == NodeStates.Successful)
         {
             SetCurrentState(NodeStates.Successful);
+        }
+        else if (EndNodesComplete >= EndNodes.Length) 
+        {
+            SetCurrentState(NodeStates.Failed);
         }
     }
 }

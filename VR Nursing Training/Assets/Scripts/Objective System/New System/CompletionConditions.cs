@@ -21,7 +21,7 @@ public class CompletionConditions : MonoBehaviour
         NotEqual,
         Active,
         Inactive,
-        Tag
+        SameTag
     }
 
     public enum StringComparators
@@ -162,7 +162,7 @@ public class CompletionConditions : MonoBehaviour
 
         switch (_gameObjectComparator)
         {
-            case GameObjectComparators.Tag:
+            case GameObjectComparators.SameTag:
                 break;
             case GameObjectComparators.Active:
                 break;
