@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MyBox;
 
 public class CompletionConditions : MonoBehaviour
 {
@@ -42,21 +43,31 @@ public class CompletionConditions : MonoBehaviour
     [Header("Base Settings")]
     public OTSVariableTypes CompletionVariableType;
     public string VariableKey;
+
     [Header("Comparison Types")]
+    [ConditionalField(nameof(CompletionVariableType), false, OTSVariableTypes.Int, OTSVariableTypes.Float)]
     public NumericComparators NumericComparator;
+    [ConditionalField(nameof(CompletionVariableType), false, OTSVariableTypes.String)]
     public StringComparators StringComparator;
+    [ConditionalField(nameof(CompletionVariableType), false, OTSVariableTypes.GameObj)]
     public GameObjectComparators GameObjectComparator;
+    [ConditionalField(nameof(CompletionVariableType), false, OTSVariableTypes.Bool)]
     public BoolComparators BoolComparator;
+
     [Header("Comparison Values")]
-    //Things too compare to
-    public int IntToCompare = -1;
-    public float FloatToCompare = -1;
-    public string StringToCompare;
-    public bool BoolToCompare;
-    public GameObject GoToCompare;
-    [Header("Compare to Variable Settings")]
     public bool CompareToOTSVariable;
+    [ConditionalField(nameof(CompareToOTSVariable))]
     public string VariableKeyToCompare;
+    [ConditionalField(new[] { nameof(CompletionVariableType), nameof(CompareToOTSVariable)}, new[] {false, true }, OTSVariableTypes.Int)]
+    public int IntToCompare = -1;
+    [ConditionalField(new[] { nameof(CompletionVariableType), nameof(CompareToOTSVariable) }, new[] { false, true }, OTSVariableTypes.Float)]
+    public float FloatToCompare = -1;
+    [ConditionalField(new[] { nameof(CompletionVariableType), nameof(CompareToOTSVariable) }, new[] { false, true }, OTSVariableTypes.String)]
+    public string StringToCompare;
+    [ConditionalField(new[] { nameof(CompletionVariableType), nameof(CompareToOTSVariable) }, new[] { false, true }, OTSVariableTypes.Bool)]
+    public bool BoolToCompare;
+    [ConditionalField(new[] { nameof(CompletionVariableType), nameof(CompareToOTSVariable) }, new[] { false, true }, OTSVariableTypes.GameObj)]
+    public GameObject GoToCompare;
 
     private bool _completed = false;
 

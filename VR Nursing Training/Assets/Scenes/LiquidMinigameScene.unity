@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -233,6 +233,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  UseOTSVariable: 1
+  OTSVariableKey: MedicineType
+  NextNodeIndex: 0
 --- !u!1 &17508673
 GameObject:
   m_ObjectHideFlags: 0
@@ -2582,6 +2585,7 @@ GameObject:
   m_Component:
   - component: {fileID: 147894160}
   - component: {fileID: 147894161}
+  - component: {fileID: 147894162}
   m_Layer: 0
   m_Name: Sign and Date Patch
   m_TagString: Untagged
@@ -2618,6 +2622,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   test: 0
   NextNodes: []
+--- !u!114 &147894162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147894159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eced81570e83ae4fb4c81437f9d2e5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CompletionVariableType: 3
+  VariableKey: PatchSigned
+  NumericComparator: 0
+  StringComparator: 0
+  GameObjectComparator: 0
+  BoolComparator: 0
+  CompareToOTSVariable: 0
+  VariableKeyToCompare: 
+  IntToCompare: -1
+  FloatToCompare: -1
+  StringToCompare: 
+  BoolToCompare: 1
+  GoToCompare: {fileID: 0}
 --- !u!1001 &166175869
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5127,6 +5156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 400581681}
   - component: {fileID: 400581682}
+  - component: {fileID: 400581683}
   m_Layer: 0
   m_Name: Wash Hands Objective Node
   m_TagString: Untagged
@@ -5164,6 +5194,31 @@ MonoBehaviour:
   test: 0
   NextNodes:
   - {fileID: 6889877}
+--- !u!114 &400581683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400581680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eced81570e83ae4fb4c81437f9d2e5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CompletionVariableType: 3
+  VariableKey: HandsWashed
+  NumericComparator: 0
+  StringComparator: 0
+  GameObjectComparator: 0
+  BoolComparator: 0
+  CompareToOTSVariable: 0
+  VariableKeyToCompare: 
+  IntToCompare: -1
+  FloatToCompare: -1
+  StringToCompare: 
+  BoolToCompare: 1
+  GoToCompare: {fileID: 0}
 --- !u!1 &407503608
 GameObject:
   m_ObjectHideFlags: 0
@@ -7960,19 +8015,7 @@ MonoBehaviour:
   eventsOnComplete:
     m_PersistentCalls:
       m_Calls:
-      - {m_Target: {fileID: 1552333891}, m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine, m_MethodName: SetActive, m_Mode: 6, m_Arguments: {m_ObjectArgument: {fileID: 0},
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0,
-          m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-      - {m_Target: {fileID: 1492245378}, m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine, m_MethodName: SetActive, m_Mode: 6, m_Arguments: {m_ObjectArgument: {fileID: 0},
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0,
-          m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 1}, m_CallState: 2}
-      - {m_Target: {fileID: 1986949115}, m_TargetAssemblyTypeName: MedCartTransition, Assembly-CSharp, m_MethodName: recordObjects, m_Mode: 1, m_Arguments: {m_ObjectArgument: {fileID: 0},
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0,
-          m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 1}, m_CallState: 2}
-    m_CallsDirty: 1
-  text: {fileID: 0}
-  noSkips: 1
-  finished: 0
+      - {m_Target: {fileID: 1552333891}, m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine: }
 --- !u!4 &588594062
 Transform:
   m_ObjectHideFlags: 0
@@ -10612,6 +10655,7 @@ GameObject:
   m_Component:
   - component: {fileID: 837942903}
   - component: {fileID: 837942904}
+  - component: {fileID: 837942905}
   m_Layer: 0
   m_Name: Place On Medcart
   m_TagString: Untagged
@@ -10648,6 +10692,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   test: 0
   NextNodes: []
+--- !u!114 &837942905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837942902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eced81570e83ae4fb4c81437f9d2e5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CompletionVariableType: 3
+  VariableKey: MedicineOnMedcart
+  NumericComparator: 0
+  StringComparator: 0
+  GameObjectComparator: 0
+  BoolComparator: 0
+  CompareToOTSVariable: 0
+  VariableKeyToCompare: 
+  IntToCompare: -1
+  FloatToCompare: -1
+  StringToCompare: 
+  BoolToCompare: 1
+  GoToCompare: {fileID: 0}
 --- !u!1 &839473079
 GameObject:
   m_ObjectHideFlags: 0
@@ -11319,6 +11388,7 @@ GameObject:
   m_Component:
   - component: {fileID: 882642855}
   - component: {fileID: 882642856}
+  - component: {fileID: 882642857}
   m_Layer: 0
   m_Name: Place Pills on Medcart
   m_TagString: Untagged
@@ -11355,6 +11425,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   test: 0
   NextNodes: []
+--- !u!114 &882642857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882642854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eced81570e83ae4fb4c81437f9d2e5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CompletionVariableType: 3
+  VariableKey: MedicineOnMedcart
+  NumericComparator: 0
+  StringComparator: 0
+  GameObjectComparator: 0
+  BoolComparator: 0
+  CompareToOTSVariable: 0
+  VariableKeyToCompare: 
+  IntToCompare: -1
+  FloatToCompare: -1
+  StringToCompare: 
+  BoolToCompare: 1
+  GoToCompare: {fileID: 0}
 --- !u!1 &884095700
 GameObject:
   m_ObjectHideFlags: 0
@@ -11964,6 +12059,7 @@ GameObject:
   m_Component:
   - component: {fileID: 948298598}
   - component: {fileID: 948298599}
+  - component: {fileID: 948298600}
   m_Layer: 0
   m_Name: Measure Liquid Dosage
   m_TagString: Untagged
@@ -12001,6 +12097,31 @@ MonoBehaviour:
   test: 0
   NextNodes:
   - {fileID: 837942904}
+--- !u!114 &948298600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948298597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eced81570e83ae4fb4c81437f9d2e5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CompletionVariableType: 0
+  VariableKey: LiquidDosageAmount
+  NumericComparator: 4
+  StringComparator: 0
+  GameObjectComparator: 0
+  BoolComparator: 0
+  CompareToOTSVariable: 0
+  VariableKeyToCompare: 
+  IntToCompare: 15
+  FloatToCompare: -1
+  StringToCompare: 
+  BoolToCompare: 0
+  GoToCompare: {fileID: 0}
 --- !u!1 &948517793
 GameObject:
   m_ObjectHideFlags: 0
@@ -21365,6 +21486,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1888435788}
   - component: {fileID: 1888435789}
+  - component: {fileID: 1888435790}
   m_Layer: 0
   m_Name: Remove From Box
   m_TagString: Untagged
@@ -21402,6 +21524,31 @@ MonoBehaviour:
   test: 0
   NextNodes:
   - {fileID: 1466485438}
+--- !u!114 &1888435790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888435787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eced81570e83ae4fb4c81437f9d2e5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CompletionVariableType: 3
+  VariableKey: PatchRemovedFromBox
+  NumericComparator: 0
+  StringComparator: 0
+  GameObjectComparator: 0
+  BoolComparator: 0
+  CompareToOTSVariable: 0
+  VariableKeyToCompare: 
+  IntToCompare: -1
+  FloatToCompare: -1
+  StringToCompare: 
+  BoolToCompare: 0
+  GoToCompare: {fileID: 0}
 --- !u!1 &1890883382
 GameObject:
   m_ObjectHideFlags: 0
@@ -22665,6 +22812,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2063914332}
   - component: {fileID: 2063914333}
+  - component: {fileID: 2063914334}
   m_Layer: 0
   m_Name: Place Patch on Medcart
   m_TagString: Untagged
@@ -22701,6 +22849,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   test: 0
   NextNodes: []
+--- !u!114 &2063914334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063914331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eced81570e83ae4fb4c81437f9d2e5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CompletionVariableType: 3
+  VariableKey: MedicineOnMedcart
+  NumericComparator: 0
+  StringComparator: 0
+  GameObjectComparator: 0
+  BoolComparator: 0
+  CompareToOTSVariable: 0
+  VariableKeyToCompare: 
+  IntToCompare: -1
+  FloatToCompare: -1
+  StringToCompare: 
+  BoolToCompare: 1
+  GoToCompare: {fileID: 0}
 --- !u!1 &2065263306
 GameObject:
   m_ObjectHideFlags: 0
