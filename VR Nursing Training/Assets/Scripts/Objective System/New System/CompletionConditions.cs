@@ -39,24 +39,26 @@ public class CompletionConditions : MonoBehaviour
     }
     #endregion
 
+    [Header("Base Settings")]
     public OTSVariableTypes CompletionVariableType;
     public string VariableKey;
+    [Header("Comparison Types")]
+    public NumericComparators NumericComparator;
+    public StringComparators StringComparator;
+    public GameObjectComparators GameObjectComparator;
+    public BoolComparators BoolComparator;
+    [Header("Comparison Values")]
+    //Things too compare to
+    public int IntToCompare = -1;
+    public float FloatToCompare = -1;
+    public string StringToCompare;
+    public bool BoolToCompare;
+    public GameObject GoToCompare;
+    [Header("Compare to Variable Settings")]
+    public bool CompareToOTSVariable;
+    public string VariableKeyToCompare;
 
     private bool _completed = false;
-
-    //Comparison settings
-    private NumericComparators _numericComparator;
-    private StringComparators _stringComparator;
-    private GameObjectComparators _gameObjectComparator;
-    private BoolComparators _boolComparator;
-    private bool _compareToOTSVariable;
-    //Things too compare to
-    private string _variableKeyToCompare;
-    private int _intToCompare = -1;
-    private float _floatToCompare = -1;
-    private string _stringToCompare;
-    private bool _boolToCompare;
-    private GameObject _goToCompare;
 
     public void CheckForCompletion()
     {
@@ -87,17 +89,17 @@ public class CompletionConditions : MonoBehaviour
         float valueToCheck = isInt ? OTSVariableManager.GetInstance().GetIntVariable(VariableKey) : OTSVariableManager.GetInstance().GetFloatVariable(VariableKey);
         float valueToCompare;
 
-        if (_compareToOTSVariable)
+        if (CompareToOTSVariable)
         {
-            valueToCompare = isInt ? OTSVariableManager.GetInstance().GetIntVariable(_variableKeyToCompare) : OTSVariableManager.GetInstance().GetFloatVariable(_variableKeyToCompare);
+            valueToCompare = isInt ? OTSVariableManager.GetInstance().GetIntVariable(VariableKeyToCompare) : OTSVariableManager.GetInstance().GetFloatVariable(VariableKeyToCompare);
         }
         else
         {
-            valueToCompare = isInt ? _intToCompare : _floatToCompare;
+            valueToCompare = isInt ? IntToCompare : FloatToCompare;
         }
 
 
-            switch (_numericComparator)
+            switch (NumericComparator)
         {
             case NumericComparators.LessThan:
                 result = valueToCheck < valueToCompare;
@@ -127,9 +129,9 @@ public class CompletionConditions : MonoBehaviour
         bool result = false;
 
         string valueToCheck = OTSVariableManager.GetInstance().GetStringVariable(VariableKey);
-        string valueToCompare = _compareToOTSVariable ? OTSVariableManager.GetInstance().GetStringVariable(_variableKeyToCompare) : _stringToCompare;
+        string valueToCompare = CompareToOTSVariable ? OTSVariableManager.GetInstance().GetStringVariable(VariableKeyToCompare) : StringToCompare;
 
-        switch (_stringComparator)
+        switch (StringComparator)
         {
             case StringComparators.BeforeAlphabetically:
                 result = string.Compare(valueToCheck, valueToCompare, true) < 0;
@@ -153,9 +155,9 @@ public class CompletionConditions : MonoBehaviour
         bool result = false;
 
         bool valueToCheck = OTSVariableManager.GetInstance().GetBoolVariable(VariableKey);
-        bool valueToCompare = _compareToOTSVariable ? OTSVariableManager.GetInstance().GetBoolVariable(_variableKeyToCompare) : _boolToCompare;
+        bool valueToCompare = CompareToOTSVariable ? OTSVariableManager.GetInstance().GetBoolVariable(VariableKeyToCompare) : BoolToCompare;
 
-        if(_boolComparator == BoolComparators.NotEqual)
+        if(BoolComparator == BoolComparators.NotEqual)
         {
             valueToCheck = !valueToCheck;
         }
@@ -169,7 +171,7 @@ public class CompletionConditions : MonoBehaviour
     {
         bool result = false;
 
-        switch (_gameObjectComparator)
+        switch (GameObjectComparator)
         {
             case GameObjectComparators.SameTag:
                 break;
