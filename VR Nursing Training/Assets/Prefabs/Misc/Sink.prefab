@@ -14,11 +14,11 @@ GameObject:
   - component: {fileID: 4825087050246669089}
   - component: {fileID: 4825087050246669090}
   m_Layer: 13
-  m_Name: Water
+  m_Name: Water (Hand Wash Trigger)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 87
   m_IsActive: 1
 --- !u!4 &4825087050246669091
 Transform:
@@ -28,8 +28,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4825087050246669116}
   m_LocalRotation: {x: 0.5015254, y: 0.49846998, z: 0.4984697, w: 0.50152564}
-  m_LocalPosition: {x: 0.00018427284, y: -0.001841162, z: -0.002427}
+  m_LocalPosition: {x: 0.00018, y: -0.00184, z: -0.0018}
   m_LocalScale: {x: 0.0036187575, y: 0.00071258005, z: 0.0070754983}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5007051050730291063}
   m_RootOrder: 0
@@ -53,6 +54,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -108,23 +110,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7779315cc771a5409cf90da6144a80c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  disableTriggerFunctionality: 0
-  material: {fileID: 2100000, guid: 490085d8aaca5bb4981221d073a0b6e4, type: 2}
-  handWash:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ActionBase, Assembly-CSharp
-        m_MethodName: performAction
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  debugging: 0
+  HandWashedOTSVariableName: HandsWashed
   BubbleAnimation: {fileID: 7742663982160473153}
 --- !u!1 &5636060089941370317
 GameObject:
@@ -142,7 +129,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 87
   m_IsActive: 1
 --- !u!4 &5007051050730291063
 Transform:
@@ -151,9 +138,10 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5636060089941370317}
-  m_LocalRotation: {x: -0.5015254, y: -0.49846998, z: -0.4984697, w: 0.50152564}
+  m_LocalRotation: {x: -0.5015248, y: -0.49847052, z: -0.49847052, w: 0.5015248}
   m_LocalPosition: {x: 2.026, y: 6.0690002, z: -0.23755206}
   m_LocalScale: {x: 100, y: 100, z: 100}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4825087050246669091}
   - {fileID: 7742663982160473155}
@@ -179,6 +167,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -348,15 +337,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9ede366b2687ea4a8dadc914c6e5ad1, type: 3}
---- !u!4 &7742663982160473155 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2991886335835148475, guid: e9ede366b2687ea4a8dadc914c6e5ad1,
-    type: 3}
-  m_PrefabInstance: {fileID: 4825087050915937528}
-  m_PrefabAsset: {fileID: 0}
 --- !u!198 &7742663982160473153 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 2991886335835148473, guid: e9ede366b2687ea4a8dadc914c6e5ad1,
+    type: 3}
+  m_PrefabInstance: {fileID: 4825087050915937528}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7742663982160473155 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2991886335835148475, guid: e9ede366b2687ea4a8dadc914c6e5ad1,
     type: 3}
   m_PrefabInstance: {fileID: 4825087050915937528}
   m_PrefabAsset: {fileID: 0}

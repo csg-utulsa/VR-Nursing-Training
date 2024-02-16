@@ -1,48 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1994098850
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1994098851}
-  - component: {fileID: 1994098852}
-  m_Layer: 4
-  m_Name: Sanitize
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1994098851
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1994098850}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.006786964}
-  m_LocalScale: {x: 5.36505, y: 4.7595057, z: 3.7497034}
-  m_Children: []
-  m_Father: {fileID: 7203526046684347749}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1994098852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1994098850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09da1f333edc5124fa4f9a73a7c43407, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4998188874490041988
 GameObject:
   m_ObjectHideFlags: 0
@@ -53,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7203526046684347749}
   - component: {fileID: 1120106647544716631}
-  - component: {fileID: 7246323075810801663}
+  - component: {fileID: 8355793476672065124}
+  - component: {fileID: 5170613156241637266}
   m_Layer: 13
-  m_Name: Sanitizer Trigger
+  m_Name: Hand Wash Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,8 +29,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.00181}
   m_LocalScale: {x: 0.18639153, y: 0.21010585, z: 0.26668775}
+  m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1994098851}
   - {fileID: 5767977863948766813}
   m_Father: {fileID: 9080401400557393843}
   m_RootOrder: 0
@@ -90,7 +48,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.01, y: 0.01, z: 0.01}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7246323075810801663
+--- !u!114 &8355793476672065124
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99,26 +57,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 4998188874490041988}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c69ec353064230243a731d0d5826e61c, type: 3}
+  m_Script: {fileID: 11500000, guid: b7779315cc771a5409cf90da6144a80c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sanitizeHands:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1994098852}
-        m_TargetAssemblyTypeName: ActionBase, Assembly-CSharp
-        m_MethodName: performAction
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  debugging: 0
+  HandWashedOTSVariableName: HandsWashed
   BubbleAnimation: {fileID: 5767977863948766815}
-  inactiveTeles: []
+--- !u!114 &5170613156241637266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4998188874490041988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7779315cc771a5409cf90da6144a80c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debugging: 0
+  HandWashedOTSVariableName: HandsWashed
+  BubbleAnimation: {fileID: 5767977863948766815}
 --- !u!1 &8453186518924561673
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,7 +94,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 87
   m_IsActive: 1
 --- !u!4 &9080401400557393843
 Transform:
@@ -146,7 +105,8 @@ Transform:
   m_GameObject: {fileID: 8453186518924561673}
   m_LocalRotation: {x: -0.7069834, y: 0, z: 0, w: 0.7072302}
   m_LocalPosition: {x: 0.895, y: 6.511, z: -2.8413}
-  m_LocalScale: {x: 75.838, y: 75.838, z: 75.838}
+  m_LocalScale: {x: 75.838, y: 75.83797, z: 75.83797}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7203526046684347749}
   m_Father: {fileID: 0}
@@ -171,6 +131,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -222,7 +183,7 @@ PrefabInstance:
     - target: {fileID: 2991886335835148475, guid: e9ede366b2687ea4a8dadc914c6e5ad1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2991886335835148475, guid: e9ede366b2687ea4a8dadc914c6e5ad1,
         type: 3}

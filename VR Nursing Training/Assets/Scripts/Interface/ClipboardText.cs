@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ClipboardText : MonoBehaviour
+[CreateAssetMenu(menuName = "Scriptable Objects/Procedure 1/Clipboard Text")]
+public class ClipboardText : ScriptableObject
 {
     [SerializeField] private GameObject textObject;
-    Text text;
 
     [SerializeField] private string clientName;
     [SerializeField] private string age;
@@ -18,38 +18,30 @@ public class ClipboardText : MonoBehaviour
     [SerializeField] private string currentVitalSigns;
     [SerializeField] private string doctorName;
     [SerializeField] private string dateTime;
-    //[SerializeField] private ScenarioGroup parentScenario;
 
-    /*void Awake()
+    public string GetText(string MedicineType, string MedicineName, float MedicineDosage, string DosageUnit)
     {
-        text = textObject.GetComponent<Text>();
-        text.text = "Client name: " + clientName + "\n" +
-                    "Age: " + age + "\n" +
-                    "Date of birth: " + dateOfBirth + "\n\n" +
-                    "Allergies: " + allergies + "\n\n" +
-                    "Room # " + roomNumber + "\n\n" +
-                    "Patient history: " + patientHistory + "\n\n" +
-                    "Medical diagnosis: " + medicalDiagnosis + "\n\n" +
-                    "Current vital signs: " + currentVitalSigns + "\n\n" +
-                    doctorName + "\n\n" +
-                    "ORDER SHEET" + "\n" +
-                    "Date/Time: " + dateTime + "\n" +
-                    "<color=blue>Orders:" + "\n" +
-                    "Use " + parentScenario.getCategory() + " Medication\n" +
-                    parentScenario.getMedicine();
-        if (parentScenario.getCategory() == "ORAL")
+        string text = $"Client name: {clientName}\n" +
+                    $"Age: {age}\n" +
+                    $"Date of birth: {dateOfBirth}\n\n" +
+                    $"Allergies: {allergies}\n\n" +
+                    $"Room #{roomNumber}\n\n" +
+                    $"Patient history: {patientHistory}\n\n" +
+                    $"Medical diagnosis: {medicalDiagnosis}\n\n" +
+                    $"Current vital signs: {currentVitalSigns}\n\n" +
+                    $"{doctorName}\n\n" +
+                    $"ORDER SHEET\n" +
+                    $"Date/Time: {dateTime}\n" +
+                    $"<color=blue>Orders:\n" +
+                    $"Use {MedicineType} Medication\n {MedicineName}";
+
+        if (!DosageUnit.Equals(""))
         {
-            text.text += ", " + parentScenario.getDosage() + " Pills</color>\n";
-        }
-        if (parentScenario.getCategory() == "PATCH")
-        {
-            text.text += "</color>\n";
-        }
-        if (parentScenario.getCategory() == "LIQUID")
-        {
-            text.text += ", " + parentScenario.getDosage() + "mL</color>\n";
+            text += $", {MedicineDosage} {DosageUnit}";
         }
 
-        text.text += doctorName;
-    }*/
+        text += $"</ color >\n{doctorName}";
+
+        return text;
+    }
 }

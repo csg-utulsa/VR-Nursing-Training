@@ -3,22 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class DipScript2 : Interactable
+public class HandWasher : Interactable
 {
-    public Material material;
-    public UnityEvent handWash;
+    [Header("Variable Control")]
+    public string HandWashedOTSVariableName;
+
+    [Header("Animation Control")]
     public ParticleSystem BubbleAnimation;
 
     public override void Interact(GameObject other)
     {
         if (other.CompareTag("Hands"))
         {
-            handWash.Invoke();
+            OTSVariableManager.GetInstance().SetBoolVariable(HandWashedOTSVariableName, true);
             BubbleAnimation.Play();
-        }
-        else if (other.GetComponent<Pickupable>())
-        {
-            other.GetComponent<Renderer>().material = material;
         }
     }
 

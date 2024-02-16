@@ -46,15 +46,27 @@ public class OTSVariableManager : Singleton<OTSVariableManager>
     {
         return CurrentVariableSet.IntegerVariables[key];
     }
+    public void SetIntVariable(string key, int value)
+    {
+        CurrentVariableSet.IntegerVariables[key] = value;
+    }
 
     public string GetStringVariable(string key)
     {
         return CurrentVariableSet.StringVariables[key];
     }
+    public void SetStringVariable(string key, string value)
+    {
+        CurrentVariableSet.StringVariables[key] = value;
+    }
 
     public float GetFloatVariable(string key)
     {
         return CurrentVariableSet.FloatVariables[key];
+    }
+    public void SetFloatVariable(string key, float value)
+    {
+        CurrentVariableSet.FloatVariables[key] = value;
     }
 
     public bool GetBoolVariable(string key)
@@ -62,8 +74,17 @@ public class OTSVariableManager : Singleton<OTSVariableManager>
         return CurrentVariableSet.BoolVariables[key];
     }
 
+    public void SetBoolVariable(string key, bool value)
+    {
+        CurrentVariableSet.BoolVariables[key] = value;
+    }
+
     public GameObject GetGameObjectVariable(string key)
     {
         return CurrentVariableSet.GameObjectVariables[key];
+    }
+    public void SetGameObjectVariable(string key, GameObject value)
+    {
+        CurrentVariableSet.GameObjectVariables[key] = value;
     }
 }
