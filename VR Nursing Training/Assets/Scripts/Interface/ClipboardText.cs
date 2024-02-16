@@ -6,8 +6,6 @@ using UnityEngine.UI;
 [CreateAssetMenu(menuName = "Scriptable Objects/Procedure 1/Clipboard Text")]
 public class ClipboardText : ScriptableObject
 {
-    [SerializeField] private GameObject textObject;
-
     [SerializeField] private string clientName;
     [SerializeField] private string age;
     [SerializeField] private string dateOfBirth;

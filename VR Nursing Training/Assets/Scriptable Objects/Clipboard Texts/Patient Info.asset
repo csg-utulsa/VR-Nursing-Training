@@ -12,14 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e7c553dbcf4f0346b11f80fe2ad5472, type: 3}
   m_Name: Patient Info
   m_EditorClassIdentifier: 
-  textObject: {fileID: 0}
-  clientName: 
-  age: 
-  dateOfBirth: 
-  allergies: 
-  roomNumber: 
+  clientName: Barrow, Cassandra
+  age: 30 years
+  dateOfBirth: 1-4-1990
+  allergies: cephalexin
+  roomNumber: 101
   patientHistory: 
-  medicalDiagnosis: 
-  currentVitalSigns: 
-  doctorName: 
-  dateTime: 
+  medicalDiagnosis: heart failure, HTN, constipation
+  currentVitalSigns: BP- 160/92, HR- 64, RR- 16, T- 98.6
+  doctorName: Dr. M. Welby, MD
+  dateTime: 3/11/20 0700
