@@ -58,3 +58,11 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+# Unity complained this was too big
+/VR-Nursing-Sim-6/[Ll]ibrary/
+/VR-Nursing-Sim-6/[Tt]emp/
+/VR-Nursing-Sim-6/[Oo]bj/
+/VR-Nursing-Sim-6/[Bb]uild/
+/VR-Nursing-Sim-6/[Bb]uilds/
+/VR-Nursing-Sim-6/[Ll]ogs/
+/VR-Nursing-Sim-6/[Mm]emoryCaptures/

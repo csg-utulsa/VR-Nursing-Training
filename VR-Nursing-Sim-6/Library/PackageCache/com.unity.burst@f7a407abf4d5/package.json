@@ -1,0 +1,27 @@
+{
+  "name": "com.unity.burst",
+  "displayName": "Burst",
+  "version": "1.8.24",
+  "unity": "2021.3",
+  "description": "Burst is a compiler that translates from IL/.NET bytecode to highly optimized native code using LLVM.",
+  "dependencies": {
+    "com.unity.mathematics": "1.2.1",
+    "com.unity.modules.jsonserialize": "1.0.0"
+  },
+  "relatedPackages": {
+    "com.unity.burst.tests": "1.8.24"
+  },
+  "_upm": {
+    "changelog": "### Added\n- Linux/ARM64 support\n- Added Floating Point Mode option to Burst AOT Settings.\n- Added a warning that using processor intrinsics in methods with `FloatMode = Deterministic` requires bit-level equivalent functionality on other target architectures to ensure deterministic results.\n\n### Fixed\n- Fixed a crash that could occur in Burst when Unity is started with the `-disableManagedDebugger` command line argument\n- Fixed an issue where a static field of a large value type could cause an `InterpreterOutOfMemoryException` to be thrown.\n- Fixed Burst Inspector UI elements overlapping and losing interactability when the window size is reduced.\n\n### Changed\n- Optimized zero-initialization of local variables; where possible, zero-initialization is now done at first use rather than in the function prolog"
+  },
+  "upmCi": {
+    "footprint": "d3c6e7de7611ab2298bd0a81a371d136860b2cd8"
+  },
+  "documentationUrl": "https://docs.unity3d.com/Packages/com.unity.burst@1.8/manual/index.html",
+  "repository": {
+    "url": "https://github.cds.internal.unity3d.com/unity/burst.git",
+    "type": "git",
+    "revision": "a51d00bdd6ede2678af40037e722269d09e4d3aa"
+  },
+  "_fingerprint": "f7a407abf4d5abf19ce630824dcde261e02ed97e"
+}
