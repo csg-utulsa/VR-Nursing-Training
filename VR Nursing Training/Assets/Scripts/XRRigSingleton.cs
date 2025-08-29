@@ -76,11 +76,11 @@ public class XRRigSingleton : MonoBehaviour
         SceneManager.activeSceneChanged += NewScene;
 
         // Set controller teleport hover events
-        var rightRay = rightTeleportRay.GetComponent<XRRayInteractor>();
+        var rightRay = rightTeleportRay.GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactors.XRRayInteractor>();
         rightRay.hoverEntered.AddListener(rightRayActivate);
         rightRay.hoverExited.AddListener(rightRayDeactivate);
 
-        var leftRay = leftTeleportRay.GetComponent<XRRayInteractor>();
+        var leftRay = leftTeleportRay.GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactors.XRRayInteractor>();
         leftRay.hoverEntered.AddListener(leftRayActivate);
         leftRay.hoverExited.AddListener(leftRayDeactivate);
     }
@@ -170,7 +170,7 @@ public class XRRigSingleton : MonoBehaviour
     /// <param name="args"></param>
     private void rightRayActivate(HoverEnterEventArgs args = null)
     {
-        rightTeleportRay.GetComponent<XRInteractorLineVisual>().enabled = true;
+        rightTeleportRay.GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactors.Visuals.XRInteractorLineVisual>().enabled = true;
     }
 
     /// <summary>
@@ -179,7 +179,7 @@ public class XRRigSingleton : MonoBehaviour
     /// <param name="args"></param>
     private void rightRayDeactivate(HoverExitEventArgs args = null)
     {
-        rightTeleportRay.GetComponent<XRInteractorLineVisual>().enabled = false;
+        rightTeleportRay.GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactors.Visuals.XRInteractorLineVisual>().enabled = false;
     }
 
     /// <summary>
@@ -188,7 +188,7 @@ public class XRRigSingleton : MonoBehaviour
     /// <param name="args"></param>
     private void leftRayActivate(HoverEnterEventArgs args = null)
     {
-        leftTeleportRay.GetComponent<XRInteractorLineVisual>().enabled = true;
+        leftTeleportRay.GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactors.Visuals.XRInteractorLineVisual>().enabled = true;
     }
 
     /// <summary>
@@ -197,6 +197,6 @@ public class XRRigSingleton : MonoBehaviour
     /// <param name="args"></param>
     private void leftRayDeactivate(HoverExitEventArgs args = null)
     {
-        leftTeleportRay.GetComponent<XRInteractorLineVisual>().enabled = false;
+        leftTeleportRay.GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactors.Visuals.XRInteractorLineVisual>().enabled = false;
     }
 }

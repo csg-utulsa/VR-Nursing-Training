@@ -6,7 +6,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(Collider))]
-[RequireComponent(typeof(XRGrabInteractable))]
+[RequireComponent(typeof(UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable))]
 public class Pickupable : MonoBehaviour
 {
     public bool focusOnPickup = false;
@@ -33,14 +33,14 @@ public class Pickupable : MonoBehaviour
 
     private void OnEnable()
     {
-        GetComponent<XRGrabInteractable>().selectEntered.AddListener(OnPickUp);
-        GetComponent<XRGrabInteractable>().selectExited.AddListener(OnPutDown);
+        GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>().selectEntered.AddListener(OnPickUp);
+        GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>().selectExited.AddListener(OnPutDown);
     }
 
     private void OnDisable()
     {
-        GetComponent<XRGrabInteractable>().selectEntered.RemoveListener(OnPickUp);
-        GetComponent<XRGrabInteractable>().selectExited.RemoveListener(OnPutDown);
+        GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>().selectEntered.RemoveListener(OnPickUp);
+        GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>().selectExited.RemoveListener(OnPutDown);
     }
 
     public void ResetObject() 

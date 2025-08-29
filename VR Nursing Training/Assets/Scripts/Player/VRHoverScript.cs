@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-[RequireComponent(typeof(XRRayInteractor))]
+[RequireComponent(typeof(UnityEngine.XR.Interaction.Toolkit.Interactors.XRRayInteractor))]
 public class VRHoverScript : MonoBehaviour
 {
     PlayerKeyboardInputScript inputScript;
 
     private void Awake()
     {
-        GetComponent<XRRayInteractor>().hoverEntered.AddListener(OnHover);
-        GetComponent<XRRayInteractor>().hoverExited.AddListener(OnHoverExit);
+        GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactors.XRRayInteractor>().hoverEntered.AddListener(OnHover);
+        GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactors.XRRayInteractor>().hoverExited.AddListener(OnHoverExit);
         inputScript = XRRigSingleton.xrs.GetComponent<PlayerKeyboardInputScript>();
     }
 

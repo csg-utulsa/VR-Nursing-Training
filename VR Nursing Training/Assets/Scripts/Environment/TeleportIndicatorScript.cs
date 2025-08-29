@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.XR.Interaction.Toolkit;
+
 using TMPro;
 
 public class TeleportIndicatorScript : MonoBehaviour
@@ -15,7 +15,7 @@ public class TeleportIndicatorScript : MonoBehaviour
     private int cooldownMax = 3;
     private int cooldown = 0;
     private Vector3 direction;
-    private TeleportationAnchor anchor;
+    private UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation.TeleportationAnchor anchor;
     // For phasing animation
     /* private Color matColor = Color.green;
      private float alphaStart = 0.5f;
@@ -29,7 +29,7 @@ public class TeleportIndicatorScript : MonoBehaviour
     {
         text = indicatorText.GetComponent<TextMeshProUGUI>();
         text.text = zoneName;
-        anchor = GetComponent<TeleportationAnchor>();
+        anchor = GetComponent<UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation.TeleportationAnchor>();
         /*matColor.a = alphaStart;
         indicatorMaterial.color = matColor;*/
     }
@@ -37,7 +37,7 @@ public class TeleportIndicatorScript : MonoBehaviour
     {
         if (anchor.teleportationProvider == null)
         {
-            anchor.teleportationProvider = FindObjectOfType<TeleportationProvider>(false);
+            anchor.teleportationProvider = FindObjectOfType<UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation.TeleportationProvider>(false);
         }
         
 
