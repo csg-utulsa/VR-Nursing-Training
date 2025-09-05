@@ -410,7 +410,7 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.2.1f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.2.1f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.2.1f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
-"Assets/Samples/XR Interaction Toolkit/3.1.1/Starter Assets/Editor/Scripts/StarterAssetsSampleProjectValidation.cs"
+"Assets/Samples/XR Interaction Toolkit/3.2.0/Starter Assets/Editor/Scripts/StarterAssetsSampleProjectValidation.cs"
 -langversion:9.0
 /deterministic
 /optimize+
