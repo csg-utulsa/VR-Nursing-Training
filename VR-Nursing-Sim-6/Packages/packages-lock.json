@@ -312,6 +312,15 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.xsduan.hierarchy-folders": {
+      "version": "https://github.com/xsduan/unity-hierarchy-folders.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.settings-manager": "1.0.1"
+      },
+      "hash": "0dbbc046cb8b20ca237d9714c7aaac6be6a448f9"
+    },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",
       "depth": 0,
