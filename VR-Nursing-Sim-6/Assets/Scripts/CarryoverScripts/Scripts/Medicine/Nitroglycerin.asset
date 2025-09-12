@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a73cd8da96996145abf9a252eb27fe4, type: 3}
+  m_Name: Nitroglycerin
+  m_EditorClassIdentifier: 
+  medicineName: NITROGLYCERIN
+  prefab: {fileID: 8445903996361425620, guid: 3ecedf90f78999b4583e1c0919fe2654, type: 3}
+  dispensedMedicine: {fileID: 11400000, guid: 30a0dd53304792940b5af902d44b4588, type: 2}
+  doDispense: 1
+  dosage: -1
+  dispenseCount: 5
+  medicineType: 16
+  isRoot: 1
+  isDynamic: 0
