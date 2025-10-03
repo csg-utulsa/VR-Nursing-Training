@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine;
@@ -450,3 +450,4 @@ public class PlayerKeyboardInputScript : MonoBehaviour
         _activeCamera.transform.rotation = Quaternion.Euler(_deltaXRotation, _deltaYRotation, 0f);
     }
 }
+*/

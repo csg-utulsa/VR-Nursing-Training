@@ -32,8 +32,8 @@ MonoBehaviour:
     Text:
       m_Untranslated: Learn about the template features
     Metadata: 
-    Url: https://docs.unity3d.com/Packages/com.unity.template.vr@9.1
-    Image: {fileID: 2800000, guid: caa22bb026fa84979ba1be2779739367, type: 3}
+    Url: https://docs.unity3d.com/Packages/com.unity.template.vr@9.2
+    Image: {fileID: 2800000, guid: af6a62c59f219a6419d0d3a1e6aaa037, type: 3}
     Tutorial: {fileID: 0}
   - OrderInView: 1
     Heading:
@@ -41,8 +41,8 @@ MonoBehaviour:
     Text:
       m_Untranslated: Read the official documentation
     Metadata: 
-    Url: https://docs.unity3d.com/6000.1/Documentation/Manual/xr-create-projects.html
-    Image: {fileID: 2800000, guid: caa22bb026fa84979ba1be2779739367, type: 3}
+    Url: https://docs.unity3d.com/Documentation/Manual/xr-create-projects.html
+    Image: {fileID: 2800000, guid: af6a62c59f219a6419d0d3a1e6aaa037, type: 3}
     Tutorial: {fileID: 0}
   - OrderInView: 2
     Heading:
@@ -51,7 +51,7 @@ MonoBehaviour:
       m_Untranslated: Connect with the XR community
     Metadata: 
     Url: https://discussions.unity.com/tags/c/unity-engine/52/xr-interaction-toolkit
-    Image: {fileID: 2800000, guid: caa22bb026fa84979ba1be2779739367, type: 3}
+    Image: {fileID: 2800000, guid: af6a62c59f219a6419d0d3a1e6aaa037, type: 3}
     Tutorial: {fileID: 0}
   - OrderInView: 3
     Heading:
@@ -60,7 +60,7 @@ MonoBehaviour:
       m_Untranslated: Report bugs to the XR team
     Metadata: 
     Url: https://unity3d.com/unity/qa/bug-reporting
-    Image: {fileID: 2800000, guid: caa22bb026fa84979ba1be2779739367, type: 3}
+    Image: {fileID: 2800000, guid: af6a62c59f219a6419d0d3a1e6aaa037, type: 3}
     Tutorial: {fileID: 0}
   - OrderInView: 4
     Heading:
@@ -69,5 +69,5 @@ MonoBehaviour:
       m_Untranslated: Tell us about your experience
     Metadata: 
     Url: https://unitysoftware.co1.qualtrics.com/jfe/form/SV_b8GWOIYxi4l6PDE
-    Image: {fileID: 2800000, guid: caa22bb026fa84979ba1be2779739367, type: 3}
+    Image: {fileID: 2800000, guid: af6a62c59f219a6419d0d3a1e6aaa037, type: 3}
     Tutorial: {fileID: 0}

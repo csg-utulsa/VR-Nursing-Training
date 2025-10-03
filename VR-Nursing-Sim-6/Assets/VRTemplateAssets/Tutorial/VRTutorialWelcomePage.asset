@@ -26,7 +26,7 @@ MonoBehaviour:
       spatial interaction and UI.\n\nBefore you begin, go to Edit > Project Settings
       > XR Plug-in Management and select the platform(s) you plan to deploy to. If
       you don\u2019t see your platform listed, make sure you have the right build
-      targets installed in Unity Hub. \n\nPlease refer to the <a href=\"https://docs.unity3d.com/Packages/com.unity.template.vr@9.1\">Quick
+      targets installed in Unity Hub. \n\nPlease refer to the <a href=\"https://docs.unity3d.com/Packages/com.unity.template.vr@9.2\">Quick
       Start Guide</a> for more detailed information on the content and settings used
       in this template."
   m_Buttons:
