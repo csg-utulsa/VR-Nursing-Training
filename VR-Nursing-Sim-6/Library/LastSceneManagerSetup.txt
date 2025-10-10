@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/VRNursingScenes/LevelScenes/Level_01.unity
+- path: Assets/Scenes/VRNursingScenes/LevelScenes/Lobby.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
